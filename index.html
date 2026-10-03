@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NormatIA - Observatorio de Protocolos de IA en Educación Superior</title>
+    <meta name="description" content="Catastro de protocolos de IA en educación superior chilena.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --sidebar-bg: #06182c;
+            --sidebar-text: #ffffff;
+            --canvas-bg: #faf8f5;
+            --text-main: #333333;
+            --text-muted: #666666;
+            --accent-green: #2d9c6f;
+            --accent-amber: #d4a017;
+            --accent-red: #c0392b;
+            --border-color: #e0e0e0;
+            --card-bg: #ffffff;
+            --font-serif: 'Newsreader', serif;
+            --font-sans: 'Inter', system-ui, sans-serif;
+            --transition: all 0.3s ease;
+        }
+        [data-theme="dark"] {
+            --sidebar-bg: #030a12;
+            --canvas-bg: #121212;
+            --text-main: #f0f0f0;
+            --text-muted: #a0a0a0;
+            --border-color: #333333;
+            --card-bg: #1e1e1e;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: var(--font-sans); background-color: var(--canvas-bg); color: var(--text-main); line-height: 1.6; display: flex; min-height: 100vh; overflow-x: hidden; }
+        h1, h2, h3, h4, h5, h6 { font-family: var(--font-serif); font-weight: 600; color: var(--text-main); margin-bottom: 0.5em; }
+        
+        /* Layout */
+        .sidebar { width: 260px; background-color: var(--sidebar-bg); color: var(--sidebar-text); padding: 2rem; position: fixed; height: 100vh; overflow-y: auto; z-index: 100; transition: transform 0.3s ease; }
+        .main-content { margin-left: 260px; padding: 3rem; flex: 1; max-width: 1200px; }
+        
+        /* Sidebar Elements */
+        .logo { font-family: var(--font-serif); font-size: 2rem; font-weight: 700; margin-bottom: 2rem; color: #fff; text-decoration: none; display: block; }
+        .nav-links { list-style: none; }
+        .nav-links li { margin-bottom: 1rem; }
+        .nav-links a { color: #ccc; text-decoration: none; font-size: 0.95rem; transition: var(--transition); }
+        .nav-links a:hover { color: #fff; }
+        .theme-toggle { margin-top: 2rem; background: none; border: 1px solid #555; color: #fff; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; width: 100%; transition: var(--transition); }
+        .theme-toggle:hover { background: #222; }
+        .mobile-menu-btn { display: none; position: fixed; top: 1rem; right: 1rem; z-index: 101; background: var(--sidebar-bg); color: #fff; border: none; padding: 0.5rem; border-radius: 4px; cursor: pointer; }
+
+        /* Sections */
+        section { padding-top: 4rem; margin-bottom: 4rem; opacity: 0; transform: translateY(20px); animation: fadeInUp 0.6s forwards; }
+        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+
+        /* Hero */
+        .hero { padding-top: 2rem; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 600px; margin-bottom: 2rem; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+        .stat-card { background: var(--card-bg); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .stat-card h3 { font-size: 1rem; font-family: var(--font-sans); color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; }
+        .stat-number { font-size: 3rem; font-family: var(--font-serif); font-weight: 700; color: var(--sidebar-bg); margin-top: 0.5rem; }
+        [data-theme="dark"] .stat-number { color: #fff; }
+
+        /* Dashboard Charts */
+        .charts-container { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
+        .chart-box { background: var(--card-bg); border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 8px; }
+        
+        .bar-chart { display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem; }
+        .bar-item { display: flex; align-items: center; gap: 1rem; }
+        .bar-label { width: 120px; font-size: 0.9rem; }
+        .bar-track { flex: 1; height: 12px; background: #eee; border-radius: 6px; overflow: hidden; }
+        [data-theme="dark"] .bar-track { background: #333; }
+        .bar-fill { height: 100%; background: var(--sidebar-bg); border-radius: 6px; transition: width 1s ease-out; }
+        [data-theme="dark"] .bar-fill { background: #5a8bb8; }
+        .bar-value { width: 30px; font-size: 0.9rem; font-weight: 600; text-align: right; }
+
+        /* Donut Chart via CSS conic-gradient */
+        .donut-container { display: flex; align-items: center; gap: 2rem; }
+        .donut-chart { width: 150px; height: 150px; border-radius: 50%; background: conic-gradient(var(--sidebar-bg) 0% 50%, #5a8bb8 50% 80%, #ccc 80% 100%); position: relative; }
+        [data-theme="dark"] .donut-chart { background: conic-gradient(#5a8bb8 0% 50%, #88b0d4 50% 80%, #444 80% 100%); }
+        .donut-chart::before { content: ''; position: absolute; top: 20%; left: 20%; width: 60%; height: 60%; background: var(--card-bg); border-radius: 50%; }
+        .donut-legend { display: flex; flex-direction: column; gap: 0.5rem; }
+        .legend-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; }
+        .legend-color { width: 12px; height: 12px; border-radius: 50%; }
+
+        /* Controls / Filters */
+        .controls { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem; background: var(--card-bg); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--border-color); }
+        .search-box { flex: 1; min-width: 200px; }
+        .search-box input { width: 100%; padding: 0.5rem; border: 1px solid var(--border-color); border-radius: 4px; background: var(--canvas-bg); color: var(--text-main); }
+        .filter-group select { padding: 0.5rem; border: 1px solid var(--border-color); border-radius: 4px; background: var(--canvas-bg); color: var(--text-main); }
+
+        /* Catalog Grid */
+        .catalog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; }
+        .doc-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
+        .doc-card:hover { transform: translateY(-3px); box-shadow: 0 6px 12px rgba(0,0,0,0.1); }
+        .doc-meta { display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .doc-title { font-family: var(--font-serif); font-size: 1.2rem; margin-bottom: 0.5rem; line-height: 1.3; }
+        .doc-uni { font-weight: 600; font-size: 0.9rem; margin-bottom: 1rem; color: var(--sidebar-bg); }
+        [data-theme="dark"] .doc-uni { color: #88b0d4; }
+        .badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border-color); }
+        .badge { padding: 0.2rem 0.5rem; border-radius: 12px; font-size: 0.75rem; font-weight: 500; }
+        .badge.green { background-color: rgba(45, 156, 111, 0.15); color: var(--accent-green); }
+        .badge.amber { background-color: rgba(212, 160, 23, 0.15); color: #b38510; }
+        [data-theme="dark"] .badge.amber { color: var(--accent-amber); }
+        .badge.red { background-color: rgba(192, 57, 43, 0.15); color: var(--accent-red); }
+        .doc-link { display: inline-block; margin-top: 1rem; color: var(--sidebar-bg); text-decoration: none; font-weight: 500; font-size: 0.9rem; }
+        [data-theme="dark"] .doc-link { color: #88b0d4; }
+        .doc-link:hover { text-decoration: underline; }
+
+        /* Comparative Table */
+        .table-responsive { overflow-x: auto; background: var(--card-bg); border-radius: 8px; border: 1px solid var(--border-color); }
+        table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.85rem; }
+        th, td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border-color); }
+        th { background: var(--sidebar-bg); color: #fff; font-weight: 500; white-space: nowrap; position: sticky; top: 0; }
+        tr:last-child td { border-bottom: none; }
+        .status-icon { display: inline-block; width: 12px; height: 12px; border-radius: 50%; }
+        .bg-green { background: var(--accent-green); }
+        .bg-amber { background: var(--accent-amber); }
+        .bg-red { background: var(--accent-red); }
+        .bg-gray { background: #ccc; }
+
+        /* Map of Coverage */
+        .coverage-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem; }
+        .coverage-item { display: flex; align-items: center; gap: 0.75rem; background: var(--card-bg); padding: 0.75rem 1rem; border-radius: 6px; border: 1px solid var(--border-color); font-size: 0.9rem; }
+        .coverage-item .status-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+        
+        /* Footer */
+        footer { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.9rem; display: flex; justify-content: space-between; }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .charts-container { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .sidebar { transform: translateX(-100%); }
+            .sidebar.active { transform: translateX(0); }
+            .main-content { margin-left: 0; padding: 2rem 1.5rem; }
+            .mobile-menu-btn { display: block; }
+        }
+        @media print {
+            .sidebar, .mobile-menu-btn, .controls { display: none !important; }
+            .main-content { margin-left: 0; padding: 0; }
+            body { background: #fff; color: #000; }
+            .table-responsive { overflow: visible; }
+        }
+    </style>
+</head>
+<body>
+
+    <button class="mobile-menu-btn" onclick="document.querySelector('.sidebar').classList.toggle('active')">☰ Menu</button>
+
+    <aside class="sidebar">
+        <a href="#" class="logo">NormatIA</a>
+        <ul class="nav-links">
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#catalogo">Catálogo de Documentos</a></li>
+            <li><a href="#analisis">Análisis Comparativo</a></li>
+            <li><a href="#cobertura">Mapa de Cobertura</a></li>
+            <li><a href="#sobre">Sobre el Catastro</a></li>
+        </ul>
+        <button class="theme-toggle" onclick="toggleTheme()">Dark Mode</button>
+    </aside>
+
+    <main class="main-content">
+        <section class="hero" id="hero">
+            <h1>Observatorio de Protocolos de IA</h1>
+            <p>Catastro interactivo de instrumentos normativos y guías sobre Inteligencia Artificial en la educación superior chilena (2023-2026).</p>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Instrumentos Mapeados</h3>
+                    <div class="stat-number" id="stat-total">0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Instituciones</h3>
+                    <div class="stat-number" id="stat-inst">0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Exigen Declaración</h3>
+                    <div class="stat-number" id="stat-dec">0%</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Prohíben Autoría IA</h3>
+                    <div class="stat-number" id="stat-aut">0%</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="dashboard">
+            <h2>Dashboard de Estadísticas</h2>
+            <div class="charts-container">
+                <div class="chart-box">
+                    <h3>Distribución por Tipo de Institución</h3>
+                    <div class="bar-chart" id="chart-tipo">
+                        <!-- Generado por JS -->
+                    </div>
+                </div>
+                <div class="chart-box">
+                    <h3>Gobernanza del Instrumento</h3>
+                    <div class="donut-container">
+                        <div class="donut-chart" id="chart-gob-donut"></div>
+                        <div class="donut-legend" id="chart-gob-legend">
+                            <!-- Generado por JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="catalogo">
+            <h2>Catálogo Filtrable</h2>
+            <div class="controls">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Buscar por institución, documento o unidad..." oninput="renderCatalog()">
+                </div>
+                <div class="filter-group">
+                    <select id="filterTipo" onchange="renderCatalog()">
+                        <option value="all">Tipo Institución (Todos)</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <select id="filterGob" onchange="renderCatalog()">
+                        <option value="all">Gobernanza (Todas)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="catalog-grid" id="catalogGrid">
+                <!-- Tarjetas JS -->
+            </div>
+        </section>
+
+        <section id="analisis">
+            <h2>Análisis Comparativo</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Institución</th>
+                            <th>Unidad</th>
+                            <th>Gobernanza</th>
+                            <th>Formato</th>
+                            <th>Exige Declaración</th>
+                            <th>Sin Autoría IA</th>
+                            <th>Datos Personales</th>
+                            <th>Eval. Modificada</th>
+                        </tr>
+                    </thead>
+                    <tbody id="analysisTable">
+                        <!-- JS -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="cobertura">
+            <h2>Mapa de Cobertura</h2>
+            <p style="margin-bottom: 1.5rem; color: var(--text-muted)">Estado de adopción de protocolos sobre IA por institución en Chile.</p>
+            <div class="coverage-list" id="coverageList">
+                <!-- JS -->
+            </div>
+        </section>
+
+        <section id="sobre">
+            <h2>Sobre este Catastro</h2>
+            <p><strong>Metodología:</strong> Investigación web exhaustiva, recolección de documentos públicos y solicitudes de acceso a la información (octubre 2026).</p>
+            <p><strong>Autoría:</strong> Eduardo Vega Toledo.</p>
+            <p><strong>Licencia:</strong> CC BY 4.0 - Se permite el uso y distribución citando la fuente.</p>
+            <p><em>Este catastro es un esfuerzo de sistematización. No constituye un ranking ni una evaluación de calidad normativa.</em></p>
+        </section>
+
+        <footer>
+            <div>&copy; 2026 Eduardo Vega Toledo</div>
+            <div>Última actualización: Octubre 2026 | <a href="https://evegat.cl" style="color:inherit">evegat.cl</a></div>
+        </footer>
+    </main>
+
+    <script>
+        const INVENTARIO = [
+  {
+    "id": 1,
+    "universidad": "Universidad de Chile",
+    "sigla": "UChile",
+    "tipo_institucion": "Estatal CRUCH",
+    "unidad": "Vicerrectoría de Asuntos Académicos (VAA)",
+    "documento": "Lineamientos para el uso transparente de inteligencia artificial en las tesis de la Universidad de Chile",
+    "url": "https://uchile.cl/informacion-y-bibliotecas/lineamientos-uso-ia-en-tesis",
+    "fecha": "2024",
+    "alcance": "Institucional",
+    "alcance_detalle": "Tesis y memorias de pregrado y postgrado",
+    "formato": "Web",
+    "paginas": null,
+    "gobernanza": "top-down",
+    "enforcement": "Normativa obligatoria con cláusula",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": false,
+    "revision_periodica": false,
+    "modifica_evaluacion": true,
+    "publico": true
+  },
+  {
+    "id": 2,
+    "universidad": "Universidad de Chile",
+    "sigla": "UChile",
+    "tipo_institucion": "Estatal CRUCH",
+    "unidad": "Facultad de Medicina (FAMED)",
+    "documento": "Humanizar la Inteligencia: Orientaciones para un uso ético y transformador de la IA en la educación y la investigación en salud",
+    "url": "https://uchile.cl/dam/jcr:9b955a62-5177-425e-b59e-d7f409d3fa74/Humanizar%20la%20Inteligencia_FAMED2025%20V10-1.pdf",
+    "fecha": "2025",
+    "alcance": "Facultad",
+    "alcance_detalle": "Docencia e investigación en salud",
+    "formato": "PDF",
+    "paginas": 34,
+    "gobernanza": "bottom-up",
+    "enforcement": "Guía orientadora",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": true,
+    "revision_periodica": false,
+    "modifica_evaluacion": true,
+    "publico": true
+  },
+  {
+    "id": 3,
+    "universidad": "Universidad de Chile",
+    "sigla": "UChile",
+    "tipo_institucion": "Estatal CRUCH",
+    "unidad": "Escuela de Gobierno (FAGOB)",
+    "documento": "Protocolo de Uso de Inteligencia Artificial Generativa (IAG) y Anexos",
+    "url": "https://brujula-ia-fagob.evegat.cl/docs/Protocolo_USO_IAG_y_Anexos_Escuela_de_Gobierno_UChile.pdf",
+    "fecha": "2024",
+    "alcance": "Escuela",
+    "alcance_detalle": "Pregrado Escuela de Gobierno",
+    "formato": "PDF",
+    "paginas": null,
+    "gobernanza": "bottom-up",
+    "enforcement": "Protocolo operativo con declaración jurada",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": true,
+    "revision_periodica": true,
+    "modifica_evaluacion": true,
+    "publico": true
+  },
+  {
+    "id": 4,
+    "universidad": "Universidad de Chile",
+    "sigla": "UChile",
+    "tipo_institucion": "Estatal CRUCH",
+    "unidad": "FCFM - Escuela de Postgrado (EPEC)",
+    "documento": "Procedimiento para la Declaración de Uso de Inteligencia Artificial en Tesis y AFE",
+    "url": "https://postgrado.fcfm.uchile.cl",
+    "fecha": "2024-2025",
+    "alcance": "Facultad",
+    "alcance_detalle": "Postgrado FCFM (Tesis y AFE)",
+    "formato": "Instructivo",
+    "paginas": null,
+    "gobernanza": "bottom-up",
+    "enforcement": "Instructivo con categorías A/B/C",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": false,
+    "revision_periodica": false,
+    "modifica_evaluacion": true,
+    "publico": true
+  },
+  {
+    "id": 5,
+    "universidad": "Universidad de Chile",
+    "sigla": "UChile",
+    "tipo_institucion": "Estatal CRUCH",
+    "unidad": "Escuela de Gobierno (FAGOB)",
+    "documento": "Política de Integración Crítica y Ética de la IAG para la Formación en Asuntos Públicos",
+    "url": null,
+    "fecha": "2024-2025",
+    "alcance": "Escuela",
+    "alcance_detalle": "Pregrado Escuela de Gobierno",
+    "formato": "Documento institucional",
+    "paginas": null,
+    "gobernanza": "bottom-up",
+    "enforcement": "Política institucional",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": true,
+    "revision_periodica": false,
+    "modifica_evaluacion": true,
+    "publico": false
+  },
+  {
+    "id": 6,
+    "universidad": "Universidad de Chile",
+    "sigla": "UChile",
+    "tipo_institucion": "Estatal CRUCH",
+    "unidad": "Facultad de Arquitectura y Urbanismo (FAU)",
+    "documento": "Lineamientos para el uso de Inteligencia Artificial en Revistas FAU",
+    "url": "https://revistas.uchile.cl",
+    "fecha": "2024",
+    "alcance": "Facultad",
+    "alcance_detalle": "Revistas académicas FAU",
+    "formato": "Web",
+    "paginas": null,
+    "gobernanza": "bottom-up",
+    "enforcement": "Normativa editorial",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": false,
+    "revision_periodica": false,
+    "modifica_evaluacion": false,
+    "publico": true
+  },
+  {
+    "id": 7,
+    "universidad": "Pontificia Universidad Católica de Chile",
+    "sigla": "PUC",
+    "tipo_institucion": "Privada CRUCH",
+    "unidad": "Instituto de Sociología (ISUC)",
+    "documento": "Política de uso ético de Inteligencia Artificial Generativa v1",
+    "url": "https://sociologia.uc.cl/wp-content/uploads/2025/10/Politica-de-uso-etico-de-IA-ISUC-v1.pdf",
+    "fecha": "2025-07-30",
+    "alcance": "Unidad",
+    "alcance_detalle": "Pregrado, postgrado y educación continua ISUC",
+    "formato": "PDF",
+    "paginas": 5,
+    "gobernanza": "bottom-up",
+    "enforcement": "Política con sanciones",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": false,
+    "revision_periodica": false,
+    "modifica_evaluacion": true,
+    "publico": true
+  },
+  {
+    "id": 8,
+    "universidad": "Pontificia Universidad Católica de Chile",
+    "sigla": "PUC",
+    "tipo_institucion": "Privada CRUCH",
+    "unidad": "Facultad de Derecho",
+    "documento": "Guía Ética para el uso de Inteligencia Artificial Generativa",
+    "url": "https://derecho.uc.cl/facultad-de-derecho-uc-establece-guia-etica-para-uso-de-inteligencia-artificial-generativa/",
+    "fecha": "2024",
+    "alcance": "Facultad",
+    "alcance_detalle": "Facultad de Derecho",
+    "formato": "Web",
+    "paginas": null,
+    "gobernanza": "bottom-up",
+    "enforcement": "Guía ética",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": false,
+    "revision_periodica": false,
+    "modifica_evaluacion": false,
+    "publico": true
+  },
+  {
+    "id": 9,
+    "universidad": "Pontificia Universidad Católica de Chile",
+    "sigla": "PUC",
+    "tipo_institucion": "Privada CRUCH",
+    "unidad": "Dirección de Integridad Académica / VRA",
+    "documento": "Inteligencia artificial e integridad académica en la práctica docente",
+    "url": "https://integridadacademica.uc.cl/secciones/inteligencia-artificial/",
+    "fecha": "2024-2025",
+    "alcance": "Institucional",
+    "alcance_detalle": "Comunidad UC",
+    "formato": "Portal web",
+    "paginas": null,
+    "gobernanza": "top-down",
+    "enforcement": "Portal con guías descargables",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": false,
+    "revision_periodica": false,
+    "modifica_evaluacion": true,
+    "publico": true
+  },
+  {
+    "id": 10,
+    "universidad": "Pontificia Universidad Católica de Chile",
+    "sigla": "PUC",
+    "tipo_institucion": "Privada CRUCH",
+    "unidad": "Vicerrectoría Académica / Centro de Desarrollo Docente",
+    "documento": "Lineamientos UC para la integración de la IA en la formación",
+    "url": "https://catalogodigital.uc.cl/normativas-y-procedimientos/lineamientos-uc-para-la-integracion-de-la-ia-en-la-formacion/",
+    "fecha": "2026-03",
+    "alcance": "Institucional",
+    "alcance_detalle": "5 categorías: no permitido, restringido, permitido, sugerido, obligatorio",
+    "formato": "PDF",
+    "paginas": null,
+    "gobernanza": "top-down",
+    "enforcement": "Lineamientos con categorías",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": false,
+    "revision_periodica": false,
+    "modifica_evaluacion": true,
+    "publico": true
+  },
+  {
+    "id": 11,
+    "universidad": "Universidad Adolfo Ibáñez",
+    "sigla": "UAI",
+    "tipo_institucion": "Privada",
+    "unidad": "Rectoría / Vicerrectoría Académica",
+    "documento": "Política de Inteligencia Artificial de la Universidad Adolfo Ibáñez",
+    "url": "https://uai.cdn7pm.net/documentos/politica-de-inteligencia-artificial.pdf",
+    "fecha": "2025-01-10",
+    "alcance": "Institucional",
+    "alcance_detalle": "Pregrado, postgrado, investigación y gestión",
+    "formato": "PDF",
+    "paginas": 6,
+    "gobernanza": "top-down",
+    "enforcement": "Política institucional",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": true,
+    "revision_periodica": true,
+    "modifica_evaluacion": true,
+    "publico": true
+  },
+  {
+    "id": 12,
+    "universidad": "Universidad Adolfo Ibáñez",
+    "sigla": "UAI",
+    "tipo_institucion": "Privada",
+    "unidad": "Dirección de Desarrollo Académico",
+    "documento": "Guía de Inteligencia Artificial para Estudiantes",
+    "url": "https://uai.cdn7pm.net/documentos/guia-ia-estudiantes.pdf",
+    "fecha": "2025-2026",
+    "alcance": "Institucional",
+    "alcance_detalle": "Estudiantes UAI",
+    "formato": "PDF",
+    "paginas": 6,
+    "gobernanza": "top-down",
+    "enforcement": "Guía orientadora",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": false,
+    "revision_periodica": false,
+    "modifica_evaluacion": false,
+    "publico": true
+  },
+  {
+    "id": 13,
+    "universidad": "Universidad Diego Portales",
+    "sigla": "UDP",
+    "tipo_institucion": "Privada",
+    "unidad": "Dirección de Desarrollo Docente",
+    "documento": "Orientaciones en el uso de IA para docentes UDP (Versión 2)",
+    "url": "https://desarrollodocente.udp.cl/cms/wp-content/uploads/2024/08/Orientaciones-IA_V2.pdf",
+    "fecha": "2024-08",
+    "alcance": "Institucional",
+    "alcance_detalle": "Docencia UDP",
+    "formato": "PDF",
+    "paginas": 15,
+    "gobernanza": "top-down",
+    "enforcement": "Orientaciones",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": false,
+    "revision_periodica": false,
+    "modifica_evaluacion": true,
+    "publico": true
+  },
+  {
+    "id": 14,
+    "universidad": "Universidad Diego Portales",
+    "sigla": "UDP",
+    "tipo_institucion": "Privada",
+    "unidad": "Facultad de Educación",
+    "documento": "Protocolo de uso de IA para la Facultad de Educación UDP",
+    "url": "https://educacion.udp.cl/cms/wp-content/uploads/2026/05/Protocolo-de-uso-de-IA-para-la-Facultad-de-Educacion-UDP.-AGOSTO-2025.pdf",
+    "fecha": "2025-08",
+    "alcance": "Facultad",
+    "alcance_detalle": "Facultad de Educación",
+    "formato": "PDF",
+    "paginas": null,
+    "gobernanza": "bottom-up",
+    "enforcement": "Protocolo",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": false,
+    "revision_periodica": false,
+    "modifica_evaluacion": true,
+    "publico": true
+  },
+  {
+    "id": 15,
+    "universidad": "Universidad Andrés Bello",
+    "sigla": "UNAB",
+    "tipo_institucion": "Privada",
+    "unidad": "Comité de IA / Rectoría",
+    "documento": "Lineamiento para el uso responsable de inteligencia artificial en la Universidad Andrés Bello",
+    "url": "https://ia.unab.cl/wp-content/uploads/2024/10/IA-Lineamiento-para-el-uso-responsable-de-inteligencia-artificial-en-UNAB-20240926-002.pdf",
+    "fecha": "2024-09-26",
+    "alcance": "Institucional",
+    "alcance_detalle": "Docencia, gestión e investigación",
+    "formato": "PDF",
+    "paginas": 14,
+    "gobernanza": "top-down",
+    "enforcement": "Lineamiento institucional",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": true,
+    "revision_periodica": true,
+    "modifica_evaluacion": true,
+    "publico": true
+  },
+  {
+    "id": 16,
+    "universidad": "Universidad de Concepción",
+    "sigla": "UdeC",
+    "tipo_institucion": "Privada CRUCH",
+    "unidad": "Programa [genIA] / VRID / Docencia",
+    "documento": "Guía sobre uso ético y responsable de tecnologías digitales emergentes en la Universidad de Concepción",
+    "url": "https://genia.udec.cl",
+    "fecha": "2024",
+    "alcance": "Institucional",
+    "alcance_detalle": "Docentes y estudiantes UdeC",
+    "formato": "PDF + Portal web",
+    "paginas": 16,
+    "gobernanza": "plataforma",
+    "enforcement": "Guía con ecosistema [genIA]",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": false,
+    "revision_periodica": false,
+    "modifica_evaluacion": true,
+    "publico": true
+  },
+  {
+    "id": 17,
+    "universidad": "Universidad Austral de Chile",
+    "sigla": "UACh",
+    "tipo_institucion": "Privada CRUCH",
+    "unidad": "Facultad de Ciencias Jurídicas y Sociales",
+    "documento": "Protocolo de Regulación del Uso de la Inteligencia Artificial",
+    "url": "https://derecho.uach.cl/index.php?option=com_dropfiles&format=&task=frontfile.download&catid=197&id=1295&Itemid=1000000000000",
+    "fecha": "2025",
+    "alcance": "Facultad",
+    "alcance_detalle": "Pregrado, postgrado y educación continua en Derecho",
+    "formato": "PDF",
+    "paginas": 3,
+    "gobernanza": "bottom-up",
+    "enforcement": "Protocolo formal con revisión anual",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": false,
+    "revision_periodica": true,
+    "modifica_evaluacion": true,
+    "publico": true
+  },
+  {
+    "id": 18,
+    "universidad": "Universidad Autónoma de Chile",
+    "sigla": "UAutónoma",
+    "tipo_institucion": "Privada",
+    "unidad": "Rectoría",
+    "documento": "Reglamento sobre el uso de herramientas de inteligencia artificial (Resolución Rectoría N° 220/2023)",
+    "url": "https://www.uautonoma.cl/content/uploads/2024/06/Reglamento-Uso-de-Herremientas-de-Inteligencia-Artificial_compressed.pdf",
+    "fecha": "2024-06",
+    "alcance": "Institucional",
+    "alcance_detalle": "Toda la institución",
+    "formato": "PDF",
+    "paginas": 4,
+    "gobernanza": "top-down",
+    "enforcement": "Reglamento con decreto",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": false,
+    "revision_periodica": false,
+    "modifica_evaluacion": true,
+    "publico": true
+  },
+  {
+    "id": 19,
+    "universidad": "Universidad de Las Américas",
+    "sigla": "UDLA",
+    "tipo_institucion": "Privada",
+    "unidad": "Institucional",
+    "documento": "Marco para el uso de la Inteligencia Artificial en UDLA (Res. N°31032025-01)",
+    "url": "https://www.udla.cl/descargas/normativas/marco-para-uso-ia-en-udla.pdf",
+    "fecha": "2025-03-31",
+    "alcance": "Institucional",
+    "alcance_detalle": "Docencia, Investigación y VcM",
+    "formato": "PDF",
+    "paginas": 36,
+    "gobernanza": "top-down",
+    "enforcement": "Marco normativo con resolución",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": true,
+    "revision_periodica": false,
+    "modifica_evaluacion": true,
+    "publico": true
+  },
+  {
+    "id": 20,
+    "universidad": "Universidad de Las Américas",
+    "sigla": "UDLA",
+    "tipo_institucion": "Privada",
+    "unidad": "Formación Docente",
+    "documento": "Uso responsable de Inteligencia Artificial en la docencia de asignaturas online asincrónicas",
+    "url": "https://www.udla.cl/descargas/educacion/Aplicaciones-Operativas-IA-UDLA-10-Docentes-Online-asincronico.pdf",
+    "fecha": "2024",
+    "alcance": "Institucional",
+    "alcance_detalle": "Docencia virtual asincrónica",
+    "formato": "PDF",
+    "paginas": 3,
+    "gobernanza": "top-down",
+    "enforcement": "Guía operativa",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": false,
+    "revision_periodica": false,
+    "modifica_evaluacion": true,
+    "publico": true
+  },
+  {
+    "id": 21,
+    "universidad": "Universidad de Santiago de Chile",
+    "sigla": "USACH",
+    "tipo_institucion": "Estatal CRUCH",
+    "unidad": "Departamento de Bibliotecas",
+    "documento": "LibGuide: Uso responsable y ético de la IA en contextos académicos",
+    "url": "https://usach.libguides.com/c.php?g=1522613",
+    "fecha": "2024",
+    "alcance": "Institucional",
+    "alcance_detalle": "Comunidad USACH",
+    "formato": "LibGuide web",
+    "paginas": null,
+    "gobernanza": "plataforma",
+    "enforcement": "Guía informativa",
+    "exige_declaracion": false,
+    "ia_no_autora": true,
+    "menciona_datos_personales": false,
+    "revision_periodica": false,
+    "modifica_evaluacion": false,
+    "publico": true
+  },
+  {
+    "id": 22,
+    "universidad": "Universidad del Desarrollo",
+    "sigla": "UDD",
+    "tipo_institucion": "Privada",
+    "unidad": "Comité de Inteligencia Artificial / Rectoría",
+    "documento": "Política de Inteligencia Artificial",
+    "url": "https://www.udd.cl/dircom/reglamentos/Politica-IA.pdf",
+    "fecha": "2026-03",
+    "alcance": "Institucional",
+    "alcance_detalle": "Transversal",
+    "formato": "PDF",
+    "paginas": 3,
+    "gobernanza": "top-down",
+    "enforcement": "Política institucional",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": true,
+    "revision_periodica": false,
+    "modifica_evaluacion": true,
+    "publico": true
+  },
+  {
+    "id": 23,
+    "universidad": "Universidad del Desarrollo",
+    "sigla": "UDD",
+    "tipo_institucion": "Privada",
+    "unidad": "Comité de IA / Encargado de Datos",
+    "documento": "Reglamento Operativo para el Uso de Aplicaciones de Inteligencia Artificial Generativa (IAG)",
+    "url": "https://www.udd.cl/dircom/reglamentos/Reglamento-Operativo-para-Uso-de-Aplicaciones-IAG.pdf",
+    "fecha": "2026-03",
+    "alcance": "Institucional",
+    "alcance_detalle": "Operativo comunidad",
+    "formato": "PDF",
+    "paginas": 6,
+    "gobernanza": "top-down",
+    "enforcement": "Reglamento operativo",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": true,
+    "revision_periodica": false,
+    "modifica_evaluacion": true,
+    "publico": true
+  },
+  {
+    "id": 24,
+    "universidad": "Universidad del Desarrollo",
+    "sigla": "UDD",
+    "tipo_institucion": "Privada",
+    "unidad": "Centro de Innovación Docente (CID)",
+    "documento": "Docencia con IA: Recomendaciones para el uso de Inteligencia Artificial Generativa (IAG)",
+    "url": "https://innovaciondocente.udd.cl/recursos-educativos/recomendaciones-generales-para-el-uso-de-inteligencia-artificial-generativa/",
+    "fecha": "2024",
+    "alcance": "Institucional",
+    "alcance_detalle": "Docentes UDD",
+    "formato": "Portal web",
+    "paginas": null,
+    "gobernanza": "top-down",
+    "enforcement": "Recomendaciones",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": false,
+    "revision_periodica": false,
+    "modifica_evaluacion": true,
+    "publico": true
+  },
+  {
+    "id": 25,
+    "universidad": "Universidad Católica de Temuco",
+    "sigla": "UCT",
+    "tipo_institucion": "Privada CRUCH",
+    "unidad": "CINAP",
+    "documento": "Orientaciones ético-pedagógicas y asistentes de IA (DocencIA UCT / PotencIA tu GuIA)",
+    "url": "https://cinap.uct.cl",
+    "fecha": "2024-2025",
+    "alcance": "Institucional",
+    "alcance_detalle": "Docencia integrado a EDUCA Blackboard",
+    "formato": "Guía + Asistentes IA",
+    "paginas": null,
+    "gobernanza": "plataforma",
+    "enforcement": "Orientaciones con asistentes",
+    "exige_declaracion": false,
+    "ia_no_autora": false,
+    "menciona_datos_personales": false,
+    "revision_periodica": false,
+    "modifica_evaluacion": true,
+    "publico": true
+  },
+  {
+    "id": 26,
+    "universidad": "Universidad Bernardo O'Higgins",
+    "sigla": "UBO",
+    "tipo_institucion": "Privada",
+    "unidad": "Unidad SapIA",
+    "documento": "Modelo y Lineamientos de Integración de IA en la Academia (SapIA)",
+    "url": "https://www.ubo.cl/",
+    "fecha": "2024",
+    "alcance": "Institucional",
+    "alcance_detalle": "Academia",
+    "formato": "Portal web",
+    "paginas": null,
+    "gobernanza": "plataforma",
+    "enforcement": "Modelo institucional",
+    "exige_declaracion": false,
+    "ia_no_autora": false,
+    "menciona_datos_personales": false,
+    "revision_periodica": false,
+    "modifica_evaluacion": false,
+    "publico": true
+  },
+  {
+    "id": 27,
+    "universidad": "Universidad Central de Chile",
+    "sigla": "UCEN",
+    "tipo_institucion": "Privada",
+    "unidad": "Transformación Digital / Rectoría",
+    "documento": "Política Institucional de Integración de Inteligencia Artificial",
+    "url": "https://www.ucentral.cl/",
+    "fecha": "2026-01",
+    "alcance": "Institucional",
+    "alcance_detalle": "Toda la institución",
+    "formato": "En promulgación",
+    "paginas": null,
+    "gobernanza": "top-down",
+    "enforcement": "Política en proceso",
+    "exige_declaracion": false,
+    "ia_no_autora": false,
+    "menciona_datos_personales": false,
+    "revision_periodica": false,
+    "modifica_evaluacion": false,
+    "publico": false
+  },
+  {
+    "id": 28,
+    "universidad": "Duoc UC",
+    "sigla": "Duoc UC",
+    "tipo_institucion": "IP/CFT",
+    "unidad": "DocencIA / Bibliotecas",
+    "documento": "Lineamientos Generales de Inteligencia Artificial (Resolución Rectoría N° 2/2025) + Portal ia.duoc.cl",
+    "url": "https://ia.duoc.cl/uso-etico-de-la-ia/",
+    "fecha": "2025",
+    "alcance": "Institucional",
+    "alcance_detalle": "Docentes, estudiantes y administrativos",
+    "formato": "Portal web + Resolución",
+    "paginas": null,
+    "gobernanza": "top-down",
+    "enforcement": "Resolución de Rectoría + portal activo",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": true,
+    "revision_periodica": false,
+    "modifica_evaluacion": true,
+    "publico": true
+  },
+  {
+    "id": 29,
+    "universidad": "INACAP",
+    "sigla": "INACAP",
+    "tipo_institucion": "IP/CFT",
+    "unidad": "Centro de Aprendizaje / EstudIA",
+    "documento": "Guía de Recursos y Estrategias de IA para Estudiantes + Portal EstudIA",
+    "url": "https://portal.inacap.cl/iacap",
+    "fecha": "2024",
+    "alcance": "Institucional",
+    "alcance_detalle": "Docentes y estudiantes",
+    "formato": "Portal web + Guía PDF",
+    "paginas": null,
+    "gobernanza": "plataforma",
+    "enforcement": "Guía metodológica",
+    "exige_declaracion": false,
+    "ia_no_autora": false,
+    "menciona_datos_personales": false,
+    "revision_periodica": false,
+    "modifica_evaluacion": false,
+    "publico": true
+  },
+  {
+    "id": 30,
+    "universidad": "IP/CFT Santo Tomás",
+    "sigla": "IPST/CFTST",
+    "tipo_institucion": "IP/CFT",
+    "unidad": "Rectoría",
+    "documento": "Lineamientos para el uso de la Inteligencia Artificial en el ámbito académico (Decreto N° 044/25 IP y N° 021/25 CFT)",
+    "url": "https://www.ust.cl/web/wp-content/uploads/sites/27/2025/09/Aprueba-lineamientos-para-el-uso-de-la-Inteligencia-Artificial-IPST.pdf",
+    "fecha": "2025-09-11",
+    "alcance": "Institucional",
+    "alcance_detalle": "Sistema Santo Tomás: UST, IP y CFT",
+    "formato": "PDF",
+    "paginas": 16,
+    "gobernanza": "top-down",
+    "enforcement": "Decreto formal con sanciones",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": true,
+    "revision_periodica": false,
+    "modifica_evaluacion": true,
+    "publico": true
+  },
+  {
+    "id": 31,
+    "universidad": "AIEP",
+    "sigla": "AIEP",
+    "tipo_institucion": "IP",
+    "unidad": "Institucional",
+    "documento": "Asignatura Sello 'Herramientas de Inteligencia Artificial' (Microcertificación CENIA)",
+    "url": "https://www.aiep.cl/",
+    "fecha": "2024-2025",
+    "alcance": "Institucional",
+    "alcance_detalle": "Todas las carreras de pregrado",
+    "formato": "Programa curricular",
+    "paginas": null,
+    "gobernanza": "top-down",
+    "enforcement": "Asignatura obligatoria",
+    "exige_declaracion": false,
+    "ia_no_autora": false,
+    "menciona_datos_personales": false,
+    "revision_periodica": false,
+    "modifica_evaluacion": true,
+    "publico": true
+  },
+  {
+    "id": 32,
+    "universidad": "Pontificia Universidad Católica de Valparaíso",
+    "sigla": "PUCV",
+    "tipo_institucion": "Privada CRUCH",
+    "unidad": "Unidad de Integridad Académica / DDD (VRA)",
+    "documento": "Decálogo sobre uso de Inteligencia Artificial en docencia con foco en integridad académica PUCV",
+    "url": "https://desarrollodocente.pucv.cl/ia/",
+    "fecha": "2026-01-09",
+    "alcance": "Institucional",
+    "alcance_detalle": "Docencia",
+    "formato": "Portal web",
+    "paginas": null,
+    "gobernanza": "top-down",
+    "enforcement": "Decálogo vinculante",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": false,
+    "revision_periodica": false,
+    "modifica_evaluacion": true,
+    "publico": true
+  },
+  {
+    "id": 33,
+    "universidad": "Universidad Católica del Norte",
+    "sigla": "UCN",
+    "tipo_institucion": "Privada CRUCH",
+    "unidad": "Depto. Ciencia Abierta / VRIDT",
+    "documento": "Política Editorial de Revistas Científicas de la UCN (Sección IA)",
+    "url": "https://revistas.ucn.cl/politica-rcucn/",
+    "fecha": "2024-2025",
+    "alcance": "Institucional",
+    "alcance_detalle": "Investigación y publicaciones",
+    "formato": "Web",
+    "paginas": null,
+    "gobernanza": "top-down",
+    "enforcement": "Normativa editorial",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": false,
+    "revision_periodica": false,
+    "modifica_evaluacion": false,
+    "publico": true
+  },
+  {
+    "id": 34,
+    "universidad": "Universidad de Valparaíso",
+    "sigla": "UV",
+    "tipo_institucion": "Estatal CRUCH",
+    "unidad": "Vicerrectoría Académica",
+    "documento": "Guía de orientaciones para el uso de la inteligencia artificial (Docentes)",
+    "url": "https://vicerrectoriaacademica.uv.cl/documentos",
+    "fecha": "2023-2024",
+    "alcance": "Institucional",
+    "alcance_detalle": "Cuerpo docente",
+    "formato": "Web / Repositorio",
+    "paginas": null,
+    "gobernanza": "top-down",
+    "enforcement": "Orientaciones",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": false,
+    "revision_periodica": false,
+    "modifica_evaluacion": true,
+    "publico": true
+  },
+  {
+    "id": 35,
+    "universidad": "Universidad de Valparaíso",
+    "sigla": "UV",
+    "tipo_institucion": "Estatal CRUCH",
+    "unidad": "Escuela de Sociología",
+    "documento": "Guía para docentes (Sección Integridad e IA)",
+    "url": "https://sociologia.uv.cl/images/Documentos/Guia_para_docentes.pdf",
+    "fecha": "2023-2024",
+    "alcance": "Escuela",
+    "alcance_detalle": "Docencia Sociología",
+    "formato": "PDF",
+    "paginas": null,
+    "gobernanza": "bottom-up",
+    "enforcement": "Guía docente",
+    "exige_declaracion": true,
+    "ia_no_autora": false,
+    "menciona_datos_personales": false,
+    "revision_periodica": false,
+    "modifica_evaluacion": true,
+    "publico": true
+  },
+  {
+    "id": 36,
+    "universidad": "Universidad de La Frontera",
+    "sigla": "UFRO",
+    "tipo_institucion": "Estatal CRUCH",
+    "unidad": "Dirección de Desarrollo Curricular y Docente",
+    "documento": "Orientaciones para el uso de ChatGPT en Educación Superior",
+    "url": "https://docencia.ufro.cl/orientaciones-chatgpt-educacion-superior/",
+    "fecha": "2023-2024",
+    "alcance": "Institucional",
+    "alcance_detalle": "Docencia de Pregrado",
+    "formato": "Portal web",
+    "paginas": null,
+    "gobernanza": "top-down",
+    "enforcement": "Orientaciones pedagógicas",
+    "exige_declaracion": false,
+    "ia_no_autora": false,
+    "menciona_datos_personales": true,
+    "revision_periodica": false,
+    "modifica_evaluacion": true,
+    "publico": true
+  },
+  {
+    "id": 37,
+    "universidad": "Universidad de Los Lagos",
+    "sigla": "ULagos",
+    "tipo_institucion": "Estatal CRUCH",
+    "unidad": "Rectoría / Vicerrectoría Académica",
+    "documento": "Programa de Integridad Universitaria (Decretos DU-CPO-2024-01498 y DU-CPO-2024-01601)",
+    "url": "https://norche.ulagos.cl",
+    "fecha": "2024",
+    "alcance": "Institucional",
+    "alcance_detalle": "Gobernanza IA, integridad y datos",
+    "formato": "Decreto normativo",
+    "paginas": null,
+    "gobernanza": "top-down",
+    "enforcement": "Decreto universitario",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": true,
+    "revision_periodica": false,
+    "modifica_evaluacion": true,
+    "publico": true
+  },
+  {
+    "id": 38,
+    "universidad": "Universidad de Antofagasta",
+    "sigla": "UA",
+    "tipo_institucion": "Estatal CRUCH",
+    "unidad": "Biblioteca / Dirección de Gestión Docente",
+    "documento": "El uso ético de la IA en la educación universitaria",
+    "url": "https://biblioteca.uantof.cl/public/pg/uso_ia.php",
+    "fecha": "2023-2024",
+    "alcance": "Institucional",
+    "alcance_detalle": "Apoyo a docencia y estudiantado",
+    "formato": "Portal web",
+    "paginas": null,
+    "gobernanza": "top-down",
+    "enforcement": "Directrices éticas",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": true,
+    "revision_periodica": false,
+    "modifica_evaluacion": false,
+    "publico": true
+  },
+  {
+    "id": 39,
+    "universidad": "Universidad de Talca",
+    "sigla": "UTalca",
+    "tipo_institucion": "Estatal CRUCH",
+    "unidad": "Fac. Cs. Jurídicas / CEDEP (Revista Política Criminal)",
+    "documento": "Directrices sobre el uso de herramientas de IA en manuscritos",
+    "url": "https://www.politicacriminal.cl",
+    "fecha": "2024-09",
+    "alcance": "Unidad",
+    "alcance_detalle": "Revista científica",
+    "formato": "Web",
+    "paginas": null,
+    "gobernanza": "bottom-up",
+    "enforcement": "Normativa editorial con límite 20%",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": false,
+    "revision_periodica": false,
+    "modifica_evaluacion": false,
+    "publico": true
+  },
+  {
+    "id": 40,
+    "universidad": "Universidad Alberto Hurtado",
+    "sigla": "UAH",
+    "tipo_institucion": "Privada",
+    "unidad": "Dirección de Docencia y Pedagogía Universitaria (VRA)",
+    "documento": "Orientaciones sobre integridad académica para docentes de actividades curriculares",
+    "url": "https://www.uahurtado.cl/wp-content/uploads/2026/03/2.9-Orientaciones-sobre-integridad-academica-DIC-2025.pdf",
+    "fecha": "2025-12",
+    "alcance": "Institucional",
+    "alcance_detalle": "Docencia",
+    "formato": "PDF",
+    "paginas": 17,
+    "gobernanza": "top-down",
+    "enforcement": "Orientaciones con criterios formativos",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": false,
+    "revision_periodica": false,
+    "modifica_evaluacion": true,
+    "publico": true
+  },
+  {
+    "id": 41,
+    "universidad": "Universidad Mayor",
+    "sigla": "UMayor",
+    "tipo_institucion": "Privada",
+    "unidad": "Rectoría / VRA",
+    "documento": "Reglamento de Estudiantes de Pregrado (Decreto N° 01/2026) - Art. 29° sobre IA",
+    "url": "https://www.umayor.cl/um/reglamento-universidad-mayor",
+    "fecha": "2026-01-02",
+    "alcance": "Institucional",
+    "alcance_detalle": "Pregrado",
+    "formato": "PDF",
+    "paginas": 31,
+    "gobernanza": "top-down",
+    "enforcement": "Reglamento con sanciones (nota 1.0)",
+    "exige_declaracion": false,
+    "ia_no_autora": false,
+    "menciona_datos_personales": false,
+    "revision_periodica": false,
+    "modifica_evaluacion": true,
+    "publico": true
+  },
+  {
+    "id": 42,
+    "universidad": "Universidad San Sebastián",
+    "sigla": "USS",
+    "tipo_institucion": "Privada",
+    "unidad": "DISEI / Vicerrectoría de Investigación",
+    "documento": "Código de Conducta Responsable en Investigación - Lineamientos IA",
+    "url": "https://investigacion.uss.cl/integridad/",
+    "fecha": "2024-2025",
+    "alcance": "Institucional",
+    "alcance_detalle": "Investigación y postgrado",
+    "formato": "Web",
+    "paginas": null,
+    "gobernanza": "top-down",
+    "enforcement": "Código con registro de prompts",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": false,
+    "revision_periodica": false,
+    "modifica_evaluacion": false,
+    "publico": true
+  },
+  {
+    "id": 43,
+    "universidad": "Universidad Gabriela Mistral",
+    "sigla": "UGM",
+    "tipo_institucion": "Privada",
+    "unidad": "Vicerrectoría Académica",
+    "documento": "Protocolo para la Prevención y Sanción del Plagio en el Contexto Académico (Res. VRA N° 01/2024)",
+    "url": "https://www.ugm.cl/ugm/site/docs/20200624/20200624120225/24_10_24_protocolo_para_la_prevencion_y_sancion_del_plagio.pdf",
+    "fecha": "2024-04-08",
+    "alcance": "Institucional",
+    "alcance_detalle": "Académico",
+    "formato": "PDF",
+    "paginas": 15,
+    "gobernanza": "top-down",
+    "enforcement": "Protocolo con tipificación de plagio por IA",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": false,
+    "revision_periodica": false,
+    "modifica_evaluacion": true,
+    "publico": true
+  },
+  {
+    "id": 44,
+    "universidad": "Universidad de Atacama",
+    "sigla": "UDA",
+    "tipo_institucion": "Estatal CRUCH",
+    "unidad": "Rectoría / Comité SapiensIA",
+    "documento": "Comité Universitario de Inteligencia Artificial SapiensIA (sin documento público descargable)",
+    "url": "https://uda.cl",
+    "fecha": "2024-06",
+    "alcance": "Institucional",
+    "alcance_detalle": "Gobernanza institucional transversal",
+    "formato": "Comité constituido (sin PDF público)",
+    "paginas": null,
+    "gobernanza": "top-down",
+    "enforcement": "Comité en funcionamiento, documento en desarrollo",
+    "exige_declaracion": false,
+    "ia_no_autora": false,
+    "menciona_datos_personales": false,
+    "revision_periodica": false,
+    "modifica_evaluacion": false,
+    "publico": false
+  }
+]
+;
+        const SIN_DOCUMENTO = [
+  {sigla: 'UTA', nombre: 'Universidad de Tarapacá', tipo: 'Estatal CRUCH', nota: 'Curso de IA para docentes, sin protocolo formal'},
+  {sigla: 'UNAP', nombre: 'Universidad Arturo Prat', tipo: 'Estatal CRUCH', nota: 'Agente MEI con Copilot, sin protocolo formal'},
+  {sigla: 'ULS', nombre: 'Universidad de La Serena', tipo: 'Estatal CRUCH', nota: 'Congreso CODES sobre IA, sin protocolo formal'},
+  {sigla: 'UPLA', nombre: 'Universidad de Playa Ancha', tipo: 'Estatal CRUCH', nota: 'Talleres docentes, sin protocolo formal'},
+  {sigla: 'UOH', nombre: 'Universidad de O\'Higgins', tipo: 'Estatal CRUCH', nota: 'Talleres formativos, sin protocolo formal'},
+  {sigla: 'UBB', nombre: 'Universidad del Bío-Bío', tipo: 'Estatal CRUCH', nota: 'Manual de buenas prácticas en investigación, sin protocolo de IA formal'},
+  {sigla: 'UAysén', nombre: 'Universidad de Aysén', tipo: 'Estatal CRUCH', nota: 'Sin documento público'},
+  {sigla: 'UMAG', nombre: 'Universidad de Magallanes', tipo: 'Estatal CRUCH', nota: 'Talleres docentes, sin protocolo formal'},
+  {sigla: 'UTEM', nombre: 'Universidad Tecnológica Metropolitana', tipo: 'Estatal CRUCH', nota: 'Carrera de IA, sin protocolo institucional'},
+  {sigla: 'UMCE', nombre: 'Universidad Metropolitana de Cs. de la Educación', tipo: 'Estatal CRUCH', nota: 'Red Futuros Docentes en IA, sin protocolo propio'},
+  {sigla: 'UCM', nombre: 'Universidad Católica del Maule', tipo: 'Privada CRUCH', nota: 'Agenda en desarrollo, sin texto publicado'},
+  {sigla: 'UCSC', nombre: 'Universidad Católica de la Santísima Concepción', tipo: 'Privada CRUCH', nota: 'Talleres CIDD, sin guía formal'},
+  {sigla: 'UANDES', nombre: 'Universidad de los Andes', tipo: 'Privada', nota: 'Difunde guía UNESCO, sin documento propio'},
+  {sigla: 'UFT', nombre: 'Universidad Finis Terrae', tipo: 'Privada', nota: 'Eje formativo en CID, sin protocolo formal'},
+  {sigla: 'USEK', nombre: 'Universidad SEK', tipo: 'Privada', nota: 'Talleres de escuela de invierno, sin protocolo'},
+  {sigla: 'UVM', nombre: 'Universidad de Viña del Mar', tipo: 'Privada', nota: 'Manuales formativos, sin reglamento de IA'},
+  {sigla: 'UAC', nombre: 'Universidad de Aconcagua', tipo: 'Privada', nota: 'Sin documento público'}
+];
+
+        // Theme toggle
+        function toggleTheme() {
+            const body = document.body;
+            if(body.getAttribute('data-theme') === 'dark') {
+                body.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+        if(localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.body.setAttribute('data-theme', 'dark');
+        }
+
+        // Initialize Stats
+        function initStats() {
+            const total = INVENTARIO.length;
+            const insts = new Set(INVENTARIO.map(i => i.sigla)).size;
+            const dec = Math.round((INVENTARIO.filter(i => i.exige_declaracion).length / total) * 100);
+            const aut = Math.round((INVENTARIO.filter(i => i.ia_no_autora).length / total) * 100);
+            
+            animateValue("stat-total", 0, total, 1000);
+            animateValue("stat-inst", 0, insts, 1000);
+            animateValue("stat-dec", 0, dec, 1000, "%");
+            animateValue("stat-aut", 0, aut, 1000, "%");
+
+            // Populate Filters
+            const tipos = [...new Set(INVENTARIO.map(i => i.tipo_institucion))].sort();
+            const gobs = [...new Set(INVENTARIO.map(i => i.gobernanza))].sort();
+            
+            const filterTipo = document.getElementById('filterTipo');
+            tipos.forEach(t => filterTipo.add(new Option(t, t)));
+            
+            const filterGob = document.getElementById('filterGob');
+            gobs.forEach(g => filterGob.add(new Option(g, g)));
+
+            // Charts
+            renderCharts(tipos, gobs);
+        }
+
+        function animateValue(id, start, end, duration, suffix="") {
+            const obj = document.getElementById(id);
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                obj.innerHTML = Math.floor(progress * (end - start) + start) + suffix;
+                if (progress < 1) window.requestAnimationFrame(step);
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        function renderCharts(tipos, gobs) {
+            // Bar chart
+            const tipoCounts = tipos.map(t => ({ nombre: t, count: INVENTARIO.filter(i => i.tipo_institucion === t).length }));
+            tipoCounts.sort((a,b) => b.count - a.count);
+            const maxCount = tipoCounts[0].count;
+            
+            const chartTipo = document.getElementById('chart-tipo');
+            chartTipo.innerHTML = tipoCounts.map(t => `
+                <div class="bar-item">
+                    <div class="bar-label">${t.nombre}</div>
+                    <div class="bar-track">
+                        <div class="bar-fill" style="width: 0%" data-width="${(t.count/maxCount)*100}%"></div>
+                    </div>
+                    <div class="bar-value">${t.count}</div>
+                </div>
+            `).join('');
+
+            setTimeout(() => {
+                document.querySelectorAll('.bar-fill').forEach(el => el.style.width = el.getAttribute('data-width'));
+            }, 100);
+
+            // Donut chart
+            const gobCounts = gobs.map(g => ({ nombre: g, count: INVENTARIO.filter(i => i.gobernanza === g).length }));
+            const total = INVENTARIO.length;
+            let currentPct = 0;
+            const colors = ['var(--sidebar-bg)', '#5a8bb8', '#ccc', '#e6a8d7'];
+            let gradientStr = [];
+            let legendHTML = '';
+
+            gobCounts.forEach((g, idx) => {
+                const pct = (g.count / total) * 100;
+                gradientStr.push(`${colors[idx]} ${currentPct}% ${currentPct + pct}%`);
+                currentPct += pct;
+                legendHTML += `
+                    <div class="legend-item">
+                        <div class="legend-color" style="background:${colors[idx]}"></div>
+                        ${g.nombre} (${Math.round(pct)}%)
+                    </div>
+                `;
+            });
+            
+            document.getElementById('chart-gob-donut').style.background = `conic-gradient(${gradientStr.join(', ')})`;
+            document.getElementById('chart-gob-legend').innerHTML = legendHTML;
+        }
+
+        // Catalog
+        function renderCatalog() {
+            const search = document.getElementById('searchInput').value.toLowerCase();
+            const fTipo = document.getElementById('filterTipo').value;
+            const fGob = document.getElementById('filterGob').value;
+
+            const filtered = INVENTARIO.filter(i => {
+                const matchSearch = i.universidad.toLowerCase().includes(search) || i.documento.toLowerCase().includes(search) || i.unidad.toLowerCase().includes(search) || i.sigla.toLowerCase().includes(search);
+                const matchTipo = fTipo === 'all' || i.tipo_institucion === fTipo;
+                const matchGob = fGob === 'all' || i.gobernanza === fGob;
+                return matchSearch && matchTipo && matchGob;
+            });
+
+            const grid = document.getElementById('catalogGrid');
+            grid.innerHTML = filtered.map(i => `
+                <div class="doc-card">
+                    <div class="doc-meta">
+                        <span>${i.fecha}</span>
+                        <span>${i.alcance}</span>
+                    </div>
+                    <h3 class="doc-title">${i.documento}</h3>
+                    <div class="doc-uni">${i.universidad} (${i.sigla}) - ${i.unidad}</div>
+                    <div class="badges">
+                        ${i.exige_declaracion ? '<span class="badge green">Exige Declaración</span>' : ''}
+                        ${i.ia_no_autora ? '<span class="badge green">IA No Autora</span>' : ''}
+                        ${i.menciona_datos_personales ? '<span class="badge amber">Datos Personales</span>' : ''}
+                        ${i.revision_periodica ? '<span class="badge amber">Revisión Periódica</span>' : ''}
+                    </div>
+                    ${i.url ? `<a href="${i.url}" target="_blank" class="doc-link">Ver Documento &rarr;</a>` : ''}
+                </div>
+            `).join('');
+
+            // Also render table based on filter? Table usually shows all or filtered. Let's show filtered.
+            renderTable(filtered);
+        }
+
+        function getStatusIcon(boolValue) {
+            return boolValue 
+                ? '<span class="status-icon bg-green" title="Sí"></span>' 
+                : '<span class="status-icon bg-red" title="No"></span>';
+        }
+
+        function renderTable(data) {
+            const tbody = document.getElementById('analysisTable');
+            tbody.innerHTML = data.map(i => `
+                <tr>
+                    <td><strong>${i.sigla}</strong></td>
+                    <td>${i.unidad}</td>
+                    <td>${i.gobernanza}</td>
+                    <td>${i.formato}</td>
+                    <td style="text-align:center">${getStatusIcon(i.exige_declaracion)}</td>
+                    <td style="text-align:center">${getStatusIcon(i.ia_no_autora)}</td>
+                    <td style="text-align:center">${getStatusIcon(i.menciona_datos_personales)}</td>
+                    <td style="text-align:center">${getStatusIcon(i.modifica_evaluacion)}</td>
+                </tr>
+            `).join('');
+        }
+
+        function renderCoverage() {
+            // Combina universidades con documento (agrupadas) y sin documento
+            const unisOn = [...new Set(INVENTARIO.map(i => JSON.stringify({sigla: i.sigla, nombre: i.universidad, tipo: i.tipo_institucion})))].map(JSON.parse);
+            
+            const allItems = [
+                ...unisOn.map(u => ({...u, status: 'green', desc: 'Con protocolo/instrumento'})),
+                ...SIN_DOCUMENTO.map(u => ({...u, status: u.nota.toLowerCase().includes('comité') || u.nota.toLowerCase().includes('taller') || u.nota.toLowerCase().includes('agenda') ? 'amber' : 'red', desc: u.nota}))
+            ].sort((a,b) => a.nombre.localeCompare(b.nombre));
+
+            const list = document.getElementById('coverageList');
+            list.innerHTML = allItems.map(i => `
+                <div class="coverage-item" title="${i.desc}">
+                    <span class="status-dot bg-${i.status}"></span>
+                    <div>
+                        <strong>${i.sigla}</strong> - ${i.nombre}
+                        <div style="font-size:0.75rem; color:var(--text-muted)">${i.tipo}</div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Init
+        document.addEventListener('DOMContentLoaded', () => {
+            initStats();
+            renderCatalog();
+            renderCoverage();
+        });
+    </script>
+</body>
+</html>
