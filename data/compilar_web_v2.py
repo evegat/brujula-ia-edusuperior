@@ -1,10 +1,10 @@
 import json
 
 # Cargar inventario y brecha
-with open(r'D:\Proyectos\P154 - NormatIA\inventario.json', 'r', encoding='utf-8') as f:
+with open(r'D:\Proyectos\P154 - brujula-ia-edusuperior\inventario.json', 'r', encoding='utf-8') as f:
     inventario = json.load(f)
 
-with open(r'D:\Proyectos\P154 - NormatIA\data\brecha_universidades_chile.json', 'r', encoding='utf-8') as f:
+with open(r'D:\Proyectos\P154 - brujula-ia-edusuperior\data\brecha_universidades_chile.json', 'r', encoding='utf-8') as f:
     brecha = json.load(f)
 
 inventario_json_str = json.dumps(inventario, ensure_ascii=False)
@@ -331,7 +331,7 @@ html_content = f'''<!DOCTYPE html>
                 <a href="/inventario.json" download class="btn btn-primary">
                     💾 Descargar Dataset Completo (JSON)
                 </a>
-                <a href="https://github.com/evegat/normatia" target="_blank" class="btn btn-outline">
+                <a href="https://github.com/evegat/brujula-ia-edusuperior" target="_blank" class="btn btn-outline">
                     📦 Repositorio GitHub con PDFs
                 </a>
             </div>
@@ -564,7 +564,8 @@ html_content = f'''<!DOCTYPE html>
 </body>
 </html>'''
 
-with open(r'D:\Proyectos\P154 - NormatIA\index.html', 'w', encoding='utf-8') as f:
+with open(r'D:\Proyectos\P154 - brujula-ia-edusuperior\index.html', 'w', encoding='utf-8') as f:
     f.write(html_content)
 
 print(f"HTML generado exitosamente! Tamaño: {len(html_content)} caracteres.")
+

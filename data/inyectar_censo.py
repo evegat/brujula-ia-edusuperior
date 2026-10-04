@@ -1,9 +1,9 @@
 import json, re
 
-with open(r'D:\Proyectos\P154 - NormatIA\data\brecha_universidades_chile.json', encoding='utf-8') as f:
+with open(r'D:\Proyectos\P154 - brujula-ia-edusuperior\data\brecha_universidades_chile.json', encoding='utf-8') as f:
     brecha = json.load(f)
 
-with open(r'D:\Proyectos\P154 - NormatIA\index.html', 'r', encoding='utf-8') as f:
+with open(r'D:\Proyectos\P154 - brujula-ia-edusuperior\index.html', 'r', encoding='utf-8') as f:
     html = f.read()
 
 # Crear bloque de datos JSON para incrustar
@@ -139,7 +139,8 @@ script_censo = f'''
 if 'renderCenso' not in html_actualizado:
     html_actualizado = html_actualizado.replace('</script>\n</body>', script_censo + '\n</body>')
 
-with open(r'D:\Proyectos\P154 - NormatIA\index.html', 'w', encoding='utf-8') as f:
+with open(r'D:\Proyectos\P154 - brujula-ia-edusuperior\index.html', 'w', encoding='utf-8') as f:
     f.write(html_actualizado)
 
 print("Actualizado index.html con Censo Nacional de 54 Universidades!")
+

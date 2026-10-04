@@ -6,10 +6,10 @@ def norm(text):
     text = text.lower().replace('del ', ' ').replace('de ', ' ').replace('la ', ' ').replace('el ', ' ').replace('los ', ' ').replace('las ', ' ').replace('y ', ' ').replace('-', ' ').replace('.', ' ')
     return ' '.join(text.split())
 
-with open(r'D:\Proyectos\P154 - NormatIA\data\nomina_oficial_ies_mineduc.json', encoding='utf-8') as f:
+with open(r'D:\Proyectos\P154 - brujula-ia-edusuperior\data\nomina_oficial_ies_mineduc.json', encoding='utf-8') as f:
     oficiales = json.load(f)
 
-with open(r'D:\Proyectos\P154 - NormatIA\inventario.json', encoding='utf-8') as f:
+with open(r'D:\Proyectos\P154 - brujula-ia-edusuperior\inventario.json', encoding='utf-8') as f:
     catastro = json.load(f)
 
 # 54 Universidades oficiales
@@ -104,7 +104,8 @@ resultado = {
     'universidades_sin_instrumento': sin_protocolo
 }
 
-with open(r'D:\Proyectos\P154 - NormatIA\data\brecha_universidades_chile.json', 'w', encoding='utf-8') as f:
+with open(r'D:\Proyectos\P154 - brujula-ia-edusuperior\data\brecha_universidades_chile.json', 'w', encoding='utf-8') as f:
     json.dump(resultado, f, ensure_ascii=False, indent=2)
 
 print("\nGuardado exitosamente en data/brecha_universidades_chile.json")
+
