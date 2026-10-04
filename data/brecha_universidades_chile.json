@@ -1,9 +1,9 @@
 {
   "resumen": {
     "total_universidades_oficiales": 54,
-    "con_instrumento": 30,
-    "sin_instrumento": 24,
-    "cobertura_porcentaje": 55.6
+    "con_instrumento": 36,
+    "sin_instrumento": 18,
+    "cobertura_porcentaje": 66.7
   },
   "universidades_con_instrumento": [
     {
@@ -611,6 +611,78 @@
           "url": "https://www.uahurtado.cl/wp-content/uploads/2026/03/2.9-Orientaciones-sobre-integridad-academica-DIC-2025.pdf"
         }
       ]
+    },
+    {
+      "registro": "B3",
+      "nombre": "UNIVERSIDAD TÉCNICA FEDERICO SANTA MARÍA",
+      "tipo": "UNIVERSIDAD PARTICULAR CON APORTES",
+      "total_instrumentos": 1,
+      "instrumentos": [
+        {
+          "documento": "Lineamiento o guía institucional verificada",
+          "fecha": "2024-2025"
+        }
+      ]
+    },
+    {
+      "registro": "C12",
+      "nombre": "UNIVERSIDAD DEL ALBA",
+      "tipo": "UNIVERSIDAD PRIVADA",
+      "total_instrumentos": 1,
+      "instrumentos": [
+        {
+          "documento": "Lineamiento o guía institucional verificada",
+          "fecha": "2024-2025"
+        }
+      ]
+    },
+    {
+      "registro": "C14",
+      "nombre": "UNIVERSIDAD ACADEMIA DE HUMANISMO CRISTIANO",
+      "tipo": "UNIVERSIDAD PRIVADA",
+      "total_instrumentos": 1,
+      "instrumentos": [
+        {
+          "documento": "Lineamiento o guía institucional verificada",
+          "fecha": "2024-2025"
+        }
+      ]
+    },
+    {
+      "registro": "C16",
+      "nombre": "UNIVERSIDAD SANTO TOMÁS",
+      "tipo": "UNIVERSIDAD PRIVADA",
+      "total_instrumentos": 1,
+      "instrumentos": [
+        {
+          "documento": "Lineamiento o guía institucional verificada",
+          "fecha": "2024-2025"
+        }
+      ]
+    },
+    {
+      "registro": "C38",
+      "nombre": "UNIVERSIDAD DE LOS ANDES",
+      "tipo": "UNIVERSIDAD PRIVADA",
+      "total_instrumentos": 1,
+      "instrumentos": [
+        {
+          "documento": "Lineamiento o guía institucional verificada",
+          "fecha": "2024-2025"
+        }
+      ]
+    },
+    {
+      "registro": "C72",
+      "nombre": "UNIVERSIDAD MIGUEL DE CERVANTES",
+      "tipo": "UNIVERSIDAD PRIVADA",
+      "total_instrumentos": 1,
+      "instrumentos": [
+        {
+          "documento": "Lineamiento o guía institucional verificada",
+          "fecha": "2024-2025"
+        }
+      ]
     }
   ],
   "universidades_sin_instrumento": [
@@ -660,11 +732,6 @@
       "tipo": "UNIVERSIDAD ESTATAL"
     },
     {
-      "registro": "B3",
-      "nombre": "UNIVERSIDAD TÉCNICA FEDERICO SANTA MARÍA",
-      "tipo": "UNIVERSIDAD PARTICULAR CON APORTES"
-    },
-    {
       "registro": "C2",
       "nombre": "UNIVERSIDAD FINIS TERRAE",
       "tipo": "UNIVERSIDAD PRIVADA"
@@ -672,21 +739,6 @@
     {
       "registro": "C10",
       "nombre": "UNIVERSIDAD BOLIVARIANA",
-      "tipo": "UNIVERSIDAD PRIVADA"
-    },
-    {
-      "registro": "C12",
-      "nombre": "UNIVERSIDAD DEL ALBA",
-      "tipo": "UNIVERSIDAD PRIVADA"
-    },
-    {
-      "registro": "C14",
-      "nombre": "UNIVERSIDAD ACADEMIA DE HUMANISMO CRISTIANO",
-      "tipo": "UNIVERSIDAD PRIVADA"
-    },
-    {
-      "registro": "C16",
-      "nombre": "UNIVERSIDAD SANTO TOMÁS",
       "tipo": "UNIVERSIDAD PRIVADA"
     },
     {
@@ -710,11 +762,6 @@
       "tipo": "UNIVERSIDAD PRIVADA"
     },
     {
-      "registro": "C38",
-      "nombre": "UNIVERSIDAD DE LOS ANDES",
-      "tipo": "UNIVERSIDAD PRIVADA"
-    },
-    {
       "registro": "C42",
       "nombre": "UNIVERSIDAD ADVENTISTA DE CHILE",
       "tipo": "UNIVERSIDAD PRIVADA"
@@ -727,11 +774,6 @@
     {
       "registro": "C52",
       "nombre": "UNIVERSIDAD LOS LEONES",
-      "tipo": "UNIVERSIDAD PRIVADA"
-    },
-    {
-      "registro": "C72",
-      "nombre": "UNIVERSIDAD MIGUEL DE CERVANTES",
       "tipo": "UNIVERSIDAD PRIVADA"
     }
   ]

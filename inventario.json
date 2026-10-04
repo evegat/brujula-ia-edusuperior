@@ -19,7 +19,13 @@
     "menciona_datos_personales": false,
     "revision_periodica": false,
     "modifica_evaluacion": true,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 2,
@@ -41,7 +47,13 @@
     "menciona_datos_personales": true,
     "revision_periodica": false,
     "modifica_evaluacion": true,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Docentes y Estudiantes",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 3,
@@ -63,7 +75,13 @@
     "menciona_datos_personales": true,
     "revision_periodica": true,
     "modifica_evaluacion": true,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 4,
@@ -85,7 +103,13 @@
     "menciona_datos_personales": false,
     "revision_periodica": false,
     "modifica_evaluacion": true,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Docentes y Estudiantes",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 5,
@@ -107,7 +131,13 @@
     "menciona_datos_personales": true,
     "revision_periodica": false,
     "modifica_evaluacion": true,
-    "publico": false
+    "publico": false,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 6,
@@ -129,7 +159,13 @@
     "menciona_datos_personales": false,
     "revision_periodica": false,
     "modifica_evaluacion": false,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Docentes y Estudiantes",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 7,
@@ -151,7 +187,13 @@
     "menciona_datos_personales": false,
     "revision_periodica": false,
     "modifica_evaluacion": true,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 8,
@@ -173,7 +215,13 @@
     "menciona_datos_personales": false,
     "revision_periodica": false,
     "modifica_evaluacion": false,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Docentes y Estudiantes",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 9,
@@ -195,7 +243,13 @@
     "menciona_datos_personales": false,
     "revision_periodica": false,
     "modifica_evaluacion": true,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 10,
@@ -217,7 +271,13 @@
     "menciona_datos_personales": false,
     "revision_periodica": false,
     "modifica_evaluacion": true,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 11,
@@ -239,7 +299,13 @@
     "menciona_datos_personales": true,
     "revision_periodica": true,
     "modifica_evaluacion": true,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 12,
@@ -261,7 +327,13 @@
     "menciona_datos_personales": false,
     "revision_periodica": false,
     "modifica_evaluacion": false,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 13,
@@ -283,7 +355,13 @@
     "menciona_datos_personales": false,
     "revision_periodica": false,
     "modifica_evaluacion": true,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 14,
@@ -305,7 +383,13 @@
     "menciona_datos_personales": false,
     "revision_periodica": false,
     "modifica_evaluacion": true,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Docentes y Estudiantes",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 15,
@@ -327,7 +411,13 @@
     "menciona_datos_personales": true,
     "revision_periodica": true,
     "modifica_evaluacion": true,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 16,
@@ -349,7 +439,13 @@
     "menciona_datos_personales": false,
     "revision_periodica": false,
     "modifica_evaluacion": true,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 17,
@@ -371,7 +467,13 @@
     "menciona_datos_personales": false,
     "revision_periodica": true,
     "modifica_evaluacion": true,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Docentes y Estudiantes",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 18,
@@ -393,7 +495,13 @@
     "menciona_datos_personales": false,
     "revision_periodica": false,
     "modifica_evaluacion": true,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Obligación",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 19,
@@ -415,7 +523,13 @@
     "menciona_datos_personales": true,
     "revision_periodica": false,
     "modifica_evaluacion": true,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 20,
@@ -437,7 +551,13 @@
     "menciona_datos_personales": false,
     "revision_periodica": false,
     "modifica_evaluacion": true,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 21,
@@ -459,7 +579,13 @@
     "menciona_datos_personales": false,
     "revision_periodica": false,
     "modifica_evaluacion": false,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 22,
@@ -481,7 +607,13 @@
     "menciona_datos_personales": true,
     "revision_periodica": false,
     "modifica_evaluacion": true,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 23,
@@ -503,7 +635,13 @@
     "menciona_datos_personales": true,
     "revision_periodica": false,
     "modifica_evaluacion": true,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Obligación",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 24,
@@ -525,7 +663,13 @@
     "menciona_datos_personales": false,
     "revision_periodica": false,
     "modifica_evaluacion": true,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 25,
@@ -547,7 +691,13 @@
     "menciona_datos_personales": false,
     "revision_periodica": false,
     "modifica_evaluacion": true,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 26,
@@ -569,7 +719,13 @@
     "menciona_datos_personales": false,
     "revision_periodica": false,
     "modifica_evaluacion": false,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 27,
@@ -591,7 +747,13 @@
     "menciona_datos_personales": false,
     "revision_periodica": false,
     "modifica_evaluacion": false,
-    "publico": false
+    "publico": false,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 28,
@@ -613,7 +775,13 @@
     "menciona_datos_personales": true,
     "revision_periodica": false,
     "modifica_evaluacion": true,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación consolidada"
   },
   {
     "id": 29,
@@ -635,7 +803,13 @@
     "menciona_datos_personales": false,
     "revision_periodica": false,
     "modifica_evaluacion": false,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 30,
@@ -657,7 +831,13 @@
     "menciona_datos_personales": true,
     "revision_periodica": false,
     "modifica_evaluacion": true,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Obligación",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación consolidada"
   },
   {
     "id": 31,
@@ -679,7 +859,13 @@
     "menciona_datos_personales": false,
     "revision_periodica": false,
     "modifica_evaluacion": true,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 32,
@@ -701,7 +887,13 @@
     "menciona_datos_personales": false,
     "revision_periodica": false,
     "modifica_evaluacion": true,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 33,
@@ -723,7 +915,13 @@
     "menciona_datos_personales": false,
     "revision_periodica": false,
     "modifica_evaluacion": false,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 34,
@@ -745,7 +943,13 @@
     "menciona_datos_personales": false,
     "revision_periodica": false,
     "modifica_evaluacion": true,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 35,
@@ -767,7 +971,13 @@
     "menciona_datos_personales": false,
     "revision_periodica": false,
     "modifica_evaluacion": true,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 36,
@@ -789,7 +999,13 @@
     "menciona_datos_personales": true,
     "revision_periodica": false,
     "modifica_evaluacion": true,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 37,
@@ -811,7 +1027,13 @@
     "menciona_datos_personales": true,
     "revision_periodica": false,
     "modifica_evaluacion": true,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Obligación",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación consolidada"
   },
   {
     "id": 38,
@@ -833,7 +1055,13 @@
     "menciona_datos_personales": true,
     "revision_periodica": false,
     "modifica_evaluacion": false,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 39,
@@ -855,7 +1083,13 @@
     "menciona_datos_personales": false,
     "revision_periodica": false,
     "modifica_evaluacion": false,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 40,
@@ -877,7 +1111,13 @@
     "menciona_datos_personales": false,
     "revision_periodica": false,
     "modifica_evaluacion": true,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 41,
@@ -899,7 +1139,13 @@
     "menciona_datos_personales": false,
     "revision_periodica": false,
     "modifica_evaluacion": true,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Obligación",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 42,
@@ -921,7 +1167,13 @@
     "menciona_datos_personales": false,
     "revision_periodica": false,
     "modifica_evaluacion": false,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 43,
@@ -943,7 +1195,13 @@
     "menciona_datos_personales": false,
     "revision_periodica": false,
     "modifica_evaluacion": true,
-    "publico": true
+    "publico": true,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Preventivo",
+    "d6_madurez": "Regulación inicial"
   },
   {
     "id": 44,
@@ -965,6 +1223,236 @@
     "menciona_datos_personales": false,
     "revision_periodica": false,
     "modifica_evaluacion": false,
-    "publico": false
+    "publico": false,
+    "d1_actor": "Todos los actores IES",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica e Innovación pedagógica",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
+  },
+  {
+    "id": 45,
+    "universidad": "Universidad Santo Tomás",
+    "sigla": "UST",
+    "tipo_institucion": "Privada",
+    "unidad": "Rectoría / Vicerrectoría Académica",
+    "documento": "Lineamientos para el uso de la Inteligencia Artificial (Decreto N° 054/25)",
+    "url": "https://www.ust.cl/politicas-y-reglamentos/",
+    "fecha": "2025",
+    "alcance": "Institucional",
+    "alcance_detalle": "Toda la Universidad Santo Tomás",
+    "formato": "Decreto formal",
+    "paginas": 16,
+    "gobernanza": "top-down",
+    "enforcement": "Decreto formal con sanciones disciplinarias",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": true,
+    "revision_periodica": true,
+    "modifica_evaluacion": true,
+    "publico": true,
+    "d1_actor": "Todos los actores (Docentes, Estudiantes, Investigadores)",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Obligación y Sanción",
+    "d4_finalidad": "Integridad académica y Gobernanza",
+    "d5_enfoque": "Estratégico / Preventivo",
+    "d6_madurez": "Regulación consolidada"
+  },
+  {
+    "id": 46,
+    "universidad": "Universidad Técnica Federico Santa María",
+    "sigla": "UTFSM",
+    "tipo_institucion": "Privada CRUCH",
+    "unidad": "Dirección General de Docencia / Transformación Digital",
+    "documento": "Guía rápida para el uso ético-pedagógico de la IA y Tríptico IAGen",
+    "url": "https://transformaciondigital.usm.cl/",
+    "fecha": "2024",
+    "alcance": "Institucional",
+    "alcance_detalle": "Comunidad docente y estudiantil USM",
+    "formato": "Guía PDF / Portal web",
+    "paginas": 8,
+    "gobernanza": "top-down",
+    "enforcement": "Guía orientadora con criterios formativos",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": true,
+    "revision_periodica": false,
+    "modifica_evaluacion": true,
+    "publico": true,
+    "d1_actor": "Docentes y Estudiantes",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Innovación pedagógica y pensamiento crítico",
+    "d5_enfoque": "Habilitador / Reflexivo",
+    "d6_madurez": "Regulación inicial"
+  },
+  {
+    "id": 47,
+    "universidad": "Universidad de los Andes",
+    "sigla": "UANDES",
+    "tipo_institucion": "Privada",
+    "unidad": "Biblioteca / Centro de Innovación Docente (CID)",
+    "documento": "Guía de uso responsable de Inteligencia Artificial y Boletines Pedagógicos",
+    "url": "https://biblioteca.uandes.cl/",
+    "fecha": "2024",
+    "alcance": "Institucional",
+    "alcance_detalle": "Pregrado, postgrado e investigación",
+    "formato": "Guía web / PDF",
+    "paginas": 10,
+    "gobernanza": "top-down",
+    "enforcement": "Guía de integridad y declaración obligatoria de prompts",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": true,
+    "revision_periodica": false,
+    "modifica_evaluacion": true,
+    "publico": true,
+    "d1_actor": "Estudiantes y Docentes",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador y Principio ético",
+    "d4_finalidad": "Integridad académica y Verificación de fuentes",
+    "d5_enfoque": "Reflexivo / Preventivo",
+    "d6_madurez": "Regulación inicial"
+  },
+  {
+    "id": 48,
+    "universidad": "Universidad Miguel de Cervantes",
+    "sigla": "UMC",
+    "tipo_institucion": "Privada",
+    "unidad": "Vicerrectoría Académica",
+    "documento": "Instructivo de Uso Académico de Inteligencia Artificial Generativa y Principios Éticos",
+    "url": "https://umcervantes.cl",
+    "fecha": "2024",
+    "alcance": "Institucional",
+    "alcance_detalle": "Docencia de pregrado y postgrado",
+    "formato": "Instructivo oficial",
+    "paginas": 6,
+    "gobernanza": "top-down",
+    "enforcement": "Instructivo vinculante con foco en persona humana",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": true,
+    "revision_periodica": false,
+    "modifica_evaluacion": true,
+    "publico": true,
+    "d1_actor": "Comunidad Académica",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Obligación y Principio ético",
+    "d4_finalidad": "Protección de derechos y Transparencia",
+    "d5_enfoque": "Reflexivo / Humanista",
+    "d6_madurez": "Regulación inicial"
+  },
+  {
+    "id": 49,
+    "universidad": "Universidad Academia de Humanismo Cristiano",
+    "sigla": "UAHC",
+    "tipo_institucion": "Privada",
+    "unidad": "Vicerrectoría Académica / DIDA / IAcademia",
+    "documento": "Guía para el uso de IA generativa en educación e investigación",
+    "url": "https://academia.cl",
+    "fecha": "2024",
+    "alcance": "Institucional",
+    "alcance_detalle": "Docencia e investigación crítica",
+    "formato": "Guía institucional",
+    "paginas": 12,
+    "gobernanza": "top-down",
+    "enforcement": "Guía formativa con bitácoras de trabajo obligatorias",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": true,
+    "revision_periodica": true,
+    "modifica_evaluacion": true,
+    "publico": true,
+    "d1_actor": "Docentes, Estudiantes e Investigadores",
+    "d2_objeto": "IA Generativa y Algoritmos",
+    "d3_mecanismo": "Lineamiento orientador y Gobernanza",
+    "d4_finalidad": "Innovación pedagógica y Pensamiento crítico",
+    "d5_enfoque": "Reflexivo / Habilitador",
+    "d6_madurez": "Regulación inicial"
+  },
+  {
+    "id": 50,
+    "universidad": "Universidad del Alba",
+    "sigla": "UDALBA",
+    "tipo_institucion": "Privada",
+    "unidad": "Vicerrectoría Académica",
+    "documento": "Guía básica para el uso de ChatGPT y herramientas de IA con fines académicos",
+    "url": "https://udalba.cl",
+    "fecha": "2024",
+    "alcance": "Institucional",
+    "alcance_detalle": "Pregrado",
+    "formato": "Guía institucional",
+    "paginas": 8,
+    "gobernanza": "top-down",
+    "enforcement": "Guía orientadora con citación explícita de prompts",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": false,
+    "revision_periodica": false,
+    "modifica_evaluacion": true,
+    "publico": true,
+    "d1_actor": "Estudiantes y Docentes",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Lineamiento orientador",
+    "d4_finalidad": "Integridad académica",
+    "d5_enfoque": "Preventivo",
+    "d6_madurez": "Regulación inicial"
+  },
+  {
+    "id": 51,
+    "universidad": "IP Duoc UC",
+    "sigla": "Duoc UC",
+    "tipo_institucion": "IP/CFT",
+    "unidad": "Vicerrectoría Académica",
+    "documento": "Marco de Competencias Digitales Docentes (Resolución VRA N° 13/2025) y Lineamientos Éticos",
+    "url": "https://ia.duoc.cl/",
+    "fecha": "2025",
+    "alcance": "Institucional",
+    "alcance_detalle": "Toda la institución (IP y CFT)",
+    "formato": "Resolución VRA + Portal web",
+    "paginas": 18,
+    "gobernanza": "top-down",
+    "enforcement": "Resolución VRA vinculante",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": true,
+    "revision_periodica": true,
+    "modifica_evaluacion": true,
+    "publico": true,
+    "d1_actor": "Docentes y Estudiantes",
+    "d2_objeto": "IA Generativa y Plataformas educativas",
+    "d3_mecanismo": "Obligación y Gobernanza",
+    "d4_finalidad": "Innovación pedagógica y Privacidad",
+    "d5_enfoque": "Habilitador / Estratégico",
+    "d6_madurez": "Regulación consolidada"
+  },
+  {
+    "id": 52,
+    "universidad": "IP IACC",
+    "sigla": "IACC",
+    "tipo_institucion": "IP",
+    "unidad": "Vicerrectoría Académica / Escuela de Tecnologías",
+    "documento": "Modelo de Evaluación Auténtica e Integridad Académica frente a la IA en Entornos Virtuales",
+    "url": "https://iacc.cl",
+    "fecha": "2024",
+    "alcance": "Institucional",
+    "alcance_detalle": "Programas 100% online",
+    "formato": "Directriz pedagógica institucional",
+    "paginas": 14,
+    "gobernanza": "top-down",
+    "enforcement": "Directriz institucional con Turnitin IA",
+    "exige_declaracion": true,
+    "ia_no_autora": true,
+    "menciona_datos_personales": true,
+    "revision_periodica": false,
+    "modifica_evaluacion": true,
+    "publico": true,
+    "d1_actor": "Estudiantes y Docentes Virtuales",
+    "d2_objeto": "IA Generativa",
+    "d3_mecanismo": "Obligación y Lineamiento",
+    "d4_finalidad": "Evaluación auténtica e Integridad",
+    "d5_enfoque": "Estratégico / Reflexivo",
+    "d6_madurez": "Regulación consolidada"
   }
 ]
