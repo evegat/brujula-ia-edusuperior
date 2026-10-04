@@ -1,0 +1,617 @@
+[
+  {
+    "registro": "A1",
+    "nombre": "UNIVERSIDAD DE CHILE",
+    "tipo": "UNIVERSIDAD ESTATAL"
+  },
+  {
+    "registro": "A2",
+    "nombre": "UNIVERSIDAD DE SANTIAGO DE CHILE",
+    "tipo": "UNIVERSIDAD ESTATAL"
+  },
+  {
+    "registro": "A3",
+    "nombre": "UNIVERSIDAD DE VALPARAÍSO",
+    "tipo": "UNIVERSIDAD ESTATAL"
+  },
+  {
+    "registro": "A4",
+    "nombre": "UNIVERSIDAD DE ANTOFAGASTA",
+    "tipo": "UNIVERSIDAD ESTATAL"
+  },
+  {
+    "registro": "A5",
+    "nombre": "UNIVERSIDAD DE LA SERENA",
+    "tipo": "UNIVERSIDAD ESTATAL"
+  },
+  {
+    "registro": "A6",
+    "nombre": "UNIVERSIDAD DEL BÍO-BÍO",
+    "tipo": "UNIVERSIDAD ESTATAL"
+  },
+  {
+    "registro": "A7",
+    "nombre": "UNIVERSIDAD DE LA FRONTERA",
+    "tipo": "UNIVERSIDAD ESTATAL"
+  },
+  {
+    "registro": "A8",
+    "nombre": "UNIVERSIDAD DE MAGALLANES",
+    "tipo": "UNIVERSIDAD ESTATAL"
+  },
+  {
+    "registro": "A9",
+    "nombre": "UNIVERSIDAD DE TALCA",
+    "tipo": "UNIVERSIDAD ESTATAL"
+  },
+  {
+    "registro": "A10",
+    "nombre": "UNIVERSIDAD DE ATACAMA",
+    "tipo": "UNIVERSIDAD ESTATAL"
+  },
+  {
+    "registro": "A11",
+    "nombre": "UNIVERSIDAD DE TARAPACÁ",
+    "tipo": "UNIVERSIDAD ESTATAL"
+  },
+  {
+    "registro": "A12",
+    "nombre": "UNIVERSIDAD ARTURO PRAT",
+    "tipo": "UNIVERSIDAD ESTATAL"
+  },
+  {
+    "registro": "A13",
+    "nombre": "UNIVERSIDAD METROPOLITANA DE CIENCIAS DE LA EDUCACIÓN",
+    "tipo": "UNIVERSIDAD ESTATAL"
+  },
+  {
+    "registro": "A14",
+    "nombre": "UNIVERSIDAD DE PLAYA ANCHA DE CIENCIAS DE LA EDUCACIÓN",
+    "tipo": "UNIVERSIDAD ESTATAL"
+  },
+  {
+    "registro": "A15",
+    "nombre": "UNIVERSIDAD DE LOS LAGOS",
+    "tipo": "UNIVERSIDAD ESTATAL"
+  },
+  {
+    "registro": "A16",
+    "nombre": "UNIVERSIDAD TECNOLÓGICA METROPOLITANA",
+    "tipo": "UNIVERSIDAD ESTATAL"
+  },
+  {
+    "registro": "A17",
+    "nombre": "UNIVERSIDAD DE O'HIGGINS",
+    "tipo": "UNIVERSIDAD ESTATAL"
+  },
+  {
+    "registro": "A18",
+    "nombre": "UNIVERSIDAD DE AYSÉN",
+    "tipo": "UNIVERSIDAD ESTATAL"
+  },
+  {
+    "registro": "B1",
+    "nombre": "PONTIFICIA UNIVERSIDAD CATÓLICA DE CHILE",
+    "tipo": "UNIVERSIDAD PARTICULAR CON APORTES"
+  },
+  {
+    "registro": "B2",
+    "nombre": "UNIVERSIDAD DE CONCEPCIÓN",
+    "tipo": "UNIVERSIDAD PARTICULAR CON APORTES"
+  },
+  {
+    "registro": "B3",
+    "nombre": "UNIVERSIDAD TÉCNICA FEDERICO SANTA MARÍA",
+    "tipo": "UNIVERSIDAD PARTICULAR CON APORTES"
+  },
+  {
+    "registro": "B4",
+    "nombre": "PONTIFICIA UNIVERSIDAD CATÓLICA DE VALPARAÍSO",
+    "tipo": "UNIVERSIDAD PARTICULAR CON APORTES"
+  },
+  {
+    "registro": "B5",
+    "nombre": "UNIVERSIDAD AUSTRAL DE CHILE",
+    "tipo": "UNIVERSIDAD PARTICULAR CON APORTES"
+  },
+  {
+    "registro": "B6",
+    "nombre": "UNIVERSIDAD CATÓLICA DEL NORTE",
+    "tipo": "UNIVERSIDAD PARTICULAR CON APORTES"
+  },
+  {
+    "registro": "B7",
+    "nombre": "UNIVERSIDAD CATÓLICA DEL MAULE",
+    "tipo": "UNIVERSIDAD PARTICULAR CON APORTES"
+  },
+  {
+    "registro": "B8",
+    "nombre": "UNIVERSIDAD CATÓLICA DE LA SANTÍSIMA CONCEPCIÓN",
+    "tipo": "UNIVERSIDAD PARTICULAR CON APORTES"
+  },
+  {
+    "registro": "B9",
+    "nombre": "UNIVERSIDAD CATÓLICA DE TEMUCO",
+    "tipo": "UNIVERSIDAD PARTICULAR CON APORTES"
+  },
+  {
+    "registro": "C1",
+    "nombre": "UNIVERSIDAD GABRIELA MISTRAL",
+    "tipo": "UNIVERSIDAD PRIVADA"
+  },
+  {
+    "registro": "C2",
+    "nombre": "UNIVERSIDAD FINIS TERRAE",
+    "tipo": "UNIVERSIDAD PRIVADA"
+  },
+  {
+    "registro": "C3",
+    "nombre": "UNIVERSIDAD DIEGO PORTALES",
+    "tipo": "UNIVERSIDAD PRIVADA"
+  },
+  {
+    "registro": "C4",
+    "nombre": "UNIVERSIDAD CENTRAL DE CHILE",
+    "tipo": "UNIVERSIDAD PRIVADA"
+  },
+  {
+    "registro": "C10",
+    "nombre": "UNIVERSIDAD BOLIVARIANA",
+    "tipo": "UNIVERSIDAD PRIVADA"
+  },
+  {
+    "registro": "C12",
+    "nombre": "UNIVERSIDAD DEL ALBA",
+    "tipo": "UNIVERSIDAD PRIVADA"
+  },
+  {
+    "registro": "C13",
+    "nombre": "UNIVERSIDAD MAYOR",
+    "tipo": "UNIVERSIDAD PRIVADA"
+  },
+  {
+    "registro": "C14",
+    "nombre": "UNIVERSIDAD ACADEMIA DE HUMANISMO CRISTIANO",
+    "tipo": "UNIVERSIDAD PRIVADA"
+  },
+  {
+    "registro": "C16",
+    "nombre": "UNIVERSIDAD SANTO TOMÁS",
+    "tipo": "UNIVERSIDAD PRIVADA"
+  },
+  {
+    "registro": "C19",
+    "nombre": "UNIVERSIDAD LA REPÚBLICA",
+    "tipo": "UNIVERSIDAD PRIVADA"
+  },
+  {
+    "registro": "C20",
+    "nombre": "UNIVERSIDAD SEK",
+    "tipo": "UNIVERSIDAD PRIVADA"
+  },
+  {
+    "registro": "C22",
+    "nombre": "UNIVERSIDAD DE LAS AMÉRICAS",
+    "tipo": "UNIVERSIDAD PRIVADA"
+  },
+  {
+    "registro": "C23",
+    "nombre": "UNIVERSIDAD ANDRÉS BELLO",
+    "tipo": "UNIVERSIDAD PRIVADA"
+  },
+  {
+    "registro": "C25",
+    "nombre": "UNIVERSIDAD DE VIÑA DEL MAR",
+    "tipo": "UNIVERSIDAD PRIVADA"
+  },
+  {
+    "registro": "C26",
+    "nombre": "UNIVERSIDAD ADOLFO IBÁÑEZ",
+    "tipo": "UNIVERSIDAD PRIVADA"
+  },
+  {
+    "registro": "C29",
+    "nombre": "UNIVERSIDAD DE ARTES, CIENCIAS Y COMUNICACIÓN - UNIACC",
+    "tipo": "UNIVERSIDAD PRIVADA"
+  },
+  {
+    "registro": "C35",
+    "nombre": "UNIVERSIDAD AUTÓNOMA DE CHILE",
+    "tipo": "UNIVERSIDAD PRIVADA"
+  },
+  {
+    "registro": "C38",
+    "nombre": "UNIVERSIDAD DE LOS ANDES",
+    "tipo": "UNIVERSIDAD PRIVADA"
+  },
+  {
+    "registro": "C42",
+    "nombre": "UNIVERSIDAD ADVENTISTA DE CHILE",
+    "tipo": "UNIVERSIDAD PRIVADA"
+  },
+  {
+    "registro": "C43",
+    "nombre": "UNIVERSIDAD SAN SEBASTIÁN",
+    "tipo": "UNIVERSIDAD PRIVADA"
+  },
+  {
+    "registro": "C46",
+    "nombre": "UNIVERSIDAD CATÓLICA CARDENAL RAÚL SILVA HENRÍQUEZ",
+    "tipo": "UNIVERSIDAD PRIVADA"
+  },
+  {
+    "registro": "C49",
+    "nombre": "UNIVERSIDAD DEL DESARROLLO",
+    "tipo": "UNIVERSIDAD PRIVADA"
+  },
+  {
+    "registro": "C50",
+    "nombre": "UNIVERSIDAD DE ACONCAGUA",
+    "tipo": "UNIVERSIDAD PRIVADA"
+  },
+  {
+    "registro": "C52",
+    "nombre": "UNIVERSIDAD LOS LEONES",
+    "tipo": "UNIVERSIDAD PRIVADA"
+  },
+  {
+    "registro": "C54",
+    "nombre": "UNIVERSIDAD BERNARDO O'HIGGINS",
+    "tipo": "UNIVERSIDAD PRIVADA"
+  },
+  {
+    "registro": "C72",
+    "nombre": "UNIVERSIDAD MIGUEL DE CERVANTES",
+    "tipo": "UNIVERSIDAD PRIVADA"
+  },
+  {
+    "registro": "C74",
+    "nombre": "UNIVERSIDAD ALBERTO HURTADO",
+    "tipo": "UNIVERSIDAD PRIVADA"
+  },
+  {
+    "registro": "D23",
+    "nombre": "INSTITUTO PROFESIONAL  IACC",
+    "tipo": "INSTITUTO PROFESIONAL"
+  },
+  {
+    "registro": "D5",
+    "nombre": "INSTITUTO PROFESIONAL AGRARIO ADOLFO MATTHEI",
+    "tipo": "INSTITUTO PROFESIONAL"
+  },
+  {
+    "registro": "D49",
+    "nombre": "INSTITUTO PROFESIONAL AIEP",
+    "tipo": "INSTITUTO PROFESIONAL"
+  },
+  {
+    "registro": "D50",
+    "nombre": "INSTITUTO PROFESIONAL ARCOS",
+    "tipo": "INSTITUTO PROFESIONAL"
+  },
+  {
+    "registro": "D14",
+    "nombre": "INSTITUTO PROFESIONAL CHILENO BRITÁNICO DE CULTURA",
+    "tipo": "INSTITUTO PROFESIONAL"
+  },
+  {
+    "registro": "D144",
+    "nombre": "INSTITUTO PROFESIONAL CICERÓN",
+    "tipo": "INSTITUTO PROFESIONAL"
+  },
+  {
+    "registro": "D29",
+    "nombre": "INSTITUTO PROFESIONAL DE CHILE",
+    "tipo": "INSTITUTO PROFESIONAL"
+  },
+  {
+    "registro": "D82",
+    "nombre": "INSTITUTO PROFESIONAL DEL VALLE CENTRAL",
+    "tipo": "INSTITUTO PROFESIONAL"
+  },
+  {
+    "registro": "D26",
+    "nombre": "INSTITUTO PROFESIONAL DIEGO PORTALES",
+    "tipo": "INSTITUTO PROFESIONAL"
+  },
+  {
+    "registro": "D45",
+    "nombre": "INSTITUTO PROFESIONAL DR. VIRGINIO GÓMEZ G.",
+    "tipo": "INSTITUTO PROFESIONAL"
+  },
+  {
+    "registro": "D17",
+    "nombre": "INSTITUTO PROFESIONAL DUOC UC",
+    "tipo": "INSTITUTO PROFESIONAL"
+  },
+  {
+    "registro": "D43",
+    "nombre": "INSTITUTO PROFESIONAL EATRI",
+    "tipo": "INSTITUTO PROFESIONAL"
+  },
+  {
+    "registro": "D119",
+    "nombre": "INSTITUTO PROFESIONAL ESCUELA DE CINE DE CHILE",
+    "tipo": "INSTITUTO PROFESIONAL"
+  },
+  {
+    "registro": "D77",
+    "nombre": "INSTITUTO PROFESIONAL ESCUELA DE COMERCIO DE SANTIAGO",
+    "tipo": "INSTITUTO PROFESIONAL"
+  },
+  {
+    "registro": "D10",
+    "nombre": "INSTITUTO PROFESIONAL ESCUELA DE CONTADORES AUDITORES DE SANTIAGO",
+    "tipo": "INSTITUTO PROFESIONAL"
+  },
+  {
+    "registro": "D128",
+    "nombre": "INSTITUTO PROFESIONAL ESCUELA DE MARINA MERCANTE PILOTO PARDO",
+    "tipo": "INSTITUTO PROFESIONAL"
+  },
+  {
+    "registro": "D35",
+    "nombre": "INSTITUTO PROFESIONAL ESCUELA MODERNA DE MÚSICA",
+    "tipo": "INSTITUTO PROFESIONAL"
+  },
+  {
+    "registro": "D6",
+    "nombre": "INSTITUTO PROFESIONAL INACAP",
+    "tipo": "INSTITUTO PROFESIONAL"
+  },
+  {
+    "registro": "D108",
+    "nombre": "INSTITUTO PROFESIONAL INSTITUTO INTERNACIONAL DE ARTES CULINARIAS Y SERVICIOS",
+    "tipo": "INSTITUTO PROFESIONAL"
+  },
+  {
+    "registro": "D100",
+    "nombre": "INSTITUTO PROFESIONAL INSTITUTO NACIONAL DEL FÚTBOL",
+    "tipo": "INSTITUTO PROFESIONAL"
+  },
+  {
+    "registro": "D19",
+    "nombre": "INSTITUTO PROFESIONAL IPG",
+    "tipo": "INSTITUTO PROFESIONAL"
+  },
+  {
+    "registro": "D58",
+    "nombre": "INSTITUTO PROFESIONAL LATINOAMERICANO DE COMERCIO EXTERIOR - IPLACEX",
+    "tipo": "INSTITUTO PROFESIONAL"
+  },
+  {
+    "registro": "D7",
+    "nombre": "INSTITUTO PROFESIONAL LIBERTADOR DE LOS ANDES",
+    "tipo": "INSTITUTO PROFESIONAL"
+  },
+  {
+    "registro": "D61",
+    "nombre": "INSTITUTO PROFESIONAL LOS LEONES",
+    "tipo": "INSTITUTO PROFESIONAL"
+  },
+  {
+    "registro": "D111",
+    "nombre": "INSTITUTO PROFESIONAL PROJAZZ",
+    "tipo": "INSTITUTO PROFESIONAL"
+  },
+  {
+    "registro": "D12",
+    "nombre": "INSTITUTO PROFESIONAL PROVIDENCIA",
+    "tipo": "INSTITUTO PROFESIONAL"
+  },
+  {
+    "registro": "D68",
+    "nombre": "INSTITUTO PROFESIONAL SAN SEBASTIÁN",
+    "tipo": "INSTITUTO PROFESIONAL"
+  },
+  {
+    "registro": "D22",
+    "nombre": "INSTITUTO PROFESIONAL SANTO TOMÁS",
+    "tipo": "INSTITUTO PROFESIONAL"
+  },
+  {
+    "registro": "E18",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA INSTITUTO CENTRAL DE CAPACITACIÓN EDUCACIONAL ICCE",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA"
+  },
+  {
+    "registro": "E22",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA DE ENAC O CENTRO DE FORMACIÓN TÉCNICA DE LOS ESTABLECIMIENTOS NACIONALES DE EDUCACIÓN CÁRITAS-CHILE",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA"
+  },
+  {
+    "registro": "E40",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA CENTRO TECNOLÓGICO SUPERIOR  INFOMED",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA"
+  },
+  {
+    "registro": "E45",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA INSTITUTO SUPERIOR ALEMÁN DE COMERCIO INSALCO",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA"
+  },
+  {
+    "registro": "E61",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA JUAN BOHON",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA"
+  },
+  {
+    "registro": "E64",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA SANTO TOMÁS",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA"
+  },
+  {
+    "registro": "E116",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA CENCO",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA"
+  },
+  {
+    "registro": "E123",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA PRODATA",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA"
+  },
+  {
+    "registro": "E132",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA INSTITUTO SUPERIOR DE ESTUDIOS JURÍDICOS CANON",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA"
+  },
+  {
+    "registro": "E135",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA IPROSEC",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA"
+  },
+  {
+    "registro": "E171",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA SAN AGUSTÍN",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA"
+  },
+  {
+    "registro": "E186",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA ALPES",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA"
+  },
+  {
+    "registro": "E230",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA ESCUELA DE COMERCIO",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA"
+  },
+  {
+    "registro": "E231",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA LAPLACE O C.F.T.  DE ESTUDIOS SUPERIORES Y CAPACITACIÓN PROFESIONAL LAPLACE",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA"
+  },
+  {
+    "registro": "E234",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA INACAP",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA"
+  },
+  {
+    "registro": "E239",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA DEL MEDIO AMBIENTE",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA"
+  },
+  {
+    "registro": "E254",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA LOTA - ARAUCO",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA"
+  },
+  {
+    "registro": "E260",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA CEDUC - UCN",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA"
+  },
+  {
+    "registro": "E297",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA ASISTE",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA"
+  },
+  {
+    "registro": "E307",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA PROTEC",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA"
+  },
+  {
+    "registro": "E334",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA DE LA PONTIFICIA UNIVERSIDAD CATÓLICA DE VALPARAÍSO O CFT PUCV",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA"
+  },
+  {
+    "registro": "E336",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA TEODORO WICKEL KLUWEN",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA"
+  },
+  {
+    "registro": "E354",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA PROFASOC",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA"
+  },
+  {
+    "registro": "E355",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA MANPOWER",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA"
+  },
+  {
+    "registro": "E365",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA ESCUELA CULINARIA FRANCESA",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA"
+  },
+  {
+    "registro": "E419",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA ACADEMIA CHILENA DE YOGA",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA"
+  },
+  {
+    "registro": "G1",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA DE LA REGIÓN DE ARICA Y PARINACOTA",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA ESTATAL"
+  },
+  {
+    "registro": "G2",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA DE LA REGIÓN DE TARAPACÁ",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA ESTATAL"
+  },
+  {
+    "registro": "G3",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA DE LA REGIÓN DE ANTOFAGASTA",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA ESTATAL"
+  },
+  {
+    "registro": "G4",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA DE LA REGIÓN DE ATACAMA",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA ESTATAL"
+  },
+  {
+    "registro": "G5",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA DE LA REGIÓN DE COQUIMBO",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA ESTATAL"
+  },
+  {
+    "registro": "G6",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA  DE LA REGIÓN DE VALPARAÍSO",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA ESTATAL"
+  },
+  {
+    "registro": "G7",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA DE LA REGIÓN METROPOLITANA DE SANTIAGO",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA ESTATAL"
+  },
+  {
+    "registro": "G8",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA DE LA REGIÓN DEL LIBERTADOR GENERAL BERNARDO O'HIGGINS",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA ESTATAL"
+  },
+  {
+    "registro": "G9",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA DE LA REGIÓN DEL MAULE",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA ESTATAL"
+  },
+  {
+    "registro": "G10",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA DE LA REGIÓN DEL BÍO BIO",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA ESTATAL"
+  },
+  {
+    "registro": "G11",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA DE LA REGIÓN DE LA ARAUCANÍA",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA ESTATAL"
+  },
+  {
+    "registro": "G12",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA DE LA REGIÓN DE LOS RÍOS",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA ESTATAL"
+  },
+  {
+    "registro": "G13",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA DE LA REGIÓN DE LOS LAGOS",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA ESTATAL"
+  },
+  {
+    "registro": "G14",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA DE LA REGIÓN DE AYSÉN DEL GENERAL CARLOS IBÁÑEZ DEL CAMPO",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA ESTATAL"
+  },
+  {
+    "registro": "G15",
+    "nombre": "CENTRO DE FORMACIÓN TÉCNICA DE LA REGIÓN DE MAGALLANES Y ANTÁRTICA CHILENA",
+    "tipo": "CENTRO DE FORMACIÓN TÉCNICA ESTATAL"
+  }
+]
