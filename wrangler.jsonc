@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "normatia",
+  "name": "brujulaiaedusuperior",
   "compatibility_date": "2026-10-01",
   "observability": {
     "enabled": true
@@ -10,7 +10,7 @@
   },
   "routes": [
     {
-      "pattern": "normatia.evegat.cl/*",
+      "pattern": "brujulaiaedusuperior.evegat.cl/*",
       "zone_name": "evegat.cl"
     }
   ]
