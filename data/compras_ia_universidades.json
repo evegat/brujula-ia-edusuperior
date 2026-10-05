@@ -1,0 +1,2512 @@
+[
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "NGG_CONSUMO PABELLON_213841_800-2728-COT26",
+    "descripcion": "CONSUMO PABELLONES QUIRURGICOSCX: RAGOCI: 213841Razón Social: Universidad de ChileComuna: IndependenciaDirección: DR. CARLOS LORCA TOBAR 999Giro: ACTIVIDADES DE HOSPITALES Y CLÍNICAS PÚBLICASRut: 60.910.000-1Horario de Atención de Lunes a viernes entre las 08:30  13:30 // 15:00  16:30Favor enviar facturas a las siguientes casillas electrónicas dte.cl@einvoicing.signature-cloud.com / invoicing_chile@recepcion.cl en Formato XML / dte-recepcion@intercambio-planecloud.cl",
+    "monto": 3354997.94,
+    "proveedor": "ARTHREX CHILE SPA",
+    "fecha": "2026-04-22",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=800-2347-AG26"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Software",
+    "descripcion": "Adquisición de Software SPSS version 17 Módulo básico, Módulo Redes Neuronales y Monosaurio, para Deptos. Educación y Sociología",
+    "monto": 718800.0,
+    "proveedor": "AMSS SOLUCIONES ANALITICAS LIMITADA",
+    "fecha": "2009-06-02",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=5627-90-L109"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "TRASLADO DE ALUMNOS",
+    "descripcion": "TRASLADAR A LOS ALUMNOS A LA LOCALIDAD DEL CAJON DEL MAIPO, BAÑOS MORALES, RPA REALIZAR DOCENCIA EN TERRENO, EL DIA 28 DE AGOSTO.",
+    "monto": 167900.0,
+    "proveedor": "Salca Turismo",
+    "fecha": "2009-08-20",
+    "subcategoria": "Analitica_Algoritmos_RPA",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=1021-59-L109"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Libros para Docencia Electrica - Readjudicada en Id 5680-20-R110",
+    "descripcion": "Solicitud del departamento de Ingenieria electrica",
+    "monto": 1894944.0,
+    "proveedor": "Mundo de Papel",
+    "fecha": "2009-12-30",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=5680-20-L109"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Libros para Docencia Electrica",
+    "descripcion": "Solicitud del departamento de Ingenieria electrica",
+    "monto": 1894944.0,
+    "proveedor": "Libreria Eduardo Albers Ltda.",
+    "fecha": "2009-12-30",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=5680-20-R110"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Libros Docencia Ing. Eléctrica",
+    "descripcion": "Solicitado por el Departamento Ing. Eléctrica",
+    "monto": 3517849.0,
+    "proveedor": "Duran San Martin Cia. Ltda.",
+    "fecha": "2010-05-13",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=5680-5-L110"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "ADQUSICION LIBROS DCC.",
+    "descripcion": "SOLICITUD DEL DEPARTAMENTO A PEDIDO DE PROFESORES",
+    "monto": 1212500.0,
+    "proveedor": "Comercial Grupo LINK Chile Ltda.",
+    "fecha": "2011-04-11",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=5680-8-L111"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "ANTICUERPOS CCI:118",
+    "descripcion": "ANTICUERPOS LABORATORIO DE BIOLOGIA PERIODONTAL CCI:118",
+    "monto": 2340630.0,
+    "proveedor": "IB INMUNO-BIOMEDICA LTDA",
+    "fecha": "2012-01-17",
+    "subcategoria": "Analitica_Algoritmos_RPA",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=5610-20-L112"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Servicios de Ejecutivo en Línea y ChatBot",
+    "descripcion": "El objeto de esta licitación pública es la contratación de los Servicios de Ejecutivo en Línea y ChatBot para la Facultad de Economía y Negocios, cuyas características se detallan en las bases técnicas.",
+    "monto": 1380.0,
+    "proveedor": "AGC Bravo",
+    "fecha": "2022-01-20",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=5707-1-LE22"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Libro para el DCC",
+    "descripcion": "Título: Deep LearningAutor: Ian Goodfellow and Yoshua Bengio and Aaron CourvilleEditorial: MIT PressEdicion: 1Ano: 2016ISBN: 978-0262035613",
+    "monto": 106888.18,
+    "proveedor": "COMERCIAL EASY IMPORT SPA",
+    "fecha": "2018-04-05",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5680-26-SE18"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Libros Departamento de Computación",
+    "descripcion": "Reinforcement Learning: An Introduction (Adaptive Computation and Machine Learning)ISBN 9780262193986",
+    "monto": 279650.0,
+    "proveedor": "LIBRERIA EDUARDO ALBERS LTDA",
+    "fecha": "2018-10-09",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5680-73-SE18"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Adquisición Ing. 2030/  Actividad 29 - 30de Abril  y 02 de Mayo OpenLab",
+    "descripcion": "C.C. 3280Solicitud: Claudia Caruz Actividad OpenLab TALLER INTELIGENCIA ARTIFICIAL 29, 30/ABRIL Y 2/MAYO",
+    "monto": 422688.0,
+    "proveedor": "DANIEL IGOR HOPPMANN HURTADO, PRODUCCIONES, E.I.R.L.",
+    "fecha": "2019-04-29",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5603-322-CM19"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Adquisición Ing. 2030/  Actividad 05/06 y 08 de Agosto OL",
+    "descripcion": "C.C. 3280Solicitud Claudia CaruzActividad 05, 06 y 08 de Agosto con cargo a OpenLab \"Taller de Inteligencia Artificial\" 48 personas por sesión.",
+    "monto": 514080.0,
+    "proveedor": "DANIEL IGOR HOPPMANN HURTADO, PRODUCCIONES, E.I.R.L.",
+    "fecha": "2019-08-01",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5603-679-CM19"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Coffee Break, IA",
+    "descripcion": "Agosto 2019Complemento del Servicio de Café para los alumnos que asisten a los distintos cursos del Programa de Educación Continua (PEC).Postítulo en Inteligencia Artificial (IA)C.C. 3305",
+    "monto": 547995.0,
+    "proveedor": "banqueteria y producciones p y g limitada",
+    "fecha": "2019-09-04",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5525-211-SE19"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "670104/B5/SP 744495 YPGM",
+    "descripcion": "CONFERENCIA INTELIGENCIA ARTIFICIAL EN SISTEMA RIS-PACS, 13 SEPTIEMBRE CONTACTO GENESIS CONCHAFONO: 229789415",
+    "monto": 618724.0,
+    "proveedor": "Ana  Ramirez  Barraza",
+    "fecha": "2019-09-10",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5178-5919-CM19"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Coffee Break, IA",
+    "descripcion": "Septiembre 2019Complemento del Servicio de Café para los alumnos que asisten a los distintos cursos del Programa de Educación Continua (PEC).Postítulo en Inteligencia Artificial (IA)C.C. 3305",
+    "monto": 1045736.3,
+    "proveedor": "banqueteria y producciones p y g limitada",
+    "fecha": "2019-10-01",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5525-232-SE19"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "670201/B5/SP 745612",
+    "descripcion": "670201/B5/SP 745612PRIMER SIMPOSIO LATINOAMERICANO DE INTELIGENCIA ARTIFICIALEN  HOTEL SHERATON SANTIAGOLOS DIAS 15 Y 16 DE MAYO 2020CONTACTO GENESIS CONCHAFONO 229789415CORREO gconcha@hcuch.cl",
+    "monto": 9348438.0,
+    "proveedor": "HOTEL SHERATON SANTIAGO",
+    "fecha": "2019-10-11",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5178-6540-CM19"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Coffee Break, IA",
+    "descripcion": "Octubre 2019Complemento del Servicio de Café para los alumnos que asisten a los distintos cursos del Programa de Educación Continua (PEC).Postítulo en Inteligencia Artificial (IA)C.C. 3305",
+    "monto": 882832.44,
+    "proveedor": "banqueteria y producciones p y g limitada",
+    "fecha": "2019-11-08",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5525-247-SE19"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Seminario \"IEEE RAS International Summer School on Deep Learning for Robot Vision",
+    "descripcion": "CC-2444",
+    "monto": 2409750.0,
+    "proveedor": "DANIEL IGOR HOPPMANN HURTADO, PRODUCCIONES, E.I.R.L.",
+    "fecha": "2019-12-05",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=559322-385-CM19"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "754685/B1/SP 754685 YPGM",
+    "descripcion": "Indicar ORDEN DE COMPRA en la facturas, las facturas que no contengan esta información serán rechazadas.CONFERENCIA \" INTELIGENCIA ARTIFICIAL EN SISTEMAS RIS-PACS II Contacto : Génesis Concha Fono: 229789415",
+    "monto": 487519.0,
+    "proveedor": "Ana  Ramirez  Barraza",
+    "fecha": "2019-12-05",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5178-7479-CM19"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Coffee Break, IA",
+    "descripcion": "Noviembre 2019Complemento del Servicio de Café para los alumnos que asisten a los distintos cursos del Programa de Educación Continua (PEC).Postítulo en Inteligencia Artificial (IA)C.C. 3305",
+    "monto": 908757.78,
+    "proveedor": "banqueteria y producciones p y g limitada",
+    "fecha": "2019-12-12",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5525-266-SE19"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Coffee Break, PGI",
+    "descripcion": "Noviembre 2019Complemento del Servicio de Café para los alumnos que asisten a los distintos cursos del Programa de Educación Continua (PEC).Postítulo en Inteligencia Artificial (IA)C.C. 3305",
+    "monto": 350752.5,
+    "proveedor": "banqueteria y producciones p y g limitada",
+    "fecha": "2019-12-12",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5525-267-SE19"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Coffee Break, IA",
+    "descripcion": "Diciembre 2019Complemento del Servicio de Café para los alumnos que asisten a los distintos cursos del Programa de Educación Continua (PEC).Postítulo en Inteligencia Artificial (IA)C.C. 3305",
+    "monto": 1210591.76,
+    "proveedor": "banqueteria y producciones p y g limitada",
+    "fecha": "2020-01-06",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5525-3-SE20"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Coffee Break, PGI",
+    "descripcion": "Diciembre 2019Complemento del Servicio de Café para los alumnos que asisten a los distintos cursos del Programa de Educación Continua (PEC).Postítulo en Inteligencia Artificial (IA)C.C. 2644",
+    "monto": 419367.9,
+    "proveedor": "banqueteria y producciones p y g limitada",
+    "fecha": "2020-01-06",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5525-4-SE20"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Adquisición Ing. 2030/  Actividad 22 de Enero B. Acelera",
+    "descripcion": "C.C. 3284Actividad  Jornada de Trabajo Inteligencia Artificial22 de Enero 2020Solicitud: Claudia Caruz",
+    "monto": 637840.0,
+    "proveedor": "DANIEL IGOR HOPPMANN HURTADO, PRODUCCIONES, E.I.R.L.",
+    "fecha": "2020-01-27",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5603-49-CM20"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Coffee Break, IA",
+    "descripcion": "Enero 2020Complemento del Servicio de Café para los alumnos que asisten a los distintos cursos del Programa de Educación Continua (PEC).Postítulo en Inteligencia Artificial (IA)C.C. 3305",
+    "monto": 545813.73,
+    "proveedor": "banqueteria y producciones p y g limitada",
+    "fecha": "2020-03-09",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5525-17-SE20"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Coffee Break, IA",
+    "descripcion": "Marzo 2020Complemento del Servicio de Café para los alumnos que asisten a los distintos cursos del Programa de Educación Continua (PEC).Postítulo en Inteligencia Artificial (IA)C.C. 3305",
+    "monto": 69543.6,
+    "proveedor": "banqueteria y producciones p y g limitada",
+    "fecha": "2020-04-07",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5525-26-SE20"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Adquisición de Libros CSN",
+    "descripcion": "Adquisición de libros: \"Deep Learning\", \"Deep Learning: A Practitioner's Approach\" y \"Routine Data Processing in Earthquake Seismology\" para el CSN.  Despachar a Av. Blanco Encalada 2002, piso 2, Santiago Centro. Coordinar despacho con Edgardo Porflitt, c",
+    "monto": 252256.2,
+    "proveedor": "LIBRERIA EDUARDO ALBERS LTDA",
+    "fecha": "2020-07-08",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=758004-128-AG20"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Servicio de Chatbot RE.483.20, SSEE",
+    "descripcion": "Servicio de ChatBot y Ejecutivo en Línea aprobados a través de Resolución 483.20",
+    "monto": 3530028.89789063,
+    "proveedor": "AGC Bravo",
+    "fecha": "2021-01-25",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5707-15-SE21"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Servicio de Chatbot RE.483.20, SSEE",
+    "descripcion": "Servicio de ChatBot y Ejecutivo en Línea aprobados a través de Resolución 483.20MENSUALIDAD ENERO",
+    "monto": 201982.03109375,
+    "proveedor": "AGC Bravo",
+    "fecha": "2021-01-25",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5707-16-SE21"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Servicio de Chatbot RE.483.20, SSEE",
+    "descripcion": "Servicio de ChatBot y Ejecutivo en Línea aprobados a través de Resolución 483.20Mensualidad Febrero",
+    "monto": 201982.03109375,
+    "proveedor": "AGC Bravo",
+    "fecha": "2021-01-25",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5707-17-SE21"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Servicio de Chatbot RE.483.20, SSEE",
+    "descripcion": "Servicio de ChatBot y Ejecutivo en Línea aprobados a través de Resolución 483.20Mensualidad Marzo",
+    "monto": 203355.744453125,
+    "proveedor": "AGC Bravo",
+    "fecha": "2021-03-03",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5707-26-SE21"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Servicio de Chatbot RE.483.20, SSEE",
+    "descripcion": "Servicio de ChatBot y Ejecutivo en Línea aprobados a través de Resolución 483.20Mensualidad Abril",
+    "monto": 204091.79109375,
+    "proveedor": "AGC Bravo",
+    "fecha": "2021-04-08",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5707-40-SE21"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Servicio de Chatbot RE.483.20, SSEE",
+    "descripcion": "Servicio de ChatBot y Ejecutivo en Línea aprobados a través de Resolución 483.20Mensualidad MAYO",
+    "monto": 204743.744453125,
+    "proveedor": "AGC Bravo",
+    "fecha": "2021-05-03",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5707-63-SE21"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Servicio de Chatbot RE.483.20, SSEE",
+    "descripcion": "Servicio de ChatBot y Ejecutivo en Línea aprobados a través de Resolución 483.20Mensualidad JUNIO",
+    "monto": 205489.509804688,
+    "proveedor": "AGC Bravo",
+    "fecha": "2021-05-31",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5707-67-SE21"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Servicio de Chatbot RE.483.20, SSEE",
+    "descripcion": "Servicio de ChatBot y Ejecutivo en Línea aprobados a través de Resolución 483.20Mensualidad JULIO",
+    "monto": 206186.220742188,
+    "proveedor": "AGC Bravo",
+    "fecha": "2021-07-01",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-2-SE21"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Servicio de Chatbot RE.483.20, SSEE",
+    "descripcion": "Servicio de ChatBot y Ejecutivo en Línea aprobados a través de Resolución 483.20Mensualidad AGOSTO",
+    "monto": 206551.329804687,
+    "proveedor": "AGC Bravo",
+    "fecha": "2021-08-06",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-3-SE21"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Servicio de Chatbot RE.483.20, SSEE",
+    "descripcion": "Servicio de ChatBot y Ejecutivo en Línea aprobados a través de Resolución 483.20Mensualidad septiembre",
+    "monto": 207856.266679688,
+    "proveedor": "AGC Bravo",
+    "fecha": "2021-09-03",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-5-SE21"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Adquisición de Tótem Sanitario",
+    "descripcion": "Adquisición de Tótem Sanitario con Reconocimiento FacialProyecto COVIDCONTACTO : Señor Ricardo HenríquezFONO CONTACTO : +56998225130",
+    "monto": 4298280.0,
+    "proveedor": "CHILE SEGURIDAD SPA",
+    "fecha": "2021-09-21",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5485-420-SE21"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Servicio de Chatbot RE.418.21, SSEE",
+    "descripcion": "Servicio de ChatBot y Ejecutivo en Línea aprobados a través de Resolución 418.21Mensualidad Octubre",
+    "monto": 208924.4709375,
+    "proveedor": "AGC Bravo",
+    "fecha": "2021-10-05",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-7-SE21"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Servicio de Chatbot RE.418.21, SSEE",
+    "descripcion": "Servicio de ChatBot y Ejecutivo en Línea aprobados a través de Resolución 418.21Mensualidad Noviembre",
+    "monto": 210922.011679688,
+    "proveedor": "AGC Bravo",
+    "fecha": "2021-11-02",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-9-SE21"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Servicios de estudio con inteligencia artificial",
+    "descripcion": "C.C. 2549",
+    "monto": 5250000.0,
+    "proveedor": "STATKNOWS SPA",
+    "fecha": "2021-11-09",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5542-105-SE21"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Servicio de Chatbot RE.418.21, SSEE",
+    "descripcion": "Servicio de ChatBot y Ejecutivo en Línea aprobados a través de Resolución 418.21Mensualidad diciembre",
+    "monto": 213493.837421875,
+    "proveedor": "AGC Bravo",
+    "fecha": "2021-12-01",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-10-SE21"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Poliza de Fiel Cumplimiento de Contrato ACHS 266",
+    "descripcion": "Póliza Fiel cumplimiento contrato o Factibilidad de un sistema de recomendaciones para definir las actividades de prevención con mayor eficacia en cada empresa usando machine learning\"",
+    "monto": 110059.885605469,
+    "proveedor": "MAPFRE COMPANIA DE SEGUROS GENERALES DE CHILE S A",
+    "fecha": "2021-12-06",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5531-204-SE21"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Servicio de Chatbot RE.418.21, SSEE",
+    "descripcion": "Servicio de ChatBot y Ejecutivo en Línea aprobados a través de Resolución 418.21Mensualidad enero",
+    "monto": 215186.57390625,
+    "proveedor": "AGC Bravo",
+    "fecha": "2022-01-04",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-1-SE22"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Servicio de Chatbot RE.418.21, SSEE",
+    "descripcion": "Servicio de ChatBot y Ejecutivo en Línea aprobados a través de Resolución 418.21Mensualidad febrero",
+    "monto": 216226.38109375,
+    "proveedor": "AGC Bravo",
+    "fecha": "2022-01-25",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-2-SE22"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Servicio de Chatbot RE.418.21, SSEE",
+    "descripcion": "Servicio de ChatBot y Ejecutivo en Línea aprobados a través de Resolución 418.21Mensualidad marzo",
+    "monto": 218882.042578125,
+    "proveedor": "AGC Bravo",
+    "fecha": "2022-03-01",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-3-SE22"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Servicio de Chatbot RE.418.21, SSEE",
+    "descripcion": "Servicio de ChatBot y Ejecutivo en Línea aprobados a través de Resolución 418.21Mensualidad abril",
+    "monto": 220296.90796875,
+    "proveedor": "AGC Bravo",
+    "fecha": "2022-04-06",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-6-SE22"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "SERVICIO DE CHATBOT DESDE 5707-1-LE22",
+    "descripcion": "SERVICIO DE CHATBOT",
+    "monto": 1486596.82851563,
+    "proveedor": "AGC Bravo",
+    "fecha": "2022-05-12",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-18-SE22"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "SERVICIO DE CHATBOT DESDE 5707-1-LE22",
+    "descripcion": "SERVICIO DE CHATBOT",
+    "monto": 219838.457,
+    "proveedor": "AGC Bravo",
+    "fecha": "2022-06-10",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-22-SE22"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Compra ágil 5603-246-COT22 / MacBook Air 13\" IDIA",
+    "descripcion": "CC 3546: DACA Datos e Inteligencia Artificial.",
+    "monto": 909989.43,
+    "proveedor": "KDTEC SPA",
+    "fecha": "2022-06-28",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5603-216-AG22"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "SERVICIO DE CHATBOT DESDE 5707-1-LE22",
+    "descripcion": "SERVICIO DE CHATBOT",
+    "monto": 223636.94453125,
+    "proveedor": "AGC Bravo",
+    "fecha": "2022-07-28",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-26-SE22"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "8 discos duros Seagate 16TB, FONDEF D21I10305",
+    "descripcion": "Compra de 8 discos duros Seagate 16TB debido a que permitirán procesar gran cantidad de imágenes satelitales y la implementación de algoritmos de inteligencia artificial para la identificación de los mencionados glaciares rocosos con la resolución que las",
+    "monto": 4756192.0,
+    "proveedor": "CCIEXPRESS S.P.A",
+    "fecha": "2022-08-01",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5526-36-SE22"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "SERVICIO DE CHATBOT DESDE 5707-1-LE22",
+    "descripcion": "SERVICIO DE CHATBOT",
+    "monto": 224579.4984375,
+    "proveedor": "AGC Bravo",
+    "fecha": "2022-08-11",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-28-SE22"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "SERVICIO DE CHATBOT DESDE 5707-1-LE22",
+    "descripcion": "SERVICIO DE CHATBOT",
+    "monto": 227111.653515625,
+    "proveedor": "AGC Bravo",
+    "fecha": "2022-09-05",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-42-SE22"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "SERVICIO DE CHATBOT DESDE 5707-1-LE22",
+    "descripcion": "SERVICIO DE CHATBOT",
+    "monto": 230078.340234375,
+    "proveedor": "AGC Bravo",
+    "fecha": "2022-10-07",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-46-SE22"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Compra ágil: 5603-421-COT22/ Actividad Panel \"Política Nacional de Inteligencia Artificial\"",
+    "descripcion": "IDIA C.C. 3546",
+    "monto": 1796900.0,
+    "proveedor": "Ballhaus Ltda",
+    "fecha": "2022-10-19",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5603-378-AG22"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "SERVICIO DE CHATBOT DESDE 5707-1-LE22",
+    "descripcion": "SERVICIO DE CHATBOT",
+    "monto": 231889.35546875,
+    "proveedor": "AGC Bravo",
+    "fecha": "2022-11-02",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-51-SE22"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Servicio de Alimentación, Dipl. IA (PEC)",
+    "descripcion": "Servicio de AlimentaciónDiplomado en Inteligencia ArtificialPrograma de Educación Continua (PEC)C.C. 3305Favor detallar en la factura correspondiente, el número completo (incluyendo guiones y letras) de la presente orden de compra.",
+    "monto": 685793.43,
+    "proveedor": "SANDRA",
+    "fecha": "2022-11-30",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5525-144-SE22"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "SERVICIO DE CHATBOT DESDE 5707-1-LE22",
+    "descripcion": "SERVICIO DE CHATBOT",
+    "monto": 233433.051171875,
+    "proveedor": "AGC Bravo",
+    "fecha": "2022-12-06",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-60-SE22"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Servicio de Almuerzo, Jornada IDIA",
+    "descripcion": "Servicio de Almuerzo, Jornada IDIAProveniente de Licitación Pública ID 5525-1-LQ22DACA Datos e Inteligencia ArtificialC.C. 3546Favor detallar en la factura correspondiente, el número completo (incluyendo guiones y letras) de la presente orden de compra.",
+    "monto": 504560.0,
+    "proveedor": "SANDRA",
+    "fecha": "2023-01-10",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5525-4-SE23"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "SERVICIO DE CHATBOT DESDE 5707-1-LE22",
+    "descripcion": "SERVICIO DE CHATBOT",
+    "monto": 235924.142578125,
+    "proveedor": "AGC Bravo",
+    "fecha": "2023-01-10",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-1-SE23"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Adquisición de Robot Machine Learning para análisis de licitaciones compra ágil: 5520-11-COT23",
+    "descripcion": "Código IDIEM Facturación 12062201 (G) Compra  Ágil 5520-11-COT23 - SOL: 6884-A. * Proveedor, las facturas electrónicas deben ser remitidas al correo electrónico proveedores@idiem.cl. * Para consulta de Pagos enviar mail a  pagosproveedores@idiem.cl   * Para envío de archivo XML  a mail dte.cl@einvoicing.signature-cloud.com LA FECHA DE EMISIÓN DE LAS FACTURAS SE DEBE REALIZAR EN LOS PERIODOS (DEL DÍA 01 AL DÍA 15  Y DEL  25  AL ÚLTIMO DÍA  DEL MES EN CURSO),  PARA ENTREGAR PRODUCTOS ENTRE LOS DÍAS 16 Y 24  SE DEBE REALIZAR CON GUÍA DE DESPACHO.*\"LA CONVERSIÓN SE REALIZARÁ AL DÍA DE LA EMISIÓN DE LA FACTURA\".LA ORDEN DE COMPRA DEBERÁ ESTAR EN ESTADO ACEPTADA POR EL PROVEEDOR AL MOMENTO DE  RECEPCIONAR LA FACTURA-MOC",
+    "monto": 419150.963,
+    "proveedor": "CLIENT METRICA SPA",
+    "fecha": "2023-01-13",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5520-179-AG23"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "SERVICIO DE CHATBOT DESDE 5707-1-LE22",
+    "descripcion": "SERVICIO DE CHATBOT",
+    "monto": 477003.83046875,
+    "proveedor": "AGC Bravo",
+    "fecha": "2023-03-13",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-6-SE23"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "SERVICIO DE CHATBOT DESDE 5707-1-LE22",
+    "descripcion": "SERVICIO DE CHATBOT",
+    "monto": 238332.66171875,
+    "proveedor": "AGC Bravo",
+    "fecha": "2023-04-04",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-12-SE23"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "SERVICIO DE CHATBOT DESDE 5707-1-LE22",
+    "descripcion": "SERVICIO DE CHATBOT",
+    "monto": 240819.853515625,
+    "proveedor": "AGC Bravo",
+    "fecha": "2023-05-09",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-17-SE23"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "SERVICIO DE CHATBOT DESDE 5707-1-LE22",
+    "descripcion": "SERVICIO DE CHATBOT",
+    "monto": 241513.69609375,
+    "proveedor": "AGC Bravo",
+    "fecha": "2023-06-05",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-21-SE23"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "SERVICIO DE CHATBOT DESDE 5707-1-LE22",
+    "descripcion": "SERVICIO DE CHATBOT",
+    "monto": 241823.701953125,
+    "proveedor": "AGC Bravo",
+    "fecha": "2023-07-04",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-26-SE23"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "43612- Servicio de almuerzo - compra ágil: 5621-399-COT23",
+    "descripcion": "Orden de Compra codigo: 5621-394-AG23 dirigida a Hotelera Patagonia Tres S.Aservicio de almuerzo para 8 personas en el marco de la organización del seminario internacional \"Gobierno Corporativo e Inteligencia Artificial\", a realizarse el día martes 8 de agosto.ACEPTAR ORDEN DE COMPRA EN EL PORTAL MERCADO PUBLICOINDICAR EN LA FACTURA N°DE ORDEN DE COMPRAENVIAR DATOS DE TRANSFERENCIA PARA REALIZAR PAGO DE FACTURA",
+    "monto": 392224.0,
+    "proveedor": "Hotel Cumbres Lastarria",
+    "fecha": "2023-08-07",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5621-394-AG23"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Decanato/ Actividad IDIA",
+    "descripcion": "Actividad a realizar por la Iniciativa de Inteligencia Artificial el jueves 10 de agosto.CC. 3546",
+    "monto": 410550.0,
+    "proveedor": "Pin Up BTL Marketing",
+    "fecha": "2023-08-09",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5603-210-SE23"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Servicio de Catering, PEC",
+    "descripcion": "Servicio de Catering, PECPara entrega el martes 22 de agosto de 2023 a las 10 hrs. en cafetería de Auditorio Enrique D'EtignyDipl. Inteligencia ArtificialC.C. 3305Favor detallar en la factura correspondiente, el número completo (incluyendo guiones y letras) de la presente orden de compra.",
+    "monto": 1654100.0,
+    "proveedor": "MARÍA DORIS PINCHEIRA FIGUEROA",
+    "fecha": "2023-08-18",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5525-97-AG23"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Servicio de cóctel, Diplomado Inteligencia Artificial",
+    "descripcion": "Servicio de CóctelDiplomado Inteligencia Artificial (PEC)C.C. 3305Favor detallar en la factura correspondiente, el número completo (incluyendo guiones y letras) de la presente orden de compra.",
+    "monto": 161721.0,
+    "proveedor": "SANDRA",
+    "fecha": "2024-01-19",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5525-27-SE24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Servicio de ChatBot Febrero 2024",
+    "descripcion": "Rolando Valencia G. Coordinador AdministrativoSecretaría de Estudiosrvalenci@fen.uchile.clTeléfono 229772120",
+    "monto": 246151.169140625,
+    "proveedor": "AGC Bravo",
+    "fecha": "2024-01-31",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-3-SE24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Servicio de ChatBot Marzo 2024",
+    "descripcion": "Rolando Valencia G. Coordinador AdministrativoSecretaría de Estudiosrvalenci@fen.uchile.clTeléfono 229772120",
+    "monto": 247176.269140625,
+    "proveedor": "AGC Bravo",
+    "fecha": "2024-03-05",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-4-SE24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Servicio de ChatBot Abril 2024",
+    "descripcion": "Rolando Valencia G. Coordinador AdministrativoSecretaría de Estudiosrvalenci@fen.uchile.clTeléfono 229772120",
+    "monto": 248622.526953125,
+    "proveedor": "AGC Bravo",
+    "fecha": "2024-04-03",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-5-SE24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "MONITORES I.A. - Orden de Compra generada por invitación a compra ágil: 5684-144-COT24",
+    "descripcion": "El requerimiento solicitado por la Unidad de Inteligencia Artificial.Despachar: Beauchef 851.Contacto: Dominique Hermosilla.Fono: 2-29784912.",
+    "monto": 505500.1,
+    "proveedor": "I.I.A. Ltda.",
+    "fecha": "2024-04-12",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5684-162-AG24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "CONTRATACIÓN SISTEMA DE INTELIGENCIA ARTIFICIAL PARA ANÁLISIS DE LICITACIONES. Trato Directo 102-2024",
+    "descripcion": "Código IDIEM Facturación 12062201 (G) Trato Directo EF-102-2024 - SOL: 16940-A        * Proveedor, las facturas electrónicas deben ser remitidas al correo electrónico proveedores@idiem.cl.        * Para consulta de Pagos enviar mail a pagosproveedores@idiem.cl        * Para envío de archivo XML a mail dte.cl@einvoicing.signature-cloud.com        \"La fecha de emisión de las facturas se debe realizar en los periodos desde el día 01 hasta el día 15 y desde el día 25 hasta el último día del mes en curso. Para entregar productos desde el día 16 y hasta el día 24 se debe realizar con guía de despacho\"        *\"La conversión se realizará al día de la emisión de la factura\".        *\"La orden de compra deberá estar en estado aceptada por el proveedor al momento de recepcionar la factura\"        *\"En caso de factorizar documentos asociados a la presente OC, debe enviar carta de cesión al correo: contabilidad@idiem.cl\" - EDT",
+    "monto": 4878242.63007812,
+    "proveedor": "CLIENT METRICA SPA",
+    "fecha": "2024-05-02",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5520-2145-SE24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "INSCRIPCION A CURSO INTENSIVO DE INTELIGENCIA ARTIFICIAL 5769-52-COT24",
+    "descripcion": "Coordinar servicio con Francisco Pinto - fpintoc@fen.uchile.cl - 56 2 978 3914",
+    "monto": 799965.6,
+    "proveedor": "CONCORDE EXPRESS",
+    "fecha": "2024-05-31",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5769-130-AG24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "RES N°177.24 Servicio de Chatbot SSEE",
+    "descripcion": "Rolando Valencia",
+    "monto": 299052.405203125,
+    "proveedor": "AGC Bravo",
+    "fecha": "2024-06-14",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-17-SE24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Resolución N° 208.24 Implementación Inteligencia artificial Generativa",
+    "descripcion": "Monica Domich",
+    "monto": 91242235.3237466,
+    "proveedor": "XMS Business Solutions S.A.",
+    "fecha": "2024-07-10",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5768-49-SE24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "RES N°177.24 Servicio de Chatbot SSEE",
+    "descripcion": "Rolando Valencia",
+    "monto": 299694.293992187,
+    "proveedor": "AGC Bravo",
+    "fecha": "2024-07-24",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-26-SE24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Software inteligencia Artificial  - EX AFI - UCH2455",
+    "descripcion": "CR 121701019201123 Por la compra de Software Vimeo Solicitado por Boris Jeria .SE SOLICITA AL PROVEEDOR INGRESAR EL NUMERO DE OC EN LA FACTURA Y ENVIAR LOS DATOS BANCARIOS.La entrada al Campus Juan Gómez Millas es por Las Palmeras #3425, Ñuñoa. Preguntar por ICEI en la caseta de los guardias.IMPORTANTE:La factura debe ser enviada a los siguientes correos:contabilidad.fcei@uchile.cldte.cl@einvoincing.signature-cloud.com",
+    "monto": 1764770.0,
+    "proveedor": "MALDINICOM SPA",
+    "fecha": "2024-08-13",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5504-182-AG24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "RE.171.24 Servicio de Chatbot SSEE",
+    "descripcion": "Rolando Valencia",
+    "monto": 299934.605195312,
+    "proveedor": "AGC Bravo",
+    "fecha": "2024-08-16",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-27-SE24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "PIZARRA DE CRISTAL - Orden de Compra generada por invitación a compra ágil: 5684-401-COT24",
+    "descripcion": "Requerimiento solicitado por la Unidad de Inteligencia Artificial de la FCFM.Contacto: Dominique Hermosilla.Email: dhermosilla@uchile.clTeléfono:  2 29784912",
+    "monto": 695132.55,
+    "proveedor": "S&G INVERSIONES SPA",
+    "fecha": "2024-09-06",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5684-457-AG24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "RE.171.24 Servicio de Chatbot SSEE",
+    "descripcion": "Rolando Valencia",
+    "monto": 301626.656433594,
+    "proveedor": "AGC Bravo",
+    "fecha": "2024-09-10",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-30-SE24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "SOFTWERE INTELIGENCIA ARTIFICIAL - EX AFI - UCH2455",
+    "descripcion": "CR 121701019201123 Por la compra de Software Vimeo Solicitado por Boris Jeria .SE SOLICITA AL PROVEEDOR INGRESAR EL NUMERO DE OC EN LA FACTURA Y ENVIAR LOS DATOS BANCARIOS.La entrada al Campus Juan Gómez Millas es por Las Palmeras #3425, Ñuñoa. Preguntar por FCEI en la caseta de los guardias.IMPORTANTE:La factura debe ser enviada a los siguientes correos:contabilidad.fcei@uchile.cldte.cl@einvoincing.signature-cloud.com",
+    "monto": 1327445.0,
+    "proveedor": "CONSULTORA JORGE RIOS GAJARDO E.I.R.L.",
+    "fecha": "2024-09-12",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5504-207-AG24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "RE.171.24 Servicio de Chatbot SSEE",
+    "descripcion": "Rolando Valencia",
+    "monto": 302320.120566406,
+    "proveedor": "AGC Bravo",
+    "fecha": "2024-10-03",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-33-SE24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "RE.177.24 Servicio de Chatbot SSEE",
+    "descripcion": "Rolando Valencia",
+    "monto": 302795.012378906,
+    "proveedor": "AGC Bravo",
+    "fecha": "2024-11-06",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-36-SE24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "RE.177.24 Servicio de Chatbot SSEE",
+    "descripcion": "Rolando Valencia",
+    "monto": 305051.838546875,
+    "proveedor": "AGC Bravo",
+    "fecha": "2024-12-02",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-39-SE24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Orden de Compra generada por Trato Directo ID 5939-2-FTD25",
+    "descripcion": "Servicios de chatbot para Secretaria de Estudios de FEN",
+    "monto": 306414.754378906,
+    "proveedor": "AGC Bravo",
+    "fecha": "2025-01-07",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5939-2-TD25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "MOBILIARIO DE OFICINA - Orden de Compra generada por invitación a compra ágil: 5684-10-COT25",
+    "descripcion": "Requerimiento solicitado por la Unidad de Inteligencia Artificial de la FCFM.Contacto: Dominique Varela.Fono: +56 2 29784912.e-mail: dhermosilla@uchile.cl",
+    "monto": 3726139.9,
+    "proveedor": "INTERGROUPE S.A.",
+    "fecha": "2025-01-14",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5684-22-AG25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "EQUIPOS Y ACCESORIOS COMPUTACIONALES - Orden de Compra generada por invitación a compra ágil: 5684-39-COT25",
+    "descripcion": "Requerimiento solicitado por la Unidad de Inteligencia Artificial de la FCFM.Contacto: Dominique Varela.Email: dhermosilla@uchile.clFono: +56 2 29784912\"Justificación selección de cotización menos económica: Cumple de mejor manera con las especificaciones técnicas de los equipos y accesorios solicitados\".",
+    "monto": 5973758.35,
+    "proveedor": "IJBM GRUP SPA",
+    "fecha": "2025-01-29",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5684-62-AG25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "SERVICIO EVALUACION PSICOLABORAL - Orden de Compra generada por invitación a compra ágil: 5684-106-COT25",
+    "descripcion": "Requerimiento solicitado por Unidad de Inteligencia Artificial de la FCFM.Contacto: Dominique Varela.Email: dhermosilla@uchile.cl",
+    "monto": 425000.0,
+    "proveedor": "GROWUP CONSULTORÍA Y GESTIÓN LIMITADA",
+    "fecha": "2025-03-31",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5684-152-AG25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "60956 - Hospedaje expositores seminario \"Justicia e Inteligencia Artificial\" - Compra ágil: 5621-122-COT25",
+    "descripcion": "60956 - Hospedaje expositores seminario \"Justicia e Inteligencia Artificial\" - Compra ágil: 5621-122-COT25",
+    "monto": 669375.0,
+    "proveedor": "TRAVEL SECURITY S.A.",
+    "fecha": "2025-04-21",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5621-166-AG25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Computador  -  Proyecto Electromovilidad",
+    "descripcion": "El proveedor debe aceptar esta OC en portal de Mercado Publico.En la factura debe mencionar el numero de esta OC.Debe enviar copia del pdf de la factura a administracion@amtc.clProyecto que financia CC3219 WP3Justificación selección de cotización menos económica: presenta la mejor relación precio-rendimiento para las necesidades del proyecto, incorporando un procesador de alto desempeño, amplia memoria RAM y tarjeta gráfica dedicada, lo que permite ejecutar simulaciones, algoritmos de optimización y entrenar modelos de machine learning de manera eficiente.",
+    "monto": 1987300.0,
+    "proveedor": "COMERCIALIZADORA TODOTABLET SPA",
+    "fecha": "2025-05-12",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=559322-82-AG25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "LICENCIAS ANUALES CHATGPT TEAMS - UCH21991",
+    "descripcion": "Orden de Compra codigo: 793-18-AG25 dirigida a CONEXA LATAM INTELIGENCIA ARTIFICIAL SPA-Coordinar entrega de bienes y/o servicios con: José Ignacio Del Valle - jose.delvalle@uchile.cl - 981522981-Se solicita a proveedores: Enviar factura a jose.delvalle@uchile.cl para realizar recepción conforme. Indicar datos de transferencia electrónica empresa. En caso de facturas cedidas a un tercero, adjuntar certificado de cesión emitido por SII, datos de transferencia y contacto del cesionario.",
+    "monto": 2270198.7,
+    "proveedor": "CONEXA LATAM INTELIGENCIA ARTIFICIAL SPA",
+    "fecha": "2025-05-30",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=793-18-AG25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Suscripción anual licencia Teamviewer Corporate - Orden de Compra generada por invitación a compra ágil: 5523-52-COT25",
+    "descripcion": "Suscripción anual licencia teamviewer Corporate, según Orden de Compra código: 5523-63-AG25, dirigida al proveedor CONEXA LATAM INTELIGENCIA ARTIFICIAL SPA, RUT: 78.108.703-3, proceso 5523-52-COT25. Justificación selección de cotización menos económica: Los productos o servicios cotizados cumplen de mejor manera con los requisitos técnicos solicitados.",
+    "monto": 1309000.0,
+    "proveedor": "CONEXA LATAM INTELIGENCIA ARTIFICIAL SPA",
+    "fecha": "2025-08-08",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5523-63-AG25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Diplomado Inteligencia Artificial: 5768-84-COT25",
+    "descripcion": "Justificación selección de cotización menos económica: Los productos o servicios cotizados cumplen de mejor manera con los requisitos técnicos solicitados.Contacto:Tiare Aránguiz Corteztaranguiz@fen.uchile.cl Teléfono: +56 2 29783305Mario Cuadra Seguelmcuadra@fen.uchile.cl Teléfono: +56 2 29783427",
+    "monto": 2800000.0,
+    "proveedor": "CORPORACIÓN CENTRO NACIONAL DE INTELIGENCIA ARTIFICIAL",
+    "fecha": "2025-08-13",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5768-124-AG25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "SOFTWARE INTELIGENCIA ARTIFICIAL - PEEI INTEGRADO 2° año",
+    "descripcion": "Cr 121701019201119 Por la suscripción software inteligencia artificial solicitado por  el profesor Carlos Ossa. SE SOLICITA AL PROVEEDOR INGRESAR EL NUMERO DE OC EN LA FACTURA Y ENVIAR LOS DATOS BANCARIOS. La entrada al Campus Juan Gómez Millas es por Las Palmeras #3425, Ñuñoa. Preguntar por FCEI en la caseta de los guardias. La factura debe ser enviada a los siguientes correos: contabilidad.fcei@uchile.cl dte.cl@einvoicing.signature-cloud.com",
+    "monto": 2999995.95,
+    "proveedor": "AETOS SOLUCIONES TECNOLÓGICAS SPA",
+    "fecha": "2025-09-10",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5504-242-AG25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Pasajes Aéreos Inauguración Programa Interdisciplinario de Colaboración en Inteligencia Artificial (genIA)",
+    "descripcion": "Pasajes Aéreos Inauguración Programa Interdisciplinario de Colaboración en Inteligencia Artificial (genIA). Según FR N°242",
+    "monto": 581964.0,
+    "proveedor": "LATAM AIRLINES GROUP S.A.",
+    "fecha": "2025-09-12",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5539-235-CM25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Orden de Compra generada por invitación a compra ágil: 539819-35-COT26  2 RELOJ DE ASISTENCIA VM20",
+    "descripcion": "Orden de Compra codigo: 539819-30-AG26 dirigida a FACEPASS SPASE REQUIERE CONTRATAR LA COMPRA DE UN SISTEMA TECNOLÓGICO DE REGISTRO Y CONTROL DE ASISTENCIA CON RECONOCIMIENTO FACIAL. DEBE INCLUIR DOS RELOJES DE ASISTENCIA Y UN PLAN DE LICENCIAMIENTO MÍNIMO DE 12 MESES (MARZO 2026 A MARZO 2027). SE ADJUNTAN ESPECIFICACIONES TÉCNICAS OBLIGATORIAS.",
+    "monto": 5723900.0,
+    "proveedor": "FACEPASS SPA",
+    "fecha": "2026-01-20",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=539819-30-AG26"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Servicio de Restaurant (CC 3305, dic)",
+    "descripcion": "Servicio de Restaurant (CC 3305, dic)Diplomado en Inteligencia Artificial ECC.C. 3305Favor incluir el código 801 en la factura correspondiente, detallando el número completo (incluyendo guiones y letras) de la presente orden de compra.",
+    "monto": 179219.95,
+    "proveedor": "SANDRA",
+    "fecha": "2026-01-20",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5525-14-SE26"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE CHILE",
+    "nombre": "Orden de Compra generada por invitación a compra ágil: 824773-98-COT26",
+    "descripcion": "Orden de Compra codigo: 824773-90-AG26 dirigida a LIFE TECHNOLOGIES CHILE SPASE REQUIERE ADQUIRIR LYO-READY RPA KIT PARA EL Concurso de validación tecnológica Uchile (CVTUCH) DE LA FACULTAD DE CIENCIAS QUIMICAS Y FARMACEUTICAS DE LA UNIVERSIDAD DE CHILE. DESPACHAR A BODEGA CENTRAL CALLE DR. CARLOS LORCA TOBAR 964 (EX SANTOS DUMONT), INDEPENDENCIA / TELEFONO: 229781605 HORARIO DE ATENCIÓN: LUNES A VIERNES DE 08:00 - 13:00 HRS. Y DE 14:00 - 17:30 HRS.",
+    "monto": 386636.95,
+    "proveedor": "LIFE TECHNOLOGIES CHILE SPA",
+    "fecha": "2026-06-23",
+    "subcategoria": "Analitica_Algoritmos_RPA",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=824773-90-AG26"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE SANTIAGO DE CHILE",
+    "nombre": "Diplomado sobre Inteligencia Artificial.",
+    "descripcion": "Contratación de servicio de capacitación de Diplomado sobre Inteligencia ArtificialComunicarse a romina.llabres@usach.cl con copia avaleria.montero@usach.cl , capacitacionddp@usach.cl--* La factura debe ser emitida contra entrega de bien y/o servicio y enviada al correousach_dte@paperless.cl* El valor de la factura debe corresponder exactamente a los valores indicados en la orden decompra* Toda factura debe indicar el número de orden de compra [campo 801]* Toda factura debe indicar giro Enseñanza Superior en Universidades Públicas [código 853110]Contacto: Pago factura: Ximena Acevedo  Fono:  227180437",
+    "monto": 1680000.0,
+    "proveedor": "UNIVERSIDAD DE CHILE",
+    "fecha": "2026-04-28",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5067-1042-AG26"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE SANTIAGO DE CHILE",
+    "nombre": "Material Bibliográfico, USACH",
+    "descripcion": "Compra de libros de bibliografía básica para las carreras que imparte la Facultad de Ingeniería, 2008. CC17, NC351981.",
+    "monto": 3279339.0,
+    "proveedor": "Pearson Educación de Chile Ltda.",
+    "fecha": "2008-11-13",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=5067-11589-LE08"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE SANTIAGO DE CHILE",
+    "nombre": "Solicitud N 77438 - Servidor - CC 112  PS 1785",
+    "descripcion": "Solicitud Licitación Pública:SERVIDOR DEDICADO DE ALTO DESEMPEÑO PARAENTRENAMIENTO DE MODELOS DE DEEP LEARNING SOBREIMÁGENESCC: 112PS: 1785Solicitante: Cristóbal Acosta JuradoTeléfono: +56 227180936Correo: cristobal.acosta@usach.clDespacho: Av. Víctor Jara 3659 Estación Central Santiago, RM Universidad de Santiago de Chile Departamento de Ingeniería Informática Sala de Servidores DIINF.",
+    "monto": 23429.0,
+    "proveedor": "XI Computer Chile",
+    "fecha": "2024-10-14",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=564162-131-LE24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE SANTIAGO DE CHILE",
+    "nombre": "Licencia Varias/Solicitud N° 26550 de C.C 117",
+    "descripcion": "Adquisición de Licencia VariasCoordinar servicio con: Nicole.barrientos@usach.cl // Fono: 227180156Debe indicar Nº de Orden de Compra en Factura.Factura Electronica a: miguel.caceres.m@usach.clPago Factura: Jaime Quintanilla // Correo: Jaime.Quint",
+    "monto": 22304748.578,
+    "proveedor": "SERV.DE GESTION INFORM Y COMP DE LA UNIVERSIDAD DE STGO DE CHILE LTDA",
+    "fecha": "2017-05-25",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5067-1538-CM17"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE SANTIAGO DE CHILE",
+    "nombre": "Licencias + Pc Workstation/Solicitud N° 26884 de C.C 102",
+    "descripcion": "Adquisición de Licencias + Pc WorkstationDespacho de mercaderia  y factura en Avda.El Belloto 3580, Almacén General,  Est. Central.Debe indicar Nº de Orden de Compra en Factura.Factura Electronica a: miguel.caceres.m@usach.cl // C.C: Yasna.marabol",
+    "monto": 15731012.557008,
+    "proveedor": "OPCIONES SA SISTEMAS DE INFORMACION",
+    "fecha": "2017-06-13",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=867990-333-CM17"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE SANTIAGO DE CHILE",
+    "nombre": "75415 - LIBRO - 564162-595-COT24",
+    "descripcion": "Orden de Compra codigo: 564162-770-AG24 dirigida a LIBRERIA EDUARDO ALBERS LTDAProyecto: FONDEF ID23I10198CC: 112PS: 1624DESPACHO: Av. Victor Jara 3659, Estación Central Oficina 229. Departamento de Ingeniería Informática, Universidad de Santiago de Chile.CONTACTO: Violeta Chang/ violeta.chang@usach.cl / 227180915DESCRIPCIÓN: Libro Deep Learning: Foundations and Concepts, C. Bishop & H. Bishop, Springer, Edición 2024Enviar factura a:  usach_dte@paperless.cl y a nicole.arce.r@usach.cl; contra entrega del bien y/o servicio. Indicar ID de OC [campo 801] y Giro Enseñanza Superior en Universidades Públicas [código 853110]. OC debe estar en estado Aceptada en portal mercado público.",
+    "monto": 96390.0,
+    "proveedor": "LIBRERIA EDUARDO ALBERS LTDA",
+    "fecha": "2024-06-12",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=564162-770-AG24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE SANTIAGO DE CHILE",
+    "nombre": "O C generada por invitación a compra ágil: 5067-3018-COT25. Sol 84399, cc 108",
+    "descripcion": "Mantención de ChatbotContacto Daniela Leiva NúñezDepartamento de Educación ContinuaVicerrectoría de Vinculación con el MedioUniversidad de Santiago de ChileAv. Las Sophoras #175 - Estación CentralCorreo: daniela.leiva@usach.clTeléfono: +56 2 2 7183709* La factura debe ser emitida contra entrega de bien y/o servicio y enviada al correo usach_dte@paperless.cl  * El valor de la factura debe corresponder exactamente a los valores indicados en la orden de compra* Toda factura debe indicar el número de orden de compra [campo 801]* Toda factura debe indicar giro Enseñanza Superior en Universidades Públicas [código 853110]Contacto: Pago factura: Ximena Acevedo  Fono: 227180437",
+    "monto": 842520.0,
+    "proveedor": "Adity",
+    "fecha": "2025-11-03",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5067-2924-AG25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE SANTIAGO DE CHILE",
+    "nombre": "Adquisición de API para Chatbot institucional - 1460278-252-COT25",
+    "descripcion": "Dirección Estratégica InformáticaContacto de coordinación: Melanny Rojas, compras.dei@usach.cl. Sissy Alvarez sissy.alvarez@usach.cl fono: 227184724Incorporar en glosa de la factura el Código: USA22991- O2:A2:R2. La factura debe ser emitida contra entrega del bien y/o servicio y enviada al correo usach_dte@paperless.cl / pagos.prorrectoria@usach.cl/ compras.dei@usach.cl / sissy.alvarez@usach.cl El valor de la factura debe corresponder exactamente a los valores indicados en la Orden de Compra. Toda factura debe indicar el número de Orden de Compra (campo 801). Toda factura debe indicar giro Enseñanza Superior en Universidades Públicas (código 853110). Contacto Pago factura: Ximena Acevedo  Correo ximena.acevedo@usach.cl / - Fono: 227180437",
+    "monto": 4067487.83,
+    "proveedor": "IPNET CHILE SPA",
+    "fecha": "2025-12-09",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=1460278-255-AG25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE SANTIAGO DE CHILE",
+    "nombre": "112 - 90641 - Servicio de suscripción multiusuario a plataforma Modelo de Lenguaje de Gran Escala (LLM)",
+    "descripcion": "CC:112PS:1930Proyecto CTI250005Detalle:Servicio de suscripción multiusuario a plataforma Modelo de Lenguaje de Gran Escala (LLM)Contacto:Iván Toroivan.toro.u@usach.clDirección:USACH, USACH, a coordinar con unidad requirenteEnviar factura a: usach_dte@paperless.cl y a nicole.arce.r@usach.cl; contra entrega del bien y/o servicio. Indicar ID de OC [campo 801], código del proyecto debe venir detallado en glosa de la factura, Giro Enseñanza Superior en Universidades Públicas [código 853110] y OC debe estar en estado Aceptada en Portal Mercado Público o de lo contrario la factura será reclamada inmediatamente ante el SII",
+    "monto": 6988898.56,
+    "proveedor": "CONSULTORA JORGE RIOS GAJARDO E.I.R.L.",
+    "fecha": "2026-05-06",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=564162-280-AG26"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE TALCA",
+    "nombre": "BIBLIOTECA. Libros para Bioinformatica y Biblioteca Central",
+    "descripcion": "Contar con las bibliografias necesarias para la docencia",
+    "monto": 269560.0,
+    "proveedor": "Francisco Jose Olejnik Alba",
+    "fecha": "2009-01-15",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=4825-1-L109"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE TALCA",
+    "nombre": "Servicio de Suscripción Power Automate per user with attended RPA Plan Office 365, más administrativos de la Universidad.",
+    "descripcion": "Se requiere servicio de suscripción Power Automate per user with attended RPA Plan for Faculty para la integración de aplicaciones del tipo Power Apps, más suscripción Office 365 para funcionarios administrativos de la Universidad de Talca.",
+    "monto": 3968888.0,
+    "proveedor": "PRODATA SPA",
+    "fecha": "2022-05-12",
+    "subcategoria": "Analitica_Algoritmos_RPA",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=1469-106-L122"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE TALCA",
+    "nombre": "CURSO DE CAPACITACION SOBRE APRENDIZAJE PROFUNDO Y DESARROLLO DE HABILIDADES INTRAPERSONALES PARA EL TRABAJO CON ESTUDIANTES - PROGRAMA PACE, UNIVERSIDAD DE TALCA",
+    "descripcion": "Se solicita la contratación de capacitación teórica práctica en temática de desarrollo de habilidades del siglo XXI, bajo el enfoque del aprendizaje profundo, en el que se focalice las habilidades intrapersonales, la Metacognición y el trabajo colaborativo.  Con esta capacitación se espera la adquisición de herramientas metodológicas de aprendizaje activo que permitan fomentar el trabajo en el aula tanto de los profesionales que asisten a los establecimientos en convenio como aquellos que atiend",
+    "monto": 5189000.0,
+    "proveedor": "Quinta Capacitación",
+    "fecha": "2023-11-22",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=1469-497-L123"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE TALCA",
+    "nombre": "Software para escritura científica para estudiantes de doctorado de la Universidad de Talca",
+    "descripcion": "Adquirir servicios de asistencia a la escritura científica para estudiantes de doctorado, dicha asistencia idealmente deberá estar mediada por inteligencia artificial, para ofrecer control de plagio, parafraseo y control de extensión de texto. El software o licencia para contratar requiere el acceso al menos a 36 usuarios.",
+    "monto": 5667732.0,
+    "proveedor": "PUBLICTRAIL INVESTMENT LTDA",
+    "fecha": "2023-07-24",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=1469-258-L123"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE TALCA",
+    "nombre": "SERVICIO DE DIGITAL PARA SITIO WEB DE LA UNIVERSIDAD DE TALCA - Readjudicada en Id 1469-407-R124",
+    "descripcion": "Se requiere un acceso anual a la aplicación UserWay, un sistema basado en inteligencia artificial que optimiza la interfaz de un sitio web en WordPress, mejorando su accesibilidad para los usuarios y asegurando el cumplimiento de los protocolos internacionales de accesibilidad",
+    "monto": 1500000.0,
+    "proveedor": "San Pedro Consultores",
+    "fecha": "2024-09-11",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=1469-407-L124"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE TALCA",
+    "nombre": "SERVICIO DE DIGITAL PARA SITIO WEB DE LA UNIVERSIDAD DE TALCA",
+    "descripcion": "Se requiere un acceso anual a la aplicación UserWay, un sistema basado en inteligencia artificial que optimiza la interfaz de un sitio web en WordPress, mejorando su accesibilidad para los usuarios y asegurando el cumplimiento de los protocolos internacionales de accesibilidad",
+    "monto": 1500000.0,
+    "proveedor": "AGAR",
+    "fecha": "2024-09-11",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=1469-407-R124"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE TALCA",
+    "nombre": "20-32063 Compra de productos para el  proyecto de dispositivo predictivo mediante machine learning para el monitoreo de equipos de rotativos en minería de baja revoluciones - INES I+D",
+    "descripcion": "Compra de productos para el  proyecto de dispositivo predictivo mediante machine learning para el monitoreo de equipos de rotativos en minería de baja revoluciones - INES I+D",
+    "monto": 2738653.0,
+    "proveedor": "Mechatronicstore EMPR",
+    "fecha": "2024-11-14",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=1469-607-L124"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE TALCA",
+    "nombre": "SOLPED 20-16328 | ORDEN DE COMPRA DESDE 1469-106-L122",
+    "descripcion": "Servicio de Suscripción Power Automate per user with attended RPA Plan Office 365, más administrativos de la Universidad. DESDE 1469-106-L122.- PREVIO ENVÍO DE PRODUCTO O INICIO DEL SERVICIO ENVIAR ACEPTACIÓN A OC EN EL   PORTAL MP\"- EN DETALLE DE",
+    "monto": 3968888.0,
+    "proveedor": "PRODATA S.A",
+    "fecha": "2022-05-24",
+    "subcategoria": "Analitica_Algoritmos_RPA",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=1469-1130-SE22"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE TALCA",
+    "nombre": "2-25908 CURSO DE CAPACITACIÓN; 1469-497-L123",
+    "descripcion": "CURSO DE CAPACITACIÓN SOBRE APRENDIZAJE PROFUNDO Y DESARROLLO DE HABILIDADES INTRAPERSONALES PARA EL TRABAJO CON ESTUDIANTES-PROGRAMA PACE, UNIVERSIDAD DE TALCA.CONTACTO THAIS TRONCO 975172834INCLUIR EN FACTURA NUMERO DE OC Y PROGRAMA TAL2277",
+    "monto": 5189000.0,
+    "proveedor": "Quinta Capacitación",
+    "fecha": "2023-12-22",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=1469-4816-SE23"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE TALCA",
+    "nombre": "Trato Directo Autoriza R.U. 338 de 2024",
+    "descripcion": "Autorizar compra vía trato directo con la empresa RINDEGASTOS SPA, RUT N° 76.271.948-7 para la contratación del servicio software de rendición con respaldo Icloud que trabaja con elementos de inteligencia artificial permitiendo digitalizar por completo el proceso de rendición de gastos, desde el rendidor hasta la revisión y contabilización de todos los gastos, usando herramientas de lectura OCR (Reconocimiento óptico de caracteres) que entregan eficiencia al proceso al evitar la digitación manual y al detectar eventuales documentos duplicados., por el periodo comprendido entre el 15 de Junio de 2024 y el 14 de Junio de 2027.Los documentos adjuntos, los requerimientos técnicos y sus anexos forman un todo integrado y se complementan recíprocamente, en forma tal que se consideran parte de la orden de compra y se entienden aceptados por el proveedor.Se requiere la aceptación de proveedor para proceder con el pagoSolped 2000028192",
+    "monto": 65431708.8219873,
+    "proveedor": "RINDEGASTOS SPA",
+    "fecha": "2024-07-11",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=1469-2125-SE24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE TALCA",
+    "nombre": "2-30530 CURSO INTELIGENCIA ARTIFICIAL GENERATIVA PARA AUDITORES: 1469-2621-COT24",
+    "descripcion": "Orden de Compra codigo: 1469-3077-AG24 dirigida a ADVANCE CAPACITACIONES LIMITADACONTACTO JESSICA TORRES712203059",
+    "monto": 1100000.0,
+    "proveedor": "ADVANCE CAPACITACIONES LIMITADA",
+    "fecha": "2024-09-10",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=1469-3077-AG24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE TALCA",
+    "nombre": "ORDEN DE COMPRA DESDE 1469-607-L124",
+    "descripcion": "20-32063 Compra de productos para el  proyecto de dispositivo predictivo mediante machine learning para el monitoreo de equipos de rotativos en minería de baja revoluciones - INES I+D DESDE 1469-607-L124Av. Lircay S/N, Talca, atención: Alejandra Vivallos, Unidad de Proyectos de Innovación",
+    "monto": 3258997.07,
+    "proveedor": "Pablo Ignacio",
+    "fecha": "2024-12-27",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=1469-5011-SE24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE TALCA",
+    "nombre": "20-39451 Acceso y uso de la Plataforma OpenAI para la provisión de capacidades avanzadas de Inteligencia Artificial (IA): 1469-4172-COT25",
+    "descripcion": "Orden de Compra codigo: 1469-3825-AG25 dirigida a FLEX SSS SPAJustificación selección de cotización menos económica: Los productos o servicios cotizados cumplen de mejor manera con los requisitos técnicos solicitados.Como bien se mencionó en las especificaciones técnicas incorporadas en la solicitud de esta compra, el proveedor debe entregar una cuenta de uso estrictamente institucional. Teniendo esto en cuenta, la opción más conveniente es la de Flex SSS Spa., ya que el Comercial Iphonextreme Spa, a pesar de que ofrece esencialmente el mismo servicio, ofrece una cantidad menor de créditos para la API, señalando además que incluirá documentación que es de acceso público, lo que no es beneficioso para los intereses de la Universidad. SE REQUIERE PARA PAGOS QUE ORDEN DE COMPRA SE ENCUENTRE ACEPTADA.CONTACTO MAXIMO OSORIO712200103",
+    "monto": 1454444.18,
+    "proveedor": "FLEX SSS SPA",
+    "fecha": "2025-11-21",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=1469-3825-AG25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE TARAPACÁ",
+    "nombre": "Adquisición libros carreras pregrado UTA",
+    "descripcion": "Adquisición de material bibliográfico para las carreras de pregrado de la Universidad de Tarapacá de Arica. Flete inlcuído. SC 2099080698 (MOR)",
+    "monto": 2256594.0,
+    "proveedor": "cotizaciones",
+    "fecha": "2009-08-31",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=5192-19-L109"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE PLAYA ANCHA DE CIENCIAS DE LA EDUC.",
+    "nombre": "ADQUISICION DE TEXTOS",
+    "descripcion": "SOL. COMPRA 2671-2677-2733-40624",
+    "monto": 2124877.0,
+    "proveedor": "Francisco Jose Olejnik Alba",
+    "fecha": "2010-03-22",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=4469-12-L110"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE PLAYA ANCHA DE CIENCIAS DE LA EDUC.",
+    "nombre": "BIBLIOGRAFIA ING.INFORMATICA 2010",
+    "descripcion": "DIRECCION DE DESPACHO:AV. GONZALEZ DE HONTANEDA 855PLAYA ANCHAVALPARAISOCONTACTO: GABRIELA LARA SANGUINOFONO: 2205903EMAIL: bibcode@upla.cl",
+    "monto": 462332.85,
+    "proveedor": "MIGUEL CONCHA Y COMPAÑIA LIMITADA",
+    "fecha": "2010-12-07",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=4469-1412-TL10"
+  },
+  {
+    "universidad": "UNIVERSIDAD TECNOLOGICA METROPOLITANA",
+    "nombre": "TEXTOS PARA BIBLIOTECA",
+    "descripcion": "TEXTOS PARA LAS DIFERENTES BIBIOTECAS",
+    "monto": 9941265.0,
+    "proveedor": "Liberalia Ediciones Limitada",
+    "fecha": "2010-11-26",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=5251-79-LE10"
+  },
+  {
+    "universidad": "UNIVERSIDAD TECNOLOGICA METROPOLITANA",
+    "nombre": "Adquisición de textos para Informatica y civil.",
+    "descripcion": "Adquisición de textos para las carreras de Ingeniería en Informática e Ingeniería Civil en Computación.",
+    "monto": 14076395.0,
+    "proveedor": "Buscalibros.cl",
+    "fecha": "2013-11-12",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=5251-57-LE13"
+  },
+  {
+    "universidad": "UNIVERSIDAD TECNOLOGICA METROPOLITANA",
+    "nombre": "Adquisicion de computador de alta gamma",
+    "descripcion": "Compra de  equipo computacional de alta gamma para la simulación, entrenamiento y evaluación de diferentes modelos deep learning usando datos astronómicos, para cumplir con los objetivos comprometidos en el proyecto interno adjudicado LPR19-22.",
+    "monto": 2765000.0,
+    "proveedor": "Del Sur Maule Limitada",
+    "fecha": "2021-01-06",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=5251-59-L120"
+  },
+  {
+    "universidad": "UNIVERSIDAD TECNOLOGICA METROPOLITANA",
+    "nombre": "SERVICIO DE CAFÉ Y CÓCTEL EVIC",
+    "descripcion": "La Escuela Latinoamericana de Verano de Inteligencia Computacional EVIC es un evento anual que se realiza en Chile desde el año 2004. Su objetivo es promover la Inteligencia Computacional, reuniendo áreas como Control Inteligente, Robótica, Visión por Computadora, Neurociencia Computacional, Ciencia de Datos, Reconocimiento de patrones y Big Data entre otros.En el evento se presentan desde los conceptos básicos hasta los últimos resultados de la investigación en estas áreas. Tiene como público objetivo estudiantes de pregrado y posgrado, académicosas universitarios y profesionales, tanto de Chile como de paísesLatinoamericanos. EVIC está organizada por el Capítulo Chileno de la Sociedad de Inteligencia Computacional de la IEEE Computational Intelligence Society, IEEE-CIS y la Universidad anfitriona UTEM en este caso.",
+    "monto": 6199734.0,
+    "proveedor": "PUBLICTRAIL INVESTMENT LTDA",
+    "fecha": "2022-11-28",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=5251-134-LE22"
+  },
+  {
+    "universidad": "UNIVERSIDAD TECNOLOGICA METROPOLITANA",
+    "nombre": "Estación Meteorológica con comunicación de datos a PC",
+    "descripcion": "Se requiere la adquisición de una Estación Meteorológica con comunicación de datos a PC dicha estación permitirán desarrollar de forma más completa y currelada con los datos de cosecha Fotovoltaica (KWatts/hora) para incluirlos en la plataforma en la nube con inteligencia artificial y para su aplicación como herramienta de gestión eficiente de energía eléctrica y a distintas escalas. Industria 4.0: Internet de las cosas (IoT), Inteligencia Artificial, Smart-City: Gestión Energética.",
+    "monto": 579800.0,
+    "proveedor": "Alba Ambiente S.A.",
+    "fecha": "2023-10-23",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=5251-126-L123"
+  },
+  {
+    "universidad": "UNIVERSIDAD TECNOLOGICA METROPOLITANA",
+    "nombre": "Curso de Diseño Instruccional desde 5251-1326-COT23",
+    "descripcion": "El Modelo Educativo institucional plantea como objetivo estratégico lanecesidad de generar procesos formativos que se desarrollen enambientes emergentes de aprendizaje, a través de diversasexperiencias formativas, mediadas por tecnologías (Plataformas,Inteligencia Artificial, Robótica, entre otras de similares caracter(sticas.),de manera tal de responder a los desafíos de la sociedad delconocimiento, tanto en el Pregrado, Postgrado como EducaciónContinua.",
+    "monto": 700000.0,
+    "proveedor": "PONTIFICIA UNIVERSIDAD CATOLICA DE CHILE",
+    "fecha": "2023-11-21",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5251-1190-AG23"
+  },
+  {
+    "universidad": "UNIVERSIDAD TECNOLOGICA METROPOLITANA",
+    "nombre": "Libros Impresos - Diseño",
+    "descripcion": "Orden de Compra generada por invitación a compra ágil: 5251-1928-COT25Fecha de entrega: Libro Ética o Ideología de la Inteligencia Artificial, Libro Inteligencia Artificial en Ambitos Educativos Propuest y Libro Investigación Social. Lenguajes del Diseño: 10 días corridos20 días corridos para el resto de los items.Dirección para despacho: Dieciocho 390, Santiago.Para coordinar el despacho contactar a: PILAR ANTONIETA DEL REAL WESTPHALTeléfono Coordinador 27877315Email Coordinador de Compra PDELREAL@UTEM.CL  Envío de factura y datos bancarios a: facturas@utem.cl, fono 22 787 7735Consultas por pago a: proveedores@utem.cl, fono 22 787 7740-7643 22 787 7736",
+    "monto": 485956.73,
+    "proveedor": "DIAGONAL LIBROS LIMITADA",
+    "fecha": "2025-10-15",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5251-1905-AG25"
+  },
+  {
+    "universidad": "UNIVERSIDAD TECNOLOGICA METROPOLITANA",
+    "nombre": "SERVIDOR TUPUNGATITO DESDE LICITACIÓN PÚBLICA 5251-150-LE25",
+    "descripcion": "ADQUISICIÓN DE UN EQUIPO DE CÓMPUTO ESCALABLE PARA EL FORTALECIMIENTO DEL NÚCLEO DE INVESTIGACIÓN EN CIENCIA DE DATOS E INTELIGENCIA ARTIFICIAL DESDE LICITACIÓN PÚBLICA  5251-150-LE25 / SC 5472REMITIR FACTURA CON DATOS BANCARIOS A: FACTURAS@UTEM.CL, FONO: 227877749CONSULTAS POR PAGO A: PROVEEDORES@UTEM.CL, FONO: 227877740 ENTREGA EN: Ignacio Valdivieso #2409, San JoaquínCONTACTO: SR. Jorge Vergara Quezada TELÉFONO 227877057PLAZO DE ENTREGA: 45 DÍAS HÁBILES",
+    "monto": 33879867.63,
+    "proveedor": "Onyx Tech",
+    "fecha": "2025-10-23",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5251-2024-SE25"
+  },
+  {
+    "universidad": "UNIVERSIDAD TECNOLOGICA METROPOLITANA",
+    "nombre": "Adquisición de un Equipo de Cómputo Escalable para",
+    "descripcion": "La Universidad Tecnológica Metropolitana requiere la compra del equipo de investigación detallado a continuación, para cumplir con los objetivos comprometidos en el proyecto LE24-03. La adquisición de un servidor permitirá llevar a cabo el objetivo principal de este proyecto: Fortalecer el Núcleo de Investigación en Ciencia de Datos e Inteligencia Artificial de la UTEM mediante la adquisición de un equipo de super cómputo escalable, que facilite la transición desde equipos domésticos hacia plataformas HPC de gran escala, promoviendo el desarrollo de investigaciones de alto impacto.",
+    "monto": 28470477.0,
+    "proveedor": "Advanced Computing Technologies S.A.",
+    "fecha": "2025-09-12",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=5251-150-LE25"
+  },
+  {
+    "universidad": "UNIVERSIDAD TECNOLOGICA METROPOLITANA",
+    "nombre": "EQUIPAMIENTO COMPUTACIONAL LAPTOPS CIENCIA DE DATOS",
+    "descripcion": "La presente adquisición tiene como finalidad fortalecer y estandarizar el parque computacional de la carrera de Ingeniería Civil en Ciencia de Datos de la Universidad Tecnológica Metropolitana (UTEM), mediante la incorporación de equipos portátiles de alto rendimiento. Esta medida busca apoyar el desarrollo académico y práctico de los estudiantes, facilitando el trabajo con herramientas avanzadas de análisis de datos, inteligencia artificial y modelamiento estadístico, esenciales para su formación profesional.Los equipos requeridos deberán cumplir con las especificaciones técnicas detalladas en los documentos adjuntos, asegurando compatibilidad, capacidad de procesamiento y adecuación a los requerimientos tecnológicos propios de la disciplina.",
+    "monto": 20983190.0,
+    "proveedor": "PRODATA SPA",
+    "fecha": "2025-11-20",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=5251-189-LE25"
+  },
+  {
+    "universidad": "UNIVERSIDAD ARTURO PRAT SEDE IQUIQUE",
+    "nombre": "SE REQUIERE ROPA DE TRABAJO Y BOMBA PARA PROYECTO D08I 1011 - Readjudicada en Id 2057-75-R111",
+    "descripcion": "SE REQUIERE ROPA DE TRABAJO Y BOMBA PARA PROYECTO D08I 1011 CULENGUE II  PARA SER ENTREGADA EN EJERCITO 443 PUERTO MONTT ATENCION SRA. CLAUDIA PUEBLA",
+    "monto": 2123839.0,
+    "proveedor": "Max Service Limitada - Puerto Montt",
+    "fecha": "2011-08-29",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=2057-75-L111"
+  },
+  {
+    "universidad": "UNIVERSIDAD ARTURO PRAT SEDE IQUIQUE",
+    "nombre": "SE REQUIERE ROPA DE TRABAJO Y BOMBA PARA PROYECTO D08I 1011",
+    "descripcion": "SE REQUIERE ROPA DE TRABAJO Y BOMBA PARA PROYECTO D08I 1011 CULENGUE II  PARA SER ENTREGADA EN EJERCITO 443 PUERTO MONTT ATENCION SRA. CLAUDIA PUEBLA",
+    "monto": 2123839.0,
+    "proveedor": "Max Service Limitada - Puerto Montt",
+    "fecha": "2011-08-29",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=2057-75-R111"
+  },
+  {
+    "universidad": "UNIVERSIDAD ARTURO PRAT SEDE IQUIQUE",
+    "nombre": "2239-13-lp14 Convenio Marco Pasajes Aéreos Nacionales e Internacionales",
+    "descripcion": "Compra de pasaje aéreo Internacional Sr. David Contreras Aguilar asistencia a Congreso Internacional de la Asociación Catalana en Inteligencia Artificial (Ponencia) y mesa de trabajo con grupo de investigación, a desarrollarse en Palma de Mallorca/Barcelo",
+    "monto": 1208946.3,
+    "proveedor": "COMPAÑÍA ANDINA DE TURISMO LTDA.",
+    "fecha": "2019-10-09",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=917690-449-CM19"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE VALPARAÍSO",
+    "nombre": "Adquisicion de Bibliografia Obligatoria y Complementaria para la Universidad de Valparaiso",
+    "descripcion": "Se requiere Adquirir, para las Bibliotecas de la Universidad de Valparaiso, Bibliografia Obligatoria y Complementaria para aumentar la cobertura de titulos de las carreras de Pregrado. El costo del flete debe ser incluido en la propuesta de cada oferente",
+    "monto": 34443568.0,
+    "proveedor": "Libreria Eduardo Albers Ltda.",
+    "fecha": "2012-02-03",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=534615-4-LP11"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE LA FRONTERA",
+    "nombre": "\"XVI Congreso Iberoamericano de Reconocimiento de Patrones, Pucón 2011.\"",
+    "descripcion": "Se requiere realizar contrato para los servicios hoteleros en Pucón, para el XVI Congreso Iberoamericano de Reconocimiento de Patrones, Pucón 2011",
+    "monto": 5735294.0,
+    "proveedor": "Pucon Green Park SpA",
+    "fecha": "2011-11-03",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=5586-1213-LE11"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE LA FRONTERA",
+    "nombre": "PROVISIÓN DE  SERVIDORES Y STORAGE PARA MACHINE LEARNING Y VIRTUALIZACION EN  PROXMOX",
+    "descripcion": "PROVISIÓN DE SERVIDORES Y STORAGE PARA MACHINE LEARNING Y VIRTUALIZACION EN PROXMOX SEGÚN ESPECIFICACIONES TÉCNICAS DETALLADAS EN LAS BASES DE LICITACIÓN",
+    "monto": 36952680.0,
+    "proveedor": "ACT S.A.",
+    "fecha": "2024-08-07",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=5586-423-LE24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE LA FRONTERA",
+    "nombre": "\"XVI Congreso Iberoamericano de Reconocimiento de Patrones, Pucón 2011.\"",
+    "descripcion": "CONTACTO: CESAR SAN MARTINFONO: 045-325000SEC:4730LICITACIÓN 5586-1213-LE11, SEGÚN RESOL 1542 DEL 11.11.2011 Y 1689 DEL 28.11.2011",
+    "monto": 6824999.86,
+    "proveedor": "PUCON GREEN PARK SPA",
+    "fecha": "2011-11-15",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5586-4769-SE11"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE LA FRONTERA",
+    "nombre": "Orden de Compra generada por la Gran Compra: 57462",
+    "descripcion": "Promover el Aprendizaje profundo en estudiantes de establecimientos rurales del Servicio Local Costa Araucanía por medio del desarrollo de competencias docentes y la implementación de tecnología en el contexto de clases remotas por la pandemia Covid 19.",
+    "monto": 151337969.54306,
+    "proveedor": "Servicios y Productos Educativos Crisol Ltda.",
+    "fecha": "2021-03-15",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5586-352-CM21"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE LA FRONTERA",
+    "nombre": "F/T Colaciones Orden de Compra: 5586-791-CM23",
+    "descripcion": "Orden de Compra codigo: 5586-791-CM23 dirigida a SERVICIO Y COMERCIALIZADORA RAG SUR SPA",
+    "monto": 895850.0,
+    "proveedor": "SERVICIO Y COMERCIALIZADORA RAG SUR SPA",
+    "fecha": "2023-03-13",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5586-791-CM23"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE LA FRONTERA",
+    "nombre": "J/G COMPRA DE ALIMENTOS, Orden de Compra: 5586-4719-CM23",
+    "descripcion": "Orden de Compra codigo: 5586-4719-CM23 dirigida a SERVICIO Y COMERCIALIZADORA RAG SUR SPA",
+    "monto": 1412337.0,
+    "proveedor": "SERVICIO Y COMERCIALIZADORA RAG SUR SPA",
+    "fecha": "2023-09-08",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5586-4719-CM23"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE LA FRONTERA",
+    "nombre": "KP Orden de Compra generada por invitación a compra ágil: 5586-2679-COT23",
+    "descripcion": "DANIELA SOTOSEC 5431Orden de Compra codigo: 5586-5175-AG23 dirigida a SERVICIO Y COMERCIALIZADORA RAG SUR SPA",
+    "monto": 1806387.87,
+    "proveedor": "SERVICIO Y COMERCIALIZADORA RAG SUR SPA",
+    "fecha": "2023-10-04",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5586-5175-AG23"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE LA FRONTERA",
+    "nombre": "B/S COLACIONES FICA KIDS Orden de Compra generada por invitación a compra ágil: 5586-3584-COT23",
+    "descripcion": "CONTACTO: MARIA RUIZSEC: 7127Orden de Compra codigo: 5586-6759-AG23 dirigida a SERVICIO Y COMERCIALIZADORA RAG SUR SPA",
+    "monto": 545615.0,
+    "proveedor": "SERVICIO Y COMERCIALIZADORA RAG SUR SPA",
+    "fecha": "2023-12-04",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5586-6759-AG23"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE LA FRONTERA",
+    "nombre": "F/T PROVISIÓN DE  SERVIDORES Y STORAGE PARA MACHINE LEARNING Y VIRTUALIZACION EN  PROXMOX DESDE 5586-423-LE24",
+    "descripcion": "Contacto: Blanca VillalobosSEC: 4630Correo: blanca.villalobos@ufrontera.clResolución Interna:1427",
+    "monto": 43973689.2,
+    "proveedor": "OPCIONES SA SISTEMAS DE INFORMACION",
+    "fecha": "2024-09-05",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5586-4512-SE24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE LA FRONTERA",
+    "nombre": "P/A KIT Enzimas RPA (biología molecular) a compra ágil: 5586-909-COT25",
+    "descripcion": "USUARIO. CLAUDIO ROJASE-MAIL: claudio.rojas@ufrontera.clSEC; 1636PROYECTO DI23-0073DESPACHAR: Avenida Francisco Salazar 01145 Temuco - Chile",
+    "monto": 286793.57,
+    "proveedor": "LIFE TECHNOLOGIES CHILE SPA",
+    "fecha": "2025-05-27",
+    "subcategoria": "Analitica_Algoritmos_RPA",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5586-1325-AG25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE LA FRONTERA",
+    "nombre": "P/A PASAJES NACIONALES Orden de Compra: 5586-1186-CM26",
+    "descripcion": "PASAJERO FUNCIONARIO: RICHARD JIMENEZSEC : 1659I.MOTIVO DEL VIAJE (Justificar brevemente):PARTICIPACION CURSO INTELIGENCIA ARTIFICIAL Y SALUD EN CHILE, UNIVERSIDAD AUTONOMA, 12/05/2026, SANTIAGO.",
+    "monto": 74514.0,
+    "proveedor": "SKY AIRLINE S A",
+    "fecha": "2026-05-06",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5586-1186-CM26"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE LA FRONTERA",
+    "nombre": "P/A PASAJES INTERNACIONALES a compra ágil: 5586-1410-COT26",
+    "descripcion": "USUARIO. GONZALO BRAVOE-MAIL:gonzalo.bravo.j@ufrontera.clSEC 2376PASAJERO FUNCIONARIO: Mauricio Diéguez RebolledoI.MOTIVO DEL VIAJE: El objetivo general de la pasantía es analizar y sistematizar experiencias, metodologías y enfoques desarrollados en el Departamento de Lenguajes y Sistemas Informáticos de la Universidad de Alicante, particularmente en el grupo AliSoft, con el propósito de orientar el diseño de un protocolo metodológico que permita integrar de manera formativa la inteligencia artificial en los procesos de enseñanza-aprendizaje de programación y otras áreas de la informática en la Universidad de La Frontera, considerando su doble rol como herramienta profesional y como apoyo al aprendizaje. (Proyecto FRO21991)",
+    "monto": 1982467.0,
+    "proveedor": "Servicios Turisticos Megaviajes Limitada",
+    "fecha": "2026-06-16",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5586-1814-AG26"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE LA FRONTERA",
+    "nombre": "P/A PASAJES INTERNACIONALES a compra ágil: 5586-1536-COT26",
+    "descripcion": "USUARIA: KATHERINE BERNALE-MAIL:katherine.bernal@ufrontera.clSEC; 2556PASAJERO FUNCIONARIO: ANDRES AVILA BARRERAI.MOTIVO DEL VIAJE (Justificar brevemente):Visita a Indian Institute of Information Technology Kottayam.MConvenio vigente con la Alpen-Adria-Universität Klagenfurt, y el proyecto FOVI 240091 para crear un programa de magíster profesional en Ciencia de Datos Aplicada y una ingeniería en ciencia de datos con foco en inteligencia artificial.",
+    "monto": 1450000.0,
+    "proveedor": "SERVICIOS TURISTICOS SPA",
+    "fecha": "2026-06-23",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5586-1928-AG26"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE LA FRONTERA",
+    "nombre": "P/A PASAJES INTERNACIONALES Orden de Compra generada por invitación a compra ágil: 5586-1535-COT26",
+    "descripcion": "USUARIA: KATHERINE BERNAL E-MAIL:katherine.bernal@ufrontera.clSEC; 2555 PASAJERO FUNCIONARIA: SUSANA CANDIA PALMA I. MOTIVO DEL VIAJE (Justificar brevemente): Convenio vigente con la Alpen-Adria-Universität Klagenfurt, y el proyecto FOVI 240091 para crear un programa de magíster profesional en Ciencia de Datos Aplicada y una ingeniería en ciencia de datos con foco en inteligencia artificial.",
+    "monto": 2190000.0,
+    "proveedor": "THE TRIPOLOGIST VIAJES SPA",
+    "fecha": "2026-06-24",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5586-1932-AG26"
+  },
+  {
+    "universidad": "UNIVERSIDAD DEL BÍO-BÍO",
+    "nombre": "LIBROS BIBLIOTECA FERNANDO MAY, SC/3799-4618-4664-4750-4950",
+    "descripcion": "LIBROS BIBLIOTECA FERNANDO MAY, SC/3799-4618-4664-4750-4950",
+    "monto": 169326.0,
+    "proveedor": "Libreria diagonal",
+    "fecha": "2012-12-28",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=2705-440-L112"
+  },
+  {
+    "universidad": "UNIVERSIDAD DEL BÍO-BÍO",
+    "nombre": "COMPRA DE BIBLIOGRAFÍA (S/C 4809,4811, 4814,4815 Y 4816)",
+    "descripcion": "S/C 4809,4811,4814, 4815, 4816; PLAN DE MEJORAMIENTO FACE CONCEPCION",
+    "monto": 3196162.0,
+    "proveedor": "MIGUEL CONCHA Y COMPAÑIA LIMITADA",
+    "fecha": "2012-11-19",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=2704-816-L112"
+  },
+  {
+    "universidad": "UNIVERSIDAD DEL BÍO-BÍO",
+    "nombre": "LIBROS BIBLIOTECA FERNANDO MAY, SC/2232-2237",
+    "descripcion": "LIBROS BIBLIOTECA FERNANDO MAY, SC/2232-2237",
+    "monto": 169326.0,
+    "proveedor": "Duran San Martin Cia. Ltda.",
+    "fecha": "2013-06-07",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=2705-180-L113"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE ATACAMA",
+    "nombre": "ESTACIONES METEOROLÓGICAS FIC 1602",
+    "descripcion": "ADQUISICIÓN E INSTALACIÓN DE 2 ESTACIONES METEOROLÓGICAS EN EL MARCO DEL PROYECTO FIC 1602 DENOMINADO LABORATORIO PARA EL ESTUDIO HÍDRICO DE LA CUENCA, USO EFICIENTE, MONITOREO Y PREDICCIÓN DE CAUDALES APLICANDO MODELO DE REDES NEURONALES ARTIFICIALES Y",
+    "monto": 43534500.0,
+    "proveedor": "I&P",
+    "fecha": "2018-06-19",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=2859-55-LP18"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE ATACAMA",
+    "nombre": "ADQUISICIÓN DE BRAZO ROBÓTICO Y PINZA ROBÓTICA",
+    "descripcion": "ADQUISICIÓN DE BRAZO ROBÓTICO Y PINZA ROBÓTICA EN EL MARCO DEL PROYECTO INSPECCIÓN AUTOMÁTICA DE FRUTAS EN CENTROS DE EMPAQUETADO, USANDO ALGORITMOS DE MACHINE LEARNING Y MACHINE VISIÓN.",
+    "monto": 0.0,
+    "proveedor": "LUZ ELIANA",
+    "fecha": "2024-01-05",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=2859-4-LE24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE ATACAMA",
+    "nombre": "ADQUISICION DE CAMARA STEREO",
+    "descripcion": "ADQUISICION DE CAMARA STEREO EN EL MARCO DEL PROYECTO FONDEF IDEA I+D DENOMINADO INSPECCIÓN AUTOMÁTICA DE FRUTAS EN CENTROS DE EMPAQUETADO, USANDO ALGORITMOS DE MACHINE LEARNING Y MACHINE VISION.",
+    "monto": 9327299.0,
+    "proveedor": "ETT SPA",
+    "fecha": "2025-05-20",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=2859-40-LE25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE ATACAMA",
+    "nombre": "CURSO DE CAPACITACION EN INTELIGENCIA ARTIFICIAL",
+    "descripcion": "Orden de Compra codigo: 607603-39-AG23 dirigida a INTEGRALES  CAPACITACIONES OTEC  SPA",
+    "monto": 1200000.0,
+    "proveedor": "INTEGRALES  CAPACITACIONES OTEC  SPA",
+    "fecha": "2023-10-05",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=607603-39-AG23"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE ATACAMA",
+    "nombre": "ADQUISICIÓN DE BRAZO ROBÓTICO Y PINZA ROBÓTICA",
+    "descripcion": "AUTORIZA CONTRATACIÓN DIRECTA POR LICITACION PÚBLICA 2859-4-LE24 DECLARADA DESIERTA PARA LA ADQUISICIÓN DE BRAZO ROBÓTICO Y PINZA ROBÓTICA EN EL MARCO DEL PROYECTO INSPECCIÓN AUTOMÁTICA DE FRUTAS EN CENTROS DE EMPAQUETADO, USANDO ALGORITMOS DE MACHINE LEARNING Y MACHINE VISIÓN. - OC interna N°202400160 de fecha 15-03-2024 (campo 802)- Se adjunta carta sobre datos que se exigirán para facturación a partir del 01-01-2024.",
+    "monto": 35000000.35,
+    "proveedor": "SANDIMAN S.A.",
+    "fecha": "2024-03-15",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2859-111-SE24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE ATACAMA",
+    "nombre": "servicio coffe para proyecto inESi+d",
+    "descripcion": "Servicio de Coffe break para 40 personas,  a realizarse el día martes 30 de abril del 2024, a las 14:30  para Actividad en el Taller del uso de la inteligencia Artificial dictada por Google Chile,  del proyecto inESi+d, según cotización N° 056/24.OC interna N° 202400384 Se adjunta carta sobre datos que se exigirán para facturación a partir del 01-01-2024.",
+    "monto": 333200.0,
+    "proveedor": "JENNY ELIZABETH OLIVARES DONOSO",
+    "fecha": "2024-04-29",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2859-327-SE24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE ATACAMA",
+    "nombre": "Adquisición Camara Basler Ace",
+    "descripcion": "ADQUISICION DE CAMARA BASLER ACE, EN EL MARCO DEL PROYECTO FONDEF ID22I10119 DENOMINADO INSPECCION AUTOMATICA DE FRUTAS EN CENTROS DE EMPAQUETADOS USANDO ALGORITMOS DE MACHINE LEARNING Y MACHINE VISION, DE LA UNIVERSIDAD DE ATACAMA.- Plazo de entrega, ocho semanas- Nota pedido N°202400417- Carta facturación proveedores",
+    "monto": 1188976.6,
+    "proveedor": "ETT LTDA",
+    "fecha": "2024-05-02",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2859-358-SE24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE ATACAMA",
+    "nombre": "coffe break para proyecto ata2477",
+    "descripcion": "servicio de Coffe  break para 20 personas a realizarse el día 01 de octubre del 2025, a las 15:30 horas Sala Edificio pentágono, para actividad complementar la Jornada de capacitación Docente Inteligencia Artificial y diseño didáctico con docentes de los establecimiento educacionales adherido al Programa PACE, actividad organizada por Coordinación Componente PEM, según cotización N° 187/25.OC interna N° 202500565 Se adjunta carta sobre datos que se exigirán para facturación a partir del 01-01-2024.",
+    "monto": 188020.0,
+    "proveedor": "JENNY ELIZABETH OLIVARES DONOSO",
+    "fecha": "2025-09-30",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2859-1187-SE25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE ATACAMA",
+    "nombre": "DEPTO. DE COMPUTACION",
+    "descripcion": "Orden de Compra codigo: 511505-418-AG25 dirigida a PRISCILLA DARINKA RAMIREZ GUTIERREZservicio de coffee break para seminario de inteligencia artificial a realizarse el 20.10.2025 a las 11:00 horasOC INTERNA N° 202501986SE ADJUNTA CARTA SOBRE DATOS QUE SE EXIGIRAN PARA FACTURACION A PARTIR DEL 01.01.2024",
+    "monto": 600000.38,
+    "proveedor": "PRISCILLA DARINKA RAMIREZ GUTIERREZ",
+    "fecha": "2025-10-17",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=511505-418-AG25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE ATACAMA",
+    "nombre": "Orden de Compra generada por invitación a compra ágil: 511451-198-COT25",
+    "descripcion": "Orden de Compra codigo: 511451-178-AG25 dirigida a CONEXA LATAM INTELIGENCIA ARTIFICIAL SPASe adjunta carta sobre datos que se exigirán para facturación a partir del 01-01-2024.   Debe agregar:Número de la orden de compra de mercado público  511451-178-AG25 (CAMPO 801) y OC. interna N°202502382 (CAMPO 802(nota de pedido)), Correo XML: sii_recepcion_dte@uda.clDespacho: Av. Copayapu 333, Facultad de Ciencias Jurídicas y Sociales",
+    "monto": 487864.3,
+    "proveedor": "CONEXA LATAM INTELIGENCIA ARTIFICIAL SPA",
+    "fecha": "2025-11-06",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=511451-178-AG25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE ATACAMA",
+    "nombre": "servicio de coffe para proyecto ATA2577",
+    "descripcion": "Servicio de Coffe break para 30 personas para el día 19 de noviembre del 2025, para actividad objetivo de complementar la capacitación docente Inteligencia Artificial y Diseño Didáctico, actividad se llevara a cabo en dependencias de la Universidad de Atacama, según cotización N° 227/25Servicio de Coffe break para 30 personas para el día 20 de noviembre del 2025, para actividad objetivo de complementar la capacitación docente Inteligencia Artificial y Diseño Didáctico, actividad se llevara a cabo en dependencias de la Universidad de Atacama, según cotización N° 227/25.OC interna N° 202500859 Se adjunta carta sobre datos que se exigirán para facturación a partir del 01-01-2024.",
+    "monto": 564060.0,
+    "proveedor": "JENNY ELIZABETH OLIVARES DONOSO",
+    "fecha": "2025-11-18",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2859-1657-SE25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE ATACAMA",
+    "nombre": "servicio coffe break para proyecto ata24991",
+    "descripcion": "Servicio de Coffe break para 50 personas para el día 15 de enero del 2026 a las 10:00 horas ; lugar por confirmar, para actividad denominada Comité Universitario de Inteligencia Artificial, según cotización N° 003/26.OC interna N°202600015 Se adjunta carta sobre datos que se exigirán para facturación a partir del 01-01-2024.",
+    "monto": 529550.0,
+    "proveedor": "JENNY ELIZABETH OLIVARES DONOSO",
+    "fecha": "2026-01-13",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2859-15-SE26"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE ATACAMA",
+    "nombre": "POA DEPTO. DE INDUSTRIA Y NEGOCIOS",
+    "descripcion": "Orden de Compra codigo: 511505-274-AG26 dirigida a CENTRO DE CAPACITACIÓN LOS ANDES SPAJustificación selección de cotización menos económica: el proveedor no puede realizar la capacitación en los tiempos  y fecha solicitada.DIPLOMADO EN INTELIGENCIA ARTIFICIAL PARA NEGOCIOSOC INTERNA N° 202601205SE ADJUNTA CARTA SOBRE DATOS QUE SE EXIGIRAN PARA FACTURACION A PARTIR DEL 01.01.2024",
+    "monto": 2800000.0,
+    "proveedor": "CENTRO DE CAPACITACIÓN LOS ANDES SPA",
+    "fecha": "2026-07-23",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=511505-274-AG26"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE TARAPACA",
+    "nombre": "CONTROL DE ASISTENCIA CON RECONOCIMIENTO FACIAL",
+    "descripcion": "Se requiere suministro, instalación y puesta en marcha de un sistema Control de Asistencia con Reconocimiento Facial para dependencias de la Universidad de Tarapacá en la ciudad de Arica e Iquique según especificaciones técnicas Anexo N 2.",
+    "monto": 19099900.0,
+    "proveedor": "GeoVictoria",
+    "fecha": "2021-06-17",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=941739-20-LE21"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE TARAPACA",
+    "nombre": "CONTROL DE ASISTENCIA CON RECONOCIMIENTO FACIAL ORDEN DE COMPRA DESDE 941739-20-LE21",
+    "descripcion": "OC.2021110149 CONTROL DE ASISTENCIA CON RECONOCIMIENTO FACIAL LICITACIÓN ID 941739-20-LE21, RESOLUCIÓN EXENTA VAF N°0.419/2021 ADJUDICA. PLAZO DE ENTREGA 16.11.21 (5 DÍAS HÁBILES),GARANTIA 36 MESES, FLETE INCLUIDO. MULTA 1% SOBRE CANTIDAD ATRASADA EN LA O",
+    "monto": 22728881.0,
+    "proveedor": "PRODUCTORA DE TARJETAS DE IDENTIFICACION E-MACH CARD LIMITADA",
+    "fecha": "2021-09-13",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=941739-401-SE21"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE TARAPACA",
+    "nombre": "Adq. de insumos electrónicos p/Proyecto Monitoreo de cond. y uso Inteligencia Artificial, Utaprototipa 2023",
+    "descripcion": "OC2023070534-535,f/entrega corresp(02-08-2023).La acept.OC. constit. declarar que proveedor no es func.UTA y no está afectoprohib. contenidas en inc.6art.4°Ley19886.Y conoce y da cumplimiento a Norma Ley 21369,ManualDecr.U. 369/21 y Cod. EticaDecr.U.360/21 y Decr.U.630/22 Orden de Compra codigo: 812690-104-AG23 dirigida a ALTRONICS CHILE SPA",
+    "monto": 1100653.015,
+    "proveedor": "PABLO MARIO ESTREMADOYRO BARAONA E.I.R.L.",
+    "fecha": "2023-07-20",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=812690-104-AG23"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE TARAPACA",
+    "nombre": "Adq. de 2 Sensores ultrasonicos p/ Proyecto Monitoreo de condiciones y uso de Inteligencia Artificial, Utaprototipa, UTA",
+    "descripcion": "OC.2023100582, f/entrega 16/11/2023 ( 15 dias habiles), Incluye flete, Garantía 6 meses. Adq. de 2 Sensores ultrasonicos p/ Proyecto Monitoreo de condiciones y uso de Inteligencia Artificial, Utaprototipa. La aceptación de la orden de compra constituye una declaración de que el proveedor no es funcionario de la uta y no está afecto a las prohibiciones contenidas en el inciso 6 del artículo 4° de la ley n°19.886. Y conoce y da cumplimiento a Norma Ley 21369, Manual Decreto U.N°369/21 y Cod. Etica Decreto U.N °360/21 y Decreto U.N°630/22v (DOCUMENTO ADJUNTO).",
+    "monto": 1646462.053782,
+    "proveedor": "COMERCIAL RANN LIMITADA",
+    "fecha": "2023-10-18",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=812690-216-AG23"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE TARAPACA",
+    "nombre": "Orden de Compra generada por invitación a compra ágil: 812690-84-COT23",
+    "descripcion": "OC.2023100755,f/entrega 16/11/2023,  flete incluido. SERVICIO CURSO DE INTELIGENCIA ARTIFICIAL PARA 50 PERSONAS, los dias 16,17 y 28 de noviembre 2023. La aceptación de la orden de compra constituye una declaración de que el proveedor no es funcionario de la uta y no está afecto a las prohibiciones contenidas en el inciso 6 del artículo 4° de la ley n°19.886. Y conoce y da cumplimiento a Norma Ley 21369, Manual Decreto U.N°369/21 y Cod. Etica Decreto U.N°360/21 y Decreto U.N°630/22 (DOCUMENTO ADJUNTO).",
+    "monto": 1499998.9984,
+    "proveedor": "BioPub SpA",
+    "fecha": "2023-10-25",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=812690-228-AG23"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE TARAPACA",
+    "nombre": "SERVICIO DE ESTADÍA A TERCEROS",
+    "descripcion": "OC.2023100706,f/entrega 01/11/2023 hasta el 04/11/2023.Servicio de alojamiento para Sr guillermo Puebla y el Sr. Rolando Martinez, quienes participaran de reunión de trabajo colaborativo del proyecto estratégico de Inteligencia Artificial conla Universidad de Tarapacá . Segun resolcuion exenta 0.576/2023. La aceptación de la orden de compra constituye una declaración de que el proveedor no es funcionario de la uta y no está afecto a las prohibiciones contenidas en el inciso 6 del artículo 4° de la ley n°19.886. Y conoce y da cumplimiento a Norma Ley 21369, Manual Decreto U.N°369/21 y Cod. Etica Decreto U.N°360/21 y Decreto U.N°630/22 (DOCUMENTO ADJUNTO).",
+    "monto": 414120.0,
+    "proveedor": "Hotel Arica Ltda.",
+    "fecha": "2023-10-26",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5265-97-SE23"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE TARAPACA",
+    "nombre": "SERVICIO DE ALOJAMIENTO PARA EXPOSITOR DE SEMINARIO INTERNACIONAL INTELIGENCIA ARTIFICIAL APLICADA A LA PRODUCCIÓN DE HORTICOLAS Y POTENCIAL DE EXPORTACIÓN",
+    "descripcion": "OC2023120075, F/incl. F/entrega corresp. Plazo condic. Reg. Comenzando desde la acep. de OC (05.12.23 ref) con plazo de 2 días hábiles para aceptar la OC de lo contrario se podrá solicitar la cancelación. Pago a 30ds. c/recep.conf.factura. La aceptación de la orden de compra constituye una declaración de que el proveedor no es funcionario de la uta y no está afecto a las prohibiciones contenidas en el inciso 6 del artículo 4° de la ley n°19.886. Y conoce y da cumplimiento a Norma Ley 21369, Manual Decreto U.N°369/21 y Cod. Etica Decreto U.N°360/21 y Decreto U.N°630/22 (DOCUMENTO ADJUNTO).",
+    "monto": 71999.999999914,
+    "proveedor": "SOCIEDAD HOTELERA SAVONA LIMITADA",
+    "fecha": "2023-12-01",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5968-217-SE23"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE TARAPACA",
+    "nombre": "se requiere 1 CÁMARA CON RECONOCIMIENTO FACIAL",
+    "descripcion": "OC.2024110580, F/ENTREGA 25/11/2024 (5 DÍAS HÁBILES),FLETE INCLUIDO, GARANTIA 6 MESES. X COMPRA DE 1 CÁMARA CON RECONOCIMIENTO FACIAL. SEGÚN RES.EXENTA DAF N°.0.611/24. La acept.OC. constit.declarar que proveedor no es func.UTA y no está afecto prohib. contenidas en inc. 6art.4°Ley 19886.Y conoce y da cumplimiento a Norma Ley 21369, Manual Decr.U369/21 y Cod.Etica Decr.U.360/21 y Decr.U.630/22. TD Res. Exenta DAF N° 0.xx/24",
+    "monto": 303796.29,
+    "proveedor": "TRION SOLUCIONES DE INGENIERÍA SPA",
+    "fecha": "2024-11-10",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5027-62-SE24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE TARAPACA",
+    "nombre": "Insumos para Monitoreo de Condiciones y uso de Inteligencia Artificial, para Proy. Ing. 2030",
+    "descripcion": "O.C/2024120213. Despacho incluido, Fecha de llegada el 08-01-2025 (El proveedor tiene 24 hrs. siguientes al envío, para aceptar o rechazar la O.C.), Garantía de 6 Meses. Pago Mensual a 30 días con recepción conforme del servicio, facturar en números enteros y por la totalidad de la Orden de Compra generada por invitación a compra ágil N° 1053139-144-COT24. La acept.OC. constit. declarar que proveedor no es func. UTA y no está afecto prohib. contenidas en inc. 6 art.4°Ley19886.Y conoce y da cumplimiento a Norma Ley 21369, Manual Decr. U. 369/21 y Cod. Etica Decr.U. 360/21 y Decr. U.630 /22.",
+    "monto": 913111.99,
+    "proveedor": "TRION SOLUCIONES DE INGENIERÍA SPA",
+    "fecha": "2024-12-13",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=1053139-372-AG24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE TARAPACA",
+    "nombre": "DISEÑO EMPALME SUBESTACIÓN BIBLIOTECA PARA CENTRO  IA",
+    "descripcion": "OC 2025110163 DISEÑO NUEVO EMPALME DE SUBESTACIÓN BIBLIOTECA PARA CENTRO DE INTELIGENCIA ARTIFICIAL, CAMPUS SAUCACHE, PETICION ARMANDO VILLALOBOS; PLAZO ENTREGA 09.12.25 (20 DIAS HABILES); MULTA 2% X DIA HABIL ATRASO CON TOPE DEL 30% DEL VALOR DE LA ORDEN DE COMPRA;  RES.EXE.VAF 0.657/2024 APRUEBA CONTRATO. PAGO A 30 DIAS CONTRA RECEPCION CONFORME.",
+    "monto": 3214263.78,
+    "proveedor": "ISAAC JIMMY",
+    "fecha": "2025-11-03",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5360-396-SE25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE TARAPACA",
+    "nombre": "Servicio de Coffe break, UTA23991",
+    "descripcion": "Se requiere un servicio de coffe break para 100 personas, en el contexto de realización del Curso de inteligencia artificial básica para docentes universitarios.OC.2026050229.F/Entrega del servicio 18.05.26, multa 2% por cada dia habil de atraso, según ctto. con resolucion exenta VAF 135/26.La  acept.OC. constit.declarar que proveedor no es func.UTA y no está afecto prohib. Contenidas en el art.4°Ley 19886.Y conoce y da cumplimiento a Norma Ley 21369, Manual Decr.U369/21 y Cod.Etica Decr.U.360/21 y Decr.U.630/22",
+    "monto": 571200.0,
+    "proveedor": "MARGARITA ELENA CASANOVA ROZAS",
+    "fecha": "2026-05-15",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5512-95-SE26"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE TARAPACA",
+    "nombre": "ORDEN DE COMPRA DESDE 5360-12-LR25",
+    "descripcion": "OBRAS DE INFRAESTRUCTURA PARA CENTRO DE INTELIGENCIA ARTIFICIAL UNIVERSIDAD DE TARAPACÁ DESDE 5360-12-LR25OC.2026XXXX.OBRAS DE INFRAESTRUCTURA PARA CENTRO DE INTELIGENCIA ARTIFICIAL UNIVERSIDAD DE TARAPACÁ, LICITACIÓN ID 536012-LR25; R.E.VAFN°0.116/2026 ADJUDICA; PLAZO DE EJECUCIÓN 100 DÍAS CORRIDOS DESDE LA ENTREGA DE TERRENO; FECHA DE ENTREGA 26-08-2026; ENTREGA EN JOSE SANTOS LEIVA N°070 (BIBLIOTECA), ARICA. En caso de atraso se aplicará una multa de un 0.15% del valor neto de las cantidades atrasadas, por cada día hábil de atraso, con un topemáximo del 30% del valor total neto de la orden de compra. La acept.OC. constit.declarar que proveedor no es func.UTA y no está afecto prohib. Contenidas en el art.4°Ley 19886.Y conoce y da cumplimiento a Norma Ley 21369, Manual Decr.U369/21 y Cod.Etica Decr. U.360/21 y Decr.U.630/22",
+    "monto": 489782688.29,
+    "proveedor": "CASTILLO Y ASOCIADOS LTDA.",
+    "fecha": "2026-03-25",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5360-86-SE26"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE TARAPACA",
+    "nombre": "OBRAS DE INFRAESTRUCTURA PARA CENTRO DE INTELIGENCIA ARTIFICIAL UNIVERSIDAD DE TARAPACÁ",
+    "descripcion": "La Universidad de Tarapacá requiere la contratación de obras de mejoramiento en la  infraestructura para el centro de inteligencia artificial, según especificaciones técnicas del Anexo L. Centro de Costo 4333-SC.2025120021.",
+    "monto": 411582091.0,
+    "proveedor": "DJP CONSTRUCCIONES SA",
+    "fecha": "2025-12-16",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=5360-12-LR25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE TARAPACA",
+    "nombre": "SERVICIO DE ALOJAMIENTO COCTEL Y CENA PARA EVENTO DE ICOaLTA DEL IAI-UTA",
+    "descripcion": "Se requiere el servicio de alojamiento, para 30 invitados, durante 6 noches, servicio de atención de coctel de bienvenida y servicio de cena evento, para invitados de la Internacional Conference on Optimization and Machine Learning: Theory and Applications (ICOMaLTA-2026), a realizarse en el auditorio de Medicina de la Universidad de Tarapacá, y el cual está organizado por el investigador Felipe Lara, perteneciente al Instituto de Alta Investigación de la Universidad de Tarapacá. El evento será realizado entre el 10 al 15 de mayo del 2026. SC: 2026030365.",
+    "monto": 308000.0,
+    "proveedor": "123 SOMNUS SPA",
+    "fecha": "2026-04-01",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=5484-3-LE26"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE LA SERENA",
+    "nombre": "Adquisición tarjeta de video para Dirección de Investigación y Desarrollo",
+    "descripcion": "Adquisición de tarjeta gráfica de video NVIDIA RTX3090 24 GB Aorus Gaming Box Thunderbolt 3 (tarjeta externa para Deep Learning) o su equivalente técnico",
+    "monto": 2700000.0,
+    "proveedor": "FAST EFFICIENCY SPA",
+    "fecha": "2021-09-27",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=5416-43-L121"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE LA SERENA",
+    "nombre": "Curso Introducción a la Inteligencia Artificial. Proyecto ULS 2295",
+    "descripcion": "Curso Introducción a la Inteligencia Artifical. Proyecto ULS 2295, según SC N°47062",
+    "monto": 3500000.0,
+    "proveedor": "Lift Asesores",
+    "fecha": "2025-06-09",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=1232565-29-L125"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE LA SERENA",
+    "nombre": "Contratación Diplomado en Inteligencia Artificial",
+    "descripcion": "OC correspondiente a SC 34071Funcionario beneficiario del diplomado: Sr. Daniel Ortiz Maturanacorreo: dortiz@userena.clContacto: Karina Nuñez correo knunez@userena.cl",
+    "monto": 2025000.0,
+    "proveedor": "PONTIFICIA UNIVERSIDAD CATOLICA DE CHILE",
+    "fecha": "2021-04-19",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5416-78-SE21"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE LA SERENA",
+    "nombre": "Diplomado de Big Data y Machine Learning",
+    "descripcion": "Orden de Compra generada por invitación a compra ágil: 5416-224-COT21Diplomado de Big Data y Machine Learningsegun s.c. n° 34752",
+    "monto": 1417500.0,
+    "proveedor": "PONTIFICIA UNIVERSIDAD CATOLICA DE CHILE",
+    "fecha": "2021-09-14",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5416-384-AG21"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE LA SERENA",
+    "nombre": "Adquisición de Cerradura con Reconocimiento Facial Biométrico",
+    "descripcion": "Adquisición de Cerradura con Reconocimiento Facial Biométrico para el Departamento de Biología de la Universidad de La Serena según SC 36.901Orden de Compra generada por invitación a compra ágil: 5416-549-COT22",
+    "monto": 428400.0,
+    "proveedor": "ALEX ENRIQUE",
+    "fecha": "2022-07-07",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5416-653-AG22"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE LA SERENA",
+    "nombre": "Azúcar 1 kilo  Orden de Compra: 5416-742-CM23",
+    "descripcion": "Orden de Compra codigo: 5416-742-CM23 dirigida a SERVICIO Y COMERCIALIZADORA RAG SUR SPA",
+    "monto": 808800.0,
+    "proveedor": "SERVICIO Y COMERCIALIZADORA RAG SUR SPA",
+    "fecha": "2023-06-23",
+    "subcategoria": "NLP_Vision_LLM",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5416-742-CM23"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE LA SERENA",
+    "nombre": "Diplomado Machine Learning Online",
+    "descripcion": "Diplomado Machine Learning Online, para la Decanatura de la Facultad de Ingeniería de la Universidad de La Serena. Según S/C N° 40211",
+    "monto": 2506000.0,
+    "proveedor": "Universidad Adolfo Ibañez",
+    "fecha": "2023-08-30",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5416-1057-SE23"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE LA SERENA",
+    "nombre": "servicio de Desarrollo de Módulo",
+    "descripcion": "servicio de Desarrollo de Módulo de Inteligencia  Artificial para la Toma de Decisiones del Sector Turismo de la Región de Coquimbo.SC.43330  Decanatura  Facultad de Ingeniería de la Universidad de La Serena",
+    "monto": 10499999.51,
+    "proveedor": "Digital Street",
+    "fecha": "2024-06-11",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5416-623-SE24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE LA SERENA",
+    "nombre": "Taller de Integración de IA en Ed Superior",
+    "descripcion": "Taller de Integración de la Inteligencia Artificial en Educación Superior: desafíos metodológicos y éticos, para la Decanatura Facultad de Ingeniería de la Universidad de La Serena.Oc según SC 43529.Contacto: Luz María Yañez.Fono: 512334881Correo: luz.yanez@userena.cl",
+    "monto": 1943080.0,
+    "proveedor": "PONTIFICIA UNIVERSIDAD CATOLICA DE VALPARAISO",
+    "fecha": "2024-07-02",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5416-758-SE24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE LA SERENA",
+    "nombre": "Curso Introducción a la Inteligencia Artificial. Proyecto ULS 2295",
+    "descripcion": "DESDE 1232565-29-L125FRP 29 SC 47062FF: RECDEI001  30601023661Contacto: Pedro Soto Trujillo; pedro.soto@userena.cl; Estimado proveedor se solicita agregar en glosa de la factura: Proyecto ULS 2295Indicar en la casilla de Referencia, N° de Orden de Compra de Mercado Público,  este requerimiento es indispensable para la formalidad y tramitación de pago correspondienteLa factura debe ser emitida a la casilla electrónica de intercambio, recepción@custodium.com",
+    "monto": 3500000.0,
+    "proveedor": "CMC Ltda",
+    "fecha": "2025-07-09",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=1232565-171-SE25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE LA SERENA",
+    "nombre": "49119/ LENTE REALIDAD AUMENTADA, INTELIGENCIA ARTIFICIAL, CAMARA Y AUDIO CON BANDA NEURAL",
+    "descripcion": "Orden de Compra codigo: 5416-52-AG26 dirigida a WAHOOEXPRESS SPAPara despacho contacatar con Marcelo A. Zepeda Dubó56994308856mzepeda@userena.clSe informa que la universidad entrara en receso desde el 23-01-2026 al 02-03-2026, donde la Universidad se encontrara cerrada, favor tomar en consideración para despachos y emisión de facturas, las cuales serán rechazadas durante las fechas informadas anteriormente.",
+    "monto": 2823163.14,
+    "proveedor": "WAHOOEXPRESS SPA",
+    "fecha": "2026-01-15",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5416-52-AG26"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE LA SERENA",
+    "nombre": "Adquisición de Licencias Anuales de Inteligencia Artificial Avanzada para Uso Profesional (50131) a compra ágil: 1491370-32-COT26",
+    "descripcion": "Adquisición de Licencias Anuales de Inteligencia Artificial Avanzada para Uso Profesional (50131) Orden de Compra codigo: 1491370-34-AG26 dirigida a FLEX SSS SPA",
+    "monto": 3786156.36,
+    "proveedor": "FLEX SSS SPA",
+    "fecha": "2026-05-08",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=1491370-34-AG26"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE LA SERENA",
+    "nombre": "Adquisición de Licencias Anuales de Inteligencia Artificial Avanzada para Uso Profesional (50757) a compra ágil: 1491370-55-COT26",
+    "descripcion": "Adquisición de Licencias Anuales de Inteligencia Artificial Avanzada para Uso Profesional (50757) Orden de Compra codigo: 1491370-56-AG26 dirigida a SOCIEDAD COMERCIAL FLORENCIA SPA",
+    "monto": 1068596.2,
+    "proveedor": "SOCIEDAD COMERCIAL FLORENCIA SPA",
+    "fecha": "2026-07-08",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=1491370-56-AG26"
+  },
+  {
+    "universidad": "UNIVERSIDAD DEL BIO BIO",
+    "nombre": "COMPRA DE PANTALLA INTERACTIVA DE 75\" (S/C 6977)",
+    "descripcion": "S/C 6977 ANALISIS PRESCRIPTIVO BASO EN MACHINE LEARNING PARA LA OPERACION DE PLANTAS",
+    "monto": 2008403.0,
+    "proveedor": "ALCA LTDA",
+    "fecha": "2023-12-06",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=2704-207-L123"
+  },
+  {
+    "universidad": "UNIVERSIDAD DEL BIO BIO",
+    "nombre": "sc 1510  adquisición de un Computador",
+    "descripcion": "adquisición de un computador  CPU Intel  core i9 -12900KF (s1700),  con teclado  y mouse optico ,  ya que se  ejecutará experimentos de inteligencia artificial, por lo que la tarjeta de video, memoria y procesador deben ser los requeridos  en la especificación técnica.",
+    "monto": 2478943.0,
+    "proveedor": "TECNOCAM SPA.",
+    "fecha": "2023-06-05",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=2704-92-L123"
+  },
+  {
+    "universidad": "UNIVERSIDAD DEL BIO BIO",
+    "nombre": "ADQUISICIÓN DE HARDWARE PARA PLATAFORMA",
+    "descripcion": "ADQUISICIÓN DE HARDWARE PARA PLATAFORMA DE INTELIGENCIA ARTIFICIAL, DE LA UNIVERSIDAD DEL BÍO-BÍO, SEDE CHILLÁN",
+    "monto": 8231000.0,
+    "proveedor": "M Industrial",
+    "fecha": "2024-04-26",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=2705-61-LE24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DEL BIO BIO",
+    "nombre": "Orden de Compra desde 2704-927-CO08",
+    "descripcion": "COMPRA DE LIBROS desde 2704-927-CO08S/C 2186 DIRECCION DE BIBLIOTECAS",
+    "monto": 170860.2,
+    "proveedor": "Jorge Antonio Leiva Martinez",
+    "fecha": "2008-08-26",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2704-12569-SE08"
+  },
+  {
+    "universidad": "UNIVERSIDAD DEL BIO BIO",
+    "nombre": "LIBROS CONVENIO DESEMPEÑO, SC/4609",
+    "descripcion": "LIBROS CONVENIO DESEMPEÑO, SC/4609FAVOR GASTOS DE FLETE CARGAR A LA CUENTA COURIER DE CORREOS DE CHILE N°19325(UNIVERSIDAD DEL BIO-BIO RUT 60911006-6)",
+    "monto": 133678.65,
+    "proveedor": "MIGUEL CONCHA Y COMPAÑIA LIMITADA",
+    "fecha": "2010-12-07",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2705-1365-TL10"
+  },
+  {
+    "universidad": "UNIVERSIDAD DEL BIO BIO",
+    "nombre": "sc  6572",
+    "descripcion": "adquisición de 6 libros; 1 (un) TÍTULO Mining the Social Web; 1 (un) TÍTULO Deep Learning with Python; 1 (un) TÍTULO Hands-On Recommendation Systems with Python; 1 (un) TÍTULO Python Machine Learning; 1 (un) TÍTULO Recommender Systems; 1 (un) TÍTULO Huma",
+    "monto": 273343.0,
+    "proveedor": "LIBRERIA EDUARDO ALBERS LTDA",
+    "fecha": "2019-04-24",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2704-985-MC19"
+  },
+  {
+    "universidad": "UNIVERSIDAD DEL BIO BIO",
+    "nombre": "2239-6-LP13 Convenio Marco de Producción de Eventos.",
+    "descripcion": "S/ 525 Seminario de Inteligencia Artificial realizado en el mes de Enero 2020 por la Facultad de Ingeniería, para regularizar",
+    "monto": 5272697.0,
+    "proveedor": "keaton asociados",
+    "fecha": "2020-03-20",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2704-469-CM20"
+  },
+  {
+    "universidad": "UNIVERSIDAD DEL BIO BIO",
+    "nombre": "Orden de Compra generada por invitación a compra ágil: 2704-1458-COT22",
+    "descripcion": "(SC: 4134) COMPUTADORFACTURA DEBE SER ENVIADA CON COPIA AL CORREO jcarreno@ubiobio.cl-Capital humano avanzado en inteligencia artificial para el Biobío      PROYECTO FIC - R CÓDIGO BIP 40036152-0  .Notebook Asus Vivobook 15 X513EA-BQ3037W Sistema oper",
+    "monto": 800000.11,
+    "proveedor": "SOC TECNOLOGICA Y SERVICIOS EXPRESS LIMITADA",
+    "fecha": "2022-09-09",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2704-1715-AG22"
+  },
+  {
+    "universidad": "UNIVERSIDAD DEL BIO BIO",
+    "nombre": "ADQ. INSUMOS DE ROBOTICA E INTELIGENCIA ARTIFICIAL",
+    "descripcion": "ADQUISICIÓN DE INSUMOS DE ROBOTICA Y DE INTELIGENCIA ARTIFICIAL",
+    "monto": 2637118.6352,
+    "proveedor": "Chriss",
+    "fecha": "2022-11-29",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2705-1782-SE22"
+  },
+  {
+    "universidad": "UNIVERSIDAD DEL BIO BIO",
+    "nombre": "Atención Coffe Break (s/c 3166)",
+    "descripcion": "Orden de Compra código: 2704-969-AG23 dirigida a ARCOFFE SERVICIOS DE CATERING SPAS/C 3166; Capital Humano Avanzado en Inteligencia Artificial para el Bío-Bío2704-1469-COT23",
+    "monto": 565250.0,
+    "proveedor": "ARCOFFE SERVICIOS DE CATERING SPA",
+    "fecha": "2023-06-20",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2704-969-AG23"
+  },
+  {
+    "universidad": "UNIVERSIDAD DEL BIO BIO",
+    "nombre": "Notebook Macbook Aple y monitores (s/c 4954)",
+    "descripcion": "Orden de Compra código: 2704-1452-AG23 dirigida a COMERCIALIZADORA TODOTABLET SPAS/C 4954; Análisis Prescriptivo Basado en Machine Learning para la operación de plantas...",
+    "monto": 1630300.0,
+    "proveedor": "COMERCIALIZADORA TODOTABLET SPA",
+    "fecha": "2023-09-11",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2704-1452-AG23"
+  },
+  {
+    "universidad": "UNIVERSIDAD DEL BIO BIO",
+    "nombre": "Servicio de traslado proyecto 502000020-001",
+    "descripcion": "\"Transporte de personal UBBtv Chillan - Concepción, Concepción - Chillan en el marco del lanzamiento del doctorado perteneciente al Proyecto Capital Humano Avanzado En Inteligencia Artificial para el Biobío - código BIP 40036152-0.\"",
+    "monto": 137860.0,
+    "proveedor": "TRANSPORTES MERINO SPA",
+    "fecha": "2023-11-02",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2705-1543-SE23"
+  },
+  {
+    "universidad": "UNIVERSIDAD DEL BIO BIO",
+    "nombre": "Coffe Break 50 personas, 08 de mayo (s/c 1966)",
+    "descripcion": "Orden de Compra código: 2704-691-AG24 dirigida a RESIDENCIALES Y RESTAURANTES JOFRANTO RESPONSABILIDAD LIMITADA2704-455-COT24S/C 1966; Capital Humano Avanzado en Inteligencia Artificial para el BIOBIO",
+    "monto": 205000.11,
+    "proveedor": "RESIDENCIAL JOSÉ VALDEBENITO E.I.R.L.",
+    "fecha": "2024-05-07",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2704-691-AG24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DEL BIO BIO",
+    "nombre": "Servicio de traslado proyecto 50200020-001",
+    "descripcion": "\"Viaje para equipo UBBTV desde Chillán a Concepción ida y vuelta para transmisión de Charla Magistral en Inteligencia Artificial en el marco del Proyecto FIC-R CAPITAL HUMANO AVANZADO EN INTELIGENCIA ARTIFICIAL PARA EL BIOBÍO Código BIP 40036152-0\"",
+    "monto": 130515.0,
+    "proveedor": "TRANSPORTES MERINO SPA",
+    "fecha": "2024-05-16",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2705-578-SE24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DEL BIO BIO",
+    "nombre": "Router RUTX50 Celular Industrial (s/c 2523)",
+    "descripcion": "Orden de Compra código: 2704-827-AG24 dirigida a SCU SPA2704-558-COT24S/C 2523; Análisis Prescriptivo basado en machine Learning para...",
+    "monto": 559300.0,
+    "proveedor": "SCU SPA",
+    "fecha": "2024-06-03",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2704-827-AG24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DEL BIO BIO",
+    "nombre": "SERVICIO DE TRASLADO PROYECTO 50200020-001",
+    "descripcion": "\"Traslado académica Carola Figueroa a la Cámara de Diputadas y Diputados de Chile tras invitación del diputado  Eric Aedo Jeldres en el marco del Proyecto FIC-R CAPITAL HUMANO AVANZADO EN INTELIGENCIA ARTIFICIAL PARA EL BIOBÍO\" Código BIP 40036152-0\"",
+    "monto": 51620.0,
+    "proveedor": "TRANSPORTES MERINO SPA",
+    "fecha": "2024-10-16",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2705-1391-SE24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DEL BIO BIO",
+    "nombre": "SERVICIO DE TRASLADO PROYECTO 50200020-001",
+    "descripcion": "\"Traslado a la Universidad Católica de la Santísima Concepción en el marco del  Proyecto FIC-R CAPITAL HUMANO AVANZADO EN INTELIGENCIA ARTIFICIAL PARA ELBIOBÍO\" Código BIP 40036152-0 con la finalidad de participar en la presentación de una asignatura del Doctorado IA en dependencias de esa Universidad.\"",
+    "monto": 128180.0,
+    "proveedor": "TRANSPORTES MERINO SPA",
+    "fecha": "2024-10-16",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2705-1392-SE24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DEL BIO BIO",
+    "nombre": "Memoria RAM 32GB (s/c 5780)",
+    "descripcion": "Orden de Compra código: 2704-1786-AG24 dirigida a M Y B SERVICIOS COMPUTACIONALES S A2704-1281-COT24S/C 5780; Análisis Prescriptivo Basado en Machine Learning...",
+    "monto": 241198.72,
+    "proveedor": "M y B SERVICIOS COMPUTACIONALES S.A.",
+    "fecha": "2024-10-25",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2704-1786-AG24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DEL BIO BIO",
+    "nombre": "SERVICIO DE TRASLADO PROYECTO 50200020-001",
+    "descripcion": "\"Viaje de académica Carola Figueroa de Chillan a Valparaíso, por invitación del presidente de la comisión de futuro, ciencias, tecnología, conocimiento e innovación, diputado Eric Aedo, para presentar el doctorado en inteligencia artificial. Esto en consecuencia del Proyecto Fic-R capital humano en inteligencia artificial para el bio bio, código bip 40036152-0.\"",
+    "monto": 580260.0,
+    "proveedor": "TRANSPORTES MERINO SPA",
+    "fecha": "2024-11-04",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2705-1525-SE24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DEL BIO BIO",
+    "nombre": "SERVICIO DE TRASLADO PROYECTO 50200020-001",
+    "descripcion": "\"Movilización para la académica Ubb Carola Figueroa por motivos de participar en exposiciones finales de alumnos del doctorado en inteligencia artificial. Esto es por efectos del Proyecto FIC-R CAPITAL HUMANO AVANZADO EN INTELIGENCIA ARTIFICIAL PARA EL BIOBÍO\" Código BIP 40036152-0\"",
+    "monto": 129340.0,
+    "proveedor": "TRANSPORTES MERINO SPA",
+    "fecha": "2024-12-16",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2705-1818-SE24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DEL BIO BIO",
+    "nombre": "Servicio de Cóctel 50 personas (s/c 6823)",
+    "descripcion": "Orden de Compra código: 2704-50-AG25 dirigida a CLAUDIO ANDRÉS AGUAYO RUBIO2704-16-COT25S/C 6823; Análisis Prescriptivo basado en machine learning ...",
+    "monto": 323680.0,
+    "proveedor": "CLAUDIO ANDRÉS AGUAYO RUBIO",
+    "fecha": "2025-01-09",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2704-50-AG25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DEL BIO BIO",
+    "nombre": "Orden de Compra generada por Trato Directo ID 2704-43-FTD25",
+    "descripcion": "Contratación del servicio de atención de coffee break para 150 personas asistentes al Seminario Inteligencia Artificial y Tecnología en el Aula: Un uso Práctico del Equipo Beca TIC",
+    "monto": 1846047.0,
+    "proveedor": "BANQUETERIA MERYBETH GUTIERREZ HERRERA E.I.R.L.",
+    "fecha": "2025-06-06",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2704-909-TD25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DEL BIO BIO",
+    "nombre": "Publicación en Diario (s/c 3175)",
+    "descripcion": "Orden de Compra código: 2704-928-AG25 dirigida a PLAN TACTIC SPA2704-886-COT25S/C 3175; Inteligencia Artificial y Tecnología en el Aula...",
+    "monto": 476000.0,
+    "proveedor": "PLAN TACTIC SPA",
+    "fecha": "2025-06-11",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2704-928-AG25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DEL BIO BIO",
+    "nombre": "SC ALMUERZOS CURSO INTEGRACIÓN DE IA EN PROCESOS E",
+    "descripcion": "SC ALMUERZOS CURSO INTEGRACIÓN DE INTELIGENCIA ARTIFICIAL (IA) EN PROCESOS EDUCATIVOSCANTIDAD 150 , FECHAS 15, 22 Y 29 DE JULIO 2025 (18 RACIONES DIARIAS), FECHAS 5, 12 Y 19 DE AGOSTO 2025 (32 RACIONES DIARIAS)SE SOLICITA ENVIAR FACTURA A LA CASILLA DE CORREO UBB-DTE@TECNOMANQUEHUE.CL",
+    "monto": 615000.33,
+    "proveedor": "NUTRISERV",
+    "fecha": "2025-07-14",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2704-1140-SE25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DEL BIO BIO",
+    "nombre": "COMPRA DE PASAJES INTERNACIONALES (s/c 5869)",
+    "descripcion": "Servicio de provisión de pasajes aéreos nacionales DESDE 2704-30-LQ25S/C 5869 CAPITAL HUMANO AVANZADO EN INTELIGENCIA ARTIFICIAL PARA EL BIOBIOCÓDIGO DE RESERVACIÓN JCNBZSGLOSA PARA FACTURA \": COMPRA REALIZADA GRACIAS AL PROYECTO FIC-R CAPITAL HUMANO AVANZADO EN INTELIGENCIA ARTIFICIAL PARA EL BIO BIO CODIGO BIP 40036152-0. \"",
+    "monto": 2651134.0,
+    "proveedor": "AGENCIA DE VIAJES TURAVION SPA",
+    "fecha": "2025-10-02",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2704-1797-SE25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DEL BIO BIO",
+    "nombre": "SC 6914 Orden de Compra generada por invitación a compra ágil: 2704-1969-COT25",
+    "descripcion": "Orden de Compra codigo: 2704-2164-AG25 dirigida a MAIN TECNOLOGÍAS SPADespachar en bodega central La factura debe contener la siguiente Glosa: Compra realizada por proyecto Fic-R Capital Humano Avanzado en Inteligencia artificial para el Bío Bío código BIP 40036152-0",
+    "monto": 1428000.0,
+    "proveedor": "MAIN TECNOLOGÍAS SPA",
+    "fecha": "2025-10-30",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2704-2164-AG25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DEL BIO BIO",
+    "nombre": "sc 8102 Orden de Compra generada por invitación a compra ágil: 2704-2361-COT25",
+    "descripcion": "Orden de Compra codigo: 2704-2575-AG25 dirigida a CONEXA LATAM INTELIGENCIA ARTIFICIAL SPAChatGPT PLUS suscripción mensual x 12 meses",
+    "monto": 303450.0,
+    "proveedor": "CONEXA LATAM INTELIGENCIA ARTIFICIAL SPA",
+    "fecha": "2025-12-02",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2704-2575-AG25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DEL BIO BIO",
+    "nombre": "Orden de Compra generada por Trato Directo ID 2704-101-FTD25",
+    "descripcion": "1.La necesidad de la Universidad del Bío-Bío de Fiel cumplimiento del convenio para Coejecución de proyecto Capital Humano Avanzado En Inteligencia Artificial Para El Biobío CÓDIGO BIP 40036152-0, según solicitud de compra Nº8112 de fecha 24 de noviembre 2025, del centro de costo Nº 50200020-001",
+    "monto": 846888.754960937,
+    "proveedor": "juan rodrigo",
+    "fecha": "2025-12-11",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2704-2662-TD25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DEL BIO BIO",
+    "nombre": "sc 3836 Orden de Compra generada por invitación a compra ágil: 2704-1107-COT26",
+    "descripcion": "Orden de Compra codigo: 2704-1307-AG26 dirigida a BIXEL SPA7 Chat GPT Business Acceso a modelos avanzados de inteligencia artificial de última generación Capacidades multimodales (texto, imágenes, archivos y datos)",
+    "monto": 1867394.41,
+    "proveedor": "BIXEL SPA",
+    "fecha": "2026-07-01",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2704-1307-AG26"
+  },
+  {
+    "universidad": "UNIVERSIDAD DEL BIO BIO",
+    "nombre": "ALMUERZOS CURSO CONOCIENDO LA INTELIGENCIA ARTIFIC",
+    "descripcion": "CURSO CONOCIENDO LA INTELIGENCIA ARTIFICIAL COMO HERRAMIENTA DE APOYO EN LA GESTIÓN DE LOS PROCESOS CLÍNICOS",
+    "monto": 153000.0,
+    "proveedor": "Federico",
+    "fecha": "2026-07-13",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2705-1096-SE26"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE LOS LAGOS",
+    "nombre": "ADQUISICIÓN DE   TARJETAS GRÁFICAS DE NIVEL INDUSTRIAL ORIENTADAS AL DESARROLLO, ENTRENAMIENTO E IMPLEMENTACIÓN DE MODELOS DE INTELIGENCIA ARTIFICIAL ,DE LA UNIVERSIDAD DE LOS LAGOS CAMPUS PUERTO MONT",
+    "descripcion": "ADQUISICIÓN DE   TARJETAS GRÁFICAS DE NIVEL INDUSTRIAL ORIENTADAS AL DESARROLLO, ENTRENAMIENTO E IMPLEMENTACIÓN DE MODELOS DE INTELIGENCIA ARTIFICIAL ,DE LA UNIVERSIDAD DE LOS LAGOS CAMPUS PUERTO MONT",
+    "monto": 2963520.0,
+    "proveedor": "MAVE TECHNOLOGY SPA",
+    "fecha": "2024-03-19",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=5423-3-L124"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE LOS LAGOS",
+    "nombre": "INSCRIPCIÓN PARA DIPLOMADO EN BIG DATA Y MACHINE LEARNING, MODALIDAD ONLINE A REALIZAR EN DOS PERIODOS DESDE: 26/05/2020 AL 17/01/2021 Y 28/07/2020 AL 24/05/2021, PROYECTO ULA1856, UNIVERSIDAD DE LOS LAGOS OSORNO, ITEM:RED UAI SOLICITA: CLAUDIA RUBIO",
+    "descripcion": "SR. PROVEEDOR SE SOLICITA QUE UNA VEZ DESPACHADO LOS BIENES Y/0 SERVICIOS SE REMITA LA FACTURA A LA CASILLADE LA SUITE ELECTRÓNICA: recepcion@custodium.com Y josue.roman@ulagos.cl",
+    "monto": 3180700.0,
+    "proveedor": "PONTIFICIA UNIVERSIDAD CATOLICA DE CHILE",
+    "fecha": "2020-06-11",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5413-732-CM20"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE LOS LAGOS",
+    "nombre": "Orden de Compra generada por Trato Directo ID 5413-74-FTD25",
+    "descripcion": "Importancia que significa poder contar con servicio de Coffee Break, en la Sede Castro, para el seminario denominado TRANSFORMACIÓN DIGITAL Y SU APORTE AL DESARROLLO ACADÉMICO INSULAR, a realizarse el 24 de abril de 2025. El seminario en Chiloé apunta a fortalecer las competencias digitales en la comunidad insular en lo que respecta al uso de modelos de inteligencia artificial en diferentes contextos",
+    "monto": 1326000.34,
+    "proveedor": "LUZ ELIANA CHODIL CHIGUAY",
+    "fecha": "2025-04-17",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5413-316-TD25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE VALPARAISO",
+    "nombre": "ING. CIVIL INFORMATICA",
+    "descripcion": "MATERIAL BIBLIOGRAFICO NECESARIO PARA LA DOCENCIA EN LA CARRERA DE INGENIERÍA CIVIL EN INFORMATICA",
+    "monto": 2930266.5101,
+    "proveedor": "Duran San Martin Cia. Ltda.",
+    "fecha": "2010-07-05",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=4991-110-TL10"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE VALPARAISO",
+    "nombre": "*Coffe break para Jornada de Inteligencia Artificial y Derecho, Escuela de Derecho 2019",
+    "descripcion": "Ver archivo Condiciones OC. pdf adjuntasCC 315121001 Escuela Derecho",
+    "monto": 41143.0,
+    "proveedor": "aranci producciones",
+    "fecha": "2019-05-23",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=4994-76-CM19"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE VALPARAISO",
+    "nombre": "Taller Machine Learning",
+    "descripcion": "Revisar documento adjunto \"Instructivo Proveedores\"",
+    "monto": 237787.925,
+    "proveedor": "INTEROP CHILE CONSULTORES DE NEGOCIOS LIMITADA",
+    "fecha": "2019-08-22",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5212-559-SE19"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE VALPARAISO",
+    "nombre": "OTROS SERVICIO SEXTERNOS #2024102531000261 curso de Inteligencia Artificial UVA 21992",
+    "descripcion": "Orden de Compra generada por invitación a compra ágil: 859378-668-COT24El servicio de capacitación debe realizarse de forma presencial en dependencias de la Rectoría, ubicada en Blanco 951, Valparaíso en una fecha por definirRevisar instructivo sobre facturación.",
+    "monto": 200000.0,
+    "proveedor": "VILLALOBOS CONSULTORES LIMITADA",
+    "fecha": "2024-11-05",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=859378-750-AG24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE VALPARAISO",
+    "nombre": "Curso Inteligencia Artificial #2024112931001036",
+    "descripcion": "Curso Inteligencia artificial en los negocios Duración: 2 meses Modalidad: Asincronica + 2 clases en vivo.contacto Srta. Luna Rubio Rubio Teléfono 322507017",
+    "monto": 1155000.0,
+    "proveedor": "PONTIFICIA UNIVERSIDAD CATOLICA DE CHILE",
+    "fecha": "2024-12-05",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5212-476-AG24"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE VALPARAISO",
+    "nombre": "COMPRA DE SILLAS GAMER - LABORATORIO MACHINE LEARNING - Orden de Compra generada por invitación a compra ágil: 4894-111-COT26",
+    "descripcion": "COMPRA DE SILLAS GAMER - LABORATORIO MACHINE LEARNING - Orden de Compra codigo: 4894-122-AG26 dirigida a ESTRELA DO SUL SPAJustificación selección de cotización menos económica: Los productos o servicios cotizados cumplen de mejor manera con los requisitos técnicos solicitados.",
+    "monto": 363283.2,
+    "proveedor": "ESTRELA DO SUL SPA",
+    "fecha": "2026-06-23",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=4894-122-AG26"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE VALPARAISO",
+    "nombre": "Servicio de coffee básico para 80 personas, FC VcM FACEA UVA 2495",
+    "descripcion": "OC proveniente de Licitación Pública ID 882826-10-LQ25OC proveniente de Resolución Exenta N°5928/2025OC según cotización de proveedor N°172Servicio coffee básico 80 pers, jornada de cierre de proyecto FC VcM FACEA: \"Laboratorio de Machine Learning para la Democratización Educativa: Programa de Capacitación en Análisis de Datos e Inteligencia Artificial En el marco del proyecto ESR UVA 2495.Entrega: 14 de Julio PALACIO VERGARA, QUINTA VERGARA, VIÑA DEL MAR. Horario: 11:30 HRS.Contacto: Daniel Cáceres | cel +569 88086080Al aceptar la OC el proveedor se obliga a cumplir las siguientes condiciones para que sea aceptado su documento tributario electrónico (DTE):1 Enviar producto/servicio que corresponda fielmente al contratado.2 Enviar producto con guía de despacho.3 Indicar en DTE el ID de la OC en campo folioref4 Enviar DTE en formato XML al correo facturacionelectronicaempresas@uv.cl el mismo día que al SII.5 Enviar PDF de la guía de despacho y factura al correo de",
+    "monto": 332248.0,
+    "proveedor": "SERVICIOS VINCENT SPA",
+    "fecha": "2026-07-14",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=859378-408-SE26"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE VALPARAISO",
+    "nombre": "COMPRA DE ARTICULOS ELECTRICOS - LABORATORIO MACHINE LEARNING - Orden de Compra generada por invitación a compra ágil: 4894-126-COT26",
+    "descripcion": "COMPRA DE ARTICULOS ELECTRICOS - LABORATORIO MACHINE LEARNING - Orden de Compra codigo: 4894-151-AG26 dirigida a SOCOEX CHILE SPAJustificación selección de cotización menos económica: Los productos o servicios cotizados cumplen de mejor manera con los requisitos técnicos solicitados.",
+    "monto": 215745.81,
+    "proveedor": "SOCOEX CHILE SPA",
+    "fecha": "2026-07-22",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=4894-151-AG26"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE VALPARAISO",
+    "nombre": "Equipo servidor Proyecto Código FONDEF ID25I10329",
+    "descripcion": "La necesidad de contar con Equipo Servidor asociados al Proyecto Código FONDEF ID25I10329 titulado Inteligencia Artificial para el pronóstico nacional de caudales estacionales de la Universidad de Valparaíso.",
+    "monto": 0.0,
+    "proveedor": "ESPEX INGENIERIA",
+    "fecha": "2026-07-23",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=5626-8-LE26"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE MAGALLANES",
+    "nombre": "SERVICIO DE CAFE PARA CONFERENCIA SOBRE INTELIGENCIA ARTIFICIAL AC UMAG. SOL. 103656",
+    "descripcion": "Coordinar el servicio con Srta Monica Buvinic",
+    "monto": 333200.0,
+    "proveedor": "MARIANNELA MELLA BORQUEZ",
+    "fecha": "2017-09-27",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5387-41-SE17"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE MAGALLANES",
+    "nombre": "SERVICIO DE ILUMINACION PARA AUDITORIO, CONFERENCIA INTELIGENCIA ARTIFICIAL.  SOL.  103579",
+    "descripcion": "CONTACTO:  MONICA BUVINIC,  CORREO ELECTRONICO monica.buvinic@umag.cl   FONO 61-2207006",
+    "monto": 220150.0,
+    "proveedor": "Audio dj",
+    "fecha": "2017-09-28",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5387-44-SE17"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE MAGALLANES",
+    "nombre": "SERVICIO ALIMENTACIÓN PARA CEREMONIA ENTREGA DE CERTIFICADOS \"DIPLOMADOS EN APRENDIZAJE PROFUNDO EN HABILIDADES DEL SIGLO XXI\", A REALIZARSE EL 11 DE ABRIL EN EL AUDITORIO ERNESTO LIVACIC DE LA UMAG.",
+    "descripcion": "SOLICITUD PRESUPUESTARIA N°149782.PEDIDO POR: Andrea Mansilla Barría.CONTACTO : Valeria del Pilar León.CORREO : valeria.leon@umag.clCONTRATO SUMINISTRO ID: 5338-42-LP24. Linea N° 13.PROVEEDOR : Jaime Gonzalo Uribe Hermosilla.",
+    "monto": 437325.0,
+    "proveedor": "JAIME GONZALO URIBE HERMOSILLA",
+    "fecha": "2025-04-08",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5338-540-SE25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE MAGALLANES",
+    "nombre": "SOL.152462 SERVICIO DE CAFE PARA CONSERVATORIO DE REFLEXION",
+    "descripcion": "SERVICIO DE CAFE PARA CONSERVATORIO DE REFLEXION SOBRE EL USO DE INTELIGENCIA ARTIFICIAL EN EL SISTEMA Y CONVIVENCIA ESCOLAR CON FECHA 22 DE AGOSTO A LAS 10:30 HRS. SOLICITUD PRESUPUESTARIA N°152462CONTACTO : MAURICIO AGUAYO +5612207134 CORREO : mauricio.aguayo@umag.clCONVENIO SUMINISTRO ID 5338-42-LP24. LINEA N° 9",
+    "monto": 91630.0,
+    "proveedor": "JAIME GONZALO URIBE HERMOSILLA",
+    "fecha": "2025-08-20",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5338-778-SE25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE ANTOFAGASTA",
+    "nombre": "Orden de Compra generada por Trato Directo ID 4291-103-FTD25",
+    "descripcion": "La adquisición del curso Herramientas de Inteligencia Artificial en Marketing Digital resulta altamente pertinente para el fortalecimiento de capacidades institucionales en el marco del proyecto, ya que responde a la necesidad estratégica de adaptar y actualizar la oferta formativa en función de las transformaciones tecnológicas y pedagógicas del entorno actual.",
+    "monto": 1275000.0,
+    "proveedor": "Fundación Instituto Profesional Duoc UC",
+    "fecha": "2025-07-23",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=4291-1329-TD25"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE ANTOFAGASTA",
+    "nombre": "Orden de Compra generada por Trato Directo ID 4291-118-FTD26",
+    "descripcion": "Inscripción de profesionales de la Universidad de Antofagasta en el curso Ciberseguridad, Inteligencia Artificial y Protección de Datos, impartido por la Pontificia Universidad Católica de Valparaíso, en el marco del proyecto ANT21991, con el fin de fortalecer competencias técnicas en seguridad de la información, privacidad, IA y gestión de datos para la implementación de oferta educativa virtual.",
+    "monto": 5600010.0,
+    "proveedor": "PONTIFICIA UNIVERSIDAD CATOLICA DE VALPARAISO",
+    "fecha": "2026-07-20",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=4291-1010-TD26"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE ANTOFAGASTA",
+    "nombre": "ADQUISICIÓN DE MATERIAL DE DIFUSIÓN INSTITUCIONAL PARA PROYECTO CIENCIA ABIERTA  INCAR250008",
+    "descripcion": "Contratar la adquisición y provisión de materiales de difusión institucional destinados a apoyar las actividades de promoción, extensión y divulgación científica del proyecto INCAR250008 Optimización del acceso al conocimiento científico abierto generado por la Universidad de Antofagasta, mediante herramientas de inteligencia artificial, con el propósito de fortalecer la visibilidad, acceso y apropiación del conocimiento científico abierto tanto en la comunidad universitaria como en la comunid",
+    "monto": 0.0,
+    "proveedor": "Menssage",
+    "fecha": "2026-04-01",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=4291-16-L126"
+  },
+  {
+    "universidad": "UNIVERSIDAD ARTURO PRAT",
+    "nombre": "Orden de Compra generada por invitación a compra ágil: 2013-1622-COT25",
+    "descripcion": "Solicitud 53916, compra de equipos para proyecto de innovación docente \"Diseño de estrategia pedagógica con el uso de la inteligencia artificial para el análisis de datos estadísticos\"OC/I: 114916",
+    "monto": 566404.3,
+    "proveedor": "PCINBOX SPA",
+    "fecha": "2025-09-23",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2013-1596-AG25"
+  },
+  {
+    "universidad": "UNIVERSIDAD ARTURO PRAT",
+    "nombre": "Orden de Compra generada por Trato Directo ID 2013-38-FTD26",
+    "descripcion": "Contratación de capacitación especializada \"Taller inteligencia artificial aplicada en la formación e investigación académica\", se adjunta propuesta referencial de la Fundación Valor Educativo - UPLA",
+    "monto": 6699999.88,
+    "proveedor": "FUNDACION VALOR EDUCATIVO",
+    "fecha": "2026-03-12",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=2013-298-TD26"
+  },
+  {
+    "universidad": "UNIVERSIDAD DE O'HIGGINS",
+    "nombre": "SC 7551 - CDP 3289 Pasaje internacional Chile- Austria-Chile",
+    "descripcion": "Solicitado por Patricia Jaracc.: 112061041 - FONDEF ID25I10198: Herramientas de machine learning y optimización para mejora de calidad de soluciones de ruteo de vehículos y última milla.item pp.: A.2.6.9 - Pasajes Internacionales* La factura debe ser emitida contra entrega de bien y/o servicio y enviada al correo facturacion@uoh.cl y el archivo XML enviado al correointercambio.uohiggins@docele.cl* El valor de la factura debe corresponder exactamente a los valores indicados en la orden de compra.* Toda factura debe indicar el número de orden de compra [campo 801] y giro Enseñanza Superior en Universidades Públicas [código853110].* OC debe estar en estado aceptada en el Portal Mercado Público en un plazo de 48 horas desde emitida la OC, de lo contrario factura seráautomaticamente rechazada.* Contacto Pago factura: proveedores@uoh.cl  56-2-29030019",
+    "monto": 2042249.0,
+    "proveedor": "ATLAS SPA",
+    "fecha": "2026-05-05",
+    "subcategoria": "IA_MachineLearning",
+    "link": "http://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=889473-613-AG26"
+  }
+]
