@@ -1,0 +1,610 @@
+[
+  {
+    "universidad": "Universidad Santo Tomás",
+    "sigla": "UST",
+    "tipo": "Privada",
+    "total_docs": 1,
+    "imn": 100.0,
+    "categoria": "Madurez Avanzada",
+    "subindices": {
+      "fuerza_juridica": 100,
+      "transparencia": 100,
+      "autoria": 100,
+      "privacidad": 100,
+      "evaluacion": 100,
+      "gobernanza": 100
+    }
+  },
+  {
+    "universidad": "IP Duoc UC",
+    "sigla": "Duoc UC",
+    "tipo": "IP/CFT",
+    "total_docs": 1,
+    "imn": 100.0,
+    "categoria": "Madurez Avanzada",
+    "subindices": {
+      "fuerza_juridica": 100,
+      "transparencia": 100,
+      "autoria": 100,
+      "privacidad": 100,
+      "evaluacion": 100,
+      "gobernanza": 100
+    }
+  },
+  {
+    "universidad": "Universidad de Chile",
+    "sigla": "UChile",
+    "tipo": "Estatal CRUCH",
+    "total_docs": 6,
+    "imn": 96.0,
+    "categoria": "Madurez Avanzada",
+    "subindices": {
+      "fuerza_juridica": 80,
+      "transparencia": 100,
+      "autoria": 100,
+      "privacidad": 100,
+      "evaluacion": 100,
+      "gobernanza": 100
+    }
+  },
+  {
+    "universidad": "Universidad Adolfo Ibáñez",
+    "sigla": "UAI",
+    "tipo": "Privada",
+    "total_docs": 2,
+    "imn": 96.0,
+    "categoria": "Madurez Avanzada",
+    "subindices": {
+      "fuerza_juridica": 80,
+      "transparencia": 100,
+      "autoria": 100,
+      "privacidad": 100,
+      "evaluacion": 100,
+      "gobernanza": 100
+    }
+  },
+  {
+    "universidad": "Universidad Academia de Humanismo Cristiano",
+    "sigla": "UAHC",
+    "tipo": "Privada",
+    "total_docs": 1,
+    "imn": 90.0,
+    "categoria": "Madurez Avanzada",
+    "subindices": {
+      "fuerza_juridica": 50,
+      "transparencia": 100,
+      "autoria": 100,
+      "privacidad": 100,
+      "evaluacion": 100,
+      "gobernanza": 100
+    }
+  },
+  {
+    "universidad": "Universidad de Las Américas",
+    "sigla": "UDLA",
+    "tipo": "Privada",
+    "total_docs": 2,
+    "imn": 88.8,
+    "categoria": "Madurez Avanzada",
+    "subindices": {
+      "fuerza_juridica": 100,
+      "transparencia": 100,
+      "autoria": 100,
+      "privacidad": 100,
+      "evaluacion": 100,
+      "gobernanza": 25
+    }
+  },
+  {
+    "universidad": "Duoc UC",
+    "sigla": "Duoc UC",
+    "tipo": "IP/CFT",
+    "total_docs": 1,
+    "imn": 88.8,
+    "categoria": "Madurez Avanzada",
+    "subindices": {
+      "fuerza_juridica": 100,
+      "transparencia": 100,
+      "autoria": 100,
+      "privacidad": 100,
+      "evaluacion": 100,
+      "gobernanza": 25
+    }
+  },
+  {
+    "universidad": "IP/CFT Santo Tomás",
+    "sigla": "IPST/CFTST",
+    "tipo": "IP/CFT",
+    "total_docs": 1,
+    "imn": 88.8,
+    "categoria": "Madurez Avanzada",
+    "subindices": {
+      "fuerza_juridica": 100,
+      "transparencia": 100,
+      "autoria": 100,
+      "privacidad": 100,
+      "evaluacion": 100,
+      "gobernanza": 25
+    }
+  },
+  {
+    "universidad": "Universidad de Los Lagos",
+    "sigla": "ULagos",
+    "tipo": "Estatal CRUCH",
+    "total_docs": 1,
+    "imn": 88.8,
+    "categoria": "Madurez Avanzada",
+    "subindices": {
+      "fuerza_juridica": 100,
+      "transparencia": 100,
+      "autoria": 100,
+      "privacidad": 100,
+      "evaluacion": 100,
+      "gobernanza": 25
+    }
+  },
+  {
+    "universidad": "Universidad Andrés Bello",
+    "sigla": "UNAB",
+    "tipo": "Privada",
+    "total_docs": 1,
+    "imn": 88.0,
+    "categoria": "Madurez Avanzada",
+    "subindices": {
+      "fuerza_juridica": 40,
+      "transparencia": 100,
+      "autoria": 100,
+      "privacidad": 100,
+      "evaluacion": 100,
+      "gobernanza": 100
+    }
+  },
+  {
+    "universidad": "Universidad del Desarrollo",
+    "sigla": "UDD",
+    "tipo": "Privada",
+    "total_docs": 3,
+    "imn": 84.8,
+    "categoria": "Madurez Avanzada",
+    "subindices": {
+      "fuerza_juridica": 80,
+      "transparencia": 100,
+      "autoria": 100,
+      "privacidad": 100,
+      "evaluacion": 100,
+      "gobernanza": 25
+    }
+  },
+  {
+    "universidad": "Universidad Miguel de Cervantes",
+    "sigla": "UMC",
+    "tipo": "Privada",
+    "total_docs": 1,
+    "imn": 82.8,
+    "categoria": "Madurez Avanzada",
+    "subindices": {
+      "fuerza_juridica": 70,
+      "transparencia": 100,
+      "autoria": 100,
+      "privacidad": 100,
+      "evaluacion": 100,
+      "gobernanza": 25
+    }
+  },
+  {
+    "universidad": "Universidad Técnica Federico Santa María",
+    "sigla": "UTFSM",
+    "tipo": "Privada CRUCH",
+    "total_docs": 1,
+    "imn": 78.8,
+    "categoria": "Madurez Avanzada",
+    "subindices": {
+      "fuerza_juridica": 50,
+      "transparencia": 100,
+      "autoria": 100,
+      "privacidad": 100,
+      "evaluacion": 100,
+      "gobernanza": 25
+    }
+  },
+  {
+    "universidad": "Universidad de los Andes",
+    "sigla": "UANDES",
+    "tipo": "Privada",
+    "total_docs": 1,
+    "imn": 78.8,
+    "categoria": "Madurez Avanzada",
+    "subindices": {
+      "fuerza_juridica": 50,
+      "transparencia": 100,
+      "autoria": 100,
+      "privacidad": 100,
+      "evaluacion": 100,
+      "gobernanza": 25
+    }
+  },
+  {
+    "universidad": "Universidad Autónoma de Chile",
+    "sigla": "UAutónoma",
+    "tipo": "Privada",
+    "total_docs": 1,
+    "imn": 76.8,
+    "categoria": "Madurez Avanzada",
+    "subindices": {
+      "fuerza_juridica": 100,
+      "transparencia": 100,
+      "autoria": 100,
+      "privacidad": 20,
+      "evaluacion": 100,
+      "gobernanza": 25
+    }
+  },
+  {
+    "universidad": "IP IACC",
+    "sigla": "IACC",
+    "tipo": "IP",
+    "total_docs": 1,
+    "imn": 76.8,
+    "categoria": "Madurez Avanzada",
+    "subindices": {
+      "fuerza_juridica": 40,
+      "transparencia": 100,
+      "autoria": 100,
+      "privacidad": 100,
+      "evaluacion": 100,
+      "gobernanza": 25
+    }
+  },
+  {
+    "universidad": "Universidad Austral de Chile",
+    "sigla": "UACh",
+    "tipo": "Privada CRUCH",
+    "total_docs": 1,
+    "imn": 76.0,
+    "categoria": "Madurez Avanzada",
+    "subindices": {
+      "fuerza_juridica": 40,
+      "transparencia": 100,
+      "autoria": 100,
+      "privacidad": 20,
+      "evaluacion": 100,
+      "gobernanza": 100
+    }
+  },
+  {
+    "universidad": "Pontificia Universidad Católica de Chile",
+    "sigla": "PUC",
+    "tipo": "Privada CRUCH",
+    "total_docs": 4,
+    "imn": 66.8,
+    "categoria": "Madurez Intermedia",
+    "subindices": {
+      "fuerza_juridica": 50,
+      "transparencia": 100,
+      "autoria": 100,
+      "privacidad": 20,
+      "evaluacion": 100,
+      "gobernanza": 25
+    }
+  },
+  {
+    "universidad": "Universidad Diego Portales",
+    "sigla": "UDP",
+    "tipo": "Privada",
+    "total_docs": 2,
+    "imn": 66.8,
+    "categoria": "Madurez Intermedia",
+    "subindices": {
+      "fuerza_juridica": 50,
+      "transparencia": 100,
+      "autoria": 100,
+      "privacidad": 20,
+      "evaluacion": 100,
+      "gobernanza": 25
+    }
+  },
+  {
+    "universidad": "Universidad de Concepción",
+    "sigla": "UdeC",
+    "tipo": "Privada CRUCH",
+    "total_docs": 1,
+    "imn": 66.8,
+    "categoria": "Madurez Intermedia",
+    "subindices": {
+      "fuerza_juridica": 50,
+      "transparencia": 100,
+      "autoria": 100,
+      "privacidad": 20,
+      "evaluacion": 100,
+      "gobernanza": 25
+    }
+  },
+  {
+    "universidad": "Universidad de Valparaíso",
+    "sigla": "UV",
+    "tipo": "Estatal CRUCH",
+    "total_docs": 2,
+    "imn": 66.8,
+    "categoria": "Madurez Intermedia",
+    "subindices": {
+      "fuerza_juridica": 50,
+      "transparencia": 100,
+      "autoria": 100,
+      "privacidad": 20,
+      "evaluacion": 100,
+      "gobernanza": 25
+    }
+  },
+  {
+    "universidad": "Universidad Alberto Hurtado",
+    "sigla": "UAH",
+    "tipo": "Privada",
+    "total_docs": 1,
+    "imn": 66.8,
+    "categoria": "Madurez Intermedia",
+    "subindices": {
+      "fuerza_juridica": 50,
+      "transparencia": 100,
+      "autoria": 100,
+      "privacidad": 20,
+      "evaluacion": 100,
+      "gobernanza": 25
+    }
+  },
+  {
+    "universidad": "Universidad del Alba",
+    "sigla": "UDALBA",
+    "tipo": "Privada",
+    "total_docs": 1,
+    "imn": 66.8,
+    "categoria": "Madurez Intermedia",
+    "subindices": {
+      "fuerza_juridica": 50,
+      "transparencia": 100,
+      "autoria": 100,
+      "privacidad": 20,
+      "evaluacion": 100,
+      "gobernanza": 25
+    }
+  },
+  {
+    "universidad": "Universidad de Antofagasta",
+    "sigla": "UA",
+    "tipo": "Estatal CRUCH",
+    "total_docs": 1,
+    "imn": 66.2,
+    "categoria": "Madurez Intermedia",
+    "subindices": {
+      "fuerza_juridica": 40,
+      "transparencia": 100,
+      "autoria": 100,
+      "privacidad": 100,
+      "evaluacion": 30,
+      "gobernanza": 25
+    }
+  },
+  {
+    "universidad": "Pontificia Universidad Católica de Valparaíso",
+    "sigla": "PUCV",
+    "tipo": "Privada CRUCH",
+    "total_docs": 1,
+    "imn": 64.8,
+    "categoria": "Madurez Intermedia",
+    "subindices": {
+      "fuerza_juridica": 40,
+      "transparencia": 100,
+      "autoria": 100,
+      "privacidad": 20,
+      "evaluacion": 100,
+      "gobernanza": 25
+    }
+  },
+  {
+    "universidad": "Universidad Gabriela Mistral",
+    "sigla": "UGM",
+    "tipo": "Privada",
+    "total_docs": 1,
+    "imn": 64.8,
+    "categoria": "Madurez Intermedia",
+    "subindices": {
+      "fuerza_juridica": 40,
+      "transparencia": 100,
+      "autoria": 100,
+      "privacidad": 20,
+      "evaluacion": 100,
+      "gobernanza": 25
+    }
+  },
+  {
+    "universidad": "Universidad Católica del Norte",
+    "sigla": "UCN",
+    "tipo": "Privada CRUCH",
+    "total_docs": 1,
+    "imn": 54.2,
+    "categoria": "Regulación Inicial",
+    "subindices": {
+      "fuerza_juridica": 40,
+      "transparencia": 100,
+      "autoria": 100,
+      "privacidad": 20,
+      "evaluacion": 30,
+      "gobernanza": 25
+    }
+  },
+  {
+    "universidad": "Universidad de Talca",
+    "sigla": "UTalca",
+    "tipo": "Estatal CRUCH",
+    "total_docs": 1,
+    "imn": 54.2,
+    "categoria": "Regulación Inicial",
+    "subindices": {
+      "fuerza_juridica": 40,
+      "transparencia": 100,
+      "autoria": 100,
+      "privacidad": 20,
+      "evaluacion": 30,
+      "gobernanza": 25
+    }
+  },
+  {
+    "universidad": "Universidad San Sebastián",
+    "sigla": "USS",
+    "tipo": "Privada",
+    "total_docs": 1,
+    "imn": 54.2,
+    "categoria": "Regulación Inicial",
+    "subindices": {
+      "fuerza_juridica": 40,
+      "transparencia": 100,
+      "autoria": 100,
+      "privacidad": 20,
+      "evaluacion": 30,
+      "gobernanza": 25
+    }
+  },
+  {
+    "universidad": "Universidad de La Frontera",
+    "sigla": "UFRO",
+    "tipo": "Estatal CRUCH",
+    "total_docs": 1,
+    "imn": 52.8,
+    "categoria": "Regulación Inicial",
+    "subindices": {
+      "fuerza_juridica": 50,
+      "transparencia": 30,
+      "autoria": 20,
+      "privacidad": 100,
+      "evaluacion": 100,
+      "gobernanza": 25
+    }
+  },
+  {
+    "universidad": "Universidad Mayor",
+    "sigla": "UMayor",
+    "tipo": "Privada",
+    "total_docs": 1,
+    "imn": 46.8,
+    "categoria": "Regulación Inicial",
+    "subindices": {
+      "fuerza_juridica": 80,
+      "transparencia": 30,
+      "autoria": 20,
+      "privacidad": 20,
+      "evaluacion": 100,
+      "gobernanza": 25
+    }
+  },
+  {
+    "universidad": "Universidad de Santiago de Chile",
+    "sigla": "USACH",
+    "tipo": "Estatal CRUCH",
+    "total_docs": 1,
+    "imn": 42.2,
+    "categoria": "Regulación Inicial",
+    "subindices": {
+      "fuerza_juridica": 50,
+      "transparencia": 30,
+      "autoria": 100,
+      "privacidad": 20,
+      "evaluacion": 30,
+      "gobernanza": 25
+    }
+  },
+  {
+    "universidad": "Universidad Católica de Temuco",
+    "sigla": "UCT",
+    "tipo": "Privada CRUCH",
+    "total_docs": 1,
+    "imn": 40.8,
+    "categoria": "Regulación Inicial",
+    "subindices": {
+      "fuerza_juridica": 50,
+      "transparencia": 30,
+      "autoria": 20,
+      "privacidad": 20,
+      "evaluacion": 100,
+      "gobernanza": 25
+    }
+  },
+  {
+    "universidad": "AIEP",
+    "sigla": "AIEP",
+    "tipo": "IP",
+    "total_docs": 1,
+    "imn": 38.8,
+    "categoria": "Regulación Inicial",
+    "subindices": {
+      "fuerza_juridica": 40,
+      "transparencia": 30,
+      "autoria": 20,
+      "privacidad": 20,
+      "evaluacion": 100,
+      "gobernanza": 25
+    }
+  },
+  {
+    "universidad": "INACAP",
+    "sigla": "INACAP",
+    "tipo": "IP/CFT",
+    "total_docs": 1,
+    "imn": 30.2,
+    "categoria": "Regulación Inicial",
+    "subindices": {
+      "fuerza_juridica": 50,
+      "transparencia": 30,
+      "autoria": 20,
+      "privacidad": 20,
+      "evaluacion": 30,
+      "gobernanza": 25
+    }
+  },
+  {
+    "universidad": "Universidad Bernardo O'Higgins",
+    "sigla": "UBO",
+    "tipo": "Privada",
+    "total_docs": 1,
+    "imn": 28.2,
+    "categoria": "Regulación Inicial",
+    "subindices": {
+      "fuerza_juridica": 40,
+      "transparencia": 30,
+      "autoria": 20,
+      "privacidad": 20,
+      "evaluacion": 30,
+      "gobernanza": 25
+    }
+  },
+  {
+    "universidad": "Universidad Central de Chile",
+    "sigla": "UCEN",
+    "tipo": "Privada",
+    "total_docs": 1,
+    "imn": 28.2,
+    "categoria": "Regulación Inicial",
+    "subindices": {
+      "fuerza_juridica": 40,
+      "transparencia": 30,
+      "autoria": 20,
+      "privacidad": 20,
+      "evaluacion": 30,
+      "gobernanza": 25
+    }
+  },
+  {
+    "universidad": "Universidad de Atacama",
+    "sigla": "UDA",
+    "tipo": "Estatal CRUCH",
+    "total_docs": 1,
+    "imn": 28.2,
+    "categoria": "Regulación Inicial",
+    "subindices": {
+      "fuerza_juridica": 40,
+      "transparencia": 30,
+      "autoria": 20,
+      "privacidad": 20,
+      "evaluacion": 30,
+      "gobernanza": 25
+    }
+  }
+]

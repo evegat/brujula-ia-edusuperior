@@ -1,0 +1,351 @@
+[
+  {
+    "doc_id": "02",
+    "sigla": "UChile",
+    "archivo": "02_UChile.pdf",
+    "paginas": 34,
+    "clausulas": {
+      "tesis": [
+        "<!-- Página 16 --> -16- Humanizar la Inteligencia: Orientaciones para un uso ético y transformador de la IA en la educación y la investigación en salud • REDACCIÓN ASISTIDA Y SÍNTESIS TEXTUAL: Modelos generativos como ChatGPT, Claude o Gemini permiten asistir en la redacción preliminar de resúmenes, secciones metodológicas o discusiones, así como en la traducción técnica o reescritura de textos. Aunque útiles como herramientas de apoyo, estas tecnologías no sustituyen el trabajo intelectual del investigador y su uso debe ser declarado con transparencia, respetando los principios de autoría y responsabilidad científica."
+      ],
+      "evaluacion": [
+        "<!-- Página 19 --> -19- Humanizar la Inteligencia: Orientaciones para un uso ético y transformador de la IA en la educación y la investigación en salud Se proponen las siguientes estrategias complementarias: • Diseño e implementación de talleres de formación docente sobre IA generativa, usos legítimos, rediseño de evaluaciones, y acompañamiento ético.",
+        "Estas acciones deben ejecutarse desde el Centro de Enseñanza y Aprendizaje (CEA) en coordinación con las Direcciones de Escuela, Consejos de desarrollo curricular y unidades de formación docente, generando una cultura de actualización continua e interdisciplinaria. 6.3 PROPUESTA DE MONITOREO Y RETROALIMENTACIÓN CONTINUA Toda implementación tecnológica requiere mecanismos de evaluación que permitan identificar fortalezas, detectar desviaciones éticas y ajustar procesos. Para ello, se propone establecer un sistema de monitoreo ético-pedagógico del uso de IA en la Facultad, basado en los siguientes principios: • Monitoreo distribuido: conformar un comité de seguimiento transversal, con representación de docentes, estudiantes, especialistas en ética y expertos en tecnologías educativas.",
+        "<!-- Página 32 --> -32- Humanizar la Inteligencia: Orientaciones para un uso ético y transformador de la IA en la educación y la investigación en salud 10. Fomento de la reflexión crítica: Integrar debates, casos y ensayos sobre los dilemas éticos asociados al uso de IA en salud. 11. Participación estudiantil en diseño de IA: Incluir a estudiantes en proyectos que desarrollen soluciones con IA desde una perspectiva crítica y ética. 12. Evaluación continua de prácticas éticas: Establecer comités o mecanismos de seguimiento institucional que revisen regularmente el uso de IA."
+      ],
+      "privacidad": [],
+      "autoria": [
+        "• Desde la dimensión científica, la IA se ha incorporado progresivamente en procesos de revisión de literatura, análisis de grandes volúmenes de datos, generación de textos y diseño de simulaciones clínicas. Estas nuevas formas de investigación asistida demandan protocolos explícitos que aseguren la trazabilidad metodológica, la transparencia en la autoría, y la vigilancia sobre posibles sesgos algorítmicos que afecten la calidad de la evidencia producida. • Desde una perspectiva institucional, la ausencia de lineamientos comunes sobre el uso de IA puede generar prácticas fragmentadas, decisiones individuales poco informadas y riesgos éticos o legales que comprometan el quehacer de la",
+        "<!-- Página 16 --> -16- Humanizar la Inteligencia: Orientaciones para un uso ético y transformador de la IA en la educación y la investigación en salud • REDACCIÓN ASISTIDA Y SÍNTESIS TEXTUAL: Modelos generativos como ChatGPT, Claude o Gemini permiten asistir en la redacción preliminar de resúmenes, secciones metodológicas o discusiones, así como en la traducción técnica o reescritura de textos. Aunque útiles como herramientas de apoyo, estas tecnologías no sustituyen el trabajo intelectual del investigador y su uso debe ser declarado con transparencia, respetando los principios de autoría y responsabilidad científica."
+      ],
+      "sanciones": [
+        "• Espacios de reflexión disciplinar sobre IA, sesgos algorítmicos y justicia epistémica en salud.",
+        "Estas acciones deben ejecutarse desde el Centro de Enseñanza y Aprendizaje (CEA) en coordinación con las Direcciones de Escuela, Consejos de desarrollo curricular y unidades de formación docente, generando una cultura de actualización continua e interdisciplinaria. 6.3 PROPUESTA DE MONITOREO Y RETROALIMENTACIÓN CONTINUA Toda implementación tecnológica requiere mecanismos de evaluación que permitan identificar fortalezas, detectar desviaciones éticas y ajustar procesos. Para ello, se propone establecer un sistema de monitoreo ético-pedagógico del uso de IA en la Facultad, basado en los siguientes principios: • Monitoreo distribuido: conformar un comité de seguimiento transversal, con representación de docentes, estudiantes, especialistas en ética y expertos en tecnologías educativas."
+      ]
+    }
+  },
+  {
+    "doc_id": "03",
+    "sigla": "UChile",
+    "archivo": "03_UChile.pdf",
+    "paginas": 11,
+    "clausulas": {
+      "tesis": [
+        "Para trabajos de tesis o de memoria de grad o, además de las reglas descritas en este Protocolo, la o el usuario deberá considerar el Instructivo N°17 de la Vicerrectoría de Asuntos Académicos de la Universidad, que entrega “Lineamientos para el uso transparente de inteligencia artificial en tesis de la Universidad de Chile” ."
+      ],
+      "evaluacion": [
+        "- Delegación mayor. Uso en el que parte o la totalidad del producto es elaborado por la IAG a partir de instrucciones de la o el usuario. Este uso incluye desde la integración de párrafos, argumentos e ideas hasta la creación de un producto completo, incluso si este es modificado posteriormente por la o el usuario . La delegación mayor nunca p odrá sustituir la competencia que la acti vidad busca desarrollar o evaluar. • Por ejemplo: traducción entre idiomas, transcripción automatizada, generación de presentaciones, integración de argumentos, ideas o párrafos, producción de productos para su evaluación, entre otros.",
+        "Uso no autorizado de Inteligencia Artificial Generativa : Todo uso de Inteligencia Artificial Generativa que contravenga las disposiciones de este Protocolo o las reglas específicas establecida s para una asignatura o evaluación.",
+        "El permiso o la prohibición de uso está definido por el grado de incidencia del uso de IAG al desarrollo de la competencia en formación o en evaluación. Para eso, el protocolo recurre a un semáforo como metáfora, con tres tipos de luces.",
+        "Es importante considerar que la tarea delegada no tenga por objeto generar la competencia en desarrollo o evaluación. Por ejemplo, aprender a leer críticamente y a extraer el núcleo del argumento de un texto es incompatible con delegar la elaboración de su resumen."
+      ],
+      "privacidad": [
+        "No deberán ingresarse en sistemas de IAG datos personales sin el consentimiento de su titular, datos sensibles, información confidencial o antecedentes institucion ales sujetos a reserva. Esta regla deberá observarse especialmente en el tratamiento de entrevistas , bases de datos, documentos administrativos y materiales de investigación."
+      ],
+      "autoria": [
+        "Luz roja: usos no permitidos . El uso de IAG recae sobre la competencia evaluada, de modo que sustituye el aprendizaje o la autoría; o quien lo emplea no cuenta con la competencia para revisar críticamente el resultado.",
+        "Los usos de preparación y revisión se encuentran permitidos en todas las actividades curriculares de la Escuela y no requieren declaración. Por regla general, estos usos no intervienen en el producto que se entrega o evalúa y, en consecuencia, no sustituyen la competencia en formación ni la autoría del trabajo.",
+        "El uso de IAG contrario a las disposiciones de este Protocolo o a las reglas establecidas para una asignatura o evaluación p odrá constituir una inf racción a la integridad académica . Su calificación deberá considerar la naturaleza y gravedad del incumplimiento, su incidencia en la autoría y en las competencias evaluadas, así como las demás circunstancias pertinentes . Toda eventual infracción deberá ser examinada conforme a los procedimientos universitarios aplicables, resguardando el debido proceso y el derecho de la o el estudiantes a formular sus descargos."
+      ],
+      "sanciones": []
+    }
+  },
+  {
+    "doc_id": "07",
+    "sigla": "PUC",
+    "archivo": "07_PUC.pdf",
+    "paginas": 3,
+    "clausulas": {
+      "tesis": [],
+      "evaluacion": [
+        "Sobre el uso no autorizado de IA generativa en el desarrollo de trabajos académicos En caso de constatar el uso no autorizado de IA generativa por parte de estudiantes en cualquier trabajo académico, las y los docentes se orientarán por los lineamientos de la universidad en atención a la correspondiente evaluación y sanción de la falta a la integridad académica."
+      ],
+      "privacidad": [],
+      "autoria": [],
+      "sanciones": [
+        "Sobre el uso no autorizado de IA generativa en el desarrollo de trabajos académicos En caso de constatar el uso no autorizado de IA generativa por parte de estudiantes en cualquier trabajo académico, las y los docentes se orientarán por los lineamientos de la universidad en atención a la correspondiente evaluación y sanción de la falta a la integridad académica."
+      ]
+    }
+  },
+  {
+    "doc_id": "11",
+    "sigla": "UAI",
+    "archivo": "11_UAI.pdf",
+    "paginas": 6,
+    "clausulas": {
+      "tesis": [],
+      "evaluacion": [
+        "II. DEFINICIONES La inteligencia artificial (IA) se puede clasificar de diversas maneras, pero una forma común de hacerlo es en función de sus capacidades y aplicaciones: 1) IA Limitada (ANI: Artificial Narrow Intelligence): tipo de IA diseñada para realizar una tarea específica y no tiene consciencia ni entendimiento general. Algunos ejemplos son los asistentes virtuales como Siri o Alexa, sistemas de recomendación en plataformas de streaming, chatbots de atención al cliente. ANI se divide a su vez en distintas categorías según el modelo de algoritmo y tipo de programación. Ver en el anexo a esta política, esta clasificación con mayor detalle.",
+        "7) Capacitación orientada a los docentes La Dirección de Docencia institucional, a través del Centro de Aprendizaje, ofrecerá instancias de capacitación en el uso de herramientas de IA con el objetivo de que los docentes integren la inteligencia artificial en sus métodos de enseñanza, evaluaciones y mecanismos de retroalimentación a los estudiantes, enriqueciendo así la experiencia formativa de los estudiantes,",
+        "VI. MECANISMOS DE EVALUACIÓN DE LOGROS E IMPACTO Se establecerán mecanismos de evaluación y monitoreo continuo para asegurar que el uso de la IA cumpla con los principios y directrices establecidos en esta política. Para ello, se considerará, a lo menos, reportes emitidos por; la Dirección de Docencia insti tucional, la Dirección de Investigación institucional, la Dirección de Innovación y Transferencia, la Dirección de Personas, la Dirección de Transformación Digital y Tecnología, Secretaría General.",
+        "predicción demanda, predicción de precios, pedido sugerido Alta precisión en tareas específicas con datos etiquetados Aprendizaje No supervisado Encontrar patrones en datos no etiquetados. Segmentación de clientes, análisis de mercado, detección de anomalías. Útil para explorar datos y descubrir estructuras ocultas. Aprendizaje por Refuerzo Aprender mediante Juegos, robótica, sistemas de Capacidad de aprender y adaptarse"
+      ],
+      "privacidad": [
+        "(4) Privacidad y ciberseguridad La UAI vela por la protección de la privacidad y la seguridad de los datos. Nos comprometemos a manejar toda información personal y sensible con confidencialidad y conforme a los estándares de ciberseguridad definidos por la universidad."
+      ],
+      "autoria": [],
+      "sanciones": [
+        "1) Creación del UAI Collaboration Hub Este Hub funcionará como una Dirección interdisciplinar . Estará a cargo de un Director Ejecutivo designado específicamente para ello, y bajo la supervisión de un Consejo, presidido por el Rector e integrado además por la Vicerrectora Académica, el Vicerrector de Finanzas y Gestión, la Vicerrectora de Postgrados, el Director de Transformación Digital y Tecnología, la Directora de Docencia Institucional, la Directora de Investigación Institucional, los Decanos de la Escuela de Negocios y de la Facultad de Ingeniería y Ciencias, y otros dos decanos, designados por el Rector. Su principal función será orquestar y articular las distintas iniciativas que se plantean en esta política. Específicamente, será responsable de:",
+        "5) Coordinar y potenciar la investigación en Inteligencia Artificial (IA) en la universidad, promoviendo la interdisciplinariedad, la transferencia de conocimiento y el impacto social Para ello, se realizará un diagnóstico inicial de los proyectos de investigación (fundamental y aplicada) realizados en la universidad , los que se reunirán en un repositorio centralizado.",
+        "Adicionalmente, se organizarán encu entros periódicos entre investigadores de distintas disciplinas para promov er la colaboración y generar espacios para que compartan sus avances.",
+        "8) Difusión de herramientas de IA para su uso en investigación La Dirección de Investigación Institucional (DII) promoverá el uso de la IA en todo el quehacer investigativo de la Universidad con el fin de acelerar e innovar en procesos propios de la investigación, siempre resguardando la ética, integridad y alta calidad de la investigación. Asimismo, promoverá la investigación en el área de la IA y otras disciplinas que hagan sinergia con ésta. La DII promoverá el uso de IA en los programas de doctorado, de acuerdo a los lineamientos definido en esta política."
+      ]
+    }
+  },
+  {
+    "doc_id": "12",
+    "sigla": "UAI",
+    "archivo": "12_UAI.pdf",
+    "paginas": 6,
+    "clausulas": {
+      "tesis": [
+        "<!-- Página 6 --> Y lo más importante... Preocúpate de que, el día que no tengas IA, cuentes con las capacidades para seguir ha - ciendo las mismas tareas sin apoyo de IA. En síntesis #elevatupotencial La IA puede ser tu mejor aliado en la universidad si la usas con responsabilidad, ética y pensamiento crítico. Recuerda: tu valor no está en lo que la IA responde, sino en lo que tú eres capaz de hacer con esas respuestas. El uso de la IA generativa puede poner a prueba estas normas con facilidad, y las consecuencias de infringirlas pueden ser muy graves, llegando a tener un impacto crítico en tu educación. Guía de Uso Responsable y Ético de la Inteligencia Artificial para Estudiantes UAI"
+      ],
+      "evaluacion": [
+        "<!-- Página 6 --> Y lo más importante... Preocúpate de que, el día que no tengas IA, cuentes con las capacidades para seguir ha - ciendo las mismas tareas sin apoyo de IA. En síntesis #elevatupotencial La IA puede ser tu mejor aliado en la universidad si la usas con responsabilidad, ética y pensamiento crítico. Recuerda: tu valor no está en lo que la IA responde, sino en lo que tú eres capaz de hacer con esas respuestas. El uso de la IA generativa puede poner a prueba estas normas con facilidad, y las consecuencias de infringirlas pueden ser muy graves, llegando a tener un impacto crítico en tu educación. Guía de Uso Responsable y Ético de la Inteligencia Artificial para Estudiantes UAI"
+      ],
+      "privacidad": [],
+      "autoria": [],
+      "sanciones": []
+    }
+  },
+  {
+    "doc_id": "13",
+    "sigla": "UDP",
+    "archivo": "13_UDP.pdf",
+    "paginas": 15,
+    "clausulas": {
+      "tesis": [
+        "<!-- Página 8 --> Elaborar ideas y estructurar documentos escritos. Experimentar con diferentes estilos de escritura. Mejorar la gramática, estructura y estilo de la escritura, especialmente en textos escritos en un segundo idioma. Realizar síntesis de escritos, resúmenes o listas de ideas clave. Por otra parte, los y las docentes pueden sugerir al estudiantado algunos usos aceptados de estas herramientas en el contexto de su curso, tales como: Generar ideas para gráficos, imágenes y elementos visuales. Generar ideas sobre temas para proyectos de investigación o relacionados con el curso. Usos de la IA como herramienta de apoyo en la planificación de la enseñanza 8"
+      ],
+      "evaluacion": [
+        "<!-- Página 9 --> Por último, la IA en sí misma puede ser considerada como objeto de estudio, explorando su funcionamiento, las implicaciones éticas de su uso, su impacto en el mundo profesional y académico, así como otras aplicaciones relevantes dentro de la disciplina. Depurar y resolver problemas en códigos de programación. Estudiar y poner a prueba sus conocimientos. Por ejemplo, al aprender un nuevo concepto, pueden explicarlo a la IA como si estuvieran enseñándoselo a otro estudiante. Si la IA comete errores, los estudiantes pueden corregirla, lo que les permite aplicar sus conocimientos y habilidades de aprendizaje. Usos de la IA como herramienta de apoyo en la planificación de la enseñanza 9",
+        "<!-- Página 13 --> • Solicitar que envíen una reflexión sobre lo que han aprendido al completar la tarea. Algunas sugerencias de preguntas podrían ser: “Discute los aspectos más desafiantes y gratificantes de tu proyecto”; “¿Qué fue lo más interesante que aprendiste en el transcurso de este proyecto?”; “Si tuvieras la oportunidad de hacerlo de nuevo, ¿qué cosa habrías hecho de manera diferente en este proyecto?”. 13 Cómo limitar su uso cuando se busca desarrollar otras habilidades"
+      ],
+      "privacidad": [],
+      "autoria": [],
+      "sanciones": [
+        "<!-- Página 9 --> Por último, la IA en sí misma puede ser considerada como objeto de estudio, explorando su funcionamiento, las implicaciones éticas de su uso, su impacto en el mundo profesional y académico, así como otras aplicaciones relevantes dentro de la disciplina. Depurar y resolver problemas en códigos de programación. Estudiar y poner a prueba sus conocimientos. Por ejemplo, al aprender un nuevo concepto, pueden explicarlo a la IA como si estuvieran enseñándoselo a otro estudiante. Si la IA comete errores, los estudiantes pueden corregirla, lo que les permite aplicar sus conocimientos y habilidades de aprendizaje. Usos de la IA como herramienta de apoyo en la planificación de la enseñanza 9"
+      ]
+    }
+  },
+  {
+    "doc_id": "14",
+    "sigla": "UDP",
+    "archivo": "14_UDP.pdf",
+    "paginas": 7,
+    "clausulas": {
+      "tesis": [],
+      "evaluacion": [
+        "El uso formativo de herramientas de inteligencia artificial en la Facultad de Educación debe guiarse por criterios pedagógicos claros y ser objeto de enseñanza explícita. Es responsabilidad de las y los docentes incorporar en sus asignaturas orientaciones precisas sobre su uso, promoviendo una comprensión crítica y ética de estas tecnologías3. Al respecto, se sugiere revisar de manera constante de qué modo el tipo de tarea que se solicita a los futuros profesores promueve la alfabetización crítica en IA4, así como favorece aprendizajes profundos y con integridad académica, en la era de las inteligencias artificiales.",
+        "2. Definir y comunicar el enfoque de uso permitido En cada actividad evaluativa o trabajo académico, es importante que las y los docentes indiquen de manera explícita el enfoque adoptado respecto del uso de IA, según las siguientes categorías, y que puedan explicar el por qué de esa decisión: - No autorizado: no se permite ningún uso de IA generativa. Se sugiere que los trabajos y evaluaciones que se enmarquen en este enfoque se realicen en clases, con monitoreo docente. - Condicionado: se permite bajo condiciones específicas; por ejemplo, como apoyo para revisar redacción, pero no para generar ideas o contenidos. - Autorizado: su uso está autorizado como parte del proceso formativo, con criterios claros de aplicación y reflexión.",
+        "Se considera uso indebido de la inteligencia artificial toda acción que comprometa la integridad académica, la transparencia en los procesos formativos o la protección de datos personales. Esto incluye, entre otros casos, presentar como propio material generado por IA sin una participación sustantiva del autor, utilizar estas herramientas en evaluaciones sin autorización, omitir su uso cuando corresponde declararlo, ingresar información sensible en plataformas que no resguardan la privacidad o emplearlas pa ra falsificar identidades o evidencias académicas.",
+        "● Entregar como propio un ensayo completo redactado por una IAg sin agregar análisis, reflexiones o aportes personales. ● Abrir una ventana de IAg en el computador o celular durante una evaluación para obtener las respuestas. ● Pegar en la IA la pregunta de una tarea y copiar la respuesta tal cual. ● Pegar a la IA un primer borrador de respuesta para que lo corrija y complemente, y luego copiarlo en el trabajo tal cual. ● Subir el RUT, nombre, dirección, fotografías de personas u otra información personal a una plataforma de IA con cualquier propósito. ● Generar una bibliografía con IA, mencionando textos inexistentes o que no han sido leídos por el estudiante. ● Generar imágenes o videos de personas sin su consentimiento."
+      ],
+      "privacidad": [
+        "● Protección de la privacidad y dignidad de las personas : toda interacción con herramientas de IA debe resguardar la confidencialidad de los datos personales y académicos de estudiantes, docentes y funcionarios. La información que se comparte con herramientas de IA generativa bajo configuraciones predeterminada s no es privada y puede quedar expuesta a terceros no autorizados. Por este motivo, no se debe compartir información sensible con plataformas y aplicaciones de IA. Asimismo, queda estrictamente prohibido el uso de herramientas de inteligencia artificial para generar material que resulte ofensivo, discriminatorio o contrario a la legislación vigente, ya sea en formato textual, visual, audiovisual o de cualquier otra naturaleza.",
+        "Se considera uso indebido de la inteligencia artificial toda acción que comprometa la integridad académica, la transparencia en los procesos formativos o la protección de datos personales. Esto incluye, entre otros casos, presentar como propio material generado por IA sin una participación sustantiva del autor, utilizar estas herramientas en evaluaciones sin autorización, omitir su uso cuando corresponde declararlo, ingresar información sensible en plataformas que no resguardan la privacidad o emplearlas pa ra falsificar identidades o evidencias académicas.",
+        "Cuando existan indicios de que se ha utilizado inteligencia artificial de manera que vulnere la privacidad, confidencialidad o dignidad de miembros de la comunidad, la situación deberá ser informada de inmediato a la Dirección de Carrera correspondiente. E sta evaluará los antecedentes y, de ser pertinente, activará los canales institucionales para su investigación y eventual sanción, conforme a los reglamentos vigentes."
+      ],
+      "autoria": [
+        "● Integridad académica: el uso de IA como herramienta de apoyo al aprendizaje y a las labores de investigación no debe reemplazar la autoría ni el trabajo reflexivo de estudiantes y académicos. En todos los productos elaborados por estudiantes, académicos y funcionarios, se espera un uso transparente, con adecuada atribución y sin incurrir en plagio, suplantación o falsificación de datos2."
+      ],
+      "sanciones": [
+        "● Integridad académica: el uso de IA como herramienta de apoyo al aprendizaje y a las labores de investigación no debe reemplazar la autoría ni el trabajo reflexivo de estudiantes y académicos. En todos los productos elaborados por estudiantes, académicos y funcionarios, se espera un uso transparente, con adecuada atribución y sin incurrir en plagio, suplantación o falsificación de datos2.",
+        "Cuando existan indicios de que se ha utilizado inteligencia artificial de manera que vulnere la privacidad, confidencialidad o dignidad de miembros de la comunidad, la situación deberá ser informada de inmediato a la Dirección de Carrera correspondiente. E sta evaluará los antecedentes y, de ser pertinente, activará los canales institucionales para su investigación y eventual sanción, conforme a los reglamentos vigentes."
+      ]
+    }
+  },
+  {
+    "doc_id": "15",
+    "sigla": "UNAB",
+    "archivo": "15_UNAB.pdf",
+    "paginas": 14,
+    "clausulas": {
+      "tesis": [
+        "24. Herramientas de IA Generativa para Creación de Instrumentos de Evaluación del Aprendizaje: Sistemas que emplean IA para diseñar, adaptar o calificar instrumentos de evaluación, como exámenes, rúbricas o listas de verificación. 25. Herramientas de IA Generativa para la Investigación: Aplicaciones que asisten en el proceso de investigación académica mediante la generación de hipótesis, el análisis de datos o la redacción de documentos. 26. Herramientas de IA Generativa para la Creación de Actividades Educativas: Sistemas que emplean algoritmos generativos para diseñar y adaptar actividades pedagógicas basadas en objetivos de aprendizaje, perfiles de estudiantes y contextos educativos específicos."
+      ],
+      "evaluacion": [
+        "24. Herramientas de IA Generativa para Creación de Instrumentos de Evaluación del Aprendizaje: Sistemas que emplean IA para diseñar, adaptar o calificar instrumentos de evaluación, como exámenes, rúbricas o listas de verificación. 25. Herramientas de IA Generativa para la Investigación: Aplicaciones que asisten en el proceso de investigación académica mediante la generación de hipótesis, el análisis de datos o la redacción de documentos. 26. Herramientas de IA Generativa para la Creación de Actividades Educativas: Sistemas que emplean algoritmos generativos para diseñar y adaptar actividades pedagógicas basadas en objetivos de aprendizaje, perfiles de estudiantes y contextos educativos específicos."
+      ],
+      "privacidad": [],
+      "autoria": [],
+      "sanciones": []
+    }
+  },
+  {
+    "doc_id": "18",
+    "sigla": "UAutónoma",
+    "archivo": "18_UAutónoma.pdf",
+    "paginas": 4,
+    "clausulas": {
+      "tesis": [],
+      "evaluacion": [],
+      "privacidad": [],
+      "autoria": [],
+      "sanciones": []
+    }
+  },
+  {
+    "doc_id": "19",
+    "sigla": "UDLA",
+    "archivo": "19_UDLA.pdf",
+    "paginas": 36,
+    "clausulas": {
+      "tesis": [
+        "4 Ver oferta formativa de la Dirección de Desarrollo Docente: https://docencia.udla.cl/capacitacion-docente/ Mal uso del lenguaje •Puede debilitar el pensamiento crítico y la capacidad de síntesis, fomentando un aprendizaje superficial. Creatividad •La dependencia de IA puede limitar la generación de ideas originales y promover respuestas homogéneas. Integridad académica •Facilita el plagio, la falta de transparencia en fuentes y compromete la autenticidad del trabajo. Sesgos y alucinaciones •Puede generar información errónea, sesgada o incoherente, afectando la calidad del aprendizaje."
+      ],
+      "evaluacion": [
+        "• Transparencia en la gestión de datos, asegurando claridad en su recopilación, uso y protección. • Equidad y no discriminación, promoviendo la igualdad en el acceso y uso de la IA. • Privacidad, mediante políticas robustas de protección de información personal. • Evaluación continua del impacto, para ajustar las estrategias y maximizar beneficios minimizando riesgos.",
+        "3.3. Revisión y ajuste de las evaluaciones El uso de herramientas tecnológicas en la educación exige modificar las metodologías de evaluación. Es necesario diseñar evaluaciones que midan el conocimiento y las competencias del estudiantado, además de integrar habilidades desarrolladas a través de estas tecnologías (Ferrer, 2023). La Figura 3 presenta estrategias para este ajuste. Figura 3. Estrategias para ajustar evaluaciones en tiempos de IA",
+        "Nota: La evaluación sumativa única no es recomendable, ya que se centra en un solo momento y no considera el desarrollo progresivo del aprendizaje. Fuente: Adaptado de UDLA, 2021a, 2021b, 2024b.",
+        "3.4. Promoción del pensamiento ético en el uso de IA en el aprendizaje Incluir la discusión ética en el aula permite preparar al estudiantado para los desafíos y responsabilidades asociados con estas tecnologías en distintos contextos. Estas reflexiones facilitan la evaluación de las implicaciones del uso de IA y su impacto en la toma de decisiones. La Figura 4 presenta estrategias para orientar la reflexión sobre dilemas éticos y describe acciones institucionales para fortalecer esta formación . Figura 4. Estrategias para fortalecer la reflexión ética en el aprendizaje en UDLA"
+      ],
+      "privacidad": [
+        "• Transparencia en la gestión de datos, asegurando claridad en su recopilación, uso y protección. • Equidad y no discriminación, promoviendo la igualdad en el acceso y uso de la IA. • Privacidad, mediante políticas robustas de protección de información personal. • Evaluación continua del impacto, para ajustar las estrategias y maximizar beneficios minimizando riesgos.",
+        "Evaluación y control ético • Analizar previamente el impacto de proyectos o herramientas de IA, considerando su pertinencia en contextos educativos y sociales diversos, y sus efectos sobre la privacidad, la equidad y el bienestar. • Aplicar criterios éticos en la definición de objetivos, datos y resultados esperados, especialmente en actividades que articulen docencia, investigación y vinculación con agentes externos. • Desarrollar orientaciones y protocolos institucionales, que aseguren un marco común para el uso responsable de IA en prácticas profesionales, extensión, innovación social y colaboración con el medio."
+      ],
+      "autoria": [
+        "5.2. Reflexión y diálogo sobre el uso de IA en la comunidad universitaria Promover una reflexión crítica y sostenida sobre el uso de inteligencia artificial en el ámbito universitario es un componente clave del compromiso institucional de UDLA con la formación ética y responsable. Más allá de su dimensión tecnológica, la IA plantea interrogantes sobre autoría, equidad, sesgos, toma de decisiones automatizadas y autonomía humana, los cuales deben ser abordados en espacios formativos que favorezcan el pensamiento crítico y la deliberación informada.",
+        "7.1. Recomendaciones para el estudiantado El uso de inteligencia artificial generativa por parte del estudiantado requiere una comprensión profunda de sus alcances, limitaciones y responsabilidades asociadas. En un entorno académico que promueve la integridad, el pensamiento crítico y la formación ética, el uso de estas tecnologías debe estar guiado por principios de transparencia, reflexión y respeto por la propiedad intelectual. En la Tabla 3 se entregan orientaciones que buscan apoyar al estudiantado en la utilización consciente, ética y creativa de herramientas de IA, promoviendo su integración como apoyo al aprendizaje y al desarrollo de competencias académicas, profesionales y personales, en sintonía con el Modelo Educativo de UDLA y sus sellos formativos."
+      ],
+      "sanciones": [
+        "Comprender el funcionamiento de la IA Analizar su definición, funcionamiento y sus límites en distintos contextos educativos. Diseñar actividades de aprendizaje basadas en problemas Aplicar la IA en la resolución de desafíos reales, evaluando sus soluciones y resultados. Reflexionar sobre el uso responsable de la IA Integrar el análisis ético en el currículo, abordando dilemas y fomentando la reflexión crítica. Evaluar fuentes y contenidos generados por IA Cuestionar la fiabilidad de la información, detectar sesgos en algoritmos y contrastar datos. Fomentar el diálogo y la colaboración Crear espacios de discusión dentro y fuera del aula para fortalecer la comunicación y el trabajo interdisciplinario.",
+        "2 Es importante considerar que el plagio puede ser también el uso de material que no tiene por qué ser solo texto (por ejemplo, ilustraciones, música, gráficos, etc.).",
+        "Estas instancias de diálogo permiten al estudiantado y al cuerpo académico analizar los impactos de la IA en distintos contextos, considerando tanto sus oportunidades como sus riesgos. Desde una perspectiva formativa, este enfoque no se limita al aula, sin o que se proyecta hacia la vinculación con el entorno, integrando la ética como eje transversal en todas las funciones universitarias. Para facilitar estos procesos, UDLA promueve estrategias institucionales que combinan la reflexión disciplinar, el análisis aplicado y el debate abierto, tanto dentro como fuera del aula.",
+        "Estrategias en el aula: • Organizar talleres, seminarios o charlas sobre ética e inteligencia artificial, incorporando visiones interdisciplinarias desde la filosofía, el derecho, la ingeniería, la educación y otras áreas. • Utilizar estudios de caso y simulaciones que presenten dilemas éticos vinculados al uso de IA, fomentando el razonamiento crítico, la argumentación y la toma de decisiones fundamentadas. • Implementar debates estructurados con roles asignados para explorar diversas posturas frente a problemas éticos reales o hipotéticos. • Integrar ensayos, columnas reflexivas o diarios de análisis sobre IA en distintas asignaturas, aplicando el enfoque Writing Across the Curriculum (WAC) para fortalecer la escritura como herramienta de pensamiento."
+      ]
+    }
+  },
+  {
+    "doc_id": "20",
+    "sigla": "UDLA",
+    "archivo": "20_UDLA.pdf",
+    "paginas": 3,
+    "clausulas": {
+      "tesis": [],
+      "evaluacion": [
+        "En la modalidad asincrónica, donde no existen clases en tiempo real, el rol docente se centra en el diseño anticipado de experiencias de aprendizaje, la tutoría oportuna y la entrega de retroalimentación significativa a lo largo del curso. La inteligencia artificial puede colaborar con estas tareas técnicas de forma complementaria, optimizando la organización, la redacción preliminar de contenidos o la generación de recursos pedagógicos, sin desplazar la responsabilidad docente ni automatizar decisiones formativas.",
+        "2. Orientaciones de uso La IA puede actuar como herramienta de apoyo en tareas técnicas y organizativas propias del diseño y gestión de asignaturas asincrónicas. Su utilidad se potencia en la redacción preliminar de materiales, sistematización de contenidos o preparación de elementos de acompañamiento.",
+        "4. Usos restringidos (requieren validación o revisión interna) Ciertos empleos de la inteligencia artificial, especialmente cuando se integran de forma estructural a la planificación, evaluación o comunicación de la asignatura, requieren validación por parte de la unidad académica o coordinación con direcciones responsables. En estos casos, el uso debe ser documentado y validado para asegurar su coherencia con el plan de estudios y las políticas institucionales vigentes.",
+        "Caso Condición Incorporación de IA en la creación de recursos pedagógicos formales (videos, podcasts, guías institucionales) Requiere validación de la dirección de Escuela o coordinación técnica. Uso de IA en la formulación de rúbricas o instrumentos evaluativos oficiales del curso Debe ser revisado por el equipo docente y autorizado si corresponde. Implementación de asistentes automatizados como parte estructural del aula virtual (tutores IA, guías automáticas) Se debe coordinar con la unidad académica antes de integrarlos."
+      ],
+      "privacidad": [],
+      "autoria": [
+        "1. Finalidad y alcance Esta guía entrega orientaciones para el uso estratégico, ético y técnicamente adecuado de herramientas de Inteligencia Artificial (IA) generativa por parte de académicos que en Universidad de Las Américas que desarrollan su labor docente en asignaturas virtuales de carácter asincrónico. Su propósito es apoyar el uso de estas herramientas en procesos de planificación de contenidos, generación de materiales, elaboración de mensajes orientadores, diseño de instrumentos de retroalimentación y estructuración de recursos de estudio, respetando el juicio profesional, la autoría docente y los estándares de calidad institucional."
+      ],
+      "sanciones": [
+        "Acción no permitida con IA Publicar en el aula virtual instrucciones, textos o recursos generados sin revisión ni adaptación docente. Responder automáticamente a preguntas frecuentes sin supervisión ni control del contenido. Delegar la redacción de retroalimentaciones o comentarios en foros sin validar el desempeño individual de cada estudiante. Incorporar textos explicativos o ejemplos en recursos de clase sin verificar su coherencia técnica o disciplinar. Automatizar completamente mensajes semanales, recordatorios o interacciones en la plataforma sin ajustes humanos."
+      ]
+    }
+  },
+  {
+    "doc_id": "22",
+    "sigla": "UDD",
+    "archivo": "22_UDD.pdf",
+    "paginas": 3,
+    "clausulas": {
+      "tesis": [],
+      "evaluacion": [],
+      "privacidad": [
+        "• Privacidad desde el Diseño: Principio que establece que la protección de datos personales debe incorporarse desde la concepción y desarrollo de un sistema o herramienta tecnológica, y no añadirse posteriormente.",
+        "• Datos Personales: Datos relativos a cualquier información concerniente a personas naturales, identificadas o identificables.",
+        "• Confidencialidad: Propiedad por la que la información no se pone a disposición o se revela a individuos, entidades o procesos no autorizados."
+      ],
+      "autoria": [
+        "explícita del uso de IA cuando su participación sea relevante en la generación de resultados o decisiones, resguardando el cumplimiento de los derechos de autor establecidos en la Ley 17.336 . Los integrantes de la comunidad universitaria deberán declarar explícitamente el uso de herramientas de IA en la generación de obras y trabajos académicos, asumiendo la total autoría y veracidad del contenido final."
+      ],
+      "sanciones": []
+    }
+  },
+  {
+    "doc_id": "23",
+    "sigla": "UDD",
+    "archivo": "23_UDD.pdf",
+    "paginas": 6,
+    "clausulas": {
+      "tesis": [],
+      "evaluacion": [],
+      "privacidad": [
+        "4.3. Niveles de información y plataformas de IAG autorizadas El uso de aplicaciones de inteligencia artificial generativa en la UDD se regirá por la combinación entre el nivel de la información y el tipo de plataforma utilizada, conforme a lo siguiente: 4.3.1. Nivel 1: Información Pública Tipo de información: Información de libre acceso y sin restricciones de confidencialidad, tales como contenidos institucionales publicados o material docente abierto. Plataformas autorizadas: - Aplicaciones abiertas y gratuitas. - Aplicaciones personales con cuenta pagada. - Aplicaciones corporativas bajo contrato institucional.",
+        "4.3.2. Nivel 2: Información Interna Tipo de información: Información de uso interno institucional y que no se puede disponer de manera pública, tales como documentos administrativos, investigaciones no publicadas, entre otros, y los datos protegidos por ley, incluyendo información de estudiantes, académicos o colaboradores. Plataformas autorizadas: Aplicaciones corporativas bajo contrato institucional. En el caso de datos personales, se debe rá anonimizar los datos para ser trabajados en las plataformas institucionales. Restricciones: No se permite su uso en aplicaciones abiertas ni en cuentas personales."
+      ],
+      "autoria": [],
+      "sanciones": []
+    }
+  },
+  {
+    "doc_id": "30",
+    "sigla": "IPST",
+    "archivo": "30_IPST_CFTST.pdf",
+    "paginas": 16,
+    "clausulas": {
+      "tesis": [
+        "4.2. IAGen como herramienta para la investigación ✓ Análisis de datos complejos y masivos ✓ Generación de hipótesis, modelos predictivos ✓ Optimización de procesamiento de grandes volúmenes de datos"
+      ],
+      "evaluacion": [
+        "DECRETO Aprueba Lineamientos para el uso de la Inteligencia Artificial en el ámbito académico del Instituto Profesional Santo Tomás",
+        "DECRETO N°044/25 VICERRECTORÍA ACADÉMICA REF: APRUEBA LINEAMIENTOS PARA EL USO DE LA INTELIGENCIA ARTIFICIAL EN EL ÁMBITO ACADÉMICO DEL INSTITUTO PROFESIONAL SANTO TOMÁS",
+        "Se aprueban los lineamientos para el uso de la Inteligencia Artificial en el ámbito académico del Instituto Profesional Santo Tomás. Aplicabilidad Subjetiva (A quiénes aplica) Nivel Nacional Unidad Responsable Vicerrectoría Académica Vigencia 11 de Septiembre de 2025 Archivo",
+        "3.4. Confiabilidad de la información Las herramientas de IAGen no son totalmente confiables y pueden proporcionar información errónea, falsa o sesgada, especialmente en áreas más específicas del conocimiento. Por lo mismo, sus respuestas y resultados deben ser sometidas siempre a una evaluación crítica que puede incluir el cotejo con fuentes externas, así como la revisión, refinamiento e iteración de la instrucción dada (prompts), entre otros."
+      ],
+      "privacidad": [
+        "3.5. Seguridad y privacidad de los datos Toda la información entregada a un sistema de IAGen propiedad de terceros es transmitida y almacenada en servidores externos, lo que puede significar riesgos en cuanto a la confidencialidad, almacenamiento y protección de los datos o incluso, eventualmente, traducirse en la pérdida de estos.",
+        "5.4. Resguardo de la confidencialidad de datos e imagen digital En el uso de herramientas de IAGen se deberá siempre actuar conforme a la legislación vigente de protección de datos sensibles. En general, se recomienda evitar el ingreso de datos confidenciales o sensibles, propios o ajenos, en aplicaciones de IAGen de proveedores externos, así como ser conscientes que toda la información proporcionada a éstas es almacenada y eventualmente utilizada para su entrenamiento."
+      ],
+      "autoria": [],
+      "sanciones": [
+        "Asimismo, se reconoce la relevancia de esta tecnología con miras al desarrollo laboral y personal de nuestros futuros profesionales. Por lo mismo, potenciar su uso en la formación disciplinar y transversal es una forma de favorecer su empleabilidad.",
+        "4.1. IAGen como herramienta de apoyo a la docencia: ✓ Planificación de clases ✓ Creación de contenido, presentaciones, textos, casos prácticos, etc. ✓ Generación de pautas de evaluación o rúbricas ✓ Evaluación automatizada ✓ Análisis de progreso de logro de aprendizaje ✓ Retroalimentación a estudiantes en el proceso formativo ✓ Gamificación a través de aplicaciones interactivas en el aula ✓ Detección de plagio y autenticidad",
+        "El uso deshonesto, falso o injusto de herramientas de IAGen en actividades, trabajos, evaluaciones o en la relación con la Institución, académicos/as y otros colaboradores, así como la infracción de los principios generales del Instituto Profesional y Centro de Formación Técnica contenidos en su misión, visión y valores, deberá ser denunciado, investigado y sancionado de acuerdo con lo establecido por el Reglamento de Disciplina de la Comunidad Educativa del Instituto Profesional Santo Tomás y el del Centro de Formación Técnica.",
+        "Estos usos pueden incluir la falta de transparencia u ocultamiento del uso de la IAGen, el incumplimiento de los lineamientos establecidos por los/as docentes de una asignatura, la falta de honestidad o apropiación del trabajo ajeno, la falta de adecuada citación o referencia a las fuentes utilizadas, el uso de IAGen para realizar trabajos, tareas o evaluaciones cuando haya sido expresamente prohibido, así como otras situaciones que estén contenidas en el Reglamento de Disciplina de la Comunidad Educativa del Instituto Profesional Santo Tomás y el del Centro de Formación Técnica."
+      ]
+    }
+  },
+  {
+    "doc_id": "35",
+    "sigla": "UV",
+    "archivo": "35_UV.pdf",
+    "paginas": 16,
+    "clausulas": {
+      "tesis": [],
+      "evaluacion": [
+        "Presentación Este documento ofrece orientaciones generales para las y los docentes de la Escuela de Sociología, con el propósito de apoyar su quehacer académico en el marco del modelo curricular de la Universidad de Valparaíso. En él se abordan aspectos clave relacionados con la elaboración de programas de asignatura, criterios y prácticas de evaluación, uso de herramientas pedagógicas, y otros lineamientos relevantes para el desarrollo de una docencia coherente, reflexiva y comprometida con la formación de las y los estudiantes.",
+        "Elaboración del programa Cada programa de asignatura debe ser elaborado por la o el docente responsable, teniendo como eje orientador los resultados de aprendizaje y desempeños clave definidos curricularmente , lo que implica una coherencia entre estos y los contenidos, metodologías de enseñanza y estrategias de evaluación consideradas. En esta etapa, se distinguen distintos componentes del programa que pueden ser modificados, revisados o mantenidos sin alteración: Componentes que pueden modificarse: • Metodologías de enseñanza • Metodologías de evaluación",
+        "Evaluaciones parciales En cada asignatura el profesor/a deberá realizar al menos tres evaluaciones parciales distintas en el periodo lectivo, de acuerdo con las modalidades que se definan en el programa, las que ponderarán el 60% del promedio final. Todas las notas deben ser registradas en el Portal UV (https://portal.uv.cl/loginPrincipal2/). Las fechas de las evaluaciones deben estar informadas en los programas. Con esta información, al inicio de cada semestre la Secretaría de Docencia, elabora y difund e el calendario semestral de evaluaciones. Una vez rendidas las evaluaciones las y los profesores deberán entregar el resultado en un plazo no superior a 10 días hábiles. No se podrá realizar una nueva evaluación sin que los y las estudiantes conozcan el resultado de la anterior.",
+        "Logística, gestión y apoyo a la docencia: reserva de salas en ESOC y en FACSO, impresión de pruebas, información a estudiantes. Encargado de vinculación y comunicaciones Vicente Pérez vicente.perez@uv.cl"
+      ],
+      "privacidad": [],
+      "autoria": [],
+      "sanciones": []
+    }
+  },
+  {
+    "doc_id": "40",
+    "sigla": "UAH",
+    "archivo": "40_UAH.pdf",
+    "paginas": 17,
+    "clausulas": {
+      "tesis": [],
+      "evaluacion": [],
+      "privacidad": [],
+      "autoria": [],
+      "sanciones": []
+    }
+  },
+  {
+    "doc_id": "43",
+    "sigla": "UGM",
+    "archivo": "43_UGM.pdf",
+    "paginas": 15,
+    "clausulas": {
+      "tesis": [],
+      "evaluacion": [],
+      "privacidad": [],
+      "autoria": [],
+      "sanciones": [
+        "PROTOCOLO PARA LA PREVENCIÓN Y SANCIÓN DEL PLAGIO EN EL CONTEXTO ACADÉMICO Resolución de VRA: Resolución N ° 01 del año 2024. Fecha de entrada en vigencia: 08 de abril del 2024 PROTOCOLO PARA LA PREVENCIÓN Y SANCIÓN DEL PLAGIO EN EL CONTEXTO ACADÉMICO"
+      ]
+    }
+  }
+]
