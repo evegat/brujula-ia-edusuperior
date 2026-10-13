@@ -4,11 +4,12 @@ export const prerender = true;
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import MatrizNacional from '../components/MatrizNacional.astro';
+import PlanillaChequeo from '../components/PlanillaChequeo.astro';
 import ChecklistBenchmarking from '../components/ChecklistBenchmarking.astro';
-import Comparador from '../components/Comparador.astro';
 import CitasTextuales from '../components/CitasTextuales.astro';
 import CatalogoProtocolos from '../components/CatalogoProtocolos.astro';
 import ComprasPublicas from '../components/ComprasPublicas.astro';
+import MetodologiaYVersiones from '../components/MetodologiaYVersiones.astro';
 import Ecosistema from '../components/Ecosistema.astro';
 import ComunidadBuzon from '../components/ComunidadBuzon.astro';
 import Footer from '../components/Footer.astro';
@@ -26,17 +27,20 @@ import ModalCrowdsourcing from '../components/ModalCrowdsourcing.astro';
       <button class="tab-btn active" data-tab="tab-matriz">
         🏛️ Matriz 54 Universidades
       </button>
+      <button class="tab-btn" data-tab="tab-planilla">
+        📊 Planilla de Chequeo
+      </button>
       <button class="tab-btn" data-tab="tab-checklist">
         📋 Checklist de Adopción
       </button>
       <button class="tab-btn" data-tab="tab-catalogo">
         📚 Catálogo & Citas
       </button>
-      <button class="tab-btn" data-tab="tab-comparador">
-        ⚖️ Comparador
-      </button>
       <button class="tab-btn" data-tab="tab-compras">
         💰 Compras (Ues del Estado)
+      </button>
+      <button class="tab-btn" data-tab="tab-metodologia">
+        📖 Metodología & Versiones
       </button>
       <button class="tab-btn" data-tab="tab-comunidad">
         💬 Aportes & Datos
@@ -52,12 +56,17 @@ import ModalCrowdsourcing from '../components/ModalCrowdsourcing.astro';
       <MatrizNacional />
     </div>
 
-    <!-- Pestaña 2: Checklist y Benchmarking de 7 Ejes -->
+    <!-- Pestaña 2: Planilla Interactiva de Chequeo Institucional (Nueva Herramienta Útil) -->
+    <div id="tab-planilla" class="tab-panel">
+      <PlanillaChequeo />
+    </div>
+
+    <!-- Pestaña 3: Checklist y Benchmarking de 7 Ejes -->
     <div id="tab-checklist" class="tab-panel">
       <ChecklistBenchmarking />
     </div>
 
-    <!-- Pestaña 3: Catálogo de Normativas y Citas Textuales -->
+    <!-- Pestaña 4: Catálogo de Normativas y Citas Textuales -->
     <div id="tab-catalogo" class="tab-panel">
       <CatalogoProtocolos />
       <div style="margin-top: 3.5rem;">
@@ -65,17 +74,17 @@ import ModalCrowdsourcing from '../components/ModalCrowdsourcing.astro';
       </div>
     </div>
 
-    <!-- Pestaña 4: Comparador Lado a Lado -->
-    <div id="tab-comparador" class="tab-panel">
-      <Comparador />
-    </div>
-
     <!-- Pestaña 5: Compras Públicas (Exclusivo Ues Estatales) -->
     <div id="tab-compras" class="tab-panel">
       <ComprasPublicas />
     </div>
 
-    <!-- Pestaña 6: Aportes, Ecosistema y Datos Abiertos -->
+    <!-- Pestaña 6: Metodología, Universo SIES y Versiones -->
+    <div id="tab-metodologia" class="tab-panel">
+      <MetodologiaYVersiones />
+    </div>
+
+    <!-- Pestaña 7: Aportes, Ecosistema y Datos Abiertos -->
     <div id="tab-comunidad" class="tab-panel">
       <ComunidadBuzon />
       <div style="margin-top: 3.5rem;">

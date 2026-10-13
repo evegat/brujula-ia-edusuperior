@@ -1,0 +1,435 @@
+---
+import matrizData from '../../data/matriz_54_universidades.json';
+
+const totalUes = matrizData.length; // 54
+
+function normalizeForSearch(str: string): string {
+  return (str || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .trim();
+}
+
+// Calcular puntajes de cotejo (ejes formativos identificados sobre 5)
+const planillaFilas = matrizData.map((u, idx) => {
+  const d = u.dimensiones;
+  const checksFormativo = [
+    d.protocolo_aula,
+    d.directriz_tesis,
+    d.regla_autoria,
+    d.privacidad_ley_21719,
+    d.modifica_evaluacion
+  ];
+  const totalChecks = checksFormativo.filter(Boolean).length;
+  const tieneDoc = !u.en_brecha;
+  const searchBlob = `${normalizeForSearch(u.nombre)} ${normalizeForSearch(u.sigla)} ${normalizeForSearch(u.tipo_categoria)}`;
+  const primerDoc = u.instrumentos && u.instrumentos.length > 0 ? u.instrumentos[0] : null;
+
+  return {
+    index: idx + 1,
+    registro: u.registro,
+    nombre: u.nombre,
+    sigla: u.sigla,
+    tipo: u.tipo_categoria,
+    tieneDoc,
+    totalChecks,
+    dimensiones: d,
+    primerDoc,
+    totalDocs: u.total_instrumentos,
+    searchBlob
+  };
+});
+---
+
+<section id="planilla" style="margin-bottom: 4.5rem; scroll-margin-top: 2rem;">
+  <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1.25rem; margin-bottom:1.5rem;">
+    <div>
+      <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.4rem;">
+        <span class="badge badge-green">Herramienta de Cotejo</span>
+        <span class="badge badge-blue">Formato Planilla / Hoja de Chequeo</span>
+      </div>
+      <h2>Planilla Interactiva de Chequeo Institucional</h2>
+      <p style="color:var(--text-muted); max-width:850px; font-size:0.96rem; line-height:1.55;">
+        Tabla interactiva de cotejo sobre las 54 universidades del universo oficial SIES (Mineduc). Permite auditar en una sola vista qué dimensiones formativas (aula, tesis, autoría, privacidad, evaluaciones y compras) registran evidencia pública en cada plantel.
+      </p>
+    </div>
+
+    <!-- Botón de Exportar Datos -->
+    <div style="display:flex; gap:0.5rem; align-items:center;">
+      <a href="/matriz_54_universidades.json" download="matriz_54_universidades_chile.json" class="btn btn-outline btn-sm" style="font-size:0.82rem;">
+        💾 Descargar Dataset JSON
+      </a>
+      <button type="button" id="btn-export-csv" class="btn btn-primary btn-sm" style="font-size:0.82rem;">
+        📊 Exportar Planilla CSV
+      </button>
+    </div>
+  </div>
+
+  <!-- Barra de Filtros y Control de la Planilla -->
+  <div style="background:var(--card-bg); border:1px solid var(--border-color); border-radius:12px; padding:1.25rem; margin-bottom:1.5rem; box-shadow:var(--shadow-sm);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+      
+      <!-- Filtros por Segmento -->
+      <div style="display:flex; gap:0.4rem; flex-wrap:wrap;" id="planilla-tipo-btns">
+        <button type="button" class="btn btn-primary btn-sm btn-p-tipo" data-tipo="todas">
+          Todas ({totalUes})
+        </button>
+        <button type="button" class="btn btn-outline btn-sm btn-p-tipo" data-tipo="Estatales">
+          🏛️ Estatales (18)
+        </button>
+        <button type="button" class="btn btn-outline btn-sm btn-p-tipo" data-tipo="Privadas CRUCH">
+          🎓 Privadas CRUCH (9)
+        </button>
+        <button type="button" class="btn btn-outline btn-sm btn-p-tipo" data-tipo="Privadas no CRUCH">
+          🏢 Privadas no CRUCH (27)
+        </button>
+      </div>
+
+      <!-- Filtro por Estado Documental -->
+      <div style="display:flex; gap:0.4rem; flex-wrap:wrap;" id="planilla-estado-btns">
+        <button type="button" class="btn btn-primary btn-sm btn-p-estado" data-estado="todos">
+          Todos los estados
+        </button>
+        <button type="button" class="btn btn-outline btn-sm btn-p-estado" data-estado="con-doc" style="color:var(--accent-green);">
+          ✓ Con instrumento (32)
+        </button>
+        <button type="button" class="btn btn-outline btn-sm btn-p-estado" data-estado="sin-doc" style="color:var(--text-muted);">
+          ○ Sin instrumento público (22)
+        </button>
+      </div>
+
+      <!-- Buscador -->
+      <div style="min-width:240px; flex:1; max-width:360px;">
+        <input 
+          type="text" 
+          id="planilla-search-input" 
+          placeholder="🔍 Buscar universidad o sigla..."
+          style="width:100%; padding:0.45rem 0.8rem; border:1px solid var(--border-color); border-radius:6px; background:var(--canvas-bg); color:var(--text-main); font-size:0.84rem;"
+        />
+      </div>
+
+    </div>
+
+    <!-- Barra de Conteo y Leyenda de Símbolos -->
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; font-size:0.8rem; color:var(--text-muted); border-top:1px solid var(--border-color); padding-top:0.75rem; margin-top:0.85rem;">
+      <span id="planilla-count-display">Mostrando 54 de 54 planteles</span>
+      <div style="display:flex; gap:0.85rem; align-items:center;">
+        <span><strong style="color:var(--accent-green);">✓</strong> = Evidencia verificada en documento público</span>
+        <span><strong style="color:var(--text-muted);">○</strong> = Sin evidencia identificada</span>
+        <span><strong style="color:var(--accent-amber);">💰</strong> = Contrato de software/IA registrado en Mercado Público</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenedor con Scroll Horizontal Suave de la Planilla -->
+  <div style="background:var(--card-bg); border:1px solid var(--border-color); border-radius:12px; overflow-x:auto; box-shadow:var(--shadow-sm); -webkit-overflow-scrolling:touch;">
+    <table style="width:100%; border-collapse:collapse; font-size:0.85rem; text-align:left; min-width:850px;" id="tabla-planilla">
+      <thead>
+        <tr style="background:var(--card-alt); border-bottom:2px solid var(--border-color); color:var(--text-muted); font-size:0.76rem; text-transform:uppercase; letter-spacing:0.5px;">
+          <th scope="col" style="padding:0.75rem 0.85rem; width:45px; text-align:center;">N°</th>
+          <th scope="col" style="padding:0.75rem 1rem;">Universidad (SIES)</th>
+          <th scope="col" style="padding:0.75rem 0.85rem;">Segmento</th>
+          <th scope="col" style="padding:0.75rem 0.65rem; text-align:center;" title="1. Protocolo de Aula">Aula</th>
+          <th scope="col" style="padding:0.75rem 0.65rem; text-align:center;" title="2. Directriz de Tesis">Tesis</th>
+          <th scope="col" style="padding:0.75rem 0.65rem; text-align:center;" title="3. Regla de Autoría (IA no es autora)">Autoría</th>
+          <th scope="col" style="padding:0.75rem 0.65rem; text-align:center;" title="4. Privacidad y Datos (Ley 21.719)">Privacidad</th>
+          <th scope="col" style="padding:0.75rem 0.65rem; text-align:center;" title="5. Rediseño de Evaluaciones">Evaluación</th>
+          <th scope="col" style="padding:0.75rem 0.65rem; text-align:center;" title="Compras de IA en Mercado Público">Compras</th>
+          <th scope="col" style="padding:0.75rem 0.85rem; text-align:center;">Cotejo</th>
+          <th scope="col" style="padding:0.75rem 1rem; text-align:center;">Instrumento Principal</th>
+        </tr>
+      </thead>
+      <tbody id="planilla-tbody">
+        {planillaFilas.map((fila, idx) => {
+          const d = fila.dimensiones;
+          return (
+            <tr 
+              class="planilla-row"
+              data-tipo={fila.tipo}
+              data-tiene-doc={fila.tieneDoc ? 'true' : 'false'}
+              data-search={fila.searchBlob}
+              style={`border-bottom:1px solid var(--border-color); background:${idx % 2 === 0 ? 'transparent' : 'rgba(0,0,0,0.015)'};`}
+            >
+              <!-- N° y Registro -->
+              <td style="padding:0.75rem 0.85rem; text-align:center; color:var(--text-muted); font-size:0.76rem; font-family:monospace;">
+                {fila.index}
+              </td>
+
+              <!-- Universidad -->
+              <td style="padding:0.75rem 1rem;">
+                <div style="font-weight:600; color:var(--text-main); line-height:1.25;">
+                  {fila.nombre}
+                </div>
+                <div style="font-size:0.72rem; color:var(--text-muted); margin-top:0.2rem;">
+                  Sigla: <strong style="color:var(--text-main);">{fila.sigla}</strong> • Código SIES: {fila.registro}
+                </div>
+              </td>
+
+              <!-- Segmento -->
+              <td style="padding:0.75rem 0.85rem; font-size:0.78rem; color:var(--text-muted);">
+                {fila.tipo}
+              </td>
+
+              <!-- 1. Aula -->
+              <td style="padding:0.75rem 0.65rem; text-align:center; font-size:1rem;">
+                {d.protocolo_aula ? (
+                  <span style="color:var(--accent-green); font-weight:700;" title="Protocolo de Aula Identificado">✓</span>
+                ) : (
+                  <span style="color:var(--border-color);" title="Sin Protocolo de Aula">○</span>
+                )}
+              </td>
+
+              <!-- 2. Tesis -->
+              <td style="padding:0.75rem 0.65rem; text-align:center; font-size:1rem;">
+                {d.directriz_tesis ? (
+                  <span style="color:var(--accent-green); font-weight:700;" title="Directriz de Tesis Identificada">✓</span>
+                ) : (
+                  <span style="color:var(--border-color);" title="Sin Directriz de Tesis">○</span>
+                )}
+              </td>
+
+              <!-- 3. Autoría -->
+              <td style="padding:0.75rem 0.65rem; text-align:center; font-size:1rem;">
+                {d.regla_autoria ? (
+                  <span style="color:var(--accent-green); font-weight:700;" title="Regla de Autoría Identificada (IA no es autora)">✓</span>
+                ) : (
+                  <span style="color:var(--border-color);" title="Sin Regla de Autoría">○</span>
+                )}
+              </td>
+
+              <!-- 4. Privacidad -->
+              <td style="padding:0.75rem 0.65rem; text-align:center; font-size:1rem;">
+                {d.privacidad_ley_21719 ? (
+                  <span style="color:var(--accent-blue); font-weight:700;" title="Previsión de Privacidad (Ley 21.719)">✓</span>
+                ) : (
+                  <span style="color:var(--border-color);" title="Sin Previsión de Privacidad">○</span>
+                )}
+              </td>
+
+              <!-- 5. Evaluación -->
+              <td style="padding:0.75rem 0.65rem; text-align:center; font-size:1rem;">
+                {d.modifica_evaluacion ? (
+                  <span style="color:var(--accent-green); font-weight:700;" title="Rediseño Evaluativo Identificado">✓</span>
+                ) : (
+                  <span style="color:var(--border-color);" title="Sin Rediseño Evaluativo">○</span>
+                )}
+              </td>
+
+              <!-- 6. Compras -->
+              <td style="padding:0.75rem 0.65rem; text-align:center; font-size:0.95rem;">
+                {d.compras_ia ? (
+                  <a href="#compras" style="color:var(--accent-amber); font-weight:700; text-decoration:none;" title="Contratos de IA en Mercado Público">
+                    💰 ({fila.tipo === 'Estatales' ? 'Sí' : 'N/A'})
+                  </a>
+                ) : (
+                  <span style="color:var(--border-color);" title="Sin compras registradas">—</span>
+                )}
+              </td>
+
+              <!-- Cotejo Total (Checks formativos cumplidos) -->
+              <td style="padding:0.75rem 0.85rem; text-align:center;">
+                <span class="badge" style={`font-size:0.76rem; font-weight:700; background:${fila.totalChecks >= 3 ? 'var(--accent-green-soft)' : fila.totalChecks > 0 ? 'var(--accent-blue-soft)' : 'rgba(0,0,0,0.04)'}; color:${fila.totalChecks >= 3 ? 'var(--accent-green)' : fila.totalChecks > 0 ? 'var(--accent-blue)' : 'var(--text-muted)'};`}>
+                  {fila.totalChecks} / 5
+                </span>
+              </td>
+
+              <!-- Instrumento Principal -->
+              <td style="padding:0.75rem 1rem; text-align:center; font-size:0.78rem;">
+                {fila.primerDoc ? (
+                  <a 
+                    href={fila.primerDoc.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    style="color:var(--accent-blue); text-decoration:none; font-weight:500; display:inline-block; max-width:210px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"
+                    title={fila.primerDoc.documento}
+                  >
+                    📄 {fila.primerDoc.documento} &rarr;
+                  </a>
+                ) : (
+                  <button 
+                    type="button" 
+                    class="btn-aporte-directo" 
+                    data-universidad={encodeURIComponent(fila.nombre)} 
+                    style="background:none; border:none; color:var(--text-muted); cursor:pointer; font-size:0.74rem; text-decoration:underline; padding:0;"
+                  >
+                    📥 Aportar antecedentes
+                  </button>
+                )}
+              </td>
+
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Estado Vacío -->
+  <div id="planilla-empty-state" style="display:none; text-align:center; padding:3rem 1.5rem; background:var(--card-bg); border:1px solid var(--border-color); border-radius:12px; margin-top:1rem;">
+    <div style="font-size:2rem; margin-bottom:0.5rem;">🔍</div>
+    <div style="font-weight:600; margin-bottom:0.25rem;">No se encontraron planteles con esos filtros</div>
+    <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">Prueba limpiando la búsqueda o seleccionando otro segmento.</div>
+    <button type="button" id="planilla-reset-btn" class="btn btn-primary btn-sm">Restablecer Planilla</button>
+  </div>
+
+</section>
+
+<script is:inline>
+  let pTipoActual = 'todas';
+  let pEstadoActual = 'todos';
+  let pQueryActual = '';
+
+  const pRows = document.querySelectorAll('.planilla-row');
+  const pCount = document.getElementById('planilla-count-display');
+  const pSearch = document.getElementById('planilla-search-input');
+  const pReset = document.getElementById('planilla-reset-btn');
+  const pEmpty = document.getElementById('planilla-empty-state');
+  const pTable = document.getElementById('tabla-planilla');
+
+  function normalizeText(str) {
+    return (str || '')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .trim();
+  }
+
+  function filtrarPlanilla() {
+    const q = normalizeText(pQueryActual);
+    let visibles = 0;
+
+    pRows.forEach(row => {
+      const tipo = row.getAttribute('data-tipo');
+      const tieneDoc = row.getAttribute('data-tiene-doc') === 'true';
+      const searchBlob = row.getAttribute('data-search') || '';
+
+      let matchTipo = true;
+      if (pTipoActual !== 'todas' && tipo !== pTipoActual) matchTipo = false;
+
+      let matchEstado = true;
+      if (pEstadoActual === 'con-doc' && !tieneDoc) matchEstado = false;
+      if (pEstadoActual === 'sin-doc' && tieneDoc) matchEstado = false;
+
+      let matchTexto = true;
+      if (q) matchTexto = searchBlob.includes(q);
+
+      if (matchTipo && matchEstado && matchTexto) {
+        row.style.display = '';
+        visibles++;
+      } else {
+        row.style.display = 'none';
+      }
+    });
+
+    if (pCount) {
+      pCount.textContent = `Mostrando ${visibles} de ${pRows.length} planteles universitarios`;
+    }
+
+    if (visibles === 0) {
+      if (pTable) pTable.style.display = 'none';
+      if (pEmpty) pEmpty.style.display = 'block';
+    } else {
+      if (pTable) pTable.style.display = 'table';
+      if (pEmpty) pEmpty.style.display = 'none';
+    }
+  }
+
+  // Filtros de Tipo
+  document.querySelectorAll('.btn-p-tipo').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.btn-p-tipo').forEach(b => {
+        b.classList.remove('btn-primary');
+        b.classList.add('btn-outline');
+      });
+      btn.classList.remove('btn-outline');
+      btn.classList.add('btn-primary');
+      pTipoActual = btn.getAttribute('data-tipo') || 'todas';
+      filtrarPlanilla();
+    });
+  });
+
+  // Filtros de Estado
+  document.querySelectorAll('.btn-p-estado').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.btn-p-estado').forEach(b => {
+        b.classList.remove('btn-primary');
+        b.classList.add('btn-outline');
+      });
+      btn.classList.remove('btn-outline');
+      btn.classList.add('btn-primary');
+      pEstadoActual = btn.getAttribute('data-estado') || 'todos';
+      filtrarPlanilla();
+    });
+  });
+
+  pSearch?.addEventListener('input', (e) => {
+    pQueryActual = e.target.value;
+    filtrarPlanilla();
+  });
+
+  pReset?.addEventListener('click', () => {
+    pTipoActual = 'todas';
+    pEstadoActual = 'todos';
+    pQueryActual = '';
+    if (pSearch) pSearch.value = '';
+
+    document.querySelectorAll('.btn-p-tipo').forEach(b => {
+      if (b.getAttribute('data-tipo') === 'todas') {
+        b.classList.remove('btn-outline');
+        b.classList.add('btn-primary');
+      } else {
+        b.classList.remove('btn-primary');
+        b.classList.add('btn-outline');
+      }
+    });
+
+    document.querySelectorAll('.btn-p-estado').forEach(b => {
+      if (b.getAttribute('data-estado') === 'todos') {
+        b.classList.remove('btn-outline');
+        b.classList.add('btn-primary');
+      } else {
+        b.classList.remove('btn-primary');
+        b.classList.add('btn-outline');
+      }
+    });
+
+    filtrarPlanilla();
+  });
+
+  // Exportar Planilla a CSV
+  document.getElementById('btn-export-csv')?.addEventListener('click', () => {
+    const headers = ['N', 'Universidad', 'Sigla', 'Codigo_SIES', 'Segmento', 'Tiene_Instrumento', 'Aula', 'Tesis', 'Autoria', 'Privacidad', 'Evaluacion', 'Compras_IA', 'Checks_Total_Sobre_5'];
+    const rows = [];
+    rows.push(headers.join(';'));
+
+    pRows.forEach((row, idx) => {
+      if (row.style.display !== 'none') {
+        const uNom = row.querySelector('td:nth-child(2) div:first-child')?.textContent?.trim() || '';
+        const siglaMatch = row.querySelector('td:nth-child(2) div:last-child')?.textContent || '';
+        const tipo = row.getAttribute('data-tipo') || '';
+        const tieneDoc = row.getAttribute('data-tiene-doc') === 'true' ? 'SI' : 'NO';
+        
+        const aula = row.querySelector('td:nth-child(4)')?.textContent?.includes('✓') ? '1' : '0';
+        const tesis = row.querySelector('td:nth-child(5)')?.textContent?.includes('✓') ? '1' : '0';
+        const autoria = row.querySelector('td:nth-child(6)')?.textContent?.includes('✓') ? '1' : '0';
+        const priv = row.querySelector('td:nth-child(7)')?.textContent?.includes('✓') ? '1' : '0';
+        const evalua = row.querySelector('td:nth-child(8)')?.textContent?.includes('✓') ? '1' : '0';
+        const compras = row.querySelector('td:nth-child(9)')?.textContent?.includes('💰') ? '1' : '0';
+        const total = row.querySelector('td:nth-child(10)')?.textContent?.trim() || '';
+
+        rows.push([idx + 1, `"${uNom}"`, `"${siglaMatch}"`, '', `"${tipo}"`, tieneDoc, aula, tesis, autoria, priv, evalua, compras, `"${total}"`].join(';'));
+      }
+    });
+
+    const csvContent = '\uFEFF' + rows.join('\n');
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.setAttribute('href', url);
+    link.setAttribute('download', 'planilla_chequeo_ia_universidades_chile.csv');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+</script>

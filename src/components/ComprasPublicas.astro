@@ -135,7 +135,7 @@ function obtenerBadgeCapa(capa: string): { label: string; cls: string } {
       </thead>
       <tbody id="compras-tbody">
         {comprasData.map((c, idx) => {
-          const esBrecha = ['UNIVERSIDAD TECNOLOGICA METROPOLITANA', 'UNIVERSIDAD DE LA SERENA', 'UNIVERSIDAD DEL BIO BIO'].includes(c.universidad);
+          const sinProtocoloPublico = ['UNIVERSIDAD TECNOLOGICA METROPOLITANA', 'UNIVERSIDAD DE LA SERENA', 'UNIVERSIDAD DEL BIO BIO'].includes(c.universidad);
           const badge = obtenerBadgeCapa(c.capa_funcional);
           const searchBlob = `${normalizeForSearch(c.nombre)} ${normalizeForSearch(c.descripcion)} ${normalizeForSearch(c.proveedor)} ${normalizeForSearch(c.universidad)}`;
 
@@ -149,10 +149,10 @@ function obtenerBadgeCapa(capa: string): { label: string; cls: string } {
             >
               <td style="padding:0.85rem 1rem; vertical-align:top;">
                 <div style="font-weight:600; color:var(--text-main);">{c.universidad}</div>
-                {esBrecha ? (
-                  <span class="badge badge-red" style="font-size:0.7rem; margin-top:0.2rem;">⚠️ Sin protocolo de aula</span>
+                {sinProtocoloPublico ? (
+                  <span class="badge" style="font-size:0.7rem; margin-top:0.2rem; background:rgba(0,0,0,0.04); color:var(--text-muted); border:1px solid var(--border-color);">○ Sin protocolo localizado</span>
                 ) : (
-                  <span class="badge badge-green" style="font-size:0.7rem; margin-top:0.2rem;">✓ Con protocolo</span>
+                  <span class="badge badge-green" style="font-size:0.7rem; margin-top:0.2rem;">✓ Con protocolo identificado</span>
                 )}
               </td>
               <td style="padding:0.85rem 1rem; vertical-align:top; max-width:320px;">

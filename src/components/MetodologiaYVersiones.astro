@@ -1,0 +1,158 @@
+---
+// src/components/MetodologiaYVersiones.astro
+---
+
+<section id="metodologia" style="margin-bottom: 4.5rem; scroll-margin-top: 2rem;">
+  <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1.25rem; margin-bottom:1.5rem;">
+    <div>
+      <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.4rem;">
+        <span class="badge badge-purple">Transparencia Radical & Ciencia Abierta</span>
+        <span class="badge badge-blue">Protocolo de Investigación</span>
+      </div>
+      <h2>Metodología, Universo y Registro de Versiones</h2>
+      <p style="color:var(--text-muted); max-width:860px; font-size:0.96rem; line-height:1.55;">
+        Explicamos con total transparencia de dónde obtuvimos el universo de análisis, cómo rastreamos cada documento, los criterios metodológicos de inclusión y el historial de versiones del observatorio.
+      </p>
+    </div>
+  </div>
+
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 460px), 1fr)); gap:1.5rem; margin-bottom:2rem;">
+    
+    <!-- Bloque 1: Universo de Estudio SIES / Mineduc -->
+    <div class="card" style="border-top:3px solid var(--accent-blue);">
+      <div style="font-size:0.78rem; font-weight:700; text-transform:uppercase; color:var(--accent-blue); margin-bottom:0.35rem; letter-spacing:0.5px;">
+        🏛️ Universo Institucional de Estudio
+      </div>
+      <h3 style="font-size:1.15rem; margin-bottom:0.6rem;">Nómina Oficial SIES / Mineduc (Mayo 2026)</h3>
+      <p style="font-size:0.88rem; color:var(--text-muted); line-height:1.5; margin-bottom:1rem;">
+        El universo de observación no es una muestra arbitraria ni una selección por conveniencia: comprende el <strong>100% de las 54 universidades legalmente constituidas y vigentes en Chile</strong> según la nómina oficial del Servicio de Información de Educación Superior (SIES) del Ministerio de Educación:
+      </p>
+      
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.65rem; font-size:0.82rem; margin-bottom:1rem;">
+        <div style="background:rgba(0,0,0,0.02); padding:0.65rem; border-radius:6px; border:1px solid var(--border-color);">
+          <strong>18 Estatales (CUECH):</strong><br>
+          <span style="color:var(--text-muted);">Sujetas a derecho público y Ley de Compras N° 19.886.</span>
+        </div>
+        <div style="background:rgba(0,0,0,0.02); padding:0.65rem; border-radius:6px; border:1px solid var(--border-color);">
+          <strong>9 Privadas CRUCH (G9):</strong><br>
+          <span style="color:var(--text-muted);">Tradicionales con aporte fiscal histórico del Estado.</span>
+        </div>
+        <div style="background:rgba(0,0,0,0.02); padding:0.65rem; border-radius:6px; border:1px solid var(--border-color); grid-column:span 2;">
+          <strong>27 Privadas no CRUCH:</strong><br>
+          <span style="color:var(--text-muted);">Planteles autónomos regulados bajo el DFL N° 1 y Ley N° 21.091 de Educación Superior.</span>
+        </div>
+      </div>
+
+      <div style="font-size:0.8rem; color:var(--text-muted); line-height:1.45; background:var(--canvas-bg); padding:0.65rem; border-radius:6px;">
+        <em>Nota sobre Institutos Profesionales y CFTs:</em> Documentos de planteles técnico-profesionales levantados (Duoc UC, IP Santo Tomás) se preservan como referencias sectoriales en el catálogo, pero no computan en el denominador del censo universitario de 54 planteles.
+      </div>
+    </div>
+
+    <!-- Bloque 2: Cómo hicimos todo para encontrarlos -->
+    <div class="card" style="border-top:3px solid var(--accent-green);">
+      <div style="font-size:0.78rem; font-weight:700; text-transform:uppercase; color:var(--accent-green); margin-bottom:0.35rem; letter-spacing:0.5px;">
+        🔍 Procedimiento de Levantamiento
+      </div>
+      <h3 style="font-size:1.15rem; margin-bottom:0.6rem;">¿Cómo rastreamos y verificamos la información?</h3>
+      <p style="font-size:0.88rem; color:var(--text-muted); line-height:1.5; margin-bottom:0.75rem;">
+        Aplicamos un protocolo determinista y reproducible en 5 pasos secuenciales:
+      </p>
+
+      <ol style="font-size:0.82rem; color:var(--text-main); line-height:1.5; padding-left:1.2rem; display:flex; flex-direction:column; gap:0.5rem; margin:0;">
+        <li>
+          <strong>Barrido de portales institucionales:</strong> Inspección exhaustiva de páginas web de Rectoría, Vicerrectorías Académicas, Direcciones de Docencia y centros de innovación pedagógica.
+        </li>
+        <li>
+          <strong>Búsquedas booleanas indexadas:</strong> Consultas avanzadas en Google y repositorios (`site:[u.cl] filetype:pdf ("inteligencia artificial" OR "ChatGPT" OR "IA generativa")`).
+        </li>
+        <li>
+          <strong>Consultas a unidades académicas:</strong> Contacto y peticiones de información con comités de ética, bibliotecas universitarias y direcciones de pregrado.
+        </li>
+        <li>
+          <strong>Custodia digital y Hash SHA-256:</strong> Descarga de cada PDF original, cálculo de su hash criptográfico SHA-256 para garantizar inmutabilidad, y conversión a Markdown estructurado con marcadores de página (`&lt;!-- Página X --&gt;`).
+        </li>
+        <li>
+          <strong>Mercado Público (ChileCompra):</strong> Para las universidades del Estado, cruce con licitaciones y órdenes de compra bajo la Ley N° 19.886 clasificadas en 4 capas tecnológicas.
+        </li>
+      </ol>
+    </div>
+
+  </div>
+
+  <!-- Bloque 3: Historial de Versiones y Trabajo Continuo (Como en Ordenanzas) -->
+  <div class="card" style="border-top:3px solid var(--accent-purple); margin-bottom:2rem;">
+    <div style="font-size:0.78rem; font-weight:700; text-transform:uppercase; color:var(--accent-purple); margin-bottom:0.35rem; letter-spacing:0.5px;">
+      ⏱️ Historial de Versiones del Catastro (Changelog Público)
+    </div>
+    <h3 style="font-size:1.15rem; margin-bottom:0.6rem;">Evolución y Control de Cambios del Proyecto</h3>
+    <p style="font-size:0.88rem; color:var(--text-muted); line-height:1.5; margin-bottom:1.25rem;">
+      Al igual que en nuestro observatorio de ordenanzas municipales, documentamos públicamente cada versión, criterio y actualización:
+    </p>
+
+    <div style="overflow-x:auto;">
+      <table style="width:100%; border-collapse:collapse; font-size:0.82rem; text-align:left; min-width:620px;">
+        <thead>
+          <tr style="background:var(--card-alt); border-bottom:2px solid var(--border-color); color:var(--text-muted); text-transform:uppercase; font-size:0.74rem;">
+            <th scope="col" style="padding:0.65rem 0.85rem; width:80px;">Versión</th>
+            <th scope="col" style="padding:0.65rem 0.85rem; width:110px;">Fecha</th>
+            <th scope="col" style="padding:0.65rem 1rem;">Alcance del Catastro</th>
+            <th scope="col" style="padding:0.65rem 1rem;">Hito Metodológico Clave</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:1px solid var(--border-color); background:rgba(5, 150, 105, 0.04);">
+            <td style="padding:0.75rem 0.85rem; font-weight:700; color:var(--accent-green);">v2.2 (Vigente)</td>
+            <td style="padding:0.75rem 0.85rem; color:var(--text-muted);">13 Oct 2026</td>
+            <td style="padding:0.75rem 1rem;">54 Ues Oficiales SIES • 52 Normativas • 85 Licitaciones • 61 Citas Textuales</td>
+            <td style="padding:0.75rem 1rem; color:var(--text-main);">
+              <strong>Remediación metodológica integral:</strong> Erradicación del término "brecha" hacia <em>«Sin instrumento público identificado»</em>; eliminación de índices ponderados artificiales; adopción de Checklist de 7 ejes y Planilla de cotejo; co-ocurrencia estricta en corpus con hashes SHA-256 y compras en 4 capas tecnológicas.
+            </td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border-color);">
+            <td style="padding:0.75rem 0.85rem; font-weight:600; color:var(--accent-blue);">v2.1</td>
+            <td style="padding:0.75rem 0.85rem; color:var(--text-muted);">13 Oct 2026</td>
+            <td style="padding:0.75rem 1rem;">Migración a Astro SSG Cloudflare Workers ($0 costo)</td>
+            <td style="padding:0.75rem 1rem; color:var(--text-muted);">
+              Censo canónico de las 54 universidades Mineduc/SIES; modal de crowdsourcing comunitario y créditos institucionales a Eduardo Vega Toledo.
+            </td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border-color);">
+            <td style="padding:0.75rem 0.85rem; font-weight:600; color:var(--text-muted);">v2.0</td>
+            <td style="padding:0.75rem 0.85rem; color:var(--text-muted);">06 Oct 2026</td>
+            <td style="padding:0.75rem 1rem;">Prototipo de matriz dimensional</td>
+            <td style="padding:0.75rem 1rem; color:var(--text-muted);">
+              Levantamiento inicial de resoluciones y corpus preliminar en Markdown.
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:0.75rem 0.85rem; font-weight:600; color:var(--text-muted);">v1.0</td>
+            <td style="padding:0.75rem 0.85rem; color:var(--text-muted);">04 Oct 2026</td>
+            <td style="padding:0.75rem 1rem;">Compilador monolítico Python (index.html)</td>
+            <td style="padding:0.75rem 1rem; color:var(--text-muted);">
+              Primer censo exploratorio de 52 reglamentos y compras en Mercado Público.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Bloque 4: Cómo seguimos trabajando y Aporte Ciudadano -->
+  <div style="background:var(--card-bg); border:1px solid var(--border-color); border-radius:12px; padding:1.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1.25rem;">
+    <div>
+      <h4 style="font-size:1.05rem; margin-bottom:0.35rem;">¿Cómo seguimos trabajando? Protocolo Colaborativo Continuo</h4>
+      <p style="font-size:0.86rem; color:var(--text-muted); max-width:780px; line-height:1.5; margin:0;">
+        El observatorio se actualiza permanentemente. Si tu universidad o facultad aprobó una directriz, circular o reglamento que aún no figura con enlace verificado, puedes aportarlo directamente. Todo antecedente es auditado humanamente antes de incorporarse al repositorio abierto en GitHub.
+      </p>
+    </div>
+    <div style="display:flex; gap:0.65rem;">
+      <a href="mailto:eduardo@evegat.cl?subject=Aporte%20Normativa%20IA%20Educaci%C3%B3n%20Superior" class="btn btn-outline btn-sm">
+        ✉️ Contactar a Eduardo
+      </a>
+      <a href="https://github.com/evegat/brujula-ia-edusuperior" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+        🐙 Ver Repositorio GitHub
+      </a>
+    </div>
+  </div>
+
+</section>
