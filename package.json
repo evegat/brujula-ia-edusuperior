@@ -8,7 +8,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "test": "node --experimental-strip-types scripts/test-api.mjs && node scripts/verify-all.mjs && node --experimental-strip-types scripts/test-adversarial.mjs"
+    "test": "node --experimental-strip-types scripts/test-api.mjs && node scripts/verify-all.mjs && node --experimental-strip-types scripts/test-adversarial.mjs && node scripts/test-ux-ui.mjs"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^12.6.14",

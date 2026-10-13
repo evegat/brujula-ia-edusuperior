@@ -115,32 +115,7 @@ function normalizeForSearch(str: string): string {
       </div>
     </div>
 
-    <!-- Filtro 3: Accesos Rápidos Cruzados (Filtros Combinados de 1 Clic) -->
-    <div style="margin-bottom:1.15rem; background:rgba(0,0,0,0.02); padding:0.75rem; border-radius:8px; border:1px solid var(--border-color);">
-      <div style="font-size:0.74rem; font-weight:700; text-transform:uppercase; color:var(--text-muted); margin-bottom:0.4rem; letter-spacing:0.5px;">
-        ⚡ Accesos Rápidos Cruzados:
-      </div>
-      <div style="display:flex; gap:0.35rem; flex-wrap:wrap;">
-        <button type="button" class="btn btn-outline btn-sm btn-quick-cross" data-tipo="Estatales" data-estado="con-instrumento" style="font-size:0.76rem; padding:0.25rem 0.55rem;">
-          🏛️ Estatales con instrumento ({estatalesCon})
-        </button>
-        <button type="button" class="btn btn-outline btn-sm btn-quick-cross" data-tipo="Estatales" data-estado="sin-instrumento" style="font-size:0.76rem; padding:0.25rem 0.55rem;">
-          🏛️ Estatales sin instrumento público ({estatalesSin})
-        </button>
-        <button type="button" class="btn btn-outline btn-sm btn-quick-cross" data-tipo="Privadas CRUCH" data-estado="con-instrumento" style="font-size:0.76rem; padding:0.25rem 0.55rem;">
-          🎓 CRUCH con instrumento ({cruchCon})
-        </button>
-        <button type="button" class="btn btn-outline btn-sm btn-quick-cross" data-tipo="Privadas CRUCH" data-estado="sin-instrumento" style="font-size:0.76rem; padding:0.25rem 0.55rem;">
-          🎓 CRUCH sin instrumento público ({cruchSin})
-        </button>
-        <button type="button" class="btn btn-outline btn-sm btn-quick-cross" data-tipo="Privadas no CRUCH" data-estado="con-instrumento" style="font-size:0.76rem; padding:0.25rem 0.55rem;">
-          🏢 No-CRUCH con instrumento ({noCruchCon})
-        </button>
-        <button type="button" class="btn btn-outline btn-sm btn-quick-cross" data-tipo="Privadas no CRUCH" data-estado="sin-instrumento" style="font-size:0.76rem; padding:0.25rem 0.55rem;">
-          🏢 No-CRUCH sin instrumento público ({noCruchSin})
-        </button>
-      </div>
-    </div>
+
 
     <!-- Buscador en Tiempo Real y Contador -->
     <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.85rem; border-top:1px solid var(--border-color); padding-top:0.85rem;">
@@ -418,41 +393,7 @@ function normalizeForSearch(str: string): string {
     });
   });
 
-  // Manejo de Accesos Rápidos Cruzados (1 clic activa ambos filtros)
-  document.querySelectorAll('.btn-quick-cross').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const targetTipo = btn.getAttribute('data-tipo');
-      const targetEstado = btn.getAttribute('data-estado');
 
-      // Actualizar estado interno
-      filtroTipoActual = targetTipo;
-      filtroEstadoActual = targetEstado;
-
-      // Actualizar UI de botones de tipo
-      document.querySelectorAll('.btn-f-tipo').forEach(b => {
-        if (b.getAttribute('data-tipo') === targetTipo) {
-          b.classList.remove('btn-outline');
-          b.classList.add('btn-primary');
-        } else {
-          b.classList.remove('btn-primary');
-          b.classList.add('btn-outline');
-        }
-      });
-
-      // Actualizar UI de botones de estado
-      document.querySelectorAll('.btn-f-estado').forEach(b => {
-        if (b.getAttribute('data-estado') === targetEstado) {
-          b.classList.remove('btn-outline');
-          b.classList.add('btn-primary');
-        } else {
-          b.classList.remove('btn-primary');
-          b.classList.add('btn-outline');
-        }
-      });
-
-      filtrarMatriz();
-    });
-  });
 
   searchInput?.addEventListener('input', (e) => {
     busquedaActual = e.target.value;

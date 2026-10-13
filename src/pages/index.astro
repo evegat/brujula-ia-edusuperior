@@ -178,14 +178,17 @@ import ModalAvisoLegal from '../components/ModalAvisoLegal.astro';
         const targetId = btn.dataset.tab;
         if (targetId) {
           switchTab(targetId);
+          // Registrar evento en Umami
+          if ((window as any).umami) {
+            (window as any).umami.track('tab_switch', { tab: targetId });
+          }
           // Actualizar hash en la URL sin saltar abruptamente
           const hashMapping: Record<string, string> = {
             'tab-matriz': '#matriz-nacional',
-            'tab-checklist': '#benchmarking',
-            'tab-catalogo': '#catalogo',
-            'tab-comparador': '#comparador',
+            'tab-kit': '#kit',
             'tab-compras': '#compras',
-            'tab-comunidad': '#comunidad'
+            'tab-catalogo': '#catalogo',
+            'tab-metodologia': '#metodologia'
           };
           if (hashMapping[targetId]) {
             history.replaceState(null, '', hashMapping[targetId]);
@@ -199,15 +202,13 @@ import ModalAvisoLegal from '../components/ModalAvisoLegal.astro';
       const hash = window.location.hash;
       if (hash === '#compras') {
         switchTab('tab-compras');
-      } else if (hash === '#benchmarking' || hash === '#madurez') {
-        switchTab('tab-checklist');
+      } else if (hash === '#kit' || hash === '#ley-21719') {
+        switchTab('tab-kit');
       } else if (hash === '#catalogo' || hash === '#clausulas') {
         switchTab('tab-catalogo');
-      } else if (hash === '#comparador') {
-        switchTab('tab-comparador');
-      } else if (hash === '#comunidad' || hash === '#datos' || hash === '#ecosistema') {
-        switchTab('tab-comunidad');
-      } else if (hash === '#matriz-nacional' || hash === '#inicio') {
+      } else if (hash === '#metodologia' || hash === '#datos' || hash === '#comunidad' || hash === '#versiones' || hash === '#ecosistema') {
+        switchTab('tab-metodologia');
+      } else if (hash === '#matriz-nacional' || hash === '#planilla' || hash === '#inicio') {
         switchTab('tab-matriz');
       }
     }
