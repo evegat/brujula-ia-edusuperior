@@ -3,7 +3,6 @@ export const prerender = true;
 
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
-// RagAssistant temporalmente oculto hasta completar integración
 import MatrizNacional from '../components/MatrizNacional.astro';
 import ChecklistBenchmarking from '../components/ChecklistBenchmarking.astro';
 import Comparador from '../components/Comparador.astro';
@@ -16,16 +15,227 @@ import Footer from '../components/Footer.astro';
 import ModalCrowdsourcing from '../components/ModalCrowdsourcing.astro';
 ---
 
-<Layout title="Brújula IA Educación Superior — Observatorio Abierto & Matriz 54 Universidades">
+<Layout title="Brújula IA Educación Superior — Observatorio Abierto de Normativas">
+  
+  <!-- Encabezado Editorial y Propósito -->
   <Hero />
-  <MatrizNacional />
-  <ChecklistBenchmarking />
-  <Comparador />
-  <CitasTextuales />
-  <CatalogoProtocolos />
-  <ComprasPublicas />
-  <Ecosistema />
-  <ComunidadBuzon />
+
+  <!-- Barra de Pestañas Principal -->
+  <nav class="tabs-nav" aria-label="Secciones del Observatorio">
+    <div class="tabs-container">
+      <button class="tab-btn active" data-tab="tab-matriz">
+        🏛️ Matriz 54 Universidades
+      </button>
+      <button class="tab-btn" data-tab="tab-checklist">
+        📋 Checklist de Adopción
+      </button>
+      <button class="tab-btn" data-tab="tab-catalogo">
+        📚 Catálogo & Citas
+      </button>
+      <button class="tab-btn" data-tab="tab-comparador">
+        ⚖️ Comparador
+      </button>
+      <button class="tab-btn" data-tab="tab-compras">
+        💰 Compras (Ues del Estado)
+      </button>
+      <button class="tab-btn" data-tab="tab-comunidad">
+        💬 Aportes & Datos
+      </button>
+    </div>
+  </nav>
+
+  <!-- Contenido por Pestañas -->
+  <div class="tabs-content">
+    
+    <!-- Pestaña 1: Censo y Matriz de 54 Universidades -->
+    <div id="tab-matriz" class="tab-panel active">
+      <MatrizNacional />
+    </div>
+
+    <!-- Pestaña 2: Checklist y Benchmarking de 7 Ejes -->
+    <div id="tab-checklist" class="tab-panel">
+      <ChecklistBenchmarking />
+    </div>
+
+    <!-- Pestaña 3: Catálogo de Normativas y Citas Textuales -->
+    <div id="tab-catalogo" class="tab-panel">
+      <CatalogoProtocolos />
+      <div style="margin-top: 3.5rem;">
+        <CitasTextuales />
+      </div>
+    </div>
+
+    <!-- Pestaña 4: Comparador Lado a Lado -->
+    <div id="tab-comparador" class="tab-panel">
+      <Comparador />
+    </div>
+
+    <!-- Pestaña 5: Compras Públicas (Exclusivo Ues Estatales) -->
+    <div id="tab-compras" class="tab-panel">
+      <ComprasPublicas />
+    </div>
+
+    <!-- Pestaña 6: Aportes, Ecosistema y Datos Abiertos -->
+    <div id="tab-comunidad" class="tab-panel">
+      <ComunidadBuzon />
+      <div style="margin-top: 3.5rem;">
+        <Ecosistema />
+      </div>
+    </div>
+
+  </div>
+
   <Footer />
   <ModalCrowdsourcing />
+
 </Layout>
+
+<style>
+  .tabs-nav {
+    position: sticky;
+    top: 0;
+    background: var(--canvas-bg);
+    z-index: 100;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 2.25rem;
+    padding-top: 0.5rem;
+  }
+
+  .tabs-container {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    scrollbar-width: thin;
+  }
+
+  .tab-btn {
+    background: transparent;
+    border: 1px solid transparent;
+    border-bottom: 2px solid transparent;
+    padding: 0.65rem 1rem;
+    font-family: var(--font-sans);
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+    white-space: nowrap;
+    border-radius: 6px 6px 0 0;
+    transition: var(--transition);
+  }
+
+  .tab-btn:hover {
+    color: var(--text-main);
+    background: rgba(0, 0, 0, 0.03);
+  }
+
+  .tab-btn.active {
+    color: var(--accent-blue);
+    border-bottom-color: var(--accent-blue);
+    background: var(--card-bg);
+    border-top: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+  }
+
+  .tab-panel {
+    display: none;
+  }
+
+  .tab-panel.active {
+    display: block;
+    animation: fadeIn 0.2s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<script>
+  function setupTabs() {
+    const tabButtons = document.querySelectorAll<HTMLButtonElement>('.tab-btn');
+    const tabPanels = document.querySelectorAll<HTMLElement>('.tab-panel');
+
+    function switchTab(tabId: string) {
+      tabButtons.forEach(btn => {
+        if (btn.dataset.tab === tabId) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      tabPanels.forEach(panel => {
+        if (panel.id === tabId) {
+          panel.classList.add('active');
+        } else {
+          panel.classList.remove('active');
+        }
+      });
+    }
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.dataset.tab;
+        if (targetId) {
+          switchTab(targetId);
+          // Actualizar hash en la URL sin saltar abruptamente
+          const hashMapping: Record<string, string> = {
+            'tab-matriz': '#matriz-nacional',
+            'tab-checklist': '#benchmarking',
+            'tab-catalogo': '#catalogo',
+            'tab-comparador': '#comparador',
+            'tab-compras': '#compras',
+            'tab-comunidad': '#comunidad'
+          };
+          if (hashMapping[targetId]) {
+            history.replaceState(null, '', hashMapping[targetId]);
+          }
+        }
+      });
+    });
+
+    // Mapeo de anclas externas o clics del sidebar hacia las pestañas
+    function handleHashChange() {
+      const hash = window.location.hash;
+      if (hash === '#compras') {
+        switchTab('tab-compras');
+      } else if (hash === '#benchmarking' || hash === '#madurez') {
+        switchTab('tab-checklist');
+      } else if (hash === '#catalogo' || hash === '#clausulas') {
+        switchTab('tab-catalogo');
+      } else if (hash === '#comparador') {
+        switchTab('tab-comparador');
+      } else if (hash === '#comunidad' || hash === '#datos' || hash === '#ecosistema') {
+        switchTab('tab-comunidad');
+      } else if (hash === '#matriz-nacional' || hash === '#inicio') {
+        switchTab('tab-matriz');
+      }
+    }
+
+    window.addEventListener('hashchange', handleHashChange);
+    // Ejecutar al cargar si hay hash en la URL
+    if (window.location.hash) {
+      handleHashChange();
+    }
+
+    // Interceptar clics en los enlaces del sidebar para cambiar de pestaña suavemente
+    document.querySelectorAll<HTMLAnchorElement>('.nav-link').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          setTimeout(() => handleHashChange(), 50);
+        }
+      });
+    });
+  }
+
+  // Ejecutar cuando el DOM esté listo
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupTabs);
+  } else {
+    setupTabs();
+  }
+</script>

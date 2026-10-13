@@ -6,114 +6,107 @@ const totalUes = matrizData.length; // 54
 const conInst = matrizData.filter(u => !u.en_brecha).length; // 32
 const enBrecha = matrizData.filter(u => u.en_brecha).length; // 22
 const totalDocs = inventarioData.length; // 52
+const docsUes = inventarioData.filter(d => !d.tipo_institucion?.includes('IP') && !d.tipo_institucion?.includes('CFT')).length; // 46
+const docsIP = totalDocs - docsUes; // 6
 ---
 
-<section id="inicio" style="margin-bottom: 4.5rem; scroll-margin-top: 2rem;">
-  <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1rem;">
-    <span class="badge badge-blue">Bien Público Digital</span>
-    <span class="badge badge-green">Datos Abiertos CC BY 4.0</span>
-    <span class="badge badge-purple">Despliegue Serverless $0 Costo</span>
-  </div>
-
-  <h1 style="font-size:clamp(2.1rem, 4.2vw, 3.1rem); line-height:1.15; margin-bottom:1.25rem; max-width:980px;">
-    Radiografía y Observatorio de Inteligencia Artificial en la Educación Superior Chilena
-  </h1>
-
-  <p style="font-size:1.15rem; color:var(--text-muted); max-width:860px; line-height:1.6; margin-bottom:2rem;">
-    Catastro granular de las 54 universidades oficiales de Chile, diagnóstico de brecha regulatoria, cruce de licitaciones tecnológicas en compras públicas y comparador de normativas de IA.
-  </p>
-
-  <!-- Grilla de KPIs Principales -->
-  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:1.25rem; margin-bottom:2.25rem;">
-    <div class="card" style="text-align:center; padding:1.5rem;">
-      <div style="font-size:2.4rem; font-weight:700; color:#06182c; font-family:var(--font-serif); line-height:1; margin-bottom:0.35rem;">
-        {totalDocs}
-      </div>
-      <div style="font-size:0.84rem; color:var(--text-muted);">Instrumentos Catastrados</div>
+<section id="inicio" style="margin-bottom: 2.75rem; scroll-margin-top: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 2.25rem;">
+  
+  <!-- Encabezado Editorial Sobrio -->
+  <div style="margin-bottom: 1.5rem;">
+    <div style="font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; color: var(--accent-blue); margin-bottom: 0.5rem;">
+      Observatorio Abierto & Datos Públicos
     </div>
 
-    <div class="card" style="text-align:center; padding:1.5rem; border-left:3px solid var(--accent-green);">
-      <div style="font-size:2.4rem; font-weight:700; color:var(--accent-green); font-family:var(--font-serif); line-height:1; margin-bottom:0.35rem;">
-        59.3%
-      </div>
-      <div style="font-size:0.84rem; color:var(--text-muted);">Cobertura Oficial ({conInst}/54 Ues)</div>
-    </div>
+    <h1 style="font-size: clamp(1.85rem, 3.5vw, 2.65rem); line-height: 1.2; font-family: var(--font-serif); font-weight: 700; color: var(--text-main); margin-bottom: 0.85rem; max-width: 950px;">
+      Brújula IA: Normativas de Inteligencia Artificial en la Educación Superior Chilena
+    </h1>
 
-    <div class="card" style="text-align:center; padding:1.5rem; border-left:3px solid var(--accent-red);">
-      <div style="font-size:2.4rem; font-weight:700; color:var(--accent-red); font-family:var(--font-serif); line-height:1; margin-bottom:0.35rem;">
-        {enBrecha}
-      </div>
-      <div style="font-size:0.84rem; color:var(--text-muted);">Universidades en Brecha</div>
-    </div>
-
-    <div class="card" style="text-align:center; padding:1.5rem; border-left:3px solid var(--accent-amber);">
-      <div style="font-size:2.4rem; font-weight:700; color:var(--accent-amber); font-family:var(--font-serif); line-height:1; margin-bottom:0.35rem;">
-        85
-      </div>
-      <div style="font-size:0.84rem; color:var(--text-muted);">Compras Públicas IA Auditadas</div>
-    </div>
-  </div>
-
-  <!-- Rutas de Acceso por Perfil (UX Discovery) -->
-  <div style="background:var(--card-bg); border:1px solid var(--border-color); border-radius:14px; padding:1.75rem; box-shadow:var(--shadow-sm); margin-bottom:2rem;">
-    <div style="font-size:0.82rem; font-weight:700; text-transform:uppercase; color:var(--text-muted); margin-bottom:1rem; letter-spacing:0.5px;">
-      ¿Cómo deseas explorar el observatorio? Selecciona tu perfil:
-    </div>
-
-    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(270px, 1fr)); gap:1.25rem;">
-      
-      <!-- Perfil 1: Autoridades y Directivos -->
-      <a href="#matriz-nacional" class="card" style="text-decoration:none; padding:1.25rem; border-top:3px solid var(--accent-blue); display:flex; flex-direction:column; justify-content:space-between;">
-        <div>
-          <div style="font-size:1.3rem; margin-bottom:0.4rem;">🏛️</div>
-          <div style="font-weight:700; color:var(--text-main); font-size:1rem; margin-bottom:0.35rem;">Autoridades & Directivos</div>
-          <p style="font-size:0.84rem; color:var(--text-muted); line-height:1.45; margin:0;">
-            Compara tu plantel en la Matriz Nacional de las 54 universidades y contrasta dimensiones lado a lado.
-          </p>
-        </div>
-        <div style="margin-top:1rem; font-size:0.82rem; font-weight:600; color:var(--accent-blue);">
-          Ver Matriz Nacional &rarr;
-        </div>
-      </a>
-
-      <!-- Perfil 2: Investigadores y Periodistas -->
-      <a href="#compras" class="card" style="text-decoration:none; padding:1.25rem; border-top:3px solid var(--accent-amber); display:flex; flex-direction:column; justify-content:space-between;">
-        <div>
-          <div style="font-size:1.3rem; margin-bottom:0.4rem;">📊</div>
-          <div style="font-weight:700; color:var(--text-main); font-size:1rem; margin-bottom:0.35rem;">Investigadores & Periodistas</div>
-          <p style="font-size:0.84rem; color:var(--text-muted); line-height:1.45; margin:0;">
-            Audita las 85 licitaciones de software e IA en ChileCompra y descarga datasets abiertos en JSON.
-          </p>
-        </div>
-        <div style="margin-top:1rem; font-size:0.82rem; font-weight:600; color:var(--accent-amber);">
-          Auditar Compras Públicas &rarr;
-        </div>
-      </a>
-
-      <!-- Perfil 3: Docentes y Estudiantes -->
-      <a href="#clausulas" class="card" style="text-decoration:none; padding:1.25rem; border-top:3px solid var(--accent-purple); display:flex; flex-direction:column; justify-content:space-between;">
-        <div>
-          <div style="font-size:1.3rem; margin-bottom:0.4rem;">🔍</div>
-          <div style="font-weight:700; color:var(--text-main); font-size:1rem; margin-bottom:0.35rem;">Docentes & Estudiantes</div>
-          <p style="font-size:0.84rem; color:var(--text-muted); line-height:1.45; margin:0;">
-            Revisa citas textuales verificadas por temática: uso de IA en tesis, autoría, evaluación y sanciones.
-          </p>
-        </div>
-        <div style="margin-top:1rem; font-size:0.82rem; font-weight:600; color:var(--accent-purple);">
-          Explorar Citas Textuales &rarr;
-        </div>
-      </a>
-
-    </div>
-  </div>
-
-  <!-- Manifiesto de Observatorio Aplicado -->
-  <div style="background:var(--accent-green-soft); border-left:4px solid var(--accent-green); padding:1.25rem 1.5rem; border-radius:0 10px 10px 0;">
-    <h4 style="color:var(--accent-green); font-size:1.05rem; margin-bottom:0.25rem;">
-      Nuestra Filosofía: Observatorio Aplicado, No un Tribunal Punitivo
-    </h4>
-    <p style="font-size:0.92rem; color:var(--text-main); margin:0; line-height:1.55;">
-      No enjuiciamos ni clasificamos a las universidades en categorías punitivas. Visibilizamos la diversidad de modelos de gobernanza (centralizados, federados y de plataforma) para compartir buenas prácticas, acelerar la autorregulación ética y asegurar que la tecnología responda a propósitos pedagógicos legítimos.
+    <p style="font-size: 1.05rem; color: var(--text-muted); max-width: 860px; line-height: 1.55; margin-bottom: 1rem;">
+      Catastro independiente de políticas, reglamentos docentes y compras tecnológicas en las <strong>54 universidades oficiales</strong> reconocidas por el Estado de Chile. Mapeamos qué planteles cuentan con directrices de aula y cuáles presentan brecha regulatoria.
     </p>
+
+    <div style="font-size: 0.85rem; color: var(--text-muted);">
+      Diseñado y desarrollado por <a href="https://www.linkedin.com/in/evegat1989/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-blue); font-weight: 600; text-decoration: none;">Eduardo Vega Toledo</a> • Datos Abiertos CC BY 4.0
+    </div>
   </div>
+
+  <!-- Fila de Contexto Conceptual Inmediato (Sobria, Sin Hype) -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+    
+    <!-- Dato 1: Censo de Universidades -->
+    <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.15rem 1.25rem;">
+      <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.35rem; letter-spacing: 0.5px;">
+        🏛️ Censo Nacional de Universidades
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.25rem;">
+        <span style="font-size: 1.75rem; font-weight: 700; font-family: var(--font-serif); color: var(--text-main); line-height: 1;">
+          {conInst} de {totalUes}
+        </span>
+        <span style="font-size: 0.85rem; font-weight: 600; color: var(--accent-green);">
+          (59.3% con norma)
+        </span>
+      </div>
+      <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4;">
+        32 universidades con protocolo o política pública; <strong>{enBrecha} universidades en brecha</strong> (sin documento hallado).
+      </div>
+    </div>
+
+    <!-- Dato 2: Documentos Analizados -->
+    <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.15rem 1.25rem;">
+      <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.35rem; letter-spacing: 0.5px;">
+        📄 Documentos & Reglamentos Analizados
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.25rem;">
+        <span style="font-size: 1.75rem; font-weight: 700; font-family: var(--font-serif); color: var(--text-main); line-height: 1;">
+          {totalDocs}
+        </span>
+        <span style="font-size: 0.85rem; color: var(--text-muted);">
+          políticas y decretos
+        </span>
+      </div>
+      <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4;">
+        {docsUes} reglamentos en universidades (centrales o por facultad) y {docsIP} en institutos profesionales y CFTs.
+      </div>
+    </div>
+
+    <!-- Dato 3: Compras Públicas (Exclusivo Ues Estatales) -->
+    <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.15rem 1.25rem;">
+      <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.35rem; letter-spacing: 0.5px;">
+        💰 Compras Públicas (Sólo Ues del Estado)
+      </div>
+      <div style="display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.25rem;">
+        <span style="font-size: 1.75rem; font-weight: 700; font-family: var(--font-serif); color: var(--text-main); line-height: 1;">
+          85
+        </span>
+        <span style="font-size: 0.85rem; color: var(--text-muted);">
+          contratos en Mercado Público
+        </span>
+      </div>
+      <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4;">
+        Licitaciones de software e IA en <strong>10 universidades públicas</strong> (el 30% adquiere IA sin contar con protocolo previo).
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Botones de Navegación Rápida a Contenido Sustantivo -->
+  <div style="display: flex; gap: 0.65rem; flex-wrap: wrap;">
+    <a href="#matriz-nacional" class="btn btn-primary btn-sm" style="font-weight: 600;">
+      🏛️ Ver Matriz de 54 Universidades
+    </a>
+    <a href="#benchmarking" class="btn btn-outline btn-sm">
+      📋 Checklist de Adopción (7 Ejes)
+    </a>
+    <a href="#clausulas" class="btn btn-outline btn-sm">
+      🔍 Citas Textuales & Tesis
+    </a>
+    <a href="#catalogo" class="btn btn-outline btn-sm">
+      📚 Catálogo de Normativas
+    </a>
+    <a href="#compras" class="btn btn-outline btn-sm">
+      💰 Compras en Ues Estatales
+    </a>
+  </div>
+
 </section>
