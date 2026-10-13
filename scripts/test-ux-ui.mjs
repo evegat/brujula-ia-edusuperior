@@ -62,6 +62,15 @@ assert.ok(html.includes('Ley N° 20.285') || html.includes('Ley N&#176; 20.285')
 assert.ok(html.includes('Ley N° 19.886') || html.includes('Ley N&#176; 19.886'), 'Mención a Ley de Compras');
 console.log('✓ Blindaje normativo chileno verificado (Transparencia, Compras, Cita y Protección de Datos)');
 
+// 7. Verificación de Guía de Uso y Botones de Aporte (Links / PDF)
+console.log('\n--- 7. Guía de Orientación & Botones de Aporte (Links / PDF) ---');
+assert.ok(html.includes('id="guia-uso"'), 'Debe incluir sección de orientación rápida');
+assert.ok(html.includes('Cómo explorar y utilizar este Observatorio') || html.includes('C&#243;mo explorar'), 'Debe incluir título explicativo de orientación');
+assert.ok(html.includes('mailto:eduardo@evegat.cl'), 'Debe incluir enlaces directos para enviar PDF por correo');
+assert.ok(html.includes('Aportar Enlace'), 'Debe incluir botones de aporte de enlace');
+assert.ok(html.includes('Enviar PDF'), 'Debe incluir botones para enviar PDF por correo');
+console.log('✓ Guía rápida de uso y canales duales (link web + envío de PDF por correo) verificados');
+
 console.log('\n======================================================');
 console.log('🎉 TODAS LAS PRUEBAS DE UX / UI Y USABILIDAD PASARON');
 console.log('======================================================\n');

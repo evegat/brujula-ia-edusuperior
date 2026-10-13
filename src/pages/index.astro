@@ -3,6 +3,7 @@ export const prerender = true;
 
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
+import GuiaUso from '../components/GuiaUso.astro';
 import MatrizNacional from '../components/MatrizNacional.astro';
 import PlanillaChequeo from '../components/PlanillaChequeo.astro';
 import ChecklistBenchmarking from '../components/ChecklistBenchmarking.astro';
@@ -22,6 +23,9 @@ import ModalAvisoLegal from '../components/ModalAvisoLegal.astro';
   
   <!-- Encabezado Editorial y Propósito -->
   <Hero />
+
+  <!-- Guía Rápida de Uso y Orientación -->
+  <GuiaUso />
 
   <!-- Barra de Navegación Sobria (Sin Slider ni Scroll Horizontal) -->
   <nav class="tabs-nav" aria-label="Secciones del Observatorio">

@@ -83,8 +83,18 @@ import matrizData from '../../data/matriz_54_universidades.json';
 
       <!-- Aviso de archivos adjuntos vía email -->
       <div style="background:var(--accent-blue-soft); border-left:3px solid var(--accent-blue); padding:0.85rem 1rem; border-radius:4px; font-size:0.82rem; color:var(--text-main); line-height:1.45;">
-        📎 <strong>¿Tienes el archivo PDF o resolución escaneada?</strong><br />
-        Por motivos de seguridad y resguardo documental, el envío de archivos adjuntos se canaliza directamente vía correo electrónico a <a href="mailto:eduardo@evegat.cl?subject=Adjunto%20Normativa%20IA" style="font-weight:600; text-decoration:underline;">eduardo@evegat.cl</a>.
+        <div style="margin-bottom:0.45rem;">
+          📎 <strong>¿Tienes el archivo PDF o resolución escaneada?</strong><br />
+          Por resguardo documental y seguridad, los documentos en PDF se canalizan directamente por correo electrónico:
+        </div>
+        <a 
+          id="crowd-mailto-pdf"
+          href="mailto:eduardo@evegat.cl?subject=Adjunto%20Normativa%20IA%20-%20Educaci%C3%B3n%20Superior&body=Estimado%20Eduardo%2C%0A%0AAdjunto%20el%20documento%20PDF%20o%20resoluci%C3%B3n%20de%20la%20universidad%20para%20su%20incorporaci%C3%B3n%20al%20catastro.%0A%0ASaludos%2C" 
+          class="btn btn-outline btn-sm"
+          style="display:inline-flex; align-items:center; gap:0.35rem; font-size:0.8rem; padding:0.35rem 0.75rem; background:#ffffff; color:var(--accent-blue); font-weight:600; text-decoration:none; border-color:var(--accent-blue);"
+        >
+          ✉️ Enviar archivo PDF a eduardo@evegat.cl
+        </a>
       </div>
 
       <div id="crowd-feedback" style="display:none; padding:0.75rem; border-radius:6px; font-size:0.85rem;"></div>
@@ -151,7 +161,21 @@ import matrizData from '../../data/matriz_54_universidades.json';
         selectInst.value = institucionNombre;
       }
     }
+    function updateMailtoLink(nombre) {
+      const mailtoLink = document.getElementById('crowd-mailto-pdf');
+      if (!mailtoLink) return;
+      const instStr = nombre || 'Institución Universitaria';
+      const subj = encodeURIComponent(`Normativa PDF - ${instStr}`);
+      const body = encodeURIComponent(`Estimado Eduardo,\n\nAdjunto el documento PDF o decreto de la institución ${instStr} para su incorporación al catastro de la Brújula IA:\n\n- Institución: ${instStr}\n- Nombre o N° de Resolución/Decreto: \n- Año/Fecha: \n- Enlace adicional (opcional): \n\nSaludos,\n`);
+      mailtoLink.href = `mailto:eduardo@evegat.cl?subject=${subj}&body=${body}`;
+    }
+
+    selectInst?.addEventListener('change', () => {
+      updateMailtoLink(selectInst.value);
+    });
+
     if (modal) {
+      updateMailtoLink(institucionNombre || selectInst?.value);
       modal.style.display = 'flex';
       setTimeout(() => {
         selectInst?.focus();

@@ -1,0 +1,79 @@
+---
+// src/components/GuiaUso.astro
+// Guía de uso sobria y ejecutiva para orientar la navegación del observatorio
+---
+
+<section id="guia-uso" style="margin-bottom: 2.75rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.5rem 1.75rem; box-shadow: var(--shadow-sm);">
+  
+  <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem;">
+    <div>
+      <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--accent-blue); letter-spacing: 0.6px; margin-bottom: 0.25rem;">
+        🧭 Orientación Rápida
+      </div>
+      <h2 style="font-size: 1.35rem; margin: 0; font-family: var(--font-serif); color: var(--text-main);">
+        Cómo explorar y utilizar este Observatorio
+      </h2>
+      <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0.35rem 0 0 0; line-height: 1.45; max-width: 780px;">
+        Plataforma abierta diseñada para directivos universitarios, docentes, investigadores y estudiantes. Sigue estos 3 pasos para orientar tu consulta:
+      </p>
+    </div>
+
+    <!-- Botones de Acción Directa para Colaboración -->
+    <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
+      <button 
+        type="button" 
+        class="btn btn-primary btn-sm"
+        onclick="window.abrirModalAporte && window.abrirModalAporte('')"
+        style="font-size: 0.82rem; padding: 0.45rem 0.85rem;"
+      >
+        🔗 Aportar Enlace de Normativa
+      </button>
+      <a 
+        href="mailto:eduardo@evegat.cl?subject=Aporte%20Normativa%20IA%20-%20Educaci%C3%B3n%20Superior&body=Estimado%20Eduardo%2C%0A%0AAdjunto%20el%20documento%20PDF%20o%20decreto%20de%20la%20universidad%20para%20su%20incorporaci%C3%B3n%20al%20catastro%3A%0A%0A-%20Universidad%20o%20Plantel%3A%20%0A-%20Nombre%20o%20N%C2%B0%20de%20la%20Resoluci%C3%B3n%2FDecreto%3A%20%0A-%20A%C3%B1o%2FFecha%3A%20%0A-%20Enlace%20adicional%20(opcional)%3A%20%0A%0ASaludos%2C"
+        class="btn btn-outline btn-sm"
+        style="font-size: 0.82rem; padding: 0.45rem 0.85rem; color: var(--accent-blue); border-color: var(--accent-blue);"
+      >
+        📎 Enviar PDF por Correo
+      </a>
+    </div>
+  </div>
+
+  <!-- 3 Pasos de Uso Clave -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem;">
+    
+    <!-- Paso 1 -->
+    <div style="background: rgba(0, 0, 0, 0.02); border: 1px solid var(--border-color); border-radius: 8px; padding: 1rem 1.15rem;">
+      <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem;">
+        <span style="background: var(--accent-blue); color: #ffffff; font-weight: 700; font-size: 0.72rem; width: 22px; height: 22px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;">1</span>
+        <strong style="font-size: 0.92rem; color: var(--text-main);">Encuentra tu Universidad</strong>
+      </div>
+      <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.45; margin: 0;">
+        Filtra en la <strong>Matriz Nacional</strong> por tipo (Estatales, CRUCH, Privadas) o busca por nombre/sigla. Revisa si tu plantel cuenta con directrices identificadas en aula, tesis, autoría o rediseño evaluativo.
+      </p>
+    </div>
+
+    <!-- Paso 2 -->
+    <div style="background: rgba(0, 0, 0, 0.02); border: 1px solid var(--border-color); border-radius: 8px; padding: 1rem 1.15rem;">
+      <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem;">
+        <span style="background: var(--accent-blue); color: #ffffff; font-weight: 700; font-size: 0.72rem; width: 22px; height: 22px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;">2</span>
+        <strong style="font-size: 0.92rem; color: var(--text-main);">Audita Compras y Privacidad</strong>
+      </div>
+      <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.45; margin: 0;">
+        Consulta las <strong>85 licitaciones en Mercado Público</strong> (universidades estatales) y evalúa el cumplimiento frente a la nueva <strong>Ley N° 21.719 de Protección de Datos Personales</strong> con nuestro kit de adopción.
+      </p>
+    </div>
+
+    <!-- Paso 3 -->
+    <div style="background: rgba(0, 0, 0, 0.02); border: 1px solid var(--border-color); border-radius: 8px; padding: 1rem 1.15rem;">
+      <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem;">
+        <span style="background: var(--accent-green); color: #ffffff; font-weight: 700; font-size: 0.72rem; width: 22px; height: 22px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;">3</span>
+        <strong style="font-size: 0.92rem; color: var(--text-main);">Aporta Normativas o Descarga</strong>
+      </div>
+      <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.45; margin: 0;">
+        Si falta la política de tu universidad o salió un decreto nuevo, <strong>aporta el link o mándanos el PDF</strong>. También puedes descargar la planilla y datasets abiertos en JSON/CSV sin barreras.
+      </p>
+    </div>
+
+  </div>
+
+</section>
