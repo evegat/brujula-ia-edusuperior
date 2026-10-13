@@ -1,0 +1,149 @@
+---
+// src/components/ModalAvisoLegal.astro
+---
+
+<div id="modal-aviso-legal" class="legal-modal-backdrop" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="modal-legal-title">
+  <div class="legal-modal-content card">
+    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.25rem;">
+      <div>
+        <span class="badge badge-blue" style="margin-bottom:0.4rem;">Marco Normativo Chileno</span>
+        <h3 id="modal-legal-title" style="margin:0; font-size:1.3rem;">Aviso Legal, Términos de Uso y Descargo de Responsabilidad</h3>
+      </div>
+      <button id="modal-legal-close-btn" type="button" class="btn btn-outline btn-sm" aria-label="Cerrar aviso legal" style="padding:0.25rem 0.5rem; font-size:1.1rem;">✕</button>
+    </div>
+
+    <div style="max-height:65vh; overflow-y:auto; padding-right:0.5rem; font-size:0.86rem; line-height:1.55; color:var(--text-main); display:flex; flex-direction:column; gap:1.2rem;">
+      
+      <!-- 1. Legitimidad de Publicación -->
+      <div style="background:var(--canvas-bg); padding:1rem; border-radius:8px; border-left:3px solid var(--accent-blue);">
+        <strong style="font-size:0.92rem; color:var(--text-main);">1. Marco Jurídico Fundante y Publicidad de Actos</strong>
+        <p style="margin:0.4rem 0 0; color:var(--text-muted); font-size:0.82rem;">
+          Este observatorio académico e independiente opera en estricta conformidad con el <strong>Artículo 19 N° 12 de la Constitución Política de Chile</strong> (Libertad de emitir opinión y de informar sin censura previa, e investigación científica).
+        </p>
+        <ul style="margin:0.4rem 0 0; padding-left:1.2rem; color:var(--text-muted); font-size:0.82rem;">
+          <li><strong>Universidades Estatales:</strong> Sus decretos y resoluciones son actos administrativos públicos por expreso mandato de la Ley N° 20.285 sobre Acceso a la Información Pública.</li>
+          <li><strong>Universidades Privadas:</strong> Sus reglamentos académicos rigen una función de interés público bajo la tutela de la Superintendencia de Educación Superior (Ley N° 21.091). No constituyen secretos comerciales ni información confidencial.</li>
+          <li><strong>Mercado Público:</strong> Los datos de compras de software e IA provienen de la plataforma oficial ChileCompra bajo la Ley N° 19.886 y son de dominio público irrestricto.</li>
+        </ul>
+      </div>
+
+      <!-- 2. Derecho de Cita -->
+      <div style="background:var(--canvas-bg); padding:1rem; border-radius:8px; border-left:3px solid var(--accent-green);">
+        <strong style="font-size:0.92rem; color:var(--text-main);">2. Derecho Legal de Cita (Ley N° 17.336, Art. 38)</strong>
+        <p style="margin:0.4rem 0 0; color:var(--text-muted); font-size:0.82rem;">
+          De conformidad con el Artículo 38 de la Ley de Propiedad Intelectual, es plenamente lícito transcribir pasajes necesarios de obras o reglamentos con fines de crítica, docencia o investigación, indicando la fuente, título y autor. Cada una de las 61 citas normativas en este observatorio cuenta con número de página identificado, hash SHA-256 del documento fuente y enlace oficial.
+        </p>
+      </div>
+
+      <!-- 3. Protección de Datos Personales -->
+      <div style="background:var(--canvas-bg); padding:1rem; border-radius:8px; border-left:3px solid var(--accent-purple);">
+        <strong style="font-size:0.92rem; color:var(--text-main);">3. Protección de Datos Personales (Leyes N° 19.628 y N° 21.719)</strong>
+        <p style="margin:0.4rem 0 0; color:var(--text-muted); font-size:0.82rem;">
+          Brújula IA <strong>no almacena, trata ni publica ningún dato personal de personas naturales</strong> (no existen RUTs de alumnos, calificaciones individuales ni correos privados). El objeto de análisis se circunscribe a personas jurídicas (Universidades) y a los actos formales de autoridades en el ejercicio de su función institucional.
+        </p>
+      </div>
+
+      <!-- 4. Descargo de Responsabilidad Fáctico -->
+      <div style="background:var(--canvas-bg); padding:1rem; border-radius:8px; border-left:3px solid var(--accent-amber);">
+        <strong style="font-size:0.92rem; color:var(--text-main);">4. Descargo de Responsabilidad Fáctica (*Disclaimer*)</strong>
+        <p style="margin:0.4rem 0 0; color:var(--text-muted); font-size:0.82rem;">
+          La calificación <em>«Sin instrumento público identificado en el levantamiento»</em> es estrictamente descriptiva de la búsqueda realizada en portales abiertos. No constituye una afirmación de inexistencia material ni una imputación de omisión, reconociendo la posible vigencia de reglamentos en intranets privadas o borradores en trámite interno.
+        </p>
+      </div>
+
+      <!-- 5. Protocolo de Rectificación en 48 Horas -->
+      <div style="background:rgba(5, 150, 105, 0.05); padding:1rem; border-radius:8px; border:1px solid rgba(5, 150, 105, 0.2);">
+        <strong style="font-size:0.92rem; color:var(--accent-green);">5. Protocolo de Rectificación Expedita y Buena Fe (48 Horas)</strong>
+        <p style="margin:0.4rem 0 0; color:var(--text-main); font-size:0.82rem; line-height:1.5;">
+          Cualquier universidad o miembro de la comunidad que identifique una omisión o disponga de una nueva normativa aprobada puede remitirla a <strong>eduardo@evegat.cl</strong>. El observatorio se compromete a verificar y actualizar la ficha en un plazo máximo de <strong>48 horas hábiles</strong>.
+        </p>
+      </div>
+
+    </div>
+
+    <div style="margin-top:1.25rem; display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--border-color); padding-top:1rem;">
+      <a href="/AVISO_LEGAL.md" target="_blank" style="font-size:0.8rem; color:var(--accent-blue); text-decoration:none; font-weight:600;">
+        📄 Ver Documento AVISO_LEGAL.md Completo &rarr;
+      </a>
+      <button id="modal-legal-btn-entendido" type="button" class="btn btn-primary btn-sm">
+        Entendido y Cerrar
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .legal-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(6, 24, 44, 0.7);
+    backdrop-filter: blur(4px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem;
+    box-sizing: border-box;
+  }
+  .legal-modal-content {
+    max-width: 720px;
+    width: 100%;
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    animation: modalFadeIn 0.2s ease-out;
+  }
+  @keyframes modalFadeIn {
+    from { opacity: 0; transform: scale(0.96); }
+    to { opacity: 1; transform: scale(1); }
+  }
+</style>
+
+<script is:inline>
+  const legalModal = document.getElementById('modal-aviso-legal');
+  const legalCloseBtn = document.getElementById('modal-legal-close-btn');
+  const legalEntendidoBtn = document.getElementById('modal-legal-btn-entendido');
+
+  function abrirModalLegal() {
+    if (legalModal) {
+      legalModal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function cerrarModalLegal() {
+    if (legalModal) {
+      legalModal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+  }
+
+  window.abrirModalAvisoLegal = abrirModalLegal;
+
+  legalCloseBtn?.addEventListener('click', cerrarModalLegal);
+  legalEntendidoBtn?.addEventListener('click', cerrarModalLegal);
+
+  legalModal?.addEventListener('click', (e) => {
+    if (e.target === legalModal) {
+      cerrarModalLegal();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && legalModal && legalModal.style.display === 'flex') {
+      cerrarModalLegal();
+    }
+  });
+
+  // Delegación global para botones que abren el aviso legal
+  document.addEventListener('click', (e) => {
+    const target = e.target;
+    if (target && target.closest && target.closest('.btn-abrir-aviso-legal')) {
+      e.preventDefault();
+      abrirModalLegal();
+    }
+  });
+</script>
