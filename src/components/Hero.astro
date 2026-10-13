@@ -1,0 +1,119 @@
+---
+import matrizData from '../../data/matriz_54_universidades.json';
+import inventarioData from '../../inventario.json';
+
+const totalUes = matrizData.length; // 54
+const conInst = matrizData.filter(u => !u.en_brecha).length; // 32
+const enBrecha = matrizData.filter(u => u.en_brecha).length; // 22
+const totalDocs = inventarioData.length; // 52
+---
+
+<section id="inicio" style="margin-bottom: 4.5rem; scroll-margin-top: 2rem;">
+  <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1rem;">
+    <span class="badge badge-blue">Bien Público Digital</span>
+    <span class="badge badge-green">Datos Abiertos CC BY 4.0</span>
+    <span class="badge badge-purple">Despliegue Serverless $0 Costo</span>
+  </div>
+
+  <h1 style="font-size:clamp(2.1rem, 4.2vw, 3.1rem); line-height:1.15; margin-bottom:1.25rem; max-width:980px;">
+    Radiografía y Observatorio de Inteligencia Artificial en la Educación Superior Chilena
+  </h1>
+
+  <p style="font-size:1.15rem; color:var(--text-muted); max-width:860px; line-height:1.6; margin-bottom:2rem;">
+    Catastro granular de las 54 universidades oficiales de Chile, diagnóstico de brecha regulatoria, cruce de licitaciones tecnológicas en compras públicas y asistente semántico de consultas normativas.
+  </p>
+
+  <!-- Grilla de KPIs Principales -->
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:1.25rem; margin-bottom:2.25rem;">
+    <div class="card" style="text-align:center; padding:1.5rem;">
+      <div style="font-size:2.4rem; font-weight:700; color:#06182c; font-family:var(--font-serif); line-height:1; margin-bottom:0.35rem;">
+        {totalDocs}
+      </div>
+      <div style="font-size:0.84rem; color:var(--text-muted);">Instrumentos Catastrados</div>
+    </div>
+
+    <div class="card" style="text-align:center; padding:1.5rem; border-left:3px solid var(--accent-green);">
+      <div style="font-size:2.4rem; font-weight:700; color:var(--accent-green); font-family:var(--font-serif); line-height:1; margin-bottom:0.35rem;">
+        59.3%
+      </div>
+      <div style="font-size:0.84rem; color:var(--text-muted);">Cobertura Oficial ({conInst}/54 Ues)</div>
+    </div>
+
+    <div class="card" style="text-align:center; padding:1.5rem; border-left:3px solid var(--accent-red);">
+      <div style="font-size:2.4rem; font-weight:700; color:var(--accent-red); font-family:var(--font-serif); line-height:1; margin-bottom:0.35rem;">
+        {enBrecha}
+      </div>
+      <div style="font-size:0.84rem; color:var(--text-muted);">Universidades en Brecha</div>
+    </div>
+
+    <div class="card" style="text-align:center; padding:1.5rem; border-left:3px solid var(--accent-amber);">
+      <div style="font-size:2.4rem; font-weight:700; color:var(--accent-amber); font-family:var(--font-serif); line-height:1; margin-bottom:0.35rem;">
+        85
+      </div>
+      <div style="font-size:0.84rem; color:var(--text-muted);">Compras Públicas IA Auditadas</div>
+    </div>
+  </div>
+
+  <!-- Rutas de Acceso por Perfil (UX Discovery) -->
+  <div style="background:var(--card-bg); border:1px solid var(--border-color); border-radius:14px; padding:1.75rem; box-shadow:var(--shadow-sm); margin-bottom:2rem;">
+    <div style="font-size:0.82rem; font-weight:700; text-transform:uppercase; color:var(--text-muted); margin-bottom:1rem; letter-spacing:0.5px;">
+      ¿Cómo deseas explorar el observatorio? Selecciona tu perfil:
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(270px, 1fr)); gap:1.25rem;">
+      
+      <!-- Perfil 1: Autoridades y Directivos -->
+      <a href="#matriz-nacional" class="card" style="text-decoration:none; padding:1.25rem; border-top:3px solid var(--accent-blue); display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <div style="font-size:1.3rem; margin-bottom:0.4rem;">🏛️</div>
+          <div style="font-weight:700; color:var(--text-main); font-size:1rem; margin-bottom:0.35rem;">Autoridades & Directivos</div>
+          <p style="font-size:0.84rem; color:var(--text-muted); line-height:1.45; margin:0;">
+            Compara tu plantel en la Matriz Nacional de las 54 universidades y contrasta dimensiones lado a lado.
+          </p>
+        </div>
+        <div style="margin-top:1rem; font-size:0.82rem; font-weight:600; color:var(--accent-blue);">
+          Ver Matriz Nacional &rarr;
+        </div>
+      </a>
+
+      <!-- Perfil 2: Investigadores y Periodistas -->
+      <a href="#compras" class="card" style="text-decoration:none; padding:1.25rem; border-top:3px solid var(--accent-amber); display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <div style="font-size:1.3rem; margin-bottom:0.4rem;">📊</div>
+          <div style="font-weight:700; color:var(--text-main); font-size:1rem; margin-bottom:0.35rem;">Investigadores & Periodistas</div>
+          <p style="font-size:0.84rem; color:var(--text-muted); line-height:1.45; margin:0;">
+            Audita las 85 licitaciones de software e IA en ChileCompra y descarga datasets abiertos en JSON.
+          </p>
+        </div>
+        <div style="margin-top:1rem; font-size:0.82rem; font-weight:600; color:var(--accent-amber);">
+          Auditar Compras Públicas &rarr;
+        </div>
+      </a>
+
+      <!-- Perfil 3: Docentes y Estudiantes -->
+      <a href="#asistente-rag" class="card" style="text-decoration:none; padding:1.25rem; border-top:3px solid var(--accent-purple); display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <div style="font-size:1.3rem; margin-bottom:0.4rem;">🤖</div>
+          <div style="font-weight:700; color:var(--text-main); font-size:1rem; margin-bottom:0.35rem;">Docentes & Estudiantes</div>
+          <p style="font-size:0.84rem; color:var(--text-muted); line-height:1.45; margin:0;">
+            Pregúntale a las normativas de IA con búsqueda semántica y revisa citas textuales sobre tesis y exámenes.
+          </p>
+        </div>
+        <div style="margin-top:1rem; font-size:0.82rem; font-weight:600; color:var(--accent-purple);">
+          Abrir Asistente RAG &rarr;
+        </div>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- Manifiesto de Observatorio Aplicado -->
+  <div style="background:var(--accent-green-soft); border-left:4px solid var(--accent-green); padding:1.25rem 1.5rem; border-radius:0 10px 10px 0;">
+    <h4 style="color:var(--accent-green); font-size:1.05rem; margin-bottom:0.25rem;">
+      Nuestra Filosofía: Observatorio Aplicado, No un Tribunal Punitivo
+    </h4>
+    <p style="font-size:0.92rem; color:var(--text-main); margin:0; line-height:1.55;">
+      No enjuiciamos ni clasificamos a las universidades en categorías punitivas. Visibilizamos la diversidad de modelos de gobernanza (centralizados, federados y de plataforma) para compartir buenas prácticas, acelerar la autorregulación ética y asegurar que la tecnología responda a propósitos pedagógicos legítimos.
+    </p>
+  </div>
+</section>

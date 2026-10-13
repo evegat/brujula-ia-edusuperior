@@ -1,0 +1,503 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { 
+  title = "Brújula IA Educación Superior — Observatorio Abierto de Protocolos en Chile",
+  description = "Observatorio abierto, catastro granular de 54 universidades y comparador de protocolos y normativas de Inteligencia Artificial en la educación superior chilena."
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧭</text></svg>" />
+  <meta name="theme-color" content="#06182c" />
+  
+  <!-- Tipografías Newsreader (Serif) e Inter (Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,600&display=swap" rel="stylesheet" />
+
+  <style is:global>
+    :root {
+      --sidebar-bg: #06182c;
+      --sidebar-text: #ffffff;
+      --canvas-bg: #faf8f5;
+      --card-bg: #ffffff;
+      --card-alt: #f8fafc;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --border-color: #e2e8f0;
+      
+      --accent-blue: #1d4ed8;
+      --accent-blue-soft: rgba(29, 78, 216, 0.1);
+      --accent-green: #059669;
+      --accent-green-soft: rgba(5, 150, 105, 0.1);
+      --accent-amber: #d97706;
+      --accent-amber-soft: rgba(217, 119, 6, 0.1);
+      --accent-red: #dc2626;
+      --accent-red-soft: rgba(220, 38, 38, 0.1);
+      --accent-purple: #7c3aed;
+      --accent-purple-soft: rgba(124, 58, 237, 0.1);
+
+      --font-serif: 'Newsreader', Georgia, serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+      --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    [data-theme="dark"] {
+      --sidebar-bg: #030a12;
+      --sidebar-text: #e2e8f0;
+      --canvas-bg: #0b1120;
+      --card-bg: #131c31;
+      --card-alt: #1a2540;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --border-color: #24324d;
+
+      --accent-blue: #3b82f6;
+      --accent-blue-soft: rgba(59, 130, 246, 0.15);
+      --accent-green: #10b981;
+      --accent-green-soft: rgba(16, 185, 129, 0.15);
+      --accent-amber: #f59e0b;
+      --accent-amber-soft: rgba(245, 158, 11, 0.15);
+      --accent-red: #ef4444;
+      --accent-red-soft: rgba(239, 68, 68, 0.15);
+      --accent-purple: #a855f7;
+      --accent-purple-soft: rgba(168, 85, 247, 0.15);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 1rem;
+      background: var(--accent-blue);
+      color: #ffffff;
+      padding: 0.65rem 1.25rem;
+      z-index: 9999;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: var(--shadow-md);
+      transition: top 0.2s ease;
+    }
+    .skip-link:focus {
+      top: 1rem;
+      color: #ffffff;
+      outline: 2px solid #ffffff;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--canvas-bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 600;
+      color: var(--text-main);
+      line-height: 1.25;
+    }
+
+    h1 { font-size: clamp(2rem, 4vw, 2.85rem); }
+    h2 { font-size: clamp(1.6rem, 3vw, 2.15rem); margin-bottom: 0.5rem; }
+    h3 { font-size: clamp(1.25rem, 2.5vw, 1.55rem); margin-bottom: 0.4rem; }
+
+    a {
+      color: var(--accent-blue);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Utilitarios */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.76rem;
+      font-weight: 600;
+      padding: 0.22rem 0.6rem;
+      border-radius: 9999px;
+      line-height: 1.3;
+      white-space: nowrap;
+    }
+    .badge-blue { background: var(--accent-blue-soft); color: var(--accent-blue); }
+    .badge-green { background: var(--accent-green-soft); color: var(--accent-green); }
+    .badge-amber { background: var(--accent-amber-soft); color: var(--accent-amber); }
+    .badge-red { background: var(--accent-red-soft); color: var(--accent-red); }
+    .badge-purple { background: var(--accent-purple-soft); color: var(--accent-purple); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1.25rem;
+      border-radius: 8px;
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: var(--transition);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .btn:hover {
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+    .btn-primary {
+      background: #06182c;
+      color: #ffffff;
+      border-color: #06182c;
+    }
+    [data-theme="dark"] .btn-primary {
+      background: #1e3a5f;
+      border-color: #2b4c7e;
+      color: #ffffff;
+    }
+    .btn-primary:hover {
+      background: #102a43;
+      box-shadow: var(--shadow-md);
+    }
+    .btn-outline {
+      background: transparent;
+      border-color: var(--border-color);
+      color: var(--text-main);
+    }
+    .btn-outline:hover {
+      background: var(--card-alt);
+      border-color: var(--text-muted);
+    }
+    .btn-accent {
+      background: var(--accent-green);
+      color: #ffffff;
+    }
+    .btn-accent:hover {
+      background: #047857;
+      box-shadow: var(--shadow-md);
+    }
+    .btn-sm {
+      padding: 0.4rem 0.75rem;
+      font-size: 0.8rem;
+      border-radius: 6px;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    .card:hover {
+      border-color: rgba(59, 130, 246, 0.3);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Layout Principal con Sidebar Fijo en Desktop y Colapsable en Móvil */
+    .app-layout {
+      display: flex;
+      min-height: 100vh;
+      width: 100%;
+    }
+
+    .sidebar {
+      width: 290px;
+      background-color: var(--sidebar-bg);
+      color: var(--sidebar-text);
+      padding: 2.25rem 1.5rem;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      height: 100vh;
+      overflow-y: auto;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease;
+    }
+
+    .content-area {
+      margin-left: 290px;
+      flex: 1;
+      padding: 2.5rem 3.5rem;
+      max-width: 1380px;
+      width: calc(100% - 290px);
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+
+    /* Barra Superior para Móviles */
+    .mobile-header {
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--sidebar-bg);
+      color: #ffffff;
+      padding: 0.9rem 1.25rem;
+      position: sticky;
+      top: 0;
+      z-index: 1100;
+      box-shadow: var(--shadow-md);
+      width: 100%;
+    }
+    .mobile-logo {
+      font-family: var(--font-serif);
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .mobile-toggle-btn {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      padding: 0.45rem 0.75rem;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+
+    .sidebar-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+      backdrop-filter: blur(2px);
+    }
+    .sidebar-overlay.active {
+      display: block;
+    }
+
+    @media (max-width: 1024px) {
+      .app-layout {
+        flex-direction: column;
+      }
+      .mobile-header {
+        display: flex;
+      }
+      .sidebar {
+        transform: translateX(-100%);
+        width: 280px;
+        box-shadow: 4px 0 24px rgba(0, 0, 0, 0.25);
+      }
+      .sidebar.open {
+        transform: translateX(0);
+      }
+      .content-area {
+        margin-left: 0;
+        width: 100%;
+        max-width: 100%;
+        padding: 1.75rem 1.25rem;
+        box-sizing: border-box;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .content-area {
+        padding: 1.25rem 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Enlace accesible de salto para lectores de pantalla y teclado -->
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+  <!-- Mobile Header Bar -->
+  <header class="mobile-header">
+    <a href="#inicio" class="mobile-logo">🧭 Brújula IA EduSup</a>
+    <div style="display:flex; gap:0.5rem; align-items:center;">
+      <button id="theme-btn-mobile" class="mobile-toggle-btn" aria-label="Alternar modo visual claro u oscuro">🌓</button>
+      <button id="menu-toggle-btn" class="mobile-toggle-btn" aria-label="Abrir menú de navegación">☰</button>
+    </div>
+  </header>
+
+  <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+  <div class="app-layout">
+    
+    <!-- Sidebar -->
+    <aside id="main-sidebar" class="sidebar">
+      <div>
+        <a href="#inicio" style="display:block; text-decoration:none; margin-bottom:2rem;">
+          <div style="font-family:var(--font-serif); font-size:1.6rem; font-weight:700; color:#ffffff; line-height:1.15;">
+            Brújula IA
+          </div>
+          <div style="font-size:0.82rem; color:#94a3b8; margin-top:0.35rem; font-weight:500;">
+            Educación Superior Chile
+          </div>
+          <div style="margin-top:0.5rem;">
+            <span class="badge badge-blue">Matriz 54 Universidades</span>
+          </div>
+        </a>
+
+        <nav aria-label="Navegación principal">
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.45rem;">
+            <li><a href="#inicio" class="nav-link">🧭 Inicio & Propósito</a></li>
+            <li><a href="#asistente-rag" class="nav-link" style="color:#60a5fa; font-weight:600;">🤖 Pregúntale a las Normas (RAG)</a></li>
+            <li><a href="#matriz-nacional" class="nav-link" style="color:#34d399; font-weight:600;">🏛️ Matriz 54 Universidades</a></li>
+            <li><a href="#madurez" class="nav-link">📊 Índice de Madurez (IMN)</a></li>
+            <li><a href="#comparador" class="nav-link">⚖️ Comparador de Políticas</a></li>
+            <li><a href="#clausulas" class="nav-link">🔍 Citas Literales Verificadas</a></li>
+            <li><a href="#catalogo" class="nav-link">📚 Catálogo de Instrumentos</a></li>
+            <li><a href="#compras" class="nav-link">💰 Compras Públicas IA (85)</a></li>
+            <li><a href="#ecosistema" class="nav-link">🌐 Ecosistema & Referentes</a></li>
+            <li><a href="#comunidad" class="nav-link">💬 Aportes & Crowdsourcing</a></li>
+            <li><a href="#datos" class="nav-link">💾 Datos Abiertos & API</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div style="margin-top:2.5rem; border-top:1px solid rgba(255,255,255,0.1); padding-top:1.5rem;">
+        <button id="theme-btn-desktop" class="btn btn-outline" aria-label="Alternar modo visual claro u oscuro" style="width:100%; color:#ffffff; border-color:rgba(255,255,255,0.2); font-size:0.84rem; margin-bottom:1.25rem;">
+          🌓 Alternar Modo Oscuro
+        </button>
+
+        <div style="font-size:0.75rem; color:#94a3b8; line-height:1.5;">
+          Director: <strong>Eduardo Vega Toledo</strong><br />
+          Ecosistema: <a href="https://evegat.cl" target="_blank" style="color:#60a5fa;">evegat.cl</a><br />
+          Actualizado: Octubre 2026 • CC BY 4.0
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main id="main-content" class="content-area">
+      <slot />
+    </main>
+
+  </div>
+
+  <script is:inline>
+    // Inicialización y persistencia de Tema (Light / Dark)
+    function applyTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+    }
+
+    const savedTheme = localStorage.getItem('theme') || 
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    applyTheme(savedTheme);
+
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme') || 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      applyTheme(next);
+    }
+
+    document.getElementById('theme-btn-desktop')?.addEventListener('click', toggleTheme);
+    document.getElementById('theme-btn-mobile')?.addEventListener('click', toggleTheme);
+
+    // Menú móvil hamburguesa
+    const sidebar = document.getElementById('main-sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
+    const menuBtn = document.getElementById('menu-toggle-btn');
+
+    function toggleMenu() {
+      const isOpen = sidebar?.classList.contains('open');
+      if (isOpen) {
+        sidebar?.classList.remove('open');
+        overlay?.classList.remove('active');
+      } else {
+        sidebar?.classList.add('open');
+        overlay?.classList.add('active');
+      }
+    }
+
+    menuBtn?.addEventListener('click', toggleMenu);
+    overlay?.addEventListener('click', toggleMenu);
+
+    // Cerrar sidebar al hacer clic en enlaces en móvil
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 1024) {
+          sidebar?.classList.remove('open');
+          overlay?.classList.remove('active');
+        }
+      });
+    });
+
+    // Telemetría diagnóstica y monitoreo de excepciones no capturadas (Item 3)
+    window.addEventListener('error', (event) => {
+      const errorPayload = {
+        type: 'uncaught_error',
+        message: event.message,
+        filename: event.filename,
+        lineno: event.lineno,
+        timestamp: new Date().toISOString()
+      };
+      if (typeof console !== 'undefined' && console.warn) {
+        console.warn('[Brújula IA Telemetría] Excepción no capturada observada:', errorPayload);
+      }
+    });
+
+    window.addEventListener('unhandledrejection', (event) => {
+      const rejectPayload = {
+        type: 'unhandled_rejection',
+        reason: event.reason ? (event.reason.message || String(event.reason)) : 'Desconocido',
+        timestamp: new Date().toISOString()
+      };
+      if (typeof console !== 'undefined' && console.warn) {
+        console.warn('[Brújula IA Telemetría] Promesa rechazada sin capturar:', rejectPayload);
+      }
+    });
+  </script>
+
+  <style>
+    .nav-link {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.45rem 0.65rem;
+      border-radius: 6px;
+      transition: var(--transition);
+    }
+    .nav-link:hover {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.08);
+      text-decoration: none;
+    }
+  </style>
+
+</body>
+</html>

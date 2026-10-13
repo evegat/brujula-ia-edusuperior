@@ -1,0 +1,127 @@
+---
+import rankingIMN from '../../data/ranking_madurez_imn.json';
+---
+
+<section id="madurez" style="margin-bottom: 4.5rem; scroll-margin-top: 2rem;">
+  <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1.25rem; margin-bottom:1.5rem;">
+    <div>
+      <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.4rem;">
+        <span class="badge badge-purple">Marco Metodológico Regional</span>
+        <span class="badge badge-blue">Modelo GENIAL (Erasmus+ / UE)</span>
+      </div>
+      <h2>Índice de Madurez Normativa en Chile (IMN)</h2>
+      <p style="color:var(--text-muted); max-width:850px; font-size:0.96rem;">
+        Adaptación empírica para la educación superior chilena del modelo dimensional desarrollado por el <strong>Observatorio Regional GENIAL</strong>. Pondera seis subíndices normalizados (0–100) para caracterizar la robustez jurídica, pedagógica y ética de cada plantel.
+      </p>
+    </div>
+  </div>
+
+  <!-- Ficha Metodológica y Fórmula Matemática IMN -->
+  <div class="card" style="margin-bottom:2rem; background:linear-gradient(135deg, var(--card-bg) 0%, rgba(59, 130, 246, 0.04) 100%); border:1px solid var(--border-color);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1rem; border-bottom:1px solid var(--border-color); padding-bottom:0.75rem;">
+      <h3 style="font-size:1.15rem; margin:0;">📐 Definición Matemática del Índice (Escenario E2)</h3>
+      <span class="badge badge-blue">Fórmula Semántica Formal</span>
+    </div>
+
+    <!-- Render Semántico de la Fórmula Matemática -->
+    <div style="background:var(--card-alt); border:1px solid var(--border-color); border-radius:10px; padding:1.25rem 1.5rem; margin-bottom:1.5rem; text-align:center; overflow-x:auto;">
+      <div style="font-family:'Newsreader', Georgia, serif; font-size:clamp(1.2rem, 2.5vw, 1.55rem); font-weight:600; color:var(--text-main); letter-spacing:0.5px;">
+        <span style="color:var(--accent-blue);">IMN</span> = 
+        0.20 · <span title="Fuerza Jurídica">S<sub>1</sub></span> + 
+        0.20 · <span title="Transparencia">S<sub>2</sub></span> + 
+        0.15 · <span title="Regla de Autoría">S<sub>3</sub></span> + 
+        0.15 · <span title="Privacidad Ley 21.719">S<sub>4</sub></span> + 
+        0.15 · <span title="Impacto Evaluativo">S<sub>5</sub></span> + 
+        0.15 · <span title="Gobernanza Viva">S<sub>6</sub></span>
+      </div>
+      <div style="font-size:0.8rem; color:var(--text-muted); margin-top:0.4rem;">
+        Valores de salida: <strong>0 a 100 puntos</strong> • Categorías: Madurez Avanzada (≥75) | Intermedia (55–74) | Regulación Inicial (&lt;55)
+      </div>
+    </div>
+
+    <!-- Ficha de los 6 Subíndices -->
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:1rem; font-size:0.86rem;">
+      <div style="border-left:3px solid var(--accent-blue); padding-left:0.75rem;">
+        <div style="font-weight:700; color:var(--text-main);">S<sub>1</sub>: Fuerza Jurídica (20%)</div>
+        <div style="color:var(--text-muted); font-size:0.8rem;">Decreto Rectoría (100) • Reglamento (80) • Instructivo (70) • Guía (50)</div>
+      </div>
+      <div style="border-left:3px solid var(--accent-green); padding-left:0.75rem;">
+        <div style="font-weight:700; color:var(--text-main);">S<sub>2</sub>: Transparencia & Declaración (20%)</div>
+        <div style="color:var(--text-muted); font-size:0.8rem;">Exigencia obligatoria de declarar uso y prompts de IA en trabajos</div>
+      </div>
+      <div style="border-left:3px solid var(--accent-purple); padding-left:0.75rem;">
+        <div style="font-weight:700; color:var(--text-main);">S<sub>3</sub>: Regla de Autoría (15%)</div>
+        <div style="color:var(--text-muted); font-size:0.8rem;">Prohibición expresa de atribuir autoría o propiedad intelectual a la IA</div>
+      </div>
+      <div style="border-left:3px solid var(--accent-amber); padding-left:0.75rem;">
+        <div style="font-weight:700; color:var(--text-main);">S<sub>4</sub>: Privacidad Ley N° 21.719 (15%)</div>
+        <div style="color:var(--text-muted); font-size:0.8rem;">Resguardo de datos personales, confidencialidad y secreto institucional</div>
+      </div>
+      <div style="border-left:3px solid #0284c7; padding-left:0.75rem;">
+        <div style="font-weight:700; color:var(--text-main);">S<sub>5</sub>: Rediseño Evaluativo (15%)</div>
+        <div style="color:var(--text-muted); font-size:0.8rem;">Modificación activa de rúbricas y fomento del aprendizaje auténtico</div>
+      </div>
+      <div style="border-left:3px solid #e11d48; padding-left:0.75rem;">
+        <div style="font-weight:700; color:var(--text-main);">S<sub>6</sub>: Gobernanza Viva (15%)</div>
+        <div style="color:var(--text-muted); font-size:0.8rem;">Comité institucional permanente o cláusula de revisión periódica</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ranking de Madurez Normativa en Chile -->
+  <div>
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1.25rem;">
+      <h3 style="font-size:1.25rem; margin:0;">🏆 Ranking de Madurez Institucional ({rankingIMN.length} Instituciones Catastradas)</h3>
+      <div style="font-size:0.84rem; color:var(--text-muted);">
+        Duoc UC consolidado con sus 2 instrumentos vigentes
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap:1.25rem;" id="ranking-imn-grid">
+      {rankingIMN.map((item, index) => {
+        const barColor = item.imn >= 75 ? 'var(--accent-green)' : (item.imn >= 55 ? 'var(--accent-blue)' : 'var(--accent-amber)');
+        const badgeClass = item.imn >= 75 ? 'badge-green' : (item.imn >= 55 ? 'badge-blue' : 'badge-amber');
+        
+        return (
+          <div class="card" style="display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.6rem; gap:0.5rem;">
+                <div style="display:flex; align-items:center; gap:0.5rem;">
+                  <span style="font-family:var(--font-serif); font-size:1.15rem; font-weight:700; color:var(--text-muted);">
+                    #{index + 1}
+                  </span>
+                  <span class="badge badge-purple">{item.sigla}</span>
+                </div>
+                <div style="text-align:right;">
+                  <div style="font-size:1.35rem; font-weight:700; color:var(--text-main); font-family:var(--font-serif); line-height:1;">
+                    {item.imn}
+                  </div>
+                  <div style="font-size:0.72rem; color:var(--text-muted);">de 100 pts</div>
+                </div>
+              </div>
+
+              <h4 style="font-size:1rem; line-height:1.3; margin-bottom:0.25rem;">
+                {item.universidad}
+              </h4>
+              <div style="font-size:0.78rem; color:var(--text-muted); margin-bottom:0.85rem;">
+                {item.tipo} • {item.total_docs} documento(s)
+              </div>
+
+              <!-- Barra de progreso IMN -->
+              <div style="background:rgba(0,0,0,0.06); border-radius:9999px; height:7px; overflow:hidden; margin-bottom:0.75rem;">
+                <div style={`width:${item.imn}%; background:${barColor}; height:100%; border-radius:9999px;`}></div>
+              </div>
+
+              <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.78rem;">
+                <span class={`badge ${badgeClass}`}>{item.categoria}</span>
+                <span style="color:var(--text-muted); font-size:0.75rem;">
+                  Jurídica: {item.subindices.fuerza_juridica} | Transp: {item.subindices.transparencia}
+                </span>
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>

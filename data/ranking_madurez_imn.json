@@ -1,9 +1,9 @@
 [
   {
-    "universidad": "Universidad Santo Tomás",
-    "sigla": "UST",
-    "tipo": "Privada",
-    "total_docs": 1,
+    "universidad": "Duoc UC",
+    "sigla": "Duoc UC",
+    "tipo": "IP/CFT",
+    "total_docs": 2,
     "imn": 100.0,
     "categoria": "Madurez Avanzada",
     "subindices": {
@@ -16,9 +16,9 @@
     }
   },
   {
-    "universidad": "IP Duoc UC",
-    "sigla": "Duoc UC",
-    "tipo": "IP/CFT",
+    "universidad": "Universidad Santo Tomás",
+    "sigla": "UST",
+    "tipo": "Privada",
     "total_docs": 1,
     "imn": 100.0,
     "categoria": "Madurez Avanzada",
@@ -84,22 +84,6 @@
     "sigla": "UDLA",
     "tipo": "Privada",
     "total_docs": 2,
-    "imn": 88.8,
-    "categoria": "Madurez Avanzada",
-    "subindices": {
-      "fuerza_juridica": 100,
-      "transparencia": 100,
-      "autoria": 100,
-      "privacidad": 100,
-      "evaluacion": 100,
-      "gobernanza": 25
-    }
-  },
-  {
-    "universidad": "Duoc UC",
-    "sigla": "Duoc UC",
-    "tipo": "IP/CFT",
-    "total_docs": 1,
     "imn": 88.8,
     "categoria": "Madurez Avanzada",
     "subindices": {

@@ -1,0 +1,17 @@
+{
+  "name": "brujulaiaedusuperior",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Brújula IA Educación Superior - Observatorio Abierto de Protocolos de IA en Chile",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "test": "node --experimental-strip-types scripts/test-api.mjs && node scripts/verify-all.mjs && node --experimental-strip-types scripts/test-adversarial.mjs"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^12.6.14",
+    "astro": "^7.3.8"
+  }
+}

@@ -1,6 +1,10 @@
 import json
+from pathlib import Path
 
-with open(r"D:\Proyectos\P154 - Brujula IA EduSuperior\inventario.json", "r", encoding="utf-8") as f:
+BASE_DIR = Path(__file__).resolve().parent.parent
+DATA_DIR = BASE_DIR / "data"
+
+with open(BASE_DIR / "inventario.json", "r", encoding="utf-8") as f:
     inventario = json.load(f)
 
 # Agrupar por universidad
@@ -19,13 +23,13 @@ for u, docs in por_u.items():
     max_fuerza = 40
     for d in docs:
         enf = d.get("enforcement", "").lower()
-        if "decreto" in enf or "resolución" in enf:
+        if "decreto" in enf or "resolución" in enf or "resolucion" in enf:
             max_fuerza = max(max_fuerza, 100)
-        elif "reglamento" in enf or "política institucional" in enf:
+        elif "reglamento" in enf or "política institucional" in enf or "politica institucional" in enf:
             max_fuerza = max(max_fuerza, 80)
         elif "instructivo" in enf:
             max_fuerza = max(max_fuerza, 70)
-        elif "guía" in enf or "orientaciones" in enf:
+        elif "guía" in enf or "orientaciones" in enf or "guia" in enf:
             max_fuerza = max(max_fuerza, 50)
             
     # S2: Transparencia (Exigencia de declaración de uso)
@@ -73,7 +77,8 @@ for u, docs in por_u.items():
 
 ranking_madurez.sort(key=lambda x: x["imn"], reverse=True)
 
-with open(r"D:\Proyectos\P154 - Brujula IA EduSuperior\data\ranking_madurez_imn.json", "w", encoding="utf-8") as f:
+out_file = DATA_DIR / "ranking_madurez_imn.json"
+with open(out_file, "w", encoding="utf-8") as f:
     json.dump(ranking_madurez, f, ensure_ascii=False, indent=2)
 
 print(f"IMN calculado para {len(ranking_madurez)} instituciones.")

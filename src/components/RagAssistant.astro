@@ -1,0 +1,329 @@
+---
+// RagAssistant - Motor RAG y búsqueda semántica en normativas universitarias
+---
+
+<section id="asistente-rag" style="margin-bottom: 4.5rem; scroll-margin-top: 2rem;">
+  <div style="background: linear-gradient(135deg, rgba(29, 78, 216, 0.08) 0%, rgba(124, 58, 237, 0.06) 100%); border: 1px solid var(--accent-blue-soft); border-radius: 16px; padding: 2.25rem; box-shadow: var(--shadow-sm);">
+    
+    <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1rem; margin-bottom:1.5rem;">
+      <div>
+        <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.5rem;">
+          <span class="badge badge-blue">RAG & Recuperación Semántica</span>
+          <span class="badge badge-purple">17 Reglamentos • 87 Cláusulas</span>
+        </div>
+        <h2 style="font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom:0.5rem;">
+          Pregúntale a las Normativas de IA
+        </h2>
+        <p style="color:var(--text-muted); max-width:850px; font-size:0.98rem; line-height:1.55;">
+          Consulta libremente el corpus regulatorio de las universidades chilenas. Nuestro motor recupera las cláusulas exactas, citas textuales y números de página con síntesis generativa contextual.
+        </p>
+      </div>
+    </div>
+
+    <!-- Chips de Consultas Sugeridas -->
+    <div style="margin-bottom:1.25rem;">
+      <div style="font-size:0.8rem; font-weight:600; text-transform:uppercase; color:var(--text-muted); margin-bottom:0.5rem; letter-spacing:0.5px;">
+        Consultas frecuentes en el observatorio:
+      </div>
+      <div style="display:flex; gap:0.5rem; flex-wrap:wrap;" id="rag-quick-chips">
+        <button type="button" class="btn btn-outline btn-sm chip-btn" data-query="¿Qué universidades exigen declarar o citar el prompt?">
+          💬 Declaración de Prompts
+        </button>
+        <button type="button" class="btn btn-outline btn-sm chip-btn" data-query="¿Cómo se regula la autoría de IA en tesis y memorias de grado?">
+          🎓 IA en Tesis y Memorias
+        </button>
+        <button type="button" class="btn btn-outline btn-sm chip-btn" data-query="¿Qué dice la normativa sobre protección de datos personales y Ley 21.719?">
+          🔒 Privacidad Ley N° 21.719
+        </button>
+        <button type="button" class="btn btn-outline btn-sm chip-btn" data-query="¿Cuáles son las sanciones e infracciones por uso no autorizado en evaluaciones?">
+          ⚖️ Sanciones y Evaluaciones
+        </button>
+        <button type="button" class="btn btn-outline btn-sm chip-btn" data-query="¿Qué directrices tiene la Universidad de Chile (UChile)?">
+          🏛️ Universidad de Chile
+        </button>
+      </div>
+    </div>
+
+    <!-- Barra de Búsqueda de Preguntas -->
+    <form id="rag-form" style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-bottom:1.5rem;">
+      <div style="flex:1; min-width:280px; position:relative;">
+        <input 
+          type="text" 
+          id="rag-query-input" 
+          placeholder="Escribe tu pregunta sobre las normativas de IA (ej: ¿Se permite usar ChatGPT en exámenes?)..."
+          required
+          style="width:100%; padding:0.85rem 1.25rem; border:1px solid var(--border-color); border-radius:10px; background:var(--card-bg); color:var(--text-main); font-size:0.96rem; box-shadow:var(--shadow-sm); outline:none;"
+        />
+      </div>
+      <button type="submit" id="rag-submit-btn" class="btn btn-primary" style="padding:0.85rem 1.5rem;">
+        🔍 Consultar Corpus
+      </button>
+    </form>
+
+    <!-- Indicador de Carga -->
+    <div id="rag-loading" style="display:none; text-align:center; padding:2rem 1rem;">
+      <div style="font-size:1.5rem; margin-bottom:0.5rem;">⚡</div>
+      <div style="font-weight:600; color:var(--text-main);">Analizando 17 reglamentos y recuperando cláusulas...</div>
+      <div style="font-size:0.85rem; color:var(--text-muted); margin-top:0.25rem;">Indexando citas textuales y verificando páginas</div>
+    </div>
+
+    <!-- Contenedor de Respuestas RAG -->
+    <div id="rag-response-container" style="display:none;">
+      
+      <!-- Síntesis Generativa / Contextual -->
+      <div class="card" style="margin-bottom:1.5rem; border-left:4px solid var(--accent-blue); background:var(--card-bg);">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+          <span class="badge badge-blue">Síntesis Normativa</span>
+          <span id="rag-source-badge" class="badge badge-purple" style="font-size:0.74rem;"></span>
+        </div>
+        <div id="rag-answer-text" style="font-size:0.95rem; line-height:1.65; color:var(--text-main); white-space:pre-line;">
+        </div>
+      </div>
+
+      <!-- Evidencia Textual Recuperada -->
+      <div id="rag-evidence-section">
+        <h4 style="font-size:1.1rem; margin-bottom:1rem; display:flex; align-items:center; gap:0.5rem;">
+          <span>📑</span> Cláusulas Textuales Recuperadas con Número de Página:
+        </h4>
+        <div id="rag-citations-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap:1rem;">
+          <!-- Inyectado dinámicamente -->
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<script is:inline>
+  const ragForm = document.getElementById('rag-form');
+  const ragInput = document.getElementById('rag-query-input');
+  const ragSubmitBtn = document.getElementById('rag-submit-btn');
+  const ragLoading = document.getElementById('rag-loading');
+  const ragContainer = document.getElementById('rag-response-container');
+  const ragAnswerText = document.getElementById('rag-answer-text');
+  const ragSourceBadge = document.getElementById('rag-source-badge');
+  const ragEvidenceSection = document.getElementById('rag-evidence-section');
+  const ragCitationsGrid = document.getElementById('rag-citations-grid');
+
+  function normalizeClientText(str) {
+    return (str || '')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .trim();
+  }
+
+  // Asignar chips a la barra de búsqueda
+  document.querySelectorAll('.chip-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const q = btn.getAttribute('data-query');
+      if (ragInput && q) {
+        ragInput.value = q;
+        ejecutarConsultaRAG(q);
+      }
+    });
+  });
+
+  ragForm?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const query = ragInput?.value.trim();
+    if (query) {
+      ejecutarConsultaRAG(query);
+    }
+  });
+
+  async function ejecutarConsultaRAG(query) {
+    if (!ragSubmitBtn || !ragLoading || !ragContainer) return;
+
+    ragSubmitBtn.disabled = true;
+    ragLoading.style.display = 'block';
+    ragContainer.style.display = 'none';
+
+    try {
+      const res = await fetch('/api/ask-rag', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query, top_k: 4 })
+      });
+
+      if (res.ok) {
+        const data = await res.json();
+        renderizarRespuestaRAG(data);
+      } else {
+        await ejecutarFallbackLocalRAG(query);
+      }
+    } catch (err) {
+      console.warn('Error llamando /api/ask-rag, activando motor cliente:', err);
+      await ejecutarFallbackLocalRAG(query);
+    } finally {
+      ragSubmitBtn.disabled = false;
+      ragLoading.style.display = 'none';
+    }
+  }
+
+  function escapeHtml(str) {
+    return String(str || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  function formatInlineMarkdown(str) {
+    const safe = escapeHtml(str);
+    return safe
+      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*(.*?)\*/g, '<em>$1</em>');
+  }
+
+  function renderizarRespuestaRAG(data) {
+    if (!ragContainer || !ragAnswerText || !ragCitationsGrid) return;
+
+    const answerStr = data?.answer || 'No se obtuvo respuesta del motor.';
+    const cleanAnswer = answerStr.split('### Evidencia Textual Recuperada:')[0].trim();
+    ragAnswerText.innerHTML = formatInlineMarkdown(cleanAnswer);
+    
+    const citations = Array.isArray(data?.citations) ? data.citations : [];
+
+    if (ragSourceBadge) {
+      let engineLabel = '🤖 Motor Local Autónomo';
+      if (data?.source === 'n8n-webhook') {
+        engineLabel = '⚡ n8n Webhook Generativo';
+      } else if (data?.source === 'local-rag-fallback') {
+        engineLabel = '⚠️ Motor Local (Fallback n8n)';
+      } else if (data?.source === 'local-rag-client') {
+        engineLabel = '💻 Motor Local (Cliente)';
+      }
+      ragSourceBadge.textContent = citations.length > 0 
+        ? `${engineLabel} • ${citations.length} fuentes` 
+        : `${engineLabel} • 0 fuentes`;
+    }
+
+    if (citations.length === 0) {
+      if (ragEvidenceSection) ragEvidenceSection.style.display = 'none';
+      ragCitationsGrid.innerHTML = '';
+    } else {
+      if (ragEvidenceSection) ragEvidenceSection.style.display = 'block';
+      ragCitationsGrid.innerHTML = '';
+
+      citations.forEach(c => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.style.display = 'flex';
+        card.style.flexDirection = 'column';
+        card.style.justifyContent = 'space-between';
+        card.style.borderLeft = '3px solid var(--accent-purple)';
+
+        const rawMd = typeof c.archivo_md === 'string' ? c.archivo_md.trim() : '';
+        const safeMd = (rawMd && /^[a-zA-Z0-9_.-]+$/.test(rawMd)) ? `/corpus_md/${rawMd}` : null;
+
+        const rawExt = typeof c.url_original === 'string' ? c.url_original.trim() : '';
+        const safeExt = (rawExt && (rawExt.startsWith('http://') || rawExt.startsWith('https://'))) ? rawExt : null;
+
+        const safeSigla = escapeHtml(c.sigla || 'IES');
+        const safePagina = escapeHtml(String(c.pagina || '1'));
+        const safeUni = escapeHtml(c.universidad || '');
+        const safeDoc = escapeHtml(c.documento || '');
+        const safeCita = escapeHtml(c.cita_limpia || '');
+
+        card.innerHTML = `
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.5rem; gap:0.5rem;">
+              <span class="badge badge-purple">${safeSigla}</span>
+              <span class="badge badge-blue">Página ${safePagina}</span>
+            </div>
+            <div style="font-size:0.84rem; font-weight:700; color:var(--text-main); margin-bottom:0.25rem;">
+              ${safeUni}
+            </div>
+            <div style="font-size:0.78rem; color:var(--text-muted); margin-bottom:0.75rem;">
+              ${safeDoc}
+            </div>
+            <p style="font-size:0.85rem; font-style:italic; color:var(--text-main); line-height:1.5; margin-bottom:1rem; background:rgba(0,0,0,0.02); padding:0.6rem; border-radius:6px;">
+              "${safeCita}"
+            </p>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.78rem; border-top:1px solid var(--border-color); padding-top:0.65rem;">
+            ${safeMd ? `<a href="${escapeHtml(safeMd)}" target="_blank" style="color:var(--accent-blue); font-weight:600;">📄 Ver Markdown &rarr;</a>` : '<span></span>'}
+            ${safeExt ? `<a href="${escapeHtml(safeExt)}" target="_blank" rel="noopener noreferrer" style="color:var(--accent-green); font-weight:600;">🔗 Fuente Externa &rarr;</a>` : '<span style="color:var(--text-muted);">Copia en repositorio</span>'}
+          </div>
+        `;
+        ragCitationsGrid.appendChild(card);
+      });
+    }
+
+    ragContainer.style.display = 'block';
+    ragContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  let localCitationsCache = null;
+
+  async function getLocalFallbackCitations() {
+    if (localCitationsCache) return localCitationsCache;
+
+    // 1. Extraer desde las 87 tarjetas .cita-card ya prerenderizadas en el DOM
+    const cards = document.querySelectorAll('.cita-card');
+    if (cards.length > 0) {
+      localCitationsCache = Array.from(cards).map((card, idx) => {
+        const pElem = card.querySelector('p');
+        const uElem = card.querySelector('.cita-card > div > div:nth-child(2)');
+        const dElem = card.querySelector('.cita-card > div > div:nth-child(3)');
+        const siglaBadge = card.querySelector('.badge-purple');
+        const pagBadge = card.querySelector('.badge-blue');
+        const mdLinkElem = card.querySelector('a[href*="/corpus_md/"]');
+        const extLinkElem = card.querySelector('a[href*="http"]');
+
+        return {
+          id: idx + 1,
+          sigla: siglaBadge ? siglaBadge.textContent.trim() : '',
+          pagina: pagBadge ? parseInt(pagBadge.textContent.replace(/[^0-9]/g, '')) || 1 : 1,
+          universidad: uElem ? uElem.textContent.trim() : '',
+          documento: dElem ? dElem.textContent.trim() : '',
+          cita_limpia: pElem ? pElem.textContent.replace(/^"|"$/g, '').trim() : '',
+          archivo_md: mdLinkElem ? mdLinkElem.getAttribute('href').replace('/corpus_md/', '') : null,
+          url_original: extLinkElem ? extLinkElem.getAttribute('href') : null,
+          tema: card.getAttribute('data-tema') || ''
+        };
+      });
+      return localCitationsCache;
+    }
+
+    // 2. Fallback diferido: fetch de dataset estático
+    try {
+      const res = await fetch('/citas_enriquecidas.json');
+      if (res.ok) {
+        localCitationsCache = await res.json();
+        return localCitationsCache;
+      }
+    } catch (_) {}
+
+    return [];
+  }
+
+  async function ejecutarFallbackLocalRAG(query) {
+    const qNorm = normalizeClientText(query);
+    const tokens = qNorm.split(' ').filter(t => t.length > 2);
+    
+    const pool = await getLocalFallbackCitations();
+
+    let matches = [];
+    if (tokens.length > 0) {
+      matches = pool.filter(c => {
+        const text = normalizeClientText((c.cita_limpia || '') + ' ' + (c.universidad || '') + ' ' + (c.documento || '') + ' ' + (c.sigla || ''));
+        return tokens.some(t => text.includes(t));
+      }).slice(0, 4);
+    }
+
+    const citations = matches.length > 0 ? matches : [];
+
+    renderizarRespuestaRAG({
+      query,
+      answer: citations.length > 0
+        ? `Resultados recuperados de forma autónoma desde el corpus de 87 cláusulas reglamentarias para "${query}". Las universidades analizadas disponen regulaciones con trazabilidad de páginas y acceso dual.`
+        : `No se encontraron cláusulas o regulaciones pertinentes en el catálogo de universidades chilenas para la consulta "${query}". Te invitamos a buscar sobre temas como: declaración obligatoria de prompts, autoría en tesis, directrices de evaluación y pruebas, o protección de datos personales bajo la Ley N° 21.719.`,
+      citations,
+      source: 'local-rag-client'
+    });
+  }
+</script>

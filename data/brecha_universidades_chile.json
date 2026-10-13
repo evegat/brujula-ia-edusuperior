@@ -1,9 +1,9 @@
 {
   "resumen": {
     "total_universidades_oficiales": 54,
-    "con_instrumento": 36,
-    "sin_instrumento": 18,
-    "cobertura_porcentaje": 66.7
+    "con_instrumento": 32,
+    "sin_instrumento": 22,
+    "cobertura_porcentaje": 59.3
   },
   "universidades_con_instrumento": [
     {
@@ -16,37 +16,67 @@
           "documento": "Lineamientos para el uso transparente de inteligencia artificial en las tesis de la Universidad de Chile",
           "unidad": "Vicerrectoría de Asuntos Académicos (VAA)",
           "fecha": "2024",
-          "url": "https://uchile.cl/informacion-y-bibliotecas/lineamientos-uso-ia-en-tesis"
+          "url": "https://uchile.cl/informacion-y-bibliotecas/lineamientos-uso-ia-en-tesis",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": false,
+          "modifica_evaluacion": true,
+          "enforcement": "Normativa obligatoria con cláusula"
         },
         {
           "documento": "Humanizar la Inteligencia: Orientaciones para un uso ético y transformador de la IA en la educación y la investigación en salud",
           "unidad": "Facultad de Medicina (FAMED)",
           "fecha": "2025",
-          "url": "https://uchile.cl/dam/jcr:9b955a62-5177-425e-b59e-d7f409d3fa74/Humanizar%20la%20Inteligencia_FAMED2025%20V10-1.pdf"
+          "url": "https://uchile.cl/dam/jcr:9b955a62-5177-425e-b59e-d7f409d3fa74/Humanizar%20la%20Inteligencia_FAMED2025%20V10-1.pdf",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": true,
+          "modifica_evaluacion": true,
+          "enforcement": "Guía orientadora"
         },
         {
           "documento": "Protocolo de Uso de Inteligencia Artificial Generativa (IAG) y Anexos",
           "unidad": "Escuela de Gobierno (FAGOB)",
           "fecha": "2024",
-          "url": "https://brujula-ia-fagob.evegat.cl/docs/Protocolo_USO_IAG_y_Anexos_Escuela_de_Gobierno_UChile.pdf"
+          "url": "https://brujula-ia-fagob.evegat.cl/docs/Protocolo_USO_IAG_y_Anexos_Escuela_de_Gobierno_UChile.pdf",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": true,
+          "modifica_evaluacion": true,
+          "enforcement": "Protocolo operativo con declaración jurada"
         },
         {
           "documento": "Procedimiento para la Declaración de Uso de Inteligencia Artificial en Tesis y AFE",
           "unidad": "FCFM - Escuela de Postgrado (EPEC)",
           "fecha": "2024-2025",
-          "url": "https://postgrado.fcfm.uchile.cl"
+          "url": "https://postgrado.fcfm.uchile.cl",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": false,
+          "modifica_evaluacion": true,
+          "enforcement": "Instructivo con categorías A/B/C"
         },
         {
           "documento": "Política de Integración Crítica y Ética de la IAG para la Formación en Asuntos Públicos",
           "unidad": "Escuela de Gobierno (FAGOB)",
           "fecha": "2024-2025",
-          "url": null
+          "url": null,
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": true,
+          "modifica_evaluacion": true,
+          "enforcement": "Política institucional"
         },
         {
           "documento": "Lineamientos para el uso de Inteligencia Artificial en Revistas FAU",
           "unidad": "Facultad de Arquitectura y Urbanismo (FAU)",
           "fecha": "2024",
-          "url": "https://revistas.uchile.cl"
+          "url": "https://revistas.uchile.cl",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": false,
+          "modifica_evaluacion": false,
+          "enforcement": "Normativa editorial"
         }
       ]
     },
@@ -60,7 +90,12 @@
           "documento": "LibGuide: Uso responsable y ético de la IA en contextos académicos",
           "unidad": "Departamento de Bibliotecas",
           "fecha": "2024",
-          "url": "https://usach.libguides.com/c.php?g=1522613"
+          "url": "https://usach.libguides.com/c.php?g=1522613",
+          "exige_declaracion": false,
+          "ia_no_autora": true,
+          "menciona_datos_personales": false,
+          "modifica_evaluacion": false,
+          "enforcement": "Guía informativa"
         }
       ]
     },
@@ -68,13 +103,29 @@
       "registro": "A3",
       "nombre": "UNIVERSIDAD DE VALPARAÍSO",
       "tipo": "UNIVERSIDAD ESTATAL",
-      "total_instrumentos": 1,
+      "total_instrumentos": 2,
       "instrumentos": [
         {
-          "documento": "Decálogo sobre uso de Inteligencia Artificial en docencia con foco en integridad académica PUCV",
-          "unidad": "Unidad de Integridad Académica / DDD (VRA)",
-          "fecha": "2026-01-09",
-          "url": "https://desarrollodocente.pucv.cl/ia/"
+          "documento": "Guía de orientaciones para el uso de la inteligencia artificial (Docentes)",
+          "unidad": "Vicerrectoría Académica",
+          "fecha": "2023-2024",
+          "url": "https://vicerrectoriaacademica.uv.cl/documentos",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": false,
+          "modifica_evaluacion": true,
+          "enforcement": "Orientaciones"
+        },
+        {
+          "documento": "Guía para docentes (Sección Integridad e IA)",
+          "unidad": "Escuela de Sociología",
+          "fecha": "2023-2024",
+          "url": "https://sociologia.uv.cl/images/Documentos/Guia_para_docentes.pdf",
+          "exige_declaracion": true,
+          "ia_no_autora": false,
+          "menciona_datos_personales": false,
+          "modifica_evaluacion": true,
+          "enforcement": "Guía docente"
         }
       ]
     },
@@ -88,7 +139,12 @@
           "documento": "El uso ético de la IA en la educación universitaria",
           "unidad": "Biblioteca / Dirección de Gestión Docente",
           "fecha": "2023-2024",
-          "url": "https://biblioteca.uantof.cl/public/pg/uso_ia.php"
+          "url": "https://biblioteca.uantof.cl/public/pg/uso_ia.php",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": true,
+          "modifica_evaluacion": false,
+          "enforcement": "Directrices éticas"
         }
       ]
     },
@@ -102,7 +158,12 @@
           "documento": "Orientaciones para el uso de ChatGPT en Educación Superior",
           "unidad": "Dirección de Desarrollo Curricular y Docente",
           "fecha": "2023-2024",
-          "url": "https://docencia.ufro.cl/orientaciones-chatgpt-educacion-superior/"
+          "url": "https://docencia.ufro.cl/orientaciones-chatgpt-educacion-superior/",
+          "exige_declaracion": false,
+          "ia_no_autora": false,
+          "menciona_datos_personales": true,
+          "modifica_evaluacion": true,
+          "enforcement": "Orientaciones pedagógicas"
         }
       ]
     },
@@ -116,7 +177,12 @@
           "documento": "Directrices sobre el uso de herramientas de IA en manuscritos",
           "unidad": "Fac. Cs. Jurídicas / CEDEP (Revista Política Criminal)",
           "fecha": "2024-09",
-          "url": "https://www.politicacriminal.cl"
+          "url": "https://www.politicacriminal.cl",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": false,
+          "modifica_evaluacion": false,
+          "enforcement": "Normativa editorial con límite 20%"
         }
       ]
     },
@@ -130,7 +196,12 @@
           "documento": "Comité Universitario de Inteligencia Artificial SapiensIA (sin documento público descargable)",
           "unidad": "Rectoría / Comité SapiensIA",
           "fecha": "2024-06",
-          "url": "https://uda.cl"
+          "url": "https://uda.cl",
+          "exige_declaracion": false,
+          "ia_no_autora": false,
+          "menciona_datos_personales": false,
+          "modifica_evaluacion": false,
+          "enforcement": "Comité en funcionamiento, documento en desarrollo"
         }
       ]
     },
@@ -144,21 +215,12 @@
           "documento": "Programa de Integridad Universitaria (Decretos DU-CPO-2024-01498 y DU-CPO-2024-01601)",
           "unidad": "Rectoría / Vicerrectoría Académica",
           "fecha": "2024",
-          "url": "https://norche.ulagos.cl"
-        }
-      ]
-    },
-    {
-      "registro": "A17",
-      "nombre": "UNIVERSIDAD DE O'HIGGINS",
-      "tipo": "UNIVERSIDAD ESTATAL",
-      "total_instrumentos": 1,
-      "instrumentos": [
-        {
-          "documento": "Modelo y Lineamientos de Integración de IA en la Academia (SapIA)",
-          "unidad": "Unidad SapIA",
-          "fecha": "2024",
-          "url": "https://www.ubo.cl/"
+          "url": "https://norche.ulagos.cl",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": true,
+          "modifica_evaluacion": true,
+          "enforcement": "Decreto universitario"
         }
       ]
     },
@@ -172,25 +234,45 @@
           "documento": "Política de uso ético de Inteligencia Artificial Generativa v1",
           "unidad": "Instituto de Sociología (ISUC)",
           "fecha": "2025-07-30",
-          "url": "https://sociologia.uc.cl/wp-content/uploads/2025/10/Politica-de-uso-etico-de-IA-ISUC-v1.pdf"
+          "url": "https://sociologia.uc.cl/wp-content/uploads/2025/10/Politica-de-uso-etico-de-IA-ISUC-v1.pdf",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": false,
+          "modifica_evaluacion": true,
+          "enforcement": "Política con sanciones"
         },
         {
           "documento": "Guía Ética para el uso de Inteligencia Artificial Generativa",
           "unidad": "Facultad de Derecho",
           "fecha": "2024",
-          "url": "https://derecho.uc.cl/facultad-de-derecho-uc-establece-guia-etica-para-uso-de-inteligencia-artificial-generativa/"
+          "url": "https://derecho.uc.cl/facultad-de-derecho-uc-establece-guia-etica-para-uso-de-inteligencia-artificial-generativa/",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": false,
+          "modifica_evaluacion": false,
+          "enforcement": "Guía ética"
         },
         {
           "documento": "Inteligencia artificial e integridad académica en la práctica docente",
           "unidad": "Dirección de Integridad Académica / VRA",
           "fecha": "2024-2025",
-          "url": "https://integridadacademica.uc.cl/secciones/inteligencia-artificial/"
+          "url": "https://integridadacademica.uc.cl/secciones/inteligencia-artificial/",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": false,
+          "modifica_evaluacion": true,
+          "enforcement": "Portal con guías descargables"
         },
         {
           "documento": "Lineamientos UC para la integración de la IA en la formación",
           "unidad": "Vicerrectoría Académica / Centro de Desarrollo Docente",
           "fecha": "2026-03",
-          "url": "https://catalogodigital.uc.cl/normativas-y-procedimientos/lineamientos-uc-para-la-integracion-de-la-ia-en-la-formacion/"
+          "url": "https://catalogodigital.uc.cl/normativas-y-procedimientos/lineamientos-uc-para-la-integracion-de-la-ia-en-la-formacion/",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": false,
+          "modifica_evaluacion": true,
+          "enforcement": "Lineamientos con categorías"
         }
       ]
     },
@@ -204,7 +286,31 @@
           "documento": "Guía sobre uso ético y responsable de tecnologías digitales emergentes en la Universidad de Concepción",
           "unidad": "Programa [genIA] / VRID / Docencia",
           "fecha": "2024",
-          "url": "https://genia.udec.cl"
+          "url": "https://genia.udec.cl",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": false,
+          "modifica_evaluacion": true,
+          "enforcement": "Guía con ecosistema [genIA]"
+        }
+      ]
+    },
+    {
+      "registro": "B3",
+      "nombre": "UNIVERSIDAD TÉCNICA FEDERICO SANTA MARÍA",
+      "tipo": "UNIVERSIDAD PARTICULAR CON APORTES",
+      "total_instrumentos": 1,
+      "instrumentos": [
+        {
+          "documento": "Guía rápida para el uso ético-pedagógico de la IA y Tríptico IAGen",
+          "unidad": "Dirección General de Docencia / Transformación Digital",
+          "fecha": "2024",
+          "url": "https://transformaciondigital.usm.cl/",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": true,
+          "modifica_evaluacion": true,
+          "enforcement": "Guía orientadora con criterios formativos"
         }
       ]
     },
@@ -212,31 +318,18 @@
       "registro": "B4",
       "nombre": "PONTIFICIA UNIVERSIDAD CATÓLICA DE VALPARAÍSO",
       "tipo": "UNIVERSIDAD PARTICULAR CON APORTES",
-      "total_instrumentos": 4,
+      "total_instrumentos": 1,
       "instrumentos": [
         {
-          "documento": "Política de uso ético de Inteligencia Artificial Generativa v1",
-          "unidad": "Instituto de Sociología (ISUC)",
-          "fecha": "2025-07-30",
-          "url": "https://sociologia.uc.cl/wp-content/uploads/2025/10/Politica-de-uso-etico-de-IA-ISUC-v1.pdf"
-        },
-        {
-          "documento": "Guía Ética para el uso de Inteligencia Artificial Generativa",
-          "unidad": "Facultad de Derecho",
-          "fecha": "2024",
-          "url": "https://derecho.uc.cl/facultad-de-derecho-uc-establece-guia-etica-para-uso-de-inteligencia-artificial-generativa/"
-        },
-        {
-          "documento": "Inteligencia artificial e integridad académica en la práctica docente",
-          "unidad": "Dirección de Integridad Académica / VRA",
-          "fecha": "2024-2025",
-          "url": "https://integridadacademica.uc.cl/secciones/inteligencia-artificial/"
-        },
-        {
-          "documento": "Lineamientos UC para la integración de la IA en la formación",
-          "unidad": "Vicerrectoría Académica / Centro de Desarrollo Docente",
-          "fecha": "2026-03",
-          "url": "https://catalogodigital.uc.cl/normativas-y-procedimientos/lineamientos-uc-para-la-integracion-de-la-ia-en-la-formacion/"
+          "documento": "Decálogo sobre uso de Inteligencia Artificial en docencia con foco en integridad académica PUCV",
+          "unidad": "Unidad de Integridad Académica / DDD (VRA)",
+          "fecha": "2026-01-09",
+          "url": "https://desarrollodocente.pucv.cl/ia/",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": false,
+          "modifica_evaluacion": true,
+          "enforcement": "Decálogo vinculante"
         }
       ]
     },
@@ -250,7 +343,12 @@
           "documento": "Protocolo de Regulación del Uso de la Inteligencia Artificial",
           "unidad": "Facultad de Ciencias Jurídicas y Sociales",
           "fecha": "2025",
-          "url": "https://derecho.uach.cl/index.php?option=com_dropfiles&format=&task=frontfile.download&catid=197&id=1295&Itemid=1000000000000"
+          "url": "https://derecho.uach.cl/index.php?option=com_dropfiles&format=&task=frontfile.download&catid=197&id=1295&Itemid=1000000000000",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": false,
+          "modifica_evaluacion": true,
+          "enforcement": "Protocolo formal con revisión anual"
         }
       ]
     },
@@ -258,95 +356,18 @@
       "registro": "B6",
       "nombre": "UNIVERSIDAD CATÓLICA DEL NORTE",
       "tipo": "UNIVERSIDAD PARTICULAR CON APORTES",
-      "total_instrumentos": 4,
+      "total_instrumentos": 1,
       "instrumentos": [
         {
-          "documento": "Política de uso ético de Inteligencia Artificial Generativa v1",
-          "unidad": "Instituto de Sociología (ISUC)",
-          "fecha": "2025-07-30",
-          "url": "https://sociologia.uc.cl/wp-content/uploads/2025/10/Politica-de-uso-etico-de-IA-ISUC-v1.pdf"
-        },
-        {
-          "documento": "Guía Ética para el uso de Inteligencia Artificial Generativa",
-          "unidad": "Facultad de Derecho",
-          "fecha": "2024",
-          "url": "https://derecho.uc.cl/facultad-de-derecho-uc-establece-guia-etica-para-uso-de-inteligencia-artificial-generativa/"
-        },
-        {
-          "documento": "Inteligencia artificial e integridad académica en la práctica docente",
-          "unidad": "Dirección de Integridad Académica / VRA",
+          "documento": "Política Editorial de Revistas Científicas de la UCN (Sección IA)",
+          "unidad": "Depto. Ciencia Abierta / VRIDT",
           "fecha": "2024-2025",
-          "url": "https://integridadacademica.uc.cl/secciones/inteligencia-artificial/"
-        },
-        {
-          "documento": "Lineamientos UC para la integración de la IA en la formación",
-          "unidad": "Vicerrectoría Académica / Centro de Desarrollo Docente",
-          "fecha": "2026-03",
-          "url": "https://catalogodigital.uc.cl/normativas-y-procedimientos/lineamientos-uc-para-la-integracion-de-la-ia-en-la-formacion/"
-        }
-      ]
-    },
-    {
-      "registro": "B7",
-      "nombre": "UNIVERSIDAD CATÓLICA DEL MAULE",
-      "tipo": "UNIVERSIDAD PARTICULAR CON APORTES",
-      "total_instrumentos": 4,
-      "instrumentos": [
-        {
-          "documento": "Política de uso ético de Inteligencia Artificial Generativa v1",
-          "unidad": "Instituto de Sociología (ISUC)",
-          "fecha": "2025-07-30",
-          "url": "https://sociologia.uc.cl/wp-content/uploads/2025/10/Politica-de-uso-etico-de-IA-ISUC-v1.pdf"
-        },
-        {
-          "documento": "Guía Ética para el uso de Inteligencia Artificial Generativa",
-          "unidad": "Facultad de Derecho",
-          "fecha": "2024",
-          "url": "https://derecho.uc.cl/facultad-de-derecho-uc-establece-guia-etica-para-uso-de-inteligencia-artificial-generativa/"
-        },
-        {
-          "documento": "Inteligencia artificial e integridad académica en la práctica docente",
-          "unidad": "Dirección de Integridad Académica / VRA",
-          "fecha": "2024-2025",
-          "url": "https://integridadacademica.uc.cl/secciones/inteligencia-artificial/"
-        },
-        {
-          "documento": "Lineamientos UC para la integración de la IA en la formación",
-          "unidad": "Vicerrectoría Académica / Centro de Desarrollo Docente",
-          "fecha": "2026-03",
-          "url": "https://catalogodigital.uc.cl/normativas-y-procedimientos/lineamientos-uc-para-la-integracion-de-la-ia-en-la-formacion/"
-        }
-      ]
-    },
-    {
-      "registro": "B8",
-      "nombre": "UNIVERSIDAD CATÓLICA DE LA SANTÍSIMA CONCEPCIÓN",
-      "tipo": "UNIVERSIDAD PARTICULAR CON APORTES",
-      "total_instrumentos": 4,
-      "instrumentos": [
-        {
-          "documento": "Política de uso ético de Inteligencia Artificial Generativa v1",
-          "unidad": "Instituto de Sociología (ISUC)",
-          "fecha": "2025-07-30",
-          "url": "https://sociologia.uc.cl/wp-content/uploads/2025/10/Politica-de-uso-etico-de-IA-ISUC-v1.pdf"
-        },
-        {
-          "documento": "Guía Ética para el uso de Inteligencia Artificial Generativa",
-          "unidad": "Facultad de Derecho",
-          "fecha": "2024",
-          "url": "https://derecho.uc.cl/facultad-de-derecho-uc-establece-guia-etica-para-uso-de-inteligencia-artificial-generativa/"
-        },
-        {
-          "documento": "Inteligencia artificial e integridad académica en la práctica docente",
-          "unidad": "Dirección de Integridad Académica / VRA",
-          "fecha": "2024-2025",
-          "url": "https://integridadacademica.uc.cl/secciones/inteligencia-artificial/"
-        },
-        {
-          "documento": "Lineamientos UC para la integración de la IA en la formación",
-          "unidad": "Vicerrectoría Académica / Centro de Desarrollo Docente",
-          "fecha": "2026-03",
-          "url": "https://catalogodigital.uc.cl/normativas-y-procedimientos/lineamientos-uc-para-la-integracion-de-la-ia-en-la-formacion/"
+          "url": "https://revistas.ucn.cl/politica-rcucn/",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": false,
+          "modifica_evaluacion": false,
+          "enforcement": "Normativa editorial"
         }
       ]
     },
@@ -354,31 +375,18 @@
       "registro": "B9",
       "nombre": "UNIVERSIDAD CATÓLICA DE TEMUCO",
       "tipo": "UNIVERSIDAD PARTICULAR CON APORTES",
-      "total_instrumentos": 4,
+      "total_instrumentos": 1,
       "instrumentos": [
         {
-          "documento": "Política de uso ético de Inteligencia Artificial Generativa v1",
-          "unidad": "Instituto de Sociología (ISUC)",
-          "fecha": "2025-07-30",
-          "url": "https://sociologia.uc.cl/wp-content/uploads/2025/10/Politica-de-uso-etico-de-IA-ISUC-v1.pdf"
-        },
-        {
-          "documento": "Guía Ética para el uso de Inteligencia Artificial Generativa",
-          "unidad": "Facultad de Derecho",
-          "fecha": "2024",
-          "url": "https://derecho.uc.cl/facultad-de-derecho-uc-establece-guia-etica-para-uso-de-inteligencia-artificial-generativa/"
-        },
-        {
-          "documento": "Inteligencia artificial e integridad académica en la práctica docente",
-          "unidad": "Dirección de Integridad Académica / VRA",
+          "documento": "Orientaciones ético-pedagógicas y asistentes de IA (DocencIA UCT / PotencIA tu GuIA)",
+          "unidad": "CINAP",
           "fecha": "2024-2025",
-          "url": "https://integridadacademica.uc.cl/secciones/inteligencia-artificial/"
-        },
-        {
-          "documento": "Lineamientos UC para la integración de la IA en la formación",
-          "unidad": "Vicerrectoría Académica / Centro de Desarrollo Docente",
-          "fecha": "2026-03",
-          "url": "https://catalogodigital.uc.cl/normativas-y-procedimientos/lineamientos-uc-para-la-integracion-de-la-ia-en-la-formacion/"
+          "url": "https://cinap.uct.cl",
+          "exige_declaracion": false,
+          "ia_no_autora": false,
+          "menciona_datos_personales": false,
+          "modifica_evaluacion": true,
+          "enforcement": "Orientaciones con asistentes"
         }
       ]
     },
@@ -392,7 +400,12 @@
           "documento": "Protocolo para la Prevención y Sanción del Plagio en el Contexto Académico (Res. VRA N° 01/2024)",
           "unidad": "Vicerrectoría Académica",
           "fecha": "2024-04-08",
-          "url": "https://www.ugm.cl/ugm/site/docs/20200624/20200624120225/24_10_24_protocolo_para_la_prevencion_y_sancion_del_plagio.pdf"
+          "url": "https://www.ugm.cl/ugm/site/docs/20200624/20200624120225/24_10_24_protocolo_para_la_prevencion_y_sancion_del_plagio.pdf",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": false,
+          "modifica_evaluacion": true,
+          "enforcement": "Protocolo con tipificación de plagio por IA"
         }
       ]
     },
@@ -406,13 +419,23 @@
           "documento": "Orientaciones en el uso de IA para docentes UDP (Versión 2)",
           "unidad": "Dirección de Desarrollo Docente",
           "fecha": "2024-08",
-          "url": "https://desarrollodocente.udp.cl/cms/wp-content/uploads/2024/08/Orientaciones-IA_V2.pdf"
+          "url": "https://desarrollodocente.udp.cl/cms/wp-content/uploads/2024/08/Orientaciones-IA_V2.pdf",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": false,
+          "modifica_evaluacion": true,
+          "enforcement": "Orientaciones"
         },
         {
           "documento": "Protocolo de uso de IA para la Facultad de Educación UDP",
           "unidad": "Facultad de Educación",
           "fecha": "2025-08",
-          "url": "https://educacion.udp.cl/cms/wp-content/uploads/2026/05/Protocolo-de-uso-de-IA-para-la-Facultad-de-Educacion-UDP.-AGOSTO-2025.pdf"
+          "url": "https://educacion.udp.cl/cms/wp-content/uploads/2026/05/Protocolo-de-uso-de-IA-para-la-Facultad-de-Educacion-UDP.-AGOSTO-2025.pdf",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": false,
+          "modifica_evaluacion": true,
+          "enforcement": "Protocolo"
         }
       ]
     },
@@ -426,7 +449,31 @@
           "documento": "Política Institucional de Integración de Inteligencia Artificial",
           "unidad": "Transformación Digital / Rectoría",
           "fecha": "2026-01",
-          "url": "https://www.ucentral.cl/"
+          "url": "https://www.ucentral.cl/",
+          "exige_declaracion": false,
+          "ia_no_autora": false,
+          "menciona_datos_personales": false,
+          "modifica_evaluacion": false,
+          "enforcement": "Política en proceso"
+        }
+      ]
+    },
+    {
+      "registro": "C12",
+      "nombre": "UNIVERSIDAD DEL ALBA",
+      "tipo": "UNIVERSIDAD PRIVADA",
+      "total_instrumentos": 1,
+      "instrumentos": [
+        {
+          "documento": "Guía básica para el uso de ChatGPT y herramientas de IA con fines académicos",
+          "unidad": "Vicerrectoría Académica",
+          "fecha": "2024",
+          "url": "https://udalba.cl",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": false,
+          "modifica_evaluacion": true,
+          "enforcement": "Guía orientadora con citación explícita de prompts"
         }
       ]
     },
@@ -440,7 +487,50 @@
           "documento": "Reglamento de Estudiantes de Pregrado (Decreto N° 01/2026) - Art. 29° sobre IA",
           "unidad": "Rectoría / VRA",
           "fecha": "2026-01-02",
-          "url": "https://www.umayor.cl/um/reglamento-universidad-mayor"
+          "url": "https://www.umayor.cl/um/reglamento-universidad-mayor",
+          "exige_declaracion": false,
+          "ia_no_autora": false,
+          "menciona_datos_personales": false,
+          "modifica_evaluacion": true,
+          "enforcement": "Reglamento con sanciones (nota 1.0)"
+        }
+      ]
+    },
+    {
+      "registro": "C14",
+      "nombre": "UNIVERSIDAD ACADEMIA DE HUMANISMO CRISTIANO",
+      "tipo": "UNIVERSIDAD PRIVADA",
+      "total_instrumentos": 1,
+      "instrumentos": [
+        {
+          "documento": "Guía para el uso de IA generativa en educación e investigación",
+          "unidad": "Vicerrectoría Académica / DIDA / IAcademia",
+          "fecha": "2024",
+          "url": "https://academia.cl",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": true,
+          "modifica_evaluacion": true,
+          "enforcement": "Guía formativa con bitácoras de trabajo obligatorias"
+        }
+      ]
+    },
+    {
+      "registro": "C16",
+      "nombre": "UNIVERSIDAD SANTO TOMÁS",
+      "tipo": "UNIVERSIDAD PRIVADA",
+      "total_instrumentos": 1,
+      "instrumentos": [
+        {
+          "documento": "Lineamientos para el uso de la Inteligencia Artificial (Decreto N° 054/25)",
+          "unidad": "Rectoría / Vicerrectoría Académica",
+          "fecha": "2025",
+          "url": "https://www.ust.cl/politicas-y-reglamentos/",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": true,
+          "modifica_evaluacion": true,
+          "enforcement": "Decreto formal con sanciones disciplinarias"
         }
       ]
     },
@@ -454,13 +544,23 @@
           "documento": "Marco para el uso de la Inteligencia Artificial en UDLA (Res. N°31032025-01)",
           "unidad": "Institucional",
           "fecha": "2025-03-31",
-          "url": "https://www.udla.cl/descargas/normativas/marco-para-uso-ia-en-udla.pdf"
+          "url": "https://www.udla.cl/descargas/normativas/marco-para-uso-ia-en-udla.pdf",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": true,
+          "modifica_evaluacion": true,
+          "enforcement": "Marco normativo con resolución"
         },
         {
           "documento": "Uso responsable de Inteligencia Artificial en la docencia de asignaturas online asincrónicas",
           "unidad": "Formación Docente",
           "fecha": "2024",
-          "url": "https://www.udla.cl/descargas/educacion/Aplicaciones-Operativas-IA-UDLA-10-Docentes-Online-asincronico.pdf"
+          "url": "https://www.udla.cl/descargas/educacion/Aplicaciones-Operativas-IA-UDLA-10-Docentes-Online-asincronico.pdf",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": false,
+          "modifica_evaluacion": true,
+          "enforcement": "Guía operativa"
         }
       ]
     },
@@ -474,7 +574,12 @@
           "documento": "Lineamiento para el uso responsable de inteligencia artificial en la Universidad Andrés Bello",
           "unidad": "Comité de IA / Rectoría",
           "fecha": "2024-09-26",
-          "url": "https://ia.unab.cl/wp-content/uploads/2024/10/IA-Lineamiento-para-el-uso-responsable-de-inteligencia-artificial-en-UNAB-20240926-002.pdf"
+          "url": "https://ia.unab.cl/wp-content/uploads/2024/10/IA-Lineamiento-para-el-uso-responsable-de-inteligencia-artificial-en-UNAB-20240926-002.pdf",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": true,
+          "modifica_evaluacion": true,
+          "enforcement": "Lineamiento institucional"
         }
       ]
     },
@@ -488,13 +593,23 @@
           "documento": "Política de Inteligencia Artificial de la Universidad Adolfo Ibáñez",
           "unidad": "Rectoría / Vicerrectoría Académica",
           "fecha": "2025-01-10",
-          "url": "https://uai.cdn7pm.net/documentos/politica-de-inteligencia-artificial.pdf"
+          "url": "https://uai.cdn7pm.net/documentos/politica-de-inteligencia-artificial.pdf",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": true,
+          "modifica_evaluacion": true,
+          "enforcement": "Política institucional"
         },
         {
           "documento": "Guía de Inteligencia Artificial para Estudiantes",
           "unidad": "Dirección de Desarrollo Académico",
           "fecha": "2025-2026",
-          "url": "https://uai.cdn7pm.net/documentos/guia-ia-estudiantes.pdf"
+          "url": "https://uai.cdn7pm.net/documentos/guia-ia-estudiantes.pdf",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": false,
+          "modifica_evaluacion": false,
+          "enforcement": "Guía orientadora"
         }
       ]
     },
@@ -508,7 +623,31 @@
           "documento": "Reglamento sobre el uso de herramientas de inteligencia artificial (Resolución Rectoría N° 220/2023)",
           "unidad": "Rectoría",
           "fecha": "2024-06",
-          "url": "https://www.uautonoma.cl/content/uploads/2024/06/Reglamento-Uso-de-Herremientas-de-Inteligencia-Artificial_compressed.pdf"
+          "url": "https://www.uautonoma.cl/content/uploads/2024/06/Reglamento-Uso-de-Herremientas-de-Inteligencia-Artificial_compressed.pdf",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": false,
+          "modifica_evaluacion": true,
+          "enforcement": "Reglamento con decreto"
+        }
+      ]
+    },
+    {
+      "registro": "C38",
+      "nombre": "UNIVERSIDAD DE LOS ANDES",
+      "tipo": "UNIVERSIDAD PRIVADA",
+      "total_instrumentos": 1,
+      "instrumentos": [
+        {
+          "documento": "Guía de uso responsable de Inteligencia Artificial y Boletines Pedagógicos",
+          "unidad": "Biblioteca / Centro de Innovación Docente (CID)",
+          "fecha": "2024",
+          "url": "https://biblioteca.uandes.cl/",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": true,
+          "modifica_evaluacion": true,
+          "enforcement": "Guía de integridad y declaración obligatoria de prompts"
         }
       ]
     },
@@ -522,39 +661,12 @@
           "documento": "Código de Conducta Responsable en Investigación - Lineamientos IA",
           "unidad": "DISEI / Vicerrectoría de Investigación",
           "fecha": "2024-2025",
-          "url": "https://investigacion.uss.cl/integridad/"
-        }
-      ]
-    },
-    {
-      "registro": "C46",
-      "nombre": "UNIVERSIDAD CATÓLICA CARDENAL RAÚL SILVA HENRÍQUEZ",
-      "tipo": "UNIVERSIDAD PRIVADA",
-      "total_instrumentos": 4,
-      "instrumentos": [
-        {
-          "documento": "Política de uso ético de Inteligencia Artificial Generativa v1",
-          "unidad": "Instituto de Sociología (ISUC)",
-          "fecha": "2025-07-30",
-          "url": "https://sociologia.uc.cl/wp-content/uploads/2025/10/Politica-de-uso-etico-de-IA-ISUC-v1.pdf"
-        },
-        {
-          "documento": "Guía Ética para el uso de Inteligencia Artificial Generativa",
-          "unidad": "Facultad de Derecho",
-          "fecha": "2024",
-          "url": "https://derecho.uc.cl/facultad-de-derecho-uc-establece-guia-etica-para-uso-de-inteligencia-artificial-generativa/"
-        },
-        {
-          "documento": "Inteligencia artificial e integridad académica en la práctica docente",
-          "unidad": "Dirección de Integridad Académica / VRA",
-          "fecha": "2024-2025",
-          "url": "https://integridadacademica.uc.cl/secciones/inteligencia-artificial/"
-        },
-        {
-          "documento": "Lineamientos UC para la integración de la IA en la formación",
-          "unidad": "Vicerrectoría Académica / Centro de Desarrollo Docente",
-          "fecha": "2026-03",
-          "url": "https://catalogodigital.uc.cl/normativas-y-procedimientos/lineamientos-uc-para-la-integracion-de-la-ia-en-la-formacion/"
+          "url": "https://investigacion.uss.cl/integridad/",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": false,
+          "modifica_evaluacion": false,
+          "enforcement": "Código con registro de prompts"
         }
       ]
     },
@@ -568,19 +680,34 @@
           "documento": "Política de Inteligencia Artificial",
           "unidad": "Comité de Inteligencia Artificial / Rectoría",
           "fecha": "2026-03",
-          "url": "https://www.udd.cl/dircom/reglamentos/Politica-IA.pdf"
+          "url": "https://www.udd.cl/dircom/reglamentos/Politica-IA.pdf",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": true,
+          "modifica_evaluacion": true,
+          "enforcement": "Política institucional"
         },
         {
           "documento": "Reglamento Operativo para el Uso de Aplicaciones de Inteligencia Artificial Generativa (IAG)",
           "unidad": "Comité de IA / Encargado de Datos",
           "fecha": "2026-03",
-          "url": "https://www.udd.cl/dircom/reglamentos/Reglamento-Operativo-para-Uso-de-Aplicaciones-IAG.pdf"
+          "url": "https://www.udd.cl/dircom/reglamentos/Reglamento-Operativo-para-Uso-de-Aplicaciones-IAG.pdf",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": true,
+          "modifica_evaluacion": true,
+          "enforcement": "Reglamento operativo"
         },
         {
           "documento": "Docencia con IA: Recomendaciones para el uso de Inteligencia Artificial Generativa (IAG)",
           "unidad": "Centro de Innovación Docente (CID)",
           "fecha": "2024",
-          "url": "https://innovaciondocente.udd.cl/recursos-educativos/recomendaciones-generales-para-el-uso-de-inteligencia-artificial-generativa/"
+          "url": "https://innovaciondocente.udd.cl/recursos-educativos/recomendaciones-generales-para-el-uso-de-inteligencia-artificial-generativa/",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": false,
+          "modifica_evaluacion": true,
+          "enforcement": "Recomendaciones"
         }
       ]
     },
@@ -594,7 +721,31 @@
           "documento": "Modelo y Lineamientos de Integración de IA en la Academia (SapIA)",
           "unidad": "Unidad SapIA",
           "fecha": "2024",
-          "url": "https://www.ubo.cl/"
+          "url": "https://www.ubo.cl/",
+          "exige_declaracion": false,
+          "ia_no_autora": false,
+          "menciona_datos_personales": false,
+          "modifica_evaluacion": false,
+          "enforcement": "Modelo institucional"
+        }
+      ]
+    },
+    {
+      "registro": "C72",
+      "nombre": "UNIVERSIDAD MIGUEL DE CERVANTES",
+      "tipo": "UNIVERSIDAD PRIVADA",
+      "total_instrumentos": 1,
+      "instrumentos": [
+        {
+          "documento": "Instructivo de Uso Académico de Inteligencia Artificial Generativa y Principios Éticos",
+          "unidad": "Vicerrectoría Académica",
+          "fecha": "2024",
+          "url": "https://umcervantes.cl",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": true,
+          "modifica_evaluacion": true,
+          "enforcement": "Instructivo vinculante con foco en persona humana"
         }
       ]
     },
@@ -608,79 +759,12 @@
           "documento": "Orientaciones sobre integridad académica para docentes de actividades curriculares",
           "unidad": "Dirección de Docencia y Pedagogía Universitaria (VRA)",
           "fecha": "2025-12",
-          "url": "https://www.uahurtado.cl/wp-content/uploads/2026/03/2.9-Orientaciones-sobre-integridad-academica-DIC-2025.pdf"
-        }
-      ]
-    },
-    {
-      "registro": "B3",
-      "nombre": "UNIVERSIDAD TÉCNICA FEDERICO SANTA MARÍA",
-      "tipo": "UNIVERSIDAD PARTICULAR CON APORTES",
-      "total_instrumentos": 1,
-      "instrumentos": [
-        {
-          "documento": "Lineamiento o guía institucional verificada",
-          "fecha": "2024-2025"
-        }
-      ]
-    },
-    {
-      "registro": "C12",
-      "nombre": "UNIVERSIDAD DEL ALBA",
-      "tipo": "UNIVERSIDAD PRIVADA",
-      "total_instrumentos": 1,
-      "instrumentos": [
-        {
-          "documento": "Lineamiento o guía institucional verificada",
-          "fecha": "2024-2025"
-        }
-      ]
-    },
-    {
-      "registro": "C14",
-      "nombre": "UNIVERSIDAD ACADEMIA DE HUMANISMO CRISTIANO",
-      "tipo": "UNIVERSIDAD PRIVADA",
-      "total_instrumentos": 1,
-      "instrumentos": [
-        {
-          "documento": "Lineamiento o guía institucional verificada",
-          "fecha": "2024-2025"
-        }
-      ]
-    },
-    {
-      "registro": "C16",
-      "nombre": "UNIVERSIDAD SANTO TOMÁS",
-      "tipo": "UNIVERSIDAD PRIVADA",
-      "total_instrumentos": 1,
-      "instrumentos": [
-        {
-          "documento": "Lineamiento o guía institucional verificada",
-          "fecha": "2024-2025"
-        }
-      ]
-    },
-    {
-      "registro": "C38",
-      "nombre": "UNIVERSIDAD DE LOS ANDES",
-      "tipo": "UNIVERSIDAD PRIVADA",
-      "total_instrumentos": 1,
-      "instrumentos": [
-        {
-          "documento": "Lineamiento o guía institucional verificada",
-          "fecha": "2024-2025"
-        }
-      ]
-    },
-    {
-      "registro": "C72",
-      "nombre": "UNIVERSIDAD MIGUEL DE CERVANTES",
-      "tipo": "UNIVERSIDAD PRIVADA",
-      "total_instrumentos": 1,
-      "instrumentos": [
-        {
-          "documento": "Lineamiento o guía institucional verificada",
-          "fecha": "2024-2025"
+          "url": "https://www.uahurtado.cl/wp-content/uploads/2026/03/2.9-Orientaciones-sobre-integridad-academica-DIC-2025.pdf",
+          "exige_declaracion": true,
+          "ia_no_autora": true,
+          "menciona_datos_personales": false,
+          "modifica_evaluacion": true,
+          "enforcement": "Orientaciones con criterios formativos"
         }
       ]
     }
@@ -727,9 +811,24 @@
       "tipo": "UNIVERSIDAD ESTATAL"
     },
     {
+      "registro": "A17",
+      "nombre": "UNIVERSIDAD DE O'HIGGINS",
+      "tipo": "UNIVERSIDAD ESTATAL"
+    },
+    {
       "registro": "A18",
       "nombre": "UNIVERSIDAD DE AYSÉN",
       "tipo": "UNIVERSIDAD ESTATAL"
+    },
+    {
+      "registro": "B7",
+      "nombre": "UNIVERSIDAD CATÓLICA DEL MAULE",
+      "tipo": "UNIVERSIDAD PARTICULAR CON APORTES"
+    },
+    {
+      "registro": "B8",
+      "nombre": "UNIVERSIDAD CATÓLICA DE LA SANTÍSIMA CONCEPCIÓN",
+      "tipo": "UNIVERSIDAD PARTICULAR CON APORTES"
     },
     {
       "registro": "C2",
@@ -764,6 +863,11 @@
     {
       "registro": "C42",
       "nombre": "UNIVERSIDAD ADVENTISTA DE CHILE",
+      "tipo": "UNIVERSIDAD PRIVADA"
+    },
+    {
+      "registro": "C46",
+      "nombre": "UNIVERSIDAD CATÓLICA CARDENAL RAÚL SILVA HENRÍQUEZ",
       "tipo": "UNIVERSIDAD PRIVADA"
     },
     {

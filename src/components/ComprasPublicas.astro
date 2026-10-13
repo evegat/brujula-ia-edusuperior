@@ -1,0 +1,298 @@
+---
+import comprasData from '../../data/compras_clasificadas.json';
+
+const totalCompras = comprasData.length; // 85
+const uesUnicas = Array.from(new Set(comprasData.map(c => c.universidad))).sort();
+
+function normalizeForSearch(str: string): string {
+  return (str || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .trim();
+}
+
+function formatearMonto(monto: number): string {
+  if (!monto || isNaN(monto)) return '—';
+  return '$' + Math.round(monto).toLocaleString('es-CL');
+}
+
+function obtenerBadgeCapa(capa: string): { label: string; cls: string } {
+  switch (capa) {
+    case 'Infraestructura_Computo':
+      return { label: 'Cómputo', cls: 'badge-blue' };
+    case 'Gestion_Backoffice':
+      return { label: 'Back-office', cls: 'badge-purple' };
+    case 'Atencion_Frontoffice':
+      return { label: 'Chatbots', cls: 'badge-amber' };
+    case 'Docencia_Aula':
+      return { label: 'Docencia', cls: 'badge-green' };
+    default:
+      return { label: capa, cls: 'badge-blue' };
+  }
+}
+---
+
+<section id="compras" style="margin-bottom: 4.5rem; scroll-margin-top: 2rem;">
+  <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1.25rem; margin-bottom:1.5rem;">
+    <div>
+      <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.4rem;">
+        <span class="badge badge-amber">Investigación Especial • Mercado Público</span>
+        <span class="badge badge-blue">85 Contratos Auditados (2020–2026)</span>
+      </div>
+      <h2>Adquisiciones tecnológicas sin protocolo de aula localizado en el alcance del catastro (2020–2026)</h2>
+      <p style="color:var(--text-muted); max-width:850px; font-size:0.96rem;">
+        Registro exhaustivo de compras públicas de software, chatbots y soluciones con Inteligencia Artificial contratadas por 10 Universidades Estatales a través de ChileCompra. La evidencia constata que planteles sin normativa de aula pública (como UTEM, ULS o UBB) destinan cuantiosos recursos fiscales a asistentes y herramientas automatizadas sin contar aún con lineamientos de integridad ni resguardo de datos personales para sus estudiantes.
+      </p>
+    </div>
+  </div>
+
+  <!-- Estadísticas Principales de Compras -->
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap:1.25rem; margin-bottom:2rem;">
+    <div class="card" style="border-left:4px solid var(--accent-blue); padding:1.25rem;">
+      <div style="font-size:1.8rem; font-weight:700; color:var(--accent-blue); font-family:var(--font-serif);">{totalCompras}</div>
+      <div style="font-size:0.8rem; color:var(--text-muted);">Licitaciones & Órdenes de Compra</div>
+    </div>
+    <div class="card" style="border-left:4px solid var(--accent-green); padding:1.25rem;">
+      <div style="font-size:1.8rem; font-weight:700; color:var(--accent-green); font-family:var(--font-serif);">{uesUnicas.length} Planteles</div>
+      <div style="font-size:0.8rem; color:var(--text-muted);">Universidades Estatales Compradoras</div>
+    </div>
+    <div class="card" style="border-left:4px solid var(--accent-red); padding:1.25rem;">
+      <div style="font-size:1.8rem; font-weight:700; color:var(--accent-red); font-family:var(--font-serif);">30%</div>
+      <div style="font-size:0.8rem; color:var(--text-muted);">Compran IA sin Protocolo de Aula (UTEM, ULS, UBB)</div>
+    </div>
+    <div class="card" style="border-left:4px solid var(--accent-purple); padding:1.25rem;">
+      <div style="font-size:1.8rem; font-weight:700; color:var(--accent-purple); font-family:var(--font-serif);">4 Capas</div>
+      <div style="font-size:0.8rem; color:var(--text-muted);">Cómputo, Back-office, Chatbots y Docencia</div>
+    </div>
+  </div>
+
+  <!-- Barra de Filtros y Búsqueda de Compras -->
+  <div style="background:var(--card-bg); border:1px solid var(--border-color); border-radius:12px; padding:1.25rem; margin-bottom:1.5rem; box-shadow:var(--shadow-sm);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1rem;">
+      
+      <!-- Filtros por Capa Funcional -->
+      <div style="display:flex; gap:0.4rem; flex-wrap:wrap;" id="compras-capa-buttons">
+        <button type="button" class="btn btn-primary btn-sm btn-capa" data-capa="todas">
+          Todas ({totalCompras})
+        </button>
+        <button type="button" class="btn btn-outline btn-sm btn-capa" data-capa="Infraestructura_Computo">
+          🖥️ Cómputo (14)
+        </button>
+        <button type="button" class="btn btn-outline btn-sm btn-capa" data-capa="Gestion_Backoffice">
+          ⚙️ Back-office (27)
+        </button>
+        <button type="button" class="btn btn-outline btn-sm btn-capa" data-capa="Atencion_Frontoffice">
+          🤖 Chatbots (33)
+        </button>
+        <button type="button" class="btn btn-outline btn-sm btn-capa" data-capa="Docencia_Aula">
+          📚 Docencia (11)
+        </button>
+      </div>
+
+      <!-- Filtro por Universidad y Búsqueda -->
+      <div style="display:flex; gap:0.6rem; flex-wrap:wrap; min-width:280px; flex:1; max-width:480px;">
+        <select id="compras-select-u" style="padding:0.45rem 0.75rem; border:1px solid var(--border-color); border-radius:6px; background:var(--canvas-bg); color:var(--text-main); font-size:0.84rem; max-width:200px;">
+          <option value="todas">-- Todas las Universidades --</option>
+          {uesUnicas.map(u => (
+            <option value={u}>{u}</option>
+          ))}
+        </select>
+        <input 
+          type="text" 
+          id="compras-search-input" 
+          placeholder="🔍 Buscar proveedor, software..." 
+          style="padding:0.45rem 0.75rem; border:1px solid var(--border-color); border-radius:6px; background:var(--canvas-bg); color:var(--text-main); font-size:0.84rem; flex:1; min-width:140px;"
+        />
+      </div>
+
+    </div>
+
+    <!-- Contador de Resultados -->
+    <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.82rem; color:var(--text-muted); border-top:1px solid var(--border-color); padding-top:0.75rem;">
+      <span id="compras-count-display">Mostrando 85 de 85 licitaciones auditadas</span>
+      <span>Fuente oficial: ChileCompra / Mercado Público</span>
+    </div>
+  </div>
+
+  <!-- Tabla Interactiva de Compras (Prerenderizada por SSR) -->
+  <div id="compras-table-container" style="background:var(--card-bg); border:1px solid var(--border-color); border-radius:12px; overflow-x:auto; box-shadow:var(--shadow-sm); max-width:100%; -webkit-overflow-scrolling:touch;">
+    <table style="width:100%; border-collapse:collapse; font-size:0.86rem; text-align:left; min-width:700px;" id="tabla-compras">
+      <thead>
+        <tr style="background:var(--card-alt); border-bottom:2px solid var(--border-color); color:var(--text-muted); font-size:0.78rem; text-transform:uppercase; letter-spacing:0.5px;">
+          <th scope="col" style="padding:0.85rem 1rem;">Universidad</th>
+          <th scope="col" style="padding:0.85rem 1rem;">Objeto de Compra</th>
+          <th scope="col" style="padding:0.85rem 1rem;">Capa Funcional</th>
+          <th scope="col" style="padding:0.85rem 1rem;">Proveedor</th>
+          <th scope="col" style="padding:0.85rem 1rem; text-align:right;">Monto (CLP)</th>
+          <th scope="col" style="padding:0.85rem 1rem; text-align:center;">Ficha Mercado Público</th>
+        </tr>
+      </thead>
+      <tbody id="compras-tbody">
+        {comprasData.map((c, idx) => {
+          const esBrecha = ['UNIVERSIDAD TECNOLOGICA METROPOLITANA', 'UNIVERSIDAD DE LA SERENA', 'UNIVERSIDAD DEL BIO BIO'].includes(c.universidad);
+          const badge = obtenerBadgeCapa(c.capa_funcional);
+          const searchBlob = `${normalizeForSearch(c.nombre)} ${normalizeForSearch(c.descripcion)} ${normalizeForSearch(c.proveedor)} ${normalizeForSearch(c.universidad)}`;
+
+          return (
+            <tr 
+              class="compra-row"
+              data-capa={c.capa_funcional}
+              data-universidad={c.universidad}
+              data-search={searchBlob}
+              style={`border-bottom: 1px solid var(--border-color); background: ${idx % 2 === 0 ? 'transparent' : 'rgba(0,0,0,0.015)'};`}
+            >
+              <td style="padding:0.85rem 1rem; vertical-align:top;">
+                <div style="font-weight:600; color:var(--text-main);">{c.universidad}</div>
+                {esBrecha ? (
+                  <span class="badge badge-red" style="font-size:0.7rem; margin-top:0.2rem;">⚠️ Sin protocolo de aula</span>
+                ) : (
+                  <span class="badge badge-green" style="font-size:0.7rem; margin-top:0.2rem;">✓ Con protocolo</span>
+                )}
+              </td>
+              <td style="padding:0.85rem 1rem; vertical-align:top; max-width:320px;">
+                <div style="font-weight:600; margin-bottom:0.2rem;">{c.nombre}</div>
+                <div style="font-size:0.78rem; color:var(--text-muted); line-height:1.4;">{c.descripcion || ''}</div>
+                <div style="font-size:0.74rem; color:var(--text-muted); margin-top:0.25rem;">Fecha: {c.fecha || 'N/D'}</div>
+              </td>
+              <td style="padding:0.85rem 1rem; vertical-align:top;">
+                <span class={`badge ${badge.cls}`}>{badge.label}</span>
+                <div style="font-size:0.74rem; color:var(--text-muted); margin-top:0.25rem;">{c.tipo_uso || ''}</div>
+              </td>
+              <td style="padding:0.85rem 1rem; vertical-align:top; font-size:0.82rem; color:var(--text-main);">
+                {c.proveedor || 'Sin proveedor especificado'}
+              </td>
+              <td style="padding:0.85rem 1rem; vertical-align:top; text-align:right; font-weight:600; font-family:var(--font-sans);">
+                {formatearMonto(c.monto)}
+              </td>
+              <td style="padding:0.85rem 1rem; vertical-align:top; text-align:center;">
+                {c.link ? (
+                  <a href={c.link} target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="font-size:0.76rem; padding:0.3rem 0.6rem; color:var(--accent-blue);">
+                    🔗 Ver Licitación &rarr;
+                  </a>
+                ) : (
+                  <span style="color:var(--text-muted); font-size:0.75rem;">Sin enlace directo</span>
+                )}
+              </td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Estado Vacío -->
+  <div id="compras-empty-state" style="display:none; text-align:center; padding:3rem 1.5rem; background:var(--card-bg); border:1px solid var(--border-color); border-radius:12px; margin-top:1rem;">
+    <div style="font-size:2rem; margin-bottom:0.5rem;">🔍</div>
+    <div style="font-weight:600; margin-bottom:0.25rem;">No se encontraron contratos con esos filtros</div>
+    <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">Intenta seleccionar otra capa funcional o limpiar el término de búsqueda.</div>
+    <button type="button" id="compras-reset-btn" class="btn btn-primary btn-sm">Restablecer Filtros de Compras</button>
+  </div>
+
+</section>
+
+<script is:inline>
+  let capaFiltro = 'todas';
+  let uFiltro = 'todas';
+  let textoFiltro = '';
+
+  const tbody = document.getElementById('compras-tbody');
+  const rows = Array.from(document.querySelectorAll('.compra-row'));
+  const countDisp = document.getElementById('compras-count-display');
+  const selectU = document.getElementById('compras-select-u');
+  const searchInput = document.getElementById('compras-search-input');
+  const emptyState = document.getElementById('compras-empty-state');
+  const resetBtn = document.getElementById('compras-reset-btn');
+
+  function normalizeInput(str) {
+    return (str || '')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .trim();
+  }
+
+  function filtrarCompras() {
+    if (!tbody || rows.length === 0) return;
+
+    const normQuery = normalizeInput(textoFiltro);
+    let visibles = 0;
+
+    rows.forEach(row => {
+      const capa = row.getAttribute('data-capa');
+      const u = row.getAttribute('data-universidad');
+      const searchBlob = row.getAttribute('data-search') || '';
+
+      let matchCapa = (capaFiltro === 'todas' || capa === capaFiltro);
+      let matchU = (uFiltro === 'todas' || u === uFiltro);
+      let matchTexto = true;
+
+      if (normQuery) {
+        matchTexto = searchBlob.includes(normQuery);
+      }
+
+      if (matchCapa && matchU && matchTexto) {
+        row.style.display = '';
+        visibles++;
+      } else {
+        row.style.display = 'none';
+      }
+    });
+
+    if (countDisp) {
+      countDisp.textContent = `Mostrando ${visibles} de ${rows.length} licitaciones auditadas`;
+    }
+
+    const tableContainer = document.getElementById('compras-table-container');
+
+    if (visibles === 0) {
+      if (tableContainer) tableContainer.style.display = 'none';
+      if (emptyState) emptyState.style.display = 'block';
+    } else {
+      if (tableContainer) tableContainer.style.display = 'block';
+      if (emptyState) emptyState.style.display = 'none';
+    }
+  }
+
+  // Listeners de Capa
+  document.querySelectorAll('.btn-capa').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.btn-capa').forEach(b => {
+        b.classList.remove('btn-primary');
+        b.classList.add('btn-outline');
+      });
+      btn.classList.remove('btn-outline');
+      btn.classList.add('btn-primary');
+      capaFiltro = btn.getAttribute('data-capa') || 'todas';
+      filtrarCompras();
+    });
+  });
+
+  selectU?.addEventListener('change', (e) => {
+    uFiltro = e.target.value;
+    filtrarCompras();
+  });
+
+  searchInput?.addEventListener('input', (e) => {
+    textoFiltro = e.target.value;
+    filtrarCompras();
+  });
+
+  resetBtn?.addEventListener('click', () => {
+    capaFiltro = 'todas';
+    uFiltro = 'todas';
+    textoFiltro = '';
+    if (selectU) selectU.value = 'todas';
+    if (searchInput) searchInput.value = '';
+    document.querySelectorAll('.btn-capa').forEach(b => {
+      if (b.getAttribute('data-capa') === 'todas') {
+        b.classList.remove('btn-outline');
+        b.classList.add('btn-primary');
+      } else {
+        b.classList.remove('btn-primary');
+        b.classList.add('btn-outline');
+      }
+    });
+    filtrarCompras();
+  });
+</script>

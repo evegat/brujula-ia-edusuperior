@@ -1,0 +1,207 @@
+---
+import inventarioData from '../../inventario.json';
+
+const defaultDoc1 = inventarioData[0]; // UChile
+const defaultDoc2 = inventarioData[6] || inventarioData[1]; // PUC
+
+const defaultFilas = [
+  {
+    nombre: 'Documento & Fecha',
+    val1: `${defaultDoc1.documento} (${defaultDoc1.fecha})`,
+    val2: `${defaultDoc2.documento} (${defaultDoc2.fecha})`
+  },
+  {
+    nombre: 'Gobernanza & Enforcement',
+    val1: `<span class="badge badge-blue">${(defaultDoc1.gobernanza || '').toUpperCase()}</span><br><span style="font-size:0.8rem; color:var(--text-muted);">${defaultDoc1.enforcement}</span>`,
+    val2: `<span class="badge badge-blue">${(defaultDoc2.gobernanza || '').toUpperCase()}</span><br><span style="font-size:0.8rem; color:var(--text-muted);">${defaultDoc2.enforcement}</span>`
+  },
+  {
+    nombre: 'Exigencia de Declaración / Prompts',
+    val1: defaultDoc1.exige_declaracion ? '<span class="badge badge-green">✓ Obligatoria</span>' : '<span class="badge badge-amber">Optativa / Sugerida</span>',
+    val2: defaultDoc2.exige_declaracion ? '<span class="badge badge-green">✓ Obligatoria</span>' : '<span class="badge badge-amber">Optativa / Sugerida</span>'
+  },
+  {
+    nombre: 'Regla de Autoría IA',
+    val1: defaultDoc1.ia_no_autora ? '<span class="badge badge-green">✓ Prohíbe autoría IA</span>' : '<span class="badge badge-amber">No especificado</span>',
+    val2: defaultDoc2.ia_no_autora ? '<span class="badge badge-green">✓ Prohíbe autoría IA</span>' : '<span class="badge badge-amber">No especificado</span>'
+  },
+  {
+    nombre: 'Privacidad & Datos (Ley 21.719)',
+    val1: defaultDoc1.menciona_datos_personales ? '<span class="badge badge-green">✓ Protección explícita</span>' : '<span class="badge badge-amber">Sin mención directa</span>',
+    val2: defaultDoc2.menciona_datos_personales ? '<span class="badge badge-green">✓ Protección explícita</span>' : '<span class="badge badge-amber">Sin mención directa</span>'
+  },
+  {
+    nombre: 'Modificación de Evaluaciones',
+    val1: defaultDoc1.modifica_evaluacion ? '<span class="badge badge-green">✓ Exige rediseño de rúbricas</span>' : '<span class="badge badge-amber">Sin impacto evaluativo</span>',
+    val2: defaultDoc2.modifica_evaluacion ? '<span class="badge badge-green">✓ Exige rediseño de rúbricas</span>' : '<span class="badge badge-amber">Sin impacto evaluativo</span>'
+  },
+  {
+    nombre: 'Enfoque GENIAL (D5)',
+    val1: `<span class="badge badge-blue">${defaultDoc1.d5_enfoque || 'Habilitador / Reflexivo'}</span>`,
+    val2: `<span class="badge badge-blue">${defaultDoc2.d5_enfoque || 'Habilitador / Reflexivo'}</span>`
+  },
+  {
+    nombre: 'Acceso Documental',
+    val1: defaultDoc1.url ? `<a href="${defaultDoc1.url}" target="_blank" rel="noopener noreferrer" style="font-weight:600; color:var(--accent-blue);">Abrir fuente &rarr;</a>` : '<span style="color:var(--text-muted);">Repositorio Interno</span>',
+    val2: defaultDoc2.url ? `<a href="${defaultDoc2.url}" target="_blank" rel="noopener noreferrer" style="font-weight:600; color:var(--accent-blue);">Abrir fuente &rarr;</a>` : '<span style="color:var(--text-muted);">Repositorio Interno</span>'
+  }
+];
+---
+
+<section id="comparador" style="margin-bottom: 4.5rem; scroll-margin-top: 2rem;">
+  <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1.25rem; margin-bottom:1.5rem;">
+    <div>
+      <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.4rem;">
+        <span class="badge badge-blue">Herramienta Aplicada</span>
+        <span class="badge badge-purple">Análisis Comparado de Políticas</span>
+      </div>
+      <h2>Comparador Lado a Lado de Políticas Universitarias</h2>
+      <p style="color:var(--text-muted); max-width:850px; font-size:0.96rem;">
+        Contrasta directamente los lineamientos de dos facultades o universidades chilenas en seis dimensiones clave: exigencia de declaración de prompts, autoría, privacidad Ley N° 21.719, impacto en evaluación y enforcement jurídico.
+      </p>
+    </div>
+  </div>
+
+  <div class="card" style="padding:1.75rem;">
+    <!-- Selectores Lado a Lado -->
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem; margin-bottom:1.75rem;">
+      <div>
+        <label for="sel-inst-1" style="display:block; font-size:0.86rem; font-weight:700; margin-bottom:0.4rem; color:var(--text-main);">
+          Primera Institución / Facultad:
+        </label>
+        <select id="sel-inst-1" style="width:100%; padding:0.65rem 0.85rem; border:1px solid var(--border-color); border-radius:8px; background:var(--canvas-bg); color:var(--text-main); font-size:0.9rem;">
+          {inventarioData.map((item, idx) => (
+            <option value={item.id} selected={idx === 0}>
+              {item.sigla} — {item.unidad} ({item.fecha})
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div>
+        <label for="sel-inst-2" style="display:block; font-size:0.86rem; font-weight:700; margin-bottom:0.4rem; color:var(--text-main);">
+          Segunda Institución / Facultad:
+        </label>
+        <select id="sel-inst-2" style="width:100%; padding:0.65rem 0.85rem; border:1px solid var(--border-color); border-radius:8px; background:var(--canvas-bg); color:var(--text-main); font-size:0.9rem;">
+          {inventarioData.map((item, idx) => (
+            <option value={item.id} selected={idx === 6}>
+              {item.sigla} — {item.unidad} ({item.fecha})
+            </option>
+          ))}
+        </select>
+      </div>
+    </div>
+
+    <!-- Tabla Comparativa -->
+    <div style="overflow-x:auto; -webkit-overflow-scrolling:touch;">
+      <table style="width:100%; border-collapse:collapse; font-size:0.88rem; text-align:left; min-width:540px;" id="tabla-comparador">
+        <thead>
+          <tr style="background:var(--card-alt); border-bottom:2px solid var(--border-color);">
+            <th scope="col" style="padding:1rem; width:25%; color:var(--text-muted); font-size:0.8rem; text-transform:uppercase;">Variable de Análisis</th>
+            <th scope="col" style="padding:1rem; width:37.5%; font-size:1.05rem; font-family:var(--font-serif);" id="th-doc-1">
+              {defaultDoc1.universidad}<br /><span style="font-size:0.78rem; font-weight:normal; font-family:var(--font-sans); color:var(--text-muted);">{defaultDoc1.unidad}</span>
+            </th>
+            <th scope="col" style="padding:1rem; width:37.5%; font-size:1.05rem; font-family:var(--font-serif);" id="th-doc-2">
+              {defaultDoc2.universidad}<br /><span style="font-size:0.78rem; font-weight:normal; font-family:var(--font-sans); color:var(--text-muted);">{defaultDoc2.unidad}</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody id="tbody-comparador">
+          {defaultFilas.map((f, idx) => (
+            <tr style={`border-bottom: 1px solid var(--border-color); background: ${idx % 2 === 0 ? 'transparent' : 'rgba(0,0,0,0.015)'};`}>
+              <td style="padding:0.85rem 1rem; font-weight:600; color:var(--text-main); vertical-align:top;">{f.nombre}</td>
+              <td style="padding:0.85rem 1rem; vertical-align:top;" set:html={f.val1} />
+              <td style="padding:0.85rem 1rem; vertical-align:top;" set:html={f.val2} />
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<script is:inline define:vars={{ inventarioData }}>
+  const sel1 = document.getElementById('sel-inst-1');
+  const sel2 = document.getElementById('sel-inst-2');
+  const th1 = document.getElementById('th-doc-1');
+  const th2 = document.getElementById('th-doc-2');
+  const tbody = document.getElementById('tbody-comparador');
+
+  // Inicializar selección default (Doc 1 vs Doc 7)
+  if (sel1 && sel1.options.length > 0) sel1.selectedIndex = 0;
+  if (sel2 && sel2.options.length > 6) sel2.selectedIndex = 6;
+
+  function actualizarComparativa() {
+    if (!sel1 || !sel2 || !tbody || !th1 || !th2) return;
+
+    const id1 = parseInt(sel1.value);
+    const id2 = parseInt(sel2.value);
+
+    const doc1 = inventarioData.find(x => x.id === id1) || inventarioData[0];
+    const doc2 = inventarioData.find(x => x.id === id2) || inventarioData[1];
+
+    th1.innerHTML = `${doc1.universidad}<br><span style="font-size:0.78rem; font-weight:normal; font-family:var(--font-sans); color:var(--text-muted);">${doc1.unidad}</span>`;
+    th2.innerHTML = `${doc2.universidad}<br><span style="font-size:0.78rem; font-weight:normal; font-family:var(--font-sans); color:var(--text-muted);">${doc2.unidad}</span>`;
+
+    const filas = [
+      {
+        nombre: 'Documento & Fecha',
+        val1: `${doc1.documento} (${doc1.fecha})`,
+        val2: `${doc2.documento} (${doc2.fecha})`
+      },
+      {
+        nombre: 'Gobernanza & Enforcement',
+        val1: `<span class="badge badge-blue">${(doc1.gobernanza || '').toUpperCase()}</span><br><span style="font-size:0.8rem; color:var(--text-muted);">${doc1.enforcement}</span>`,
+        val2: `<span class="badge badge-blue">${(doc2.gobernanza || '').toUpperCase()}</span><br><span style="font-size:0.8rem; color:var(--text-muted);">${doc2.enforcement}</span>`
+      },
+      {
+        nombre: 'Exigencia de Declaración / Prompts',
+        val1: doc1.exige_declaracion ? '<span class="badge badge-green">✓ Obligatoria</span>' : '<span class="badge badge-amber">Optativa / Sugerida</span>',
+        val2: doc2.exige_declaracion ? '<span class="badge badge-green">✓ Obligatoria</span>' : '<span class="badge badge-amber">Optativa / Sugerida</span>'
+      },
+      {
+        nombre: 'Regla de Autoría IA',
+        val1: doc1.ia_no_autora ? '<span class="badge badge-green">✓ Prohíbe autoría IA</span>' : '<span class="badge badge-amber">No especificado</span>',
+        val2: doc2.ia_no_autora ? '<span class="badge badge-green">✓ Prohíbe autoría IA</span>' : '<span class="badge badge-amber">No especificado</span>'
+      },
+      {
+        nombre: 'Privacidad & Datos (Ley 21.719)',
+        val1: doc1.menciona_datos_personales ? '<span class="badge badge-green">✓ Protección explícita</span>' : '<span class="badge badge-amber">Sin mención directa</span>',
+        val2: doc2.menciona_datos_personales ? '<span class="badge badge-green">✓ Protección explícita</span>' : '<span class="badge badge-amber">Sin mención directa</span>'
+      },
+      {
+        nombre: 'Modificación de Evaluaciones',
+        val1: doc1.modifica_evaluacion ? '<span class="badge badge-green">✓ Exige rediseño de rúbricas</span>' : '<span class="badge badge-amber">Sin impacto evaluativo</span>',
+        val2: doc2.modifica_evaluacion ? '<span class="badge badge-green">✓ Exige rediseño de rúbricas</span>' : '<span class="badge badge-amber">Sin impacto evaluativo</span>'
+      },
+      {
+        nombre: 'Enfoque GENIAL (D5)',
+        val1: `<span class="badge badge-blue">${doc1.d5_enfoque || 'Habilitador / Reflexivo'}</span>`,
+        val2: `<span class="badge badge-blue">${doc2.d5_enfoque || 'Habilitador / Reflexivo'}</span>`
+      },
+      {
+        nombre: 'Acceso Documental',
+        val1: doc1.url ? `<a href="${doc1.url}" target="_blank" rel="noopener noreferrer" style="font-weight:600; color:var(--accent-blue);">Abrir fuente &rarr;</a>` : '<span style="color:var(--text-muted);">Repositorio Interno</span>',
+        val2: doc2.url ? `<a href="${doc2.url}" target="_blank" rel="noopener noreferrer" style="font-weight:600; color:var(--accent-blue);">Abrir fuente &rarr;</a>` : '<span style="color:var(--text-muted);">Repositorio Interno</span>'
+      }
+    ];
+
+    tbody.innerHTML = '';
+    filas.forEach((f, idx) => {
+      const tr = document.createElement('tr');
+      tr.style.borderBottom = '1px solid var(--border-color)';
+      tr.style.background = idx % 2 === 0 ? 'transparent' : 'rgba(0,0,0,0.015)';
+      tr.innerHTML = `
+        <td style="padding:0.85rem 1rem; font-weight:600; color:var(--text-main); vertical-align:top;">${f.nombre}</td>
+        <td style="padding:0.85rem 1rem; vertical-align:top;">${f.val1}</td>
+        <td style="padding:0.85rem 1rem; vertical-align:top;">${f.val2}</td>
+      `;
+      tbody.appendChild(tr);
+    });
+  }
+
+  sel1?.addEventListener('change', actualizarComparativa);
+  sel2?.addEventListener('change', actualizarComparativa);
+
+  actualizarComparativa();
+</script>

@@ -1,0 +1,170 @@
+---
+import inventarioData from '../../inventario.json';
+
+const totalInstrumentos = inventarioData.length; // 52
+
+function normalizeForSearch(str: string): string {
+  return (str || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .trim();
+}
+---
+
+<section id="catalogo" style="margin-bottom: 4.5rem; scroll-margin-top: 2rem;">
+  <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1.25rem; margin-bottom:1.5rem;">
+    <div>
+      <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.4rem;">
+        <span class="badge badge-blue">Inventario Granular</span>
+        <span class="badge badge-green">Acceso Abierto CC BY 4.0</span>
+      </div>
+      <h2>Catálogo de Instrumentos Normativos y Políticas</h2>
+      <p style="color:var(--text-muted); max-width:820px; font-size:0.96rem;">
+        Explora los {totalInstrumentos} decretos, reglamentos, políticas y guías oficiales vigentes en planteles de educación superior en Chile.
+      </p>
+    </div>
+
+    <!-- Buscador en Tiempo Real -->
+    <div style="min-width:300px; width:100%; max-width:380px;">
+      <input 
+        type="text" 
+        id="catalogo-search-input" 
+        placeholder="🔍 Buscar por U, sigla, facultad o norma..."
+        style="width:100%; padding:0.65rem 1.15rem; border:1px solid var(--border-color); border-radius:8px; background:var(--card-bg); color:var(--text-main); font-size:0.9rem; box-shadow:var(--shadow-sm);"
+      />
+    </div>
+  </div>
+
+  <!-- Contador de Resultados y Filtro Rápido -->
+  <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.84rem; color:var(--text-muted); margin-bottom:1.25rem; background:rgba(0,0,0,0.02); padding:0.6rem 1rem; border-radius:8px; border:1px solid var(--border-color);">
+    <span id="catalogo-count-display">Mostrando {totalInstrumentos} de {totalInstrumentos} instrumentos catalogados</span>
+    <span>Actualizado: Octubre 2026</span>
+  </div>
+
+  <!-- Grilla de Tarjetas del Catálogo (Prerenderizada por SSR) -->
+  <div id="catalogo-cards-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap:1.25rem;">
+    {inventarioData.map(doc => {
+      const searchBlob = `${normalizeForSearch(doc.universidad)} ${normalizeForSearch(doc.sigla)} ${normalizeForSearch(doc.documento)} ${normalizeForSearch(doc.unidad)} ${normalizeForSearch(doc.enforcement)} ${normalizeForSearch(doc.alcance)}`;
+
+      return (
+        <div 
+          class="card catalogo-card"
+          data-search={searchBlob}
+          style="display:flex; flex-direction:column; justify-content:space-between;"
+        >
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.6rem; gap:0.5rem;">
+              <span class="badge badge-purple">{doc.sigla}</span>
+              <span style="font-size:0.75rem; color:var(--text-muted); font-weight:600;">{doc.fecha}</span>
+            </div>
+
+            <h3 style="font-size:1.05rem; line-height:1.3; margin-bottom:0.25rem;">
+              {doc.universidad}
+            </h3>
+            <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.75rem;">
+              {doc.unidad} • <span style="font-style:italic;">{doc.alcance}</span>
+            </div>
+
+            <p style="font-size:0.88rem; font-weight:600; color:var(--text-main); margin-bottom:0.85rem; line-height:1.45;">
+              {doc.documento}
+            </p>
+
+            <div style="display:flex; gap:0.35rem; flex-wrap:wrap; margin-bottom:1rem;">
+              {doc.exige_declaracion ? (
+                <span class="badge badge-green">✓ Declaración obligatoria</span>
+              ) : (
+                <span class="badge badge-amber">Declaración optativa</span>
+              )}
+              {doc.ia_no_autora && <span class="badge badge-blue">IA no es autora</span>}
+              {doc.menciona_datos_personales && <span class="badge badge-green">Protección datos Ley 21.719</span>}
+              <span class="badge badge-blue">{doc.gobernanza}</span>
+            </div>
+          </div>
+
+          <div style="border-top:1px solid var(--border-color); padding-top:0.75rem; margin-top:0.5rem; display:flex; justify-content:space-between; align-items:center;">
+            <span style="font-size:0.75rem; color:var(--text-muted);">{doc.formato || 'Web / PDF'}</span>
+            {doc.url ? (
+              <a href={doc.url} target="_blank" rel="noopener noreferrer" style="color:var(--accent-blue); font-size:0.82rem; font-weight:600; text-decoration:none;">
+                Acceder al documento &rarr;
+              </a>
+            ) : (
+              <span style="font-size:0.78rem; color:var(--text-muted);">Repositorio Interno</span>
+            )}
+          </div>
+        </div>
+      );
+    })}
+  </div>
+
+  <!-- Estado Vacío Explicativo con Botón de Reinicio -->
+  <div id="catalogo-empty-state" style="display:none; text-align:center; padding:3.5rem 1.5rem; background:var(--card-bg); border:1px solid var(--border-color); border-radius:12px; margin-top:1rem;">
+    <div style="font-size:2.5rem; margin-bottom:0.75rem;">📚</div>
+    <h3 style="font-size:1.3rem; margin-bottom:0.5rem;">No se encontraron instrumentos para tu búsqueda</h3>
+    <p style="color:var(--text-muted); font-size:0.9rem; max-width:480px; margin:0 auto 1.5rem auto;">
+      No hay políticas o normativas que coincidan con el término ingresado. Puedes limpiar el buscador para volver a ver el catálogo completo.
+    </p>
+    <button type="button" id="catalogo-reset-btn" class="btn btn-primary">
+      🔄 Limpiar Filtros y Ver Todos ({totalInstrumentos})
+    </button>
+  </div>
+
+</section>
+
+<script is:inline>
+  const grid = document.getElementById('catalogo-cards-grid');
+  const cards = Array.from(document.querySelectorAll('.catalogo-card'));
+  const countDisplay = document.getElementById('catalogo-count-display');
+  const searchInput = document.getElementById('catalogo-search-input');
+  const emptyState = document.getElementById('catalogo-empty-state');
+  const resetBtn = document.getElementById('catalogo-reset-btn');
+
+  function normalizeInput(str) {
+    return (str || '')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .trim();
+  }
+
+  function filtrarCatalogo() {
+    if (!grid || cards.length === 0) return;
+
+    const normQuery = normalizeInput(searchInput ? searchInput.value : '');
+    let visibles = 0;
+
+    cards.forEach(card => {
+      const searchBlob = card.getAttribute('data-search') || '';
+      let match = true;
+      if (normQuery) {
+        match = searchBlob.includes(normQuery);
+      }
+
+      if (match) {
+        card.style.display = 'flex';
+        visibles++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    if (countDisplay) {
+      countDisplay.textContent = `Mostrando ${visibles} de ${cards.length} instrumentos catalogados`;
+    }
+
+    if (visibles === 0) {
+      grid.style.display = 'none';
+      if (emptyState) emptyState.style.display = 'block';
+    } else {
+      grid.style.display = 'grid';
+      if (emptyState) emptyState.style.display = 'none';
+    }
+  }
+
+  searchInput?.addEventListener('input', filtrarCatalogo);
+
+  resetBtn?.addEventListener('click', () => {
+    if (searchInput) searchInput.value = '';
+    filtrarCatalogo();
+  });
+</script>

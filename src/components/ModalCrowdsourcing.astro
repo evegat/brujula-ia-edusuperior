@@ -1,0 +1,272 @@
+---
+import matrizData from '../../data/matriz_54_universidades.json';
+---
+
+<div id="modal-crowdsourcing" class="crowd-modal-backdrop" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="crowd-modal-content card">
+    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.25rem;">
+      <div>
+        <span class="badge badge-green" style="margin-bottom:0.4rem;">Crowdsourcing Abierto</span>
+        <h3 id="modal-title" style="margin:0; font-size:1.35rem;">Aportar Antecedente o Normativa</h3>
+      </div>
+      <button id="modal-close-btn" type="button" class="btn btn-outline btn-sm" aria-label="Cerrar modal" style="padding:0.25rem 0.5rem; font-size:1.1rem;">✕</button>
+    </div>
+
+    <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:1.5rem; line-height:1.5;">
+      Ayúdanos a cerrar la brecha del catastro. Si tu plantel cuenta con directrices, resoluciones o decretos de IA que no estén catalogados, ingresa aquí los antecedentes para su auditoría y publicación.
+    </p>
+
+    <form id="crowd-form" style="display:flex; flex-direction:column; gap:1.1rem;">
+      <div>
+        <label for="crowd-institucion" style="display:block; font-size:0.84rem; font-weight:600; margin-bottom:0.35rem;">
+          Institución Universitaria *
+        </label>
+        <select id="crowd-institucion" required style="width:100%; padding:0.65rem 0.85rem; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-main); font-size:0.9rem;">
+          <option value="">-- Selecciona una Universidad --</option>
+          {matrizData.map(u => (
+            <option value={u.nombre}>
+              {u.nombre} {u.en_brecha ? '(Actualmente en Brecha)' : '(Actualizar antecedente)'}
+            </option>
+          ))}
+          <option value="Otra">Otra institución de Educación Superior</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="crowd-url" style="display:block; font-size:0.84rem; font-weight:600; margin-bottom:0.35rem;">
+          Enlace a la Normativa / Portal Web
+        </label>
+        <input 
+          type="url" 
+          id="crowd-url" 
+          placeholder="https://universidad.cl/resolucion-ia.pdf" 
+          style="width:100%; padding:0.65rem 0.85rem; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-main); font-size:0.9rem;"
+        />
+      </div>
+
+      <div>
+        <label for="crowd-resumen" style="display:block; font-size:0.84rem; font-weight:600; margin-bottom:0.35rem;">
+          Resumen o Detalles del Instrumento (Decreto, alcance, fecha)
+        </label>
+        <textarea 
+          id="crowd-resumen" 
+          rows="3" 
+          placeholder="Ej: Resolución Rectoría N° 12/2025 que aprueba lineamientos para docencia de pregrado y prohíbe autoría IA..."
+          style="width:100%; padding:0.65rem 0.85rem; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-main); font-size:0.9rem; resize:vertical;"
+        ></textarea>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap:0.75rem;">
+        <div>
+          <label for="crowd-nombre" style="display:block; font-size:0.84rem; font-weight:600; margin-bottom:0.35rem;">
+            Tu Nombre (Opcional)
+          </label>
+          <input 
+            type="text" 
+            id="crowd-nombre" 
+            placeholder="Prof. / Estudiante" 
+            style="width:100%; padding:0.6rem 0.85rem; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-main); font-size:0.9rem;"
+          />
+        </div>
+        <div>
+          <label for="crowd-email" style="display:block; font-size:0.84rem; font-weight:600; margin-bottom:0.35rem;">
+            Tu Correo (Opcional)
+          </label>
+          <input 
+            type="email" 
+            id="crowd-email" 
+            placeholder="contacto@institucion.cl" 
+            style="width:100%; padding:0.6rem 0.85rem; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-main); font-size:0.9rem;"
+          />
+        </div>
+      </div>
+
+      <!-- Aviso de archivos adjuntos vía email -->
+      <div style="background:var(--accent-blue-soft); border-left:3px solid var(--accent-blue); padding:0.85rem 1rem; border-radius:4px; font-size:0.82rem; color:var(--text-main); line-height:1.45;">
+        📎 <strong>¿Tienes el archivo PDF o resolución escaneada?</strong><br />
+        Por motivos de seguridad y resguardo documental, el envío de archivos adjuntos se canaliza directamente vía correo electrónico a <a href="mailto:eduardo@evegat.cl?subject=Adjunto%20Normativa%20IA" style="font-weight:600; text-decoration:underline;">eduardo@evegat.cl</a>.
+      </div>
+
+      <div id="crowd-feedback" style="display:none; padding:0.75rem; border-radius:6px; font-size:0.85rem;"></div>
+
+      <div style="display:flex; justify-content:flex-end; gap:0.75rem; margin-top:0.5rem;">
+        <button type="button" id="modal-cancel-btn" class="btn btn-outline">Cancelar</button>
+        <button type="submit" id="modal-submit-btn" class="btn btn-primary">📤 Enviar Aporte</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<style>
+  .crowd-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+  .crowd-modal-content {
+    max-width: 580px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-lg);
+  }
+</style>
+
+<script is:inline>
+  const modal = document.getElementById('modal-crowdsourcing');
+  const closeBtn = document.getElementById('modal-close-btn');
+  const cancelBtn = document.getElementById('modal-cancel-btn');
+  const form = document.getElementById('crowd-form');
+  const selectInst = document.getElementById('crowd-institucion');
+  const feedback = document.getElementById('crowd-feedback');
+  const submitBtn = document.getElementById('modal-submit-btn');
+
+  let previouslyFocusedElement = null;
+
+  function openCrowdModal(institucionNombre) {
+    previouslyFocusedElement = document.activeElement;
+    if (feedback) feedback.style.display = 'none';
+    if (form) form.reset();
+    if (selectInst && institucionNombre) {
+      let matched = false;
+      const targetNorm = institucionNombre.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+      for (let i = 0; i < selectInst.options.length; i++) {
+        const optNorm = selectInst.options[i].value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+        if (optNorm === targetNorm) {
+          selectInst.selectedIndex = i;
+          matched = true;
+          break;
+        }
+      }
+      if (!matched) {
+        selectInst.value = institucionNombre;
+      }
+    }
+    if (modal) {
+      modal.style.display = 'flex';
+      setTimeout(() => {
+        selectInst?.focus();
+      }, 50);
+    }
+  }
+
+  function closeCrowdModal() {
+    if (modal) modal.style.display = 'none';
+    if (previouslyFocusedElement && typeof previouslyFocusedElement.focus === 'function') {
+      previouslyFocusedElement.focus();
+    }
+  }
+
+  closeBtn?.addEventListener('click', closeCrowdModal);
+  cancelBtn?.addEventListener('click', closeCrowdModal);
+  modal?.addEventListener('click', (e) => {
+    if (e.target === modal) closeCrowdModal();
+  });
+
+  // Accesibilidad: Cerrar modal con tecla Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal && modal.style.display === 'flex') {
+      closeCrowdModal();
+    }
+  });
+
+  // Accesibilidad: Focus trap para navegación accesible con Tab
+  modal?.addEventListener('keydown', (e) => {
+    if (e.key !== 'Tab' || !modal || modal.style.display !== 'flex') return;
+    const focusable = modal.querySelectorAll('button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])');
+    if (focusable.length === 0) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+
+    if (e.shiftKey) {
+      if (document.activeElement === first) {
+        last.focus();
+        e.preventDefault();
+      }
+    } else {
+      if (document.activeElement === last) {
+        first.focus();
+        e.preventDefault();
+      }
+    }
+  });
+
+  window.abrirModalAporte = openCrowdModal;
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!submitBtn || !feedback) return;
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Enviando...';
+    feedback.style.display = 'none';
+
+    const payload = {
+      institucion: document.getElementById('crowd-institucion').value,
+      url_normativa: document.getElementById('crowd-url').value,
+      resumen: document.getElementById('crowd-resumen').value,
+      remitente_nombre: document.getElementById('crowd-nombre').value,
+      remitente_email: document.getElementById('crowd-email').value
+    };
+
+    try {
+      const res = await fetch('/api/submit-normativa', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const data = await res.json();
+
+      function escapeHtml(str) {
+        return String(str || '')
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
+
+      if (res.ok && data.success) {
+        feedback.className = 'badge-green';
+        feedback.style.display = 'block';
+        feedback.style.background = 'var(--accent-green-soft)';
+        feedback.style.color = 'var(--accent-green)';
+        feedback.style.border = '1px solid var(--accent-green)';
+        const safeTicket = escapeHtml(data.ticket_id);
+        const safeMessage = escapeHtml(data.message);
+        feedback.innerHTML = `<strong>✓ Aporte registrado con éxito</strong> (Ticket: <code>${safeTicket}</code>).<br />${safeMessage}`;
+        setTimeout(() => {
+          form.reset();
+          submitBtn.disabled = false;
+          submitBtn.textContent = '📤 Enviar Aporte';
+          closeCrowdModal();
+        }, 3200);
+      } else {
+        feedback.className = 'badge-red';
+        feedback.style.display = 'block';
+        feedback.style.background = 'var(--accent-red-soft)';
+        feedback.style.color = 'var(--accent-red)';
+        feedback.style.border = '1px solid var(--accent-red)';
+        feedback.textContent = 'Error: ' + (data.error || 'No fue posible registrar el aporte.');
+        submitBtn.disabled = false;
+        submitBtn.textContent = '📤 Enviar Aporte';
+      }
+    } catch (err) {
+      feedback.style.display = 'block';
+      feedback.style.background = 'var(--accent-red-soft)';
+      feedback.style.color = 'var(--accent-red)';
+      feedback.textContent = 'Error de conexión con el servidor.';
+      submitBtn.disabled = false;
+      submitBtn.textContent = '📤 Enviar Aporte';
+    }
+  });
+</script>

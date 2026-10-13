@@ -1,0 +1,1829 @@
+[
+  {
+    "registro": "B1",
+    "nombre": "PONTIFICIA UNIVERSIDAD CATÓLICA DE CHILE",
+    "sigla": "PUC",
+    "tipo_oficial": "UNIVERSIDAD PARTICULAR CON APORTES",
+    "tipo_categoria": "Privadas CRUCH",
+    "en_brecha": false,
+    "total_instrumentos": 4,
+    "imn": 66.8,
+    "imn_categoria": "Madurez Intermedia",
+    "dimensiones": {
+      "protocolo_aula": true,
+      "directriz_tesis": false,
+      "regla_autoria": true,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": true,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": [
+      {
+        "id": 7,
+        "documento": "Política de uso ético de Inteligencia Artificial Generativa v1",
+        "unidad": "Instituto de Sociología (ISUC)",
+        "fecha": "2025-07-30",
+        "url": "https://sociologia.uc.cl/wp-content/uploads/2025/10/Politica-de-uso-etico-de-IA-ISUC-v1.pdf",
+        "enforcement": "Política con sanciones",
+        "exige_declaracion": true
+      },
+      {
+        "id": 8,
+        "documento": "Guía Ética para el uso de Inteligencia Artificial Generativa",
+        "unidad": "Facultad de Derecho",
+        "fecha": "2024",
+        "url": "https://derecho.uc.cl/facultad-de-derecho-uc-establece-guia-etica-para-uso-de-inteligencia-artificial-generativa/",
+        "enforcement": "Guía ética",
+        "exige_declaracion": true
+      },
+      {
+        "id": 9,
+        "documento": "Inteligencia artificial e integridad académica en la práctica docente",
+        "unidad": "Dirección de Integridad Académica / VRA",
+        "fecha": "2024-2025",
+        "url": "https://integridadacademica.uc.cl/secciones/inteligencia-artificial/",
+        "enforcement": "Portal con guías descargables",
+        "exige_declaracion": true
+      },
+      {
+        "id": 10,
+        "documento": "Lineamientos UC para la integración de la IA en la formación",
+        "unidad": "Vicerrectoría Académica / Centro de Desarrollo Docente",
+        "fecha": "2026-03",
+        "url": "https://catalogodigital.uc.cl/normativas-y-procedimientos/lineamientos-uc-para-la-integracion-de-la-ia-en-la-formacion/",
+        "enforcement": "Lineamientos con categorías",
+        "exige_declaracion": true
+      }
+    ]
+  },
+  {
+    "registro": "B4",
+    "nombre": "PONTIFICIA UNIVERSIDAD CATÓLICA DE VALPARAÍSO",
+    "sigla": "PUCV",
+    "tipo_oficial": "UNIVERSIDAD PARTICULAR CON APORTES",
+    "tipo_categoria": "Privadas CRUCH",
+    "en_brecha": false,
+    "total_instrumentos": 1,
+    "imn": 64.8,
+    "imn_categoria": "Madurez Intermedia",
+    "dimensiones": {
+      "protocolo_aula": true,
+      "directriz_tesis": false,
+      "regla_autoria": true,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": true,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": [
+      {
+        "id": 32,
+        "documento": "Decálogo sobre uso de Inteligencia Artificial en docencia con foco en integridad académica PUCV",
+        "unidad": "Unidad de Integridad Académica / DDD (VRA)",
+        "fecha": "2026-01-09",
+        "url": "https://desarrollodocente.pucv.cl/ia/",
+        "enforcement": "Decálogo vinculante",
+        "exige_declaracion": true
+      }
+    ]
+  },
+  {
+    "registro": "C14",
+    "nombre": "UNIVERSIDAD ACADEMIA DE HUMANISMO CRISTIANO",
+    "sigla": "UAHC",
+    "tipo_oficial": "UNIVERSIDAD PRIVADA",
+    "tipo_categoria": "Privadas no CRUCH",
+    "en_brecha": false,
+    "total_instrumentos": 1,
+    "imn": 90.0,
+    "imn_categoria": "Madurez Avanzada",
+    "dimensiones": {
+      "protocolo_aula": true,
+      "directriz_tesis": false,
+      "regla_autoria": true,
+      "privacidad_ley_21719": true,
+      "modifica_evaluacion": true,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": [
+      {
+        "id": 49,
+        "documento": "Guía para el uso de IA generativa en educación e investigación",
+        "unidad": "Vicerrectoría Académica / DIDA / IAcademia",
+        "fecha": "2024",
+        "url": "https://academia.cl",
+        "enforcement": "Guía formativa con bitácoras de trabajo obligatorias",
+        "exige_declaracion": true
+      }
+    ]
+  },
+  {
+    "registro": "C26",
+    "nombre": "UNIVERSIDAD ADOLFO IBÁÑEZ",
+    "sigla": "UAI",
+    "tipo_oficial": "UNIVERSIDAD PRIVADA",
+    "tipo_categoria": "Privadas no CRUCH",
+    "en_brecha": false,
+    "total_instrumentos": 2,
+    "imn": 96.0,
+    "imn_categoria": "Madurez Avanzada",
+    "dimensiones": {
+      "protocolo_aula": true,
+      "directriz_tesis": true,
+      "regla_autoria": true,
+      "privacidad_ley_21719": true,
+      "modifica_evaluacion": true,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": [
+      {
+        "id": 11,
+        "documento": "Política de Inteligencia Artificial de la Universidad Adolfo Ibáñez",
+        "unidad": "Rectoría / Vicerrectoría Académica",
+        "fecha": "2025-01-10",
+        "url": "https://uai.cdn7pm.net/documentos/politica-de-inteligencia-artificial.pdf",
+        "enforcement": "Política institucional",
+        "exige_declaracion": true
+      },
+      {
+        "id": 12,
+        "documento": "Guía de Inteligencia Artificial para Estudiantes",
+        "unidad": "Dirección de Desarrollo Académico",
+        "fecha": "2025-2026",
+        "url": "https://uai.cdn7pm.net/documentos/guia-ia-estudiantes.pdf",
+        "enforcement": "Guía orientadora",
+        "exige_declaracion": true
+      }
+    ]
+  },
+  {
+    "registro": "C74",
+    "nombre": "UNIVERSIDAD ALBERTO HURTADO",
+    "sigla": "UAH",
+    "tipo_oficial": "UNIVERSIDAD PRIVADA",
+    "tipo_categoria": "Privadas no CRUCH",
+    "en_brecha": false,
+    "total_instrumentos": 1,
+    "imn": 66.8,
+    "imn_categoria": "Madurez Intermedia",
+    "dimensiones": {
+      "protocolo_aula": true,
+      "directriz_tesis": false,
+      "regla_autoria": true,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": true,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": [
+      {
+        "id": 40,
+        "documento": "Orientaciones sobre integridad académica para docentes de actividades curriculares",
+        "unidad": "Dirección de Docencia y Pedagogía Universitaria (VRA)",
+        "fecha": "2025-12",
+        "url": "https://www.uahurtado.cl/wp-content/uploads/2026/03/2.9-Orientaciones-sobre-integridad-academica-DIC-2025.pdf",
+        "enforcement": "Orientaciones con criterios formativos",
+        "exige_declaracion": true
+      }
+    ]
+  },
+  {
+    "registro": "C23",
+    "nombre": "UNIVERSIDAD ANDRÉS BELLO",
+    "sigla": "UNAB",
+    "tipo_oficial": "UNIVERSIDAD PRIVADA",
+    "tipo_categoria": "Privadas no CRUCH",
+    "en_brecha": false,
+    "total_instrumentos": 1,
+    "imn": 88.0,
+    "imn_categoria": "Madurez Avanzada",
+    "dimensiones": {
+      "protocolo_aula": true,
+      "directriz_tesis": true,
+      "regla_autoria": true,
+      "privacidad_ley_21719": true,
+      "modifica_evaluacion": true,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": [
+      {
+        "id": 15,
+        "documento": "Lineamiento para el uso responsable de inteligencia artificial en la Universidad Andrés Bello",
+        "unidad": "Comité de IA / Rectoría",
+        "fecha": "2024-09-26",
+        "url": "https://ia.unab.cl/wp-content/uploads/2024/10/IA-Lineamiento-para-el-uso-responsable-de-inteligencia-artificial-en-UNAB-20240926-002.pdf",
+        "enforcement": "Lineamiento institucional",
+        "exige_declaracion": true
+      }
+    ]
+  },
+  {
+    "registro": "B5",
+    "nombre": "UNIVERSIDAD AUSTRAL DE CHILE",
+    "sigla": "UACh",
+    "tipo_oficial": "UNIVERSIDAD PARTICULAR CON APORTES",
+    "tipo_categoria": "Privadas CRUCH",
+    "en_brecha": false,
+    "total_instrumentos": 1,
+    "imn": 76.0,
+    "imn_categoria": "Madurez Avanzada",
+    "dimensiones": {
+      "protocolo_aula": true,
+      "directriz_tesis": false,
+      "regla_autoria": true,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": true,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": [
+      {
+        "id": 17,
+        "documento": "Protocolo de Regulación del Uso de la Inteligencia Artificial",
+        "unidad": "Facultad de Ciencias Jurídicas y Sociales",
+        "fecha": "2025",
+        "url": "https://derecho.uach.cl/index.php?option=com_dropfiles&format=&task=frontfile.download&catid=197&id=1295&Itemid=1000000000000",
+        "enforcement": "Protocolo formal con revisión anual",
+        "exige_declaracion": true
+      }
+    ]
+  },
+  {
+    "registro": "C35",
+    "nombre": "UNIVERSIDAD AUTÓNOMA DE CHILE",
+    "sigla": "UAutónoma",
+    "tipo_oficial": "UNIVERSIDAD PRIVADA",
+    "tipo_categoria": "Privadas no CRUCH",
+    "en_brecha": false,
+    "total_instrumentos": 1,
+    "imn": 76.8,
+    "imn_categoria": "Madurez Avanzada",
+    "dimensiones": {
+      "protocolo_aula": true,
+      "directriz_tesis": false,
+      "regla_autoria": true,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": true,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": [
+      {
+        "id": 18,
+        "documento": "Reglamento sobre el uso de herramientas de inteligencia artificial (Resolución Rectoría N° 220/2023)",
+        "unidad": "Rectoría",
+        "fecha": "2024-06",
+        "url": "https://www.uautonoma.cl/content/uploads/2024/06/Reglamento-Uso-de-Herremientas-de-Inteligencia-Artificial_compressed.pdf",
+        "enforcement": "Reglamento con decreto",
+        "exige_declaracion": true
+      }
+    ]
+  },
+  {
+    "registro": "C54",
+    "nombre": "UNIVERSIDAD BERNARDO O'HIGGINS",
+    "sigla": "UBO",
+    "tipo_oficial": "UNIVERSIDAD PRIVADA",
+    "tipo_categoria": "Privadas no CRUCH",
+    "en_brecha": false,
+    "total_instrumentos": 1,
+    "imn": 28.2,
+    "imn_categoria": "Regulación Inicial",
+    "dimensiones": {
+      "protocolo_aula": true,
+      "directriz_tesis": false,
+      "regla_autoria": false,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": false,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": [
+      {
+        "id": 26,
+        "documento": "Modelo y Lineamientos de Integración de IA en la Academia (SapIA)",
+        "unidad": "Unidad SapIA",
+        "fecha": "2024",
+        "url": "https://www.ubo.cl/",
+        "enforcement": "Modelo institucional",
+        "exige_declaracion": false
+      }
+    ]
+  },
+  {
+    "registro": "B9",
+    "nombre": "UNIVERSIDAD CATÓLICA DE TEMUCO",
+    "sigla": "UCT",
+    "tipo_oficial": "UNIVERSIDAD PARTICULAR CON APORTES",
+    "tipo_categoria": "Privadas CRUCH",
+    "en_brecha": false,
+    "total_instrumentos": 1,
+    "imn": 40.8,
+    "imn_categoria": "Regulación Inicial",
+    "dimensiones": {
+      "protocolo_aula": true,
+      "directriz_tesis": false,
+      "regla_autoria": false,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": true,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": [
+      {
+        "id": 25,
+        "documento": "Orientaciones ético-pedagógicas y asistentes de IA (DocencIA UCT / PotencIA tu GuIA)",
+        "unidad": "CINAP",
+        "fecha": "2024-2025",
+        "url": "https://cinap.uct.cl",
+        "enforcement": "Orientaciones con asistentes",
+        "exige_declaracion": false
+      }
+    ]
+  },
+  {
+    "registro": "B6",
+    "nombre": "UNIVERSIDAD CATÓLICA DEL NORTE",
+    "sigla": "UCN",
+    "tipo_oficial": "UNIVERSIDAD PARTICULAR CON APORTES",
+    "tipo_categoria": "Privadas CRUCH",
+    "en_brecha": false,
+    "total_instrumentos": 1,
+    "imn": 54.2,
+    "imn_categoria": "Regulación Inicial",
+    "dimensiones": {
+      "protocolo_aula": true,
+      "directriz_tesis": false,
+      "regla_autoria": true,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": false,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": [
+      {
+        "id": 33,
+        "documento": "Política Editorial de Revistas Científicas de la UCN (Sección IA)",
+        "unidad": "Depto. Ciencia Abierta / VRIDT",
+        "fecha": "2024-2025",
+        "url": "https://revistas.ucn.cl/politica-rcucn/",
+        "enforcement": "Normativa editorial",
+        "exige_declaracion": true
+      }
+    ]
+  },
+  {
+    "registro": "C4",
+    "nombre": "UNIVERSIDAD CENTRAL DE CHILE",
+    "sigla": "UCEN",
+    "tipo_oficial": "UNIVERSIDAD PRIVADA",
+    "tipo_categoria": "Privadas no CRUCH",
+    "en_brecha": false,
+    "total_instrumentos": 1,
+    "imn": 28.2,
+    "imn_categoria": "Regulación Inicial",
+    "dimensiones": {
+      "protocolo_aula": true,
+      "directriz_tesis": false,
+      "regla_autoria": false,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": false,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": [
+      {
+        "id": 27,
+        "documento": "Política Institucional de Integración de Inteligencia Artificial",
+        "unidad": "Transformación Digital / Rectoría",
+        "fecha": "2026-01",
+        "url": "https://www.ucentral.cl/",
+        "enforcement": "Política en proceso",
+        "exige_declaracion": false
+      }
+    ]
+  },
+  {
+    "registro": "A4",
+    "nombre": "UNIVERSIDAD DE ANTOFAGASTA",
+    "sigla": "UA",
+    "tipo_oficial": "UNIVERSIDAD ESTATAL",
+    "tipo_categoria": "Estatales",
+    "en_brecha": false,
+    "total_instrumentos": 1,
+    "imn": 66.2,
+    "imn_categoria": "Madurez Intermedia",
+    "dimensiones": {
+      "protocolo_aula": true,
+      "directriz_tesis": false,
+      "regla_autoria": true,
+      "privacidad_ley_21719": true,
+      "modifica_evaluacion": false,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": [
+      {
+        "id": 38,
+        "documento": "El uso ético de la IA en la educación universitaria",
+        "unidad": "Biblioteca / Dirección de Gestión Docente",
+        "fecha": "2023-2024",
+        "url": "https://biblioteca.uantof.cl/public/pg/uso_ia.php",
+        "enforcement": "Directrices éticas",
+        "exige_declaracion": true
+      }
+    ]
+  },
+  {
+    "registro": "A10",
+    "nombre": "UNIVERSIDAD DE ATACAMA",
+    "sigla": "UDA",
+    "tipo_oficial": "UNIVERSIDAD ESTATAL",
+    "tipo_categoria": "Estatales",
+    "en_brecha": false,
+    "total_instrumentos": 1,
+    "imn": 28.2,
+    "imn_categoria": "Regulación Inicial",
+    "dimensiones": {
+      "protocolo_aula": true,
+      "directriz_tesis": false,
+      "regla_autoria": false,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": false,
+      "compras_ia": true
+    },
+    "compras": {
+      "total": 5,
+      "monto_total": 89050775.95,
+      "capas": [
+        "Gestion_Backoffice",
+        "Infraestructura_Computo"
+      ]
+    },
+    "instrumentos": [
+      {
+        "id": 44,
+        "documento": "Comité Universitario de Inteligencia Artificial SapiensIA (sin documento público descargable)",
+        "unidad": "Rectoría / Comité SapiensIA",
+        "fecha": "2024-06",
+        "url": "https://uda.cl",
+        "enforcement": "Comité en funcionamiento, documento en desarrollo",
+        "exige_declaracion": false
+      }
+    ]
+  },
+  {
+    "registro": "A1",
+    "nombre": "UNIVERSIDAD DE CHILE",
+    "sigla": "UChile",
+    "tipo_oficial": "UNIVERSIDAD ESTATAL",
+    "tipo_categoria": "Estatales",
+    "en_brecha": false,
+    "total_instrumentos": 6,
+    "imn": 96.0,
+    "imn_categoria": "Madurez Avanzada",
+    "dimensiones": {
+      "protocolo_aula": true,
+      "directriz_tesis": true,
+      "regla_autoria": true,
+      "privacidad_ley_21719": true,
+      "modifica_evaluacion": true,
+      "compras_ia": true
+    },
+    "compras": {
+      "total": 52,
+      "monto_total": 37646603.10982814,
+      "capas": [
+        "Atencion_Frontoffice",
+        "Docencia_Aula",
+        "Gestion_Backoffice",
+        "Infraestructura_Computo"
+      ]
+    },
+    "instrumentos": [
+      {
+        "id": 1,
+        "documento": "Lineamientos para el uso transparente de inteligencia artificial en las tesis de la Universidad de Chile",
+        "unidad": "Vicerrectoría de Asuntos Académicos (VAA)",
+        "fecha": "2024",
+        "url": "https://uchile.cl/informacion-y-bibliotecas/lineamientos-uso-ia-en-tesis",
+        "enforcement": "Normativa obligatoria con cláusula",
+        "exige_declaracion": true
+      },
+      {
+        "id": 2,
+        "documento": "Humanizar la Inteligencia: Orientaciones para un uso ético y transformador de la IA en la educación y la investigación en salud",
+        "unidad": "Facultad de Medicina (FAMED)",
+        "fecha": "2025",
+        "url": "https://uchile.cl/dam/jcr:9b955a62-5177-425e-b59e-d7f409d3fa74/Humanizar%20la%20Inteligencia_FAMED2025%20V10-1.pdf",
+        "enforcement": "Guía orientadora",
+        "exige_declaracion": true
+      },
+      {
+        "id": 3,
+        "documento": "Protocolo de Uso de Inteligencia Artificial Generativa (IAG) y Anexos",
+        "unidad": "Escuela de Gobierno (FAGOB)",
+        "fecha": "2024",
+        "url": "https://brujula-ia-fagob.evegat.cl/docs/Protocolo_USO_IAG_y_Anexos_Escuela_de_Gobierno_UChile.pdf",
+        "enforcement": "Protocolo operativo con declaración jurada",
+        "exige_declaracion": true
+      },
+      {
+        "id": 4,
+        "documento": "Procedimiento para la Declaración de Uso de Inteligencia Artificial en Tesis y AFE",
+        "unidad": "FCFM - Escuela de Postgrado (EPEC)",
+        "fecha": "2024-2025",
+        "url": "https://postgrado.fcfm.uchile.cl",
+        "enforcement": "Instructivo con categorías A/B/C",
+        "exige_declaracion": true
+      },
+      {
+        "id": 5,
+        "documento": "Política de Integración Crítica y Ética de la IAG para la Formación en Asuntos Públicos",
+        "unidad": "Escuela de Gobierno (FAGOB)",
+        "fecha": "2024-2025",
+        "url": null,
+        "enforcement": "Política institucional",
+        "exige_declaracion": true
+      },
+      {
+        "id": 6,
+        "documento": "Lineamientos para el uso de Inteligencia Artificial en Revistas FAU",
+        "unidad": "Facultad de Arquitectura y Urbanismo (FAU)",
+        "fecha": "2024",
+        "url": "https://revistas.uchile.cl",
+        "enforcement": "Normativa editorial",
+        "exige_declaracion": true
+      }
+    ]
+  },
+  {
+    "registro": "B2",
+    "nombre": "UNIVERSIDAD DE CONCEPCIÓN",
+    "sigla": "UdeC",
+    "tipo_oficial": "UNIVERSIDAD PARTICULAR CON APORTES",
+    "tipo_categoria": "Privadas CRUCH",
+    "en_brecha": false,
+    "total_instrumentos": 1,
+    "imn": 66.8,
+    "imn_categoria": "Madurez Intermedia",
+    "dimensiones": {
+      "protocolo_aula": true,
+      "directriz_tesis": false,
+      "regla_autoria": true,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": true,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": [
+      {
+        "id": 16,
+        "documento": "Guía sobre uso ético y responsable de tecnologías digitales emergentes en la Universidad de Concepción",
+        "unidad": "Programa [genIA] / VRID / Docencia",
+        "fecha": "2024",
+        "url": "https://genia.udec.cl",
+        "enforcement": "Guía con ecosistema [genIA]",
+        "exige_declaracion": true
+      }
+    ]
+  },
+  {
+    "registro": "A7",
+    "nombre": "UNIVERSIDAD DE LA FRONTERA",
+    "sigla": "UFRO",
+    "tipo_oficial": "UNIVERSIDAD ESTATAL",
+    "tipo_categoria": "Estatales",
+    "en_brecha": false,
+    "total_instrumentos": 1,
+    "imn": 52.8,
+    "imn_categoria": "Regulación Inicial",
+    "dimensiones": {
+      "protocolo_aula": true,
+      "directriz_tesis": false,
+      "regla_autoria": false,
+      "privacidad_ley_21719": true,
+      "modifica_evaluacion": true,
+      "compras_ia": true
+    },
+    "compras": {
+      "total": 3,
+      "monto_total": 232264338.74306,
+      "capas": [
+        "Gestion_Backoffice",
+        "Infraestructura_Computo"
+      ]
+    },
+    "instrumentos": [
+      {
+        "id": 36,
+        "documento": "Orientaciones para el uso de ChatGPT en Educación Superior",
+        "unidad": "Dirección de Desarrollo Curricular y Docente",
+        "fecha": "2023-2024",
+        "url": "https://docencia.ufro.cl/orientaciones-chatgpt-educacion-superior/",
+        "enforcement": "Orientaciones pedagógicas",
+        "exige_declaracion": false
+      }
+    ]
+  },
+  {
+    "registro": "C22",
+    "nombre": "UNIVERSIDAD DE LAS AMÉRICAS",
+    "sigla": "UDLA",
+    "tipo_oficial": "UNIVERSIDAD PRIVADA",
+    "tipo_categoria": "Privadas no CRUCH",
+    "en_brecha": false,
+    "total_instrumentos": 2,
+    "imn": 88.8,
+    "imn_categoria": "Madurez Avanzada",
+    "dimensiones": {
+      "protocolo_aula": true,
+      "directriz_tesis": true,
+      "regla_autoria": true,
+      "privacidad_ley_21719": true,
+      "modifica_evaluacion": true,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": [
+      {
+        "id": 19,
+        "documento": "Marco para el uso de la Inteligencia Artificial en UDLA (Res. N°31032025-01)",
+        "unidad": "Institucional",
+        "fecha": "2025-03-31",
+        "url": "https://www.udla.cl/descargas/normativas/marco-para-uso-ia-en-udla.pdf",
+        "enforcement": "Marco normativo con resolución",
+        "exige_declaracion": true
+      },
+      {
+        "id": 20,
+        "documento": "Uso responsable de Inteligencia Artificial en la docencia de asignaturas online asincrónicas",
+        "unidad": "Formación Docente",
+        "fecha": "2024",
+        "url": "https://www.udla.cl/descargas/educacion/Aplicaciones-Operativas-IA-UDLA-10-Docentes-Online-asincronico.pdf",
+        "enforcement": "Guía operativa",
+        "exige_declaracion": true
+      }
+    ]
+  },
+  {
+    "registro": "C38",
+    "nombre": "UNIVERSIDAD DE LOS ANDES",
+    "sigla": "UANDES",
+    "tipo_oficial": "UNIVERSIDAD PRIVADA",
+    "tipo_categoria": "Privadas no CRUCH",
+    "en_brecha": false,
+    "total_instrumentos": 1,
+    "imn": 78.8,
+    "imn_categoria": "Madurez Avanzada",
+    "dimensiones": {
+      "protocolo_aula": true,
+      "directriz_tesis": false,
+      "regla_autoria": true,
+      "privacidad_ley_21719": true,
+      "modifica_evaluacion": true,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": [
+      {
+        "id": 47,
+        "documento": "Guía de uso responsable de Inteligencia Artificial y Boletines Pedagógicos",
+        "unidad": "Biblioteca / Centro de Innovación Docente (CID)",
+        "fecha": "2024",
+        "url": "https://biblioteca.uandes.cl/",
+        "enforcement": "Guía de integridad y declaración obligatoria de prompts",
+        "exige_declaracion": true
+      }
+    ]
+  },
+  {
+    "registro": "A15",
+    "nombre": "UNIVERSIDAD DE LOS LAGOS",
+    "sigla": "ULagos",
+    "tipo_oficial": "UNIVERSIDAD ESTATAL",
+    "tipo_categoria": "Estatales",
+    "en_brecha": false,
+    "total_instrumentos": 1,
+    "imn": 88.8,
+    "imn_categoria": "Madurez Avanzada",
+    "dimensiones": {
+      "protocolo_aula": true,
+      "directriz_tesis": false,
+      "regla_autoria": true,
+      "privacidad_ley_21719": true,
+      "modifica_evaluacion": true,
+      "compras_ia": true
+    },
+    "compras": {
+      "total": 1,
+      "monto_total": 2963520.0,
+      "capas": [
+        "Infraestructura_Computo"
+      ]
+    },
+    "instrumentos": [
+      {
+        "id": 37,
+        "documento": "Programa de Integridad Universitaria (Decretos DU-CPO-2024-01498 y DU-CPO-2024-01601)",
+        "unidad": "Rectoría / Vicerrectoría Académica",
+        "fecha": "2024",
+        "url": "https://norche.ulagos.cl",
+        "enforcement": "Decreto universitario",
+        "exige_declaracion": true
+      }
+    ]
+  },
+  {
+    "registro": "A2",
+    "nombre": "UNIVERSIDAD DE SANTIAGO DE CHILE",
+    "sigla": "USACH",
+    "tipo_oficial": "UNIVERSIDAD ESTATAL",
+    "tipo_categoria": "Estatales",
+    "en_brecha": false,
+    "total_instrumentos": 1,
+    "imn": 42.2,
+    "imn_categoria": "Regulación Inicial",
+    "dimensiones": {
+      "protocolo_aula": true,
+      "directriz_tesis": false,
+      "regla_autoria": true,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": false,
+      "compras_ia": true
+    },
+    "compras": {
+      "total": 6,
+      "monto_total": 49958096.525008,
+      "capas": [
+        "Atencion_Frontoffice",
+        "Gestion_Backoffice",
+        "Infraestructura_Computo"
+      ]
+    },
+    "instrumentos": [
+      {
+        "id": 21,
+        "documento": "LibGuide: Uso responsable y ético de la IA en contextos académicos",
+        "unidad": "Departamento de Bibliotecas",
+        "fecha": "2024",
+        "url": "https://usach.libguides.com/c.php?g=1522613",
+        "enforcement": "Guía informativa",
+        "exige_declaracion": false
+      }
+    ]
+  },
+  {
+    "registro": "A9",
+    "nombre": "UNIVERSIDAD DE TALCA",
+    "sigla": "UTalca",
+    "tipo_oficial": "UNIVERSIDAD ESTATAL",
+    "tipo_categoria": "Estatales",
+    "en_brecha": false,
+    "total_instrumentos": 1,
+    "imn": 54.2,
+    "imn_categoria": "Regulación Inicial",
+    "dimensiones": {
+      "protocolo_aula": true,
+      "directriz_tesis": false,
+      "regla_autoria": true,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": false,
+      "compras_ia": true
+    },
+    "compras": {
+      "total": 5,
+      "monto_total": 82931885.00198731,
+      "capas": [
+        "Gestion_Backoffice"
+      ]
+    },
+    "instrumentos": [
+      {
+        "id": 39,
+        "documento": "Directrices sobre el uso de herramientas de IA en manuscritos",
+        "unidad": "Fac. Cs. Jurídicas / CEDEP (Revista Política Criminal)",
+        "fecha": "2024-09",
+        "url": "https://www.politicacriminal.cl",
+        "enforcement": "Normativa editorial con límite 20%",
+        "exige_declaracion": true
+      }
+    ]
+  },
+  {
+    "registro": "A3",
+    "nombre": "UNIVERSIDAD DE VALPARAÍSO",
+    "sigla": "UV",
+    "tipo_oficial": "UNIVERSIDAD ESTATAL",
+    "tipo_categoria": "Estatales",
+    "en_brecha": false,
+    "total_instrumentos": 2,
+    "imn": 66.8,
+    "imn_categoria": "Madurez Intermedia",
+    "dimensiones": {
+      "protocolo_aula": true,
+      "directriz_tesis": false,
+      "regla_autoria": true,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": true,
+      "compras_ia": true
+    },
+    "compras": {
+      "total": 1,
+      "monto_total": 0.0,
+      "capas": [
+        "Infraestructura_Computo"
+      ]
+    },
+    "instrumentos": [
+      {
+        "id": 34,
+        "documento": "Guía de orientaciones para el uso de la inteligencia artificial (Docentes)",
+        "unidad": "Vicerrectoría Académica",
+        "fecha": "2023-2024",
+        "url": "https://vicerrectoriaacademica.uv.cl/documentos",
+        "enforcement": "Orientaciones",
+        "exige_declaracion": true
+      },
+      {
+        "id": 35,
+        "documento": "Guía para docentes (Sección Integridad e IA)",
+        "unidad": "Escuela de Sociología",
+        "fecha": "2023-2024",
+        "url": "https://sociologia.uv.cl/images/Documentos/Guia_para_docentes.pdf",
+        "enforcement": "Guía docente",
+        "exige_declaracion": true
+      }
+    ]
+  },
+  {
+    "registro": "C12",
+    "nombre": "UNIVERSIDAD DEL ALBA",
+    "sigla": "UDALBA",
+    "tipo_oficial": "UNIVERSIDAD PRIVADA",
+    "tipo_categoria": "Privadas no CRUCH",
+    "en_brecha": false,
+    "total_instrumentos": 1,
+    "imn": 66.8,
+    "imn_categoria": "Madurez Intermedia",
+    "dimensiones": {
+      "protocolo_aula": true,
+      "directriz_tesis": false,
+      "regla_autoria": true,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": true,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": [
+      {
+        "id": 50,
+        "documento": "Guía básica para el uso de ChatGPT y herramientas de IA con fines académicos",
+        "unidad": "Vicerrectoría Académica",
+        "fecha": "2024",
+        "url": "https://udalba.cl",
+        "enforcement": "Guía orientadora con citación explícita de prompts",
+        "exige_declaracion": true
+      }
+    ]
+  },
+  {
+    "registro": "C49",
+    "nombre": "UNIVERSIDAD DEL DESARROLLO",
+    "sigla": "UDD",
+    "tipo_oficial": "UNIVERSIDAD PRIVADA",
+    "tipo_categoria": "Privadas no CRUCH",
+    "en_brecha": false,
+    "total_instrumentos": 3,
+    "imn": 84.8,
+    "imn_categoria": "Madurez Avanzada",
+    "dimensiones": {
+      "protocolo_aula": true,
+      "directriz_tesis": false,
+      "regla_autoria": true,
+      "privacidad_ley_21719": true,
+      "modifica_evaluacion": true,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": [
+      {
+        "id": 22,
+        "documento": "Política de Inteligencia Artificial",
+        "unidad": "Comité de Inteligencia Artificial / Rectoría",
+        "fecha": "2026-03",
+        "url": "https://www.udd.cl/dircom/reglamentos/Politica-IA.pdf",
+        "enforcement": "Política institucional",
+        "exige_declaracion": true
+      },
+      {
+        "id": 23,
+        "documento": "Reglamento Operativo para el Uso de Aplicaciones de Inteligencia Artificial Generativa (IAG)",
+        "unidad": "Comité de IA / Encargado de Datos",
+        "fecha": "2026-03",
+        "url": "https://www.udd.cl/dircom/reglamentos/Reglamento-Operativo-para-Uso-de-Aplicaciones-IAG.pdf",
+        "enforcement": "Reglamento operativo",
+        "exige_declaracion": true
+      },
+      {
+        "id": 24,
+        "documento": "Docencia con IA: Recomendaciones para el uso de Inteligencia Artificial Generativa (IAG)",
+        "unidad": "Centro de Innovación Docente (CID)",
+        "fecha": "2024",
+        "url": "https://innovaciondocente.udd.cl/recursos-educativos/recomendaciones-generales-para-el-uso-de-inteligencia-artificial-generativa/",
+        "enforcement": "Recomendaciones",
+        "exige_declaracion": true
+      }
+    ]
+  },
+  {
+    "registro": "C3",
+    "nombre": "UNIVERSIDAD DIEGO PORTALES",
+    "sigla": "UDP",
+    "tipo_oficial": "UNIVERSIDAD PRIVADA",
+    "tipo_categoria": "Privadas no CRUCH",
+    "en_brecha": false,
+    "total_instrumentos": 2,
+    "imn": 66.8,
+    "imn_categoria": "Madurez Intermedia",
+    "dimensiones": {
+      "protocolo_aula": true,
+      "directriz_tesis": true,
+      "regla_autoria": true,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": true,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": [
+      {
+        "id": 13,
+        "documento": "Orientaciones en el uso de IA para docentes UDP (Versión 2)",
+        "unidad": "Dirección de Desarrollo Docente",
+        "fecha": "2024-08",
+        "url": "https://desarrollodocente.udp.cl/cms/wp-content/uploads/2024/08/Orientaciones-IA_V2.pdf",
+        "enforcement": "Orientaciones",
+        "exige_declaracion": true
+      },
+      {
+        "id": 14,
+        "documento": "Protocolo de uso de IA para la Facultad de Educación UDP",
+        "unidad": "Facultad de Educación",
+        "fecha": "2025-08",
+        "url": "https://educacion.udp.cl/cms/wp-content/uploads/2026/05/Protocolo-de-uso-de-IA-para-la-Facultad-de-Educacion-UDP.-AGOSTO-2025.pdf",
+        "enforcement": "Protocolo",
+        "exige_declaracion": true
+      }
+    ]
+  },
+  {
+    "registro": "C1",
+    "nombre": "UNIVERSIDAD GABRIELA MISTRAL",
+    "sigla": "UGM",
+    "tipo_oficial": "UNIVERSIDAD PRIVADA",
+    "tipo_categoria": "Privadas no CRUCH",
+    "en_brecha": false,
+    "total_instrumentos": 1,
+    "imn": 64.8,
+    "imn_categoria": "Madurez Intermedia",
+    "dimensiones": {
+      "protocolo_aula": true,
+      "directriz_tesis": false,
+      "regla_autoria": true,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": true,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": [
+      {
+        "id": 43,
+        "documento": "Protocolo para la Prevención y Sanción del Plagio en el Contexto Académico (Res. VRA N° 01/2024)",
+        "unidad": "Vicerrectoría Académica",
+        "fecha": "2024-04-08",
+        "url": "https://www.ugm.cl/ugm/site/docs/20200624/20200624120225/24_10_24_protocolo_para_la_prevencion_y_sancion_del_plagio.pdf",
+        "enforcement": "Protocolo con tipificación de plagio por IA",
+        "exige_declaracion": true
+      }
+    ]
+  },
+  {
+    "registro": "C13",
+    "nombre": "UNIVERSIDAD MAYOR",
+    "sigla": "UMayor",
+    "tipo_oficial": "UNIVERSIDAD PRIVADA",
+    "tipo_categoria": "Privadas no CRUCH",
+    "en_brecha": false,
+    "total_instrumentos": 1,
+    "imn": 46.8,
+    "imn_categoria": "Regulación Inicial",
+    "dimensiones": {
+      "protocolo_aula": true,
+      "directriz_tesis": false,
+      "regla_autoria": false,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": true,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": [
+      {
+        "id": 41,
+        "documento": "Reglamento de Estudiantes de Pregrado (Decreto N° 01/2026) - Art. 29° sobre IA",
+        "unidad": "Rectoría / VRA",
+        "fecha": "2026-01-02",
+        "url": "https://www.umayor.cl/um/reglamento-universidad-mayor",
+        "enforcement": "Reglamento con sanciones (nota 1.0)",
+        "exige_declaracion": false
+      }
+    ]
+  },
+  {
+    "registro": "C72",
+    "nombre": "UNIVERSIDAD MIGUEL DE CERVANTES",
+    "sigla": "UMC",
+    "tipo_oficial": "UNIVERSIDAD PRIVADA",
+    "tipo_categoria": "Privadas no CRUCH",
+    "en_brecha": false,
+    "total_instrumentos": 1,
+    "imn": 82.8,
+    "imn_categoria": "Madurez Avanzada",
+    "dimensiones": {
+      "protocolo_aula": true,
+      "directriz_tesis": false,
+      "regla_autoria": true,
+      "privacidad_ley_21719": true,
+      "modifica_evaluacion": true,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": [
+      {
+        "id": 48,
+        "documento": "Instructivo de Uso Académico de Inteligencia Artificial Generativa y Principios Éticos",
+        "unidad": "Vicerrectoría Académica",
+        "fecha": "2024",
+        "url": "https://umcervantes.cl",
+        "enforcement": "Instructivo vinculante con foco en persona humana",
+        "exige_declaracion": true
+      }
+    ]
+  },
+  {
+    "registro": "C43",
+    "nombre": "UNIVERSIDAD SAN SEBASTIÁN",
+    "sigla": "USS",
+    "tipo_oficial": "UNIVERSIDAD PRIVADA",
+    "tipo_categoria": "Privadas no CRUCH",
+    "en_brecha": false,
+    "total_instrumentos": 1,
+    "imn": 54.2,
+    "imn_categoria": "Regulación Inicial",
+    "dimensiones": {
+      "protocolo_aula": true,
+      "directriz_tesis": false,
+      "regla_autoria": true,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": false,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": [
+      {
+        "id": 42,
+        "documento": "Código de Conducta Responsable en Investigación - Lineamientos IA",
+        "unidad": "DISEI / Vicerrectoría de Investigación",
+        "fecha": "2024-2025",
+        "url": "https://investigacion.uss.cl/integridad/",
+        "enforcement": "Código con registro de prompts",
+        "exige_declaracion": true
+      }
+    ]
+  },
+  {
+    "registro": "C16",
+    "nombre": "UNIVERSIDAD SANTO TOMÁS",
+    "sigla": "UST",
+    "tipo_oficial": "UNIVERSIDAD PRIVADA",
+    "tipo_categoria": "Privadas no CRUCH",
+    "en_brecha": false,
+    "total_instrumentos": 1,
+    "imn": 100.0,
+    "imn_categoria": "Madurez Avanzada",
+    "dimensiones": {
+      "protocolo_aula": true,
+      "directriz_tesis": false,
+      "regla_autoria": true,
+      "privacidad_ley_21719": true,
+      "modifica_evaluacion": true,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": [
+      {
+        "id": 45,
+        "documento": "Lineamientos para el uso de la Inteligencia Artificial (Decreto N° 054/25)",
+        "unidad": "Rectoría / Vicerrectoría Académica",
+        "fecha": "2025",
+        "url": "https://www.ust.cl/politicas-y-reglamentos/",
+        "enforcement": "Decreto formal con sanciones disciplinarias",
+        "exige_declaracion": true
+      }
+    ]
+  },
+  {
+    "registro": "B3",
+    "nombre": "UNIVERSIDAD TÉCNICA FEDERICO SANTA MARÍA",
+    "sigla": "UTFSM",
+    "tipo_oficial": "UNIVERSIDAD PARTICULAR CON APORTES",
+    "tipo_categoria": "Privadas CRUCH",
+    "en_brecha": false,
+    "total_instrumentos": 1,
+    "imn": 78.8,
+    "imn_categoria": "Madurez Avanzada",
+    "dimensiones": {
+      "protocolo_aula": true,
+      "directriz_tesis": false,
+      "regla_autoria": true,
+      "privacidad_ley_21719": true,
+      "modifica_evaluacion": true,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": [
+      {
+        "id": 46,
+        "documento": "Guía rápida para el uso ético-pedagógico de la IA y Tríptico IAGen",
+        "unidad": "Dirección General de Docencia / Transformación Digital",
+        "fecha": "2024",
+        "url": "https://transformaciondigital.usm.cl/",
+        "enforcement": "Guía orientadora con criterios formativos",
+        "exige_declaracion": true
+      }
+    ]
+  },
+  {
+    "registro": "C42",
+    "nombre": "UNIVERSIDAD ADVENTISTA DE CHILE",
+    "sigla": "UAC",
+    "tipo_oficial": "UNIVERSIDAD PRIVADA",
+    "tipo_categoria": "Privadas no CRUCH",
+    "en_brecha": true,
+    "total_instrumentos": 0,
+    "imn": null,
+    "imn_categoria": null,
+    "dimensiones": {
+      "protocolo_aula": false,
+      "directriz_tesis": false,
+      "regla_autoria": false,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": false,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": []
+  },
+  {
+    "registro": "A12",
+    "nombre": "UNIVERSIDAD ARTURO PRAT",
+    "sigla": "UNAP",
+    "tipo_oficial": "UNIVERSIDAD ESTATAL",
+    "tipo_categoria": "Estatales",
+    "en_brecha": true,
+    "total_instrumentos": 0,
+    "imn": null,
+    "imn_categoria": null,
+    "dimensiones": {
+      "protocolo_aula": false,
+      "directriz_tesis": false,
+      "regla_autoria": false,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": false,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": []
+  },
+  {
+    "registro": "C10",
+    "nombre": "UNIVERSIDAD BOLIVARIANA",
+    "sigla": "UB",
+    "tipo_oficial": "UNIVERSIDAD PRIVADA",
+    "tipo_categoria": "Privadas no CRUCH",
+    "en_brecha": true,
+    "total_instrumentos": 0,
+    "imn": null,
+    "imn_categoria": null,
+    "dimensiones": {
+      "protocolo_aula": false,
+      "directriz_tesis": false,
+      "regla_autoria": false,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": false,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": []
+  },
+  {
+    "registro": "C46",
+    "nombre": "UNIVERSIDAD CATÓLICA CARDENAL RAÚL SILVA HENRÍQUEZ",
+    "sigla": "UCCRSH",
+    "tipo_oficial": "UNIVERSIDAD PRIVADA",
+    "tipo_categoria": "Privadas no CRUCH",
+    "en_brecha": true,
+    "total_instrumentos": 0,
+    "imn": null,
+    "imn_categoria": null,
+    "dimensiones": {
+      "protocolo_aula": false,
+      "directriz_tesis": false,
+      "regla_autoria": false,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": false,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": []
+  },
+  {
+    "registro": "B8",
+    "nombre": "UNIVERSIDAD CATÓLICA DE LA SANTÍSIMA CONCEPCIÓN",
+    "sigla": "UCSC",
+    "tipo_oficial": "UNIVERSIDAD PARTICULAR CON APORTES",
+    "tipo_categoria": "Privadas CRUCH",
+    "en_brecha": true,
+    "total_instrumentos": 0,
+    "imn": null,
+    "imn_categoria": null,
+    "dimensiones": {
+      "protocolo_aula": false,
+      "directriz_tesis": false,
+      "regla_autoria": false,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": false,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": []
+  },
+  {
+    "registro": "B7",
+    "nombre": "UNIVERSIDAD CATÓLICA DEL MAULE",
+    "sigla": "UCM",
+    "tipo_oficial": "UNIVERSIDAD PARTICULAR CON APORTES",
+    "tipo_categoria": "Privadas CRUCH",
+    "en_brecha": true,
+    "total_instrumentos": 0,
+    "imn": null,
+    "imn_categoria": null,
+    "dimensiones": {
+      "protocolo_aula": false,
+      "directriz_tesis": false,
+      "regla_autoria": false,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": false,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": []
+  },
+  {
+    "registro": "C50",
+    "nombre": "UNIVERSIDAD DE ACONCAGUA",
+    "sigla": "UA",
+    "tipo_oficial": "UNIVERSIDAD PRIVADA",
+    "tipo_categoria": "Privadas no CRUCH",
+    "en_brecha": true,
+    "total_instrumentos": 0,
+    "imn": null,
+    "imn_categoria": null,
+    "dimensiones": {
+      "protocolo_aula": false,
+      "directriz_tesis": false,
+      "regla_autoria": false,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": false,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": []
+  },
+  {
+    "registro": "C29",
+    "nombre": "UNIVERSIDAD DE ARTES, CIENCIAS Y COMUNICACIÓN - UNIACC",
+    "sigla": "UACCU",
+    "tipo_oficial": "UNIVERSIDAD PRIVADA",
+    "tipo_categoria": "Privadas no CRUCH",
+    "en_brecha": true,
+    "total_instrumentos": 0,
+    "imn": null,
+    "imn_categoria": null,
+    "dimensiones": {
+      "protocolo_aula": false,
+      "directriz_tesis": false,
+      "regla_autoria": false,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": false,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": []
+  },
+  {
+    "registro": "A18",
+    "nombre": "UNIVERSIDAD DE AYSÉN",
+    "sigla": "UA",
+    "tipo_oficial": "UNIVERSIDAD ESTATAL",
+    "tipo_categoria": "Estatales",
+    "en_brecha": true,
+    "total_instrumentos": 0,
+    "imn": null,
+    "imn_categoria": null,
+    "dimensiones": {
+      "protocolo_aula": false,
+      "directriz_tesis": false,
+      "regla_autoria": false,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": false,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": []
+  },
+  {
+    "registro": "A5",
+    "nombre": "UNIVERSIDAD DE LA SERENA",
+    "sigla": "ULS",
+    "tipo_oficial": "UNIVERSIDAD ESTATAL",
+    "tipo_categoria": "Estatales",
+    "en_brecha": true,
+    "total_instrumentos": 0,
+    "imn": null,
+    "imn_categoria": null,
+    "dimensiones": {
+      "protocolo_aula": false,
+      "directriz_tesis": false,
+      "regla_autoria": false,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": false,
+      "compras_ia": true
+    },
+    "compras": {
+      "total": 4,
+      "monto_total": 18054752.07,
+      "capas": [
+        "Docencia_Aula",
+        "Gestion_Backoffice",
+        "Infraestructura_Computo"
+      ]
+    },
+    "instrumentos": []
+  },
+  {
+    "registro": "A8",
+    "nombre": "UNIVERSIDAD DE MAGALLANES",
+    "sigla": "UMAG",
+    "tipo_oficial": "UNIVERSIDAD ESTATAL",
+    "tipo_categoria": "Estatales",
+    "en_brecha": true,
+    "total_instrumentos": 0,
+    "imn": null,
+    "imn_categoria": null,
+    "dimensiones": {
+      "protocolo_aula": false,
+      "directriz_tesis": false,
+      "regla_autoria": false,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": false,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": []
+  },
+  {
+    "registro": "A17",
+    "nombre": "UNIVERSIDAD DE O'HIGGINS",
+    "sigla": "UO",
+    "tipo_oficial": "UNIVERSIDAD ESTATAL",
+    "tipo_categoria": "Estatales",
+    "en_brecha": true,
+    "total_instrumentos": 0,
+    "imn": null,
+    "imn_categoria": null,
+    "dimensiones": {
+      "protocolo_aula": false,
+      "directriz_tesis": false,
+      "regla_autoria": false,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": false,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": []
+  },
+  {
+    "registro": "A14",
+    "nombre": "UNIVERSIDAD DE PLAYA ANCHA DE CIENCIAS DE LA EDUCACIÓN",
+    "sigla": "UPLA",
+    "tipo_oficial": "UNIVERSIDAD ESTATAL",
+    "tipo_categoria": "Estatales",
+    "en_brecha": true,
+    "total_instrumentos": 0,
+    "imn": null,
+    "imn_categoria": null,
+    "dimensiones": {
+      "protocolo_aula": false,
+      "directriz_tesis": false,
+      "regla_autoria": false,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": false,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": []
+  },
+  {
+    "registro": "A11",
+    "nombre": "UNIVERSIDAD DE TARAPACÁ",
+    "sigla": "UT",
+    "tipo_oficial": "UNIVERSIDAD ESTATAL",
+    "tipo_categoria": "Estatales",
+    "en_brecha": true,
+    "total_instrumentos": 0,
+    "imn": null,
+    "imn_categoria": null,
+    "dimensiones": {
+      "protocolo_aula": false,
+      "directriz_tesis": false,
+      "regla_autoria": false,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": false,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": []
+  },
+  {
+    "registro": "C25",
+    "nombre": "UNIVERSIDAD DE VIÑA DEL MAR",
+    "sigla": "UVM",
+    "tipo_oficial": "UNIVERSIDAD PRIVADA",
+    "tipo_categoria": "Privadas no CRUCH",
+    "en_brecha": true,
+    "total_instrumentos": 0,
+    "imn": null,
+    "imn_categoria": null,
+    "dimensiones": {
+      "protocolo_aula": false,
+      "directriz_tesis": false,
+      "regla_autoria": false,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": false,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": []
+  },
+  {
+    "registro": "A6",
+    "nombre": "UNIVERSIDAD DEL BÍO-BÍO",
+    "sigla": "UB",
+    "tipo_oficial": "UNIVERSIDAD ESTATAL",
+    "tipo_categoria": "Estatales",
+    "en_brecha": true,
+    "total_instrumentos": 0,
+    "imn": null,
+    "imn_categoria": null,
+    "dimensiones": {
+      "protocolo_aula": false,
+      "directriz_tesis": false,
+      "regla_autoria": false,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": false,
+      "compras_ia": true
+    },
+    "compras": {
+      "total": 2,
+      "monto_total": 10098394.41,
+      "capas": [
+        "Docencia_Aula",
+        "Gestion_Backoffice"
+      ]
+    },
+    "instrumentos": []
+  },
+  {
+    "registro": "C2",
+    "nombre": "UNIVERSIDAD FINIS TERRAE",
+    "sigla": "UFT",
+    "tipo_oficial": "UNIVERSIDAD PRIVADA",
+    "tipo_categoria": "Privadas no CRUCH",
+    "en_brecha": true,
+    "total_instrumentos": 0,
+    "imn": null,
+    "imn_categoria": null,
+    "dimensiones": {
+      "protocolo_aula": false,
+      "directriz_tesis": false,
+      "regla_autoria": false,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": false,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": []
+  },
+  {
+    "registro": "C19",
+    "nombre": "UNIVERSIDAD LA REPÚBLICA",
+    "sigla": "UR",
+    "tipo_oficial": "UNIVERSIDAD PRIVADA",
+    "tipo_categoria": "Privadas no CRUCH",
+    "en_brecha": true,
+    "total_instrumentos": 0,
+    "imn": null,
+    "imn_categoria": null,
+    "dimensiones": {
+      "protocolo_aula": false,
+      "directriz_tesis": false,
+      "regla_autoria": false,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": false,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": []
+  },
+  {
+    "registro": "C52",
+    "nombre": "UNIVERSIDAD LOS LEONES",
+    "sigla": "UL",
+    "tipo_oficial": "UNIVERSIDAD PRIVADA",
+    "tipo_categoria": "Privadas no CRUCH",
+    "en_brecha": true,
+    "total_instrumentos": 0,
+    "imn": null,
+    "imn_categoria": null,
+    "dimensiones": {
+      "protocolo_aula": false,
+      "directriz_tesis": false,
+      "regla_autoria": false,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": false,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": []
+  },
+  {
+    "registro": "A13",
+    "nombre": "UNIVERSIDAD METROPOLITANA DE CIENCIAS DE LA EDUCACIÓN",
+    "sigla": "UTEM",
+    "tipo_oficial": "UNIVERSIDAD ESTATAL",
+    "tipo_categoria": "Estatales",
+    "en_brecha": true,
+    "total_instrumentos": 0,
+    "imn": null,
+    "imn_categoria": null,
+    "dimensiones": {
+      "protocolo_aula": false,
+      "directriz_tesis": false,
+      "regla_autoria": false,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": false,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": []
+  },
+  {
+    "registro": "C20",
+    "nombre": "UNIVERSIDAD SEK",
+    "sigla": "US",
+    "tipo_oficial": "UNIVERSIDAD PRIVADA",
+    "tipo_categoria": "Privadas no CRUCH",
+    "en_brecha": true,
+    "total_instrumentos": 0,
+    "imn": null,
+    "imn_categoria": null,
+    "dimensiones": {
+      "protocolo_aula": false,
+      "directriz_tesis": false,
+      "regla_autoria": false,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": false,
+      "compras_ia": false
+    },
+    "compras": {
+      "total": 0,
+      "monto_total": 0,
+      "capas": []
+    },
+    "instrumentos": []
+  },
+  {
+    "registro": "A16",
+    "nombre": "UNIVERSIDAD TECNOLÓGICA METROPOLITANA",
+    "sigla": "UTEM",
+    "tipo_oficial": "UNIVERSIDAD ESTATAL",
+    "tipo_categoria": "Estatales",
+    "en_brecha": true,
+    "total_instrumentos": 0,
+    "imn": null,
+    "imn_categoria": null,
+    "dimensiones": {
+      "protocolo_aula": false,
+      "directriz_tesis": false,
+      "regla_autoria": false,
+      "privacidad_ley_21719": false,
+      "modifica_evaluacion": false,
+      "compras_ia": true
+    },
+    "compras": {
+      "total": 6,
+      "monto_total": 87378334.63,
+      "capas": [
+        "Gestion_Backoffice",
+        "Infraestructura_Computo"
+      ]
+    },
+    "instrumentos": []
+  }
+]

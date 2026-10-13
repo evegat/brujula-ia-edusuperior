@@ -1,0 +1,229 @@
+---
+import citasData from '../../data/citas_enriquecidas.json';
+
+const totalCitas = citasData.length; // 87
+
+function normalizeForSearch(str: string): string {
+  return (str || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .trim();
+}
+---
+
+<section id="clausulas" style="margin-bottom: 4.5rem; scroll-margin-top: 2rem;">
+  <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1.25rem; margin-bottom:1.5rem;">
+    <div>
+      <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.4rem;">
+        <span class="badge badge-purple">Minería de Texto & Evidencia Empírica</span>
+        <span class="badge badge-blue">Corpus de 17 Reglamentos en Markdown</span>
+      </div>
+      <h2>Buscador de Citas Textuales y Cláusulas Literales</h2>
+      <p style="color:var(--text-muted); max-width:850px; font-size:0.96rem;">
+        Fragmentos normativos textuales extraídos directamente desde los 17 reglamentos respaldados en nuestro repositorio. Cada cita cuenta con número de página verificado y acceso dual (documento original y transcripción Markdown abierta).
+      </p>
+    </div>
+  </div>
+
+  <!-- Botones de Filtro por Tema Temático -->
+  <div style="background:var(--card-bg); border:1px solid var(--border-color); border-radius:12px; padding:1.25rem; margin-bottom:1.5rem; box-shadow:var(--shadow-sm);">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1rem;">
+      
+      <div style="display:flex; gap:0.4rem; flex-wrap:wrap;" id="citas-tema-buttons">
+        <button type="button" class="btn btn-primary btn-sm btn-citas-f" data-tema="todas">
+          Todas las Citas ({totalCitas})
+        </button>
+        <button type="button" class="btn btn-outline btn-sm btn-citas-f" data-tema="tesis">
+          🎓 Tesis y Memorias
+        </button>
+        <button type="button" class="btn btn-outline btn-sm btn-citas-f" data-tema="evaluacion">
+          📝 Evaluaciones y Exámenes
+        </button>
+        <button type="button" class="btn btn-outline btn-sm btn-citas-f" data-tema="autoria">
+          ✍️ Autoría y Propiedad Intelectual
+        </button>
+        <button type="button" class="btn btn-outline btn-sm btn-citas-f" data-tema="privacidad">
+          🔒 Privacidad Ley N° 21.719
+        </button>
+        <button type="button" class="btn btn-outline btn-sm btn-citas-f" data-tema="sanciones">
+          ⚖️ Plagio y Sanciones
+        </button>
+      </div>
+
+      <!-- Buscador de Citas -->
+      <div style="min-width:260px; flex:1; max-width:380px;">
+        <input 
+          type="text" 
+          id="citas-search-input" 
+          placeholder="🔍 Buscar en el texto de las citas..." 
+          style="width:100%; padding:0.5rem 0.85rem; border:1px solid var(--border-color); border-radius:6px; background:var(--canvas-bg); color:var(--text-main); font-size:0.85rem;"
+        />
+      </div>
+
+    </div>
+
+    <!-- Contador de Resultados -->
+    <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.82rem; color:var(--text-muted); border-top:1px solid var(--border-color); padding-top:0.75rem;">
+      <span id="citas-count-display">Mostrando 87 de 87 citas textuales verificadas</span>
+      <span>100% con número de página y acceso dual</span>
+    </div>
+  </div>
+
+  <!-- Grilla de Citas (Prerenderizada por SSR) -->
+  <div id="citas-cards-grid" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap:1.25rem;">
+    {citasData.map(c => {
+      const searchBlob = `${normalizeForSearch(c.cita_limpia)} ${normalizeForSearch(c.universidad)} ${normalizeForSearch(c.documento)} ${normalizeForSearch(c.sigla)} ${normalizeForSearch(c.tema)}`;
+      const mdLink = c.archivo_md ? `/corpus_md/${c.archivo_md}` : null;
+      const extLink = c.url_original || null;
+
+      return (
+        <div 
+          class="card cita-card"
+          data-tema={c.tema}
+          data-search={searchBlob}
+          style="display:flex; flex-direction:column; justify-content:space-between; border-left:3px solid var(--accent-purple);"
+        >
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.5rem; gap:0.5rem;">
+              <div style="display:flex; gap:0.4rem; align-items:center;">
+                <span class="badge badge-purple">{c.sigla}</span>
+                <span class="badge badge-blue">Página {c.pagina}</span>
+              </div>
+              <span style="font-size:0.72rem; color:var(--text-muted); text-transform:uppercase; font-weight:600;">
+                {c.tema}
+              </span>
+            </div>
+
+            <div style="font-size:0.86rem; font-weight:700; color:var(--text-main); margin-bottom:0.2rem;">
+              {c.universidad}
+            </div>
+            <div style="font-size:0.78rem; color:var(--text-muted); margin-bottom:0.75rem;">
+              {c.documento}
+            </div>
+
+            <p style="font-size:0.85rem; font-style:italic; color:var(--text-main); line-height:1.55; margin-bottom:1rem; background:rgba(0,0,0,0.02); padding:0.75rem; border-radius:6px; border:1px solid var(--border-color);">
+              "{c.cita_limpia}"
+            </p>
+          </div>
+
+          <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.78rem; border-top:1px solid var(--border-color); padding-top:0.65rem;">
+            {mdLink ? (
+              <a href={mdLink} target="_blank" style="color:var(--accent-blue); font-weight:600; text-decoration:none;">
+                📄 Ver Markdown &rarr;
+              </a>
+            ) : <span></span>}
+            {extLink ? (
+              <a href={extLink} target="_blank" rel="noopener noreferrer" style="color:var(--accent-green); font-weight:600; text-decoration:none;">
+                🔗 Fuente Original &rarr;
+              </a>
+            ) : (
+              <span style="color:var(--text-muted);">PDF en repositorio</span>
+            )}
+          </div>
+        </div>
+      );
+    })}
+  </div>
+
+  <!-- Estado Vacío -->
+  <div id="citas-empty-state" style="display:none; text-align:center; padding:3rem 1.5rem; background:var(--card-bg); border:1px solid var(--border-color); border-radius:12px; margin-top:1rem;">
+    <div style="font-size:2rem; margin-bottom:0.5rem;">🔍</div>
+    <div style="font-weight:600; margin-bottom:0.25rem;">No se encontraron cláusulas para esa búsqueda</div>
+    <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">Prueba con otro tema o restablece los filtros.</div>
+    <button type="button" id="citas-reset-btn" class="btn btn-primary btn-sm">Ver Todas las Citas ({totalCitas})</button>
+  </div>
+
+</section>
+
+<script is:inline>
+  let temaFiltro = 'todas';
+  let textoCitaFiltro = '';
+
+  const grid = document.getElementById('citas-cards-grid');
+  const cards = Array.from(document.querySelectorAll('.cita-card'));
+  const countDisplay = document.getElementById('citas-count-display');
+  const searchInput = document.getElementById('citas-search-input');
+  const emptyState = document.getElementById('citas-empty-state');
+  const resetBtn = document.getElementById('citas-reset-btn');
+
+  function normalizeInput(str) {
+    return (str || '')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .trim();
+  }
+
+  function filtrarCitas() {
+    if (!grid || cards.length === 0) return;
+
+    const normQuery = normalizeInput(textoCitaFiltro);
+    let visibles = 0;
+
+    cards.forEach(card => {
+      const tema = card.getAttribute('data-tema');
+      const searchBlob = card.getAttribute('data-search') || '';
+
+      let matchTema = (temaFiltro === 'todas' || tema === temaFiltro);
+      let matchTexto = true;
+
+      if (normQuery) {
+        matchTexto = searchBlob.includes(normQuery);
+      }
+
+      if (matchTema && matchTexto) {
+        card.style.display = 'flex';
+        visibles++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    if (countDisplay) {
+      countDisplay.textContent = `Mostrando ${visibles} de ${cards.length} citas textuales verificadas`;
+    }
+
+    if (visibles === 0) {
+      grid.style.display = 'none';
+      if (emptyState) emptyState.style.display = 'block';
+    } else {
+      grid.style.display = 'grid';
+      if (emptyState) emptyState.style.display = 'none';
+    }
+  }
+
+  document.querySelectorAll('.btn-citas-f').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.btn-citas-f').forEach(b => {
+        b.classList.remove('btn-primary');
+        b.classList.add('btn-outline');
+      });
+      btn.classList.remove('btn-outline');
+      btn.classList.add('btn-primary');
+      temaFiltro = btn.getAttribute('data-tema') || 'todas';
+      filtrarCitas();
+    });
+  });
+
+  searchInput?.addEventListener('input', (e) => {
+    textoCitaFiltro = e.target.value;
+    filtrarCitas();
+  });
+
+  resetBtn?.addEventListener('click', () => {
+    temaFiltro = 'todas';
+    textoCitaFiltro = '';
+    if (searchInput) searchInput.value = '';
+    document.querySelectorAll('.btn-citas-f').forEach(b => {
+      if (b.getAttribute('data-tema') === 'todas') {
+        b.classList.remove('btn-outline');
+        b.classList.add('btn-primary');
+      } else {
+        b.classList.remove('btn-primary');
+        b.classList.add('btn-outline');
+      }
+    });
+    filtrarCitas();
+  });
+</script>
