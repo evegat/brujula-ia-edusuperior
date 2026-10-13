@@ -1,0 +1,198 @@
+---
+import checklistData from '../../data/benchmarking_checklist.json';
+
+// Calcular estadísticas globales por eje
+const totalInst = checklistData.length; // 37
+const statsEjes = [
+  { id: "fuerza", nombre: "Fuerza Jurídica Formal", count: checklistData.filter(i => i.ejes.find(e => e.id === "fuerza")?.cumple).length },
+  { id: "declaracion", nombre: "Declaración de Uso", count: checklistData.filter(i => i.ejes.find(e => e.id === "declaracion")?.cumple).length },
+  { id: "autoria", nombre: "Regla de Autoría (IA no autora)", count: checklistData.filter(i => i.ejes.find(e => e.id === "autoria")?.cumple).length },
+  { id: "privacidad", nombre: "Privacidad Ley 21.719", count: checklistData.filter(i => i.ejes.find(e => e.id === "privacidad")?.cumple).length },
+  { id: "evaluacion", nombre: "Rediseño Evaluativo", count: checklistData.filter(i => i.ejes.find(e => e.id === "evaluacion")?.cumple).length },
+  { id: "tesis", nombre: "Directrices en Tesis/Grado", count: checklistData.filter(i => i.ejes.find(e => e.id === "tesis")?.cumple).length },
+  { id: "gobernanza", nombre: "Gobernanza y Revisión Periódica", count: checklistData.filter(i => i.ejes.find(e => e.id === "gobernanza")?.cumple).length }
+];
+---
+
+<section id="benchmarking" style="margin-bottom: 4.5rem; scroll-margin-top: 2rem;">
+  <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1.25rem; margin-bottom:1.5rem;">
+    <div>
+      <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.4rem;">
+        <span class="badge badge-purple">Benchmarking Comparativo</span>
+        <span class="badge badge-green">Enfoque Formativo • No Punitivo</span>
+      </div>
+      <h2>Checklist de Adopción Normativa en IA</h2>
+      <p style="color:var(--text-muted); max-width:850px; font-size:0.96rem;">
+        En lugar de asignar puntajes continuos o rankings arbitrarios sin marco legal vinculante, este observatorio desagrega <strong>7 ejes regulatorios clave</strong> observados en las mejores prácticas institucionales. Compara qué dimensiones contempla cada plantel y evalúa las brechas formativas de tu propia unidad.
+      </p>
+    </div>
+  </div>
+
+  <!-- Grilla de los 7 Ejes de Referencia con Estadísticas Globales -->
+  <div class="card" style="margin-bottom:2.25rem; background:linear-gradient(135deg, var(--card-bg) 0%, rgba(5, 150, 105, 0.03) 100%);">
+    <h3 style="font-size:1.15rem; margin-bottom:1rem; border-bottom:1px solid var(--border-color); padding-bottom:0.75rem;">
+      📋 Los 7 Ejes de Referencia Regulatoria en Chile (Adopción sobre {totalInst} Instituciones)
+    </h3>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:1.2rem;">
+      {statsEjes.map(eje => {
+        const pct = Math.round((eje.count / totalInst) * 100);
+        return (
+          <div style="border-left:3px solid var(--accent-blue); padding-left:0.85rem;">
+            <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:0.25rem;">
+              <span style="font-weight:700; font-size:0.92rem; color:var(--text-main);">{eje.nombre}</span>
+              <span style="font-weight:700; color:var(--accent-blue); font-size:0.9rem;">{pct}%</span>
+            </div>
+            <div style="background:rgba(0,0,0,0.06); border-radius:9999px; height:6px; overflow:hidden; margin-bottom:0.35rem;">
+              <div style={`width:${pct}%; background:var(--accent-blue); height:100%;`}></div>
+            </div>
+            <div style="font-size:0.76rem; color:var(--text-muted);">
+              {eje.count} de {totalInst} instituciones lo incorporan
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+
+  <!-- Autoevaluador / Checklist Interactivo para Docentes y Autoridades -->
+  <div class="card" style="margin-bottom:2.25rem; border:2px dashed var(--accent-blue); background:rgba(29, 78, 216, 0.02);">
+    <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1rem; margin-bottom:1rem;">
+      <div>
+        <h3 style="font-size:1.15rem; color:var(--accent-blue); margin-bottom:0.3rem;">
+          🛠️ Autoevaluador: ¿Qué contempla la normativa de tu institución o carrera?
+        </h3>
+        <p style="font-size:0.86rem; color:var(--text-muted); margin:0;">
+          Marca los elementos presentes en tu reglamento para contrastar tu cobertura contra el estándar nacional:
+        </p>
+      </div>
+      <div id="self-eval-score" style="text-align:right; min-width:140px;">
+        <span style="font-size:1.8rem; font-weight:700; font-family:var(--font-serif); color:var(--accent-blue);" id="self-eval-count">0</span>
+        <span style="font-size:0.9rem; color:var(--text-muted);">/ 7 ejes</span>
+        <div style="font-size:0.75rem; color:var(--text-muted);" id="self-eval-label">Selecciona opciones</div>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:0.75rem;" id="self-eval-checkboxes">
+      <label style="display:flex; align-items:flex-start; gap:0.5rem; font-size:0.85rem; cursor:pointer; background:var(--card-bg); padding:0.65rem 0.85rem; border-radius:8px; border:1px solid var(--border-color);">
+        <input type="checkbox" class="self-check" value="fuerza" style="margin-top:0.2rem;" />
+        <span><strong>Decreto / Resolución formal</strong> (vinculante)</span>
+      </label>
+      <label style="display:flex; align-items:flex-start; gap:0.5rem; font-size:0.85rem; cursor:pointer; background:var(--card-bg); padding:0.65rem 0.85rem; border-radius:8px; border:1px solid var(--border-color);">
+        <input type="checkbox" class="self-check" value="declaracion" style="margin-top:0.2rem;" />
+        <span><strong>Declaración de uso</strong> (citar prompts)</span>
+      </label>
+      <label style="display:flex; align-items:flex-start; gap:0.5rem; font-size:0.85rem; cursor:pointer; background:var(--card-bg); padding:0.65rem 0.85rem; border-radius:8px; border:1px solid var(--border-color);">
+        <input type="checkbox" class="self-check" value="autoria" style="margin-top:0.2rem;" />
+        <span><strong>IA no es coautora</strong> (responsabilidad humana)</span>
+      </label>
+      <label style="display:flex; align-items:flex-start; gap:0.5rem; font-size:0.85rem; cursor:pointer; background:var(--card-bg); padding:0.65rem 0.85rem; border-radius:8px; border:1px solid var(--border-color);">
+        <input type="checkbox" class="self-check" value="privacidad" style="margin-top:0.2rem;" />
+        <span><strong>Privacidad de datos</strong> (Ley N° 21.719)</span>
+      </label>
+      <label style="display:flex; align-items:flex-start; gap:0.5rem; font-size:0.85rem; cursor:pointer; background:var(--card-bg); padding:0.65rem 0.85rem; border-radius:8px; border:1px solid var(--border-color);">
+        <input type="checkbox" class="self-check" value="evaluacion" style="margin-top:0.2rem;" />
+        <span><strong>Rediseño de evaluaciones</strong> (aprendizaje auténtico)</span>
+      </label>
+      <label style="display:flex; align-items:flex-start; gap:0.5rem; font-size:0.85rem; cursor:pointer; background:var(--card-bg); padding:0.65rem 0.85rem; border-radius:8px; border:1px solid var(--border-color);">
+        <input type="checkbox" class="self-check" value="tesis" style="margin-top:0.2rem;" />
+        <span><strong>Lineamientos en tesis</strong> y memorias de grado</span>
+      </label>
+      <label style="display:flex; align-items:flex-start; gap:0.5rem; font-size:0.85rem; cursor:pointer; background:var(--card-bg); padding:0.65rem 0.85rem; border-radius:8px; border:1px solid var(--border-color);">
+        <input type="checkbox" class="self-check" value="gobernanza" style="margin-top:0.2rem;" />
+        <span><strong>Comité permanente / Revisión</strong> periódica</span>
+      </label>
+    </div>
+  </div>
+
+  <!-- Catálogo de Benchmarking por Institución (Orden Alfabético) -->
+  <div>
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1.25rem;">
+      <h3 style="font-size:1.25rem; margin:0;">
+        🏛️ Benchmarking Institucional ({checklistData.length} Instituciones Catastradas)
+      </h3>
+      <div style="font-size:0.82rem; color:var(--text-muted);">
+        Orden alfabético • Cobertura de variables de referencia
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap:1.25rem;" id="benchmarking-grid">
+      {checklistData.map(item => {
+        const badgeColor = item.total_ejes >= 5 ? 'badge-green' : (item.total_ejes >= 3 ? 'badge-blue' : 'badge-amber');
+        return (
+          <div class="card" style="display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.6rem; gap:0.5rem;">
+                <span class="badge badge-purple">{item.sigla}</span>
+                <span class={`badge ${badgeColor}`}>{item.total_ejes} de 7 ejes</span>
+              </div>
+
+              <h4 style="font-size:1rem; line-height:1.3; margin-bottom:0.25rem;">
+                {item.universidad}
+              </h4>
+              <div style="font-size:0.78rem; color:var(--text-muted); margin-bottom:0.85rem;">
+                {item.tipo} • {item.total_docs} instrumento(s) registrado(s)
+              </div>
+
+              <!-- Lista de Ejes con Checks -->
+              <div style="display:flex; flex-direction:column; gap:0.35rem; margin-bottom:1rem; font-size:0.8rem;">
+                {item.ejes.map(eje => (
+                  <div style="display:flex; align-items:center; gap:0.4rem;">
+                    <span>{eje.cumple ? '✅' : '⚪'}</span>
+                    <span style={`color: ${eje.cumple ? 'var(--text-main)' : 'var(--text-muted)'}; font-size:0.78rem;`}>
+                      {eje.nombre}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <!-- Footer de la Tarjeta con Enlace a Documentos -->
+            <div style="border-top:1px solid var(--border-color); padding-top:0.75rem; margin-top:auto;">
+              <div style="font-size:0.76rem; color:var(--text-muted); margin-bottom:0.35rem;">
+                Instrumentos normativos:
+              </div>
+              <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:0.25rem;">
+                {item.documentos.map(doc => (
+                  <li style="font-size:0.76rem; line-height:1.3;">
+                    {doc.url ? (
+                      <a href={doc.url} target="_blank" rel="noopener noreferrer" style="color:var(--accent-blue); text-decoration:none;">
+                        📄 {doc.titulo} &rarr;
+                      </a>
+                    ) : (
+                      <span style="color:var(--text-muted);">📄 {doc.titulo}</span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>
+
+<script>
+  // Interactividad del Autoevaluador de la Institución
+  const checks = document.querySelectorAll<HTMLInputElement>('.self-check');
+  const countEl = document.getElementById('self-eval-count');
+  const labelEl = document.getElementById('self-eval-label');
+
+  function updateSelfScore() {
+    let count = 0;
+    checks.forEach(c => {
+      if (c.checked) count++;
+    });
+    if (countEl) countEl.textContent = count.toString();
+    if (labelEl) {
+      if (count === 0) labelEl.textContent = 'Selecciona opciones';
+      else if (count <= 2) labelEl.textContent = 'Adopción Inicial';
+      else if (count <= 4) labelEl.textContent = 'Adopción Intermedia';
+      else if (count <= 6) labelEl.textContent = 'Adopción Robusta';
+      else labelEl.textContent = 'Regulación Integral (7/7)';
+    }
+  }
+
+  checks.forEach(c => c.addEventListener('change', updateSelfScore));
+</script>
