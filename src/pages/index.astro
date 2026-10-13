@@ -23,60 +23,49 @@ import ModalAvisoLegal from '../components/ModalAvisoLegal.astro';
   <!-- Encabezado Editorial y Propósito -->
   <Hero />
 
-  <!-- Barra de Pestañas Principal -->
+  <!-- Barra de Navegación Sobria (Sin Slider ni Scroll Horizontal) -->
   <nav class="tabs-nav" aria-label="Secciones del Observatorio">
     <div class="tabs-container">
       <button class="tab-btn active" data-tab="tab-matriz">
-        🏛️ Matriz 54 Universidades
-      </button>
-      <button class="tab-btn" data-tab="tab-planilla">
-        📊 Planilla de Chequeo
-      </button>
-      <button class="tab-btn" data-tab="tab-checklist">
-        📋 Checklist de Adopción
+        🏛️ Universidades & Planilla
       </button>
       <button class="tab-btn" data-tab="tab-kit">
-        ⚖️ Kit & Ley 21.719
+        ⚖️ Radar Ley 21.719 & Kit
+      </button>
+      <button class="tab-btn" data-tab="tab-compras">
+        💰 Compras Públicas (Ues del Estado)
       </button>
       <button class="tab-btn" data-tab="tab-catalogo">
         📚 Catálogo & Citas
       </button>
-      <button class="tab-btn" data-tab="tab-compras">
-        💰 Compras (Ues del Estado)
-      </button>
       <button class="tab-btn" data-tab="tab-metodologia">
-        📖 Metodología & Versiones
-      </button>
-      <button class="tab-btn" data-tab="tab-comunidad">
-        💬 Aportes & Datos
+        📖 Metodología & Datos Abiertos
       </button>
     </div>
   </nav>
 
-  <!-- Contenido por Pestañas -->
+  <!-- Contenido por Secciones -->
   <div class="tabs-content">
     
-    <!-- Pestaña 1: Matriz Nacional de 54 Universidades -->
+    <!-- Sección 1: Universidades y Planilla de Chequeo -->
     <div id="tab-matriz" class="tab-panel active">
       <MatrizNacional />
+      <div style="margin-top: 4rem; padding-top: 2.5rem; border-top: 2px dashed var(--border-color);">
+        <PlanillaChequeo />
+      </div>
     </div>
 
-    <!-- Pestaña 2: Planilla Interactiva de Chequeo Institucional (Nueva Herramienta Útil) -->
-    <div id="tab-planilla" class="tab-panel">
-      <PlanillaChequeo />
-    </div>
-
-    <!-- Pestaña 3: Checklist y Benchmarking de 7 Ejes -->
-    <div id="tab-checklist" class="tab-panel">
-      <ChecklistBenchmarking />
-    </div>
-
-    <!-- Pestaña 4: Kit de Adopción Normativa y Radar Ley 21.719 -->
+    <!-- Sección 2: Radar Ley 21.719 y Kit de Adopción -->
     <div id="tab-kit" class="tab-panel">
       <KitAdopcionNacional />
     </div>
 
-    <!-- Pestaña 4: Catálogo de Normativas y Citas Textuales -->
+    <!-- Sección 3: Compras Públicas (Ues del Estado) -->
+    <div id="tab-compras" class="tab-panel">
+      <ComprasPublicas />
+    </div>
+
+    <!-- Sección 4: Catálogo de Normativas y Citas Textuales -->
     <div id="tab-catalogo" class="tab-panel">
       <CatalogoProtocolos />
       <div style="margin-top: 3.5rem;">
@@ -84,19 +73,12 @@ import ModalAvisoLegal from '../components/ModalAvisoLegal.astro';
       </div>
     </div>
 
-    <!-- Pestaña 5: Compras Públicas (Exclusivo Ues Estatales) -->
-    <div id="tab-compras" class="tab-panel">
-      <ComprasPublicas />
-    </div>
-
-    <!-- Pestaña 6: Metodología, Universo SIES y Versiones -->
+    <!-- Sección 5: Metodología, Datos Abiertos y Comunidad -->
     <div id="tab-metodologia" class="tab-panel">
       <MetodologiaYVersiones />
-    </div>
-
-    <!-- Pestaña 7: Aportes, Ecosistema y Datos Abiertos -->
-    <div id="tab-comunidad" class="tab-panel">
-      <ComunidadBuzon />
+      <div style="margin-top: 3.5rem;">
+        <ComunidadBuzon />
+      </div>
       <div style="margin-top: 3.5rem;">
         <Ecosistema />
       </div>
@@ -117,45 +99,40 @@ import ModalAvisoLegal from '../components/ModalAvisoLegal.astro';
     background: var(--canvas-bg);
     z-index: 100;
     border-bottom: 1px solid var(--border-color);
-    margin-bottom: 2.25rem;
-    padding-top: 0.5rem;
+    margin-bottom: 2rem;
+    padding: 0.65rem 0;
   }
 
   .tabs-container {
     display: flex;
+    flex-wrap: wrap; /* Sin slider ni desborde horizontal */
     gap: 0.5rem;
-    overflow-x: auto;
-    padding-bottom: 0.5rem;
-    scrollbar-width: thin;
+    align-items: center;
   }
 
   .tab-btn {
-    background: transparent;
-    border: 1px solid transparent;
-    border-bottom: 2px solid transparent;
-    padding: 0.65rem 1rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 0.95rem;
     font-family: var(--font-sans);
-    font-size: 0.88rem;
+    font-size: 0.85rem;
     font-weight: 600;
     color: var(--text-muted);
     cursor: pointer;
-    white-space: nowrap;
-    border-radius: 6px 6px 0 0;
+    border-radius: 6px;
     transition: var(--transition);
   }
 
   .tab-btn:hover {
     color: var(--text-main);
-    background: rgba(0, 0, 0, 0.03);
+    border-color: var(--accent-blue);
   }
 
   .tab-btn.active {
-    color: var(--accent-blue);
-    border-bottom-color: var(--accent-blue);
-    background: var(--card-bg);
-    border-top: 1px solid var(--border-color);
-    border-left: 1px solid var(--border-color);
-    border-right: 1px solid var(--border-color);
+    color: #ffffff;
+    background: var(--accent-blue);
+    border-color: var(--accent-blue);
+    box-shadow: var(--shadow-sm);
   }
 
   .tab-panel {

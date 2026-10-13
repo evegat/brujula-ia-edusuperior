@@ -27,15 +27,15 @@ const {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,600&display=swap" rel="stylesheet" />
 
-  <!-- Telemetría Umami (Self-hosted en analytics.evegat.cl) -->
-  {umamiId && (
-    <script
-      defer
-      src="https://analytics.evegat.cl/script.js"
-      data-website-id={umamiId}
-      data-do-not-track="true"
-    ></script>
-  )}
+  <!-- Telemetría Umami Oficial (analytics.evegat.cl) -->
+  <script
+    is:inline
+    defer
+    src="https://analytics.evegat.cl/script.js"
+    data-website-id="96982ca8-66da-4b58-976c-f98e06f05a6d"
+    data-host-url="https://analytics.evegat.cl"
+    data-auto-track="true"
+  ></script>
 
   <style is:global>
     :root {
