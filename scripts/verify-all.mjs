@@ -6,15 +6,15 @@ const ROOT = path.resolve('.');
 
 console.log('=== VERIFICACIÓN INTEGRAL DE CRITERIOS DE ACEPTACIÓN ===\n');
 
-// 1. Verificar Censo 54 Universidades (32 con instrumento, 22 en brecha)
-console.log('--- 1. Censo Oficial y Brecha ---');
+// 1. Verificar Universo 54 Universidades (32 con instrumento, 22 sin instrumento público identificado)
+console.log('--- 1. Universo Oficial de 54 Universidades ---');
 const brecha = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/brecha_universidades_chile.json'), 'utf-8'));
 assert.strictEqual(brecha.resumen.total_universidades_oficiales, 54, 'Total de universidades oficiales debe ser 54');
 assert.strictEqual(brecha.resumen.con_instrumento, 32, 'Universidades con instrumento debe ser 32');
 const sinInst = brecha.resumen.sin_instrumento_identificado ?? brecha.resumen.sin_instrumento;
 assert.strictEqual(sinInst, 22, 'Universidades sin instrumento público identificado debe ser 22');
 assert.strictEqual(brecha.resumen.cobertura_porcentaje, 59.3, 'Porcentaje de cobertura debe ser 59.3%');
-console.log(`✓ Censo verificado: 54 oficiales, 32 con instrumento (59.3%), 22 sin instrumento público identificado (40.7%)`);
+console.log(`✓ Universo verificado: 54 oficiales, 32 con instrumento (59.3%), 22 sin instrumento público identificado (40.7%)`);
 
 // 2. Verificar Matriz 54 Universidades y Dimensiones
 console.log('\n--- 2. Matriz Nacional de 54 Universidades ---');
