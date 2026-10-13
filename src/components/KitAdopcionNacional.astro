@@ -1,0 +1,284 @@
+---
+// src/components/KitAdopcionNacional.astro
+import matrizData from '../../data/matriz_54_universidades.json';
+
+const totalUes = matrizData.length; // 54
+const conPrivacidad = matrizData.filter(u => u.dimensiones.privacidad_ley_21719).length; // 16
+const conDocSinPriv = matrizData.filter(u => !u.en_brecha && !u.dimensiones.privacidad_ley_21719).length; // 16
+const sinDoc = matrizData.filter(u => u.en_brecha).length; // 22
+
+// Lista de universidades con cláusula de privacidad identificada
+const uesConPrivacidad = matrizData.filter(u => u.dimensiones.privacidad_ley_21719).map(u => u.sigla || u.nombre);
+---
+
+<section id="kit-adopcion" style="margin-bottom: 4.5rem; scroll-margin-top: 2rem;">
+  
+  <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1.25rem; margin-bottom:1.5rem;">
+    <div>
+      <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.4rem;">
+        <span class="badge badge-amber">Herramienta de Política Pública</span>
+        <span class="badge badge-blue">Cuenta Regresiva Ley N° 21.719</span>
+      </div>
+      <h2>Kit de Adopción Normativa & Radar Ley N° 21.719</h2>
+      <p style="color:var(--text-muted); max-width:860px; font-size:0.96rem; line-height:1.55;">
+        Herramientas prácticas para universidades y facultades chilenas: una plantilla marco lista para tramitar en consejos de docencia y el diagnóstico del sistema universitario frente a la nueva Ley de Protección de Datos Personales.
+      </p>
+    </div>
+
+    <!-- Enlaces de Descarga Rápida -->
+    <div style="display:flex; gap:0.5rem; align-items:center;">
+      <a href="/modelo_marco_orientaciones_ia_universidades.md" download="modelo_marco_ia_universidades_chile.md" class="btn btn-primary btn-sm" style="font-size:0.82rem;">
+        📥 Descargar Modelo Marco (.md)
+      </a>
+      <button type="button" id="btn-copiar-modelo" class="btn btn-outline btn-sm" style="font-size:0.82rem;">
+        📋 Copiar al Portapapeles
+      </button>
+    </div>
+  </div>
+
+  <!-- RADAR LEY N° 21.719: VIGENCIA OBLIGATORIA 1 DE DICIEMBRE DE 2026 -->
+  <div style="background:var(--card-bg); border:1px solid var(--border-color); border-radius:12px; padding:1.5rem; margin-bottom:2rem; box-shadow:var(--shadow-sm); border-top:4px solid var(--accent-amber);">
+    
+    <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1.25rem; margin-bottom:1.25rem;">
+      <div>
+        <div style="font-size:0.78rem; font-weight:700; text-transform:uppercase; color:var(--accent-amber); margin-bottom:0.35rem; letter-spacing:0.5px;">
+          ⚖️ Cuenta Regresiva Regulatoria
+        </div>
+        <h3 style="font-size:1.25rem; margin-bottom:0.35rem;">
+          Radar Ley N° 21.719 sobre Protección de Datos Personales
+        </h3>
+        <p style="font-size:0.88rem; color:var(--text-muted); max-width:760px; line-height:1.5; margin:0;">
+          Promulgada en 2024, la Ley N° 21.719 establece un régimen sancionatorio estricto y crea la Agencia de Protección de Datos Personales. Su <strong>vigencia legal obligatoria entra a regir el 1 de diciembre de 2026</strong>.
+        </p>
+      </div>
+
+      <!-- Contador / Hito Temporal -->
+      <div style="background:rgba(217, 119, 6, 0.08); border:1px solid rgba(217, 119, 6, 0.25); padding:0.85rem 1.25rem; border-radius:8px; text-align:center;">
+        <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; color:var(--accent-amber); letter-spacing:0.5px;">
+          Vigencia Obligatoria
+        </div>
+        <div style="font-size:1.45rem; font-weight:700; font-family:var(--font-serif); color:var(--text-main);">
+          1 Dic 2026
+        </div>
+        <div style="font-size:0.74rem; color:var(--text-muted);">
+          Exigibilidad plena para IES
+        </div>
+      </div>
+    </div>
+
+    <!-- Termómetro de Preparación Universitaria -->
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap:1rem; margin-bottom:1.25rem;">
+      
+      <div style="background:rgba(5, 150, 105, 0.05); border:1px solid rgba(5, 150, 105, 0.2); padding:1rem; border-radius:8px;">
+        <div style="font-size:1.6rem; font-weight:700; color:var(--accent-green); font-family:var(--font-serif);">
+          {conPrivacidad} de {totalUes} <span style="font-size:0.85rem; font-weight:600;">(29.6%)</span>
+        </div>
+        <div style="font-weight:600; font-size:0.82rem; color:var(--text-main); margin-top:0.25rem;">
+          Con Cláusula Preventiva
+        </div>
+        <div style="font-size:0.76rem; color:var(--text-muted); margin-top:0.2rem; line-height:1.35;">
+          Planteles que prohíben subir datos personales a modelos de IA (UChile, PUC, UDP, UDD, UDLA, UNAB, UAI, etc.).
+        </div>
+      </div>
+
+      <div style="background:rgba(217, 119, 6, 0.05); border:1px solid rgba(217, 119, 6, 0.2); padding:1rem; border-radius:8px;">
+        <div style="font-size:1.6rem; font-weight:700; color:var(--accent-amber); font-family:var(--font-serif);">
+          {conDocSinPriv} de {totalUes} <span style="font-size:0.85rem; font-weight:600;">(29.6%)</span>
+        </div>
+        <div style="font-weight:600; font-size:0.82rem; color:var(--text-main); margin-top:0.25rem;">
+          Con Norma, Sin Privacidad
+        </div>
+        <div style="font-size:0.76rem; color:var(--text-muted); margin-top:0.2rem; line-height:1.35;">
+          Tienen directrices docentes pero omiten resguardos de confidencialidad o deberes de datos personales.
+        </div>
+      </div>
+
+      <div style="background:rgba(0, 0, 0, 0.03); border:1px solid var(--border-color); padding:1rem; border-radius:8px;">
+        <div style="font-size:1.6rem; font-weight:700; color:var(--text-muted); font-family:var(--font-serif);">
+          {sinDoc} de {totalUes} <span style="font-size:0.85rem; font-weight:600;">(40.7%)</span>
+        </div>
+        <div style="font-weight:600; font-size:0.82rem; color:var(--text-main); margin-top:0.25rem;">
+          Sin Instrumento Público
+        </div>
+        <div style="font-size:0.76rem; color:var(--text-muted); margin-top:0.2rem; line-height:1.35;">
+          Planteles que no registran directrices docentes ni protocolos de privacidad en portales abiertos.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Alerta Metodológica para Vicerrectorías Jurídicas -->
+    <div style="background:rgba(0,0,0,0.02); border-left:3px solid var(--accent-blue); padding:0.85rem 1rem; border-radius:0 6px 6px 0; font-size:0.82rem; color:var(--text-main); line-height:1.5;">
+      <strong>Orientación para Vicerrectorías y Direcciones Jurídicas:</strong> A partir de diciembre de 2026, la entrega involuntaria de datos académicos, rúbricas con nombres o antecedentes sensibles de estudiantes a servidores de LLM comerciales (como ChatGPT o Copilot sin convenios corporativos de confidencialidad de datos) configurará una infracción sancionable. Se sugiere incorporar formalmente el Título IV de nuestro modelo marco a los reglamentos de docencia.
+    </div>
+
+  </div>
+
+  <!-- PLANTILLA MARCO ABIERTA (DESCARGABLE Y COPIABLE) -->
+  <div style="background:var(--card-bg); border:1px solid var(--border-color); border-radius:12px; padding:1.5rem; box-shadow:var(--shadow-sm); border-top:4px solid var(--accent-green);">
+    
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1.25rem;">
+      <div>
+        <div style="font-size:0.78rem; font-weight:700; text-transform:uppercase; color:var(--accent-green); margin-bottom:0.25rem; letter-spacing:0.5px;">
+          📄 Modelo Marco Institucional
+        </div>
+        <h3 style="font-size:1.25rem; margin-bottom:0.25rem;">
+          Lineamientos de IA para la Docencia Universitaria
+        </h3>
+        <p style="font-size:0.86rem; color:var(--text-muted); margin:0;">
+          Redacción jurídica estándar en formato de Resolución de Rectoría / Vicerrectoría, construida sobre el consenso de las 32 normativas chilenas vigentes.
+        </p>
+      </div>
+
+      <div style="display:flex; gap:0.5rem;">
+        <span class="badge badge-green">Licencia Abierta CC BY 4.0</span>
+        <span class="badge badge-blue">Formato Markdown & Texto</span>
+      </div>
+    </div>
+
+    <!-- Previsualización de los 6 Títulos Clave en Acordeón Ligero -->
+    <div style="display:flex; flex-direction:column; gap:0.75rem; margin-bottom:1.5rem;">
+      
+      <details style="background:var(--canvas-bg); border:1px solid var(--border-color); border-radius:6px; padding:0.75rem 1rem;" open>
+        <summary style="font-weight:600; font-size:0.9rem; cursor:pointer; color:var(--text-main);">
+          Título I: Principios Orientadores (Intencionalidad Pedagógica, Transparencia y Equidad)
+        </summary>
+        <p style="font-size:0.82rem; color:var(--text-muted); margin-top:0.5rem; line-height:1.5;">
+          La IA se define como un recurso de apoyo que complementa y nunca sustituye el juicio crítico humano. Prohíbe exigir para aprobar herramientas de IA con suscripción de pago (garantía de gratuidad y equidad).
+        </p>
+      </details>
+
+      <details style="background:var(--canvas-bg); border:1px solid var(--border-color); border-radius:6px; padding:0.75rem 1rem;">
+        <summary style="font-weight:600; font-size:0.9rem; cursor:pointer; color:var(--text-main);">
+          Título II: Integridad Académica y Regla Canónica de Autoría
+        </summary>
+        <p style="font-size:0.82rem; color:var(--text-muted); margin-top:0.5rem; line-height:1.5;">
+          De conformidad con la Ley N° 17.336 de Propiedad Intelectual, la IA carece de personalidad jurídica y moral, por lo que nunca puede figurar como autor ni coautor. Se establece la obligatoriedad de adjuntar una <em>Declaración de Uso de IA y Prompts</em> en evaluaciones.
+        </p>
+      </details>
+
+      <details style="background:var(--canvas-bg); border:1px solid var(--border-color); border-radius:6px; padding:0.75rem 1rem;">
+        <summary style="font-weight:600; font-size:0.9rem; cursor:pointer; color:var(--text-main);">
+          Título III: Criterios para el Diseño de Evaluaciones
+        </summary>
+        <p style="font-size:0.82rem; color:var(--text-muted); margin-top:0.5rem; line-height:1.5;">
+          Instruye a privilegiar evaluaciones procesuales, defensas orales y análisis situados por sobre exámenes memorísticos. <strong>Prohíbe usar detectores automáticos de IA como prueba única o determinante de plagio</strong>, dada su tasa de falsos positivos demostrada.
+        </p>
+      </details>
+
+      <details style="background:var(--canvas-bg); border:1px solid var(--border-color); border-radius:6px; padding:0.75rem 1rem;">
+        <summary style="font-weight:600; font-size:0.9rem; cursor:pointer; color:var(--text-main);">
+          Título IV: Protección de Datos y Privacidad (Ley N° 21.719)
+        </summary>
+        <p style="font-size:0.82rem; color:var(--text-muted); margin-top:0.5rem; line-height:1.5;">
+          Prohibición taxativa de alimentar plataformas de IA con datos personales de estudiantes o funcionarios (nombres, RUT, calificaciones, antecedentes de salud). Exigencia de anonimización irreversible en proyectos de investigación.
+        </p>
+      </details>
+
+      <details style="background:var(--canvas-bg); border:1px solid var(--border-color); border-radius:6px; padding:0.75rem 1rem;">
+        <summary style="font-weight:600; font-size:0.9rem; cursor:pointer; color:var(--text-main);">
+          Título V: Trabajos de Titulación, Tesis de Grado y Memorias
+        </summary>
+        <p style="font-size:0.82rem; color:var(--text-muted); margin-top:0.5rem; line-height:1.5;">
+          Autoriza el uso de IA como apoyo exploratorio o estilístico con declaración detallada en la metodología de la tesis. Prohíbe delegar hipótesis, datos simulados o interpretación de resultados. Faculta a la comisión a interrogar oralmente sobre la trazabilidad.
+        </p>
+      </details>
+
+      <details style="background:var(--canvas-bg); border:1px solid var(--border-color); border-radius:6px; padding:0.75rem 1rem;">
+        <summary style="font-weight:600; font-size:0.9rem; cursor:pointer; color:var(--text-main);">
+          Título VI: Régimen Disciplinario Proporcional y Buena Fe Formativa
+        </summary>
+        <p style="font-size:0.82rem; color:var(--text-muted); margin-top:0.5rem; line-height:1.5;">
+          Tipifica el fraude por IA no declarada. Establece la presunción de buena fe formativa: la primera instancia frente a sospechas es una entrevista pedagógica con el docente, reservando sumarios disciplinarios para fraude reiterado.
+        </p>
+      </details>
+
+    </div>
+
+    <!-- Caja de Código / Texto Completo Copiable -->
+    <div style="position:relative;">
+      <div style="display:flex; justify-content:space-between; align-items:center; background:var(--card-alt); padding:0.6rem 1rem; border-radius:6px 6px 0 0; border:1px solid var(--border-color); border-bottom:none;">
+        <span style="font-size:0.76rem; font-weight:700; color:var(--text-muted); text-transform:uppercase;">
+          Texto Completo del Modelo (Listo para copiar y adaptar)
+        </span>
+        <span id="copy-status" style="font-size:0.76rem; color:var(--accent-green); font-weight:600; display:none;">
+          ✓ ¡Copiado al portapapeles!
+        </span>
+      </div>
+      <textarea 
+        id="textarea-modelo-marco" 
+        readonly 
+        rows="12" 
+        style="width:100%; padding:1rem; font-family:monospace; font-size:0.78rem; line-height:1.5; background:var(--canvas-bg); color:var(--text-main); border:1px solid var(--border-color); border-radius:0 0 6px 6px; resize:vertical; box-sizing:border-box;"
+      ># MODELO MARCO DE LINEAMIENTOS INSTITUCIONALES PARA EL USO ÉTICO Y FORMATIVO DE LA INTELIGENCIA ARTIFICIAL EN LA DOCENCIA UNIVERSITARIA
+
+RESOLUCIÓN / DECRETO N° [XXX]
+
+VISTOS:
+1. Las facultades conferidas por el Estatuto de la Universidad [Nombre].
+2. La Ley N° 21.091 sobre Educación Superior.
+3. La Ley N° 17.336 sobre Propiedad Intelectual.
+4. La Ley N° 21.719 sobre Protección de Datos Personales (vigente a contar del 1 de diciembre de 2026).
+
+CONSIDERANDO:
+1. Que la inteligencia artificial generativa representa una transformación en los procesos de creación y aprendizaje.
+2. Que la misión formativa exige cautelar el pensamiento crítico, la autoría humana y la responsabilidad ética.
+
+RESUELVO:
+
+TÍTULO I: DISPOSICIONES GENERALES Y PRINCIPIOS
+Artículo 1. Objeto: Rige el uso de sistemas de IA en pregrado, postgrado y titulación.
+Artículo 2. Principios: Intencionalidad Pedagógica, Transparencia, Equidad (no exigir herramientas de pago) y Resguardo estricto de Privacidad.
+
+TÍTULO II: INTEGRIDAD ACADÉMICA Y AUTORÍA
+Artículo 3. Autoría: La IA carece de personalidad jurídica. En ningún caso puede figurar como autora ni coautora.
+Artículo 4. Declaración de Uso: Los estudiantes deberán adjuntar breve declaración de herramientas, prompts y finalidad de uso.
+
+TÍTULO III: DISEÑO DE EVALUACIONES
+Artículo 5. Criterios Docentes: Privilegiar evaluaciones de proceso y orales. Prohibición de usar detectores automáticos de IA como prueba única de plagio.
+
+TÍTULO IV: PROTECCIÓN DE DATOS (LEY N° 21.719)
+Artículo 6. Deber de Confidencialidad: Prohibido ingresar nombres, RUT, notas o datos sensibles a modelos de IA comerciales o abiertos.
+
+TÍTULO V: TESIS Y MEMORIAS
+Artículo 7. Trabajos de Grado: Permitido para apoyo estilístico/búsqueda con declaración en metodología. Prohibido delegar hipótesis o interpretación. Comisión facultada a interrogar oralmente.
+
+TÍTULO VI: RÉGIMEN DISCIPLINARIO
+Artículo 8. Tipificación: Presentar producción no declarada constituye falta.
+Artículo 9. Buena Fe Formativa: La primera instancia es una entrevista formativa; procesos disciplinarios para fraude reiterado.
+
+Artículo Transitorio: Constitución de Mesa Técnica Permanente de IA.
+Comuníquese, publíquese y archívese.</textarea>
+    </div>
+
+  </div>
+
+</section>
+
+<script is:inline>
+  const copyBtn = document.getElementById('btn-copiar-modelo');
+  const copyStatus = document.getElementById('copy-status');
+  const textarea = document.getElementById('textarea-modelo-marco');
+
+  copyBtn?.addEventListener('click', async () => {
+    if (!textarea) return;
+    try {
+      await navigator.clipboard.writeText(textarea.value);
+      if (copyStatus) {
+        copyStatus.style.display = 'inline';
+        setTimeout(() => {
+          copyStatus.style.display = 'none';
+        }, 3000);
+      }
+    } catch (e) {
+      textarea.select();
+      document.execCommand('copy');
+      if (copyStatus) {
+        copyStatus.style.display = 'inline';
+        setTimeout(() => {
+          copyStatus.style.display = 'none';
+        }, 3000);
+      }
+    }
+  });
+</script>
