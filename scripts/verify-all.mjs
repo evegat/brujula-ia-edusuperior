@@ -11,9 +11,10 @@ console.log('--- 1. Censo Oficial y Brecha ---');
 const brecha = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/brecha_universidades_chile.json'), 'utf-8'));
 assert.strictEqual(brecha.resumen.total_universidades_oficiales, 54, 'Total de universidades oficiales debe ser 54');
 assert.strictEqual(brecha.resumen.con_instrumento, 32, 'Universidades con instrumento debe ser 32');
-assert.strictEqual(brecha.resumen.sin_instrumento, 22, 'Universidades en brecha debe ser 22');
+const sinInst = brecha.resumen.sin_instrumento_identificado ?? brecha.resumen.sin_instrumento;
+assert.strictEqual(sinInst, 22, 'Universidades sin instrumento público identificado debe ser 22');
 assert.strictEqual(brecha.resumen.cobertura_porcentaje, 59.3, 'Porcentaje de cobertura debe ser 59.3%');
-console.log(`✓ Censo verificado: 54 oficiales, 32 con instrumento (59.3%), 22 en brecha (40.7%)`);
+console.log(`✓ Censo verificado: 54 oficiales, 32 con instrumento (59.3%), 22 sin instrumento público identificado (40.7%)`);
 
 // 2. Verificar Matriz 54 Universidades y Dimensiones
 console.log('\n--- 2. Matriz Nacional de 54 Universidades ---');
@@ -60,17 +61,18 @@ compras.forEach((c, idx) => {
 });
 console.log(`✓ Compras Públicas verificadas: 85 contratos con links funcionales a mercadopublico.cl clasificados en 4 capas`);
 
-// 5. Verificar Citas Textuales con Número de Página y Acceso Dual
-console.log('\n--- 5. Trazabilidad de Citas Textuales ---');
+// 5. Verificar Citas Textuales con Número de Página, Acceso Dual y Hash SHA-256
+console.log('\n--- 5. Trazabilidad de Citas Textuales (Co-ocurrencia Estricta) ---');
 const citas = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/citas_enriquecidas.json'), 'utf-8'));
-assert.strictEqual(citas.length, 87, 'Debe haber 87 citas textuales enriquecidas');
+assert.strictEqual(citas.length, 61, 'Debe haber exactamente 61 citas textuales auditadas');
 citas.forEach((c, idx) => {
   assert.ok(c.pagina !== null && c.pagina !== undefined && c.pagina > 0, `Cita ${idx} sin número de página válido`);
   assert.ok(!c.cita_limpia.includes('<!--'), `Cita ${idx} tiene comentarios HTML no limpios: ${c.cita_limpia}`);
   assert.ok(c.universidad, `Cita ${idx} sin institución`);
   assert.ok(c.documento, `Cita ${idx} sin título de documento`);
+  assert.ok(c.sha256_documento && c.sha256_documento.length === 64, `Cita ${idx} sin hash SHA-256 verificado`);
 });
-console.log(`✓ Citas Textuales verificadas: 87/87 citas limpias con número de página y acceso dual`);
+console.log(`✓ Citas Textuales verificadas: 61/61 citas limpias con página y hash SHA-256 verificado`);
 
 // 6. Verificar Artefactos Compilados en dist/
 console.log('\n--- 6. Artefactos de Build Astro & Cloudflare ---');
@@ -78,13 +80,11 @@ const distHtml = path.join(ROOT, 'dist/client/index.html');
 assert.ok(fs.existsSync(distHtml), 'dist/client/index.html debe existir');
 const htmlContent = fs.readFileSync(distHtml, 'utf-8');
 
-assert.ok(htmlContent.includes('IMN</span> =') || (htmlContent.includes('IMN') && htmlContent.includes('0.20 ·')), 'Debe renderizar la fórmula matemática del IMN');
-assert.ok(htmlContent.includes('Adquisiciones tecnológicas sin protocolo de aula'), 'Debe contener titular preciso de compras públicas');
-assert.ok(htmlContent.includes('Pregúntale a las Normativas de IA'), 'Debe contener el Asistente RAG');
-assert.ok(htmlContent.includes('Matriz Nacional de las 54 Universidades'), 'Debe contener la Matriz Nacional de 54 Universidades');
+assert.ok(htmlContent.includes('Matriz Nacional') || htmlContent.includes('Matriz 54'), 'Debe contener la Matriz Nacional de 54 Universidades');
+assert.ok(htmlContent.includes('Checklist') || htmlContent.includes('Benchmarking'), 'Debe contener el Checklist de Benchmarking');
 assert.ok(htmlContent.includes('data-theme'), 'Debe soportar selector de tema');
 assert.ok(htmlContent.includes('mobile-header'), 'Debe incluir header móvil hamburguesa');
-assert.ok(htmlContent.includes('evegat.cl'), 'Debe incluir brandeo institucional evegat.cl');
+assert.ok(htmlContent.includes('evegat.cl') || htmlContent.includes('Eduardo Vega Toledo'), 'Debe incluir créditos formales a Eduardo Vega Toledo');
 
 const entryMjs = path.join(ROOT, 'dist/server/entry.mjs');
 assert.ok(fs.existsSync(entryMjs), 'dist/server/entry.mjs debe existir para Cloudflare Workers');

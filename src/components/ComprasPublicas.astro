@@ -158,6 +158,10 @@ function obtenerBadgeCapa(capa: string): { label: string; cls: string } {
               <td style="padding:0.85rem 1rem; vertical-align:top; max-width:320px;">
                 <div style="font-weight:600; margin-bottom:0.2rem;">{c.nombre}</div>
                 <div style="font-size:0.78rem; color:var(--text-muted); line-height:1.4;">{c.descripcion || ''}</div>
+                <div style="display:flex; gap:0.35rem; align-items:center; margin-top:0.35rem; flex-wrap:wrap;">
+                  <span class="badge" style="font-size:0.68rem; background:rgba(0,0,0,0.05); color:var(--text-main); border:1px solid var(--border-color);">{c.categoria_corta || 'Tecnología'}</span>
+                  <span style="font-size:0.7rem; color:var(--text-muted);">Confianza: {c.confianza_clasificacion || 'Alta'}</span>
+                </div>
                 <div style="font-size:0.74rem; color:var(--text-muted); margin-top:0.25rem;">Fecha: {c.fecha || 'N/D'}</div>
               </td>
               <td style="padding:0.85rem 1rem; vertical-align:top;">

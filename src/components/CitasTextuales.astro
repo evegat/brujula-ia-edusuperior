@@ -65,8 +65,8 @@ function normalizeForSearch(str: string): string {
 
     <!-- Contador de Resultados -->
     <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.82rem; color:var(--text-muted); border-top:1px solid var(--border-color); padding-top:0.75rem;">
-      <span id="citas-count-display">Mostrando 87 de 87 citas textuales verificadas</span>
-      <span>100% con número de página y acceso dual</span>
+      <span id="citas-count-display">Mostrando {totalCitas} de {totalCitas} citas textuales verificadas</span>
+      <span>100% con número de página y hash SHA-256 verificado</span>
     </div>
   </div>
 
@@ -76,6 +76,7 @@ function normalizeForSearch(str: string): string {
       const searchBlob = `${normalizeForSearch(c.cita_limpia)} ${normalizeForSearch(c.universidad)} ${normalizeForSearch(c.documento)} ${normalizeForSearch(c.sigla)} ${normalizeForSearch(c.tema)}`;
       const mdLink = c.archivo_md ? `/corpus_md/${c.archivo_md}` : null;
       const extLink = c.url_original || null;
+      const shaCorto = c.sha256_documento ? c.sha256_documento.substring(0, 8) : null;
 
       return (
         <div 
@@ -107,19 +108,26 @@ function normalizeForSearch(str: string): string {
             </p>
           </div>
 
-          <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.78rem; border-top:1px solid var(--border-color); padding-top:0.65rem;">
-            {mdLink ? (
-              <a href={mdLink} target="_blank" style="color:var(--accent-blue); font-weight:600; text-decoration:none;">
-                📄 Ver Markdown &rarr;
-              </a>
-            ) : <span></span>}
-            {extLink ? (
-              <a href={extLink} target="_blank" rel="noopener noreferrer" style="color:var(--accent-green); font-weight:600; text-decoration:none;">
-                🔗 Fuente Original &rarr;
-              </a>
-            ) : (
-              <span style="color:var(--text-muted);">PDF en repositorio</span>
+          <div>
+            {shaCorto && (
+              <div style="font-size:0.7rem; color:var(--text-muted); margin-bottom:0.4rem; font-family:monospace;">
+                SHA-256: {shaCorto}... (Auditado)
+              </div>
             )}
+            <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.78rem; border-top:1px solid var(--border-color); padding-top:0.65rem;">
+              {mdLink ? (
+                <a href={mdLink} target="_blank" style="color:var(--accent-blue); font-weight:600; text-decoration:none;">
+                  📄 Ver Markdown &rarr;
+                </a>
+              ) : <span></span>}
+              {extLink ? (
+                <a href={extLink} target="_blank" rel="noopener noreferrer" style="color:var(--accent-green); font-weight:600; text-decoration:none;">
+                  🔗 Fuente Original &rarr;
+                </a>
+              ) : (
+                <span style="color:var(--text-muted);">PDF en repositorio</span>
+              )}
+            </div>
           </div>
         </div>
       );

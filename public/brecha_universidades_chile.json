@@ -1,8 +1,14 @@
 {
+  "metadatos": {
+    "version_catastro": "2.1.0",
+    "fecha_corte": "2026-10-13",
+    "universo_evaluado": "54 Universidades oficiales reconocidas por Mineduc/SIES",
+    "nota_epistemologica": "La categoría 'Sin instrumento público identificado' describe el resultado del barrido documental público y en ningún caso constituye declaración de inexistencia institucional."
+  },
   "resumen": {
     "total_universidades_oficiales": 54,
     "con_instrumento": 32,
-    "sin_instrumento": 22,
+    "sin_instrumento_identificado": 22,
     "cobertura_porcentaje": 59.3
   },
   "universidades_con_instrumento": [
@@ -10,11 +16,15 @@
       "registro": "A1",
       "nombre": "UNIVERSIDAD DE CHILE",
       "tipo": "UNIVERSIDAD ESTATAL",
+      "estado_levantamiento": "Instrumento público identificado",
+      "fecha_consulta": "2026-10-13",
       "total_instrumentos": 6,
       "instrumentos": [
         {
+          "id": 1,
           "documento": "Lineamientos para el uso transparente de inteligencia artificial en las tesis de la Universidad de Chile",
           "unidad": "Vicerrectoría de Asuntos Académicos (VAA)",
+          "alcance": "Institucional",
           "fecha": "2024",
           "url": "https://uchile.cl/informacion-y-bibliotecas/lineamientos-uso-ia-en-tesis",
           "exige_declaracion": true,
@@ -24,8 +34,10 @@
           "enforcement": "Normativa obligatoria con cláusula"
         },
         {
+          "id": 2,
           "documento": "Humanizar la Inteligencia: Orientaciones para un uso ético y transformador de la IA en la educación y la investigación en salud",
           "unidad": "Facultad de Medicina (FAMED)",
+          "alcance": "Facultad",
           "fecha": "2025",
           "url": "https://uchile.cl/dam/jcr:9b955a62-5177-425e-b59e-d7f409d3fa74/Humanizar%20la%20Inteligencia_FAMED2025%20V10-1.pdf",
           "exige_declaracion": true,
@@ -35,8 +47,10 @@
           "enforcement": "Guía orientadora"
         },
         {
+          "id": 3,
           "documento": "Protocolo de Uso de Inteligencia Artificial Generativa (IAG) y Anexos",
           "unidad": "Escuela de Gobierno (FAGOB)",
+          "alcance": "Escuela",
           "fecha": "2024",
           "url": "https://brujula-ia-fagob.evegat.cl/docs/Protocolo_USO_IAG_y_Anexos_Escuela_de_Gobierno_UChile.pdf",
           "exige_declaracion": true,
@@ -46,8 +60,10 @@
           "enforcement": "Protocolo operativo con declaración jurada"
         },
         {
+          "id": 4,
           "documento": "Procedimiento para la Declaración de Uso de Inteligencia Artificial en Tesis y AFE",
           "unidad": "FCFM - Escuela de Postgrado (EPEC)",
+          "alcance": "Facultad",
           "fecha": "2024-2025",
           "url": "https://postgrado.fcfm.uchile.cl",
           "exige_declaracion": true,
@@ -57,8 +73,10 @@
           "enforcement": "Instructivo con categorías A/B/C"
         },
         {
+          "id": 5,
           "documento": "Política de Integración Crítica y Ética de la IAG para la Formación en Asuntos Públicos",
           "unidad": "Escuela de Gobierno (FAGOB)",
+          "alcance": "Escuela",
           "fecha": "2024-2025",
           "url": null,
           "exige_declaracion": true,
@@ -68,8 +86,10 @@
           "enforcement": "Política institucional"
         },
         {
+          "id": 6,
           "documento": "Lineamientos para el uso de Inteligencia Artificial en Revistas FAU",
           "unidad": "Facultad de Arquitectura y Urbanismo (FAU)",
+          "alcance": "Facultad",
           "fecha": "2024",
           "url": "https://revistas.uchile.cl",
           "exige_declaracion": true,
@@ -84,11 +104,15 @@
       "registro": "A2",
       "nombre": "UNIVERSIDAD DE SANTIAGO DE CHILE",
       "tipo": "UNIVERSIDAD ESTATAL",
+      "estado_levantamiento": "Instrumento público identificado",
+      "fecha_consulta": "2026-10-13",
       "total_instrumentos": 1,
       "instrumentos": [
         {
+          "id": 21,
           "documento": "LibGuide: Uso responsable y ético de la IA en contextos académicos",
           "unidad": "Departamento de Bibliotecas",
+          "alcance": "Institucional",
           "fecha": "2024",
           "url": "https://usach.libguides.com/c.php?g=1522613",
           "exige_declaracion": false,
@@ -103,11 +127,15 @@
       "registro": "A3",
       "nombre": "UNIVERSIDAD DE VALPARAÍSO",
       "tipo": "UNIVERSIDAD ESTATAL",
+      "estado_levantamiento": "Instrumento público identificado",
+      "fecha_consulta": "2026-10-13",
       "total_instrumentos": 2,
       "instrumentos": [
         {
+          "id": 34,
           "documento": "Guía de orientaciones para el uso de la inteligencia artificial (Docentes)",
           "unidad": "Vicerrectoría Académica",
+          "alcance": "Institucional",
           "fecha": "2023-2024",
           "url": "https://vicerrectoriaacademica.uv.cl/documentos",
           "exige_declaracion": true,
@@ -117,8 +145,10 @@
           "enforcement": "Orientaciones"
         },
         {
+          "id": 35,
           "documento": "Guía para docentes (Sección Integridad e IA)",
           "unidad": "Escuela de Sociología",
+          "alcance": "Escuela",
           "fecha": "2023-2024",
           "url": "https://sociologia.uv.cl/images/Documentos/Guia_para_docentes.pdf",
           "exige_declaracion": true,
@@ -133,11 +163,15 @@
       "registro": "A4",
       "nombre": "UNIVERSIDAD DE ANTOFAGASTA",
       "tipo": "UNIVERSIDAD ESTATAL",
+      "estado_levantamiento": "Instrumento público identificado",
+      "fecha_consulta": "2026-10-13",
       "total_instrumentos": 1,
       "instrumentos": [
         {
+          "id": 38,
           "documento": "El uso ético de la IA en la educación universitaria",
           "unidad": "Biblioteca / Dirección de Gestión Docente",
+          "alcance": "Institucional",
           "fecha": "2023-2024",
           "url": "https://biblioteca.uantof.cl/public/pg/uso_ia.php",
           "exige_declaracion": true,
@@ -152,11 +186,15 @@
       "registro": "A7",
       "nombre": "UNIVERSIDAD DE LA FRONTERA",
       "tipo": "UNIVERSIDAD ESTATAL",
+      "estado_levantamiento": "Instrumento público identificado",
+      "fecha_consulta": "2026-10-13",
       "total_instrumentos": 1,
       "instrumentos": [
         {
+          "id": 36,
           "documento": "Orientaciones para el uso de ChatGPT en Educación Superior",
           "unidad": "Dirección de Desarrollo Curricular y Docente",
+          "alcance": "Institucional",
           "fecha": "2023-2024",
           "url": "https://docencia.ufro.cl/orientaciones-chatgpt-educacion-superior/",
           "exige_declaracion": false,
@@ -171,11 +209,15 @@
       "registro": "A9",
       "nombre": "UNIVERSIDAD DE TALCA",
       "tipo": "UNIVERSIDAD ESTATAL",
+      "estado_levantamiento": "Instrumento público identificado",
+      "fecha_consulta": "2026-10-13",
       "total_instrumentos": 1,
       "instrumentos": [
         {
+          "id": 39,
           "documento": "Directrices sobre el uso de herramientas de IA en manuscritos",
           "unidad": "Fac. Cs. Jurídicas / CEDEP (Revista Política Criminal)",
+          "alcance": "Unidad",
           "fecha": "2024-09",
           "url": "https://www.politicacriminal.cl",
           "exige_declaracion": true,
@@ -190,11 +232,15 @@
       "registro": "A10",
       "nombre": "UNIVERSIDAD DE ATACAMA",
       "tipo": "UNIVERSIDAD ESTATAL",
+      "estado_levantamiento": "Instrumento público identificado",
+      "fecha_consulta": "2026-10-13",
       "total_instrumentos": 1,
       "instrumentos": [
         {
+          "id": 44,
           "documento": "Comité Universitario de Inteligencia Artificial SapiensIA (sin documento público descargable)",
           "unidad": "Rectoría / Comité SapiensIA",
+          "alcance": "Institucional",
           "fecha": "2024-06",
           "url": "https://uda.cl",
           "exige_declaracion": false,
@@ -209,11 +255,15 @@
       "registro": "A15",
       "nombre": "UNIVERSIDAD DE LOS LAGOS",
       "tipo": "UNIVERSIDAD ESTATAL",
+      "estado_levantamiento": "Instrumento público identificado",
+      "fecha_consulta": "2026-10-13",
       "total_instrumentos": 1,
       "instrumentos": [
         {
+          "id": 37,
           "documento": "Programa de Integridad Universitaria (Decretos DU-CPO-2024-01498 y DU-CPO-2024-01601)",
           "unidad": "Rectoría / Vicerrectoría Académica",
+          "alcance": "Institucional",
           "fecha": "2024",
           "url": "https://norche.ulagos.cl",
           "exige_declaracion": true,
@@ -228,11 +278,15 @@
       "registro": "B1",
       "nombre": "PONTIFICIA UNIVERSIDAD CATÓLICA DE CHILE",
       "tipo": "UNIVERSIDAD PARTICULAR CON APORTES",
+      "estado_levantamiento": "Instrumento público identificado",
+      "fecha_consulta": "2026-10-13",
       "total_instrumentos": 4,
       "instrumentos": [
         {
+          "id": 7,
           "documento": "Política de uso ético de Inteligencia Artificial Generativa v1",
           "unidad": "Instituto de Sociología (ISUC)",
+          "alcance": "Unidad",
           "fecha": "2025-07-30",
           "url": "https://sociologia.uc.cl/wp-content/uploads/2025/10/Politica-de-uso-etico-de-IA-ISUC-v1.pdf",
           "exige_declaracion": true,
@@ -242,8 +296,10 @@
           "enforcement": "Política con sanciones"
         },
         {
+          "id": 8,
           "documento": "Guía Ética para el uso de Inteligencia Artificial Generativa",
           "unidad": "Facultad de Derecho",
+          "alcance": "Facultad",
           "fecha": "2024",
           "url": "https://derecho.uc.cl/facultad-de-derecho-uc-establece-guia-etica-para-uso-de-inteligencia-artificial-generativa/",
           "exige_declaracion": true,
@@ -253,8 +309,10 @@
           "enforcement": "Guía ética"
         },
         {
+          "id": 9,
           "documento": "Inteligencia artificial e integridad académica en la práctica docente",
           "unidad": "Dirección de Integridad Académica / VRA",
+          "alcance": "Institucional",
           "fecha": "2024-2025",
           "url": "https://integridadacademica.uc.cl/secciones/inteligencia-artificial/",
           "exige_declaracion": true,
@@ -264,8 +322,10 @@
           "enforcement": "Portal con guías descargables"
         },
         {
+          "id": 10,
           "documento": "Lineamientos UC para la integración de la IA en la formación",
           "unidad": "Vicerrectoría Académica / Centro de Desarrollo Docente",
+          "alcance": "Institucional",
           "fecha": "2026-03",
           "url": "https://catalogodigital.uc.cl/normativas-y-procedimientos/lineamientos-uc-para-la-integracion-de-la-ia-en-la-formacion/",
           "exige_declaracion": true,
@@ -280,11 +340,15 @@
       "registro": "B2",
       "nombre": "UNIVERSIDAD DE CONCEPCIÓN",
       "tipo": "UNIVERSIDAD PARTICULAR CON APORTES",
+      "estado_levantamiento": "Instrumento público identificado",
+      "fecha_consulta": "2026-10-13",
       "total_instrumentos": 1,
       "instrumentos": [
         {
+          "id": 16,
           "documento": "Guía sobre uso ético y responsable de tecnologías digitales emergentes en la Universidad de Concepción",
           "unidad": "Programa [genIA] / VRID / Docencia",
+          "alcance": "Institucional",
           "fecha": "2024",
           "url": "https://genia.udec.cl",
           "exige_declaracion": true,
@@ -299,11 +363,15 @@
       "registro": "B3",
       "nombre": "UNIVERSIDAD TÉCNICA FEDERICO SANTA MARÍA",
       "tipo": "UNIVERSIDAD PARTICULAR CON APORTES",
+      "estado_levantamiento": "Instrumento público identificado",
+      "fecha_consulta": "2026-10-13",
       "total_instrumentos": 1,
       "instrumentos": [
         {
+          "id": 46,
           "documento": "Guía rápida para el uso ético-pedagógico de la IA y Tríptico IAGen",
           "unidad": "Dirección General de Docencia / Transformación Digital",
+          "alcance": "Institucional",
           "fecha": "2024",
           "url": "https://transformaciondigital.usm.cl/",
           "exige_declaracion": true,
@@ -318,11 +386,15 @@
       "registro": "B4",
       "nombre": "PONTIFICIA UNIVERSIDAD CATÓLICA DE VALPARAÍSO",
       "tipo": "UNIVERSIDAD PARTICULAR CON APORTES",
+      "estado_levantamiento": "Instrumento público identificado",
+      "fecha_consulta": "2026-10-13",
       "total_instrumentos": 1,
       "instrumentos": [
         {
+          "id": 32,
           "documento": "Decálogo sobre uso de Inteligencia Artificial en docencia con foco en integridad académica PUCV",
           "unidad": "Unidad de Integridad Académica / DDD (VRA)",
+          "alcance": "Institucional",
           "fecha": "2026-01-09",
           "url": "https://desarrollodocente.pucv.cl/ia/",
           "exige_declaracion": true,
@@ -337,11 +409,15 @@
       "registro": "B5",
       "nombre": "UNIVERSIDAD AUSTRAL DE CHILE",
       "tipo": "UNIVERSIDAD PARTICULAR CON APORTES",
+      "estado_levantamiento": "Instrumento público identificado",
+      "fecha_consulta": "2026-10-13",
       "total_instrumentos": 1,
       "instrumentos": [
         {
+          "id": 17,
           "documento": "Protocolo de Regulación del Uso de la Inteligencia Artificial",
           "unidad": "Facultad de Ciencias Jurídicas y Sociales",
+          "alcance": "Facultad",
           "fecha": "2025",
           "url": "https://derecho.uach.cl/index.php?option=com_dropfiles&format=&task=frontfile.download&catid=197&id=1295&Itemid=1000000000000",
           "exige_declaracion": true,
@@ -356,11 +432,15 @@
       "registro": "B6",
       "nombre": "UNIVERSIDAD CATÓLICA DEL NORTE",
       "tipo": "UNIVERSIDAD PARTICULAR CON APORTES",
+      "estado_levantamiento": "Instrumento público identificado",
+      "fecha_consulta": "2026-10-13",
       "total_instrumentos": 1,
       "instrumentos": [
         {
+          "id": 33,
           "documento": "Política Editorial de Revistas Científicas de la UCN (Sección IA)",
           "unidad": "Depto. Ciencia Abierta / VRIDT",
+          "alcance": "Institucional",
           "fecha": "2024-2025",
           "url": "https://revistas.ucn.cl/politica-rcucn/",
           "exige_declaracion": true,
@@ -375,11 +455,15 @@
       "registro": "B9",
       "nombre": "UNIVERSIDAD CATÓLICA DE TEMUCO",
       "tipo": "UNIVERSIDAD PARTICULAR CON APORTES",
+      "estado_levantamiento": "Instrumento público identificado",
+      "fecha_consulta": "2026-10-13",
       "total_instrumentos": 1,
       "instrumentos": [
         {
+          "id": 25,
           "documento": "Orientaciones ético-pedagógicas y asistentes de IA (DocencIA UCT / PotencIA tu GuIA)",
           "unidad": "CINAP",
+          "alcance": "Institucional",
           "fecha": "2024-2025",
           "url": "https://cinap.uct.cl",
           "exige_declaracion": false,
@@ -394,11 +478,15 @@
       "registro": "C1",
       "nombre": "UNIVERSIDAD GABRIELA MISTRAL",
       "tipo": "UNIVERSIDAD PRIVADA",
+      "estado_levantamiento": "Instrumento público identificado",
+      "fecha_consulta": "2026-10-13",
       "total_instrumentos": 1,
       "instrumentos": [
         {
+          "id": 43,
           "documento": "Protocolo para la Prevención y Sanción del Plagio en el Contexto Académico (Res. VRA N° 01/2024)",
           "unidad": "Vicerrectoría Académica",
+          "alcance": "Institucional",
           "fecha": "2024-04-08",
           "url": "https://www.ugm.cl/ugm/site/docs/20200624/20200624120225/24_10_24_protocolo_para_la_prevencion_y_sancion_del_plagio.pdf",
           "exige_declaracion": true,
@@ -413,11 +501,15 @@
       "registro": "C3",
       "nombre": "UNIVERSIDAD DIEGO PORTALES",
       "tipo": "UNIVERSIDAD PRIVADA",
+      "estado_levantamiento": "Instrumento público identificado",
+      "fecha_consulta": "2026-10-13",
       "total_instrumentos": 2,
       "instrumentos": [
         {
+          "id": 13,
           "documento": "Orientaciones en el uso de IA para docentes UDP (Versión 2)",
           "unidad": "Dirección de Desarrollo Docente",
+          "alcance": "Institucional",
           "fecha": "2024-08",
           "url": "https://desarrollodocente.udp.cl/cms/wp-content/uploads/2024/08/Orientaciones-IA_V2.pdf",
           "exige_declaracion": true,
@@ -427,8 +519,10 @@
           "enforcement": "Orientaciones"
         },
         {
+          "id": 14,
           "documento": "Protocolo de uso de IA para la Facultad de Educación UDP",
           "unidad": "Facultad de Educación",
+          "alcance": "Facultad",
           "fecha": "2025-08",
           "url": "https://educacion.udp.cl/cms/wp-content/uploads/2026/05/Protocolo-de-uso-de-IA-para-la-Facultad-de-Educacion-UDP.-AGOSTO-2025.pdf",
           "exige_declaracion": true,
@@ -443,11 +537,15 @@
       "registro": "C4",
       "nombre": "UNIVERSIDAD CENTRAL DE CHILE",
       "tipo": "UNIVERSIDAD PRIVADA",
+      "estado_levantamiento": "Instrumento público identificado",
+      "fecha_consulta": "2026-10-13",
       "total_instrumentos": 1,
       "instrumentos": [
         {
+          "id": 27,
           "documento": "Política Institucional de Integración de Inteligencia Artificial",
           "unidad": "Transformación Digital / Rectoría",
+          "alcance": "Institucional",
           "fecha": "2026-01",
           "url": "https://www.ucentral.cl/",
           "exige_declaracion": false,
@@ -462,11 +560,15 @@
       "registro": "C12",
       "nombre": "UNIVERSIDAD DEL ALBA",
       "tipo": "UNIVERSIDAD PRIVADA",
+      "estado_levantamiento": "Instrumento público identificado",
+      "fecha_consulta": "2026-10-13",
       "total_instrumentos": 1,
       "instrumentos": [
         {
+          "id": 50,
           "documento": "Guía básica para el uso de ChatGPT y herramientas de IA con fines académicos",
           "unidad": "Vicerrectoría Académica",
+          "alcance": "Institucional",
           "fecha": "2024",
           "url": "https://udalba.cl",
           "exige_declaracion": true,
@@ -481,11 +583,15 @@
       "registro": "C13",
       "nombre": "UNIVERSIDAD MAYOR",
       "tipo": "UNIVERSIDAD PRIVADA",
+      "estado_levantamiento": "Instrumento público identificado",
+      "fecha_consulta": "2026-10-13",
       "total_instrumentos": 1,
       "instrumentos": [
         {
+          "id": 41,
           "documento": "Reglamento de Estudiantes de Pregrado (Decreto N° 01/2026) - Art. 29° sobre IA",
           "unidad": "Rectoría / VRA",
+          "alcance": "Institucional",
           "fecha": "2026-01-02",
           "url": "https://www.umayor.cl/um/reglamento-universidad-mayor",
           "exige_declaracion": false,
@@ -500,11 +606,15 @@
       "registro": "C14",
       "nombre": "UNIVERSIDAD ACADEMIA DE HUMANISMO CRISTIANO",
       "tipo": "UNIVERSIDAD PRIVADA",
+      "estado_levantamiento": "Instrumento público identificado",
+      "fecha_consulta": "2026-10-13",
       "total_instrumentos": 1,
       "instrumentos": [
         {
+          "id": 49,
           "documento": "Guía para el uso de IA generativa en educación e investigación",
           "unidad": "Vicerrectoría Académica / DIDA / IAcademia",
+          "alcance": "Institucional",
           "fecha": "2024",
           "url": "https://academia.cl",
           "exige_declaracion": true,
@@ -519,11 +629,15 @@
       "registro": "C16",
       "nombre": "UNIVERSIDAD SANTO TOMÁS",
       "tipo": "UNIVERSIDAD PRIVADA",
+      "estado_levantamiento": "Instrumento público identificado",
+      "fecha_consulta": "2026-10-13",
       "total_instrumentos": 1,
       "instrumentos": [
         {
+          "id": 45,
           "documento": "Lineamientos para el uso de la Inteligencia Artificial (Decreto N° 054/25)",
           "unidad": "Rectoría / Vicerrectoría Académica",
+          "alcance": "Institucional",
           "fecha": "2025",
           "url": "https://www.ust.cl/politicas-y-reglamentos/",
           "exige_declaracion": true,
@@ -538,11 +652,15 @@
       "registro": "C22",
       "nombre": "UNIVERSIDAD DE LAS AMÉRICAS",
       "tipo": "UNIVERSIDAD PRIVADA",
+      "estado_levantamiento": "Instrumento público identificado",
+      "fecha_consulta": "2026-10-13",
       "total_instrumentos": 2,
       "instrumentos": [
         {
+          "id": 19,
           "documento": "Marco para el uso de la Inteligencia Artificial en UDLA (Res. N°31032025-01)",
           "unidad": "Institucional",
+          "alcance": "Institucional",
           "fecha": "2025-03-31",
           "url": "https://www.udla.cl/descargas/normativas/marco-para-uso-ia-en-udla.pdf",
           "exige_declaracion": true,
@@ -552,8 +670,10 @@
           "enforcement": "Marco normativo con resolución"
         },
         {
+          "id": 20,
           "documento": "Uso responsable de Inteligencia Artificial en la docencia de asignaturas online asincrónicas",
           "unidad": "Formación Docente",
+          "alcance": "Institucional",
           "fecha": "2024",
           "url": "https://www.udla.cl/descargas/educacion/Aplicaciones-Operativas-IA-UDLA-10-Docentes-Online-asincronico.pdf",
           "exige_declaracion": true,
@@ -568,11 +688,15 @@
       "registro": "C23",
       "nombre": "UNIVERSIDAD ANDRÉS BELLO",
       "tipo": "UNIVERSIDAD PRIVADA",
+      "estado_levantamiento": "Instrumento público identificado",
+      "fecha_consulta": "2026-10-13",
       "total_instrumentos": 1,
       "instrumentos": [
         {
+          "id": 15,
           "documento": "Lineamiento para el uso responsable de inteligencia artificial en la Universidad Andrés Bello",
           "unidad": "Comité de IA / Rectoría",
+          "alcance": "Institucional",
           "fecha": "2024-09-26",
           "url": "https://ia.unab.cl/wp-content/uploads/2024/10/IA-Lineamiento-para-el-uso-responsable-de-inteligencia-artificial-en-UNAB-20240926-002.pdf",
           "exige_declaracion": true,
@@ -587,11 +711,15 @@
       "registro": "C26",
       "nombre": "UNIVERSIDAD ADOLFO IBÁÑEZ",
       "tipo": "UNIVERSIDAD PRIVADA",
+      "estado_levantamiento": "Instrumento público identificado",
+      "fecha_consulta": "2026-10-13",
       "total_instrumentos": 2,
       "instrumentos": [
         {
+          "id": 11,
           "documento": "Política de Inteligencia Artificial de la Universidad Adolfo Ibáñez",
           "unidad": "Rectoría / Vicerrectoría Académica",
+          "alcance": "Institucional",
           "fecha": "2025-01-10",
           "url": "https://uai.cdn7pm.net/documentos/politica-de-inteligencia-artificial.pdf",
           "exige_declaracion": true,
@@ -601,8 +729,10 @@
           "enforcement": "Política institucional"
         },
         {
+          "id": 12,
           "documento": "Guía de Inteligencia Artificial para Estudiantes",
           "unidad": "Dirección de Desarrollo Académico",
+          "alcance": "Institucional",
           "fecha": "2025-2026",
           "url": "https://uai.cdn7pm.net/documentos/guia-ia-estudiantes.pdf",
           "exige_declaracion": true,
@@ -617,11 +747,15 @@
       "registro": "C35",
       "nombre": "UNIVERSIDAD AUTÓNOMA DE CHILE",
       "tipo": "UNIVERSIDAD PRIVADA",
+      "estado_levantamiento": "Instrumento público identificado",
+      "fecha_consulta": "2026-10-13",
       "total_instrumentos": 1,
       "instrumentos": [
         {
+          "id": 18,
           "documento": "Reglamento sobre el uso de herramientas de inteligencia artificial (Resolución Rectoría N° 220/2023)",
           "unidad": "Rectoría",
+          "alcance": "Institucional",
           "fecha": "2024-06",
           "url": "https://www.uautonoma.cl/content/uploads/2024/06/Reglamento-Uso-de-Herremientas-de-Inteligencia-Artificial_compressed.pdf",
           "exige_declaracion": true,
@@ -636,11 +770,15 @@
       "registro": "C38",
       "nombre": "UNIVERSIDAD DE LOS ANDES",
       "tipo": "UNIVERSIDAD PRIVADA",
+      "estado_levantamiento": "Instrumento público identificado",
+      "fecha_consulta": "2026-10-13",
       "total_instrumentos": 1,
       "instrumentos": [
         {
+          "id": 47,
           "documento": "Guía de uso responsable de Inteligencia Artificial y Boletines Pedagógicos",
           "unidad": "Biblioteca / Centro de Innovación Docente (CID)",
+          "alcance": "Institucional",
           "fecha": "2024",
           "url": "https://biblioteca.uandes.cl/",
           "exige_declaracion": true,
@@ -655,11 +793,15 @@
       "registro": "C43",
       "nombre": "UNIVERSIDAD SAN SEBASTIÁN",
       "tipo": "UNIVERSIDAD PRIVADA",
+      "estado_levantamiento": "Instrumento público identificado",
+      "fecha_consulta": "2026-10-13",
       "total_instrumentos": 1,
       "instrumentos": [
         {
+          "id": 42,
           "documento": "Código de Conducta Responsable en Investigación - Lineamientos IA",
           "unidad": "DISEI / Vicerrectoría de Investigación",
+          "alcance": "Institucional",
           "fecha": "2024-2025",
           "url": "https://investigacion.uss.cl/integridad/",
           "exige_declaracion": true,
@@ -674,11 +816,15 @@
       "registro": "C49",
       "nombre": "UNIVERSIDAD DEL DESARROLLO",
       "tipo": "UNIVERSIDAD PRIVADA",
+      "estado_levantamiento": "Instrumento público identificado",
+      "fecha_consulta": "2026-10-13",
       "total_instrumentos": 3,
       "instrumentos": [
         {
+          "id": 22,
           "documento": "Política de Inteligencia Artificial",
           "unidad": "Comité de Inteligencia Artificial / Rectoría",
+          "alcance": "Institucional",
           "fecha": "2026-03",
           "url": "https://www.udd.cl/dircom/reglamentos/Politica-IA.pdf",
           "exige_declaracion": true,
@@ -688,8 +834,10 @@
           "enforcement": "Política institucional"
         },
         {
+          "id": 23,
           "documento": "Reglamento Operativo para el Uso de Aplicaciones de Inteligencia Artificial Generativa (IAG)",
           "unidad": "Comité de IA / Encargado de Datos",
+          "alcance": "Institucional",
           "fecha": "2026-03",
           "url": "https://www.udd.cl/dircom/reglamentos/Reglamento-Operativo-para-Uso-de-Aplicaciones-IAG.pdf",
           "exige_declaracion": true,
@@ -699,8 +847,10 @@
           "enforcement": "Reglamento operativo"
         },
         {
+          "id": 24,
           "documento": "Docencia con IA: Recomendaciones para el uso de Inteligencia Artificial Generativa (IAG)",
           "unidad": "Centro de Innovación Docente (CID)",
+          "alcance": "Institucional",
           "fecha": "2024",
           "url": "https://innovaciondocente.udd.cl/recursos-educativos/recomendaciones-generales-para-el-uso-de-inteligencia-artificial-generativa/",
           "exige_declaracion": true,
@@ -715,11 +865,15 @@
       "registro": "C54",
       "nombre": "UNIVERSIDAD BERNARDO O'HIGGINS",
       "tipo": "UNIVERSIDAD PRIVADA",
+      "estado_levantamiento": "Instrumento público identificado",
+      "fecha_consulta": "2026-10-13",
       "total_instrumentos": 1,
       "instrumentos": [
         {
+          "id": 26,
           "documento": "Modelo y Lineamientos de Integración de IA en la Academia (SapIA)",
           "unidad": "Unidad SapIA",
+          "alcance": "Institucional",
           "fecha": "2024",
           "url": "https://www.ubo.cl/",
           "exige_declaracion": false,
@@ -734,11 +888,15 @@
       "registro": "C72",
       "nombre": "UNIVERSIDAD MIGUEL DE CERVANTES",
       "tipo": "UNIVERSIDAD PRIVADA",
+      "estado_levantamiento": "Instrumento público identificado",
+      "fecha_consulta": "2026-10-13",
       "total_instrumentos": 1,
       "instrumentos": [
         {
+          "id": 48,
           "documento": "Instructivo de Uso Académico de Inteligencia Artificial Generativa y Principios Éticos",
           "unidad": "Vicerrectoría Académica",
+          "alcance": "Institucional",
           "fecha": "2024",
           "url": "https://umcervantes.cl",
           "exige_declaracion": true,
@@ -753,11 +911,15 @@
       "registro": "C74",
       "nombre": "UNIVERSIDAD ALBERTO HURTADO",
       "tipo": "UNIVERSIDAD PRIVADA",
+      "estado_levantamiento": "Instrumento público identificado",
+      "fecha_consulta": "2026-10-13",
       "total_instrumentos": 1,
       "instrumentos": [
         {
+          "id": 40,
           "documento": "Orientaciones sobre integridad académica para docentes de actividades curriculares",
           "unidad": "Dirección de Docencia y Pedagogía Universitaria (VRA)",
+          "alcance": "Institucional",
           "fecha": "2025-12",
           "url": "https://www.uahurtado.cl/wp-content/uploads/2026/03/2.9-Orientaciones-sobre-integridad-academica-DIC-2025.pdf",
           "exige_declaracion": true,
@@ -769,116 +931,314 @@
       ]
     }
   ],
-  "universidades_sin_instrumento": [
+  "universidades_sin_instrumento_identificado": [
     {
       "registro": "A5",
       "nombre": "UNIVERSIDAD DE LA SERENA",
-      "tipo": "UNIVERSIDAD ESTATAL"
+      "tipo": "UNIVERSIDAD ESTATAL",
+      "estado_levantamiento": "Sin instrumento público identificado en el levantamiento",
+      "fecha_consulta": "2026-10-13",
+      "fuentes_consultadas": [
+        "Sitios oficiales de Rectoría y Vicerrectorías Académicas",
+        "Reglamentos de docencia de pregrado y postgrado",
+        "Portales de Transparencia Activa",
+        "Buscadores institucionales y repositorios documentales"
+      ],
+      "observacion": "La no localización de instrumentos públicos en el catastro no prueba inexistencia de normativas internas, directrices de carrera no publicadas o iniciativas en formulación."
     },
     {
       "registro": "A6",
       "nombre": "UNIVERSIDAD DEL BÍO-BÍO",
-      "tipo": "UNIVERSIDAD ESTATAL"
+      "tipo": "UNIVERSIDAD ESTATAL",
+      "estado_levantamiento": "Sin instrumento público identificado en el levantamiento",
+      "fecha_consulta": "2026-10-13",
+      "fuentes_consultadas": [
+        "Sitios oficiales de Rectoría y Vicerrectorías Académicas",
+        "Reglamentos de docencia de pregrado y postgrado",
+        "Portales de Transparencia Activa",
+        "Buscadores institucionales y repositorios documentales"
+      ],
+      "observacion": "La no localización de instrumentos públicos en el catastro no prueba inexistencia de normativas internas, directrices de carrera no publicadas o iniciativas en formulación."
     },
     {
       "registro": "A8",
       "nombre": "UNIVERSIDAD DE MAGALLANES",
-      "tipo": "UNIVERSIDAD ESTATAL"
+      "tipo": "UNIVERSIDAD ESTATAL",
+      "estado_levantamiento": "Sin instrumento público identificado en el levantamiento",
+      "fecha_consulta": "2026-10-13",
+      "fuentes_consultadas": [
+        "Sitios oficiales de Rectoría y Vicerrectorías Académicas",
+        "Reglamentos de docencia de pregrado y postgrado",
+        "Portales de Transparencia Activa",
+        "Buscadores institucionales y repositorios documentales"
+      ],
+      "observacion": "La no localización de instrumentos públicos en el catastro no prueba inexistencia de normativas internas, directrices de carrera no publicadas o iniciativas en formulación."
     },
     {
       "registro": "A11",
       "nombre": "UNIVERSIDAD DE TARAPACÁ",
-      "tipo": "UNIVERSIDAD ESTATAL"
+      "tipo": "UNIVERSIDAD ESTATAL",
+      "estado_levantamiento": "Sin instrumento público identificado en el levantamiento",
+      "fecha_consulta": "2026-10-13",
+      "fuentes_consultadas": [
+        "Sitios oficiales de Rectoría y Vicerrectorías Académicas",
+        "Reglamentos de docencia de pregrado y postgrado",
+        "Portales de Transparencia Activa",
+        "Buscadores institucionales y repositorios documentales"
+      ],
+      "observacion": "La no localización de instrumentos públicos en el catastro no prueba inexistencia de normativas internas, directrices de carrera no publicadas o iniciativas en formulación."
     },
     {
       "registro": "A12",
       "nombre": "UNIVERSIDAD ARTURO PRAT",
-      "tipo": "UNIVERSIDAD ESTATAL"
+      "tipo": "UNIVERSIDAD ESTATAL",
+      "estado_levantamiento": "Sin instrumento público identificado en el levantamiento",
+      "fecha_consulta": "2026-10-13",
+      "fuentes_consultadas": [
+        "Sitios oficiales de Rectoría y Vicerrectorías Académicas",
+        "Reglamentos de docencia de pregrado y postgrado",
+        "Portales de Transparencia Activa",
+        "Buscadores institucionales y repositorios documentales"
+      ],
+      "observacion": "La no localización de instrumentos públicos en el catastro no prueba inexistencia de normativas internas, directrices de carrera no publicadas o iniciativas en formulación."
     },
     {
       "registro": "A13",
       "nombre": "UNIVERSIDAD METROPOLITANA DE CIENCIAS DE LA EDUCACIÓN",
-      "tipo": "UNIVERSIDAD ESTATAL"
+      "tipo": "UNIVERSIDAD ESTATAL",
+      "estado_levantamiento": "Sin instrumento público identificado en el levantamiento",
+      "fecha_consulta": "2026-10-13",
+      "fuentes_consultadas": [
+        "Sitios oficiales de Rectoría y Vicerrectorías Académicas",
+        "Reglamentos de docencia de pregrado y postgrado",
+        "Portales de Transparencia Activa",
+        "Buscadores institucionales y repositorios documentales"
+      ],
+      "observacion": "La no localización de instrumentos públicos en el catastro no prueba inexistencia de normativas internas, directrices de carrera no publicadas o iniciativas en formulación."
     },
     {
       "registro": "A14",
       "nombre": "UNIVERSIDAD DE PLAYA ANCHA DE CIENCIAS DE LA EDUCACIÓN",
-      "tipo": "UNIVERSIDAD ESTATAL"
+      "tipo": "UNIVERSIDAD ESTATAL",
+      "estado_levantamiento": "Sin instrumento público identificado en el levantamiento",
+      "fecha_consulta": "2026-10-13",
+      "fuentes_consultadas": [
+        "Sitios oficiales de Rectoría y Vicerrectorías Académicas",
+        "Reglamentos de docencia de pregrado y postgrado",
+        "Portales de Transparencia Activa",
+        "Buscadores institucionales y repositorios documentales"
+      ],
+      "observacion": "La no localización de instrumentos públicos en el catastro no prueba inexistencia de normativas internas, directrices de carrera no publicadas o iniciativas en formulación."
     },
     {
       "registro": "A16",
       "nombre": "UNIVERSIDAD TECNOLÓGICA METROPOLITANA",
-      "tipo": "UNIVERSIDAD ESTATAL"
+      "tipo": "UNIVERSIDAD ESTATAL",
+      "estado_levantamiento": "Sin instrumento público identificado en el levantamiento",
+      "fecha_consulta": "2026-10-13",
+      "fuentes_consultadas": [
+        "Sitios oficiales de Rectoría y Vicerrectorías Académicas",
+        "Reglamentos de docencia de pregrado y postgrado",
+        "Portales de Transparencia Activa",
+        "Buscadores institucionales y repositorios documentales"
+      ],
+      "observacion": "La no localización de instrumentos públicos en el catastro no prueba inexistencia de normativas internas, directrices de carrera no publicadas o iniciativas en formulación."
     },
     {
       "registro": "A17",
       "nombre": "UNIVERSIDAD DE O'HIGGINS",
-      "tipo": "UNIVERSIDAD ESTATAL"
+      "tipo": "UNIVERSIDAD ESTATAL",
+      "estado_levantamiento": "Sin instrumento público identificado en el levantamiento",
+      "fecha_consulta": "2026-10-13",
+      "fuentes_consultadas": [
+        "Sitios oficiales de Rectoría y Vicerrectorías Académicas",
+        "Reglamentos de docencia de pregrado y postgrado",
+        "Portales de Transparencia Activa",
+        "Buscadores institucionales y repositorios documentales"
+      ],
+      "observacion": "La no localización de instrumentos públicos en el catastro no prueba inexistencia de normativas internas, directrices de carrera no publicadas o iniciativas en formulación."
     },
     {
       "registro": "A18",
       "nombre": "UNIVERSIDAD DE AYSÉN",
-      "tipo": "UNIVERSIDAD ESTATAL"
+      "tipo": "UNIVERSIDAD ESTATAL",
+      "estado_levantamiento": "Sin instrumento público identificado en el levantamiento",
+      "fecha_consulta": "2026-10-13",
+      "fuentes_consultadas": [
+        "Sitios oficiales de Rectoría y Vicerrectorías Académicas",
+        "Reglamentos de docencia de pregrado y postgrado",
+        "Portales de Transparencia Activa",
+        "Buscadores institucionales y repositorios documentales"
+      ],
+      "observacion": "La no localización de instrumentos públicos en el catastro no prueba inexistencia de normativas internas, directrices de carrera no publicadas o iniciativas en formulación."
     },
     {
       "registro": "B7",
       "nombre": "UNIVERSIDAD CATÓLICA DEL MAULE",
-      "tipo": "UNIVERSIDAD PARTICULAR CON APORTES"
+      "tipo": "UNIVERSIDAD PARTICULAR CON APORTES",
+      "estado_levantamiento": "Sin instrumento público identificado en el levantamiento",
+      "fecha_consulta": "2026-10-13",
+      "fuentes_consultadas": [
+        "Sitios oficiales de Rectoría y Vicerrectorías Académicas",
+        "Reglamentos de docencia de pregrado y postgrado",
+        "Portales de Transparencia Activa",
+        "Buscadores institucionales y repositorios documentales"
+      ],
+      "observacion": "La no localización de instrumentos públicos en el catastro no prueba inexistencia de normativas internas, directrices de carrera no publicadas o iniciativas en formulación."
     },
     {
       "registro": "B8",
       "nombre": "UNIVERSIDAD CATÓLICA DE LA SANTÍSIMA CONCEPCIÓN",
-      "tipo": "UNIVERSIDAD PARTICULAR CON APORTES"
+      "tipo": "UNIVERSIDAD PARTICULAR CON APORTES",
+      "estado_levantamiento": "Sin instrumento público identificado en el levantamiento",
+      "fecha_consulta": "2026-10-13",
+      "fuentes_consultadas": [
+        "Sitios oficiales de Rectoría y Vicerrectorías Académicas",
+        "Reglamentos de docencia de pregrado y postgrado",
+        "Portales de Transparencia Activa",
+        "Buscadores institucionales y repositorios documentales"
+      ],
+      "observacion": "La no localización de instrumentos públicos en el catastro no prueba inexistencia de normativas internas, directrices de carrera no publicadas o iniciativas en formulación."
     },
     {
       "registro": "C2",
       "nombre": "UNIVERSIDAD FINIS TERRAE",
-      "tipo": "UNIVERSIDAD PRIVADA"
+      "tipo": "UNIVERSIDAD PRIVADA",
+      "estado_levantamiento": "Sin instrumento público identificado en el levantamiento",
+      "fecha_consulta": "2026-10-13",
+      "fuentes_consultadas": [
+        "Sitios oficiales de Rectoría y Vicerrectorías Académicas",
+        "Reglamentos de docencia de pregrado y postgrado",
+        "Portales de Transparencia Activa",
+        "Buscadores institucionales y repositorios documentales"
+      ],
+      "observacion": "La no localización de instrumentos públicos en el catastro no prueba inexistencia de normativas internas, directrices de carrera no publicadas o iniciativas en formulación."
     },
     {
       "registro": "C10",
       "nombre": "UNIVERSIDAD BOLIVARIANA",
-      "tipo": "UNIVERSIDAD PRIVADA"
+      "tipo": "UNIVERSIDAD PRIVADA",
+      "estado_levantamiento": "Sin instrumento público identificado en el levantamiento",
+      "fecha_consulta": "2026-10-13",
+      "fuentes_consultadas": [
+        "Sitios oficiales de Rectoría y Vicerrectorías Académicas",
+        "Reglamentos de docencia de pregrado y postgrado",
+        "Portales de Transparencia Activa",
+        "Buscadores institucionales y repositorios documentales"
+      ],
+      "observacion": "La no localización de instrumentos públicos en el catastro no prueba inexistencia de normativas internas, directrices de carrera no publicadas o iniciativas en formulación."
     },
     {
       "registro": "C19",
       "nombre": "UNIVERSIDAD LA REPÚBLICA",
-      "tipo": "UNIVERSIDAD PRIVADA"
+      "tipo": "UNIVERSIDAD PRIVADA",
+      "estado_levantamiento": "Sin instrumento público identificado en el levantamiento",
+      "fecha_consulta": "2026-10-13",
+      "fuentes_consultadas": [
+        "Sitios oficiales de Rectoría y Vicerrectorías Académicas",
+        "Reglamentos de docencia de pregrado y postgrado",
+        "Portales de Transparencia Activa",
+        "Buscadores institucionales y repositorios documentales"
+      ],
+      "observacion": "La no localización de instrumentos públicos en el catastro no prueba inexistencia de normativas internas, directrices de carrera no publicadas o iniciativas en formulación."
     },
     {
       "registro": "C20",
       "nombre": "UNIVERSIDAD SEK",
-      "tipo": "UNIVERSIDAD PRIVADA"
+      "tipo": "UNIVERSIDAD PRIVADA",
+      "estado_levantamiento": "Sin instrumento público identificado en el levantamiento",
+      "fecha_consulta": "2026-10-13",
+      "fuentes_consultadas": [
+        "Sitios oficiales de Rectoría y Vicerrectorías Académicas",
+        "Reglamentos de docencia de pregrado y postgrado",
+        "Portales de Transparencia Activa",
+        "Buscadores institucionales y repositorios documentales"
+      ],
+      "observacion": "La no localización de instrumentos públicos en el catastro no prueba inexistencia de normativas internas, directrices de carrera no publicadas o iniciativas en formulación."
     },
     {
       "registro": "C25",
       "nombre": "UNIVERSIDAD DE VIÑA DEL MAR",
-      "tipo": "UNIVERSIDAD PRIVADA"
+      "tipo": "UNIVERSIDAD PRIVADA",
+      "estado_levantamiento": "Sin instrumento público identificado en el levantamiento",
+      "fecha_consulta": "2026-10-13",
+      "fuentes_consultadas": [
+        "Sitios oficiales de Rectoría y Vicerrectorías Académicas",
+        "Reglamentos de docencia de pregrado y postgrado",
+        "Portales de Transparencia Activa",
+        "Buscadores institucionales y repositorios documentales"
+      ],
+      "observacion": "La no localización de instrumentos públicos en el catastro no prueba inexistencia de normativas internas, directrices de carrera no publicadas o iniciativas en formulación."
     },
     {
       "registro": "C29",
       "nombre": "UNIVERSIDAD DE ARTES, CIENCIAS Y COMUNICACIÓN - UNIACC",
-      "tipo": "UNIVERSIDAD PRIVADA"
+      "tipo": "UNIVERSIDAD PRIVADA",
+      "estado_levantamiento": "Sin instrumento público identificado en el levantamiento",
+      "fecha_consulta": "2026-10-13",
+      "fuentes_consultadas": [
+        "Sitios oficiales de Rectoría y Vicerrectorías Académicas",
+        "Reglamentos de docencia de pregrado y postgrado",
+        "Portales de Transparencia Activa",
+        "Buscadores institucionales y repositorios documentales"
+      ],
+      "observacion": "La no localización de instrumentos públicos en el catastro no prueba inexistencia de normativas internas, directrices de carrera no publicadas o iniciativas en formulación."
     },
     {
       "registro": "C42",
       "nombre": "UNIVERSIDAD ADVENTISTA DE CHILE",
-      "tipo": "UNIVERSIDAD PRIVADA"
+      "tipo": "UNIVERSIDAD PRIVADA",
+      "estado_levantamiento": "Sin instrumento público identificado en el levantamiento",
+      "fecha_consulta": "2026-10-13",
+      "fuentes_consultadas": [
+        "Sitios oficiales de Rectoría y Vicerrectorías Académicas",
+        "Reglamentos de docencia de pregrado y postgrado",
+        "Portales de Transparencia Activa",
+        "Buscadores institucionales y repositorios documentales"
+      ],
+      "observacion": "La no localización de instrumentos públicos en el catastro no prueba inexistencia de normativas internas, directrices de carrera no publicadas o iniciativas en formulación."
     },
     {
       "registro": "C46",
       "nombre": "UNIVERSIDAD CATÓLICA CARDENAL RAÚL SILVA HENRÍQUEZ",
-      "tipo": "UNIVERSIDAD PRIVADA"
+      "tipo": "UNIVERSIDAD PRIVADA",
+      "estado_levantamiento": "Sin instrumento público identificado en el levantamiento",
+      "fecha_consulta": "2026-10-13",
+      "fuentes_consultadas": [
+        "Sitios oficiales de Rectoría y Vicerrectorías Académicas",
+        "Reglamentos de docencia de pregrado y postgrado",
+        "Portales de Transparencia Activa",
+        "Buscadores institucionales y repositorios documentales"
+      ],
+      "observacion": "La no localización de instrumentos públicos en el catastro no prueba inexistencia de normativas internas, directrices de carrera no publicadas o iniciativas en formulación."
     },
     {
       "registro": "C50",
       "nombre": "UNIVERSIDAD DE ACONCAGUA",
-      "tipo": "UNIVERSIDAD PRIVADA"
+      "tipo": "UNIVERSIDAD PRIVADA",
+      "estado_levantamiento": "Sin instrumento público identificado en el levantamiento",
+      "fecha_consulta": "2026-10-13",
+      "fuentes_consultadas": [
+        "Sitios oficiales de Rectoría y Vicerrectorías Académicas",
+        "Reglamentos de docencia de pregrado y postgrado",
+        "Portales de Transparencia Activa",
+        "Buscadores institucionales y repositorios documentales"
+      ],
+      "observacion": "La no localización de instrumentos públicos en el catastro no prueba inexistencia de normativas internas, directrices de carrera no publicadas o iniciativas en formulación."
     },
     {
       "registro": "C52",
       "nombre": "UNIVERSIDAD LOS LEONES",
-      "tipo": "UNIVERSIDAD PRIVADA"
+      "tipo": "UNIVERSIDAD PRIVADA",
+      "estado_levantamiento": "Sin instrumento público identificado en el levantamiento",
+      "fecha_consulta": "2026-10-13",
+      "fuentes_consultadas": [
+        "Sitios oficiales de Rectoría y Vicerrectorías Académicas",
+        "Reglamentos de docencia de pregrado y postgrado",
+        "Portales de Transparencia Activa",
+        "Buscadores institucionales y repositorios documentales"
+      ],
+      "observacion": "La no localización de instrumentos públicos en el catastro no prueba inexistencia de normativas internas, directrices de carrera no publicadas o iniciativas en formulación."
     }
   ]
 }

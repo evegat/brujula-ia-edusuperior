@@ -143,7 +143,7 @@
     "imn_categoria": "Madurez Avanzada",
     "dimensiones": {
       "protocolo_aula": true,
-      "directriz_tesis": true,
+      "directriz_tesis": false,
       "regla_autoria": true,
       "privacidad_ley_21719": true,
       "modifica_evaluacion": true,
@@ -222,7 +222,7 @@
     "imn_categoria": "Madurez Avanzada",
     "dimensiones": {
       "protocolo_aula": true,
-      "directriz_tesis": true,
+      "directriz_tesis": false,
       "regla_autoria": true,
       "privacidad_ley_21719": true,
       "modifica_evaluacion": true,
@@ -698,7 +698,7 @@
     "imn_categoria": "Madurez Avanzada",
     "dimensiones": {
       "protocolo_aula": true,
-      "directriz_tesis": true,
+      "directriz_tesis": false,
       "regla_autoria": true,
       "privacidad_ley_21719": true,
       "modifica_evaluacion": true,
@@ -1024,7 +1024,7 @@
     "imn_categoria": "Madurez Intermedia",
     "dimensiones": {
       "protocolo_aula": true,
-      "directriz_tesis": true,
+      "directriz_tesis": false,
       "regla_autoria": true,
       "privacidad_ley_21719": false,
       "modifica_evaluacion": true,
