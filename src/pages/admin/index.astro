@@ -1,0 +1,299 @@
+---
+// src/pages/admin/index.astro
+// Panel de Gestión Privado para Eduardo Vega Toledo
+export const prerender = false;
+
+import { getSessionFromRequest, verifySessionToken } from '../../lib/auth.ts';
+import { getDb } from '../../lib/kv.ts';
+
+const token = getSessionFromRequest(Astro.request);
+const isAuthenticated = token ? await verifySessionToken(token) : false;
+
+let subList: any[] = [];
+let normativaList: any[] = [];
+let contactList: any[] = [];
+
+if (isAuthenticated) {
+  const db = await getDb();
+  if (db) {
+    try {
+      const rawSubIndex = await db.get('sub_index');
+      if (rawSubIndex) {
+        const emails: string[] = JSON.parse(rawSubIndex);
+        for (const email of emails) {
+          const rawRecord = await db.get(`sub:${email}`);
+          if (rawRecord) {
+            try { subList.push(JSON.parse(rawRecord)); } catch (_) {}
+          } else {
+            subList.push({ email, timestamp: 'Sin fecha' });
+          }
+        }
+      }
+
+      const rawNormIndex = await db.get('normativa_index');
+      if (rawNormIndex) {
+        const tickets: string[] = JSON.parse(rawNormIndex);
+        for (const t of tickets) {
+          const rawN = await db.get(`normativa:${t}`);
+          if (rawN) {
+            try { normativaList.push(JSON.parse(rawN)); } catch (_) {}
+          }
+        }
+      }
+
+      const rawContactIndex = await db.get('contact_index');
+      if (rawContactIndex) {
+        const ids: string[] = JSON.parse(rawContactIndex);
+        for (const id of ids) {
+          const rawC = await db.get(`contact:${id}`);
+          if (rawC) {
+            try { contactList.push(JSON.parse(rawC)); } catch (_) {}
+          }
+        }
+      }
+    } catch (_) {}
+  }
+}
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{isAuthenticated ? "Panel de Gestión Privada — Brújula IA" : "Acceso de Administración — Brújula IA"}</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧭</text></svg>" />
+  <style>
+    :root {
+      --bg: #06182c;
+      --card-bg: #0b1d33;
+      --border: #1e3a5f;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --accent: #2563eb;
+      --green: #10b981;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #030d19; color: var(--text); min-height: 100vh; display: flex; flex-direction: column; }
+    .header { background: var(--bg); border-bottom: 1px solid var(--border); padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .logo { font-size: 1.25rem; font-weight: 700; color: #ffffff; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
+    .btn { background: var(--accent); color: #ffffff; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 600; font-size: 0.85rem; text-decoration: none; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem; transition: background 0.15s ease; }
+    .btn:hover { background: #1d4ed8; }
+    .btn-green { background: var(--green); }
+    .btn-green:hover { background: #059669; }
+    .btn-outline { background: transparent; border: 1px solid var(--border); color: var(--text-muted); }
+    .btn-outline:hover { color: #ffffff; border-color: #64748b; }
+    
+    /* Login Form Styles */
+    .login-container { max-width: 420px; margin: 5rem auto; background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 2.5rem; box-shadow: 0 10px 25px rgba(0,0,0,0.4); }
+    .login-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 0.5rem; text-align: center; }
+    .login-desc { font-size: 0.85rem; color: var(--text-muted); text-align: center; margin-bottom: 1.75rem; line-height: 1.4; }
+    .form-group { margin-bottom: 1.25rem; }
+    .form-label { display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.4rem; color: var(--text-muted); }
+    .form-input { width: 100%; padding: 0.75rem 0.9rem; background: #040e1b; border: 1px solid var(--border); border-radius: 6px; color: #ffffff; font-size: 0.95rem; }
+    .form-input:focus { outline: none; border-color: var(--accent); }
+    .login-btn { width: 100%; padding: 0.75rem; font-size: 0.95rem; justify-content: center; }
+    .error-msg { background: rgba(239, 68, 68, 0.15); border: 1px solid #ef4444; color: #fca5a5; padding: 0.65rem; border-radius: 6px; font-size: 0.82rem; margin-bottom: 1rem; display: none; }
+
+    /* Dashboard Styles */
+    .container { max-width: 1200px; margin: 2rem auto; padding: 0 1.5rem; width: 100%; }
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+    .stat-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; }
+    .stat-card-title { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.5px; margin-bottom: 0.35rem; }
+    .stat-card-value { font-size: 1.75rem; font-weight: 700; color: #ffffff; }
+    
+    .panel-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin-bottom: 2rem; }
+    .panel-header { padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; }
+    .panel-title { font-size: 1.15rem; font-weight: 600; color: #ffffff; }
+    
+    table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.88rem; }
+    th { background: #040e1b; padding: 0.85rem 1.25rem; font-weight: 600; color: var(--text-muted); border-bottom: 1px solid var(--border); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    td { padding: 0.85rem 1.25rem; border-bottom: 1px solid rgba(30, 58, 95, 0.5); color: #cbd5e1; }
+    tr:hover { background: rgba(255, 255, 255, 0.02); }
+    .badge { display: inline-block; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600; }
+    .badge-blue { background: rgba(37, 99, 235, 0.2); color: #60a5fa; }
+    .badge-green { background: rgba(16, 185, 129, 0.2); color: #34d399; }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <a href="/" class="logo">
+      🧭 Brújula IA <span style="font-size:0.8rem; font-weight:400; color:var(--text-muted); margin-left:0.35rem;">• Gestión de Observatorio</span>
+    </a>
+    
+    <div style="display:flex; gap:0.6rem; align-items:center;">
+      <a href="/" class="btn btn-outline">← Volver al Portal</a>
+      {isAuthenticated && (
+        <a href="/api/auth/logout" class="btn btn-outline" style="border-color:#ef4444; color:#fca5a5;">Cerrar Sesión</a>
+      )}
+    </div>
+  </header>
+
+  {!isAuthenticated ? (
+    <main class="login-container">
+      <div style="text-align:center; font-size:2rem; margin-bottom:0.5rem;">🔒</div>
+      <h1 class="login-title">Acceso de Administración</h1>
+      <p class="login-desc">Ingresa tu contraseña para consultar la base de datos de suscriptores y aportes del Observatorio.</p>
+
+      <div id="login-error" class="error-msg"></div>
+
+      <form id="form-login">
+        <div class="form-group">
+          <label class="form-label" for="input-password">Contraseña</label>
+          <input type="password" id="input-password" class="form-input" placeholder="••••••••••••" required autocomplete="current-password" autofocus />
+        </div>
+
+        <button type="submit" id="btn-login" class="btn login-btn">Ingresar al Panel</button>
+      </form>
+    </main>
+  ) : (
+    <main class="container">
+      
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-card-title">Suscriptores Registrados</div>
+          <div class="stat-card-value">{subList.length}</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-title">Aportes Normativos Recibidos</div>
+          <div class="stat-card-value">{normativaList.length}</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-title">Mensajes de Contacto</div>
+          <div class="stat-card-value">{contactList.length}</div>
+        </div>
+      </div>
+
+      <!-- Tabla de Suscriptores -->
+      <section class="panel-card">
+        <div class="panel-header">
+          <div>
+            <h2 class="panel-title">✉️ Suscriptores al Observatorio (Ley N° 21.719)</h2>
+            <p style="font-size:0.8rem; color:var(--text-muted); margin-top:0.25rem;">Datos almacenados de forma segura en Cloudflare KV (BRUJULA_DB).</p>
+          </div>
+          <a href="/api/admin/export-csv" class="btn btn-green">📥 Descargar CSV</a>
+        </div>
+
+        <div style="overflow-x:auto;">
+          <table>
+            <thead>
+              <tr>
+                <th>Email</th>
+                <th>Institución / Plantel</th>
+                <th>Perfil</th>
+                <th>Fecha de Registro</th>
+                <th>Consentimiento</th>
+              </tr>
+            </thead>
+            <tbody>
+              {subList.length === 0 ? (
+                <tr>
+                  <td colspan="5" style="text-align:center; padding:2rem; color:var(--text-muted);">
+                    No hay suscriptores registrados aún en la base de datos.
+                  </td>
+                </tr>
+              ) : (
+                subList.map((s) => (
+                  <tr>
+                    <td style="font-weight:600; color:#ffffff;">{s.email}</td>
+                    <td>{s.institucion || 'No informada'}</td>
+                    <td><span class="badge badge-blue">{s.perfil || 'general'}</span></td>
+                    <td style="font-size:0.82rem; color:var(--text-muted);">{s.timestamp || '-'}</td>
+                    <td><span class="badge badge-green">✓ Ley 21.719</span></td>
+                  </tr>
+                ))
+              )}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Tabla de Aportes Normativos -->
+      {normativaList.length > 0 && (
+        <section class="panel-card">
+          <div class="panel-header">
+            <h2 class="panel-title">📚 Aportes Normativos de la Comunidad</h2>
+          </div>
+          <div style="overflow-x:auto;">
+            <table>
+              <thead>
+                <tr>
+                  <th>Ticket</th>
+                  <th>Institución</th>
+                  <th>Resumen / Enlace</th>
+                  <th>Remitente</th>
+                  <th>Fecha</th>
+                </tr>
+              </thead>
+              <tbody>
+                {normativaList.map((n) => (
+                  <tr>
+                    <td style="font-weight:700; color:#38bdf8;">{n.ticket_id}</td>
+                    <td style="font-weight:600; color:#ffffff;">{n.institucion}</td>
+                    <td style="max-width:380px; font-size:0.82rem;">
+                      {n.url_normativa && (
+                        <div style="margin-bottom:0.25rem;">
+                          <a href={n.url_normativa} target="_blank" rel="noopener noreferrer" style="color:#60a5fa; text-decoration:underline;">Ver Enlace</a>
+                        </div>
+                      )}
+                      <div>{n.resumen || '-'}</div>
+                    </td>
+                    <td style="font-size:0.82rem;">{n.remitente_email || n.remitente_nombre || 'Anónimo'}</td>
+                    <td style="font-size:0.82rem; color:var(--text-muted);">{n.timestamp || '-'}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      )}
+
+    </main>
+  )}
+
+  <script is:inline>
+    const formLogin = document.getElementById('form-login');
+    const inputPass = document.getElementById('input-password');
+    const errorMsg = document.getElementById('login-error');
+    const btnLogin = document.getElementById('btn-login');
+
+    formLogin?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!inputPass || !inputPass.value) return;
+
+      if (btnLogin) {
+        btnLogin.disabled = true;
+        btnLogin.textContent = 'Verificando...';
+      }
+      if (errorMsg) errorMsg.style.display = 'none';
+
+      try {
+        const res = await fetch('/api/auth/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ password: inputPass.value })
+        });
+
+        const data = await res.json();
+        if (res.ok && data.success) {
+          window.location.reload();
+        } else {
+          throw new Error(data.error || 'Contraseña incorrecta');
+        }
+      } catch (err) {
+        if (errorMsg) {
+          errorMsg.style.display = 'block';
+          errorMsg.textContent = err.message || 'Error al autenticar';
+        }
+        if (btnLogin) {
+          btnLogin.disabled = false;
+          btnLogin.textContent = 'Ingresar al Panel';
+        }
+        inputPass.focus();
+      }
+    });
+  </script>
+
+</body>
+</html>
