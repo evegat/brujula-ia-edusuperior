@@ -549,7 +549,11 @@
     },
     "compras": {
       "total": 5,
-      "monto_total": 89050775.95,
+      "licitaciones": 3,
+      "ordenes_compra": 2,
+      "procesos_unicos": 4,
+      "monto_total": 89050775.94999999,
+      "monto_bruto": 89050775.94999999,
       "capas": [
         "Gestion_Backoffice",
         "Infraestructura_Computo"
@@ -590,7 +594,11 @@
     },
     "compras": {
       "total": 52,
-      "monto_total": 37646603.10982814,
+      "licitaciones": 2,
+      "ordenes_compra": 50,
+      "procesos_unicos": 38,
+      "monto_total": 37645223.10982814,
+      "monto_bruto": 37646603.10982814,
       "capas": [
         "Atencion_Frontoffice",
         "Docencia_Aula",
@@ -716,7 +724,11 @@
     },
     "compras": {
       "total": 3,
-      "monto_total": 232264338.74306,
+      "licitaciones": 1,
+      "ordenes_compra": 2,
+      "procesos_unicos": 2,
+      "monto_total": 195311658.74306,
+      "monto_bruto": 232264338.74306,
       "capas": [
         "Gestion_Backoffice",
         "Infraestructura_Computo"
@@ -842,7 +854,11 @@
     },
     "compras": {
       "total": 1,
+      "licitaciones": 1,
+      "ordenes_compra": 0,
+      "procesos_unicos": 1,
       "monto_total": 2963520,
+      "monto_bruto": 2963520,
       "capas": [
         "Infraestructura_Computo"
       ]
@@ -882,7 +898,11 @@
     },
     "compras": {
       "total": 6,
+      "licitaciones": 1,
+      "ordenes_compra": 5,
+      "procesos_unicos": 6,
       "monto_total": 49958096.525008,
+      "monto_bruto": 49958096.525008,
       "capas": [
         "Atencion_Frontoffice",
         "Gestion_Backoffice",
@@ -924,7 +944,11 @@
     },
     "compras": {
       "total": 5,
-      "monto_total": 82931885.00198731,
+      "licitaciones": 2,
+      "ordenes_compra": 3,
+      "procesos_unicos": 4,
+      "monto_total": 77742885.00198731,
+      "monto_bruto": 82931885.00198731,
       "capas": [
         "Gestion_Backoffice"
       ]
@@ -964,7 +988,11 @@
     },
     "compras": {
       "total": 1,
+      "licitaciones": 1,
+      "ordenes_compra": 0,
+      "procesos_unicos": 1,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": [
         "Infraestructura_Computo"
       ]
@@ -1634,7 +1662,11 @@
     },
     "compras": {
       "total": 4,
+      "licitaciones": 1,
+      "ordenes_compra": 3,
+      "procesos_unicos": 4,
       "monto_total": 18054752.07,
+      "monto_bruto": 18054752.07,
       "capas": [
         "Docencia_Aula",
         "Gestion_Backoffice",
@@ -1805,8 +1837,12 @@
       "compras_ia": true
     },
     "compras": {
-      "total": 2,
-      "monto_total": 10098394.41,
+      "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
+      "monto_total": 0,
+      "monto_bruto": 0,
       "capas": [
         "Docencia_Aula",
         "Gestion_Backoffice"
@@ -1977,7 +2013,11 @@
     },
     "compras": {
       "total": 6,
-      "monto_total": 87378334.63,
+      "licitaciones": 4,
+      "ordenes_compra": 2,
+      "procesos_unicos": 5,
+      "monto_total": 58907857.63,
+      "monto_bruto": 87378334.63,
       "capas": [
         "Gestion_Backoffice",
         "Infraestructura_Computo"

@@ -40,10 +40,10 @@ const docsIP = totalDocs - docsUes; // 6
       : 'Brújula IA Educación Superior'}
     <span style="display: block; font-size: clamp(1.35rem, 2.6vw, 2rem); font-weight: 600; color: var(--accent-blue); margin-top: 0.45rem; line-height: 1.25;">
       {lang === 'en'
-        ? 'First empirical observatory on regulations, public procurement, and governance across all 54 universities in Chile.'
+        ? 'First empirical observatory on institutional policies, public procurement, and AI governance across all 54 universities in Chile.'
         : lang === 'pt'
-        ? 'Primeiro observatório empírico sobre normativas, compras públicas e governança de IA nas 54 universidades do Chile.'
-        : 'Observatorio empírico sobre normativas, compras públicas y gobernanza de IA en las 54 universidades de Chile.'}
+        ? 'Primeiro observatório empírico sobre políticas institucionais, compras públicas e governança de IA nas 54 universidades do Chile.'
+        : 'Observatorio empírico sobre políticas institucionales, compras públicas y gobernanza de IA en las 54 universidades de Chile.'}
     </span>
   </h1>
 
@@ -67,7 +67,7 @@ const docsIP = totalDocs - docsUes; // 6
               ? 'Stay updated on AI policy and university governance in Chile' 
               : lang === 'pt'
               ? 'Receba atualizações sobre políticas de IA e governança universitária'
-              : '¿Quieres recibir nuevos análisis, alertas normativas y actualizaciones?'}
+              : '¿Quieres recibir nuevos análisis, novedades de políticas de IA y gobernanza universitaria?'}
           </strong>
         </div>
         <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0 0 0.85rem 0; line-height: 1.45;">
@@ -192,29 +192,29 @@ const docsIP = totalDocs - docsUes; // 6
           {conInst} {lang === 'en' ? 'of' : lang === 'pt' ? 'de' : 'de'} {totalUes}
         </span>
         <span style="font-size: 0.85rem; font-weight: 600; color: var(--accent-green);">
-          (59.3% {lang === 'en' ? 'with policy' : lang === 'pt' ? 'com norma' : 'con norma'})
+          (59.3% {lang === 'en' ? 'with policy' : lang === 'pt' ? 'com política' : 'con política'})
         </span>
       </div>
       <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4;">
-        32 universidades con protocolo o política pública; <strong>{enBrecha} planteles en brecha</strong> sin instrumento identificado en el levantamiento.
+        32 universidades con política o directriz institucional identificada; <strong>{enBrecha} planteles en brecha</strong> sin instrumento localizado en el levantamiento.
       </div>
     </div>
 
-    <!-- Métrica 2: Acervo Normativo -->
+    <!-- Métrica 2: Acervo Institucional -->
     <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.15rem 1.25rem; border-top: 3px solid var(--accent-blue);">
       <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.35rem; letter-spacing: 0.5px;">
-        📄 {lang === 'en' ? 'Analyzed Policy Documents' : lang === 'pt' ? 'Documentos Analisados' : 'Documentos & Reglamentos'}
+        📄 {lang === 'en' ? 'Analyzed Policy Documents' : lang === 'pt' ? 'Políticas e Diretrizes Analisadas' : 'Políticas & Directrices Institucionales'}
       </div>
       <div style="display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.25rem;">
         <span style="font-size: 1.85rem; font-weight: 700; font-family: var(--font-serif); color: var(--text-main); line-height: 1;">
           {totalDocs}
         </span>
         <span style="font-size: 0.85rem; color: var(--text-muted);">
-          {lang === 'en' ? 'policies & decrees' : lang === 'pt' ? 'políticas e decretos' : 'normas y decretos'}
+          {lang === 'en' ? 'policies & guidelines' : lang === 'pt' ? 'políticas e diretrizes' : 'políticas y directrices'}
         </span>
       </div>
       <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4;">
-        {docsUes} reglamentos en universidades (centrales o por facultad) y {docsIP} en institutos profesionales y CFTs.
+        {docsUes} políticas y directrices en universidades (institucionales o por facultad) y {docsIP} en institutos profesionales y CFTs.
       </div>
     </div>
 
@@ -228,11 +228,11 @@ const docsIP = totalDocs - docsUes; // 6
           85
         </span>
         <span style="font-size: 0.85rem; color: var(--text-muted);">
-          licitaciones en Mercado Público
+          registros (67 procesos en Mercado Público)
         </span>
       </div>
       <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4;">
-        Contratos en <strong>10 universidades públicas</strong> (el 30% adquiere tecnología e IA sin contar con protocolo previo de aula).
+        17 licitaciones y 68 órdenes de compra en <strong>10 universidades públicas</strong> ($539.7M neto auditado; el 30% adquiere IA sin contar con política previa de aula).
       </div>
     </div>
 

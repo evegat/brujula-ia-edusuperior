@@ -84,6 +84,11 @@ const compras = JSON.parse(fs.readFileSync(comprasPath, 'utf-8'));
 const comprasHeaders = [
   'ID_Compra',
   'Universidad',
+  'Tipo_Instrumento',
+  'Codigo_Mercado_Publico',
+  'Es_Derivada_De_Licitacion',
+  'Licitacion_Origen',
+  'Computa_Monto_Neto',
   'Nombre_Proceso',
   'Descripcion',
   'Monto_CLP',
@@ -94,6 +99,7 @@ const comprasHeaders = [
   'Categoria_Tecnologica',
   'Categoria_Corta',
   'Confianza_Clasificacion',
+  'Nota_Metodologica',
   'Link_Mercado_Publico'
 ];
 
@@ -101,6 +107,11 @@ const comprasRows = compras.map((c) => {
   return [
     c.id_compra,
     escapeCsv(c.universidad),
+    escapeCsv(c.tipo_instrumento || (c.link?.includes('idLicitacion') ? 'Licitación Pública' : 'Orden de Compra')),
+    escapeCsv(c.codigo_mercado_publico || 'N/D'),
+    c.es_derivada ? 'SI' : 'NO',
+    escapeCsv(c.licitacion_origen || 'N/A'),
+    c.computa_monto_neto !== false ? 'SI' : 'NO',
     escapeCsv(c.nombre),
     escapeCsv(c.descripcion),
     c.monto || 0,
@@ -111,6 +122,7 @@ const comprasRows = compras.map((c) => {
     escapeCsv(c.categoria_tecnologica),
     escapeCsv(c.categoria_corta),
     escapeCsv(c.confianza_clasificacion),
+    escapeCsv(c.nota_metodologica_compra || ''),
     escapeCsv(c.link)
   ].join(';');
 });

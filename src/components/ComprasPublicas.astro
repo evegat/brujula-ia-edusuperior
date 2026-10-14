@@ -12,7 +12,12 @@ const { lang = 'es' } = Astro.props;
 const t = useTranslations(lang);
 
 const totalCompras = comprasData.length; // 85
+const totalLicitaciones = comprasData.filter(c => c.tipo_instrumento === 'Licitación Pública').length; // 17
+const totalOCs = comprasData.filter(c => c.tipo_instrumento === 'Orden de Compra').length; // 68
 const uesUnicas = Array.from(new Set(comprasData.map(c => c.universidad))).sort();
+const montoNetoTotal = comprasData
+  .filter(c => c.computa_monto_neto !== false)
+  .reduce((acc, c) => acc + (c.monto || 0), 0); // ~$539.7M
 
 function normalizeForSearch(str: string): string {
   return (str || '')
@@ -90,20 +95,24 @@ function obtenerBadgeCapa(capa: string, langKey: SupportedLang): { label: string
   <!-- Estadísticas Principales de Compras -->
   <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap:1.25rem; margin-bottom:2rem;">
     <div class="card" style="border-left:4px solid var(--accent-blue); padding:1.25rem;">
-      <div style="font-size:1.8rem; font-weight:700; color:var(--accent-blue); font-family:var(--font-serif);">{totalCompras}</div>
-      <div style="font-size:0.8rem; color:var(--text-muted);">{t('compras.kpi_total_orders')}</div>
+      <div style="font-size:1.8rem; font-weight:700; color:var(--accent-blue); font-family:var(--font-serif);">{totalCompras} <span style="font-size:0.9rem; font-weight:600; color:var(--text-muted);">(67 {lang === 'en' ? 'processes' : lang === 'pt' ? 'processos' : 'procesos'})</span></div>
+      <div style="font-size:0.8rem; color:var(--text-muted); line-height:1.35; margin-top:0.2rem;">
+        {lang === 'en' ? '85 records: 17 public tenders & 68 purchase orders' : lang === 'pt' ? '85 registros: 17 licitações públicas e 68 ordens de compra' : '85 registros: 17 licitaciones públicas y 68 órdenes de compra'}
+      </div>
     </div>
     <div class="card" style="border-left:4px solid var(--accent-green); padding:1.25rem;">
       <div style="font-size:1.8rem; font-weight:700; color:var(--accent-green); font-family:var(--font-serif);">{uesUnicas.length} {lang === 'en' ? 'HEIs' : lang === 'pt' ? 'Instituições' : 'Planteles'}</div>
-      <div style="font-size:0.8rem; color:var(--text-muted);">{t('compras.kpi_state_buyers')}</div>
+      <div style="font-size:0.8rem; color:var(--text-muted); margin-top:0.2rem;">{t('compras.kpi_state_buyers')}</div>
     </div>
     <div class="card" style="border-left:4px solid var(--accent-red); padding:1.25rem;">
       <div style="font-size:1.8rem; font-weight:700; color:var(--accent-red); font-family:var(--font-serif);">30%</div>
-      <div style="font-size:0.8rem; color:var(--text-muted);">{t('compras.kpi_without_policy')}</div>
+      <div style="font-size:0.8rem; color:var(--text-muted); margin-top:0.2rem;">{t('compras.kpi_without_policy')}</div>
     </div>
     <div class="card" style="border-left:4px solid var(--accent-purple); padding:1.25rem;">
-      <div style="font-size:1.8rem; font-weight:700; color:var(--accent-purple); font-family:var(--font-serif);">4 {lang === 'en' ? 'Layers' : lang === 'pt' ? 'Camadas' : 'Capas'}</div>
-      <div style="font-size:0.8rem; color:var(--text-muted);">{lang === 'en' ? 'Computing, Back-office, Chatbots, Instruction' : lang === 'pt' ? 'Computação, Back-office, Chatbots, Docência' : 'Cómputo, Back-office, Chatbots y Docencia'}</div>
+      <div style="font-size:1.8rem; font-weight:700; color:var(--accent-purple); font-family:var(--font-serif);">$539.7M <span style="font-size:0.82rem; font-weight:600; color:var(--text-muted);">CLP</span></div>
+      <div style="font-size:0.8rem; color:var(--text-muted); line-height:1.35; margin-top:0.2rem;">
+        {lang === 'en' ? 'Net audited spend (deduplicating $70.6M from tenders with issued POs)' : lang === 'pt' ? 'Gasto líquido auditado (deduplicando $70.6M de licitações com OCs emitidas)' : 'Gasto neto auditado (deduplica $70.6M de licitaciones con OCs emitidas)'}
+      </div>
     </div>
   </div>
 
@@ -155,10 +164,10 @@ function obtenerBadgeCapa(capa: string, langKey: SupportedLang): { label: string
     <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.82rem; color:var(--text-muted); border-top:1px solid var(--border-color); padding-top:0.75rem;">
       <span id="compras-count-display">
         {lang === 'en' 
-          ? `Showing 85 of 85 audited tenders`
+          ? `Showing 85 of 85 procurement records (17 tenders, 68 purchase orders)`
           : lang === 'pt'
-          ? `Exibindo 85 de 85 licitações auditadas`
-          : `Mostrando 85 de 85 licitaciones auditadas`}
+          ? `Exibindo 85 de 85 registros de compras (17 licitações, 68 ordens de compra)`
+          : `Mostrando 85 de 85 registros (17 licitaciones públicas y 68 órdenes de compra auditadas)`}
       </span>
       <span>{lang === 'en' ? 'Official source: ChileCompra / Mercado Público' : lang === 'pt' ? 'Fonte oficial: ChileCompra / Mercado Público' : 'Fuente oficial: ChileCompra / Mercado Público'}</span>
     </div>
@@ -179,9 +188,10 @@ function obtenerBadgeCapa(capa: string, langKey: SupportedLang): { label: string
       </thead>
       <tbody id="compras-tbody">
         {comprasData.map((c, idx) => {
-          const sinProtocoloPublico = ['UNIVERSIDAD TECNOLOGICA METROPOLITANA', 'UNIVERSIDAD DE LA SERENA', 'UNIVERSIDAD DEL BIO BIO'].includes(c.universidad);
+          const sinPoliticaPublica = ['UNIVERSIDAD TECNOLOGICA METROPOLITANA', 'UNIVERSIDAD DE LA SERENA', 'UNIVERSIDAD DEL BIO BIO'].includes(c.universidad);
           const badge = obtenerBadgeCapa(c.capa_funcional, lang);
-          const searchBlob = `${normalizeForSearch(c.nombre)} ${normalizeForSearch(c.descripcion)} ${normalizeForSearch(c.proveedor)} ${normalizeForSearch(c.universidad)}`;
+          const esLicitacion = c.tipo_instrumento === 'Licitación Pública';
+          const searchBlob = `${normalizeForSearch(c.nombre)} ${normalizeForSearch(c.descripcion)} ${normalizeForSearch(c.proveedor)} ${normalizeForSearch(c.universidad)} ${normalizeForSearch(c.codigo_mercado_publico || '')} ${normalizeForSearch(c.tipo_instrumento || '')}`;
 
           return (
             <tr 
@@ -193,19 +203,50 @@ function obtenerBadgeCapa(capa: string, langKey: SupportedLang): { label: string
             >
               <td style="padding:0.85rem 1rem; vertical-align:top;">
                 <div style="font-weight:600; color:var(--text-main);">{c.universidad}</div>
-                {sinProtocoloPublico ? (
-                  <span class="badge" style="font-size:0.7rem; margin-top:0.2rem; background:rgba(0,0,0,0.04); color:var(--text-muted); border:1px solid var(--border-color);">
-                    {lang === 'en' ? '○ No policy located' : lang === 'pt' ? '○ Sem diretriz localizada' : '○ Sin protocolo localizado'}
+                {sinPoliticaPublica ? (
+                  <span class="badge" style="font-size:0.7rem; margin-top:0.25rem; background:rgba(239, 68, 68, 0.08); color:var(--accent-red); border:1px solid rgba(239, 68, 68, 0.2);">
+                    {lang === 'en' ? '○ No policy located' : lang === 'pt' ? '○ Sem política localizada' : '○ Sin política identificada'}
                   </span>
                 ) : (
-                  <span class="badge badge-green" style="font-size:0.7rem; margin-top:0.2rem;">
-                    {lang === 'en' ? '✓ Policy identified' : lang === 'pt' ? '✓ Diretriz identificada' : '✓ Con protocolo identificado'}
+                  <span class="badge badge-green" style="font-size:0.7rem; margin-top:0.25rem;">
+                    {lang === 'en' ? '✓ Policy identified' : lang === 'pt' ? '✓ Política identificada' : '✓ Con política identificada'}
                   </span>
                 )}
               </td>
-              <td style="padding:0.85rem 1rem; vertical-align:top; max-width:320px;">
-                <div style="font-weight:600; margin-bottom:0.2rem;">{c.nombre}</div>
+              <td style="padding:0.85rem 1rem; vertical-align:top; max-width:330px;">
+                <!-- Instrumento y Código Mercado Público -->
+                <div style="display:flex; gap:0.35rem; align-items:center; flex-wrap:wrap; margin-bottom:0.35rem;">
+                  {esLicitacion ? (
+                    <span class="badge badge-blue" style="font-size:0.68rem; font-weight:700;">⚖️ {lang === 'en' ? 'Public Tender' : lang === 'pt' ? 'Licitação Pública' : 'Licitación Pública'}</span>
+                  ) : (
+                    <span class="badge badge-purple" style="font-size:0.68rem; font-weight:700;">📄 {lang === 'en' ? 'Purchase Order' : lang === 'pt' ? 'Ordem de Compra' : 'Orden de Compra'}</span>
+                  )}
+                  {c.codigo_mercado_publico && (
+                    <code style="font-size:0.68rem; background:rgba(0,0,0,0.05); padding:0.12rem 0.35rem; border-radius:4px; font-family:var(--font-mono); color:var(--text-main);">
+                      {c.codigo_mercado_publico}
+                    </code>
+                  )}
+                </div>
+
+                <div style="font-weight:600; margin-bottom:0.2rem; line-height:1.35;">{c.nombre}</div>
                 <div style="font-size:0.78rem; color:var(--text-muted); line-height:1.4;">{c.descripcion || ''}</div>
+                
+                <!-- Metadatos de derivación / deduplicación -->
+                {c.es_derivada && (
+                  <div style="margin-top:0.3rem;">
+                    <span class="badge badge-amber" style="font-size:0.66rem;">
+                      ↳ {lang === 'en' ? `Derived from tender ${c.licitacion_origen}` : lang === 'pt' ? `Derivada da licitação ${c.licitacion_origen}` : `Derivada de licitación ${c.licitacion_origen}`}
+                    </span>
+                  </div>
+                )}
+                {c.tiene_ocs_asociadas && (
+                  <div style="margin-top:0.3rem;">
+                    <span class="badge badge-blue" style="font-size:0.66rem;">
+                      ℹ️ {lang === 'en' ? 'Includes executed POs' : lang === 'pt' ? 'Possui OCs executadas associadas' : 'Incluye OCs de ejecución emitidas'}
+                    </span>
+                  </div>
+                )}
+
                 <div style="display:flex; gap:0.35rem; align-items:center; margin-top:0.35rem; flex-wrap:wrap;">
                   <span class="badge" style="font-size:0.68rem; background:rgba(0,0,0,0.05); color:var(--text-main); border:1px solid var(--border-color);">{c.categoria_corta || 'Tecnología'}</span>
                   <span style="font-size:0.7rem; color:var(--text-muted);">
@@ -224,12 +265,30 @@ function obtenerBadgeCapa(capa: string, langKey: SupportedLang): { label: string
                 {c.proveedor || (lang === 'en' ? 'No supplier specified' : lang === 'pt' ? 'Sem fornecedor especificado' : 'Sin proveedor especificado')}
               </td>
               <td style="padding:0.85rem 1rem; vertical-align:top; text-align:right; font-weight:600; font-family:var(--font-sans);">
-                {formatearMonto(c.monto)}
+                {c.computa_monto_neto === false ? (
+                  <div>
+                    <div style="color:var(--text-muted); text-decoration:line-through; font-size:0.82rem;">{formatearMonto(c.monto)}</div>
+                    <div style="font-size:0.68rem; color:var(--accent-amber); font-weight:600; line-height:1.2; margin-top:0.2rem;">
+                      {lang === 'en' ? 'Deduplicated (issued POs sum)' : lang === 'pt' ? 'Deduplicado (soma em OCs)' : 'No duplica en neto (suma en OCs)'}
+                    </div>
+                  </div>
+                ) : (
+                  <div>
+                    <div>{formatearMonto(c.monto)}</div>
+                    {c.es_derivada && (
+                      <div style="font-size:0.68rem; color:var(--accent-green); font-weight:600; margin-top:0.15rem;">
+                        {lang === 'en' ? 'Net executed spend' : lang === 'pt' ? 'Gasto líquido executado' : 'Monto neto ejecutado'}
+                      </div>
+                    )}
+                  </div>
+                )}
               </td>
               <td style="padding:0.85rem 1rem; vertical-align:top; text-align:center;">
                 {c.link ? (
-                  <a href={c.link} target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="font-size:0.76rem; padding:0.3rem 0.6rem; color:var(--accent-blue);">
-                    {lang === 'en' ? '🔗 View Tender →' : lang === 'pt' ? '🔗 Ver Licitação →' : '🔗 Ver Licitación →'}
+                  <a href={c.link} target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="font-size:0.74rem; padding:0.3rem 0.55rem; color:var(--accent-blue); display:inline-flex; align-items:center; gap:0.25rem; white-space:nowrap;">
+                    {esLicitacion 
+                      ? (lang === 'en' ? '⚖️ View Tender →' : lang === 'pt' ? '⚖️ Ver Licitação →' : '⚖️ Ver Licitación →')
+                      : (lang === 'en' ? '📄 View PO →' : lang === 'pt' ? '📄 Ver OC →' : '📄 Ver Orden de Compra →')}
                   </a>
                 ) : (
                   <span style="color:var(--text-muted); font-size:0.75rem;">
@@ -311,11 +370,11 @@ function obtenerBadgeCapa(capa: string, langKey: SupportedLang): { label: string
     if (countDisp) {
       const pageLang = document.documentElement.lang || 'es';
       if (pageLang === 'en') {
-        countDisp.textContent = `Showing ${visibles} of ${rows.length} audited tenders`;
+        countDisp.textContent = `Showing ${visibles} of ${rows.length} procurement records (17 tenders, 68 purchase orders)`;
       } else if (pageLang === 'pt') {
-        countDisp.textContent = `Exibindo ${visibles} de ${rows.length} licitações auditadas`;
+        countDisp.textContent = `Exibindo ${visibles} de ${rows.length} registros de compras (17 licitações, 68 ordens de compra)`;
       } else {
-        countDisp.textContent = `Mostrando ${visibles} de ${rows.length} licitaciones auditadas`;
+        countDisp.textContent = `Mostrando ${visibles} de ${rows.length} registros (17 licitaciones públicas y 68 órdenes de compra auditadas)`;
       }
     }
 
