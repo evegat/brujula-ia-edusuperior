@@ -232,13 +232,17 @@ const planillaFilas = matrizData.map((u, idx) => {
               </td>
 
               <!-- 6. Compras -->
-              <td style="padding:0.75rem 0.65rem; text-align:center; font-size:0.95rem;">
-                {d.compras_ia ? (
-                  <a href="#compras" style="color:var(--accent-amber); font-weight:700; text-decoration:none;" title={lang === 'en' ? 'Public AI Procurement Contracts' : lang === 'pt' ? 'Contratos de IA em Compras Públicas' : 'Contratos de IA en Mercado Público'}>
-                    💰 ({fila.tipo === 'Estatales' ? (lang === 'en' ? 'Yes' : lang === 'pt' ? 'Sim' : 'Sí') : 'N/A'})
-                  </a>
+              <td style="padding:0.75rem 0.65rem; text-align:center; font-size:0.85rem;">
+                {fila.tipo === 'Estatales' ? (
+                  d.compras_ia ? (
+                    <a href="#compras" style="color:var(--accent-amber); font-weight:700; text-decoration:none;" title={lang === 'en' ? 'Public AI Procurement Contracts (Ley 19.886)' : lang === 'pt' ? 'Contratos de IA em Compras Públicas' : 'Contratos de IA en Mercado Público (Ley 19.886)'}>
+                      💰 SI
+                    </a>
+                  ) : (
+                    <span style="color:var(--text-muted);" title={lang === 'en' ? 'No procurement registered in Mercado Público' : lang === 'pt' ? 'Sem compras registradas no Mercado Público' : 'Sin compras registradas en Mercado Público'}>○</span>
+                  )
                 ) : (
-                  <span style="color:var(--border-color);" title={lang === 'en' ? 'No procurement registered' : lang === 'pt' ? 'Sem compras registradas' : 'Sin compras registradas'}>—</span>
+                  <span style="color:var(--text-muted); font-size:0.75rem;" title={lang === 'en' ? 'N/A: Private university not subject to Public Procurement Law' : lang === 'pt' ? 'N/A: Instituição privada não sujeita à Lei de Compras Públicas' : 'N/A: Régimen privado no sujeto a Ley N° 19.886'}>N/A*</span>
                 )}
               </td>
 
@@ -437,7 +441,7 @@ const planillaFilas = matrizData.map((u, idx) => {
         const autoria = row.querySelector('td:nth-child(6)')?.textContent?.includes('✓') ? '1' : '0';
         const priv = row.querySelector('td:nth-child(7)')?.textContent?.includes('✓') ? '1' : '0';
         const evalua = row.querySelector('td:nth-child(8)')?.textContent?.includes('✓') ? '1' : '0';
-        const compras = row.querySelector('td:nth-child(9)')?.textContent?.includes('💰') ? '1' : '0';
+        const compras = tipo === 'Estatales' ? (row.querySelector('td:nth-child(9)')?.textContent?.includes('💰') ? '1' : '0') : 'N/A';
         const total = row.querySelector('td:nth-child(10)')?.textContent?.trim() || '';
 
         rows.push([idx + 1, `"${uNom}"`, `"${siglaMatch}"`, '', `"${tipo}"`, tieneDoc, aula, tesis, autoria, priv, evalua, compras, `"${total}"`].join(';'));

@@ -9,10 +9,34 @@ import rankingIMN from '../../data/ranking_madurez_imn.json';
         <span class="badge badge-purple">Marco Metodológico Regional</span>
         <span class="badge badge-blue">Modelo GENIAL (Erasmus+ / UE)</span>
       </div>
-      <h2>Índice de Madurez Normativa en Chile (IMN)</h2>
+      <h2>Panorama de Políticas Universitarias de IA (Índice IMN)</h2>
       <p style="color:var(--text-muted); max-width:850px; font-size:0.96rem;">
-        Adaptación empírica para la educación superior chilena del modelo dimensional desarrollado por el <strong>Observatorio Regional GENIAL</strong>. Pondera seis subíndices normalizados (0–100) para caracterizar la robustez jurídica, pedagógica y ética de cada plantel.
+        Diagnóstico empírico y fotográfico de los instrumentos normativos formalizados en la educación superior chilena, adaptado del modelo dimensional del <strong>Observatorio Regional GENIAL</strong>. Pondera seis subíndices normalizados (0–100) para caracterizar la formalidad jurídica y densidad temática de cada plantel.
       </p>
+    </div>
+  </div>
+
+  <!-- Alerta Metodológica de Alcance y Deslinde -->
+  <div style="background: rgba(29, 78, 216, 0.04); border: 1px solid rgba(29, 78, 216, 0.2); border-left: 4px solid var(--accent-blue); padding: 1rem 1.25rem; border-radius: 8px; margin-bottom: 2rem; font-size: 0.86rem; line-height: 1.5; color: var(--text-main);">
+    <div style="font-weight: 700; color: var(--accent-blue); margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.4rem;">
+      ℹ️ Deslinde Epistemológico y Alcance del Índice (IMN Exploratorio)
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 1rem; margin-top: 0.5rem;">
+      <div>
+        <strong style="color: var(--accent-green);">✓ Qué mide y representa:</strong>
+        <p style="margin: 0.25rem 0 0 0; color: var(--text-muted); font-size: 0.82rem;">
+          Mide la <strong>densidad, formalidad jurídica y cobertura temática</strong> de los documentos normativos de acceso público localizados al corte. Evalúa si la institución ha publicado directrices explícitas sobre aula, tesis, autoría, privacidad y evaluación.
+        </p>
+      </div>
+      <div>
+        <strong style="color: var(--accent-red);">✕ Qué NO mide ni representa:</strong>
+        <p style="margin: 0.25rem 0 0 0; color: var(--text-muted); font-size: 0.82rem;">
+          <strong>No es un ranking de calidad académica ni docente.</strong> No audita la efectividad real en sala ni evalúa el desempeño institucional. Tampoco certifica conformidad legal con la Ley N° 21.719 (cuya vigencia formal rige a contar de diciembre de 2026).
+        </p>
+      </div>
+    </div>
+    <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.75rem; border-top: 1px dashed var(--border-color); padding-top: 0.45rem;">
+      <em>Nota sobre unidades de análisis:</em> El índice procesa la mayor densidad alcanzada en documentos institucionales o de facultad verificados. La ausencia de un documento público no acredita que la institución carezca de debates o normativas internas en trámite.
     </div>
   </div>
 
@@ -68,10 +92,10 @@ import rankingIMN from '../../data/ranking_madurez_imn.json';
     </div>
   </div>
 
-  <!-- Ranking de Madurez Normativa en Chile -->
+  <!-- Panorama Institucional de Políticas de IA -->
   <div>
     <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1.25rem;">
-      <h3 style="font-size:1.25rem; margin:0;">🏆 Ranking de Madurez Institucional ({rankingIMN.length} Instituciones Catastradas)</h3>
+      <h3 style="font-size:1.25rem; margin:0;">📊 Panorama y Estado de Avance por Institución ({rankingIMN.length} Instituciones con Instrumento Identificado)</h3>
       <div style="font-size:0.84rem; color:var(--text-muted);">
         Duoc UC consolidado con sus 2 instrumentos vigentes
       </div>

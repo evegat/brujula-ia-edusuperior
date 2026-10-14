@@ -90,7 +90,16 @@ export const POST: APIRoute = async ({ request, locals }) => {
       });
     }
 
-    const { institucion, url_normativa, resumen, remitente_email, remitente_nombre } = body;
+    const { 
+      institucion, 
+      numero_decreto, 
+      organo_emisor, 
+      url_normativa, 
+      url_adjunto, 
+      resumen, 
+      remitente_email, 
+      remitente_nombre 
+    } = body;
 
     if (!institucion || typeof institucion !== 'string' || institucion.trim().length === 0) {
       return new Response(JSON.stringify({
@@ -103,12 +112,14 @@ export const POST: APIRoute = async ({ request, locals }) => {
     }
 
     const hasUrl = url_normativa && typeof url_normativa === 'string' && url_normativa.trim().length > 0;
+    const hasAdjunto = url_adjunto && typeof url_adjunto === 'string' && url_adjunto.trim().length > 0;
     const hasResumen = resumen && typeof resumen === 'string' && resumen.trim().length > 0;
+    const hasDecreto = numero_decreto && typeof numero_decreto === 'string' && numero_decreto.trim().length > 0;
 
-    if (!hasUrl && !hasResumen) {
+    if (!hasUrl && !hasResumen && !hasDecreto && !hasAdjunto) {
       return new Response(JSON.stringify({
         success: false,
-        error: 'Debe ingresar un enlace a la normativa o un resumen descriptivo del antecedente'
+        error: 'Debe ingresar un enlace a la normativa, el N° de decreto o un resumen del antecedente'
       }), {
         status: 400,
         headers: CORS_HEADERS
@@ -121,6 +132,19 @@ export const POST: APIRoute = async ({ request, locals }) => {
         return new Response(JSON.stringify({
           success: false,
           error: 'El enlace a la normativa debe ser una URL válida (http:// o https://)'
+        }), {
+          status: 400,
+          headers: CORS_HEADERS
+        });
+      }
+    }
+
+    if (hasAdjunto) {
+      const trimmedAdj = url_adjunto.trim();
+      if (!trimmedAdj.startsWith('http://') && !trimmedAdj.startsWith('https://')) {
+        return new Response(JSON.stringify({
+          success: false,
+          error: 'El enlace al archivo adjunto debe ser una URL válida (http:// o https://)'
         }), {
           status: 400,
           headers: CORS_HEADERS
@@ -146,7 +170,10 @@ export const POST: APIRoute = async ({ request, locals }) => {
     const aporteRecord = {
       ticket_id,
       institucion: institucion.trim(),
+      numero_decreto: hasDecreto ? numero_decreto.trim() : null,
+      organo_emisor: organo_emisor && typeof organo_emisor === 'string' ? organo_emisor.trim() : null,
       url_normativa: hasUrl ? url_normativa.trim() : null,
+      url_adjunto: hasAdjunto ? url_adjunto.trim() : null,
       resumen: hasResumen ? resumen.trim() : null,
       remitente_email: remitente_email && typeof remitente_email === 'string' ? remitente_email.trim() : null,
       remitente_nombre: remitente_nombre && typeof remitente_nombre === 'string' ? remitente_nombre.trim() : null,

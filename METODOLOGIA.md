@@ -98,6 +98,33 @@ En sustitución de índices univariados con puntajes basales artificiales, el ob
 6. **Eje 6: Régimen Disciplinario y Tipificación de Faltas:** El reglamento tipifica el uso no autorizado o el plagio mediado por IA dentro de los procedimientos de sanción y deshonestidad académica.
 7. **Eje 7: Gobernanza e Instancias Colegiadas:** Creación formal de comités de ética, mesas técnicas multidisciplinarias o unidades permanentes para la actualización de directrices de IA.
 
+### 5.1 Índice de Madurez Normativa (IMN): Definición, Rúbrica y Límites Epistemológicos
+
+El **Índice de Madurez Normativa (IMN)** es un indicador cuantitativo exploratorio (0–100 puntos) diseñado para sintetizar la formalidad jurídica y la cobertura temática de los instrumentos normativos de IA vigentes en cada institución.
+
+#### 1. Qué mide y qué representa:
+- Sintetiza el **grado de institucionalización formal y densidad regulatoria** de las directrices públicas analizadas.
+- Modela matemáticamente la presencia de cláusulas críticas en seis subíndices normalizados bajo la fórmula:
+  $$\text{IMN} = 0.20 \cdot S_1 + 0.20 \cdot S_2 + 0.15 \cdot S_3 + 0.15 \cdot S_4 + 0.15 \cdot S_5 + 0.15 \cdot S_6$$
+
+#### 2. Rúbrica de Puntuación de los Subíndices:
+- **$S_1$: Fuerza Jurídica (20%):** Decreto Exento / Resolución de Rectoría (100 pts) | Reglamento General (80 pts) | Instructivo de Vicerrectoría (70 pts) | Guía Docente / Orientaciones (50 pts) | Base Mínima (40 pts).
+- **$S_2$: Transparencia & Declaración de Prompts (20%):** Exigencia obligatoria de declarar el uso de IA y prompts en entregas académicas (100 pts) vs. Ausencia de exigencia (30 pts).
+- **$S_3$: Regla de Autoría (15%):** Prohibición expresa de atribuir autoría moral o patrimonial a la IA (100 pts) vs. No explicitado (20 pts).
+- **$S_4$: Previsión de Privacidad (15%):** Resguardo explícito de datos personales, confidencialidad y secreto institucional (100 pts) vs. No explicitado (20 pts).
+- **$S_5$: Rediseño Evaluativo (15%):** Instrucciones de adaptación de instrumentos de evaluación hacia metodologías auténticas, defensas o procesos (100 pts) vs. No explicitado (30 pts).
+- **$S_6$: Gobernanza Institucional (15%):** Creación formal de comités de IA, mesas interdisciplinarias o cláusula de revisión periódica obligatoria (100 pts) vs. No explicitado (25 pts).
+
+#### 3. Categorías de Clasificación:
+- **Madurez Avanzada (75–100 pts):** Marco formalmente decretado con cobertura multidimensional (aula, tesis, privacidad y evaluación).
+- **Madurez Intermedia (55–74 pts):** Instrumentos formalizados con foco docente pero brechas en gobernanza o privacidad.
+- **Regulación Inicial (<55 pts):** Guías introductorias o documentos de alcance acotado a unidades específicas.
+
+#### 4. Límites Epistemológicos y Advertencias de Uso:
+1. **No es un ranking de calidad académica:** Un puntaje alto en el IMN acredita formalización documental; no mide ni garantiza la efectividad pedagógica real en el aula.
+2. **No certifica conformidad jurídica plena:** La mención de resguardo de datos personales es una medida preventiva, pero no constituye una auditoría legal acabada frente a la Ley N° 21.719 (cuya vigencia formal rige desde el 1 de diciembre de 2026).
+3. **Unidad de análisis documental:** En universidades con múltiples instrumentos (p. ej., guías por facultad y decretos centrales), el IMN computa la mayor densidad alcanzada en los documentos públicos verificados. La no localización de un documento al corte no prueba que la institución carezca de normativas internas no publicadas.
+
 ---
 
 ### 6. Marco Temporal y Jurídico de la Ley N° 21.719

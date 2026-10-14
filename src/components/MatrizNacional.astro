@@ -214,13 +214,16 @@ function normalizeForSearch(str: string): string {
   </div>
 
   <!-- Leyenda de las 6 Dimensiones del Catastro -->
-  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(170px, 1fr)); gap:0.5rem; margin-bottom:1.5rem; font-size:0.78rem; background:rgba(0,0,0,0.02); padding:0.75rem 1rem; border-radius:8px; border:1px solid var(--border-color);">
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(170px, 1fr)); gap:0.5rem; margin-bottom:0.75rem; font-size:0.78rem; background:rgba(0,0,0,0.02); padding:0.75rem 1rem; border-radius:8px; border:1px solid var(--border-color);">
     <div><strong>{t('matriz.legend_aula')}</strong></div>
     <div><strong>{t('matriz.legend_tesis')}</strong></div>
     <div><strong>{t('matriz.legend_autoria')}</strong></div>
     <div><strong>{t('matriz.legend_privacidad')}</strong></div>
     <div><strong>{t('matriz.legend_eval')}</strong></div>
-    <div><strong>{t('matriz.legend_compras')}</strong></div>
+    <div><strong>{t('matriz.legend_compras')}*</strong></div>
+  </div>
+  <div style="font-size:0.75rem; color:var(--text-muted); margin-bottom:1.5rem; padding:0 0.25rem; line-height:1.4;">
+    <em>* <strong>Régimen de Compras:</strong> Aplica por ley exclusivamente a las 18 Universidades Estatales (Ley N° 19.886 / Mercado Público). En universidades privadas figura como <code>N/A*</code> para descartar cualquier sesgo comparativo.</em>
   </div>
 
   <!-- Grilla de Tarjetas de la Matriz (Prerenderizada por SSR) -->
@@ -276,8 +279,8 @@ function normalizeForSearch(str: string): string {
               <span>{u.total_instrumentos} {t('matriz.card_docs_count')}</span>
             </div>
 
-            <!-- Semáforo de las 6 dimensiones objetivas -->
-            <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:0.4rem; background:rgba(0,0,0,0.02); padding:0.6rem 0.75rem; border-radius:6px; font-size:0.76rem; margin-bottom:1.1rem; border:1px solid var(--border-color);">
+            <!-- Semáforo de las 6 dimensiones objetivas (adaptable a pantallas móviles) -->
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(85px, 1fr)); gap:0.4rem; background:rgba(0,0,0,0.02); padding:0.6rem 0.75rem; border-radius:6px; font-size:0.76rem; margin-bottom:1.1rem; border:1px solid var(--border-color);">
               <div>
                 {dims.protocolo_aula ? (
                   <span title={lang === 'en' ? 'Classroom Policy Identified' : lang === 'pt' ? 'Diretriz de Ensino Identificada' : 'Protocolo de Aula Identificado'} style="color:var(--accent-green); font-weight:600;">✓ {lang === 'en' ? 'Classroom' : lang === 'pt' ? 'Aula' : 'Aula'}</span>
@@ -314,10 +317,16 @@ function normalizeForSearch(str: string): string {
                 )}
               </div>
               <div>
-                {dims.compras_ia ? (
-                  <span title={lang === 'en' ? 'AI Procurement Registered' : lang === 'pt' ? 'Licitações de IA Registradas' : 'Compras IA Registradas en ChileCompra'} style="color:var(--accent-amber); font-weight:600;">💰 {lang === 'en' ? 'Procurement' : lang === 'pt' ? 'Compras' : 'Compras'} ({u.compras?.total || 1})</span>
+                {u.tipo_categoria === 'Estatales' ? (
+                  dims.compras_ia ? (
+                    <span title={lang === 'en' ? 'AI Procurement Registered (Ley 19.886)' : lang === 'pt' ? 'Licitações de IA Registradas (Lei 19.886)' : 'Compras IA Registradas en ChileCompra (Ley 19.886)'} style="color:var(--accent-amber); font-weight:600;">💰 {lang === 'en' ? 'Procurement' : lang === 'pt' ? 'Compras' : 'Compras'} ({u.compras?.total || 1})</span>
+                  ) : (
+                    <span title={lang === 'en' ? 'No AI Procurement Registered in Mercado Público' : lang === 'pt' ? 'Sem Compras de IA Registradas no Mercado Público' : 'Sin Compras de IA Registradas en Mercado Público'} style="color:var(--text-muted);">○ {lang === 'en' ? 'Procurement' : lang === 'pt' ? 'Compras' : 'Compras'}</span>
+                  )
                 ) : (
-                  <span title={lang === 'en' ? 'No AI Procurement Registered' : lang === 'pt' ? 'Sem Compras de IA Registradas' : 'Sin Compras de IA Registradas'} style="color:var(--text-muted);">— {lang === 'en' ? 'Procurement' : lang === 'pt' ? 'Compras' : 'Compras'}</span>
+                  <span title={lang === 'en' ? 'N/A: Private university not subject to Public Procurement Law (Ley 19.886)' : lang === 'pt' ? 'N/A: Universidade privada não sujeita à Lei de Compras Públicas' : 'N/A: Régimen privado no afecto a Ley N° 19.886 de Compras Públicas'} style="color:var(--text-muted); font-size:0.74rem;">
+                    <span style="background:rgba(0,0,0,0.04); padding:0.1rem 0.35rem; border-radius:4px; border:1px solid var(--border-color);">N/A* Privada</span>
+                  </span>
                 )}
               </div>
             </div>

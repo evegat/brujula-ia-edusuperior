@@ -1,0 +1,182 @@
+---
+import type { SupportedLang } from '../i18n/ui';
+import { useTranslations } from '../i18n/ui';
+
+interface Props {
+  lang?: SupportedLang;
+}
+
+const { lang = 'es' } = Astro.props;
+const t = useTranslations(lang);
+
+// Datos de las 18 Universidades Estatales clasificadas en la Matriz 2x2
+const q1_gobernanza = [
+  { sigla: 'UChile', nombre: 'U. de Chile', imn: 96.0, compras: 52, monto: '$37.6M' },
+  { sigla: 'ULagos', nombre: 'U. de Los Lagos', imn: 88.8, compras: 1, monto: '$2.9M' },
+  { sigla: 'UV', nombre: 'U. de Valparaíso', imn: 66.8, compras: 1, monto: 'Convenio' },
+  { sigla: 'UTalca', nombre: 'U. de Talca', imn: 54.2, compras: 5, monto: '$82.9M' },
+  { sigla: 'UFRO', nombre: 'U. de La Frontera', imn: 52.8, compras: 3, monto: '$232.2M' },
+  { sigla: 'USACH', nombre: 'USACH', imn: 42.2, compras: 6, monto: '$49.9M' },
+  { sigla: 'UDA', nombre: 'U. de Atacama', imn: 28.2, compras: 5, monto: '$89.0M' }
+];
+
+const q2_brecha = [
+  { sigla: 'UTEM', nombre: 'UTEM', imn: 0, compras: 6, monto: '$87.4M' },
+  { sigla: 'ULS', nombre: 'U. de La Serena', imn: 0, compras: 4, monto: '$18.0M' },
+  { sigla: 'UBB', nombre: 'U. del Bío-Bío', imn: 0, compras: 2, monto: '$10.1M' }
+];
+
+const q3_preventiva = [
+  { sigla: 'UA', nombre: 'U. de Antofagasta', imn: 66.2, compras: 0, monto: '$0' }
+];
+
+const q4_rezago = [
+  { sigla: 'UNAP', nombre: 'Arturo Prat' },
+  { sigla: 'UMAG', nombre: 'Magallanes' },
+  { sigla: 'UO', nombre: "O'Higgins" },
+  { sigla: 'UPLA', nombre: 'Playa Ancha' },
+  { sigla: 'UTA', nombre: 'Tarapacá' },
+  { sigla: 'UMCE', nombre: 'UMCE' },
+  { sigla: 'UAysén', nombre: 'Aysén' }
+];
+---
+
+<div class="card" style="margin-bottom: 2.25rem; border: 1px solid var(--border-color); background: var(--card-bg); padding: 1.5rem; border-radius: 12px; box-shadow: var(--shadow-sm);">
+  
+  <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.85rem;">
+    <div>
+      <div style="display: flex; gap: 0.45rem; align-items: center; margin-bottom: 0.35rem;">
+        <span class="badge badge-amber">Exclusivo 18 Universidades Estatales</span>
+        <span class="badge badge-blue">Ley N° 19.886 / CGR</span>
+      </div>
+      <h3 style="margin: 0; font-size: 1.25rem;">
+        {lang === 'en' 
+          ? 'Executive 2x2 Correlation Matrix: Regulatory Governance vs. AI Procurement' 
+          : lang === 'pt'
+          ? 'Matriz de Correlação 2x2: Governança Normativa vs. Aquisições de IA'
+          : 'Matriz 2x2 de Correlación Ejecutiva: Madurez Normativa vs. Adquisición de IA'}
+      </h3>
+      <p style="color: var(--text-muted); font-size: 0.86rem; margin: 0.35rem 0 0 0; max-width: 820px; line-height: 1.45;">
+        {lang === 'en'
+          ? 'Direct cross-referencing between formal AI policies (IMN) and technological procurement in Mercado Público for the 18 state universities. Discloses structural compliance and adoption gaps.'
+          : lang === 'pt'
+          ? 'Cruzamento direto entre normas de IA (IMN) e aquisições tecnológicas no Mercado Público para as 18 universidades estatais.'
+          : 'Cruce empírico directo entre políticas formalizadas de IA (IMN) y compras de tecnología en Mercado Público para las 18 universidades del Estado. Tipifica el riesgo regulatorio y fiscal.'}
+      </p>
+    </div>
+
+    <!-- Indicador Brecha Crítica -->
+    <div style="background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 8px; padding: 0.65rem 1rem; text-align: center;">
+      <div style="font-size: 1.45rem; font-weight: 700; color: var(--accent-red); font-family: var(--font-serif); line-height: 1;">30%</div>
+      <div style="font-size: 0.74rem; color: var(--text-muted); margin-top: 0.2rem;">
+        {lang === 'en' ? 'Buyers without policy' : lang === 'pt' ? 'Compradoras sem diretriz' : 'Compradoras sin norma de aula'}
+      </div>
+    </div>
+  </div>
+
+  <!-- Matriz 2x2 Grid -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 1.15rem; margin-bottom: 1.25rem;">
+    
+    <!-- Q2: Brecha Crítica (Alto Gasto / Sin Norma) -->
+    <div style="background: rgba(239, 68, 68, 0.04); border: 1.5px solid rgba(239, 68, 68, 0.4); border-radius: 10px; padding: 1.1rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+          <span style="font-weight: 700; font-size: 0.88rem; color: var(--accent-red);">⚠️ Cuadrante 2: Brecha Crítica (3 Planteles)</span>
+          <span class="badge" style="background: rgba(239, 68, 68, 0.15); color: var(--accent-red); font-size: 0.72rem; font-weight: 600;">Alto Riesgo</span>
+        </div>
+        <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 0.85rem;">
+          <strong>Inversión activa sin marco normativo localizado:</strong> Universidades que adquieren software, chatbots o cómputo con fondos públicos sin contar con un protocolo público para docentes y estudiantes.
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 0.45rem;">
+          {q2_brecha.map(u => (
+            <div style="display: flex; justify-content: space-between; align-items: center; background: var(--card-bg); border: 1px solid var(--border-color); padding: 0.45rem 0.65rem; border-radius: 6px; font-size: 0.82rem;">
+              <span style="font-weight: 600; color: var(--text-main);">{u.nombre}</span>
+              <span style="font-size: 0.76rem; color: var(--accent-red); font-weight: 600;">{u.compras} compras ({u.monto})</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div style="font-size: 0.74rem; color: var(--text-muted); margin-top: 0.85rem; border-top: 1px dashed var(--border-color); padding-top: 0.4rem;">
+        Concentra $115.5M en gasto de IA sin resguardos pedagógicos o éticos formalizados.
+      </div>
+    </div>
+
+    <!-- Q1: Gobernanza Integral (Alto Gasto / Con Norma) -->
+    <div style="background: rgba(16, 185, 129, 0.04); border: 1.5px solid rgba(16, 185, 129, 0.4); border-radius: 10px; padding: 1.1rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+          <span style="font-weight: 700; font-size: 0.88rem; color: var(--accent-green);">✓ Cuadrante 1: Gobernanza Integral (7 Planteles)</span>
+          <span class="badge badge-green" style="font-size: 0.72rem; font-weight: 600;">Alineadas</span>
+        </div>
+        <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 0.85rem;">
+          <strong>Inversión tecnológica respaldada con directrices:</strong> Universidades compradoras que han dictado resoluciones o lineamientos institucionales (IMN 28 a 96 pts).
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.45rem;">
+          {q1_gobernanza.map(u => (
+            <div style="background: var(--card-bg); border: 1px solid var(--border-color); padding: 0.4rem 0.55rem; border-radius: 6px; font-size: 0.78rem;">
+              <div style="font-weight: 600; color: var(--text-main);">{u.nombre}</div>
+              <div style="font-size: 0.72rem; color: var(--accent-green);">IMN: {u.imn} • {u.monto}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div style="font-size: 0.74rem; color: var(--text-muted); margin-top: 0.85rem; border-top: 1px dashed var(--border-color); padding-top: 0.4rem;">
+        Liderado por U. de Chile (IMN 96), U. de Los Lagos (IMN 88.8) y U. de Valparaíso (IMN 66.8).
+      </div>
+    </div>
+
+    <!-- Q4: Rezago Dual (Sin Compras / Sin Norma) -->
+    <div style="background: rgba(0,0,0,0.02); border: 1px solid var(--border-color); border-radius: 10px; padding: 1.1rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+          <span style="font-weight: 700; font-size: 0.88rem; color: var(--text-muted);">○ Cuadrante 4: Rezago Dual (7 Planteles)</span>
+          <span class="badge" style="font-size: 0.72rem;">Sin Registro</span>
+        </div>
+        <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 0.75rem;">
+          <strong>Sin compras directas de IA ni protocolos públicos al corte:</strong> No registran adquisiciones de software IA en Mercado Público ni documentos normativos identificados.
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.35rem;">
+          {q4_rezago.map(u => (
+            <span class="badge" style="background: var(--card-bg); border: 1px solid var(--border-color); font-size: 0.76rem; color: var(--text-main);">
+              {u.sigla} ({u.nombre})
+            </span>
+          ))}
+        </div>
+      </div>
+      <div style="font-size: 0.74rem; color: var(--text-muted); margin-top: 0.85rem; border-top: 1px dashed var(--border-color); padding-top: 0.4rem;">
+        Potencial adopción informal no regulada o uso exclusivo de versiones gratuitas por docentes.
+      </div>
+    </div>
+
+    <!-- Q3: Regulación Preventiva (Sin Compras / Con Norma) -->
+    <div style="background: rgba(59, 130, 246, 0.04); border: 1.5px solid rgba(59, 130, 246, 0.4); border-radius: 10px; padding: 1.1rem; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+          <span style="font-weight: 700; font-size: 0.88rem; color: var(--accent-blue);">📘 Cuadrante 3: Regulación Preventiva (1 Plantel)</span>
+          <span class="badge badge-blue" style="font-size: 0.72rem;">Preventiva</span>
+        </div>
+        <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 0.75rem;">
+          <strong>Marco normativo formal sin compras centralizadas en Mercado Público:</strong> Planteles con resoluciones activas de aula y ética sin haber contratado servicios comerciales de IA vía ChileCompra.
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 0.45rem;">
+          {q3_preventiva.map(u => (
+            <div style="display: flex; justify-content: space-between; align-items: center; background: var(--card-bg); border: 1px solid var(--border-color); padding: 0.45rem 0.65rem; border-radius: 6px; font-size: 0.82rem;">
+              <span style="font-weight: 600; color: var(--text-main);">{u.nombre} ({u.sigla})</span>
+              <span style="font-size: 0.76rem; color: var(--accent-blue); font-weight: 600;">IMN: {u.imn} pts • Sin compras MP</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div style="font-size: 0.74rem; color: var(--text-muted); margin-top: 0.85rem; border-top: 1px dashed var(--border-color); padding-top: 0.4rem;">
+        Orientación pedagógica temprana sin dependencia de compras comerciales de gran escala.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Pie con llamado de auditoría -->
+  <div style="font-size: 0.8rem; color: var(--text-muted); background: rgba(0,0,0,0.02); padding: 0.65rem 0.95rem; border-radius: 6px; border-left: 3px solid var(--accent-amber); line-height: 1.4;">
+    <strong>Conclusión de Auditoría:</strong> El 70% de las universidades estatales compradoras ha formalizado al menos un lineamiento institucional. Sin embargo, la persistencia de un 30% que adquiere infraestructura o asistentes conversacionales sin lineamientos de aula ni cláusulas de la Ley N° 21.719 representa un riesgo de responsabilidad institucional y control de legalidad ante la CGR.
+  </div>
+
+</div>

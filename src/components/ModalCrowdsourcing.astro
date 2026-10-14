@@ -32,26 +32,67 @@ import matrizData from '../../data/matriz_54_universidades.json';
         </select>
       </div>
 
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap:0.75rem;">
+        <div>
+          <label for="crowd-decreto" style="display:block; font-size:0.84rem; font-weight:600; margin-bottom:0.35rem;">
+            N° de Decreto o Resolución *
+          </label>
+          <input 
+            type="text" 
+            id="crowd-decreto" 
+            required
+            placeholder="Ej: Decreto Exento N° 124/2025" 
+            style="width:100%; padding:0.65rem 0.85rem; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-main); font-size:0.9rem;"
+          />
+        </div>
+        <div>
+          <label for="crowd-organo" style="display:block; font-size:0.84rem; font-weight:600; margin-bottom:0.35rem;">
+            Órgano Emisor *
+          </label>
+          <select id="crowd-organo" required style="width:100%; padding:0.65rem 0.85rem; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-main); font-size:0.9rem;">
+            <option value="Rectoría Central">Rectoría Central</option>
+            <option value="Vicerrectoría Académica">Vicerrectoría Académica / Docencia</option>
+            <option value="Decanato / Facultad">Decanato / Facultad</option>
+            <option value="Dirección Docente">Dirección de Docencia / Escuela</option>
+            <option value="Comité Institucional">Comité Institucional de Ética / IA</option>
+            <option value="Otro">Otro órgano colegiado</option>
+          </select>
+        </div>
+      </div>
+
       <div>
         <label for="crowd-url" style="display:block; font-size:0.84rem; font-weight:600; margin-bottom:0.35rem;">
-          Enlace a la Normativa / Portal Web
+          Enlace Web Oficial al Documento o Portal *
         </label>
         <input 
           type="url" 
           id="crowd-url" 
+          required
           placeholder="https://universidad.cl/resolucion-ia.pdf" 
           style="width:100%; padding:0.65rem 0.85rem; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-main); font-size:0.9rem;"
         />
       </div>
 
       <div>
+        <label for="crowd-adjunto" style="display:block; font-size:0.84rem; font-weight:600; margin-bottom:0.35rem;">
+          Enlace a Archivo de Respaldo en la Nube (Opcional)
+        </label>
+        <input 
+          type="url" 
+          id="crowd-adjunto" 
+          placeholder="https://drive.google.com/... o Dropbox / OneDrive" 
+          style="width:100%; padding:0.65rem 0.85rem; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-main); font-size:0.9rem;"
+        />
+      </div>
+
+      <div>
         <label for="crowd-resumen" style="display:block; font-size:0.84rem; font-weight:600; margin-bottom:0.35rem;">
-          Resumen o Detalles del Instrumento (Decreto, alcance, fecha)
+          Resumen de Alcance o Cláusulas Relevantes (Opcional)
         </label>
         <textarea 
           id="crowd-resumen" 
-          rows="3" 
-          placeholder="Ej: Resolución Rectoría N° 12/2025 que aprueba lineamientos para docencia de pregrado y prohíbe autoría IA..."
+          rows="2" 
+          placeholder="Ej: Regula uso ético en pregrado, prohíbe autoría en tesis y establece comités de seguimiento..."
           style="width:100%; padding:0.65rem 0.85rem; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-main); font-size:0.9rem; resize:vertical;"
         ></textarea>
       </div>
@@ -64,13 +105,13 @@ import matrizData from '../../data/matriz_54_universidades.json';
           <input 
             type="text" 
             id="crowd-nombre" 
-            placeholder="Prof. / Estudiante" 
+            placeholder="Prof. / Directivo / Estudiante" 
             style="width:100%; padding:0.6rem 0.85rem; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-main); font-size:0.9rem;"
           />
         </div>
         <div>
           <label for="crowd-email" style="display:block; font-size:0.84rem; font-weight:600; margin-bottom:0.35rem;">
-            Tu Correo (Opcional)
+            Tu Correo Institucional (Opcional para fe pública)
           </label>
           <input 
             type="email" 
@@ -81,20 +122,30 @@ import matrizData from '../../data/matriz_54_universidades.json';
         </div>
       </div>
 
-      <!-- Aviso de archivos adjuntos vía email -->
-      <div style="background:var(--accent-blue-soft); border-left:3px solid var(--accent-blue); padding:0.85rem 1rem; border-radius:4px; font-size:0.82rem; color:var(--text-main); line-height:1.45;">
+      <!-- Canales alternativos directos: GitHub Issue & Email -->
+      <div style="background:var(--accent-blue-soft); border-left:3px solid var(--accent-blue); padding:0.75rem 1rem; border-radius:6px; font-size:0.82rem; color:var(--text-main); line-height:1.45;">
         <div style="margin-bottom:0.45rem;">
-          📎 <strong>¿Tienes el archivo PDF o resolución escaneada?</strong><br />
-          Por resguardo documental y seguridad, los documentos en PDF se canalizan directamente por correo electrónico:
+          <strong>Canales Alternativos de Auditoría y Verificación:</strong>
         </div>
-        <a 
-          id="crowd-mailto-pdf"
-          href="mailto:eduardo@evegat.cl?subject=Adjunto%20Normativa%20IA%20-%20Educaci%C3%B3n%20Superior&body=Estimado%20Eduardo%2C%0A%0AAdjunto%20el%20documento%20PDF%20o%20resoluci%C3%B3n%20de%20la%20universidad%20para%20su%20incorporaci%C3%B3n%20al%20catastro.%0A%0ASaludos%2C" 
-          class="btn btn-outline btn-sm"
-          style="display:inline-flex; align-items:center; gap:0.35rem; font-size:0.8rem; padding:0.35rem 0.75rem; background:#ffffff; color:var(--accent-blue); font-weight:600; text-decoration:none; border-color:var(--accent-blue);"
-        >
-          ✉️ Enviar archivo PDF a eduardo@evegat.cl
-        </a>
+        <div style="display:flex; gap:0.5rem; flex-wrap:wrap; align-items:center;">
+          <a 
+            href="https://github.com/evegat/brujula-ia-edusuperior/issues/new?title=%5BAporte+Normativa%5D+Nueva+Directriz&body=%23%23+Instituci%C3%B3n%0A%0A%23%23+N%C2%B0+Decreto+%2F+Resoluci%C3%B3n%0A%0A%23%23+%C3%93rgano+Emisor%0A%0A%23%23+Enlace+al+Documento%0A%0A%23%23+Resumen%0A"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-outline btn-sm"
+            style="display:inline-flex; align-items:center; gap:0.35rem; font-size:0.78rem; padding:0.3rem 0.65rem; background:#ffffff; color:#24292f; font-weight:600; text-decoration:none; border-color:#d0d7de;"
+          >
+            🐙 Abrir Issue en GitHub
+          </a>
+          <a 
+            id="crowd-mailto-pdf"
+            href="mailto:eduardo@evegat.cl?subject=Adjunto%20Normativa%20IA%20-%20Educaci%C3%B3n%20Superior&body=Estimado%20Eduardo%2C%0A%0AAdjunto%20el%20documento%20PDF%20o%20resoluci%C3%B3n%20de%20la%20universidad%20para%20su%20incorporaci%C3%B3n%20al%20catastro.%0A%0ASaludos%2C" 
+            class="btn btn-outline btn-sm"
+            style="display:inline-flex; align-items:center; gap:0.35rem; font-size:0.78rem; padding:0.3rem 0.65rem; background:#ffffff; color:var(--accent-blue); font-weight:600; text-decoration:none; border-color:var(--accent-blue);"
+          >
+            ✉️ Enviar PDF a eduardo@evegat.cl
+          </a>
+        </div>
       </div>
 
       <div id="crowd-feedback" style="display:none; padding:0.75rem; border-radius:6px; font-size:0.85rem;"></div>
@@ -236,7 +287,10 @@ import matrizData from '../../data/matriz_54_universidades.json';
 
     const payload = {
       institucion: document.getElementById('crowd-institucion').value,
+      numero_decreto: document.getElementById('crowd-decreto')?.value || '',
+      organo_emisor: document.getElementById('crowd-organo')?.value || '',
       url_normativa: document.getElementById('crowd-url').value,
+      url_adjunto: document.getElementById('crowd-adjunto')?.value || '',
       resumen: document.getElementById('crowd-resumen').value,
       remitente_nombre: document.getElementById('crowd-nombre').value,
       remitente_email: document.getElementById('crowd-email').value

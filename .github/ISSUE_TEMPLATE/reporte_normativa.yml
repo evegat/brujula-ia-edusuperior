@@ -1,0 +1,72 @@
+name: "Reporte de Normativa / Decreto de IA"
+description: "Aporta o actualiza un decreto, política o directriz de IA de una universidad chilena."
+title: "[Aporte Normativa]: "
+labels: ["aporte-comunitario", "normativa-ia"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por contribuir a la transparencia y rigor de **Brújula IA Educación Superior**. 
+        Por favor ingresa los datos oficiales del acto normativo para su verificación y catalogación.
+  - type: input
+    id: institucion
+    attributes:
+      label: "Institución Universitaria"
+      description: "Nombre oficial de la universidad chilena."
+      placeholder: "Ej: Universidad de Chile / Universidad de Concepción"
+    validations:
+      required: true
+  - type: input
+    id: numero_decreto
+    attributes:
+      label: "N° de Decreto o Resolución"
+      description: "Identificador formal del acto administrativo o académico."
+      placeholder: "Ej: Decreto Exento Rectoría N° 045/2025"
+    validations:
+      required: true
+  - type: dropdown
+    id: organo_emisor
+    attributes:
+      label: "Órgano Emisor"
+      description: "Nivel jerárquico que dictó el instrumento."
+      options:
+        - "Rectoría Central"
+        - "Vicerrectoría Académica / Docencia"
+        - "Decanato / Facultad"
+        - "Dirección Docente / Escuela"
+        - "Comité Institucional de Ética / IA"
+        - "Otro órgano colegiado"
+    validations:
+      required: true
+  - type: input
+    id: url_documento
+    attributes:
+      label: "Enlace Web Oficial al Documento"
+      description: "URL pública al portal institucional, repositorio o boletín oficial donde se encuentra publicado."
+      placeholder: "https://universidad.cl/resolucion-ia.pdf"
+    validations:
+      required: true
+  - type: input
+    id: url_adjunto
+    attributes:
+      label: "Enlace a Respaldo en la Nube (Opcional)"
+      description: "URL a Google Drive, Dropbox, OneDrive o Cloudflare si el PDF no tiene acceso público directo."
+      placeholder: "https://drive.google.com/..."
+    validations:
+      required: false
+  - type: textarea
+    id: resumen_clausulas
+    attributes:
+      label: "Resumen o Cláusulas Destacadas (Opcional)"
+      description: "Breve síntesis de los aspectos regulados (integridad de aula, autoría, privacidad Ley 21.719, rediseño de evaluaciones, etc.)."
+      placeholder: "La resolución prohíbe autoría de IA en tesis y establece protocolos para pruebas presenciales..."
+    validations:
+      required: false
+  - type: input
+    id: remitente
+    attributes:
+      label: "Contacto Institucional (Opcional)"
+      description: "Nombre y correo institucional en caso de requerir precisar antecedentes."
+      placeholder: "profesor@universidad.cl"
+    validations:
+      required: false

@@ -2,6 +2,7 @@
 import type { SupportedLang } from '../i18n/ui';
 import { useTranslations } from '../i18n/ui';
 import comprasData from '../../data/compras_clasificadas.json';
+import TableroCorrelacionEstatales from './TableroCorrelacionEstatales.astro';
 
 interface Props {
   lang?: SupportedLang;
@@ -71,6 +72,18 @@ function obtenerBadgeCapa(capa: string, langKey: SupportedLang): { label: string
         <strong>{lang === 'en' ? 'Study Scope:' : lang === 'pt' ? 'Escopo do Estudo:' : 'Alcance del estudio:'}</strong> {t('compras.scope_note')}
       </div>
     </div>
+
+    <!-- Botón de Descarga Directa CSV de Compras -->
+    <div style="display:flex; gap:0.5rem; align-items:center;">
+      <a 
+        href="/compras_ia_estatales.csv" 
+        download="compras_ia_universidades_estatales_chile.csv" 
+        class="btn btn-outline btn-sm" 
+        style="font-size:0.82rem; color:var(--accent-amber); border-color:var(--accent-amber); text-decoration:none; display:inline-flex; align-items:center; gap:0.35rem;"
+      >
+        📊 {lang === 'en' ? 'Download Procurement (.csv)' : lang === 'pt' ? 'Baixar Licitações (.csv)' : 'Descargar Compras (.csv)'}
+      </a>
+    </div>
   </div>
 
   <!-- Estadísticas Principales de Compras -->
@@ -92,6 +105,9 @@ function obtenerBadgeCapa(capa: string, langKey: SupportedLang): { label: string
       <div style="font-size:0.8rem; color:var(--text-muted);">{lang === 'en' ? 'Computing, Back-office, Chatbots, Instruction' : lang === 'pt' ? 'Computação, Back-office, Chatbots, Docência' : 'Cómputo, Back-office, Chatbots y Docencia'}</div>
     </div>
   </div>
+
+  <!-- Tablero 2x2 de Correlación Ejecutiva -->
+  <TableroCorrelacionEstatales lang={lang} />
 
   <!-- Barra de Filtros y Búsqueda de Compras -->
   <div style="background:var(--card-bg); border:1px solid var(--border-color); border-radius:12px; padding:1.25rem; margin-bottom:1.5rem; box-shadow:var(--shadow-sm);">

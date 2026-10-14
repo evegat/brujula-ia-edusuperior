@@ -342,7 +342,9 @@ async function testAdversarial() {
     'compras_clasificadas.json',
     'citas_enriquecidas.json',
     'ranking_madurez_imn.json',
-    'brecha_universidades_chile.json'
+    'brecha_universidades_chile.json',
+    'matriz_54_universidades.csv',
+    'compras_ia_estatales.csv'
   ];
   for (const ds of requiredDatasets) {
     const pubPath = path.join(ROOT, 'public', ds);

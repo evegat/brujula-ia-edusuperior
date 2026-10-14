@@ -80,6 +80,30 @@ async function runTests() {
   assert.ok(data.ticket_id.startsWith('NORM-'));
   console.log('✓ Submit normativa válido pasó con ticket:', data.ticket_id);
 
+  // 5b. Submit normativa estructurado (decreto, organo_emisor, url_adjunto)
+  res = await submitNormativaHandler({
+    request: new Request('http://localhost/api/submit-normativa', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        institucion: 'Universidad de Valparaíso',
+        numero_decreto: 'Decreto Exento N° 124/2025',
+        organo_emisor: 'Rectoría Central',
+        url_normativa: 'https://uv.cl/decreto-124.pdf',
+        url_adjunto: 'https://drive.google.com/file/d/123/view',
+        resumen: 'Regulación integral de aula y autoría',
+        remitente_nombre: 'Dra. María González',
+        remitente_email: 'maria.gonzalez@uv.cl'
+      })
+    })
+  });
+  assert.strictEqual(res.status, 200);
+  data = await res.json();
+  assert.strictEqual(data.success, true);
+  assert.strictEqual(data.data.numero_decreto, 'Decreto Exento N° 124/2025');
+  assert.strictEqual(data.data.organo_emisor, 'Rectoría Central');
+  console.log('✓ Submit normativa estructurado pasó con ticket:', data.ticket_id);
+
   // 6. Submit normativa sin institución
   res = await submitNormativaHandler({
     request: new Request('http://localhost/api/submit-normativa', {
