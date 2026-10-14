@@ -362,11 +362,11 @@ async function testAdversarial() {
   assert.ok(distHtml.includes('unhandledrejection'), 'index.html debe registrar unhandledrejection');
   console.log('✓ Telemetría diagnóstica de errores no capturados activa en index.html');
 
-  // 9.2 Verificación de Optimización de Tamaño de index.html (< 1200 KB)
+  // 9.2 Verificación de Optimización de Tamaño de index.html (< 1350 KB)
   const htmlSize = fs.statSync(path.join(ROOT, 'dist/client/index.html')).size;
-  assert.ok(htmlSize < 1200 * 1024, `index.html debe pesar menos de 1200 KB tras remover citasData inline (actual: ${Math.round(htmlSize / 1024)} KB)`);
+  assert.ok(htmlSize < 1350 * 1024, `index.html debe pesar menos de 1350 KB tras incorporar metadatos de licitaciones/OCs (actual: ${Math.round(htmlSize / 1024)} KB)`);
   assert.ok(!distHtml.includes('const citasData = ['), 'index.html no debe inyectar citasData redundantemente en script');
-  console.log(`✓ Payload de index.html optimizado: ${Math.round(htmlSize / 1024)} KB (< 1200 KB) sin JSON redundante`);
+  console.log(`✓ Payload de index.html optimizado: ${Math.round(htmlSize / 1024)} KB (< 1350 KB) sin JSON redundante`);
 
   // 9.3 Verificación de Protección XSS en scripts de cliente
   const ragScript = fs.readFileSync(path.join(ROOT, 'src/components/RagAssistant.astro'), 'utf-8');

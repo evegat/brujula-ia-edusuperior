@@ -47,17 +47,25 @@ Este observatorio **NO almacena, trata ni publica datos personales de personas n
 
 ---
 
-### 3. Protocolo de Rectificación Expedita y Buena Fe (*Right to Reply*)
+### 3. Metodología de Levantamiento Técnico y Rastreo en Portales Abiertos
 
-En concordancia con los principios de buena fe y rigurosidad empírica:
-
-1. **Canal Abierto de Rectificación:** Cualquier universidad, autoridad, docente o miembro de la comunidad que constate una omisión, imprecisión, enlace caduco o que disponga de una nueva normativa formal aprobada, podrá remitir los antecedentes al correo electrónico:  
-   👉 **`eduardo@evegat.cl`** (con copia al formulario web de crowdsourcing).
-2. **Compromiso de Actualización en 48 Horas:** Tras la verificación técnica y documental de los antecedentes remitidos (validación del PDF o enlace oficial de rectoría/vicerrectoría), el observatorio se compromete formalmente a incorporar o rectificar la ficha institucional en un plazo no superior a **48 horas hábiles**, actualizando el repositorio de código y la plataforma en producción.
+1. **Cumplimiento de la Ley N° 21.459 sobre Delitos Informáticos:** La recopilación de antecedentes y documentos de universidades públicas y privadas se efectuó exclusivamente sobre recursos, páginas web y repositorios documentales de acceso público e irrestricto en internet. No se vulneraron barreras técnicas de autenticación, contraseñas, credenciales de usuario ni medidas de seguridad informática (Art. 2 de la Ley N° 21.459).
+2. **Navegación Pasiva y Respeto a Servidores:** Las consultas técnicas operaron bajo estándares de baja frecuencia y navegación pasiva, resguardando la estabilidad y disponibilidad operativa de las plataformas institucionales.
+3. **No Invasión de Entornos Cerrados:** El levantamiento no abarca plataformas LMS protegidas (Canvas, Moodle, Blackboard) ni intranets corporativas. Por tanto, el observatorio reconoce que pueden existir reglamentos y directrices vigentes no accesibles al público general, manteniendo a disposición de cada institución el canal expedito de rectificación colaborativa.
 
 ---
 
-### 4. Licencia y Uso de Datos
+### 4. Protocolo de Rectificación y Actualización Colaborativa (*Right to Reply*)
+
+En concordancia con los principios de buena fe y rigurosidad empírica:
+
+1. **Canal Abierto de Rectificación:** Cualquier universidad, autoridad, docente o miembro de la comunidad que constate una omisión, imprecisión, enlace caduco o que disponga de una nueva política o directriz formal aprobada, podrá remitir los antecedentes al correo electrónico:  
+   👉 **`eduardo@evegat.cl`** (o a través del formulario web de aporte en la plataforma).
+2. **Plazo Referencial de Actualización:** Tras la verificación técnica y documental de los antecedentes remitidos (validación del PDF o enlace oficial de rectoría/vicerrectoría), el observatorio procurará incorporar o rectificar la ficha institucional en un plazo **referencial estimado de 48 horas hábiles**, actualizando el repositorio de código y la plataforma en producción.
+
+---
+
+### 5. Licencia y Uso de Datos
 
 - **Datos y Contenidos:** Disponibles públicamente bajo la licencia [Creative Commons Atribución 4.0 Internacional (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). Se autoriza su reproducción, distribución y reutilización libre citando la fuente: *«Brújula IA Educación Superior Chile (Eduardo Vega Toledo, 2026)»*.
 - **Código Fuente:** Licencia [MIT](https://opensource.org/licenses/MIT).
