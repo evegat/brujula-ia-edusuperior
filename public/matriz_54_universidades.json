@@ -59,7 +59,10 @@
         "enforcement": "Lineamientos con categorías",
         "exige_declaracion": true
       }
-    ]
+    ],
+    "sede_central": "Santiago",
+    "territorio": "Metropolitana / Nacional",
+    "alcance_normativo": "Institucional (Central)"
   },
   {
     "registro": "B4",
@@ -94,7 +97,10 @@
         "enforcement": "Decálogo vinculante",
         "exige_declaracion": true
       }
-    ]
+    ],
+    "sede_central": "Valparaíso",
+    "territorio": "Regional",
+    "alcance_normativo": "Institucional (Central)"
   },
   {
     "registro": "C14",
@@ -129,7 +135,10 @@
         "enforcement": "Guía formativa con bitácoras de trabajo obligatorias",
         "exige_declaracion": true
       }
-    ]
+    ],
+    "sede_central": "Santiago",
+    "territorio": "Metropolitana / Nacional",
+    "alcance_normativo": "Institucional (Central)"
   },
   {
     "registro": "C26",
@@ -173,7 +182,10 @@
         "enforcement": "Guía orientadora",
         "exige_declaracion": true
       }
-    ]
+    ],
+    "sede_central": "Santiago",
+    "territorio": "Metropolitana / Nacional",
+    "alcance_normativo": "Institucional (Central)"
   },
   {
     "registro": "C74",
@@ -208,7 +220,10 @@
         "enforcement": "Orientaciones con criterios formativos",
         "exige_declaracion": true
       }
-    ]
+    ],
+    "sede_central": "Santiago",
+    "territorio": "Metropolitana / Nacional",
+    "alcance_normativo": "Institucional (Central)"
   },
   {
     "registro": "C23",
@@ -243,7 +258,10 @@
         "enforcement": "Lineamiento institucional",
         "exige_declaracion": true
       }
-    ]
+    ],
+    "sede_central": "Santiago",
+    "territorio": "Metropolitana / Nacional",
+    "alcance_normativo": "Institucional (Central)"
   },
   {
     "registro": "B5",
@@ -278,7 +296,10 @@
         "enforcement": "Protocolo formal con revisión anual",
         "exige_declaracion": true
       }
-    ]
+    ],
+    "sede_central": "Valdivia",
+    "territorio": "Regional",
+    "alcance_normativo": "Por Facultad"
   },
   {
     "registro": "C35",
@@ -313,7 +334,10 @@
         "enforcement": "Reglamento con decreto",
         "exige_declaracion": true
       }
-    ]
+    ],
+    "sede_central": "Santiago",
+    "territorio": "Metropolitana / Nacional",
+    "alcance_normativo": "Institucional (Central)"
   },
   {
     "registro": "C54",
@@ -348,7 +372,10 @@
         "enforcement": "Modelo institucional",
         "exige_declaracion": false
       }
-    ]
+    ],
+    "sede_central": "Santiago",
+    "territorio": "Metropolitana / Nacional",
+    "alcance_normativo": "Por Facultad"
   },
   {
     "registro": "B9",
@@ -383,7 +410,10 @@
         "enforcement": "Orientaciones con asistentes",
         "exige_declaracion": false
       }
-    ]
+    ],
+    "sede_central": "Temuco",
+    "territorio": "Regional",
+    "alcance_normativo": "Institucional (Central)"
   },
   {
     "registro": "B6",
@@ -418,7 +448,10 @@
         "enforcement": "Normativa editorial",
         "exige_declaracion": true
       }
-    ]
+    ],
+    "sede_central": "Antofagasta",
+    "territorio": "Regional",
+    "alcance_normativo": "Por Facultad"
   },
   {
     "registro": "C4",
@@ -453,7 +486,10 @@
         "enforcement": "Política en proceso",
         "exige_declaracion": false
       }
-    ]
+    ],
+    "sede_central": "Santiago",
+    "territorio": "Metropolitana / Nacional",
+    "alcance_normativo": "Institucional (Central)"
   },
   {
     "registro": "A4",
@@ -488,7 +524,10 @@
         "enforcement": "Directrices éticas",
         "exige_declaracion": true
       }
-    ]
+    ],
+    "sede_central": "Antofagasta",
+    "territorio": "Regional",
+    "alcance_normativo": "Institucional (Central)"
   },
   {
     "registro": "A10",
@@ -526,7 +565,10 @@
         "enforcement": "Comité en funcionamiento, documento en desarrollo",
         "exige_declaracion": false
       }
-    ]
+    ],
+    "sede_central": "Copiapó",
+    "territorio": "Regional",
+    "alcance_normativo": "Institucional (Central)"
   },
   {
     "registro": "A1",
@@ -611,7 +653,10 @@
         "enforcement": "Normativa editorial",
         "exige_declaracion": true
       }
-    ]
+    ],
+    "sede_central": "Santiago",
+    "territorio": "Metropolitana / Nacional",
+    "alcance_normativo": "Institucional (Central)"
   },
   {
     "registro": "B2",
@@ -646,7 +691,10 @@
         "enforcement": "Guía con ecosistema [genIA]",
         "exige_declaracion": true
       }
-    ]
+    ],
+    "sede_central": "Concepción",
+    "territorio": "Regional",
+    "alcance_normativo": "Institucional (Central)"
   },
   {
     "registro": "A7",
@@ -684,7 +732,10 @@
         "enforcement": "Orientaciones pedagógicas",
         "exige_declaracion": false
       }
-    ]
+    ],
+    "sede_central": "Temuco",
+    "territorio": "Regional",
+    "alcance_normativo": "Institucional (Central)"
   },
   {
     "registro": "C22",
@@ -728,7 +779,10 @@
         "enforcement": "Guía operativa",
         "exige_declaracion": true
       }
-    ]
+    ],
+    "sede_central": "Santiago",
+    "territorio": "Metropolitana / Nacional",
+    "alcance_normativo": "Institucional (Central)"
   },
   {
     "registro": "C38",
@@ -763,7 +817,10 @@
         "enforcement": "Guía de integridad y declaración obligatoria de prompts",
         "exige_declaracion": true
       }
-    ]
+    ],
+    "sede_central": "Santiago",
+    "territorio": "Metropolitana / Nacional",
+    "alcance_normativo": "Institucional (Central)"
   },
   {
     "registro": "A15",
@@ -800,7 +857,10 @@
         "enforcement": "Decreto universitario",
         "exige_declaracion": true
       }
-    ]
+    ],
+    "sede_central": "Osorno / Puerto Montt",
+    "territorio": "Regional",
+    "alcance_normativo": "Institucional (Central)"
   },
   {
     "registro": "A2",
@@ -839,7 +899,10 @@
         "enforcement": "Guía informativa",
         "exige_declaracion": false
       }
-    ]
+    ],
+    "sede_central": "Santiago",
+    "territorio": "Metropolitana / Nacional",
+    "alcance_normativo": "Por Facultad"
   },
   {
     "registro": "A9",
@@ -876,7 +939,10 @@
         "enforcement": "Normativa editorial con límite 20%",
         "exige_declaracion": true
       }
-    ]
+    ],
+    "sede_central": "Talca",
+    "territorio": "Regional",
+    "alcance_normativo": "Por Facultad"
   },
   {
     "registro": "A3",
@@ -922,7 +988,10 @@
         "enforcement": "Guía docente",
         "exige_declaracion": true
       }
-    ]
+    ],
+    "sede_central": "Valparaíso",
+    "territorio": "Regional",
+    "alcance_normativo": "Institucional (Central)"
   },
   {
     "registro": "C12",
@@ -957,7 +1026,10 @@
         "enforcement": "Guía orientadora con citación explícita de prompts",
         "exige_declaracion": true
       }
-    ]
+    ],
+    "sede_central": "Santiago",
+    "territorio": "Metropolitana / Nacional",
+    "alcance_normativo": "Institucional (Central)"
   },
   {
     "registro": "C49",
@@ -1010,7 +1082,10 @@
         "enforcement": "Recomendaciones",
         "exige_declaracion": true
       }
-    ]
+    ],
+    "sede_central": "Santiago",
+    "territorio": "Metropolitana / Nacional",
+    "alcance_normativo": "Institucional (Central)"
   },
   {
     "registro": "C3",
@@ -1054,7 +1129,10 @@
         "enforcement": "Protocolo",
         "exige_declaracion": true
       }
-    ]
+    ],
+    "sede_central": "Santiago",
+    "territorio": "Metropolitana / Nacional",
+    "alcance_normativo": "Institucional (Central)"
   },
   {
     "registro": "C1",
@@ -1089,7 +1167,10 @@
         "enforcement": "Protocolo con tipificación de plagio por IA",
         "exige_declaracion": true
       }
-    ]
+    ],
+    "sede_central": "Santiago",
+    "territorio": "Metropolitana / Nacional",
+    "alcance_normativo": "Institucional (Central)"
   },
   {
     "registro": "C13",
@@ -1124,7 +1205,10 @@
         "enforcement": "Reglamento con sanciones (nota 1.0)",
         "exige_declaracion": false
       }
-    ]
+    ],
+    "sede_central": "Santiago",
+    "territorio": "Metropolitana / Nacional",
+    "alcance_normativo": "Institucional (Central)"
   },
   {
     "registro": "C72",
@@ -1159,7 +1243,10 @@
         "enforcement": "Instructivo vinculante con foco en persona humana",
         "exige_declaracion": true
       }
-    ]
+    ],
+    "sede_central": "Santiago",
+    "territorio": "Metropolitana / Nacional",
+    "alcance_normativo": "Institucional (Central)"
   },
   {
     "registro": "C43",
@@ -1194,7 +1281,10 @@
         "enforcement": "Código con registro de prompts",
         "exige_declaracion": true
       }
-    ]
+    ],
+    "sede_central": "Santiago",
+    "territorio": "Metropolitana / Nacional",
+    "alcance_normativo": "Institucional (Central)"
   },
   {
     "registro": "C16",
@@ -1229,7 +1319,10 @@
         "enforcement": "Decreto formal con sanciones disciplinarias",
         "exige_declaracion": true
       }
-    ]
+    ],
+    "sede_central": "Santiago",
+    "territorio": "Metropolitana / Nacional",
+    "alcance_normativo": "Institucional (Central)"
   },
   {
     "registro": "B3",
@@ -1264,7 +1357,10 @@
         "enforcement": "Guía orientadora con criterios formativos",
         "exige_declaracion": true
       }
-    ]
+    ],
+    "sede_central": "Valparaíso",
+    "territorio": "Regional",
+    "alcance_normativo": "Institucional (Central)"
   },
   {
     "registro": "C42",
@@ -1289,7 +1385,10 @@
       "monto_total": 0,
       "capas": []
     },
-    "instrumentos": []
+    "instrumentos": [],
+    "sede_central": "Chillán",
+    "territorio": "Regional",
+    "alcance_normativo": "Sin instrumento"
   },
   {
     "registro": "A12",
@@ -1314,7 +1413,10 @@
       "monto_total": 0,
       "capas": []
     },
-    "instrumentos": []
+    "instrumentos": [],
+    "sede_central": "Iquique",
+    "territorio": "Regional",
+    "alcance_normativo": "Sin instrumento"
   },
   {
     "registro": "C10",
@@ -1339,7 +1441,10 @@
       "monto_total": 0,
       "capas": []
     },
-    "instrumentos": []
+    "instrumentos": [],
+    "sede_central": "Santiago",
+    "territorio": "Metropolitana / Nacional",
+    "alcance_normativo": "Sin instrumento"
   },
   {
     "registro": "C46",
@@ -1364,7 +1469,10 @@
       "monto_total": 0,
       "capas": []
     },
-    "instrumentos": []
+    "instrumentos": [],
+    "sede_central": "Santiago",
+    "territorio": "Metropolitana / Nacional",
+    "alcance_normativo": "Sin instrumento"
   },
   {
     "registro": "B8",
@@ -1389,7 +1497,10 @@
       "monto_total": 0,
       "capas": []
     },
-    "instrumentos": []
+    "instrumentos": [],
+    "sede_central": "Concepción",
+    "territorio": "Regional",
+    "alcance_normativo": "Sin instrumento"
   },
   {
     "registro": "B7",
@@ -1414,7 +1525,10 @@
       "monto_total": 0,
       "capas": []
     },
-    "instrumentos": []
+    "instrumentos": [],
+    "sede_central": "Talca",
+    "territorio": "Regional",
+    "alcance_normativo": "Sin instrumento"
   },
   {
     "registro": "C50",
@@ -1439,7 +1553,10 @@
       "monto_total": 0,
       "capas": []
     },
-    "instrumentos": []
+    "instrumentos": [],
+    "sede_central": "San Felipe / Aconcagua",
+    "territorio": "Regional",
+    "alcance_normativo": "Sin instrumento"
   },
   {
     "registro": "C29",
@@ -1464,7 +1581,10 @@
       "monto_total": 0,
       "capas": []
     },
-    "instrumentos": []
+    "instrumentos": [],
+    "sede_central": "Santiago",
+    "territorio": "Metropolitana / Nacional",
+    "alcance_normativo": "Sin instrumento"
   },
   {
     "registro": "A18",
@@ -1489,7 +1609,10 @@
       "monto_total": 0,
       "capas": []
     },
-    "instrumentos": []
+    "instrumentos": [],
+    "sede_central": "Coyhaique",
+    "territorio": "Regional",
+    "alcance_normativo": "Sin instrumento"
   },
   {
     "registro": "A5",
@@ -1518,7 +1641,10 @@
         "Infraestructura_Computo"
       ]
     },
-    "instrumentos": []
+    "instrumentos": [],
+    "sede_central": "La Serena",
+    "territorio": "Regional",
+    "alcance_normativo": "Sin instrumento"
   },
   {
     "registro": "A8",
@@ -1543,7 +1669,10 @@
       "monto_total": 0,
       "capas": []
     },
-    "instrumentos": []
+    "instrumentos": [],
+    "sede_central": "Punta Arenas",
+    "territorio": "Regional",
+    "alcance_normativo": "Sin instrumento"
   },
   {
     "registro": "A17",
@@ -1568,7 +1697,10 @@
       "monto_total": 0,
       "capas": []
     },
-    "instrumentos": []
+    "instrumentos": [],
+    "sede_central": "Rancagua",
+    "territorio": "Regional",
+    "alcance_normativo": "Sin instrumento"
   },
   {
     "registro": "A14",
@@ -1593,7 +1725,10 @@
       "monto_total": 0,
       "capas": []
     },
-    "instrumentos": []
+    "instrumentos": [],
+    "sede_central": "Valparaíso",
+    "territorio": "Regional",
+    "alcance_normativo": "Sin instrumento"
   },
   {
     "registro": "A11",
@@ -1618,7 +1753,10 @@
       "monto_total": 0,
       "capas": []
     },
-    "instrumentos": []
+    "instrumentos": [],
+    "sede_central": "Arica",
+    "territorio": "Regional",
+    "alcance_normativo": "Sin instrumento"
   },
   {
     "registro": "C25",
@@ -1643,7 +1781,10 @@
       "monto_total": 0,
       "capas": []
     },
-    "instrumentos": []
+    "instrumentos": [],
+    "sede_central": "Viña del Mar",
+    "territorio": "Regional",
+    "alcance_normativo": "Sin instrumento"
   },
   {
     "registro": "A6",
@@ -1671,7 +1812,10 @@
         "Gestion_Backoffice"
       ]
     },
-    "instrumentos": []
+    "instrumentos": [],
+    "sede_central": "Concepción / Chillán",
+    "territorio": "Regional",
+    "alcance_normativo": "Sin instrumento"
   },
   {
     "registro": "C2",
@@ -1696,7 +1840,10 @@
       "monto_total": 0,
       "capas": []
     },
-    "instrumentos": []
+    "instrumentos": [],
+    "sede_central": "Santiago",
+    "territorio": "Metropolitana / Nacional",
+    "alcance_normativo": "Sin instrumento"
   },
   {
     "registro": "C19",
@@ -1721,7 +1868,10 @@
       "monto_total": 0,
       "capas": []
     },
-    "instrumentos": []
+    "instrumentos": [],
+    "sede_central": "Santiago",
+    "territorio": "Metropolitana / Nacional",
+    "alcance_normativo": "Sin instrumento"
   },
   {
     "registro": "C52",
@@ -1746,7 +1896,10 @@
       "monto_total": 0,
       "capas": []
     },
-    "instrumentos": []
+    "instrumentos": [],
+    "sede_central": "Santiago",
+    "territorio": "Metropolitana / Nacional",
+    "alcance_normativo": "Sin instrumento"
   },
   {
     "registro": "A13",
@@ -1771,7 +1924,10 @@
       "monto_total": 0,
       "capas": []
     },
-    "instrumentos": []
+    "instrumentos": [],
+    "sede_central": "Santiago",
+    "territorio": "Metropolitana / Nacional",
+    "alcance_normativo": "Sin instrumento"
   },
   {
     "registro": "C20",
@@ -1796,7 +1952,10 @@
       "monto_total": 0,
       "capas": []
     },
-    "instrumentos": []
+    "instrumentos": [],
+    "sede_central": "Santiago",
+    "territorio": "Metropolitana / Nacional",
+    "alcance_normativo": "Sin instrumento"
   },
   {
     "registro": "A16",
@@ -1824,6 +1983,9 @@
         "Infraestructura_Computo"
       ]
     },
-    "instrumentos": []
+    "instrumentos": [],
+    "sede_central": "Santiago",
+    "territorio": "Metropolitana / Nacional",
+    "alcance_normativo": "Sin instrumento"
   }
 ]

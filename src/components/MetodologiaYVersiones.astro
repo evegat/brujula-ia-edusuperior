@@ -43,8 +43,14 @@
         </div>
       </div>
 
-      <div style="font-size:0.8rem; color:var(--text-muted); line-height:1.45; background:var(--canvas-bg); padding:0.65rem; border-radius:6px;">
+      <div style="font-size:0.8rem; color:var(--text-muted); line-height:1.45; background:var(--canvas-bg); padding:0.65rem; border-radius:6px; margin-bottom:0.75rem;">
         <em>Nota sobre Institutos Profesionales y CFTs:</em> Documentos de planteles técnico-profesionales levantados (Duoc UC, IP Santo Tomás) se preservan como referencias sectoriales en el catálogo, pero no computan en el denominador del universo universitario de 54 planteles.
+      </div>
+
+      <!-- Aclaración Metodológica Oficial: 54 vs 58 Universidades -->
+      <div style="background:var(--accent-blue-soft); border-left:3px solid var(--accent-blue); padding:0.75rem 0.9rem; border-radius:6px; font-size:0.8rem; color:var(--text-main); line-height:1.45;">
+        <strong>📌 Rigor Oficial: ¿Por qué 54 Universidades y no 58?</strong><br />
+        El <a href="https://ayudamineduc.cl/ficha/instituciones-vigentes-reconocidas-por-el-mineduc" target="_blank" rel="noopener noreferrer" style="font-weight:600; text-decoration:underline;">Directorio Oficial de IES Vigentes de Mineduc (mayo 2026)</a> registra exactamente <strong>55 universidades reconocidas</strong>: <strong>54 vigentes y en funcionamiento activo</strong> (18 estatales, 9 privadas CRUCH y 27 privadas no CRUCH), y <strong>1 en proceso de cierre formal</strong> decretado por el CNED (Universidad Tecnológica de Chile INACAP, que cesó admisiones para focalizarse en IP/CFT). Cifras de divulgación general que señalan "58" arrastran planteles cuya personalidad jurídica fue revocada o clausurada por el Estado en años previos (como U. Arcis, UNICIT o U. del Mar).
       </div>
     </div>
 
@@ -134,6 +140,72 @@
           </tr>
         </tbody>
       </table>
+    </div>
+  </div>
+
+  <!-- Bloque 3.5: Estado de Funcionalidades & Roadmap (Features Disponibles vs En Proceso) -->
+  <div class="card" style="border-top:3px solid var(--accent-green); margin-bottom:2rem;">
+    <div style="font-size:0.78rem; font-weight:700; text-transform:uppercase; color:var(--accent-green); margin-bottom:0.35rem; letter-spacing:0.5px;">
+      🚀 Estado de Funcionalidades & Roadmap del Observatorio
+    </div>
+    <h3 style="font-size:1.15rem; margin-bottom:0.6rem;">Capacidades Disponibles y Próximos Desarrollos</h3>
+    <p style="font-size:0.88rem; color:var(--text-muted); line-height:1.5; margin-bottom:1.25rem;">
+      Para máxima transparencia ante rectores, directores e investigadores, detallamos qué funciones están 100% operativas en producción y cuáles se encuentran en desarrollo activo:
+    </p>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap:1.25rem;">
+      
+      <!-- Columna 1: Features Disponibles -->
+      <div style="background:rgba(16, 185, 129, 0.04); border:1px solid rgba(16, 185, 129, 0.25); border-radius:8px; padding:1.15rem;">
+        <div style="display:flex; align-items:center; gap:0.4rem; font-weight:700; color:var(--accent-green); font-size:0.92rem; margin-bottom:0.75rem;">
+          <span>🟢</span> Funcionalidades Disponibles (v2.2 en Producción)
+        </div>
+        <ul style="list-style:none; padding:0; margin:0; font-size:0.82rem; line-height:1.5; display:flex; flex-direction:column; gap:0.55rem; color:var(--text-main);">
+          <li>
+            <strong>✓ Matriz Nacional de 54 Universidades:</strong> Filtros combinados por segmento institucional (Estatales, CRUCH, Privadas), presencia territorial (Regionales vs. Santiago) y nivel normativo (Central vs. Facultad).
+          </li>
+          <li>
+            <strong>✓ Semáforo de 6 Dimensiones:</strong> Diagnóstico empírico en aula, tesis, autoría, privacidad Ley 21.719, evaluación y compras.
+          </li>
+          <li>
+            <strong>✓ Auditoría de Compras Públicas:</strong> 85 licitaciones de software e IA en universidades del Estado en 4 capas técnicas con links directos a Mercado Público.
+          </li>
+          <li>
+            <strong>✓ Radar Ley N° 21.719:</strong> Kit de adopción y cláusulas para contratos y privacidad de datos de estudiantes.
+          </li>
+          <li>
+            <strong>✓ Planilla de Chequeo & Exportación CSV:</strong> Descarga con BOM UTF-8 para visualización directa en Microsoft Excel.
+          </li>
+          <li>
+            <strong>✓ Canales Duales de Crowdsourcing:</strong> Aporte web directo y envío de PDFs por correo con asunto preconfigurado.
+          </li>
+          <li>
+            <strong>✓ Datasets Abiertos:</strong> Descarga libre en JSON y CSV bajo licencia Creative Commons (CC BY 4.0).
+          </li>
+        </ul>
+      </div>
+
+      <!-- Columna 2: En Desarrollo / Roadmap -->
+      <div style="background:rgba(14, 116, 144, 0.04); border:1px solid rgba(14, 116, 144, 0.25); border-radius:8px; padding:1.15rem;">
+        <div style="display:flex; align-items:center; gap:0.4rem; font-weight:700; color:var(--accent-blue); font-size:0.92rem; margin-bottom:0.75rem;">
+          <span>🟡</span> En Proceso & Próximas Versiones (Roadmap 2026–2027)
+        </div>
+        <ul style="list-style:none; padding:0; margin:0; font-size:0.82rem; line-height:1.5; display:flex; flex-direction:column; gap:0.55rem; color:var(--text-main);">
+          <li>
+            <strong>⏳ Asistente RAG Normativo Semántico:</strong> Consultas interactivas en lenguaje natural con recuperación aumentada sobre las resoluciones universitarias.
+          </li>
+          <li>
+            <strong>⏳ Extensión al Sector Técnico-Profesional (IP y CFT):</strong> Ampliación del catastro formal a los 35 Institutos Profesionales y Centros de Formación Técnica reconocidos por Mineduc.
+          </li>
+          <li>
+            <strong>⏳ Monitor Continuo de Mercado Público:</strong> Detección periódica automatizada de nuevas órdenes de compra y licitaciones de IA en instituciones estatales.
+          </li>
+          <li>
+            <strong>⏳ Fichas Ejecutivas Descargables en PDF:</strong> Reporte diagnóstico institucional de 1 página listo para imprimir y presentar ante consejos universitarios.
+          </li>
+        </ul>
+      </div>
+
     </div>
   </div>
 
