@@ -1,0 +1,310 @@
+---
+// src/components/ModalDescargaRegistro.astro
+// Modal de Registro Obligatorio previo a Descarga de Datos
+---
+
+<div id="modal-descarga" class="dl-modal-backdrop" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="modal-dl-title">
+  <div class="dl-modal-content card">
+    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1rem;">
+      <div>
+        <span class="badge badge-blue" style="margin-bottom:0.35rem;">Acceso a Datos Abiertos</span>
+        <h3 id="modal-dl-title" style="margin:0; font-size:1.25rem;">Registro de Acceso y Uso de Datos</h3>
+      </div>
+      <button id="modal-dl-close-btn" type="button" class="btn btn-outline btn-sm" aria-label="Cerrar modal" style="padding:0.25rem 0.5rem; font-size:1.1rem;">✕</button>
+    </div>
+
+    <p style="font-size:0.86rem; color:var(--text-muted); margin-bottom:1.1rem; line-height:1.45;">
+      Para descargar los datasets completos de <strong>Brújula IA</strong>, por favor regístrate. Esto nos permite dimensionar el impacto de la investigación, conocer qué usos se dan a la información y dar cuenta de su utilidad pública.
+    </p>
+
+    <!-- Indicador del archivo a descargar -->
+    <div id="dl-file-preview" style="background:var(--accent-blue-soft); border-left:3px solid var(--accent-blue); padding:0.6rem 0.85rem; border-radius:4px; font-size:0.82rem; color:var(--text-main); margin-bottom:1.1rem; display:flex; align-items:center; gap:0.45rem;">
+      <span>📥</span>
+      <span>Archivo solicitado: <strong id="dl-file-name">matriz_54_universidades.csv</strong></span>
+    </div>
+
+    <form id="dl-form" style="display:flex; flex-direction:column; gap:0.9rem;">
+      <input type="hidden" id="dl-file-url" value="/matriz_54_universidades.csv" />
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap:0.75rem;">
+        <div>
+          <label for="dl-nombre" style="display:block; font-size:0.82rem; font-weight:600; margin-bottom:0.3rem;">
+            Tu Nombre y Apellido *
+          </label>
+          <input 
+            type="text" 
+            id="dl-nombre" 
+            required 
+            placeholder="Ej: Prof. Andrea Valenzuela"
+            style="width:100%; padding:0.55rem 0.75rem; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-main); font-size:0.88rem;"
+          />
+        </div>
+
+        <div>
+          <label for="dl-email" style="display:block; font-size:0.82rem; font-weight:600; margin-bottom:0.3rem;">
+            Tu Correo Electrónico *
+          </label>
+          <input 
+            type="email" 
+            id="dl-email" 
+            required 
+            placeholder="contacto@institucion.cl"
+            style="width:100%; padding:0.55rem 0.75rem; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-main); font-size:0.88rem;"
+          />
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap:0.75rem;">
+        <div>
+          <label for="dl-institucion" style="display:block; font-size:0.82rem; font-weight:600; margin-bottom:0.3rem;">
+            Universidad u Organización *
+          </label>
+          <input 
+            type="text" 
+            id="dl-institucion" 
+            required 
+            placeholder="Ej: Universidad de Chile / CGR / Medio"
+            style="width:100%; padding:0.55rem 0.75rem; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-main); font-size:0.88rem;"
+          />
+        </div>
+
+        <div>
+          <label for="dl-rol" style="display:block; font-size:0.82rem; font-weight:600; margin-bottom:0.3rem;">
+            Estamento o Rol *
+          </label>
+          <select id="dl-rol" required style="width:100%; padding:0.55rem 0.75rem; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-main); font-size:0.88rem;">
+            <option value="">-- Selecciona tu rol --</option>
+            <option value="Docente Universitario">Docente Universitario/a</option>
+            <option value="Investigador Académico">Investigador/a Académico/a</option>
+            <option value="Equipo Directivo VRA SECPLA">Equipo Directivo / VRA / SECPLA</option>
+            <option value="Estudiante Pre o Postgrado">Estudiante de Pre o Postgrado</option>
+            <option value="Sector Público CGR">Sector Público / CGR / Órgano de Control</option>
+            <option value="Periodista Medios">Periodista / Medios de Comunicación</option>
+            <option value="Consultoría Sector Privado">Consultoría / Sector Privado</option>
+            <option value="Sociedad Civil">Sociedad Civil / Otro</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <label for="dl-proposito" style="display:block; font-size:0.82rem; font-weight:600; margin-bottom:0.3rem;">
+          ¿Para qué utilizarás la información? *
+        </label>
+        <select id="dl-proposito" required style="width:100%; padding:0.55rem 0.75rem; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-main); font-size:0.88rem;">
+          <option value="">-- Selecciona el uso principal --</option>
+          <option value="Investigación Académica">Investigación académica o publicación científica</option>
+          <option value="Política Institucional">Diseño o actualización de directrices institucionales</option>
+          <option value="Fiscalización y Análisis Público">Fiscalización, control social o compras públicas</option>
+          <option value="Tesis de Grado">Tesis de titulación o magíster/doctorado</option>
+          <option value="Docencia en Aula">Docencia en aula y diseño evaluativo</option>
+          <option value="Uso Formativo Personal">Uso formativo o aprendizaje personal</option>
+          <option value="Otro">Otro propósito</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="dl-detalle" style="display:block; font-size:0.82rem; font-weight:600; margin-bottom:0.3rem;">
+          Detalle breve del proyecto o uso (Opcional)
+        </label>
+        <input 
+          type="text" 
+          id="dl-detalle" 
+          placeholder="Ej: Proyecto Fondecyt sobre IA en educación o revisión de rúbricas"
+          style="width:100%; padding:0.55rem 0.75rem; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-main); font-size:0.88rem;"
+        />
+      </div>
+
+      <!-- Consentimiento Explícito -->
+      <div style="background:rgba(0,0,0,0.02); padding:0.65rem 0.85rem; border-radius:6px; border:1px solid var(--border-color);">
+        <label style="display:flex; align-items:flex-start; gap:0.5rem; font-size:0.78rem; color:var(--text-main); cursor:pointer; line-height:1.4;">
+          <input type="checkbox" id="dl-consentimiento" required style="margin-top:0.2rem;" />
+          <span>
+            Acepto el registro de mis datos para fines de trazabilidad de la investigación y autorizo recibir actualizaciones del observatorio conforme a las leyes N° 19.628 y N° 21.719.
+          </span>
+        </label>
+      </div>
+
+      <div id="dl-feedback" style="display:none; padding:0.65rem; border-radius:6px; font-size:0.84rem;"></div>
+
+      <div style="display:flex; justify-content:flex-end; gap:0.65rem; margin-top:0.35rem;">
+        <button type="button" id="modal-dl-cancel-btn" class="btn btn-outline btn-sm">Cancelar</button>
+        <button type="submit" id="modal-dl-submit-btn" class="btn btn-primary btn-sm" style="display:inline-flex; align-items:center; gap:0.35rem;">
+          📥 Confirmar y Descargar Archivo
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<style>
+  .dl-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    backdrop-filter: blur(3px);
+  }
+
+  .dl-modal-content {
+    background: var(--card-bg);
+    width: 100%;
+    max-width: 620px;
+    max-height: 92vh;
+    overflow-y: auto;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  }
+</style>
+
+<script is:inline>
+  const dlModal = document.getElementById('modal-descarga');
+  const dlCloseBtn = document.getElementById('modal-dl-close-btn');
+  const dlCancelBtn = document.getElementById('modal-dl-cancel-btn');
+  const dlForm = document.getElementById('dl-form');
+  const dlSubmitBtn = document.getElementById('modal-dl-submit-btn');
+  const dlFeedback = document.getElementById('dl-feedback');
+  const dlFileUrlInput = document.getElementById('dl-file-url');
+  const dlFileNameSpan = document.getElementById('dl-file-name');
+
+  let dlPreviouslyFocused = null;
+
+  function openDownloadModal(fileUrl, fileName) {
+    dlPreviouslyFocused = document.activeElement;
+    if (dlFileUrlInput) dlFileUrlInput.value = fileUrl || '/matriz_54_universidades.csv';
+    if (dlFileNameSpan) dlFileNameSpan.textContent = fileName || (fileUrl ? fileUrl.split('/').pop() : 'matriz_54_universidades.csv');
+
+    // Prellenar si hay datos previos guardados en localStorage
+    try {
+      const savedUser = JSON.parse(localStorage.getItem('brujula_user_profile') || '{}');
+      if (savedUser.nombre && document.getElementById('dl-nombre')) document.getElementById('dl-nombre').value = savedUser.nombre;
+      if (savedUser.email && document.getElementById('dl-email')) document.getElementById('dl-email').value = savedUser.email;
+      if (savedUser.institucion && document.getElementById('dl-institucion')) document.getElementById('dl-institucion').value = savedUser.institucion;
+      if (savedUser.rol && document.getElementById('dl-rol')) document.getElementById('dl-rol').value = savedUser.rol;
+    } catch (_) {}
+
+    if (dlFeedback) dlFeedback.style.display = 'none';
+    if (dlModal) dlModal.style.display = 'flex';
+    setTimeout(() => {
+      document.getElementById('dl-nombre')?.focus();
+    }, 50);
+  }
+
+  function closeDownloadModal() {
+    if (dlModal) dlModal.style.display = 'none';
+    if (dlPreviouslyFocused && typeof dlPreviouslyFocused.focus === 'function') {
+      dlPreviouslyFocused.focus();
+    }
+  }
+
+  dlCloseBtn?.addEventListener('click', closeDownloadModal);
+  dlCancelBtn?.addEventListener('click', closeDownloadModal);
+  dlModal?.addEventListener('click', (e) => {
+    if (e.target === dlModal) closeDownloadModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && dlModal && dlModal.style.display === 'flex') {
+      closeDownloadModal();
+    }
+  });
+
+  window.abrirModalDescarga = openDownloadModal;
+
+  // Interceptar todos los enlaces y botones de descarga marcados
+  document.addEventListener('click', (e) => {
+    const target = e.target.closest('[data-download-gate]');
+    if (target) {
+      e.preventDefault();
+      const fileUrl = target.getAttribute('href') || target.getAttribute('data-file-url') || '/matriz_54_universidades.csv';
+      const fileLabel = target.getAttribute('data-file-label') || target.textContent.trim();
+      openDownloadModal(fileUrl, fileLabel);
+    }
+  });
+
+  dlForm?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!dlSubmitBtn || !dlFeedback) return;
+
+    dlSubmitBtn.disabled = true;
+    dlSubmitBtn.textContent = 'Registrando y autorizando descarga...';
+    dlFeedback.style.display = 'none';
+
+    const fileUrl = dlFileUrlInput?.value || '/matriz_54_universidades.csv';
+    const payload = {
+      nombre: document.getElementById('dl-nombre')?.value || '',
+      email: document.getElementById('dl-email')?.value || '',
+      institucion: document.getElementById('dl-institucion')?.value || '',
+      estamento_rol: document.getElementById('dl-rol')?.value || '',
+      proposito_uso: document.getElementById('dl-proposito')?.value || '',
+      detalle_proyecto: document.getElementById('dl-detalle')?.value || '',
+      archivo_solicitado: fileUrl,
+      consentimiento: document.getElementById('dl-consentimiento')?.checked === true
+    };
+
+    try {
+      const res = await fetch('/api/register-download', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const data = await res.json();
+
+      if (res.ok && data.success) {
+        // Guardar perfil para conveniencia futura
+        try {
+          localStorage.setItem('brujula_user_profile', JSON.stringify({
+            nombre: payload.nombre,
+            email: payload.email,
+            institucion: payload.institucion,
+            rol: payload.estamento_rol
+          }));
+        } catch (_) {}
+
+        dlFeedback.style.display = 'block';
+        dlFeedback.style.background = 'var(--accent-green-soft)';
+        dlFeedback.style.color = 'var(--accent-green)';
+        dlFeedback.style.border = '1px solid var(--accent-green)';
+        dlFeedback.innerHTML = `<strong>✓ Registro completado</strong> (Ticket: <code>${data.record_id}</code>).<br />Iniciando descarga de <strong>${fileUrl.split('/').pop()}</strong>...`;
+
+        // Disparar descarga real del archivo
+        const downloadLink = document.createElement('a');
+        downloadLink.href = data.download_url || fileUrl;
+        downloadLink.download = (data.download_url || fileUrl).split('/').pop();
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+
+        setTimeout(() => {
+          dlSubmitBtn.disabled = false;
+          dlSubmitBtn.textContent = '📥 Confirmar y Descargar Archivo';
+          closeDownloadModal();
+        }, 2200);
+
+      } else {
+        dlFeedback.style.display = 'block';
+        dlFeedback.style.background = 'var(--accent-red-soft)';
+        dlFeedback.style.color = 'var(--accent-red)';
+        dlFeedback.style.border = '1px solid var(--accent-red)';
+        dlFeedback.textContent = data.error || 'Error al procesar el registro.';
+        dlSubmitBtn.disabled = false;
+        dlSubmitBtn.textContent = '📥 Confirmar y Descargar Archivo';
+      }
+    } catch (err) {
+      dlFeedback.style.display = 'block';
+      dlFeedback.style.background = 'var(--accent-red-soft)';
+      dlFeedback.style.color = 'var(--accent-red)';
+      dlFeedback.style.border = '1px solid var(--accent-red)';
+      dlFeedback.textContent = 'Error de conexión. Por favor reintenta.';
+      dlSubmitBtn.disabled = false;
+      dlSubmitBtn.textContent = '📥 Confirmar y Descargar Archivo';
+    }
+  });
+</script>

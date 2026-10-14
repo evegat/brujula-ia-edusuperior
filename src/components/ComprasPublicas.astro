@@ -77,7 +77,8 @@ function obtenerBadgeCapa(capa: string, langKey: SupportedLang): { label: string
     <div style="display:flex; gap:0.5rem; align-items:center;">
       <a 
         href="/compras_ia_estatales.csv" 
-        download="compras_ia_universidades_estatales_chile.csv" 
+        data-download-gate="true"
+        data-file-label="Compras Públicas de IA en Ues Estatales (.csv)"
         class="btn btn-outline btn-sm" 
         style="font-size:0.82rem; color:var(--accent-amber); border-color:var(--accent-amber); text-decoration:none; display:inline-flex; align-items:center; gap:0.35rem;"
       >

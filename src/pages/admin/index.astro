@@ -12,6 +12,7 @@ const isAuthenticated = token ? await verifySessionToken(token) : false;
 let subList: any[] = [];
 let normativaList: any[] = [];
 let contactList: any[] = [];
+let descargaList: any[] = [];
 
 if (isAuthenticated) {
   const db = await getDb();
@@ -48,6 +49,17 @@ if (isAuthenticated) {
           const rawC = await db.get(`contact:${id}`);
           if (rawC) {
             try { contactList.push(JSON.parse(rawC)); } catch (_) {}
+          }
+        }
+      }
+
+      const rawDlIndex = await db.get('descarga_index');
+      if (rawDlIndex) {
+        const dlIds: string[] = JSON.parse(rawDlIndex);
+        for (const id of dlIds) {
+          const rawD = await db.get(`descarga:${id}`);
+          if (rawD) {
+            try { descargaList.push(JSON.parse(rawD)); } catch (_) {}
           }
         }
       }
@@ -156,6 +168,10 @@ if (isAuthenticated) {
           <div class="stat-card-value">{subList.length}</div>
         </div>
         <div class="stat-card">
+          <div class="stat-card-title">Descargas Registradas</div>
+          <div class="stat-card-value">{descargaList.length}</div>
+        </div>
+        <div class="stat-card">
           <div class="stat-card-title">Aportes Normativos Recibidos</div>
           <div class="stat-card-value">{normativaList.length}</div>
         </div>
@@ -201,6 +217,57 @@ if (isAuthenticated) {
                     <td><span class="badge badge-blue">{s.perfil || 'general'}</span></td>
                     <td style="font-size:0.82rem; color:var(--text-muted);">{s.timestamp || '-'}</td>
                     <td><span class="badge badge-green">✓ Ley 21.719</span></td>
+                  </tr>
+                ))
+              )}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Tabla de Descargas Registradas -->
+      <section class="panel-card">
+        <div class="panel-header">
+          <div>
+            <h2 class="panel-title">📊 Registro de Descargas y Propósito de Uso</h2>
+            <p style="font-size:0.8rem; color:var(--text-muted); margin-top:0.25rem;">Trazabilidad de usuarios que han descargado los datasets y el uso declarado.</p>
+          </div>
+        </div>
+
+        <div style="overflow-x:auto;">
+          <table>
+            <thead>
+              <tr>
+                <th>Usuario</th>
+                <th>Institución</th>
+                <th>Estamento / Rol</th>
+                <th>Propósito de Uso Declarado</th>
+                <th>Archivo</th>
+                <th>Fecha</th>
+              </tr>
+            </thead>
+            <tbody>
+              {descargaList.length === 0 ? (
+                <tr>
+                  <td colspan="6" style="text-align:center; padding:2rem; color:var(--text-muted);">
+                    No hay descargas registradas aún en la base de datos.
+                  </td>
+                </tr>
+              ) : (
+                descargaList.map((d) => (
+                  <tr>
+                    <td>
+                      <div style="font-weight:600; color:#ffffff;">{d.nombre}</div>
+                      <div style="font-size:0.75rem; color:var(--text-muted);">{d.email}</div>
+                    </td>
+                    <td>{d.institucion}</td>
+                    <td><span class="badge badge-blue">{d.estamento_rol}</span></td>
+                    <td style="max-width:320px;">
+                      <div style="font-weight:500;">{d.proposito_uso}</div>
+                      {d.detalle_proyecto && <div style="font-size:0.75rem; color:var(--text-muted); margin-top:0.15rem;"><em>"{d.detalle_proyecto}"</em></div>}
+                    </td>
+                    <td><code style="font-size:0.76rem; background:rgba(255,255,255,0.06); padding:0.15rem 0.35rem; border-radius:4px;">{d.archivo_solicitado?.split('/').pop()}</code></td>
+                    <td style="font-size:0.8rem; color:var(--text-muted);">{d.timestamp?.split('T')[0] || '-'}</td>
                   </tr>
                 ))
               )}

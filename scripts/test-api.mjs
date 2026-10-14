@@ -2,6 +2,7 @@ import { POST as subscribeHandler } from '../src/pages/api/subscribe.ts';
 import { POST as contactHandler } from '../src/pages/api/contact.ts';
 import { POST as submitNormativaHandler } from '../src/pages/api/submit-normativa.ts';
 import { POST as askRagHandler } from '../src/pages/api/ask-rag.ts';
+import { POST as registerDownloadHandler } from '../src/pages/api/register-download.ts';
 import assert from 'node:assert';
 
 async function runTests() {
@@ -152,6 +153,71 @@ async function runTests() {
   assert.strictEqual(data.success, true);
   assert.ok(data.citations.length > 0);
   console.log('✓ RAG query sobre tesis exitoso. Citas recuperadas:', data.citations.length);
+
+  console.log('\n--- Probando /api/register-download ---');
+  // 9. Registro de descarga válido
+  res = await registerDownloadHandler({
+    request: new Request('http://localhost/api/register-download', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        nombre: 'Dra. Carmen Gloria',
+        email: 'cgloria@ufrontera.cl',
+        institucion: 'Universidad de La Frontera',
+        estamento_rol: 'investigador',
+        proposito_uso: 'investigacion_academica',
+        detalle_proyecto: 'Estudio de políticas de IA en universidades del CRUCH',
+        archivo_solicitado: '/matriz_54_universidades.csv',
+        consentimiento: true
+      })
+    })
+  });
+  assert.strictEqual(res.status, 200);
+  data = await res.json();
+  assert.strictEqual(data.success, true);
+  assert.ok(data.ticket_id.startsWith('DL-'));
+  assert.strictEqual(data.data.archivo_solicitado, '/matriz_54_universidades.csv');
+  console.log('✓ Registro de descarga válido pasó con ticket:', data.ticket_id);
+
+  // 10. Registro de descarga sin propósito rechazado
+  res = await registerDownloadHandler({
+    request: new Request('http://localhost/api/register-download', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        nombre: 'Investigador Anónimo',
+        email: 'anon@test.cl',
+        institucion: 'U Chile',
+        estamento_rol: 'investigador',
+        proposito_uso: '',
+        consentimiento: true
+      })
+    })
+  });
+  assert.strictEqual(res.status, 400);
+  data = await res.json();
+  assert.strictEqual(data.success, false);
+  console.log('✓ Registro sin propósito de uso rechazado correctamente');
+
+  // 11. Registro de descarga sin consentimiento rechazado
+  res = await registerDownloadHandler({
+    request: new Request('http://localhost/api/register-download', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        nombre: 'Pedro Pérez',
+        email: 'pedro@test.cl',
+        institucion: 'USACH',
+        estamento_rol: 'estudiante',
+        proposito_uso: 'tesis_grado',
+        consentimiento: false
+      })
+    })
+  });
+  assert.strictEqual(res.status, 400);
+  data = await res.json();
+  assert.strictEqual(data.success, false);
+  console.log('✓ Registro sin consentimiento de tratamiento de datos rechazado correctamente');
 
   console.log('\n>>> TODOS LOS TESTS DE ENDPOINTS PASARON EXITOSAMENTE <<<');
 }

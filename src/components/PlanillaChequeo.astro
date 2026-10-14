@@ -66,12 +66,12 @@ const planillaFilas = matrizData.map((u, idx) => {
 
     <!-- Botón de Exportar Datos -->
     <div style="display:flex; gap:0.5rem; align-items:center;">
-      <a href="/matriz_54_universidades.json" download="matriz_54_universidades_chile.json" class="btn btn-outline btn-sm" style="font-size:0.82rem;">
+      <a href="/matriz_54_universidades.json" data-download-gate="true" data-file-label="Matriz 54 Universidades (.json)" class="btn btn-outline btn-sm" style="font-size:0.82rem; text-decoration:none;">
         {t('planilla.btn_download_json')}
       </a>
-      <button type="button" id="btn-export-csv" class="btn btn-primary btn-sm" style="font-size:0.82rem;">
+      <a href="/matriz_54_universidades.csv" data-download-gate="true" data-file-label="Matriz 54 Universidades (.csv)" id="btn-export-csv" class="btn btn-primary btn-sm" style="font-size:0.82rem; text-decoration:none;">
         {t('planilla.btn_export_csv')}
-      </button>
+      </a>
     </div>
   </div>
 
