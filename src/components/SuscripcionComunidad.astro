@@ -1,6 +1,12 @@
 ---
 // src/components/SuscripcionComunidad.astro
-// Apoyo comunitario en GitHub, conexión en LinkedIn y suscripción consentida (Ley N° 21.719)
+import type { SupportedLang } from '../i18n/ui';
+
+interface Props {
+  lang?: SupportedLang;
+}
+
+const { lang = 'es' } = Astro.props;
 ---
 
 <section id="comunidad-alertas" style="margin-bottom: 3.5rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 2rem; box-shadow: var(--shadow-sm); border-top: 4px solid var(--accent-blue);">
@@ -98,7 +104,11 @@
         <label style="display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.74rem; color: var(--text-muted); cursor: pointer; line-height: 1.35;">
           <input type="checkbox" id="check-consentimiento-ley21719" required style="margin-top: 0.15rem;" />
           <span>
-            Acepto recibir alertas y notas de Eduardo Vega Toledo. Mis datos no serán cedidos a terceros ni utilizados para entrenar modelos de IA (Ley N° 21.719). Podré cancelar mi suscripción cuando quiera con un clic.
+            {lang === 'en'
+              ? 'I agree to receive AI Observatory alerts and updates on new open tools, public research, and public-interest initiatives by Eduardo Vega Toledo (evegat.cl). My data will not be shared with third parties or used to train AI models (Law No. 21,719 & UNESCO). I may unsubscribe at any time with one click.'
+              : lang === 'pt'
+              ? 'Aceito receber alertas do Observatório de IA e novidades sobre ferramentas abertas, pesquisas e iniciativas de interesse público de Eduardo Vega Toledo (evegat.cl). Meus dados não serão cedidos a terceiros nem usados para treinar IA (Lei Nº 21.719). Poderei cancelar minha inscrição quando quiser.'
+              : 'Acepto recibir alertas del Observatorio Brújula IA y notas sobre nuevas herramientas, investigaciones e iniciativas de interés público de Eduardo Vega Toledo (evegat.cl). Mis datos no serán cedidos a terceros ni utilizados para entrenar modelos de IA (Ley N° 21.719). Podré cancelar mi suscripción cuando quiera con un clic.'}
           </span>
         </label>
 
