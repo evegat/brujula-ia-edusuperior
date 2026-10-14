@@ -160,11 +160,11 @@ import ModalAvisoLegal from '../components/ModalAvisoLegal.astro';
 
   .tab-panel.active {
     display: block;
-    animation: fadeIn 0.2s ease;
+    animation: fadeInTab 0.22s ease-out;
   }
 
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(4px); }
+  @keyframes fadeInTab {
+    from { opacity: 0; transform: translateY(3px); }
     to { opacity: 1; transform: translateY(0); }
   }
 </style>
@@ -177,7 +177,7 @@ import ModalAvisoLegal from '../components/ModalAvisoLegal.astro';
     const sidebar = document.getElementById('main-sidebar');
     const overlay = document.getElementById('sidebar-overlay');
 
-    function switchTab(tabId: string, shouldScroll = false) {
+    function switchTab(tabId: string) {
       // Activar botones superiores
       tabButtons.forEach(btn => {
         if (btn.dataset.tab === tabId) {
@@ -215,8 +215,18 @@ import ModalAvisoLegal from '../components/ModalAvisoLegal.astro';
         overlay?.classList.remove('active');
       }
 
-      if (shouldScroll) {
-        document.querySelector('.tabs-nav')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Comportamiento parejo y consistente en ambas barras:
+      // Si el usuario está desplazado más abajo que el inicio del contenido,
+      // posicionar suavemente al inicio de las pestañas para no perder el encabezado.
+      const tabsNav = document.querySelector('.tabs-nav') as HTMLElement;
+      if (tabsNav) {
+        const navOffsetTop = tabsNav.offsetTop;
+        if (window.scrollY > navOffsetTop + 30) {
+          window.scrollTo({
+            top: Math.max(0, navOffsetTop - 15),
+            behavior: 'smooth'
+          });
+        }
       }
 
       // Registrar evento en Umami
@@ -237,7 +247,7 @@ import ModalAvisoLegal from '../components/ModalAvisoLegal.astro';
     sidebarButtons.forEach(btn => {
       btn.addEventListener('click', () => {
         const targetId = btn.dataset.tab;
-        if (targetId) switchTab(targetId, true);
+        if (targetId) switchTab(targetId);
       });
     });
 

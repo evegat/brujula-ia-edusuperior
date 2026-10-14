@@ -116,13 +116,56 @@ export const POST: APIRoute = async ({ request }) => {
       });
     }
 
+    const cleanInst = institucion && typeof institucion === 'string' ? institucion.trim() : 'No informada';
+    const cleanPerfil = perfil && typeof perfil === 'string' ? perfil.trim() : 'general';
+
+    // Despacho durable a FormSubmit hacia evegat@uchile.cl con CC eduardo@evegat.cl y auto-respuesta al suscriptor
+    const autoresponseMessage = 
+      '¡Hola! Gracias por registrarte en el Observatorio Brújula IA de la Educación Superior en Chile (https://brujulaiaedusuperior.evegat.cl).\n\n' +
+      'Hemos recibido y registrado tus datos correctamente. Te notificaremos a esta misma casilla cuando existan actualizaciones normativas en universidades chilenas, nuevas compras públicas de tecnología registradas o publiquemos herramientas y cláusulas de interés público.\n\n' +
+      'Atentamente,\n' +
+      'Eduardo Vega Toledo\n' +
+      'Universidad de Chile (evegat@uchile.cl / eduardo@evegat.cl)\n' +
+      'Brújula IA Educación Superior';
+
+    try {
+      const formPayload = new URLSearchParams();
+      formPayload.append('email', cleanEmail);
+      formPayload.append('institucion', cleanInst);
+      formPayload.append('perfil', cleanPerfil);
+      formPayload.append('origen', origen && typeof origen === 'string' ? origen.trim() : 'brujula-p154');
+      formPayload.append('consentimiento_ley_21719', 'Aceptado (Ley N° 21.719)');
+      formPayload.append('_subject', `[Brújula IA] Nueva suscripción / alerta observatorio: ${cleanEmail}`);
+      formPayload.append('_autoresponse', autoresponseMessage);
+      formPayload.append('_cc', 'eduardo@evegat.cl');
+      formPayload.append('_replyto', cleanEmail);
+      formPayload.append('_template', 'table');
+      formPayload.append('_captcha', 'false');
+
+      const submitRes = await fetch('https://formsubmit.co/ajax/evegat@uchile.cl', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: formPayload.toString()
+      });
+
+      if (!submitRes.ok) {
+        console.warn('[subscribe] FormSubmit returned status:', submitRes.status);
+      }
+    } catch (fsErr) {
+      console.warn('[subscribe] Error despachando a FormSubmit:', fsErr);
+      // No fallamos la petición del usuario si hay timeout de red externo, el registro local persiste
+    }
+
     return new Response(JSON.stringify({
       success: true,
-      message: `Suscripción registrada con éxito para ${cleanEmail}`,
+      message: `Suscripción registrada con éxito para ${cleanEmail}. Te hemos enviado un correo de confirmación.`,
       data: {
         email: cleanEmail,
-        institucion: institucion && typeof institucion === 'string' ? institucion.trim() : null,
-        perfil: perfil && typeof perfil === 'string' ? perfil.trim() : 'general',
+        institucion: cleanInst,
+        perfil: cleanPerfil,
         origen: origen && typeof origen === 'string' ? origen.trim() : 'brujula-p154',
         consentimiento_ley_21719: isConsent,
         timestamp: new Date().toISOString()
