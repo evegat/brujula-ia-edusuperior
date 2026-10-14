@@ -1,0 +1,156 @@
+# CONTEXTO COMPLETO: BRÚJULA IA EDUCACIÓN SUPERIOR CHILE
+====================================================================
+Observatorio abierto de normativas de IA, compras públicas y brecha regulatoria en universidades chilenas.
+Autor: Eduardo Vega Toledo (https://evegat.cl | https://www.linkedin.com/in/evegat1989/)
+Repositorio oficial: https://github.com/evegat/brujula-ia-edusuperior
+Producción web: https://brujulaiaedusuperior.evegat.cl
+Licencia: Creative Commons Atribución 4.0 Internacional (CC BY 4.0)
+Fecha de corte del catastro: Octubre 2026 (Nómina Mineduc SIES: Mayo 2026)
+
+--------------------------------------------------------------------
+1. UNIVERSO Y RADIOGRAFÍA NACIONAL
+--------------------------------------------------------------------
+- Universo oficial operativo: 54 universidades vigentes y funcionando en Chile (nómina Mineduc/SIES archivo ies_vig_may_26.xlsx, mayo 2026).
+  * Exclusión documentada: Universidad Tecnológica de Chile INACAP (C58) conserva reconocimiento vigente y figura en proceso de cierre reglamentario.
+- Clasificación Mineduc:
+  * 18 Universidades Estatales (CUECH)
+  * 9 Universidades Particulares con aporte histórico (G9 / Tradicionales)
+  * 27 Universidades Privadas
+- Afiliación al Consejo de Rectores (CRUCH):
+  * 30 Universidades integrantes plenas del CRUCH (18 estatales + 12 privadas: 9 tradicionales + UDP, UAH, UANDES).
+  * 24 Universidades privadas no integrantes del CRUCH.
+- Distribución Territorial:
+  * 25 Universidades exclusivamente regionales (46.3%)
+  * 29 Universidades metropolitanas o de alcance nacional (53.7%)
+- Estado de Regulación:
+  * 32 Universidades (59.3%) cuentan con instrumento público identificado.
+  * 22 Universidades (40.7%) permanecen sin instrumento público localizado al corte.
+  * Nivel de adopción: 27 planteles a nivel central de Rectoría/Vicerrectoría; 5 planteles solo a nivel de Facultad o Escuela.
+- Radar Ley N° 21.719 (Protección de Datos Personales, vigencia obligatoria 1 Dic 2026):
+  * 13 Universidades (24.1%) con cláusula de confidencialidad y resguardo de datos personales de estudiantes.
+  * 19 Universidades (35.2%) con normativa pero sin cláusula de privacidad explícita.
+  * 22 Universidades (40.7%) sin instrumento público localizado.
+
+--------------------------------------------------------------------
+2. MATRIZ DE LAS 54 UNIVERSIDADES (ESTADO Y DIMENSIONES)
+--------------------------------------------------------------------
+A continuación se resume el estado de los 54 planteles.
+Dimensiones evaluadas:
+- D1: Protocolo de Aula (Directrices para docencia y cursos)
+- D2: Directriz de Tesis y Graduación
+- D3: Regla de Autoría (La IA no es autora moral ni legal)
+- D4: Privacidad Ley N° 21.719 (Prohibición de subir datos de estudiantes a LLMs)
+- D5: Rediseño Evaluativo (Evaluación de proceso y orales; límite a detectores)
+- D6: Compras de IA registradas en Mercado Público
+
+Planteles con Instrumento Identificado (32):
+- Universidad de Chile (UChile): Central | D1: Sí | D2: Sí | D3: Sí | D4: Sí | D5: Sí | D6: Sí (IMN: 80.0)
+- Pontificia Universidad Católica de Chile (PUC): Central | D1: Sí | D2: Sí | D3: Sí | D4: No | D5: Sí | D6: No (IMN: 60.0)
+- Universidad de Concepción (UDEC): Central | D1: Sí | D2: Sí | D3: Sí | D4: No | D5: No | D6: No (IMN: 45.0)
+- Universidad Técnica Federico Santa María (UTFSM): Central | D1: Sí | D2: Sí | D3: Sí | D4: Sí | D5: No | D6: Sí (IMN: 65.0)
+- Universidad de Santiago de Chile (USACH): Central | D1: Sí | D2: No | D3: Sí | D4: No | D5: No | D6: Sí (IMN: 40.0)
+- Pontificia Universidad Católica de Valparaíso (PUCV): Central | D1: Sí | D2: No | D3: No | D4: No | D5: No | D6: No (IMN: 15.0)
+- Universidad Austral de Chile (UACh): Central | D1: Sí | D2: Sí | D3: Sí | D4: No | D5: No | D6: No (IMN: 45.0)
+- Universidad Católica del Norte (UCN): Central | D1: Sí | D2: No | D3: No | D4: No | D5: No | D6: No (IMN: 15.0)
+- Universidad de Valparaíso (UV): Central | D1: Sí | D2: No | D3: Sí | D4: No | D5: No | D6: Sí (IMN: 40.0)
+- Universidad de La Frontera (UFRO): Central | D1: Sí | D2: Sí | D3: Sí | D4: Sí | D5: No | D6: Sí (IMN: 65.0)
+- Universidad de La Serena (ULS): Central | D1: Sí | D2: No | D3: No | D4: No | D5: No | D6: Sí (IMN: 25.0)
+- Universidad de Talca (UTalca): Central | D1: Sí | D2: No | D3: No | D4: No | D5: No | D6: Sí (IMN: 25.0)
+- Universidad de Tarapacá (UTA): Central | D1: Sí | D2: No | D3: No | D4: No | D5: No | D6: Sí (IMN: 25.0)
+- Universidad de Antofagasta (UA): Central | D1: Sí | D2: Sí | D3: Sí | D4: Sí | D5: No | D6: No (IMN: 60.0)
+- Universidad de Los Lagos (ULagos): Central | D1: Sí | D2: Sí | D3: Sí | D4: Sí | D5: No | D6: Sí (IMN: 65.0)
+- Universidad de Atacama (UDA): Central | D1: Sí | D2: No | D3: No | D4: No | D5: No | D6: Sí (IMN: 25.0)
+- Universidad Diego Portales (UDP): Central | D1: Sí | D2: Sí | D3: Sí | D4: No | D5: Sí | D6: No (IMN: 60.0)
+- Universidad Adolfo Ibáñez (UAI): Central | D1: Sí | D2: Sí | D3: Sí | D4: Sí | D5: Sí | D6: No (IMN: 75.0)
+- Universidad Andrés Bello (UNAB): Central | D1: Sí | D2: Sí | D3: Sí | D4: Sí | D5: No | D6: No (IMN: 60.0)
+- Universidad de los Andes (UANDES): Central | D1: Sí | D2: Sí | D3: Sí | D4: Sí | D5: Sí | D6: No (IMN: 75.0)
+- Universidad del Desarrollo (UDD): Central | D1: Sí | D2: Sí | D3: Sí | D4: Sí | D5: Sí | D6: No (IMN: 75.0)
+- Universidad Alberto Hurtado (UAH): Central | D1: Sí | D2: Sí | D3: Sí | D4: No | D5: Sí | D6: No (IMN: 60.0)
+- Universidad de Las Américas (UDLA): Central | D1: Sí | D2: Sí | D3: Sí | D4: Sí | D5: Sí | D6: No (IMN: 75.0)
+- Universidad Mayor (UMayor): Central | D1: Sí | D2: Sí | D3: Sí | D4: No | D5: Sí | D6: No (IMN: 60.0)
+- Universidad Santo Tomás (UST): Central | D1: Sí | D2: Sí | D3: Sí | D4: Sí | D5: No | D6: No (IMN: 60.0)
+- Universidad Finis Terrae (UFT): Central | D1: Sí | D2: No | D3: No | D4: No | D5: No | D6: No (IMN: 15.0)
+- Universidad Academia de Humanismo Cristiano (UAHC): Central | D1: Sí | D2: Sí | D3: Sí | D4: Sí | D5: No | D6: No (IMN: 60.0)
+- Universidad Bernardo O'Higgins (UBO): Solo Facultad | D1: Sí | D2: No | D3: No | D4: No | D5: No | D6: No (IMN: 15.0)
+- Universidad San Sebastián (USS): Solo Facultad | D1: Sí | D2: No | D3: No | D4: No | D5: No | D6: No (IMN: 15.0)
+- Universidad Central de Chile (UCEN): Solo Facultad | D1: Sí | D2: No | D3: No | D4: No | D5: No | D6: No (IMN: 15.0)
+- Universidad Autónoma de Chile (UAutónoma): Solo Facultad | D1: Sí | D2: No | D3: No | D4: No | D5: No | D6: No (IMN: 15.0)
+- Universidad Miguel de Cervantes (UMC): Solo Facultad | D1: Sí | D2: Sí | D3: Sí | D4: Sí | D5: No | D6: No (IMN: 60.0)
+
+Planteles sin Instrumento Público Localizado al Corte (22 en brecha):
+- Universidad Arturo Prat (UNAP)
+- Universidad Metropolitana de Ciencias de la Educación (UMCE)
+- Universidad Tecnológica Metropolitana (UTEM)
+- Universidad de Playa Ancha (UPLA)
+- Universidad de Magallanes (UMAG)
+- Universidad de O'Higgins (UOH)
+- Universidad de Aysén (UAYsen)
+- Universidad Católica del Maule (UCM)
+- Universidad Católica de la Santísima Concepción (UCSC)
+- Universidad Católica de Temuco (UCT)
+- Universidad Gabriela Mistral (UGM)
+- Universidad Sek (USEK)
+- Universidad La República (ULaRepublica)
+- Universidad Bolivariana (UBolivariana)
+- Universidad de Arte y Ciencias Sociales ARCIS (en liquidación / no operativa)
+- Universidad Chileno-Británica de Cultura (UCHBC)
+- Universidad del Alba (UDAlba)
+- Universidad Adventista de Chile (UNACH)
+- Universidad de Aconcagua (UAC)
+- Universidad Viña del Mar (UVM)
+- Universidad de Los Leones (ULL)
+- Universidad del Pacífico (en liquidación)
+
+--------------------------------------------------------------------
+3. COMPRAS PÚBLICAS EN TECNOLOGÍA E IA (MERCADO PÚBLICO)
+--------------------------------------------------------------------
+- 85 registros indexados en Mercado Público entre 2009 y 2026 correspondientes a 10 universidades del Estado compradoras:
+  * 68 órdenes de compra verificadas
+  * 17 licitaciones públicas
+- 4 Capas Tecnológicas:
+  1. IA Generativa y Modelos de Lenguaje (48 contratos)
+  2. IA Tradicional y Machine Learning (21 contratos)
+  3. Infraestructura Computacional y GPUs (14 contratos)
+  4. Software Analítico y Estadístico General (2 contratos)
+- Nota metodológica: La adquisición de software o infraestructura en Mercado Público describe el gasto tecnológico ejecutado; no acredita por sí misma la adopción docente efectiva en aula ni la existencia de protocolos de integridad pedagógica.
+
+--------------------------------------------------------------------
+4. KIT DE CLÁUSULAS NORMATIVAS LISTAS PARA USAR (PARA PROFESORES Y CARRERAS)
+--------------------------------------------------------------------
+
+CLÁUSULA 1: SÍLABO / PROGRAMA DE ASIGNATURA
+"En este curso la IA generativa es un recurso de apoyo al aprendizaje que nunca sustituye el juicio crítico ni la responsabilidad formativa del estudiante.
+1. Usos permitidos: Lluvia de ideas, corrección de redacción y depuración de código (salvo cuando la evaluación mida específicamente esa destreza).
+2. Declaración obligatoria: Todo trabajo debe incluir al pie: herramienta usada, prompts utilizados y cómo se validó el resultado.
+3. Integridad: Entregar texto o código generado íntegramente por IA como propio constituye falta grave.
+4. Equidad: Ninguna evaluación obligatoria exigirá herramientas con suscripciones de pago."
+
+CLÁUSULA 2: TESIS Y TRABAJOS DE TITULACIÓN
+"De acuerdo con la Ley N° 17.336 de Propiedad Intelectual, la autoría corresponde a personas naturales. La IA carece de personalidad jurídica y moral, por lo que nunca podrá figurar como autora ni coautora.
+1. Transparencia: El uso de IA debe documentarse explícitamente en el capítulo metodológico en una 'Declaración de Uso de IA'.
+2. No delegación: Prohibido delegar en IA hipótesis, datos simulados o el análisis interpretativo central.
+3. Defensa oral: La comisión evaluadora está facultada para interrogar sobre cualquier fórmula, código o fuente del documento, debiendo el estudiante demostrar dominio directo."
+
+CLÁUSULA 3: CUIDADO DE DATOS DE ALUMNOS (LEY N° 21.719)
+"1. Prohibición estricta: Docentes, ayudantes y funcionarios no podrán ingresar nóminas, nombres, RUT, notas o datos personales a plataformas de IA comerciales o abiertas sin convenio corporativo institucional que garantice la privacidad.
+2. Anonimización: Cualquier respuesta o caso utilizado para generar rúbricas debe anonimizarse irreversiblemente de forma previa.
+3. Exigibilidad legal: Esta obligación rige con fuerza de ley obligatoria a contar del 1 de diciembre de 2026."
+
+CLÁUSULA 4: CRITERIOS PARA EVALUAR CON IA
+"1. Evaluar el proceso: Privilegiar bitácoras de trabajo, borradores intermedios y defensas orales cortas por sobre informes estáticos.
+2. Prohibición de detectores automáticos de IA: Dada su alta tasa comprobada de falsos positivos, ninguna sanción podrá fundamentarse exclusivamente en detectores automáticos.
+3. Buena fe formativa: Ante sospechas de copia indebida, la primera instancia será siempre una entrevista pedagógica personal."
+
+--------------------------------------------------------------------
+5. FÓRMULA DEL ÍNDICE DE MADUREZ NORMATIVA (IMN)
+--------------------------------------------------------------------
+El IMN evalúa la presencia formal de componentes normativos:
+IMN = 0.20·S1 + 0.20·S2 + 0.15·S3 + 0.15·S4 + 0.15·S5 + 0.15·S6
+Donde:
+- S1 = Protocolo de Aula (20%)
+- S2 = Directriz de Tesis y Titulación (20%)
+- S3 = Regla de Autoría (15%)
+- S4 = Privacidad Ley N° 21.719 (15%)
+- S5 = Rediseño Evaluativo (15%)
+- S6 = Registro de Compras en Mercado Público (15%)
+Nota: El IMN es un indicador documental comparativo de transparencia pública; no certifica efectividad pedagógica ni auditoría de cumplimiento en aula.

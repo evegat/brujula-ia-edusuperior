@@ -3,11 +3,15 @@
 import matrizData from '../../data/matriz_54_universidades.json';
 
 const totalUes = matrizData.length; // 54
-const conPrivacidad = matrizData.filter(u => u.dimensiones.privacidad_ley_21719).length; // 16
-const conDocSinPriv = matrizData.filter(u => !u.en_brecha && !u.dimensiones.privacidad_ley_21719).length; // 16
+const conPrivacidad = matrizData.filter(u => u.dimensiones.privacidad_ley_21719).length; // 13
+const conDocSinPriv = matrizData.filter(u => !u.en_brecha && !u.dimensiones.privacidad_ley_21719).length; // 19
 const sinDoc = matrizData.filter(u => u.en_brecha).length; // 22
 
-// Lista de universidades con cláusula de privacidad identificada
+const pctPrivacidad = ((conPrivacidad / totalUes) * 100).toFixed(1); // 24.1%
+const pctSinPriv = ((conDocSinPriv / totalUes) * 100).toFixed(1); // 35.2%
+const pctSinDoc = ((sinDoc / totalUes) * 100).toFixed(1); // 40.7%
+
+// Lista de universidades con cláusula de privacidad identificada en datos
 const uesConPrivacidad = matrizData.filter(u => u.dimensiones.privacidad_ley_21719).map(u => u.sigla || u.nombre);
 ---
 
@@ -16,23 +20,25 @@ const uesConPrivacidad = matrizData.filter(u => u.dimensiones.privacidad_ley_217
   <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1.25rem; margin-bottom:1.5rem;">
     <div>
       <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.4rem;">
-        <span class="badge badge-amber">Herramienta de Política Pública</span>
+        <span class="badge badge-amber">Herramienta Práctica para Profesores</span>
         <span class="badge badge-blue">Cuenta Regresiva Ley N° 21.719</span>
       </div>
-      <h2>Kit de Adopción Normativa & Radar Ley N° 21.719</h2>
-      <p style="color:var(--text-muted); max-width:860px; font-size:0.96rem; line-height:1.55;">
-        Herramientas prácticas para universidades y facultades chilenas: una plantilla marco lista para tramitar en consejos de docencia y el diagnóstico del sistema universitario frente a la nueva Ley de Protección de Datos Personales.
+      <h2 style="font-family: var(--font-serif); font-size: 1.85rem; margin: 0 0 0.5rem 0; color: var(--text-main);">
+        Reglas Listas para Copiar en tus Clases & Carreras
+      </h2>
+      <p style="color:var(--text-muted); max-width:860px; font-size:0.96rem; line-height:1.55; margin: 0;">
+        Textos directos para copiar y pegar en los programas de tus cursos (sílabos), pautas de titulación y recomendaciones clave para cuidar la privacidad de tus estudiantes antes de la vigencia obligatoria de la Ley N° 21.719 (1 de diciembre de 2026).
       </p>
     </div>
 
     <!-- Enlaces de Descarga Rápida -->
-    <div style="display:flex; gap:0.5rem; align-items:center;">
-      <a href="/modelo_marco_orientaciones_ia_universidades.md" download="modelo_marco_ia_universidades_chile.md" class="btn btn-primary btn-sm" style="font-size:0.82rem;">
-        📥 Descargar Modelo Marco (.md)
+    <div style="display:flex; gap:0.5rem; align-items:center; flex-wrap: wrap;">
+      <a href="/kit_clausulas_docentes.md" download="kit_clausulas_ia_docentes.md" class="btn btn-primary btn-sm" style="font-size:0.82rem;">
+        📥 Descargar 4 Cláusulas (.md)
       </a>
-      <button type="button" id="btn-copiar-modelo" class="btn btn-outline btn-sm" style="font-size:0.82rem;">
-        📋 Copiar al Portapapeles
-      </button>
+      <a href="/modelo_marco_orientaciones_ia_universidades.md" download="modelo_marco_ia_universidades_chile.md" class="btn btn-outline btn-sm" style="font-size:0.82rem;">
+        🏛️ Modelo para Rectorías (.md)
+      </a>
     </div>
   </div>
 
@@ -71,31 +77,31 @@ const uesConPrivacidad = matrizData.filter(u => u.dimensiones.privacidad_ley_217
       
       <div style="background:rgba(5, 150, 105, 0.05); border:1px solid rgba(5, 150, 105, 0.2); padding:1rem; border-radius:8px;">
         <div style="font-size:1.6rem; font-weight:700; color:var(--accent-green); font-family:var(--font-serif);">
-          {conPrivacidad} de {totalUes} <span style="font-size:0.85rem; font-weight:600;">(29.6%)</span>
+          {conPrivacidad} de {totalUes} <span style="font-size:0.85rem; font-weight:600;">({pctPrivacidad}%)</span>
         </div>
         <div style="font-weight:600; font-size:0.82rem; color:var(--text-main); margin-top:0.25rem;">
           Con Cláusula Preventiva
         </div>
         <div style="font-size:0.76rem; color:var(--text-muted); margin-top:0.2rem; line-height:1.35;">
-          Planteles que prohíben subir datos personales a modelos de IA (UChile, PUC, UDP, UDD, UDLA, UNAB, UAI, etc.).
+          Planteles con resguardo de confidencialidad de datos en sus directrices (UChile, UTFSM, UAI, UNAB, UDD, UDLA, UFRO, ULagos, UANDES, UAHC, UST, UMC, UA).
         </div>
       </div>
 
       <div style="background:rgba(217, 119, 6, 0.05); border:1px solid rgba(217, 119, 6, 0.2); padding:1rem; border-radius:8px;">
         <div style="font-size:1.6rem; font-weight:700; color:var(--accent-amber); font-family:var(--font-serif);">
-          {conDocSinPriv} de {totalUes} <span style="font-size:0.85rem; font-weight:600;">(29.6%)</span>
+          {conDocSinPriv} de {totalUes} <span style="font-size:0.85rem; font-weight:600;">({pctSinPriv}%)</span>
         </div>
         <div style="font-weight:600; font-size:0.82rem; color:var(--text-main); margin-top:0.25rem;">
           Con Norma, Sin Privacidad
         </div>
         <div style="font-size:0.76rem; color:var(--text-muted); margin-top:0.2rem; line-height:1.35;">
-          Tienen directrices docentes pero omiten resguardos de confidencialidad o deberes de datos personales.
+          Tienen directrices docentes pero omiten resguardos explícitos de confidencialidad o deberes sobre datos de alumnos.
         </div>
       </div>
 
       <div style="background:rgba(0, 0, 0, 0.03); border:1px solid var(--border-color); padding:1rem; border-radius:8px;">
         <div style="font-size:1.6rem; font-weight:700; color:var(--text-muted); font-family:var(--font-serif);">
-          {sinDoc} de {totalUes} <span style="font-size:0.85rem; font-weight:600;">(40.7%)</span>
+          {sinDoc} de {totalUes} <span style="font-size:0.85rem; font-weight:600;">({pctSinDoc}%)</span>
         </div>
         <div style="font-weight:600; font-size:0.82rem; color:var(--text-main); margin-top:0.25rem;">
           Sin Instrumento Público
@@ -109,9 +115,135 @@ const uesConPrivacidad = matrizData.filter(u => u.dimensiones.privacidad_ley_217
 
     <!-- Alerta Metodológica para Vicerrectorías Jurídicas -->
     <div style="background:rgba(0,0,0,0.02); border-left:3px solid var(--accent-blue); padding:0.85rem 1rem; border-radius:0 6px 6px 0; font-size:0.82rem; color:var(--text-main); line-height:1.5;">
-      <strong>Orientación para Vicerrectorías y Direcciones Jurídicas:</strong> A partir de diciembre de 2026, la entrega involuntaria de datos académicos, rúbricas con nombres o antecedentes sensibles de estudiantes a servidores de LLM comerciales (como ChatGPT o Copilot sin convenios corporativos de confidencialidad de datos) configurará una infracción sancionable. Se sugiere incorporar formalmente el Título IV de nuestro modelo marco a los reglamentos de docencia.
+      <strong>Orientación Preventiva:</strong> A partir de diciembre de 2026, la entrega no autorizada de datos académicos, rúbricas con nombres o antecedentes de estudiantes a servidores de LLM comerciales sin convenio de confidencialidad podría configurar una infracción ante la Agencia de Protección de Datos Personales. Se sugiere incorporar formalmente resguardos de privacidad a los reglamentos de docencia.
     </div>
 
+  </div>
+
+  <!-- 4 REGLAS LISTAS PARA COPIAR EN TUS CLASES (UN CLIC) -->
+  <div style="margin-bottom: 2.5rem;">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem;">
+      <div>
+        <h3 style="font-size: 1.35rem; margin: 0 0 0.25rem 0; font-family: var(--font-serif); color: var(--text-main);">
+          📋 4 Reglas Listas para Copiar y Pegar en tus Cursos
+        </h3>
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">
+          Selecciona y copia con un solo clic el texto que necesitas para tus clases de este semestre:
+        </p>
+      </div>
+      <span class="badge badge-green">Licencia Abierta CC BY 4.0</span>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr)); gap: 1.25rem;">
+      
+      <!-- Bloque 1: Sílabo -->
+      <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-sm);">
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+            <span class="badge badge-blue">Para tus Clases</span>
+            <span style="font-size: 0.74rem; color: var(--text-muted);">Programa de Curso</span>
+          </div>
+          <h4 style="font-size: 1.05rem; margin: 0 0 0.4rem 0; color: var(--text-main);">
+            1. Regla para el Sílabo del Curso
+          </h4>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0 0 0.75rem 0;">
+            Define claramente qué se puede usar, la obligación de citar los prompts y prohíbe exigir herramientas de pago.
+          </p>
+          <textarea id="texto-clausula-silabo" readonly rows="6" style="width: 100%; font-family: monospace; font-size: 0.75rem; padding: 0.6rem; border: 1px solid var(--border-color); border-radius: 4px; background: var(--canvas-bg); color: var(--text-main); resize: vertical; box-sizing: border-box;">### Política sobre Uso de IA en la Asignatura
+En este curso la IA generativa es un apoyo al aprendizaje que nunca sustituye el juicio crítico del estudiante.
+1. Usos permitidos: Lluvia de ideas, corrección de redacción y depuración de código (salvo cuando la evaluación mida esa habilidad básica).
+2. Declaración obligatoria: Todo trabajo debe incluir al pie: herramienta usada, prompts utilizados y cómo se validó el resultado.
+3. Integridad: Entregar texto o código generado íntegramente por IA como propio constituye falta grave.
+4. Equidad: Ninguna evaluación obligatoria exigirá herramientas de pago.</textarea>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.75rem;">
+          <button type="button" class="btn btn-outline btn-sm btn-copiar-rapido" data-target="texto-clausula-silabo" style="font-size: 0.78rem;">
+            📋 Copiar al Portapapeles
+          </button>
+          <span class="copy-feedback-badge" style="font-size: 0.74rem; color: var(--accent-green); font-weight: 600; display: none;">✓ ¡Copiado!</span>
+        </div>
+      </div>
+
+      <!-- Bloque 2: Tesis -->
+      <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-sm);">
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+            <span class="badge badge-amber">Titulación</span>
+            <span style="font-size: 0.74rem; color: var(--text-muted);">Tesis y Memorias</span>
+          </div>
+          <h4 style="font-size: 1.05rem; margin: 0 0 0.4rem 0; color: var(--text-main);">
+            2. Regla para Tesis y Memorias de Título
+          </h4>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0 0 0.75rem 0;">
+            Aclara que la IA no es autor, prohíbe delegar el análisis y faculta a la comisión a interrogar oralmente.
+          </p>
+          <textarea id="texto-clausula-tesis" readonly rows="6" style="width: 100%; font-family: monospace; font-size: 0.75rem; padding: 0.6rem; border: 1px solid var(--border-color); border-radius: 4px; background: var(--canvas-bg); color: var(--text-main); resize: vertical; box-sizing: border-box;">### Uso de IA en Trabajos de Grado y Titulación
+Según la Ley N° 17.336, la autoría es exclusivamente humana. La IA nunca podrá figurar como autora ni coautora.
+1. Transparencia: El uso de IA debe documentarse en la metodología en una "Declaración de Uso de IA".
+2. No delegación: Prohibido delegar en IA hipótesis, datos simulados o el análisis interpretativo central.
+3. Defensa oral: La comisión evaluadora está facultada para interrogar sobre cualquier fórmula, código o fuente del documento, debiendo el estudiante demostrar dominio directo.</textarea>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.75rem;">
+          <button type="button" class="btn btn-outline btn-sm btn-copiar-rapido" data-target="texto-clausula-tesis" style="font-size: 0.78rem;">
+            📋 Copiar al Portapapeles
+          </button>
+          <span class="copy-feedback-badge" style="font-size: 0.74rem; color: var(--accent-green); font-weight: 600; display: none;">✓ ¡Copiado!</span>
+        </div>
+      </div>
+
+      <!-- Bloque 3: Privacidad Alumnos -->
+      <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-sm);">
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+            <span class="badge badge-green">Legal & Privacidad</span>
+            <span style="font-size: 0.74rem; color: var(--text-muted);">Ley N° 21.719</span>
+          </div>
+          <h4 style="font-size: 1.05rem; margin: 0 0 0.4rem 0; color: var(--text-main);">
+            3. Cuidado de Datos de Alumnos (Ley 21.719)
+          </h4>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0 0 0.75rem 0;">
+            Prohíbe subir nombres, RUT o notas a ChatGPT u otras IA comerciales sin convenio corporativo de privacidad.
+          </p>
+          <textarea id="texto-clausula-privacidad" readonly rows="6" style="width: 100%; font-family: monospace; font-size: 0.75rem; padding: 0.6rem; border: 1px solid var(--border-color); border-radius: 4px; background: var(--canvas-bg); color: var(--text-main); resize: vertical; box-sizing: border-box;">### Resguardo de Datos Personales de Estudiantes (Ley N° 21.719)
+1. Prohibición estricta: Docentes y ayudantes no podrán subir nóminas, nombres, RUT, notas o datos personales a plataformas de IA comerciales o abiertas sin convenio corporativo institucional.
+2. Anonimización: Cualquier respuesta o caso utilizado para generar rúbricas debe anonimizarse irreversiblemente de forma previa.
+3. Exigibilidad: Esta obligación rige con fuerza de ley obligatoria a contar del 1 de diciembre de 2026.</textarea>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.75rem;">
+          <button type="button" class="btn btn-outline btn-sm btn-copiar-rapido" data-target="texto-clausula-privacidad" style="font-size: 0.78rem;">
+            📋 Copiar al Portapapeles
+          </button>
+          <span class="copy-feedback-badge" style="font-size: 0.74rem; color: var(--accent-green); font-weight: 600; display: none;">✓ ¡Copiado!</span>
+        </div>
+      </div>
+
+      <!-- Bloque 4: Criterios Evaluativos -->
+      <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-sm);">
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+            <span class="badge" style="background: rgba(139, 92, 246, 0.1); color: #8b5cf6; border: 1px solid rgba(139, 92, 246, 0.25);">Pedagogía</span>
+            <span style="font-size: 0.74rem; color: var(--text-muted);">Diseño de Pruebas</span>
+          </div>
+          <h4 style="font-size: 1.05rem; margin: 0 0 0.4rem 0; color: var(--text-main);">
+            4. Criterios para Diseñar Evaluaciones
+          </h4>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0 0 0.75rem 0;">
+            Enseña a evaluar el proceso y la defensa oral, prohibiendo castigar alumnos usando detectores automáticos.
+          </p>
+          <textarea id="texto-clausula-evaluacion" readonly rows="6" style="width: 100%; font-family: monospace; font-size: 0.75rem; padding: 0.6rem; border: 1px solid var(--border-color); border-radius: 4px; background: var(--canvas-bg); color: var(--text-main); resize: vertical; box-sizing: border-box;">### Criterios Docentes para Evaluar con IA
+1. Evaluar el proceso: Privilegiar bitácoras de trabajo, borradores intermedios y defensas orales cortas por sobre informes estáticos.
+2. Prohibición de detectores automáticos de IA: Dada su alta tasa comprobada de falsos positivos, ninguna sanción podrá basarse únicamente en detectores automáticos.
+3. Buena fe formativa: Ante sospechas de copia indebida, la primera instancia será siempre una entrevista pedagógica personal.</textarea>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.75rem;">
+          <button type="button" class="btn btn-outline btn-sm btn-copiar-rapido" data-target="texto-clausula-evaluacion" style="font-size: 0.78rem;">
+            📋 Copiar al Portapapeles
+          </button>
+          <span class="copy-feedback-badge" style="font-size: 0.74rem; color: var(--accent-green); font-weight: 600; display: none;">✓ ¡Copiado!</span>
+        </div>
+      </div>
+
+    </div>
   </div>
 
   <!-- PLANTILLA MARCO ABIERTA (DESCARGABLE Y COPIABLE) -->
@@ -256,6 +388,7 @@ Comuníquese, publíquese y archívese.</textarea>
 </section>
 
 <script is:inline>
+  // Copiar modelo institucional completo
   const copyBtn = document.getElementById('btn-copiar-modelo');
   const copyStatus = document.getElementById('copy-status');
   const textarea = document.getElementById('textarea-modelo-marco');
@@ -266,19 +399,44 @@ Comuníquese, publíquese y archívese.</textarea>
       await navigator.clipboard.writeText(textarea.value);
       if (copyStatus) {
         copyStatus.style.display = 'inline';
-        setTimeout(() => {
-          copyStatus.style.display = 'none';
-        }, 3000);
+        setTimeout(() => { copyStatus.style.display = 'none'; }, 3000);
       }
     } catch (e) {
       textarea.select();
       document.execCommand('copy');
       if (copyStatus) {
         copyStatus.style.display = 'inline';
-        setTimeout(() => {
-          copyStatus.style.display = 'none';
-        }, 3000);
+        setTimeout(() => { copyStatus.style.display = 'none'; }, 3000);
       }
     }
+  });
+
+  // Copiar micro-bloques individuales de 1 clic
+  const rapidButtons = document.querySelectorAll('.btn-copiar-rapido');
+  rapidButtons.forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const targetId = btn.getAttribute('data-target');
+      const targetEl = document.getElementById(targetId);
+      const parent = btn.parentElement;
+      const feedback = parent?.querySelector('.copy-feedback-badge');
+
+      if (!targetEl) return;
+      const textToCopy = targetEl.value || targetEl.textContent;
+
+      try {
+        await navigator.clipboard.writeText(textToCopy);
+        if (feedback) {
+          feedback.style.display = 'inline';
+          setTimeout(() => { feedback.style.display = 'none'; }, 3000);
+        }
+      } catch (err) {
+        targetEl.select();
+        document.execCommand('copy');
+        if (feedback) {
+          feedback.style.display = 'inline';
+          setTimeout(() => { feedback.style.display = 'none'; }, 3000);
+        }
+      }
+    });
   });
 </script>

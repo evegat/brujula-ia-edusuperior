@@ -24,11 +24,20 @@ console.log('✓ Umami activo con Website ID verificado y sin restricciones DNT'
 
 // 2. Verificación de Eliminación de la "Banda de Slide"
 console.log('\n--- 2. Navegación Sobria (Cero Slider Horizontal) ---');
-assert.ok(!html.includes('🏛️ Matriz 54 Universidades</button><button class="tab-btn" data-tab="tab-planilla">'), 'No debe tener pestañas atomizadas de 8 botones');
-assert.ok(html.includes('🏛️ Universidades &amp; Planilla') || html.includes('🏛️ Universidades & Planilla'), 'Debe tener pestaña consolidada Universidades & Planilla');
-assert.ok(html.includes('⚖️ Radar Ley 21.719 &amp; Kit') || html.includes('⚖️ Radar Ley 21.719 & Kit'), 'Debe tener pestaña Radar Ley 21.719 & Kit');
-assert.ok(html.includes('💰 Compras Públicas (Ues del Estado)'), 'Debe tener pestaña Compras Públicas');
-console.log('✓ Navegación consolidada en 5 secciones sobrias sin desborde horizontal');
+assert.ok(!html.includes('btn-quick-cross'), 'No debe contener bloque redundante de accesos rápidos');
+assert.ok(
+  html.includes('data-tab="tab-matriz"'),
+  'Debe tener pestaña de Universidades'
+);
+assert.ok(
+  html.includes('data-tab="tab-kit"'),
+  'Debe tener pestaña de Reglas / Kit'
+);
+assert.ok(
+  html.includes('data-tab="tab-compras"'),
+  'Debe tener pestaña de Compras'
+);
+console.log('✓ Navegación consolidada y en lenguaje claro sin desborde horizontal');
 
 // 3. Verificación de Usabilidad y Eliminación de Bloques Redundantes
 console.log('\n--- 3. Saneamiento Anti-Slop & Carga Cognitiva ---');

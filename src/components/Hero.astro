@@ -26,8 +26,40 @@ const docsIP = totalDocs - docsUes; // 6
       Catastro independiente de políticas, reglamentos docentes y compras tecnológicas en las <strong>54 universidades oficiales</strong> reconocidas por el Estado de Chile. Mapeamos qué planteles cuentan con directrices de aula identificadas y cuáles no registran documentos públicos en el levantamiento.
     </p>
 
-    <div style="font-size: 0.85rem; color: var(--text-muted);">
-      Diseñado y desarrollado por <a href="https://www.linkedin.com/in/evegat1989/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-blue); font-weight: 600; text-decoration: none;">Eduardo Vega Toledo</a> • Datos Abiertos CC BY 4.0
+    <div style="font-size: 0.85rem; color: var(--text-muted); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem;">
+      <div>
+        Diseñado y desarrollado por <a href="https://www.linkedin.com/in/evegat1989/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-blue); font-weight: 600; text-decoration: none;">Eduardo Vega Toledo</a> • Datos Abiertos CC BY 4.0
+      </div>
+
+      <div style="display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap;">
+        <a 
+          href="https://github.com/evegat/brujula-ia-edusuperior" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="btn btn-sm"
+          style="background: #24292f; color: #ffffff; font-size: 0.78rem; padding: 0.35rem 0.7rem; display: inline-flex; align-items: center; gap: 0.35rem; text-decoration: none;"
+        >
+          <svg style="width: 12px; height: 12px; fill: #e3b341;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+          ⭐ GitHub
+        </a>
+        <a 
+          href="/matriz_54_universidades.json" 
+          target="_blank" 
+          class="btn btn-outline btn-sm"
+          style="font-size: 0.78rem; padding: 0.35rem 0.65rem; text-decoration: none;"
+        >
+          📂 Datos Abiertos (.json)
+        </a>
+        <a 
+          href="/llms.txt" 
+          target="_blank" 
+          class="btn btn-outline btn-sm"
+          style="font-size: 0.78rem; padding: 0.35rem 0.65rem; color: var(--accent-blue); border-color: var(--accent-blue); text-decoration: none;"
+          title="Especificación abierta para Agentes y LLMs"
+        >
+          🤖 llms.txt
+        </a>
+      </div>
     </div>
   </div>
 

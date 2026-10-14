@@ -1,0 +1,111 @@
+---
+// src/components/BarraCompartir.astro
+// Call-to-action para compartir el observatorio y conectar con Eduardo Vega Toledo
+---
+
+<section id="compartir" style="margin-bottom: 3.5rem; background: linear-gradient(135deg, rgba(14, 116, 144, 0.06) 0%, rgba(16, 185, 129, 0.06) 100%); border: 1px solid var(--border-color); border-left: 4px solid var(--accent-blue); border-radius: 12px; padding: 1.5rem 1.75rem; box-shadow: var(--shadow-sm);">
+  
+  <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1.25rem;">
+    <div style="max-width: 650px;">
+      <div style="display: flex; gap: 0.4rem; align-items: center; margin-bottom: 0.35rem;">
+        <span class="badge badge-blue">Impacto & Comunidad</span>
+        <span class="badge badge-green">Acceso Libre</span>
+      </div>
+      <h3 style="font-size: 1.25rem; margin: 0 0 0.35rem 0; font-family: var(--font-serif); color: var(--text-main);">
+        ¿Te resulta útil este observatorio? Ayúdanos a difundirlo
+      </h3>
+      <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; margin: 0;">
+        Comparte este bien público digital con directivos, docentes, centros de estudiantes e investigadores. Si deseas colaborar, proponer mejoras metodológicas o coordinar una presentación, conecta directamente con Eduardo.
+      </p>
+    </div>
+
+    <!-- Acciones de Redes y Conexión -->
+    <div style="display: flex; flex-direction: column; gap: 0.65rem;">
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
+        
+        <!-- Compartir LinkedIn -->
+        <a 
+          href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbrujulaiaedusuperior.evegat.cl" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="btn btn-sm"
+          style="background: #0a66c2; color: #ffffff; font-weight: 600; font-size: 0.8rem; padding: 0.45rem 0.85rem; display: inline-flex; align-items: center; gap: 0.35rem; text-decoration: none;"
+          title="Compartir en LinkedIn"
+        >
+          <svg style="width: 14px; height: 14px; fill: currentColor;" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64a1.64 1.64 0 1 0 0 3.28 1.64 1.64 0 0 0 0-3.28Z"/></svg>
+          Compartir en LinkedIn
+        </a>
+
+        <!-- Compartir WhatsApp -->
+        <a 
+          href="https://api.whatsapp.com/send?text=Te%20comparto%20la%20Br%C3%BAjula%20IA%20Educaci%C3%B3n%20Superior%2C%20el%20primer%20observatorio%20abierto%20sobre%20normativas%20de%20IA%20en%20universidades%20chilenas%3A%20https%3A%2F%2Fbrujulaiaedusuperior.evegat.cl" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="btn btn-sm"
+          style="background: #25d366; color: #ffffff; font-weight: 600; font-size: 0.8rem; padding: 0.45rem 0.85rem; display: inline-flex; align-items: center; gap: 0.35rem; text-decoration: none;"
+          title="Compartir por WhatsApp"
+        >
+          💬 WhatsApp
+        </a>
+
+        <!-- Copiar Enlace -->
+        <button 
+          type="button" 
+          id="btn-copiar-enlace" 
+          class="btn btn-outline btn-sm"
+          style="font-size: 0.8rem; padding: 0.45rem 0.8rem;"
+        >
+          🔗 Copiar Enlace
+        </button>
+
+      </div>
+
+      <!-- Conexión Directa con Eduardo -->
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
+        
+        <a 
+          href="https://www.linkedin.com/in/evegat1989/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="btn btn-outline btn-sm"
+          style="font-size: 0.78rem; padding: 0.35rem 0.75rem; color: var(--accent-blue); border-color: var(--accent-blue); display: inline-flex; align-items: center; gap: 0.35rem; text-decoration: none;"
+        >
+          👤 Seguir a Eduardo en LinkedIn
+        </a>
+
+        <a 
+          href="mailto:eduardo@evegat.cl?subject=Contacto%20Br%C3%BAjula%20IA%20Educaci%C3%B3n%20Superior&body=Hola%20Eduardo%2C%0A%0ATe%20escribo%20a%20prop%C3%B3sito%20de%20la%20Br%C3%BAjula%20IA%20Educaci%C3%B3n%20Superior%3A%0A%0A-%20Motivo%20o%20Instituci%C3%B3n%3A%20%0A-%20Comentarios%20o%20propuesta%3A%20%0A%0ASaludos%2C"
+          class="btn btn-outline btn-sm"
+          style="font-size: 0.78rem; padding: 0.35rem 0.75rem; color: var(--text-muted); border-color: var(--border-color); display: inline-flex; align-items: center; gap: 0.35rem; text-decoration: none;"
+        >
+          ✉️ Escribir al Correo
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="copy-feedback" style="display: none; margin-top: 0.75rem; font-size: 0.8rem; color: var(--accent-green); font-weight: 600;">
+    ✓ Enlace copiado al portapapeles: https://brujulaiaedusuperior.evegat.cl
+  </div>
+
+</section>
+
+<script is:inline>
+  const copyBtn = document.getElementById('btn-copiar-enlace');
+  const copyFb = document.getElementById('copy-feedback');
+
+  copyBtn?.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText('https://brujulaiaedusuperior.evegat.cl');
+      if (copyBtn) copyBtn.textContent = '✓ Copiado';
+      if (copyFb) copyFb.style.display = 'block';
+      setTimeout(() => {
+        if (copyBtn) copyBtn.textContent = '🔗 Copiar Enlace';
+        if (copyFb) copyFb.style.display = 'none';
+      }, 3000);
+    } catch {
+      prompt('Copia este enlace:', 'https://brujulaiaedusuperior.evegat.cl');
+    }
+  });
+</script>

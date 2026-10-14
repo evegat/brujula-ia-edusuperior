@@ -89,7 +89,7 @@ export const POST: APIRoute = async ({ request }) => {
       });
     }
 
-    const { email, institucion, perfil } = body;
+    const { email, institucion, perfil, origen, consentimiento_ley_21719 } = body;
 
     if (!email || typeof email !== 'string' || !EMAIL_REGEX.test(email.trim())) {
       return new Response(JSON.stringify({
@@ -103,6 +103,19 @@ export const POST: APIRoute = async ({ request }) => {
 
     const cleanEmail = email.trim().toLowerCase();
 
+    let isConsent = false;
+    if (consentimiento_ley_21719 === true || consentimiento_ley_21719 === 'true') {
+      isConsent = true;
+    } else if (consentimiento_ley_21719 === false || consentimiento_ley_21719 === 'false') {
+      return new Response(JSON.stringify({
+        success: false,
+        error: 'El consentimiento conforme a la Ley N° 21.719 no puede ser falso ni denegado para registrar la suscripción.'
+      }), {
+        status: 400,
+        headers: CORS_HEADERS
+      });
+    }
+
     return new Response(JSON.stringify({
       success: true,
       message: `Suscripción registrada con éxito para ${cleanEmail}`,
@@ -110,6 +123,8 @@ export const POST: APIRoute = async ({ request }) => {
         email: cleanEmail,
         institucion: institucion && typeof institucion === 'string' ? institucion.trim() : null,
         perfil: perfil && typeof perfil === 'string' ? perfil.trim() : 'general',
+        origen: origen && typeof origen === 'string' ? origen.trim() : 'brujula-p154',
+        consentimiento_ley_21719: isConsent,
         timestamp: new Date().toISOString()
       }
     }), {

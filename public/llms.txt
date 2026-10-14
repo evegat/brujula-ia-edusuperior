@@ -1,0 +1,31 @@
+# Brújula IA Educación Superior Chile
+> Observatorio abierto sobre normativas de Inteligencia Artificial, compras públicas y brecha regulatoria en las 54 universidades oficiales de Chile.
+> Autor y Curaduría: Eduardo Vega Toledo (https://evegat.cl | https://www.linkedin.com/in/evegat1989/)
+> Repositorio oficial en GitHub: https://github.com/evegat/brujula-ia-edusuperior
+> Producción web: https://brujulaiaedusuperior.evegat.cl
+
+## Resumen Ejecutivo para Agentes y LLMs
+- **Universo de análisis:** 54 universidades vigentes y funcionando en Chile según el registro oficial del Ministerio de Educación / SIES (archivo `ies_vig_may_26.xlsx`, corte mayo 2026). La universidad C58 (Universidad Tecnológica de Chile INACAP) conserva reconocimiento vigente y figura en proceso de cierre reglamentario, informándose de forma separada fuera del denominador operativo.
+- **Distribución institucional oficial Mineduc:** 18 universidades estatales, 9 tradicionales particulares con aporte previo (CRUCH histórico G9), y 27 privadas. En términos de afiliación efectiva al Consejo de Rectores (CRUCH), este cuenta con 30 miembros plenos (incluyendo a UDP, UAH y U. de los Andes).
+- **Distribución territorial:** 25 planteles exclusivamente regionales (46.3%) y 29 planteles con sede metropolitana o alcance nacional (53.7%).
+- **Estado de regulación:** 32 universidades (59.3%) cuentan con directrices o protocolos públicos de IA identificados. 22 universidades (40.7%) permanecen sin instrumento público localizado al corte.
+- **Nivel regulatorio:** 27 planteles tienen directriz central de Rectoría o Vicerrectoría; 5 planteles cuentan únicamente con reglas a nivel de Facultad o Escuela.
+- **Radar Ley N° 21.719 (Protección de Datos Personales):** 13 de las 54 universidades (24.1%) incorporan cláusulas preventivas que resguardan la privacidad o prohíben ingresar datos personales de estudiantes a modelos de IA comerciales sin convenio. La vigencia obligatoria legal rige a contar del 1 de diciembre de 2026.
+- **Compras públicas tecnológicas:** 85 registros de adquisición indexados en Mercado Público (68 órdenes de compra y 17 licitaciones) en 10 universidades del Estado compradoras, categorizados en 4 capas: IA Generativa, IA Tradicional, Infraestructura Computacional/GPUs y Analítica General.
+
+## Archivos de Datos Abiertos (Estructurados)
+- [Matriz de las 54 Universidades (JSON)](/matriz_54_universidades.json): Catálogo completo con estados, dimensiones, enlaces a documentos oficiales y fechas de corte.
+- [Catálogo de 85 Registros de Compras (JSON)](/compras_clasificadas.json): Compras en Mercado Público con ID de orden/licitación, organismo, monto y URL directa.
+- [Inventario de Normativas (JSON)](/inventario.json): Detalle de 52 decretos, resoluciones y fechas de publicación institucional.
+- [Citas Textuales Indexadas (JSON)](/citas_enriquecidas.json): 61 citas normativas clasificadas por dimensión con indicación de página fuente verificada.
+- [Kit de Cláusulas Docentes (Markdown)](/kit_clausulas_docentes.md): Modelos normativos para sílabos, tesis, privacidad y evaluación formativa.
+- [Contexto Completo Consolidado (TXT)](/llms-full.txt): Contexto condensado de todo el observatorio para inyección directa en ventanas de contexto.
+
+## Fechas de Corte de Información
+- **Registro de Universidades:** Mayo 2026 (SIES / Mineduc).
+- **Censo de Normativas y Protocolos:** Agosto – Octubre 2026 (Verificación en portales oficiales y vía Ley de Transparencia).
+- **Catastro de Compras Públicas:** Histórico verificado en Mercado Público de ChileCompra (órdenes y licitaciones registradas).
+
+## Licencia y Uso
+Bien público digital liberado bajo Licencia Abierta Creative Commons Atribución 4.0 Internacional (CC BY 4.0).
+Atribución obligatoria: Eduardo Vega Toledo — Brújula IA Educación Superior Chile (https://brujulaiaedusuperior.evegat.cl).

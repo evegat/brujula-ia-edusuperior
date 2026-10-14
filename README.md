@@ -18,18 +18,25 @@ A diferencia de aproximaciones abstractas o declarativas, la plataforma se basa 
 
 ---
 
-## 🏛️ Universo Institucional de Estudio
+## 🏛️ Universo Institucional y Fechas de Corte de Auditoría
 
-El universo de observación comprende el **100% de las 54 universidades legalmente constituidas y vigentes en Chile** según la nómina oficial del Servicio de Información de Educación Superior (SIES) del Ministerio de Educación (Mineduc, corte mayo 2026):
+El universo de observación comprende el **100% de las 54 universidades legalmente constituidas y vigentes en Chile** según la nómina oficial del Servicio de Información de Educación Superior (SIES) del Ministerio de Educación (Mineduc, corte mayo 2026, archivo oficial `ies_vig_may_26.xlsx`):
 
-| Segmento Institucional | Cantidad | Con Instrumento Identificado | Sin Instrumento Público Identificado |
+| Segmento Oficial Mineduc | Cantidad | Con Instrumento Identificado | Sin Instrumento Público Identificado |
 |---|---:|---:|---:|
 | **Universidades Estatales (CUECH)** | 18 | 8 (44.4%) | 10 (55.6%) |
-| **Universidades Privadas CRUCH (G9)** | 9 | 7 (77.8%) | 2 (22.2%) |
-| **Universidades Privadas no CRUCH** | 27 | 17 (63.0%) | 10 (37.0%) |
+| **Universidades Particulares con aporte (G9 Tradicionales)** | 9 | 7 (77.8%) | 2 (22.2%) |
+| **Universidades Privadas** | 27 | 17 (63.0%) | 10 (37.0%) |
 | **Total Universo Oficial SIES** | **54** | **32 (59.3%)** | **22 (40.7%)** |
 
-> *Principio Epistemológico:* La no localización de documentos en canales abiertos describe el resultado del barrido público y en ningún caso constituye declaración de inexistencia institucional o falta de regulación interna. Se declara estrictamente: **«Sin instrumento público identificado en el levantamiento»**.
+> **Nota de Rigor Metodológico sobre el Universo:**
+> - **¿Por qué 54 y no 58?** La nómina oficial Mineduc (mayo 2026) registra 55 planteles con reconocimiento: 54 vigentes y en funcionamiento activo, más la Universidad Tecnológica de Chile INACAP (C58), que conserva reconocimiento vigente pero figura en proceso de cierre reglamentario, informándose separadamente fuera del denominador operativo. Registros históricos que mencionan "58" arrastran planteles con personalidad jurídica revocada o clausurada por el Estado antes de 2026 (como U. Arcis, UNICIT o U. del Mar).
+> - **Membresía en el Consejo de Rectores (CRUCH):** El CRUCH cuenta actualmente con **30 universidades integrantes plenas** (18 estatales más 12 privadas: las 9 tradicionales más UDP, UAH y Universidad de los Andes). La categorización 18/9/27 refleja la estructura original de financiamiento del Mineduc.
+> - **Fechas de corte de la evidencia:**
+>   - *Nómina institucional:* Mayo 2026 (SIES / Mineduc).
+>   - *Censo de normativas:* Agosto – Octubre 2026 (Inspección en portales institucionales y vía Ley de Transparencia).
+>   - *Compras públicas:* Histórico verificado en Mercado Público de ChileCompra (85 registros: 68 órdenes de compra y 17 licitaciones).
+> - *Principio Epistemológico:* La no localización de documentos en canales abiertos describe el resultado del barrido público y en ningún caso constituye declaración de inexistencia institucional o falta de regulación interna. Se declara estrictamente: **«Sin instrumento público identificado en el levantamiento»**.
 
 ---
 
@@ -69,6 +76,28 @@ El universo de observación comprende el **100% de las 54 universidades legalmen
 
 ### 6. 📖 Metodología, Universo SIES y Control de Versiones
 - Documentación pública y pedagógica sobre cómo se obtuvieron los datos, el universo oficial, el changelog histórico (v1.0 a v2.2) y el protocolo continuo de crowdsourcing.
+
+### 7. 📋 Kit de Cláusulas Listas para Copiar en Clases y Carreras
+- 4 micro-bloques en lenguaje claro y listos para pegar en un clic:
+  1. *Para el Programa de Curso (Sílabo):* Usos autorizados, transparencia y declaración obligatoria de prompts.
+  2. *Para Tesis y Trabajos de Titulación:* Transparencia metodológica, no delegación de hipótesis y defensa oral.
+  3. *Cuidado de Datos Personales (Ley N° 21.719):* Prohibición estricta de subir datos de estudiantes a LLMs comerciales sin convenio.
+  4. *Criterios Docentes para Evaluar:* Evaluar el proceso y defensas orales; prohibición de fundamentar sanciones en detectores automáticos.
+- Archivo descargable: [`public/kit_clausulas_docentes.md`](public/kit_clausulas_docentes.md).
+
+### 8. 💡 Banco Colaborativo de Buenas Prácticas Docentes
+- Catálogo abierto de ejercicios de aula y metodologías reales probadas por profesores chilenos:
+  1. *Usar las alucinaciones como antídoto crítico:* Contraste deliberado de errores de LLMs con bibliografía física en 1° año.
+  2. *Auditoría inversa de planillas Excel con IA:* Deconstrucción asistida de fórmulas matriciales complejas y revisión de presupuestos públicos.
+  3. *Asistente formativo para entregas (Caso Cristina / Gobernar con Datos):* Tutoría ex-ante y objeciones técnicas antes de la entrega final.
+  4. *Scripts de procesamiento de datos:* Automatización asistida para limpieza y análisis cuanti y cualitativo.
+- Carpeta comunitaria en GitHub: [`buenas-practicas/`](buenas-practicas/). Abierto a contribuciones vía Pull Request o correo a `eduardo@evegat.cl`.
+
+### 9. 🤖 Arquitectura Agent-Ready para LLMs y Agentes de IA
+- Implementación del estándar abierto [llmstxt.org](https://llmstxt.org):
+  - [`/llms.txt`](public/llms.txt): Manifiesto semántico con metadatos, resumen del censo y enlaces limpios a datos abiertos.
+  - [`/llms-full.txt`](public/llms-full.txt): Contexto integral condensado de las 54 universidades y compras para inyección en ventanas de contexto.
+  - Datasets JSON abiertos descargables sin autenticación ni scraping.
 
 ---
 
