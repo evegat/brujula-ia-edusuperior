@@ -41,15 +41,8 @@ const t = useTranslations(lang);
         onclick="window.abrirModalAporte && window.abrirModalAporte('')"
         style="font-size: 0.82rem; padding: 0.45rem 0.85rem;"
       >
-        🔗 {lang === 'en' ? 'Submit Policy Link' : lang === 'pt' ? 'Enviar Link de Diretriz' : 'Aportar Enlace de Normativa'}
+        📥 {lang === 'en' ? 'Submit Policy or Decree' : lang === 'pt' ? 'Enviar Diretriz ou Decreto' : 'Aportar Normativa o Decreto'}
       </button>
-      <a 
-        href="mailto:eduardo@evegat.cl?subject=Aporte%20Normativa%20IA%20-%20Educaci%C3%B3n%20Superior&body=Estimado%20Eduardo%2C%0A%0AAdjunto%20el%20documento%20PDF%20o%20decreto%20de%20la%20universidad%20para%20su%20incorporaci%C3%B3n%20al%20catastro%3A%0A%0A-%20Universidad%20o%20Plantel%3A%20%0A-%20Nombre%20o%20N%C2%B0%20de%20la%20Resoluci%C3%B3n%2FDecreto%3A%20%0A-%20A%C3%B1o%2FFecha%3A%20%0A-%20Enlace%20adicional%20(opcional)%3A%20%0A%0ASaludos%2C"
-        class="btn btn-outline btn-sm"
-        style="font-size: 0.82rem; padding: 0.45rem 0.85rem; color: var(--accent-blue); border-color: var(--accent-blue);"
-      >
-        📎 {lang === 'en' ? 'Send PDF via Email' : lang === 'pt' ? 'Enviar PDF por E-mail' : 'Enviar PDF por Correo'}
-      </a>
     </div>
   </div>
 

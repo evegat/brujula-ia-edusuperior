@@ -1,55 +1,75 @@
+---
+import type { SupportedLang } from '../i18n/ui';
+import { useTranslations } from '../i18n/ui';
+
+interface Props {
+  lang?: SupportedLang;
+}
+
+const { lang = 'es' } = Astro.props;
+const t = useTranslations(lang);
+---
+
 <footer style="margin-top:4rem; border-top:1px solid var(--border-color); padding-top:2.5rem; padding-bottom:3rem; font-size:0.86rem; color:var(--text-muted);">
   <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:2.5rem; margin-bottom:2rem;">
     <div>
       <div style="font-family:var(--font-serif); font-size:1.25rem; font-weight:700; color:var(--text-main); margin-bottom:0.5rem;">
-        Brújula IA Educación Superior
+        {t('brand.name')} {t('brand.subtitle')}
       </div>
       <p style="font-size:0.84rem; line-height:1.5; margin-bottom:1rem;">
-        Observatorio abierto y catastro independiente de normativas de Inteligencia Artificial en las 54 universidades oficiales de Chile.
+        {lang === 'en' 
+          ? 'Open observatory and independent census of Artificial Intelligence policies across all 54 official Chilean universities.' 
+          : lang === 'pt' 
+          ? 'Observatório aberto e censo independente de diretrizes de Inteligência Artificial nas 54 universidades oficiais do Chile.' 
+          : 'Observatorio abierto y catastro independiente de normativas de Inteligencia Artificial en las 54 universidades oficiales de Chile.'}
       </p>
       <div style="font-size:0.82rem; line-height:1.6;">
-        Investigación y desarrollo por <a href="https://www.linkedin.com/in/evegat1989/" target="_blank" rel="noopener noreferrer" style="color:var(--accent-blue); font-weight:600; text-decoration:none;">Eduardo Vega Toledo</a><br />
-        Universidad de Chile • <a href="mailto:evegat@uchile.cl" style="color:var(--accent-blue); text-decoration:underline;">evegat@uchile.cl</a> / <a href="mailto:eduardo@evegat.cl" style="color:var(--text-main); text-decoration:underline;">eduardo@evegat.cl</a>
+        {t('footer.author_title')} <a href="https://www.linkedin.com/in/evegat1989/" target="_blank" rel="noopener noreferrer" style="color:var(--accent-blue); font-weight:600; text-decoration:none;">{t('footer.author_name')}</a><br />
+        {t('footer.affiliation')} • <a href="mailto:evegat@uchile.cl" style="color:var(--accent-blue); text-decoration:underline;">evegat@uchile.cl</a> / <a href="mailto:eduardo@evegat.cl" style="color:var(--text-main); text-decoration:underline;">eduardo@evegat.cl</a>
       </div>
     </div>
 
     <div>
       <div style="font-weight:700; color:var(--text-main); margin-bottom:0.75rem; font-size:0.88rem;">
-        Enlaces y Redes
+        {lang === 'en' ? 'Links & Connect' : lang === 'pt' ? 'Links e Conexões' : 'Enlaces y Redes'}
       </div>
       <ul style="list-style:none; display:flex; flex-direction:column; gap:0.45rem; font-size:0.84rem;">
-        <li><a href="https://www.linkedin.com/in/evegat1989/" target="_blank" rel="noopener noreferrer" style="color:var(--accent-blue); text-decoration:none;">💼 LinkedIn de Eduardo Vega Toledo</a></li>
+        <li><a href="https://www.linkedin.com/in/evegat1989/" target="_blank" rel="noopener noreferrer" style="color:var(--accent-blue); text-decoration:none;">💼 {lang === 'en' ? "Eduardo Vega Toledo's LinkedIn" : lang === 'pt' ? 'LinkedIn de Eduardo Vega Toledo' : 'LinkedIn de Eduardo Vega Toledo'}</a></li>
         <li><a href="https://evegat.cl" target="_blank" rel="noopener noreferrer" style="color:var(--text-main); text-decoration:none;">🌐 evegat.cl</a></li>
-        <li><a href="https://github.com/evegat/brujula-ia-edusuperior" target="_blank" rel="noopener noreferrer" style="color:var(--text-main); text-decoration:none;">📦 Repositorio y Datos en GitHub</a></li>
+        <li><a href="https://github.com/evegat/brujula-ia-edusuperior" target="_blank" rel="noopener noreferrer" style="color:var(--text-main); text-decoration:none;">📦 {lang === 'en' ? 'GitHub Repository & Data' : lang === 'pt' ? 'Repositório e Dados no GitHub' : 'Repositorio y Datos en GitHub'}</a></li>
       </ul>
     </div>
 
     <div>
       <div style="font-weight:700; color:var(--text-main); margin-bottom:0.75rem; font-size:0.88rem;">
-        Licencia & Marco Legal
+        {lang === 'en' ? 'Licensing & Compliance' : lang === 'pt' ? 'Licença e Marco Legal' : 'Licencia & Marco Legal'}
       </div>
       <p style="font-size:0.82rem; line-height:1.5; margin-bottom:0.6rem;">
-        Datos compilados bajo licencia <strong>CC BY 4.0</strong>. Información pública amparada en Ley N° 20.285 y derecho de cita (Ley N° 17.336).
+        {lang === 'en' 
+          ? 'Data compiled under Creative Commons CC BY 4.0. Public information supported by Transparency Law No. 20,285 and fair quotation rights.' 
+          : lang === 'pt' 
+          ? 'Dados compilados sob licença CC BY 4.0. Informação pública respaldada pela Lei de Acesso à Informação e direito de citação.' 
+          : 'Datos compilados bajo licencia CC BY 4.0. Información pública amparada en Ley N° 20.285 y derecho de cita (Ley N° 17.336).'}
       </p>
       <ul style="list-style:none; padding-left:0; margin:0; display:flex; flex-direction:column; gap:0.4rem; font-size:0.82rem;">
         <li>
           <a href="#modal-aviso-legal" class="btn-abrir-aviso-legal" style="color:var(--accent-blue); font-weight:600; text-decoration:none; cursor:pointer;">
-            ⚖️ Aviso Legal & Descargo de Responsabilidad &rarr;
+            ⚖️ {lang === 'en' ? 'Legal Notice & Disclaimer →' : lang === 'pt' ? 'Aviso Legal e Termo de Isenção →' : 'Aviso Legal & Descargo de Responsabilidad →'}
           </a>
         </li>
         <li>
           <a href="/AVISO_LEGAL.md" target="_blank" style="color:var(--text-muted); text-decoration:none;">
-            📄 Protocolo de Rectificación (48 hrs)
+            📄 {lang === 'en' ? 'Rectification Protocol (48 hrs)' : lang === 'pt' ? 'Protocolo de Retificação (48 hrs)' : 'Protocolo de Rectificación (48 hrs)'}
           </a>
         </li>
       </ul>
       <div style="font-size:0.75rem; color:var(--text-muted); margin-top:0.75rem;">
-        Desplegado en Cloudflare Workers • Santiago de Chile.
+        {lang === 'en' ? 'Deployed on Cloudflare Workers • Santiago, Chile.' : lang === 'pt' ? 'Implantado no Cloudflare Workers • Santiago do Chile.' : 'Desplegado en Cloudflare Workers • Santiago de Chile.'}
       </div>
     </div>
   </div>
 
   <div style="text-align:center; border-top:1px solid var(--border-color); padding-top:1.25rem; font-size:0.78rem;">
-    Diseñado y desarrollado por <a href="https://www.linkedin.com/in/evegat1989/" target="_blank" rel="noopener noreferrer" style="color:var(--text-main); font-weight:600;">Eduardo Vega Toledo</a> • Brújula IA Educación Superior • 2026
+    {lang === 'en' ? 'Researched and built by' : lang === 'pt' ? 'Pesquisado e desenvolvido por' : 'Diseñado y desarrollado por'} <a href="https://www.linkedin.com/in/evegat1989/" target="_blank" rel="noopener noreferrer" style="color:var(--text-main); font-weight:600;">Eduardo Vega Toledo</a> • Brújula IA Educación Superior • 2026
   </div>
 </footer>

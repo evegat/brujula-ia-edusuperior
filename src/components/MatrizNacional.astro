@@ -1,5 +1,14 @@
 ---
+import type { SupportedLang } from '../i18n/ui';
+import { useTranslations } from '../i18n/ui';
 import matrizData from '../../data/matriz_54_universidades.json';
+
+interface Props {
+  lang?: SupportedLang;
+}
+
+const { lang = 'es' } = Astro.props;
+const t = useTranslations(lang);
 
 const totalOficiales = matrizData.length; // 54
 const conInstrumento = matrizData.filter(u => !u.en_brecha).length; // 32
@@ -39,12 +48,12 @@ function normalizeForSearch(str: string): string {
   <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1.25rem; margin-bottom:1.5rem;">
     <div>
       <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.4rem;">
-        <span class="badge badge-green">Catastro Oficial Mineduc</span>
-        <span class="badge badge-blue">Nómina Mineduc / SIES (Mayo 2026)</span>
+        <span class="badge badge-green">{t('matriz.badge_official')}</span>
+        <span class="badge badge-blue">{t('matriz.badge_sies')}</span>
       </div>
-      <h2>Matriz Nacional de las 54 Universidades de Chile</h2>
+      <h2>{t('matriz.title')}</h2>
       <p style="color:var(--text-muted); max-width:850px; font-size:0.96rem; line-height:1.55;">
-        Catastro empírico y diagnóstico dimensional sobre los 54 planteles universitarios reconocidos oficialmente en el país. Identificamos qué universidades cuentan con instrumentos normativos públicos y cuáles no registran documentos localizados en el levantamiento.
+        {t('matriz.desc')}
       </p>
     </div>
 
@@ -54,7 +63,7 @@ function normalizeForSearch(str: string): string {
         {porcentajeCobertura}%
       </div>
       <div style="font-size:0.8rem; color:var(--text-muted); margin-top:0.25rem;">
-        {conInstrumento} con instrumento / {sinInstrumento} sin instrumento público
+        {conInstrumento} {lang === 'en' ? 'with policy' : lang === 'pt' ? 'com diretriz' : 'con instrumento'} / {sinInstrumento} {lang === 'en' ? 'without identified public policy' : lang === 'pt' ? 'sem diretriz pública identificada' : 'sin instrumento público'}
       </div>
     </div>
   </div>
@@ -63,28 +72,28 @@ function normalizeForSearch(str: string): string {
   <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap:1rem; margin-bottom:2rem;">
     <div class="card" style="padding:1.2rem; text-align:center;">
       <div style="font-size:1.8rem; font-weight:700; color:var(--text-main); font-family:var(--font-serif);">{totalOficiales}</div>
-      <div style="font-size:0.8rem; color:var(--text-muted);">Universidades Oficiales</div>
+      <div style="font-size:0.8rem; color:var(--text-muted);">{t('matriz.kpi_official_ues')}</div>
     </div>
     <div class="card" style="padding:1.2rem; text-align:center; border-left:3px solid var(--accent-green);">
       <div style="font-size:1.8rem; font-weight:700; color:var(--accent-green); font-family:var(--font-serif);">{conInstrumento} (59.3%)</div>
-      <div style="font-size:0.8rem; color:var(--text-muted);">Con Instrumento Identificado</div>
+      <div style="font-size:0.8rem; color:var(--text-muted);">{t('matriz.kpi_with_doc')}</div>
     </div>
     <div class="card" style="padding:1.2rem; text-align:center; border-left:3px solid var(--text-muted);">
       <div style="font-size:1.8rem; font-weight:700; color:var(--text-main); font-family:var(--font-serif);">{sinInstrumento} (40.7%)</div>
-      <div style="font-size:0.8rem; color:var(--text-muted);">Sin Instrumento Público Identificado</div>
+      <div style="font-size:0.8rem; color:var(--text-muted);">{t('matriz.kpi_without_doc')}</div>
     </div>
     <div class="card" style="padding:1.2rem; text-align:center; border-left:3px solid var(--accent-blue);">
-      <div style="font-size:1.8rem; font-weight:700; color:var(--accent-blue); font-family:var(--font-serif);">{conCompras} Planteles</div>
-      <div style="font-size:0.8rem; color:var(--text-muted);">Compras IA en Mercado Público (Estatales)</div>
+      <div style="font-size:1.8rem; font-weight:700; color:var(--accent-blue); font-family:var(--font-serif);">{conCompras} {lang === 'en' ? 'Universities' : lang === 'pt' ? 'Instituições' : 'Planteles'}</div>
+      <div style="font-size:0.8rem; color:var(--text-muted);">{t('matriz.kpi_procurement')}</div>
     </div>
   </div>
 
   <!-- Barra de Aporte Colaborativo de Normativas -->
   <div style="background: linear-gradient(to right, rgba(14, 116, 144, 0.08), rgba(16, 185, 129, 0.08)); border: 1px solid var(--border-color); border-left: 4px solid var(--accent-blue); border-radius: 8px; padding: 0.9rem 1.25rem; margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
     <div>
-      <strong style="font-size: 0.88rem; color: var(--text-main);">¿No encuentras la normativa de tu universidad o conoces un decreto reciente?</strong>
+      <strong style="font-size: 0.88rem; color: var(--text-main);">{t('matriz.banner_title')}</strong>
       <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.15rem;">
-        Ayúdanos a mantener este bien público actualizado. Aceptamos enlaces públicos o documentos en PDF por correo.
+        {t('matriz.banner_desc')}
       </div>
     </div>
     <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
@@ -94,15 +103,8 @@ function normalizeForSearch(str: string): string {
         onclick="window.abrirModalAporte && window.abrirModalAporte('')"
         style="font-size: 0.8rem; padding: 0.4rem 0.8rem;"
       >
-        🔗 Aportar Enlace
+        {t('matriz.card_btn_submit')}
       </button>
-      <a 
-        href="mailto:eduardo@evegat.cl?subject=Aporte%20Normativa%20IA%20-%20Educaci%C3%B3n%20Superior&body=Estimado%20Eduardo%2C%0A%0AAdjunto%20el%20documento%20PDF%20o%20decreto%20de%20la%20universidad%20para%20su%20incorporaci%C3%B3n%20al%20catastro%3A%0A%0A-%20Universidad%20o%20Plantel%3A%20%0A-%20Nombre%20o%20N%C2%B0%20de%20la%20Resoluci%C3%B3n%2FDecreto%3A%20%0A-%20A%C3%B1o%2FFecha%3A%20%0A-%20Enlace%20adicional%20(opcional)%3A%20%0A%0ASaludos%2C"
-        class="btn btn-outline btn-sm"
-        style="font-size: 0.8rem; padding: 0.4rem 0.8rem; color: var(--accent-blue); border-color: var(--accent-blue);"
-      >
-        📎 Enviar PDF por Correo
-      </a>
     </div>
   </div>
 
@@ -112,20 +114,20 @@ function normalizeForSearch(str: string): string {
     <!-- Filtro 1: Tipo Institucional -->
     <div style="margin-bottom:1rem;">
       <div style="font-size:0.76rem; font-weight:700; text-transform:uppercase; color:var(--text-muted); margin-bottom:0.45rem; letter-spacing:0.5px;">
-        1. Segmento Institucional:
+        {t('matriz.filter_type_label')}
       </div>
       <div style="display:flex; gap:0.4rem; flex-wrap:wrap;" id="filter-tipo-buttons">
         <button type="button" class="btn btn-primary btn-sm btn-f-tipo" data-tipo="todas">
-          Todos los Tipos ({totalOficiales})
+          {t('matriz.filter_type_all')} ({totalOficiales})
         </button>
         <button type="button" class="btn btn-outline btn-sm btn-f-tipo" data-tipo="Estatales">
-          🏛️ Estatales ({estatales.length})
+          {t('matriz.filter_type_state')} ({estatales.length})
         </button>
         <button type="button" class="btn btn-outline btn-sm btn-f-tipo" data-tipo="Privadas CRUCH">
-          🎓 Privadas CRUCH ({cruch.length})
+          {t('matriz.filter_type_cruch')} ({cruch.length})
         </button>
         <button type="button" class="btn btn-outline btn-sm btn-f-tipo" data-tipo="Privadas no CRUCH">
-          🏢 Privadas no CRUCH ({noCruch.length})
+          {t('matriz.filter_type_nocruch')} ({noCruch.length})
         </button>
       </div>
     </div>
@@ -133,17 +135,17 @@ function normalizeForSearch(str: string): string {
     <!-- Filtro 2: Estado de Identificación Documental -->
     <div style="margin-bottom:1rem; border-top:1px solid var(--border-color); padding-top:0.85rem;">
       <div style="font-size:0.76rem; font-weight:700; text-transform:uppercase; color:var(--text-muted); margin-bottom:0.45rem; letter-spacing:0.5px;">
-        2. Estado de Identificación Documental:
+        {t('matriz.filter_status_label')}
       </div>
       <div style="display:flex; gap:0.4rem; flex-wrap:wrap;" id="filter-estado-buttons">
         <button type="button" class="btn btn-primary btn-sm btn-f-estado" data-estado="todos">
-          Todos los Estados ({totalOficiales})
+          {t('matriz.filter_status_all')} ({totalOficiales})
         </button>
         <button type="button" class="btn btn-outline btn-sm btn-f-estado" data-estado="con-instrumento" style="color:var(--accent-green);">
-          ✓ Con Instrumento Identificado ({conInstrumento})
+          {t('matriz.filter_status_with')} ({conInstrumento})
         </button>
         <button type="button" class="btn btn-outline btn-sm btn-f-estado" data-estado="sin-instrumento" style="color:var(--text-muted);">
-          ○ Sin Instrumento Público Identificado ({sinInstrumento})
+          {t('matriz.filter_status_without')} ({sinInstrumento})
         </button>
       </div>
     </div>
@@ -151,17 +153,17 @@ function normalizeForSearch(str: string): string {
     <!-- Filtro 3: Presencia Territorial (Descentralización Regional) -->
     <div style="margin-bottom:1rem; border-top:1px solid var(--border-color); padding-top:0.85rem;">
       <div style="font-size:0.76rem; font-weight:700; text-transform:uppercase; color:var(--text-muted); margin-bottom:0.45rem; letter-spacing:0.5px;">
-        3. Presencia Territorial:
+        {t('matriz.filter_geo_label')}
       </div>
       <div style="display:flex; gap:0.4rem; flex-wrap:wrap;" id="filter-territorio-buttons">
         <button type="button" class="btn btn-primary btn-sm btn-f-territorio" data-territorio="todos">
-          Todos los Territorios ({totalOficiales})
+          {t('matriz.filter_geo_all')} ({totalOficiales})
         </button>
         <button type="button" class="btn btn-outline btn-sm btn-f-territorio" data-territorio="Regional">
-          📍 Solo Regionales ({uesRegionales.length})
+          {t('matriz.filter_geo_regional')} ({uesRegionales.length})
         </button>
         <button type="button" class="btn btn-outline btn-sm btn-f-territorio" data-territorio="Metropolitana / Nacional">
-          🏛️ Metropolitanas / Nacionales ({uesMetro.length})
+          {t('matriz.filter_geo_metro')} ({uesMetro.length})
         </button>
       </div>
     </div>
@@ -169,25 +171,23 @@ function normalizeForSearch(str: string): string {
     <!-- Filtro 4: Nivel del Instrumento Normativo -->
     <div style="margin-bottom:1.15rem; border-top:1px solid var(--border-color); padding-top:0.85rem;">
       <div style="font-size:0.76rem; font-weight:700; text-transform:uppercase; color:var(--text-muted); margin-bottom:0.45rem; letter-spacing:0.5px;">
-        4. Nivel del Instrumento (Alcance Institucional):
+        {t('matriz.filter_scope_label')}
       </div>
       <div style="display:flex; gap:0.4rem; flex-wrap:wrap;" id="filter-alcance-buttons">
         <button type="button" class="btn btn-primary btn-sm btn-f-alcance" data-alcance="todos">
-          Todos los Niveles ({totalOficiales})
+          {t('matriz.filter_scope_all')} ({totalOficiales})
         </button>
         <button type="button" class="btn btn-outline btn-sm btn-f-alcance" data-alcance="institucional" style="color:var(--accent-blue);">
-          🏛️ Nivel Central / Rectoría ({uesCentral.length})
+          {t('matriz.filter_scope_central')} ({uesCentral.length})
         </button>
         <button type="button" class="btn btn-outline btn-sm btn-f-alcance" data-alcance="facultad" style="color:var(--accent-amber);">
-          🏢 Solo por Facultad / Unidad ({uesFacultad.length})
+          {t('matriz.filter_scope_faculty')} ({uesFacultad.length})
         </button>
         <button type="button" class="btn btn-outline btn-sm btn-f-alcance" data-alcance="sin-instrumento" style="color:var(--text-muted);">
-          ○ Sin Instrumento ({sinInstrumento})
+          {t('matriz.filter_scope_none')} ({sinInstrumento})
         </button>
       </div>
     </div>
-
-
 
     <!-- Buscador en Tiempo Real y Contador -->
     <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.85rem; border-top:1px solid var(--border-color); padding-top:0.85rem;">
@@ -195,13 +195,19 @@ function normalizeForSearch(str: string): string {
         <input 
           type="text" 
           id="matriz-search-input" 
-          placeholder="🔍 Buscar universidad por nombre o sigla (ej. UChile, USACH, UCN)..."
+          placeholder={t('matriz.search_placeholder')}
           style="width:100%; padding:0.45rem 0.8rem; border:1px solid var(--border-color); border-radius:6px; background:var(--canvas-bg); color:var(--text-main); font-size:0.84rem;"
         />
       </div>
 
       <div style="font-size:0.82rem; color:var(--text-muted);">
-        <span id="matriz-count-display">Mostrando 54 de 54 planteles universitarios</span>
+        <span id="matriz-count-display">
+          {lang === 'en' 
+            ? `Showing 54 of 54 universities` 
+            : lang === 'pt' 
+            ? `Exibindo 54 de 54 universidades` 
+            : `Mostrando 54 de 54 planteles universitarios`}
+        </span>
       </div>
     </div>
 
@@ -209,12 +215,12 @@ function normalizeForSearch(str: string): string {
 
   <!-- Leyenda de las 6 Dimensiones del Catastro -->
   <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(170px, 1fr)); gap:0.5rem; margin-bottom:1.5rem; font-size:0.78rem; background:rgba(0,0,0,0.02); padding:0.75rem 1rem; border-radius:8px; border:1px solid var(--border-color);">
-    <div><strong>1. Aula:</strong> Protocolo formativo de aula</div>
-    <div><strong>2. Tesis:</strong> Directriz de tesis / postgrado</div>
-    <div><strong>3. Autoría:</strong> IA no es autora de obras</div>
-    <div><strong>4. Privacidad:</strong> Previsión Ley N° 21.719</div>
-    <div><strong>5. Evaluación:</strong> Rediseño evaluativo</div>
-    <div><strong>6. Compras:</strong> Licitaciones IA (Mercado Público)</div>
+    <div><strong>{t('matriz.legend_aula')}</strong></div>
+    <div><strong>{t('matriz.legend_tesis')}</strong></div>
+    <div><strong>{t('matriz.legend_autoria')}</strong></div>
+    <div><strong>{t('matriz.legend_privacidad')}</strong></div>
+    <div><strong>{t('matriz.legend_eval')}</strong></div>
+    <div><strong>{t('matriz.legend_compras')}</strong></div>
   </div>
 
   <!-- Grilla de Tarjetas de la Matriz (Prerenderizada por SSR) -->
@@ -240,14 +246,14 @@ function normalizeForSearch(str: string): string {
             <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.5rem; gap:0.5rem; flex-wrap:wrap;">
               <div style="display:flex; gap:0.35rem; align-items:center; flex-wrap:wrap;">
                 <span class={`badge ${tieneDoc ? 'badge-green' : 'badge-outline'}`} style={!tieneDoc ? 'border:1px solid var(--border-color); color:var(--text-muted); font-size:0.7rem;' : 'font-size:0.7rem;'}>
-                  {tieneDoc ? '✓ Con Instrumento' : '○ Sin Instrumento'}
+                  {tieneDoc ? t('matriz.card_with_doc') : t('matriz.card_without_doc')}
                 </span>
                 <span class="badge" style={`font-size:0.68rem; padding:0.15rem 0.4rem; background:rgba(0,0,0,0.04); color:var(--text-main); border:1px solid var(--border-color);`}>
                   {esRegional ? `📍 ${u.sede_central}` : '🏛️ Santiago'}
                 </span>
                 {tieneDoc && (
                   <span class={`badge ${esCentral ? 'badge-blue' : 'badge-outline'}`} style={!esCentral ? 'font-size:0.68rem; padding:0.15rem 0.4rem; color:var(--accent-amber); border-color:var(--accent-amber);' : 'font-size:0.68rem; padding:0.15rem 0.4rem;'}>
-                    {esCentral ? 'Nivel Central' : 'Por Facultad'}
+                    {esCentral ? t('matriz.card_central') : t('matriz.card_faculty')}
                   </span>
                 )}
               </div>
@@ -259,53 +265,59 @@ function normalizeForSearch(str: string): string {
             </h3>
 
             <div style="display:flex; gap:0.5rem; align-items:center; font-size:0.78rem; color:var(--text-muted); margin-bottom:1rem; flex-wrap:wrap;">
-              <span style="font-weight:600; color:var(--text-main);">{u.tipo_categoria}</span>
+              <span style="font-weight:600; color:var(--text-main);">
+                {u.tipo_categoria === 'Estatales' 
+                  ? (lang === 'en' ? 'State University' : lang === 'pt' ? 'Universidade Estatal' : 'Estatal')
+                  : u.tipo_categoria === 'Privadas CRUCH'
+                  ? (lang === 'en' ? 'CRUCH Private' : lang === 'pt' ? 'Privada CRUCH' : 'Privada CRUCH')
+                  : (lang === 'en' ? 'Non-CRUCH Private' : lang === 'pt' ? 'Privada não CRUCH' : 'Privada no CRUCH')}
+              </span>
               <span>•</span>
-              <span>{u.total_instrumentos} doc(s) identificado(s)</span>
+              <span>{u.total_instrumentos} {t('matriz.card_docs_count')}</span>
             </div>
 
             <!-- Semáforo de las 6 dimensiones objetivas -->
             <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:0.4rem; background:rgba(0,0,0,0.02); padding:0.6rem 0.75rem; border-radius:6px; font-size:0.76rem; margin-bottom:1.1rem; border:1px solid var(--border-color);">
               <div>
                 {dims.protocolo_aula ? (
-                  <span title="Protocolo de Aula Identificado" style="color:var(--accent-green); font-weight:600;">✓ Aula</span>
+                  <span title={lang === 'en' ? 'Classroom Policy Identified' : lang === 'pt' ? 'Diretriz de Ensino Identificada' : 'Protocolo de Aula Identificado'} style="color:var(--accent-green); font-weight:600;">✓ {lang === 'en' ? 'Classroom' : lang === 'pt' ? 'Aula' : 'Aula'}</span>
                 ) : (
-                  <span title="Sin Protocolo de Aula Identificado" style="color:var(--text-muted);">○ Aula</span>
+                  <span title={lang === 'en' ? 'Not explicit in public AI policy' : lang === 'pt' ? 'Não explicitado em política pública de IA' : 'No explicitado en norma IA pública'} style="color:var(--text-muted);">○ {lang === 'en' ? 'Classroom' : lang === 'pt' ? 'Aula' : 'Aula'}</span>
                 )}
               </div>
               <div>
                 {dims.directriz_tesis ? (
-                  <span title="Directriz de Tesis Identificada" style="color:var(--accent-green); font-weight:600;">✓ Tesis</span>
+                  <span title={lang === 'en' ? 'Thesis Policy Identified' : lang === 'pt' ? 'Diretriz de Teses Identificada' : 'Directriz de Tesis Identificada'} style="color:var(--accent-green); font-weight:600;">✓ {lang === 'en' ? 'Thesis' : lang === 'pt' ? 'Teses' : 'Tesis'}</span>
                 ) : (
-                  <span title="Sin Directriz de Tesis Identificada" style="color:var(--text-muted);">○ Tesis</span>
+                  <span title={lang === 'en' ? 'Not explicit in public AI policy' : lang === 'pt' ? 'Não explicitado em política pública de IA' : 'No explicitado en norma IA pública'} style="color:var(--text-muted);">○ {lang === 'en' ? 'Thesis' : lang === 'pt' ? 'Teses' : 'Tesis'}</span>
                 )}
               </div>
               <div>
                 {dims.regla_autoria ? (
-                  <span title="Regla de Autoría Identificada" style="color:var(--accent-green); font-weight:600;">✓ Autoría</span>
+                  <span title={lang === 'en' ? 'Authorship Rule Identified' : lang === 'pt' ? 'Regra de Autoria Identificada' : 'Regla de Autoría Identificada'} style="color:var(--accent-green); font-weight:600;">✓ {lang === 'en' ? 'Authorship' : lang === 'pt' ? 'Autoria' : 'Autoría'}</span>
                 ) : (
-                  <span title="Sin Regla de Autoría Identificada" style="color:var(--text-muted);">○ Autoría</span>
+                  <span title={lang === 'en' ? 'Not explicit in public AI policy' : lang === 'pt' ? 'Não explicitado em política pública de IA' : 'No explicitado en norma IA pública'} style="color:var(--text-muted);">○ {lang === 'en' ? 'Authorship' : lang === 'pt' ? 'Autoria' : 'Autoría'}</span>
                 )}
               </div>
               <div>
                 {dims.privacidad_ley_21719 ? (
-                  <span title="Previsión de Privacidad Identificada" style="color:var(--accent-blue); font-weight:600;">✓ Privacidad</span>
+                  <span title={lang === 'en' ? 'Privacy Clause Identified' : lang === 'pt' ? 'Cláusula de Privacidade Identificada' : 'Previsión de Privacidad Identificada'} style="color:var(--accent-blue); font-weight:600;">✓ {lang === 'en' ? 'Privacy' : lang === 'pt' ? 'Privacidade' : 'Privacidad'}</span>
                 ) : (
-                  <span title="Sin Previsión de Privacidad Identificada" style="color:var(--text-muted);">○ Privacidad</span>
+                  <span title={lang === 'en' ? 'Not explicit in public AI policy' : lang === 'pt' ? 'Não explicitado em política pública de IA' : 'No explicitado en norma IA pública'} style="color:var(--text-muted);">○ {lang === 'en' ? 'Privacy' : lang === 'pt' ? 'Privacidade' : 'Privacidad'}</span>
                 )}
               </div>
               <div>
                 {dims.modifica_evaluacion ? (
-                  <span title="Rediseño Evaluativo Identificado" style="color:var(--accent-green); font-weight:600;">✓ Evaluación</span>
+                  <span title={lang === 'en' ? 'Assessment Redesign Identified' : lang === 'pt' ? 'Redesenho Avaliativo Identificado' : 'Rediseño Evaluativo Identificado'} style="color:var(--accent-green); font-weight:600;">✓ {lang === 'en' ? 'Grading' : lang === 'pt' ? 'Avaliação' : 'Evaluación'}</span>
                 ) : (
-                  <span title="Sin Rediseño Evaluativo Identificado" style="color:var(--text-muted);">○ Evaluación</span>
+                  <span title={lang === 'en' ? 'Not explicit in public AI policy' : lang === 'pt' ? 'Não explicitado em política pública de IA' : 'No explicitado en norma IA pública'} style="color:var(--text-muted);">○ {lang === 'en' ? 'Grading' : lang === 'pt' ? 'Avaliação' : 'Evaluación'}</span>
                 )}
               </div>
               <div>
                 {dims.compras_ia ? (
-                  <span title="Compras IA Registradas en ChileCompra" style="color:var(--accent-amber); font-weight:600;">💰 Compras ({u.compras?.total || 1})</span>
+                  <span title={lang === 'en' ? 'AI Procurement Registered' : lang === 'pt' ? 'Licitações de IA Registradas' : 'Compras IA Registradas en ChileCompra'} style="color:var(--accent-amber); font-weight:600;">💰 {lang === 'en' ? 'Procurement' : lang === 'pt' ? 'Compras' : 'Compras'} ({u.compras?.total || 1})</span>
                 ) : (
-                  <span title="Sin Compras de IA Registradas" style="color:var(--text-muted);">— Compras</span>
+                  <span title={lang === 'en' ? 'No AI Procurement Registered' : lang === 'pt' ? 'Sem Compras de IA Registradas' : 'Sin Compras de IA Registradas'} style="color:var(--text-muted);">— {lang === 'en' ? 'Procurement' : lang === 'pt' ? 'Compras' : 'Compras'}</span>
                 )}
               </div>
             </div>
@@ -313,7 +325,9 @@ function normalizeForSearch(str: string): string {
             <!-- Listado de instrumentos vinculados -->
             {u.instrumentos && u.instrumentos.length > 0 ? (
               <div style="font-size:0.78rem; margin-bottom:1rem;">
-                <div style="font-weight:600; color:var(--text-main); margin-bottom:0.35rem;">Instrumentos identificados:</div>
+                <div style="font-weight:600; color:var(--text-main); margin-bottom:0.35rem;">
+                  {lang === 'en' ? 'Identified instruments:' : lang === 'pt' ? 'Instrumentos identificados:' : 'Instrumentos identificados:'}
+                </div>
                 <ul style="list-style:none; padding-left:0; margin:0; display:flex; flex-direction:column; gap:0.4rem;">
                   {u.instrumentos.map((doc: any) => (
                     <li style="border-left:2px solid var(--accent-blue); padding-left:0.5rem; line-height:1.35;">
@@ -327,7 +341,7 @@ function normalizeForSearch(str: string): string {
               </div>
             ) : (
               <div style="background:rgba(0,0,0,0.02); padding:0.75rem; border-radius:6px; font-size:0.78rem; color:var(--text-muted); margin-bottom:1rem; border:1px dashed var(--border-color); line-height:1.4;">
-                Sin instrumento normativo localizado en portales públicos durante el levantamiento (corte octubre 2026).
+                {t('matriz.card_no_doc_desc')}
               </div>
             )}
           </div>
@@ -336,7 +350,7 @@ function normalizeForSearch(str: string): string {
           <div style="border-top:1px solid var(--border-color); padding-top:0.75rem; display:flex; justify-content:space-between; align-items:center; font-size:0.76rem; flex-wrap:wrap; gap:0.4rem;">
             {tieneDoc ? (
               <div style="display:flex; gap:0.45rem; align-items:center; flex-wrap:wrap;">
-                <span style="color:var(--accent-green); font-weight:600;">✓ Documento catalogado</span>
+                <span style="color:var(--accent-green); font-weight:600;">{t('matriz.card_cataloged')}</span>
                 <button 
                   type="button" 
                   class="btn-aporte-directo"
@@ -344,7 +358,7 @@ function normalizeForSearch(str: string): string {
                   style="background:none; border:none; padding:0; color:var(--text-muted); text-decoration:underline; cursor:pointer; font-size:0.72rem;"
                   title="¿Conoces un nuevo decreto o actualización? Aportar antecedente"
                 >
-                  ¿Actualización o nuevo PDF?
+                  {t('matriz.card_btn_update')}
                 </button>
               </div>
             ) : (
@@ -353,18 +367,10 @@ function normalizeForSearch(str: string): string {
                   type="button" 
                   class="btn btn-outline btn-sm btn-aporte-directo"
                   data-universidad={encodeURIComponent(u.nombre)}
-                  style="font-size:0.74rem; padding:0.25rem 0.55rem; color:var(--accent-blue); border-color:var(--accent-blue);"
+                  style="font-size:0.74rem; padding:0.25rem 0.65rem; color:var(--accent-blue); border-color:var(--accent-blue);"
                 >
-                  📥 Aportar Enlace
+                  {t('matriz.card_btn_submit')}
                 </button>
-                <a 
-                  href={`mailto:eduardo@evegat.cl?subject=Normativa%20PDF%20-%20${encodeURIComponent(u.nombre)}&body=Estimado%20Eduardo%2C%0A%0AAdjunto%20el%20documento%20PDF%20o%20resoluci%C3%B3n%20de%20la%20universidad%20${encodeURIComponent(u.nombre)}%20para%20incorporar%20al%20catastro.%0A%0ASaludos%2C`}
-                  class="btn btn-outline btn-sm"
-                  style="font-size:0.74rem; padding:0.25rem 0.55rem; color:var(--text-muted); border-color:var(--border-color); text-decoration:none;"
-                  title="Enviar documento PDF por correo"
-                >
-                  📎 Enviar PDF
-                </a>
               </div>
             )}
             <span style="color:var(--text-muted); font-size:0.72rem;">Sigla: {u.sigla}</span>
@@ -462,7 +468,14 @@ function normalizeForSearch(str: string): string {
     });
 
     if (countDisplay) {
-      countDisplay.textContent = `Mostrando ${visibles} de ${cards.length} planteles universitarios`;
+      const pageLang = document.documentElement.lang || 'es';
+      if (pageLang === 'en') {
+        countDisplay.textContent = `Showing ${visibles} of ${cards.length} universities`;
+      } else if (pageLang === 'pt') {
+        countDisplay.textContent = `Exibindo ${visibles} de ${cards.length} universidades`;
+      } else {
+        countDisplay.textContent = `Mostrando ${visibles} de ${cards.length} planteles universitarios`;
+      }
     }
 
     if (visibles === 0) {

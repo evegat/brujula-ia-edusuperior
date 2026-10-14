@@ -1,6 +1,15 @@
 ---
 // src/components/KitAdopcionNacional.astro
+import type { SupportedLang } from '../i18n/ui';
+import { useTranslations } from '../i18n/ui';
 import matrizData from '../../data/matriz_54_universidades.json';
+
+interface Props {
+  lang?: SupportedLang;
+}
+
+const { lang = 'es' } = Astro.props;
+const t = useTranslations(lang);
 
 const totalUes = matrizData.length; // 54
 const conPrivacidad = matrizData.filter(u => u.dimensiones.privacidad_ley_21719).length; // 13
@@ -20,24 +29,24 @@ const uesConPrivacidad = matrizData.filter(u => u.dimensiones.privacidad_ley_217
   <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1.25rem; margin-bottom:1.5rem;">
     <div>
       <div style="display:flex; gap:0.5rem; align-items:center; margin-bottom:0.4rem;">
-        <span class="badge badge-amber">Herramienta Práctica para Profesores</span>
-        <span class="badge badge-blue">Cuenta Regresiva Ley N° 21.719</span>
+        <span class="badge badge-amber">{t('kit.badge_teachers')}</span>
+        <span class="badge badge-blue">{t('kit.badge_countdown')}</span>
       </div>
       <h2 style="font-family: var(--font-serif); font-size: 1.85rem; margin: 0 0 0.5rem 0; color: var(--text-main);">
-        Reglas Listas para Copiar en tus Clases & Carreras
+        {t('kit.title')}
       </h2>
       <p style="color:var(--text-muted); max-width:860px; font-size:0.96rem; line-height:1.55; margin: 0;">
-        Textos directos para copiar y pegar en los programas de tus cursos (sílabos), pautas de titulación y recomendaciones clave para cuidar la privacidad de tus estudiantes antes de la vigencia obligatoria de la Ley N° 21.719 (1 de diciembre de 2026).
+        {t('kit.desc')}
       </p>
     </div>
 
     <!-- Enlaces de Descarga Rápida -->
     <div style="display:flex; gap:0.5rem; align-items:center; flex-wrap: wrap;">
       <a href="/kit_clausulas_docentes.md" download="kit_clausulas_ia_docentes.md" class="btn btn-primary btn-sm" style="font-size:0.82rem;">
-        📥 Descargar 4 Cláusulas (.md)
+        {t('kit.btn_download_clauses')}
       </a>
       <a href="/modelo_marco_orientaciones_ia_universidades.md" download="modelo_marco_ia_universidades_chile.md" class="btn btn-outline btn-sm" style="font-size:0.82rem;">
-        🏛️ Modelo para Rectorías (.md)
+        {t('kit.btn_download_model')}
       </a>
     </div>
   </div>
@@ -48,26 +57,26 @@ const uesConPrivacidad = matrizData.filter(u => u.dimensiones.privacidad_ley_217
     <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1.25rem; margin-bottom:1.25rem;">
       <div>
         <div style="font-size:0.78rem; font-weight:700; text-transform:uppercase; color:var(--accent-amber); margin-bottom:0.35rem; letter-spacing:0.5px;">
-          ⚖️ Cuenta Regresiva Regulatoria
+          {t('kit.radar_badge')}
         </div>
         <h3 style="font-size:1.25rem; margin-bottom:0.35rem;">
-          Radar Ley N° 21.719 sobre Protección de Datos Personales
+          {t('kit.radar_title')}
         </h3>
         <p style="font-size:0.88rem; color:var(--text-muted); max-width:760px; line-height:1.5; margin:0;">
-          Promulgada en 2024, la Ley N° 21.719 establece un régimen sancionatorio estricto y crea la Agencia de Protección de Datos Personales. Su <strong>vigencia legal obligatoria entra a regir el 1 de diciembre de 2026</strong>.
+          {t('kit.radar_desc')}
         </p>
       </div>
 
       <!-- Contador / Hito Temporal -->
       <div style="background:rgba(217, 119, 6, 0.08); border:1px solid rgba(217, 119, 6, 0.25); padding:0.85rem 1.25rem; border-radius:8px; text-align:center;">
         <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; color:var(--accent-amber); letter-spacing:0.5px;">
-          Vigencia Obligatoria
+          {t('kit.radar_vigencia_title')}
         </div>
         <div style="font-size:1.45rem; font-weight:700; font-family:var(--font-serif); color:var(--text-main);">
-          1 Dic 2026
+          {t('kit.radar_vigencia_date')}
         </div>
         <div style="font-size:0.74rem; color:var(--text-muted);">
-          Exigibilidad plena para IES
+          {t('kit.radar_vigencia_sub')}
         </div>
       </div>
     </div>
@@ -77,37 +86,37 @@ const uesConPrivacidad = matrizData.filter(u => u.dimensiones.privacidad_ley_217
       
       <div style="background:rgba(5, 150, 105, 0.05); border:1px solid rgba(5, 150, 105, 0.2); padding:1rem; border-radius:8px;">
         <div style="font-size:1.6rem; font-weight:700; color:var(--accent-green); font-family:var(--font-serif);">
-          {conPrivacidad} de {totalUes} <span style="font-size:0.85rem; font-weight:600;">({pctPrivacidad}%)</span>
+          {conPrivacidad} {lang === 'en' ? 'of' : lang === 'pt' ? 'de' : 'de'} {totalUes} <span style="font-size:0.85rem; font-weight:600;">({pctPrivacidad}%)</span>
         </div>
         <div style="font-weight:600; font-size:0.82rem; color:var(--text-main); margin-top:0.25rem;">
-          Con Cláusula Preventiva
+          {t('kit.card1_title')}
         </div>
         <div style="font-size:0.76rem; color:var(--text-muted); margin-top:0.2rem; line-height:1.35;">
-          Planteles con resguardo de confidencialidad de datos en sus directrices (UChile, UTFSM, UAI, UNAB, UDD, UDLA, UFRO, ULagos, UANDES, UAHC, UST, UMC, UA).
+          {t('kit.card1_desc')}
         </div>
       </div>
 
       <div style="background:rgba(217, 119, 6, 0.05); border:1px solid rgba(217, 119, 6, 0.2); padding:1rem; border-radius:8px;">
         <div style="font-size:1.6rem; font-weight:700; color:var(--accent-amber); font-family:var(--font-serif);">
-          {conDocSinPriv} de {totalUes} <span style="font-size:0.85rem; font-weight:600;">({pctSinPriv}%)</span>
+          {conDocSinPriv} {lang === 'en' ? 'of' : lang === 'pt' ? 'de' : 'de'} {totalUes} <span style="font-size:0.85rem; font-weight:600;">({pctSinPriv}%)</span>
         </div>
         <div style="font-weight:600; font-size:0.82rem; color:var(--text-main); margin-top:0.25rem;">
-          Con Norma, Sin Privacidad
+          {t('kit.card2_title')}
         </div>
         <div style="font-size:0.76rem; color:var(--text-muted); margin-top:0.2rem; line-height:1.35;">
-          Tienen directrices docentes pero omiten resguardos explícitos de confidencialidad o deberes sobre datos de alumnos.
+          {t('kit.card2_desc')}
         </div>
       </div>
 
       <div style="background:rgba(0, 0, 0, 0.03); border:1px solid var(--border-color); padding:1rem; border-radius:8px;">
         <div style="font-size:1.6rem; font-weight:700; color:var(--text-muted); font-family:var(--font-serif);">
-          {sinDoc} de {totalUes} <span style="font-size:0.85rem; font-weight:600;">({pctSinDoc}%)</span>
+          {sinDoc} {lang === 'en' ? 'of' : lang === 'pt' ? 'de' : 'de'} {totalUes} <span style="font-size:0.85rem; font-weight:600;">({pctSinDoc}%)</span>
         </div>
         <div style="font-weight:600; font-size:0.82rem; color:var(--text-main); margin-top:0.25rem;">
-          Sin Instrumento Público
+          {t('kit.card3_title')}
         </div>
         <div style="font-size:0.76rem; color:var(--text-muted); margin-top:0.2rem; line-height:1.35;">
-          Planteles que no registran directrices docentes ni protocolos de privacidad en portales abiertos.
+          {t('kit.card3_desc')}
         </div>
       </div>
 
@@ -115,7 +124,7 @@ const uesConPrivacidad = matrizData.filter(u => u.dimensiones.privacidad_ley_217
 
     <!-- Alerta Metodológica para Vicerrectorías Jurídicas -->
     <div style="background:rgba(0,0,0,0.02); border-left:3px solid var(--accent-blue); padding:0.85rem 1rem; border-radius:0 6px 6px 0; font-size:0.82rem; color:var(--text-main); line-height:1.5;">
-      <strong>Orientación Preventiva:</strong> A partir de diciembre de 2026, la entrega no autorizada de datos académicos, rúbricas con nombres o antecedentes de estudiantes a servidores de LLM comerciales sin convenio de confidencialidad podría configurar una infracción ante la Agencia de Protección de Datos Personales. Se sugiere incorporar formalmente resguardos de privacidad a los reglamentos de docencia.
+      <strong>{lang === 'en' ? 'Preventive Guidance:' : lang === 'pt' ? 'Orientação Preventiva:' : 'Orientación Preventiva:'}</strong> {t('kit.preventive_alert')}
     </div>
 
   </div>
@@ -125,10 +134,10 @@ const uesConPrivacidad = matrizData.filter(u => u.dimensiones.privacidad_ley_217
     <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem;">
       <div>
         <h3 style="font-size: 1.35rem; margin: 0 0 0.25rem 0; font-family: var(--font-serif); color: var(--text-main);">
-          📋 4 Reglas Listas para Copiar y Pegar en tus Cursos
+          {t('kit.rules_section_title')}
         </h3>
         <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">
-          Selecciona y copia con un solo clic el texto que necesitas para tus clases de este semestre:
+          {t('kit.rules_section_desc')}
         </p>
       </div>
       <span class="badge badge-green">Licencia Abierta CC BY 4.0</span>
@@ -140,14 +149,14 @@ const uesConPrivacidad = matrizData.filter(u => u.dimensiones.privacidad_ley_217
       <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-sm);">
         <div>
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-            <span class="badge badge-blue">Para tus Clases</span>
-            <span style="font-size: 0.74rem; color: var(--text-muted);">Programa de Curso</span>
+            <span class="badge badge-blue">{lang === 'en' ? 'For Your Classes' : lang === 'pt' ? 'Para Suas Aulas' : 'Para tus Clases'}</span>
+            <span style="font-size: 0.74rem; color: var(--text-muted);">{lang === 'en' ? 'Course Syllabus' : lang === 'pt' ? 'Plano de Ensino' : 'Programa de Curso'}</span>
           </div>
           <h4 style="font-size: 1.05rem; margin: 0 0 0.4rem 0; color: var(--text-main);">
-            1. Regla para el Sílabo del Curso
+            {lang === 'en' ? '1. Course Syllabus Policy' : lang === 'pt' ? '1. Cláusula para o Plano de Ensino' : '1. Regla para el Sílabo del Curso'}
           </h4>
           <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0 0 0.75rem 0;">
-            Define claramente qué se puede usar, la obligación de citar los prompts y prohíbe exigir herramientas de pago.
+            {lang === 'en' ? 'Clearly defines permitted uses, mandatory prompt disclosure, and prohibits required paid tools.' : lang === 'pt' ? 'Define usos permitidos, dever de citar prompts e proíbe exigir ferramentas pagas.' : 'Define claramente qué se puede usar, la obligación de citar los prompts y prohíbe exigir herramientas de pago.'}
           </p>
           <textarea id="texto-clausula-silabo" readonly rows="6" style="width: 100%; font-family: monospace; font-size: 0.75rem; padding: 0.6rem; border: 1px solid var(--border-color); border-radius: 4px; background: var(--canvas-bg); color: var(--text-main); resize: vertical; box-sizing: border-box;">### Política sobre Uso de IA en la Asignatura
 En este curso la IA generativa es un apoyo al aprendizaje que nunca sustituye el juicio crítico del estudiante.
@@ -158,9 +167,9 @@ En este curso la IA generativa es un apoyo al aprendizaje que nunca sustituye el
         </div>
         <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.75rem;">
           <button type="button" class="btn btn-outline btn-sm btn-copiar-rapido" data-target="texto-clausula-silabo" style="font-size: 0.78rem;">
-            📋 Copiar al Portapapeles
+            {t('kit.btn_copy')}
           </button>
-          <span class="copy-feedback-badge" style="font-size: 0.74rem; color: var(--accent-green); font-weight: 600; display: none;">✓ ¡Copiado!</span>
+          <span class="copy-feedback-badge" style="font-size: 0.74rem; color: var(--accent-green); font-weight: 600; display: none;">{t('kit.copied')}</span>
         </div>
       </div>
 
@@ -168,14 +177,14 @@ En este curso la IA generativa es un apoyo al aprendizaje que nunca sustituye el
       <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-sm);">
         <div>
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-            <span class="badge badge-amber">Titulación</span>
-            <span style="font-size: 0.74rem; color: var(--text-muted);">Tesis y Memorias</span>
+            <span class="badge badge-amber">{lang === 'en' ? 'Graduation' : lang === 'pt' ? 'Titulação' : 'Titulación'}</span>
+            <span style="font-size: 0.74rem; color: var(--text-muted);">{lang === 'en' ? 'Theses & Dissertations' : lang === 'pt' ? 'Teses e Dissertações' : 'Tesis y Memorias'}</span>
           </div>
           <h4 style="font-size: 1.05rem; margin: 0 0 0.4rem 0; color: var(--text-main);">
-            2. Regla para Tesis y Memorias de Título
+            {lang === 'en' ? '2. Thesis & Degree Work Rule' : lang === 'pt' ? '2. Diretriz para Teses e Monografias' : '2. Regla para Tesis y Memorias de Título'}
           </h4>
           <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0 0 0.75rem 0;">
-            Aclara que la IA no es autor, prohíbe delegar el análisis y faculta a la comisión a interrogar oralmente.
+            {lang === 'en' ? 'Clarifies AI is not an author, prohibits delegating analysis, and empowers oral defense interrogation.' : lang === 'pt' ? 'Esclarece que a IA não é autora, veda delegar análises e faculta arguição oral pela banca.' : 'Aclara que la IA no es autor, prohíbe delegar el análisis y faculta a la comisión a interrogar oralmente.'}
           </p>
           <textarea id="texto-clausula-tesis" readonly rows="6" style="width: 100%; font-family: monospace; font-size: 0.75rem; padding: 0.6rem; border: 1px solid var(--border-color); border-radius: 4px; background: var(--canvas-bg); color: var(--text-main); resize: vertical; box-sizing: border-box;">### Uso de IA en Trabajos de Grado y Titulación
 Según la Ley N° 17.336, la autoría es exclusivamente humana. La IA nunca podrá figurar como autora ni coautora.
@@ -185,9 +194,9 @@ Según la Ley N° 17.336, la autoría es exclusivamente humana. La IA nunca podr
         </div>
         <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.75rem;">
           <button type="button" class="btn btn-outline btn-sm btn-copiar-rapido" data-target="texto-clausula-tesis" style="font-size: 0.78rem;">
-            📋 Copiar al Portapapeles
+            {t('kit.btn_copy')}
           </button>
-          <span class="copy-feedback-badge" style="font-size: 0.74rem; color: var(--accent-green); font-weight: 600; display: none;">✓ ¡Copiado!</span>
+          <span class="copy-feedback-badge" style="font-size: 0.74rem; color: var(--accent-green); font-weight: 600; display: none;">{t('kit.copied')}</span>
         </div>
       </div>
 
@@ -195,14 +204,14 @@ Según la Ley N° 17.336, la autoría es exclusivamente humana. La IA nunca podr
       <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-sm);">
         <div>
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-            <span class="badge badge-green">Legal & Privacidad</span>
+            <span class="badge badge-green">{lang === 'en' ? 'Legal & Privacy' : lang === 'pt' ? 'Legal e Privacidade' : 'Legal & Privacidad'}</span>
             <span style="font-size: 0.74rem; color: var(--text-muted);">Ley N° 21.719</span>
           </div>
           <h4 style="font-size: 1.05rem; margin: 0 0 0.4rem 0; color: var(--text-main);">
-            3. Cuidado de Datos de Alumnos (Ley 21.719)
+            {lang === 'en' ? '3. Student Data Protection (Law 21,719)' : lang === 'pt' ? '3. Proteção de Dados de Estudantes (Lei 21.719)' : '3. Cuidado de Datos de Alumnos (Ley 21.719)'}
           </h4>
           <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0 0 0.75rem 0;">
-            Prohíbe subir nombres, RUT o notas a ChatGPT u otras IA comerciales sin convenio corporativo de privacidad.
+            {lang === 'en' ? 'Prohibits uploading names, student IDs, or grades to commercial AI platforms without enterprise agreements.' : lang === 'pt' ? 'Veda upload de nomes, IDs ou notas para plataformas comerciais de IA sem convênio corporativo.' : 'Prohíbe subir nombres, RUT o notas a ChatGPT u otras IA comerciales sin convenio corporativo de privacidad.'}
           </p>
           <textarea id="texto-clausula-privacidad" readonly rows="6" style="width: 100%; font-family: monospace; font-size: 0.75rem; padding: 0.6rem; border: 1px solid var(--border-color); border-radius: 4px; background: var(--canvas-bg); color: var(--text-main); resize: vertical; box-sizing: border-box;">### Resguardo de Datos Personales de Estudiantes (Ley N° 21.719)
 1. Prohibición estricta: Docentes y ayudantes no podrán subir nóminas, nombres, RUT, notas o datos personales a plataformas de IA comerciales o abiertas sin convenio corporativo institucional.
@@ -211,9 +220,9 @@ Según la Ley N° 17.336, la autoría es exclusivamente humana. La IA nunca podr
         </div>
         <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.75rem;">
           <button type="button" class="btn btn-outline btn-sm btn-copiar-rapido" data-target="texto-clausula-privacidad" style="font-size: 0.78rem;">
-            📋 Copiar al Portapapeles
+            {t('kit.btn_copy')}
           </button>
-          <span class="copy-feedback-badge" style="font-size: 0.74rem; color: var(--accent-green); font-weight: 600; display: none;">✓ ¡Copiado!</span>
+          <span class="copy-feedback-badge" style="font-size: 0.74rem; color: var(--accent-green); font-weight: 600; display: none;">{t('kit.copied')}</span>
         </div>
       </div>
 
@@ -221,14 +230,14 @@ Según la Ley N° 17.336, la autoría es exclusivamente humana. La IA nunca podr
       <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-sm);">
         <div>
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-            <span class="badge" style="background: rgba(139, 92, 246, 0.1); color: #8b5cf6; border: 1px solid rgba(139, 92, 246, 0.25);">Pedagogía</span>
-            <span style="font-size: 0.74rem; color: var(--text-muted);">Diseño de Pruebas</span>
+            <span class="badge" style="background: rgba(139, 92, 246, 0.1); color: #8b5cf6; border: 1px solid rgba(139, 92, 246, 0.25);">{lang === 'en' ? 'Pedagogy' : lang === 'pt' ? 'Pedagogia' : 'Pedagogía'}</span>
+            <span style="font-size: 0.74rem; color: var(--text-muted);">{lang === 'en' ? 'Assessment Design' : lang === 'pt' ? 'Design de Avaliações' : 'Diseño de Pruebas'}</span>
           </div>
           <h4 style="font-size: 1.05rem; margin: 0 0 0.4rem 0; color: var(--text-main);">
-            4. Criterios para Diseñar Evaluaciones
+            {lang === 'en' ? '4. Assessment Redesign Criteria' : lang === 'pt' ? '4. Critérios para Desenho Avaliativo' : '4. Criterios para Diseñar Evaluaciones'}
           </h4>
           <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0 0 0.75rem 0;">
-            Enseña a evaluar el proceso y la defensa oral, prohibiendo castigar alumnos usando detectores automáticos.
+            {lang === 'en' ? 'Focuses on formative process and oral defense, strictly prohibiting sanctions based solely on AI detectors.' : lang === 'pt' ? 'Enfatiza o processo e defesas orais, vedando punir estudantes exclusivamente por detectores automáticos.' : 'Enseña a evaluar el proceso y la defensa oral, prohibiendo castigar alumnos usando detectores automáticos.'}
           </p>
           <textarea id="texto-clausula-evaluacion" readonly rows="6" style="width: 100%; font-family: monospace; font-size: 0.75rem; padding: 0.6rem; border: 1px solid var(--border-color); border-radius: 4px; background: var(--canvas-bg); color: var(--text-main); resize: vertical; box-sizing: border-box;">### Criterios Docentes para Evaluar con IA
 1. Evaluar el proceso: Privilegiar bitácoras de trabajo, borradores intermedios y defensas orales cortas por sobre informes estáticos.
@@ -237,9 +246,9 @@ Según la Ley N° 17.336, la autoría es exclusivamente humana. La IA nunca podr
         </div>
         <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.75rem;">
           <button type="button" class="btn btn-outline btn-sm btn-copiar-rapido" data-target="texto-clausula-evaluacion" style="font-size: 0.78rem;">
-            📋 Copiar al Portapapeles
+            {t('kit.btn_copy')}
           </button>
-          <span class="copy-feedback-badge" style="font-size: 0.74rem; color: var(--accent-green); font-weight: 600; display: none;">✓ ¡Copiado!</span>
+          <span class="copy-feedback-badge" style="font-size: 0.74rem; color: var(--accent-green); font-weight: 600; display: none;">{t('kit.copied')}</span>
         </div>
       </div>
 

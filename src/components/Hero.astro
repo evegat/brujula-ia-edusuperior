@@ -78,7 +78,7 @@ const docsIP = totalDocs - docsUes; // 6
 
     <!-- Nota Visible de Corte Temporal y Actualización -->
     <div style="background: rgba(29, 78, 216, 0.05); border: 1px solid rgba(29, 78, 216, 0.2); border-left: 4px solid var(--accent-blue); padding: 0.65rem 0.95rem; border-radius: 6px; font-size: 0.82rem; color: var(--text-main); line-height: 1.45;">
-      <strong>📅 Fecha del levantamiento:</strong> Información verificada a <strong>Octubre de 2026</strong>. Si tu universidad aprobó recientemente una nueva directriz que aún no figure en esta versión o deseas precisar algún antecedente, <a href="mailto:evegat@uchile.cl?subject=Actualizaci%C3%B3n%20Normativa%20IA%20-%20Br%C3%BAjula%20IA" style="color: var(--accent-blue); font-weight: 600; text-decoration: underline;">escríbenos directamente</a> para actualizar su ficha.
+      <strong>📅 {lang === 'en' ? 'Census Date:' : lang === 'pt' ? 'Data do Levantamento:' : 'Fecha del levantamiento:'}</strong> {lang === 'en' ? 'Data verified as of' : lang === 'pt' ? 'Dados verificados até' : 'Información verificada a'} <strong>{lang === 'en' ? 'October 2026' : lang === 'pt' ? 'Outubro de 2026' : 'Octubre de 2026'}</strong>. {lang === 'en' ? 'If your university recently approved new guidelines or you wish to clarify any record, please' : lang === 'pt' ? 'Se a sua universidade aprovou novas diretrizes recentemente ou deseja retificar algum dado,' : 'Si tu universidad aprobó recientemente una nueva directriz que aún no figure en esta versión o deseas precisar algún antecedente,'} <a href="mailto:evegat@uchile.cl?subject=Actualizaci%C3%B3n%20Normativa%20IA%20-%20Br%C3%BAjula%20IA" style="color: var(--accent-blue); font-weight: 600; text-decoration: underline;">{lang === 'en' ? 'contact us directly' : lang === 'pt' ? 'entre em contato conosco' : 'escríbenos directamente'}</a> {lang === 'en' ? 'to update its record.' : lang === 'pt' ? 'para atualizar a ficha.' : 'para actualizar su ficha.'}
     </div>
   </div>
 
@@ -88,54 +88,74 @@ const docsIP = totalDocs - docsUes; // 6
     <!-- Dato 1: Radiografía de Universidades -->
     <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.15rem 1.25rem;">
       <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.35rem; letter-spacing: 0.5px;">
-        🏛️ Radiografía Nacional (54 Universidades)
+        🏛️ {lang === 'en' ? 'National Overview (54 Universities)' : lang === 'pt' ? 'Panorama Nacional (54 Universidades)' : 'Radiografía Nacional (54 Universidades)'}
       </div>
       <div style="display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.25rem;">
         <span style="font-size: 1.75rem; font-weight: 700; font-family: var(--font-serif); color: var(--text-main); line-height: 1;">
-          {conInst} de {totalUes}
+          {conInst} {lang === 'en' ? 'of' : lang === 'pt' ? 'de' : 'de'} {totalUes}
         </span>
         <span style="font-size: 0.85rem; font-weight: 600; color: var(--accent-green);">
-          (59.3% con norma)
+          ({lang === 'en' ? '59.3% with policy' : lang === 'pt' ? '59.3% com política' : '59.3% con norma'})
         </span>
       </div>
       <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4;">
-        32 universidades con protocolo o política identificado; <strong>{enBrecha} planteles sin instrumento público identificado</strong> en el levantamiento.
+        {lang === 'en' 
+          ? `32 universities with identified protocol or policy; `
+          : lang === 'pt'
+          ? `32 universidades com protocolo ou política identificado; `
+          : `32 universidades con protocolo o política identificado; `}
+        <strong>
+          {lang === 'en' 
+            ? `${enBrecha} institutions without identified public policy`
+            : lang === 'pt'
+            ? `${enBrecha} instituições sem instrumento público identificado`
+            : `${enBrecha} planteles sin instrumento público identificado`}
+        </strong>
+        {lang === 'en' ? ' in the census.' : lang === 'pt' ? ' no levantamento.' : ' en el levantamiento.'}
       </div>
     </div>
 
     <!-- Dato 2: Documentos Analizados -->
     <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.15rem 1.25rem;">
       <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.35rem; letter-spacing: 0.5px;">
-        📄 Documentos & Reglamentos Analizados
+        📄 {lang === 'en' ? 'Analyzed Policy Documents' : lang === 'pt' ? 'Documentos e Normativas Analisados' : 'Documentos & Reglamentos Analizados'}
       </div>
       <div style="display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.25rem;">
         <span style="font-size: 1.75rem; font-weight: 700; font-family: var(--font-serif); color: var(--text-main); line-height: 1;">
           {totalDocs}
         </span>
         <span style="font-size: 0.85rem; color: var(--text-muted);">
-          políticas y decretos
+          {lang === 'en' ? 'policies and decrees' : lang === 'pt' ? 'políticas e decretos' : 'políticas y decretos'}
         </span>
       </div>
       <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4;">
-        {docsUes} reglamentos en universidades (centrales o por facultad) y {docsIP} en institutos profesionales y CFTs.
+        {lang === 'en'
+          ? `${docsUes} regulations in universities (central or faculty-level) and ${docsIP} in professional institutes and technical centers.`
+          : lang === 'pt'
+          ? `${docsUes} regulamentos em universidades (centrais ou por faculdade) e ${docsIP} em institutos profissionais e CFTs.`
+          : `${docsUes} reglamentos en universidades (centrales o por facultad) y ${docsIP} en institutos profesionales y CFTs.`}
       </div>
     </div>
 
     <!-- Dato 3: Compras Públicas (Exclusivo Ues Estatales) -->
     <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.15rem 1.25rem;">
       <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.35rem; letter-spacing: 0.5px;">
-        💰 Compras Públicas (Sólo Ues del Estado)
+        💰 {lang === 'en' ? 'Public Procurement (State Universities Only)' : lang === 'pt' ? 'Compras Públicas (Exclusivo Universidades Estatais)' : 'Compras Públicas (Sólo Ues del Estado)'}
       </div>
       <div style="display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.25rem;">
         <span style="font-size: 1.75rem; font-weight: 700; font-family: var(--font-serif); color: var(--text-main); line-height: 1;">
           85
         </span>
         <span style="font-size: 0.85rem; color: var(--text-muted);">
-          contratos en Mercado Público
+          {lang === 'en' ? 'public procurement contracts' : lang === 'pt' ? 'contratos em compras públicas' : 'contratos en Mercado Público'}
         </span>
       </div>
       <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4;">
-        Licitaciones de software e IA en <strong>10 universidades públicas</strong> (el 30% adquiere IA sin contar con protocolo previo).
+        {lang === 'en'
+          ? <>Software and AI tenders across <strong>10 public universities</strong> (30% procure AI without prior classroom policy).</>
+          : lang === 'pt'
+          ? <>Licitações de software e IA em <strong>10 universidades públicas</strong> (30% adquirem IA sem contar com diretriz prévia de aula).</>
+          : <>Licitaciones de software e IA en <strong>10 universidades públicas</strong> (el 30% adquiere IA sin contar con protocolo previo).</>}
       </div>
     </div>
 
