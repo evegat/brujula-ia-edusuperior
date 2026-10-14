@@ -172,9 +172,13 @@ import ModalAvisoLegal from '../components/ModalAvisoLegal.astro';
 <script>
   function setupTabs() {
     const tabButtons = document.querySelectorAll<HTMLButtonElement>('.tab-btn');
+    const sidebarButtons = document.querySelectorAll<HTMLButtonElement>('.sidebar-tab-btn');
     const tabPanels = document.querySelectorAll<HTMLElement>('.tab-panel');
+    const sidebar = document.getElementById('main-sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
 
-    function switchTab(tabId: string) {
+    function switchTab(tabId: string, shouldScroll = false) {
+      // Activar botones superiores
       tabButtons.forEach(btn => {
         if (btn.dataset.tab === tabId) {
           btn.classList.add('active');
@@ -183,6 +187,20 @@ import ModalAvisoLegal from '../components/ModalAvisoLegal.astro';
         }
       });
 
+      // Activar botones de la barra lateral
+      sidebarButtons.forEach(btn => {
+        if (btn.dataset.tab === tabId) {
+          btn.classList.add('active');
+          btn.style.color = '#34d399';
+          btn.style.fontWeight = '600';
+        } else {
+          btn.classList.remove('active');
+          btn.style.color = '#cbd5e1';
+          btn.style.fontWeight = '400';
+        }
+      });
+
+      // Mostrar panel activo
       tabPanels.forEach(panel => {
         if (panel.id === tabId) {
           panel.classList.add('active');
@@ -190,63 +208,66 @@ import ModalAvisoLegal from '../components/ModalAvisoLegal.astro';
           panel.classList.remove('active');
         }
       });
+
+      // Cerrar menú móvil si está abierto
+      if (window.innerWidth <= 1024) {
+        sidebar?.classList.remove('open');
+        overlay?.classList.remove('active');
+      }
+
+      if (shouldScroll) {
+        document.querySelector('.tabs-nav')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      // Registrar evento en Umami
+      if ((window as any).umami) {
+        (window as any).umami.track('tab_switch', { tab: tabId });
+      }
     }
 
+    // Clics en botones superiores
     tabButtons.forEach(btn => {
       btn.addEventListener('click', () => {
         const targetId = btn.dataset.tab;
-        if (targetId) {
-          switchTab(targetId);
-          // Registrar evento en Umami
-          if ((window as any).umami) {
-            (window as any).umami.track('tab_switch', { tab: targetId });
-          }
-          // Actualizar hash en la URL sin saltar abruptamente
-          const hashMapping: Record<string, string> = {
-            'tab-matriz': '#matriz-nacional',
-            'tab-kit': '#kit',
-            'tab-compras': '#compras',
-            'tab-catalogo': '#catalogo',
-            'tab-metodologia': '#metodologia'
-          };
-          if (hashMapping[targetId]) {
-            history.replaceState(null, '', hashMapping[targetId]);
-          }
-        }
+        if (targetId) switchTab(targetId);
       });
     });
 
-    // Mapeo de anclas externas o clics del sidebar hacia las pestañas
+    // Clics en botones de la barra lateral
+    sidebarButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.dataset.tab;
+        if (targetId) switchTab(targetId, true);
+      });
+    });
+
+    // Mapeo de hashes externos o enlaces
     function handleHashChange() {
       const hash = window.location.hash;
-      if (hash === '#compras') {
-        switchTab('tab-compras');
-      } else if (hash === '#kit' || hash === '#ley-21719') {
-        switchTab('tab-kit');
-      } else if (hash === '#catalogo' || hash === '#clausulas') {
-        switchTab('tab-catalogo');
-      } else if (hash === '#metodologia' || hash === '#datos' || hash === '#comunidad' || hash === '#versiones' || hash === '#ecosistema') {
-        switchTab('tab-metodologia');
-      } else if (hash === '#matriz-nacional' || hash === '#planilla' || hash === '#inicio') {
-        switchTab('tab-matriz');
+      const hashMapping: Record<string, string> = {
+        '#matriz-nacional': 'tab-matriz',
+        '#planilla': 'tab-matriz',
+        '#inicio': 'tab-matriz',
+        '#kit': 'tab-kit',
+        '#ley-21719': 'tab-kit',
+        '#ideas': 'tab-ideas',
+        '#buenas-practicas': 'tab-ideas',
+        '#compras': 'tab-compras',
+        '#catalogo': 'tab-catalogo',
+        '#clausulas': 'tab-catalogo',
+        '#metodologia': 'tab-metodologia',
+        '#datos': 'tab-metodologia',
+        '#comunidad': 'tab-metodologia'
+      };
+      if (hashMapping[hash]) {
+        switchTab(hashMapping[hash]);
       }
     }
 
     window.addEventListener('hashchange', handleHashChange);
-    // Ejecutar al cargar si hay hash en la URL
     if (window.location.hash) {
       handleHashChange();
     }
-
-    // Interceptar clics en los enlaces del sidebar para cambiar de pestaña suavemente
-    document.querySelectorAll<HTMLAnchorElement>('.nav-link').forEach(link => {
-      link.addEventListener('click', (e) => {
-        const href = link.getAttribute('href');
-        if (href && href.startsWith('#')) {
-          setTimeout(() => handleHashChange(), 50);
-        }
-      });
-    });
   }
 
   // Ejecutar cuando el DOM esté listo
