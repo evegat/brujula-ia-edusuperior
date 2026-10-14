@@ -1,4 +1,6 @@
 ---
+// src/components/Hero.astro
+// Hero Editorial de Alto Impacto con llamado a Comunidad (LinkedIn + Suscripción Directa)
 import type { SupportedLang } from '../i18n/ui';
 import { useTranslations } from '../i18n/ui';
 import matrizData from '../../data/matriz_54_universidades.json';
@@ -19,159 +21,275 @@ const docsUes = inventarioData.filter(d => !d.tipo_institucion?.includes('IP') &
 const docsIP = totalDocs - docsUes; // 6
 ---
 
-<section id="inicio" style="margin-bottom: 2.75rem; scroll-margin-top: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 2.25rem;">
+<section id="inicio" style="margin-bottom: 2.75rem; scroll-margin-top: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 2.5rem;">
   
-  <!-- Encabezado Editorial Sobrio -->
-  <div style="margin-bottom: 1.5rem;">
-    <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.6rem; flex-wrap: wrap;">
-      <span class="badge badge-blue">{t('hero.badge_unesco')}</span>
-      <span class="badge badge-green">{t('hero.badge_free')}</span>
-    </div>
+  <!-- Badges de Legitimidad y Bien Público -->
+  <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1rem; flex-wrap: wrap;">
+    <span class="badge badge-purple" style="font-weight: 700; font-size: 0.78rem;">🏛️ {lang === 'en' ? 'Official Census: 54 Universities' : lang === 'pt' ? 'Censo Oficial: 54 Universidades' : 'Censo Oficial: 54 Universidades (SIES)'}</span>
+    <span class="badge badge-blue">{t('hero.badge_unesco')}</span>
+    <span class="badge badge-green">{t('hero.badge_free')}</span>
+    <span class="badge" style="background: rgba(0,0,0,0.05); color: var(--text-muted); font-size: 0.76rem;">📅 {lang === 'en' ? 'Audit: October 2026' : lang === 'pt' ? 'Auditoria: Outubro 2026' : 'Auditoría: Octubre 2026'}</span>
+  </div>
 
-    <h1 style="font-size: clamp(1.85rem, 3.5vw, 2.65rem); line-height: 1.2; font-family: var(--font-serif); font-weight: 700; color: var(--text-main); margin-bottom: 0.85rem; max-width: 950px;">
-      {lang === 'en' 
-        ? 'AI Higher Education Compass: AI Regulations in Chilean Universities'
+  <!-- Título Imponente con Tipografía Grande -->
+  <h1 style="font-size: clamp(2.35rem, 4.8vw, 3.8rem); line-height: 1.08; font-family: var(--font-serif); font-weight: 800; color: var(--text-main); margin: 0 0 1.15rem 0; letter-spacing: -0.8px; max-width: 1040px;">
+    {lang === 'en' 
+      ? 'AI Higher Education Compass' 
+      : lang === 'pt'
+      ? 'Bússola de IA no Ensino Superior'
+      : 'Brújula IA Educación Superior'}
+    <span style="display: block; font-size: clamp(1.35rem, 2.6vw, 2rem); font-weight: 600; color: var(--accent-blue); margin-top: 0.45rem; line-height: 1.25;">
+      {lang === 'en'
+        ? 'First empirical observatory on regulations, public procurement, and governance across all 54 universities in Chile.'
         : lang === 'pt'
-        ? 'Bússola de IA no Ensino Superior: Diretrizes de IA nas Universidades Chilenas'
-        : 'Brújula IA: Normativas de Inteligencia Artificial en Universidades Chilenas'}
-    </h1>
+        ? 'Primeiro observatório empírico sobre normativas, compras públicas e governança de IA nas 54 universidades do Chile.'
+        : 'Observatorio empírico sobre normativas, compras públicas y gobernanza de IA en las 54 universidades de Chile.'}
+    </span>
+  </h1>
 
-    <p style="font-size: 1.05rem; color: var(--text-muted); max-width: 860px; line-height: 1.55; margin-bottom: 0.85rem;">
-      {t('brand.artifact')}
-    </p>
+  <p style="font-size: 1.1rem; color: var(--text-muted); max-width: 920px; line-height: 1.6; margin-bottom: 1.75rem;">
+    {lang === 'en'
+      ? 'Auditable public knowledge artifact mapping classroom policies, graduate thesis guidelines, authorship rules, privacy safeguards (Law No. 21,719), and public procurement contracts across Chile’s official university system.'
+      : lang === 'pt'
+      ? 'Artefato público e auditável que mapeia diretrizes de sala de aula, teses de pós-graduação, autoria, proteção de dados (Lei Nº 21.719) e licitações de compras públicas nas universidades oficiais do Chile.'
+      : 'Artefacto de interés público que transforma un debate pedagógico difuso en una matriz empírica auditable: cataloga directrices de aula, tesis de postgrado, autoría, resguardo de privacidad (Ley N° 21.719) y contratos de compras públicas en todo el sistema universitario oficial chileno.'}
+  </p>
 
-    <div style="font-size: 0.85rem; color: var(--text-muted); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.85rem;">
-      <div>
-        Investigación y desarrollo por <a href="https://www.linkedin.com/in/evegat1989/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-blue); font-weight: 600; text-decoration: none;">Eduardo Vega Toledo</a> (Universidad de Chile, <a href="mailto:evegat@uchile.cl" style="color: var(--accent-blue); text-decoration: underline;">evegat@uchile.cl</a> / <a href="mailto:eduardo@evegat.cl" style="color: var(--text-muted); text-decoration: underline;">eduardo@evegat.cl</a>) • CC BY 4.0
+  <!-- BARRA DESTACADA: COMUNIDAD, LINKEDIN Y LISTA DE SUSCRIPCIÓN -->
+  <div style="background: linear-gradient(135deg, rgba(14, 116, 144, 0.08) 0%, rgba(59, 130, 246, 0.08) 50%, rgba(16, 185, 129, 0.08) 100%); border: 1px solid var(--border-color); border-left: 5px solid var(--accent-blue); border-radius: 12px; padding: 1.35rem 1.6rem; margin-bottom: 2rem; box-shadow: var(--shadow-sm);">
+    
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1.25rem;">
+      <div style="flex: 1; min-width: min(100%, 320px);">
+        <div style="display: flex; align-items: center; gap: 0.45rem; margin-bottom: 0.35rem;">
+          <span style="font-size: 1.2rem;">📬</span>
+          <strong style="font-size: 1.05rem; color: var(--text-main); font-family: var(--font-serif);">
+            {lang === 'en' 
+              ? 'Stay updated on AI policy and university governance in Chile' 
+              : lang === 'pt'
+              ? 'Receba atualizações sobre políticas de IA e governança universitária'
+              : '¿Quieres recibir nuevos análisis, alertas normativas y actualizaciones?'}
+          </strong>
+        </div>
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0 0 0.85rem 0; line-height: 1.45;">
+          {lang === 'en'
+            ? 'Connect with author Eduardo Vega Toledo (Universidad de Chile) on LinkedIn, join the dispatch list, or reach out directly for academic and institutional collaboration.'
+            : lang === 'pt'
+            ? 'Conecte-se com o autor Eduardo Vega Toledo (Universidad de Chile) no LinkedIn, inscreva-se na lista ou escreva diretamente para cooperações acadêmicas.'
+            : 'Conectemos en LinkedIn con Eduardo Vega Toledo (Universidad de Chile), súmate a la lista de difusión o escríbeme directamente para colaboraciones académicas e institucionales:'}
+        </p>
+
+        <!-- Botones y Contacto Directo -->
+        <div style="display: flex; gap: 0.65rem; align-items: center; flex-wrap: wrap;">
+          <a 
+            href="https://www.linkedin.com/in/evegat1989/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="btn"
+            style="background: #0a66c2; color: #ffffff; font-weight: 600; font-size: 0.85rem; padding: 0.55rem 1rem; border-radius: 6px; text-decoration: none; display: inline-flex; align-items: center; gap: 0.45rem; box-shadow: var(--shadow-sm);"
+          >
+            <svg style="width: 14px; height: 14px; fill: currentColor;" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.67 1.67 0 0 0 0-3.34 1.67 1.67 0 0 0 0 3.34m1.4 9.74v-8.37H5.06v8.37h2.8z"/></svg>
+            {lang === 'en' ? 'Follow on LinkedIn →' : lang === 'pt' ? 'Seguir no LinkedIn →' : 'Seguir en LinkedIn →'}
+          </a>
+
+          <a 
+            href="mailto:evegat@uchile.cl?subject=Contacto%20Br%C3%BAjula%20IA%20Educaci%C3%B3n%20Superior" 
+            class="btn btn-outline btn-sm"
+            style="font-size: 0.82rem; padding: 0.5rem 0.85rem; text-decoration: none;"
+          >
+            ✉️ {lang === 'en' ? 'Email Eduardo' : lang === 'pt' ? 'Escrever por e-mail' : 'Escribir a Eduardo'}
+          </a>
+        </div>
       </div>
 
-      <div style="display: flex; gap: 0.4rem; align-items: center; flex-wrap: wrap;">
-        <a 
-          href="https://github.com/evegat/brujula-ia-edusuperior" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          class="btn btn-sm"
-          style="background: #24292f; color: #ffffff; font-size: 0.78rem; padding: 0.35rem 0.7rem; display: inline-flex; align-items: center; gap: 0.35rem; text-decoration: none;"
-        >
-          <svg style="width: 12px; height: 12px; fill: #e3b341;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-          ⭐ GitHub
-        </a>
-        <a 
-          href="/matriz_54_universidades.json" 
-          data-download-gate="true"
-          data-file-label="Matriz de 54 Universidades (.json)"
-          class="btn btn-outline btn-sm"
-          style="font-size: 0.78rem; padding: 0.35rem 0.65rem; text-decoration: none;"
-        >
-          📂 Datos (.json)
-        </a>
-        <a 
-          href="/matriz_54_universidades.csv" 
-          data-download-gate="true"
-          data-file-label="Matriz de 54 Universidades (.csv)"
-          class="btn btn-outline btn-sm"
-          style="font-size: 0.78rem; padding: 0.35rem 0.65rem; text-decoration: none; color: var(--accent-green); border-color: var(--accent-green);"
-          title="Registro y descarga directa para Excel / SECPLA / VRA"
-        >
-          📊 Matriz (.csv)
-        </a>
-        <a 
-          href="/llms.txt" 
-          target="_blank" 
-          class="btn btn-outline btn-sm"
-          style="font-size: 0.78rem; padding: 0.35rem 0.65rem; color: var(--accent-blue); border-color: var(--accent-blue); text-decoration: none;"
-          title="Especificación abierta para Agentes y LLMs"
-        >
-          🤖 llms.txt
-        </a>
+      <!-- Formulario Compacto de Suscripción -->
+      <div style="min-width: min(100%, 300px); background: var(--card-bg); padding: 1rem 1.15rem; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+        <div style="font-size: 0.82rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.4rem;">
+          📥 {lang === 'en' ? 'Join the Dispatch List:' : lang === 'pt' ? 'Inscreva-se na lista:' : 'Anotarme en la lista de novedades:'}
+        </div>
+        <form id="hero-quick-sub-form" style="display: flex; flex-direction: column; gap: 0.45rem;">
+          <input 
+            type="email" 
+            id="hero-quick-email"
+            required 
+            placeholder={lang === 'en' ? 'name@university.edu' : lang === 'pt' ? 'nome@universidade.edu' : 'tu.correo@institucion.cl'}
+            style="width: 100%; padding: 0.5rem 0.75rem; border: 1px solid var(--border-color); border-radius: 6px; font-size: 0.84rem; background: var(--canvas-bg); color: var(--text-main);"
+          />
+          <button 
+            type="submit" 
+            id="hero-quick-btn"
+            class="btn btn-primary btn-sm" 
+            style="width: 100%; justify-content: center; font-size: 0.82rem; padding: 0.5rem 0.75rem;"
+          >
+            {lang === 'en' ? 'Subscribe to Updates →' : lang === 'pt' ? 'Inscrever-se →' : 'Anotarme en la lista →'}
+          </button>
+          <div id="hero-quick-msg" style="font-size: 0.74rem; margin-top: 0.2rem; display: none;"></div>
+        </form>
       </div>
+
     </div>
 
-    <!-- Nota Visible de Corte Temporal y Actualización -->
-    <div style="background: rgba(29, 78, 216, 0.05); border: 1px solid rgba(29, 78, 216, 0.2); border-left: 4px solid var(--accent-blue); padding: 0.65rem 0.95rem; border-radius: 6px; font-size: 0.82rem; color: var(--text-main); line-height: 1.45;">
-      <strong>📅 {lang === 'en' ? 'Census Date:' : lang === 'pt' ? 'Data do Levantamento:' : 'Fecha del levantamiento:'}</strong> {lang === 'en' ? 'Data verified as of' : lang === 'pt' ? 'Dados verificados até' : 'Información verificada a'} <strong>{lang === 'en' ? 'October 2026' : lang === 'pt' ? 'Outubro de 2026' : 'Octubre de 2026'}</strong>. {lang === 'en' ? 'If your university recently approved new guidelines or you wish to clarify any record, please' : lang === 'pt' ? 'Se a sua universidade aprovou novas diretrizes recentemente ou deseja retificar algum dado,' : 'Si tu universidad aprobó recientemente una nueva directriz que aún no figure en esta versión o deseas precisar algún antecedente,'} <a href="mailto:evegat@uchile.cl?subject=Actualizaci%C3%B3n%20Normativa%20IA%20-%20Br%C3%BAjula%20IA" style="color: var(--accent-blue); font-weight: 600; text-decoration: underline;">{lang === 'en' ? 'contact us directly' : lang === 'pt' ? 'entre em contato conosco' : 'escríbenos directamente'}</a> {lang === 'en' ? 'to update its record.' : lang === 'pt' ? 'para atualizar a ficha.' : 'para actualizar su ficha.'}
+  </div>
+
+  <!-- Autoría y Botones de Datos Abiertos -->
+  <div style="font-size: 0.85rem; color: var(--text-muted); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.85rem; margin-bottom: 1.75rem;">
+    <div>
+      Iniciativa de investigación por <a href="https://www.linkedin.com/in/evegat1989/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-blue); font-weight: 600; text-decoration: none;">Eduardo Vega Toledo</a> (U. de Chile, <a href="mailto:evegat@uchile.cl" style="color: var(--accent-blue); text-decoration: underline;">evegat@uchile.cl</a> / <a href="mailto:eduardo@evegat.cl" style="color: var(--text-muted); text-decoration: underline;">eduardo@evegat.cl</a>) • CC BY 4.0
+    </div>
+
+    <!-- Acceso a Descargas Abiertas con Compuerta -->
+    <div style="display: flex; gap: 0.45rem; align-items: center; flex-wrap: wrap;">
+      <a 
+        href="https://github.com/evegat/brujula-ia-edusuperior" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="btn btn-sm"
+        style="background: #24292f; color: #ffffff; font-size: 0.78rem; padding: 0.35rem 0.7rem; display: inline-flex; align-items: center; gap: 0.35rem; text-decoration: none;"
+      >
+        <svg style="width: 12px; height: 12px; fill: #e3b341;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        ⭐ GitHub
+      </a>
+      <a 
+        href="/matriz_54_universidades.csv" 
+        data-download-gate="true"
+        data-file-label="Matriz de 54 Universidades (.csv)"
+        class="btn btn-outline btn-sm"
+        style="font-size: 0.78rem; padding: 0.35rem 0.65rem; text-decoration: none; color: var(--accent-green); border-color: var(--accent-green); font-weight: 600;"
+        title="Registro y descarga directa para Excel / SECPLA / VRA"
+      >
+        📊 Matriz (.csv)
+      </a>
+      <a 
+        href="/matriz_54_universidades.json" 
+        data-download-gate="true"
+        data-file-label="Matriz de 54 Universidades (.json)"
+        class="btn btn-outline btn-sm"
+        style="font-size: 0.78rem; padding: 0.35rem 0.65rem; text-decoration: none;"
+      >
+        📂 Datos (.json)
+      </a>
+      <a 
+        href="/llms.txt" 
+        target="_blank" 
+        class="btn btn-outline btn-sm"
+        style="font-size: 0.78rem; padding: 0.35rem 0.65rem; color: var(--accent-blue); border-color: var(--accent-blue); text-decoration: none;"
+        title="Especificación abierta para Agentes y LLMs"
+      >
+        🤖 llms.txt
+      </a>
     </div>
   </div>
 
-  <!-- Fila de Contexto Conceptual Inmediato (Sobria, Sin Hype) -->
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+  <!-- Fila de Métricas / Features Clave de Alto Retorno -->
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem;">
     
-    <!-- Dato 1: Radiografía de Universidades -->
-    <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.15rem 1.25rem;">
+    <!-- Métrica 1: Cobertura Nacional -->
+    <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.15rem 1.25rem; border-top: 3px solid var(--accent-green);">
       <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.35rem; letter-spacing: 0.5px;">
         🏛️ {lang === 'en' ? 'National Overview (54 Universities)' : lang === 'pt' ? 'Panorama Nacional (54 Universidades)' : 'Radiografía Nacional (54 Universidades)'}
       </div>
       <div style="display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.25rem;">
-        <span style="font-size: 1.75rem; font-weight: 700; font-family: var(--font-serif); color: var(--text-main); line-height: 1;">
+        <span style="font-size: 1.85rem; font-weight: 700; font-family: var(--font-serif); color: var(--text-main); line-height: 1;">
           {conInst} {lang === 'en' ? 'of' : lang === 'pt' ? 'de' : 'de'} {totalUes}
         </span>
         <span style="font-size: 0.85rem; font-weight: 600; color: var(--accent-green);">
-          ({lang === 'en' ? '59.3% with policy' : lang === 'pt' ? '59.3% com política' : '59.3% con norma'})
+          (59.3% {lang === 'en' ? 'with policy' : lang === 'pt' ? 'com norma' : 'con norma'})
         </span>
       </div>
       <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4;">
-        {lang === 'en' 
-          ? `32 universities with identified protocol or policy; `
-          : lang === 'pt'
-          ? `32 universidades com protocolo ou política identificado; `
-          : `32 universidades con protocolo o política identificado; `}
-        <strong>
-          {lang === 'en' 
-            ? `${enBrecha} institutions without identified public policy`
-            : lang === 'pt'
-            ? `${enBrecha} instituições sem instrumento público identificado`
-            : `${enBrecha} planteles sin instrumento público identificado`}
-        </strong>
-        {lang === 'en' ? ' in the census.' : lang === 'pt' ? ' no levantamento.' : ' en el levantamiento.'}
+        32 universidades con protocolo o política pública; <strong>{enBrecha} planteles en brecha</strong> sin instrumento identificado en el levantamiento.
       </div>
     </div>
 
-    <!-- Dato 2: Documentos Analizados -->
-    <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.15rem 1.25rem;">
+    <!-- Métrica 2: Acervo Normativo -->
+    <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.15rem 1.25rem; border-top: 3px solid var(--accent-blue);">
       <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.35rem; letter-spacing: 0.5px;">
-        📄 {lang === 'en' ? 'Analyzed Policy Documents' : lang === 'pt' ? 'Documentos e Normativas Analisados' : 'Documentos & Reglamentos Analizados'}
+        📄 {lang === 'en' ? 'Analyzed Policy Documents' : lang === 'pt' ? 'Documentos Analisados' : 'Documentos & Reglamentos'}
       </div>
       <div style="display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.25rem;">
-        <span style="font-size: 1.75rem; font-weight: 700; font-family: var(--font-serif); color: var(--text-main); line-height: 1;">
+        <span style="font-size: 1.85rem; font-weight: 700; font-family: var(--font-serif); color: var(--text-main); line-height: 1;">
           {totalDocs}
         </span>
         <span style="font-size: 0.85rem; color: var(--text-muted);">
-          {lang === 'en' ? 'policies and decrees' : lang === 'pt' ? 'políticas e decretos' : 'políticas y decretos'}
+          {lang === 'en' ? 'policies & decrees' : lang === 'pt' ? 'políticas e decretos' : 'normas y decretos'}
         </span>
       </div>
       <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4;">
-        {lang === 'en'
-          ? `${docsUes} regulations in universities (central or faculty-level) and ${docsIP} in professional institutes and technical centers.`
-          : lang === 'pt'
-          ? `${docsUes} regulamentos em universidades (centrais ou por faculdade) e ${docsIP} em institutos profissionais e CFTs.`
-          : `${docsUes} reglamentos en universidades (centrales o por facultad) y ${docsIP} en institutos profesionales y CFTs.`}
+        {docsUes} reglamentos en universidades (centrales o por facultad) y {docsIP} en institutos profesionales y CFTs.
       </div>
     </div>
 
-    <!-- Dato 3: Compras Públicas (Exclusivo Ues Estatales) -->
-    <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.15rem 1.25rem;">
+    <!-- Métrica 3: Trazabilidad Contractual Mercado Público -->
+    <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.15rem 1.25rem; border-top: 3px solid var(--accent-amber);">
       <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.35rem; letter-spacing: 0.5px;">
-        💰 {lang === 'en' ? 'Public Procurement (State Universities Only)' : lang === 'pt' ? 'Compras Públicas (Exclusivo Universidades Estatais)' : 'Compras Públicas (Sólo Ues del Estado)'}
+        💰 {lang === 'en' ? 'Public Procurement (State Ues Only)' : lang === 'pt' ? 'Compras Públicas (Só Estatais)' : 'Compras Públicas (Sólo Estatales)'}
       </div>
       <div style="display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.25rem;">
-        <span style="font-size: 1.75rem; font-weight: 700; font-family: var(--font-serif); color: var(--text-main); line-height: 1;">
+        <span style="font-size: 1.85rem; font-weight: 700; font-family: var(--font-serif); color: var(--text-main); line-height: 1;">
           85
         </span>
         <span style="font-size: 0.85rem; color: var(--text-muted);">
-          {lang === 'en' ? 'public procurement contracts' : lang === 'pt' ? 'contratos em compras públicas' : 'contratos en Mercado Público'}
+          licitaciones en Mercado Público
         </span>
       </div>
       <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4;">
-        {lang === 'en'
-          ? <>Software and AI tenders across <strong>10 public universities</strong> (30% procure AI without prior classroom policy).</>
-          : lang === 'pt'
-          ? <>Licitações de software e IA em <strong>10 universidades públicas</strong> (30% adquirem IA sem contar com diretriz prévia de aula).</>
-          : <>Licitaciones de software e IA en <strong>10 universidades públicas</strong> (el 30% adquiere IA sin contar con protocolo previo).</>}
+        Contratos en <strong>10 universidades públicas</strong> (el 30% adquiere tecnología e IA sin contar con protocolo previo de aula).
       </div>
     </div>
 
   </div>
 
-
-
 </section>
+
+<script is:inline>
+  (function initHeroQuickSub() {
+    const form = document.getElementById('hero-quick-sub-form');
+    const input = document.getElementById('hero-quick-email');
+    const btn = document.getElementById('hero-quick-btn');
+    const msg = document.getElementById('hero-quick-msg');
+
+    if (!form || !input || !btn || !msg) return;
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = input.value.trim();
+      if (!email) return;
+
+      btn.disabled = true;
+      const originalText = btn.textContent;
+      btn.textContent = 'Guardando...';
+
+      try {
+        const res = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email,
+            institucion: 'Comunidad Abierta Hero',
+            perfil: 'profesional_academico'
+          })
+        });
+
+        const data = await res.json();
+        if (res.ok && data.success) {
+          msg.style.display = 'block';
+          msg.style.color = '#10b981';
+          msg.textContent = '✓ ¡Anotado con éxito! Recibirás los próximos boletines.';
+          input.value = '';
+          btn.textContent = '✓ Registrado';
+        } else {
+          msg.style.display = 'block';
+          msg.style.color = '#ef4444';
+          msg.textContent = data.error || 'No pudimos registrar el correo. Intenta de nuevo.';
+          btn.disabled = false;
+          btn.textContent = originalText;
+        }
+      } catch (err) {
+        msg.style.display = 'block';
+        msg.style.color = '#ef4444';
+        msg.textContent = 'Error de conexión. Intenta nuevamente.';
+        btn.disabled = false;
+        btn.textContent = originalText;
+      }
+    });
+  })();
+</script>

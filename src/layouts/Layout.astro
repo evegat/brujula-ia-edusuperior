@@ -273,6 +273,30 @@ const pageDesc = description || t('meta.description');
       transition: transform 0.3s ease;
     }
 
+    .sidebar-tab-btn {
+      color: #94a3b8;
+      padding: 0.55rem 0.75rem;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+      display: block;
+      width: 100%;
+      text-align: left;
+      font-size: 0.9rem;
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+    .sidebar-tab-btn:hover {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.08);
+    }
+    .sidebar-tab-btn.active {
+      color: #34d399 !important;
+      background: rgba(52, 211, 153, 0.12) !important;
+      font-weight: 600 !important;
+      border-left: 3px solid #34d399 !important;
+    }
+
     .content-area {
       margin-left: 290px;
       flex: 1;

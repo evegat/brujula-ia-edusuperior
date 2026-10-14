@@ -175,109 +175,112 @@ const t = useTranslations('en');
   }
 </style>
 
-<script>
-  function setupTabs() {
-    const tabButtons = document.querySelectorAll<HTMLButtonElement>('.tab-btn');
-    const sidebarButtons = document.querySelectorAll<HTMLButtonElement>('.sidebar-tab-btn');
-    const tabPanels = document.querySelectorAll<HTMLElement>('.tab-panel');
-    const sidebar = document.getElementById('main-sidebar');
-    const overlay = document.getElementById('sidebar-overlay');
+<script is:inline>
+  (function initTabs() {
+    function setupTabs() {
+      const tabButtons = Array.from(document.querySelectorAll('.tab-btn'));
+      const sidebarButtons = Array.from(document.querySelectorAll('.sidebar-tab-btn'));
+      const tabPanels = Array.from(document.querySelectorAll('.tab-panel'));
+      const sidebar = document.getElementById('main-sidebar');
+      const overlay = document.getElementById('sidebar-overlay');
+      const tabsNav = document.querySelector('.tabs-nav');
 
-    function switchTab(tabId: string) {
-      tabButtons.forEach(btn => {
-        if (btn.dataset.tab === tabId) {
-          btn.classList.add('active');
-        } else {
-          btn.classList.remove('active');
+      function switchTab(tabId, shouldScroll = true) {
+        tabButtons.forEach(btn => {
+          if (btn.getAttribute('data-tab') === tabId) {
+            btn.classList.add('active');
+          } else {
+            btn.classList.remove('active');
+          }
+        });
+
+        sidebarButtons.forEach(btn => {
+          if (btn.getAttribute('data-tab') === tabId) {
+            btn.classList.add('active');
+          } else {
+            btn.classList.remove('active');
+          }
+        });
+
+        tabPanels.forEach(panel => {
+          if (panel.id === tabId) {
+            panel.classList.add('active');
+          } else {
+            panel.classList.remove('active');
+          }
+        });
+
+        if (window.innerWidth <= 1024) {
+          if (sidebar) sidebar.classList.remove('open');
+          if (overlay) overlay.classList.remove('active');
         }
-      });
 
-      sidebarButtons.forEach(btn => {
-        if (btn.dataset.tab === tabId) {
-          btn.classList.add('active');
-          btn.style.color = '#34d399';
-          btn.style.fontWeight = '600';
-        } else {
-          btn.classList.remove('active');
-          btn.style.color = '#cbd5e1';
-          btn.style.fontWeight = '400';
-        }
-      });
-
-      tabPanels.forEach(panel => {
-        if (panel.id === tabId) {
-          panel.classList.add('active');
-        } else {
-          panel.classList.remove('active');
-        }
-      });
-
-      if (window.innerWidth <= 1024) {
-        sidebar?.classList.remove('open');
-        overlay?.classList.remove('active');
-      }
-
-      const tabsNav = document.querySelector('.tabs-nav') as HTMLElement;
-      if (tabsNav) {
-        const navOffsetTop = tabsNav.offsetTop;
-        if (window.scrollY > navOffsetTop + 30) {
+        if (shouldScroll && tabsNav) {
+          const navRect = tabsNav.getBoundingClientRect();
+          const targetY = window.pageYOffset + navRect.top;
           window.scrollTo({
-            top: Math.max(0, navOffsetTop - 15),
+            top: Math.max(0, targetY - 15),
             behavior: 'smooth'
           });
         }
+
+        if (window.umami) {
+          window.umami.track('tab_switch', { tab: tabId, lang: 'en' });
+        }
       }
 
-      if ((window as any).umami) {
-        (window as any).umami.track('tab_switch', { tab: tabId, lang: 'en' });
-      }
-    }
-
-    tabButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const targetId = btn.dataset.tab;
-        if (targetId) switchTab(targetId);
+      tabButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetId = btn.getAttribute('data-tab');
+          if (targetId) switchTab(targetId, true);
+        });
       });
-    });
 
-    sidebarButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const targetId = btn.dataset.tab;
-        if (targetId) switchTab(targetId);
+      sidebarButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetId = btn.getAttribute('data-tab');
+          if (targetId) switchTab(targetId, true);
+        });
       });
-    });
 
-    function handleHashChange() {
-      const hash = window.location.hash;
-      const hashMapping: Record<string, string> = {
-        '#matriz-nacional': 'tab-matriz',
-        '#planilla': 'tab-matriz',
-        '#inicio': 'tab-matriz',
-        '#kit': 'tab-kit',
-        '#ley-21719': 'tab-kit',
-        '#ideas': 'tab-ideas',
-        '#buenas-practicas': 'tab-ideas',
-        '#compras': 'tab-compras',
-        '#catalogo': 'tab-catalogo',
-        '#clausulas': 'tab-catalogo',
-        '#metodologia': 'tab-metodologia',
-        '#datos': 'tab-metodologia',
-        '#comunidad': 'tab-metodologia'
-      };
-      if (hashMapping[hash]) {
-        switchTab(hashMapping[hash]);
+      function handleHashChange() {
+        const hash = window.location.hash;
+        if (hash === '#inicio') {
+          switchTab('tab-matriz', false);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          return;
+        }
+        const hashMapping = {
+          '#matriz-nacional': 'tab-matriz',
+          '#planilla': 'tab-matriz',
+          '#kit': 'tab-kit',
+          '#ley-21719': 'tab-kit',
+          '#ideas': 'tab-ideas',
+          '#buenas-practicas': 'tab-ideas',
+          '#compras': 'tab-compras',
+          '#catalogo': 'tab-catalogo',
+          '#clausulas': 'tab-catalogo',
+          '#metodologia': 'tab-metodologia',
+          '#datos': 'tab-metodologia',
+          '#comunidad': 'tab-metodologia'
+        };
+        if (hashMapping[hash]) {
+          switchTab(hashMapping[hash], true);
+        }
+      }
+
+      window.addEventListener('hashchange', handleHashChange);
+      if (window.location.hash) {
+        handleHashChange();
       }
     }
 
-    window.addEventListener('hashchange', handleHashChange);
-    if (window.location.hash) {
-      handleHashChange();
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', setupTabs);
+    } else {
+      setupTabs();
     }
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', setupTabs);
-  } else {
-    setupTabs();
-  }
+  })();
 </script>
