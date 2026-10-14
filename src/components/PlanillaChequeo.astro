@@ -235,9 +235,15 @@ const planillaFilas = matrizData.map((u, idx) => {
               <td style="padding:0.75rem 0.65rem; text-align:center; font-size:0.85rem;">
                 {fila.tipo === 'Estatales' ? (
                   d.compras_ia ? (
-                    <a href="#compras" style="color:var(--accent-amber); font-weight:700; text-decoration:none;" title={lang === 'en' ? 'Public AI Procurement Contracts (Ley 19.886)' : lang === 'pt' ? 'Contratos de IA em Compras Públicas' : 'Contratos de IA en Mercado Público (Ley 19.886)'}>
+                    <button 
+                      type="button"
+                      class="btn-ver-compras-action"
+                      data-uni-compras={fila.nombre}
+                      style="background:none; border:none; color:var(--accent-amber); font-weight:700; cursor:pointer; font-size:0.85rem; padding:0; text-decoration:underline;"
+                      title={lang === 'en' ? `Click to view public procurement contracts for ${fila.nombre}` : lang === 'pt' ? `Clique para ver licitações de ${fila.nombre}` : `Clic para ver compras públicas de ${fila.nombre} en Mercado Público`}
+                    >
                       💰 SI
-                    </a>
+                    </button>
                   ) : (
                     <span style="color:var(--text-muted);" title={lang === 'en' ? 'No procurement registered in Mercado Público' : lang === 'pt' ? 'Sem compras registradas no Mercado Público' : 'Sin compras registradas en Mercado Público'}>○</span>
                   )

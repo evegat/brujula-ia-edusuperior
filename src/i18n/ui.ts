@@ -28,7 +28,7 @@ export const ui = {
     'nav.ideas': '💡 Ideas de Profes',
     'nav.procurement': '💰 Compras en Tecnología',
     'nav.catalog': '📚 Catálogo & Citas',
-    'nav.methodology': '📖 Datos & Metodología',
+    'nav.methodology': '💡 Ideas, Datos & Metodología',
     
     // Hero & Summary
     'hero.badge_unesco': 'Bien Público Digital • UNESCO 2021/2023',
@@ -232,7 +232,7 @@ export const ui = {
     'nav.ideas': '💡 Faculty Ideas & Cases',
     'nav.procurement': '💰 Tech Procurement',
     'nav.catalog': '📚 Catalog & Citations',
-    'nav.methodology': '📖 Data & Methodology',
+    'nav.methodology': '💡 Cases, Data & Methodology',
     
     // Hero & Summary
     'hero.badge_unesco': 'Digital Public Good • UNESCO 2021/2023',
@@ -436,7 +436,7 @@ export const ui = {
     'nav.ideas': '💡 Ideias e Casos Docentes',
     'nav.procurement': '💰 Compras em Tecnologia',
     'nav.catalog': '📚 Catálogo e Citações',
-    'nav.methodology': '📖 Dados e Metodologia',
+    'nav.methodology': '💡 Ideias Docentes, Dados e Metodologia',
     
     // Hero & Summary
     'hero.badge_unesco': 'Bem Público Digital • UNESCO 2021/2023',

@@ -11,19 +11,19 @@ const t = useTranslations(lang);
 
 // Datos de las 18 Universidades Estatales clasificadas en la Matriz 2x2
 const q1_gobernanza = [
-  { sigla: 'UChile', nombre: 'U. de Chile', imn: 96.0, compras: 52, monto: '$37.6M' },
-  { sigla: 'ULagos', nombre: 'U. de Los Lagos', imn: 88.8, compras: 1, monto: '$2.9M' },
-  { sigla: 'UV', nombre: 'U. de Valparaíso', imn: 66.8, compras: 1, monto: 'Convenio' },
-  { sigla: 'UTalca', nombre: 'U. de Talca', imn: 54.2, compras: 5, monto: '$82.9M' },
-  { sigla: 'UFRO', nombre: 'U. de La Frontera', imn: 52.8, compras: 3, monto: '$232.2M' },
-  { sigla: 'USACH', nombre: 'USACH', imn: 42.2, compras: 6, monto: '$49.9M' },
-  { sigla: 'UDA', nombre: 'U. de Atacama', imn: 28.2, compras: 5, monto: '$89.0M' }
+  { sigla: 'UChile', nombre: 'U. de Chile', fullNombre: 'UNIVERSIDAD DE CHILE', imn: 96.0, compras: 52, monto: '$37.6M' },
+  { sigla: 'ULagos', nombre: 'U. de Los Lagos', fullNombre: 'UNIVERSIDAD DE LOS LAGOS', imn: 88.8, compras: 1, monto: '$2.9M' },
+  { sigla: 'UV', nombre: 'U. de Valparaíso', fullNombre: 'UNIVERSIDAD DE VALPARAISO', imn: 66.8, compras: 1, monto: 'Convenio' },
+  { sigla: 'UTalca', nombre: 'U. de Talca', fullNombre: 'UNIVERSIDAD DE TALCA', imn: 54.2, compras: 5, monto: '$82.9M' },
+  { sigla: 'UFRO', nombre: 'U. de La Frontera', fullNombre: 'UNIVERSIDAD DE LA FRONTERA', imn: 52.8, compras: 3, monto: '$232.2M' },
+  { sigla: 'USACH', nombre: 'USACH', fullNombre: 'UNIVERSIDAD DE SANTIAGO DE CHILE', imn: 42.2, compras: 6, monto: '$49.9M' },
+  { sigla: 'UDA', nombre: 'U. de Atacama', fullNombre: 'UNIVERSIDAD DE ATACAMA', imn: 28.2, compras: 5, monto: '$89.0M' }
 ];
 
 const q2_brecha = [
-  { sigla: 'UTEM', nombre: 'UTEM', imn: 0, compras: 6, monto: '$87.4M' },
-  { sigla: 'ULS', nombre: 'U. de La Serena', imn: 0, compras: 4, monto: '$18.0M' },
-  { sigla: 'UBB', nombre: 'U. del Bío-Bío', imn: 0, compras: 2, monto: '$10.1M' }
+  { sigla: 'UTEM', nombre: 'UTEM', fullNombre: 'UNIVERSIDAD TECNOLOGICA METROPOLITANA', imn: 0, compras: 6, monto: '$87.4M' },
+  { sigla: 'ULS', nombre: 'U. de La Serena', fullNombre: 'UNIVERSIDAD DE LA SERENA', imn: 0, compras: 4, monto: '$18.0M' },
+  { sigla: 'UBB', nombre: 'U. del Bío-Bío', fullNombre: 'UNIVERSIDAD DEL BIO BIO', imn: 0, compras: 2, monto: '$10.1M' }
 ];
 
 const q3_preventiva = [
@@ -89,10 +89,16 @@ const q4_rezago = [
         </div>
         <div style="display: flex; flex-direction: column; gap: 0.45rem;">
           {q2_brecha.map(u => (
-            <div style="display: flex; justify-content: space-between; align-items: center; background: var(--card-bg); border: 1px solid var(--border-color); padding: 0.45rem 0.65rem; border-radius: 6px; font-size: 0.82rem;">
-              <span style="font-weight: 600; color: var(--text-main);">{u.nombre}</span>
+            <button 
+              type="button"
+              class="btn-ver-compras-action"
+              data-uni-compras={u.fullNombre}
+              title={`Ver ${u.compras} compras de ${u.nombre} en Mercado Público`}
+              style="display: flex; justify-content: space-between; align-items: center; background: var(--card-bg); border: 1px solid rgba(239, 68, 68, 0.35); padding: 0.45rem 0.65rem; border-radius: 6px; font-size: 0.82rem; cursor: pointer; text-align: left; width: 100%; font-family: inherit;"
+            >
+              <span style="font-weight: 600; color: var(--text-main);">{u.nombre} ↗</span>
               <span style="font-size: 0.76rem; color: var(--accent-red); font-weight: 600;">{u.compras} compras ({u.monto})</span>
-            </div>
+            </button>
           ))}
         </div>
       </div>
@@ -113,10 +119,16 @@ const q4_rezago = [
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 0.45rem;">
           {q1_gobernanza.map(u => (
-            <div style="background: var(--card-bg); border: 1px solid var(--border-color); padding: 0.4rem 0.55rem; border-radius: 6px; font-size: 0.78rem;">
-              <div style="font-weight: 600; color: var(--text-main);">{u.nombre}</div>
+            <button 
+              type="button"
+              class="btn-ver-compras-action"
+              data-uni-compras={u.fullNombre}
+              title={`Ver ${u.compras} compras de ${u.nombre} en Mercado Público`}
+              style="background: var(--card-bg); border: 1px solid rgba(16, 185, 129, 0.35); padding: 0.4rem 0.55rem; border-radius: 6px; font-size: 0.78rem; cursor: pointer; text-align: left; font-family: inherit;"
+            >
+              <div style="font-weight: 600; color: var(--text-main);">{u.nombre} ↗</div>
               <div style="font-size: 0.72rem; color: var(--accent-green);">IMN: {u.imn} • {u.monto}</div>
-            </div>
+            </button>
           ))}
         </div>
       </div>

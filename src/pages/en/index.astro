@@ -43,9 +43,6 @@ const t = useTranslations('en');
       <button class="tab-btn" data-tab="tab-kit">
         {t('nav.rules')}
       </button>
-      <button class="tab-btn" data-tab="tab-ideas">
-        {t('nav.ideas')}
-      </button>
       <button class="tab-btn" data-tab="tab-compras">
         {t('nav.procurement')}
       </button>
@@ -74,17 +71,12 @@ const t = useTranslations('en');
       <KitAdopcionNacional lang="en" />
     </div>
 
-    <!-- Section 3: Faculty Ideas & Best Practices -->
-    <div id="tab-ideas" class="tab-panel">
-      <BancoBuenasPracticas lang="en" />
-    </div>
-
-    <!-- Section 4: Public Procurement -->
+    <!-- Section 3: Public Procurement -->
     <div id="tab-compras" class="tab-panel">
       <ComprasPublicas lang="en" />
     </div>
 
-    <!-- Section 5: Policy Catalog & Direct Citations -->
+    <!-- Section 4: Policy Catalog & Direct Citations -->
     <div id="tab-catalogo" class="tab-panel">
       <CatalogoProtocolos lang="en" />
       <div style="margin-top: 3.5rem;">
@@ -92,9 +84,14 @@ const t = useTranslations('en');
       </div>
     </div>
 
-    <!-- Section 6: Methodology & Open Data -->
+    <!-- Section 5: Faculty Ideas, Methodology & Open Data -->
     <div id="tab-metodologia" class="tab-panel">
-      <MetodologiaYVersiones />
+      <div id="ideas" style="scroll-margin-top: 2rem;">
+        <BancoBuenasPracticas lang="en" />
+      </div>
+      <div style="margin-top: 4rem; padding-top: 2.5rem; border-top: 2px dashed var(--border-color);">
+        <MetodologiaYVersiones />
+      </div>
       <div style="margin-top: 3.5rem;">
         <ComunidadBuzon />
       </div>
@@ -257,8 +254,8 @@ const t = useTranslations('en');
           '#planilla': 'tab-matriz',
           '#kit': 'tab-kit',
           '#ley-21719': 'tab-kit',
-          '#ideas': 'tab-ideas',
-          '#buenas-practicas': 'tab-ideas',
+          '#ideas': 'tab-metodologia',
+          '#buenas-practicas': 'tab-metodologia',
           '#compras': 'tab-compras',
           '#catalogo': 'tab-catalogo',
           '#clausulas': 'tab-catalogo',

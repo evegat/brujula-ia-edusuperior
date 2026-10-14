@@ -423,7 +423,6 @@ const pageDesc = description || t('meta.description');
           <ul style="list-style:none; display:flex; flex-direction:column; gap:0.45rem;">
             <li><button type="button" class="nav-link sidebar-tab-btn active" data-tab="tab-matriz" style="background:none; border:none; width:100%; text-align:left; cursor:pointer; font-family:inherit; font-size:0.9rem;">{t('nav.universities')}</button></li>
             <li><button type="button" class="nav-link sidebar-tab-btn" data-tab="tab-kit" style="background:none; border:none; width:100%; text-align:left; cursor:pointer; font-family:inherit; font-size:0.9rem;">{t('nav.rules')}</button></li>
-            <li><button type="button" class="nav-link sidebar-tab-btn" data-tab="tab-ideas" style="background:none; border:none; width:100%; text-align:left; cursor:pointer; font-family:inherit; font-size:0.9rem;">{t('nav.ideas')}</button></li>
             <li><button type="button" class="nav-link sidebar-tab-btn" data-tab="tab-compras" style="background:none; border:none; width:100%; text-align:left; cursor:pointer; font-family:inherit; font-size:0.9rem;">{t('nav.procurement')}</button></li>
             <li><button type="button" class="nav-link sidebar-tab-btn" data-tab="tab-catalogo" style="background:none; border:none; width:100%; text-align:left; cursor:pointer; font-family:inherit; font-size:0.9rem;">{t('nav.catalog')}</button></li>
             <li><button type="button" class="nav-link sidebar-tab-btn" data-tab="tab-metodologia" style="background:none; border:none; width:100%; text-align:left; cursor:pointer; font-family:inherit; font-size:0.9rem;">{t('nav.methodology')}</button></li>
@@ -523,6 +522,57 @@ const pageDesc = description || t('meta.description');
       };
       if (typeof console !== 'undefined' && console.warn) {
         console.warn('[Brújula IA Telemetría] Promesa rechazada sin capturar:', rejectPayload);
+      }
+    });
+
+    // Helper global para navegar y filtrar compras de una universidad
+    window.verComprasUniversidad = function(uniNombre) {
+      if (!uniNombre) return;
+
+      // 1. Activar pestaña de compras (en navbar principal o sidebar)
+      const btnCompras = document.querySelector('.tab-btn[data-tab="tab-compras"]') || document.querySelector('.sidebar-tab-btn[data-tab="tab-compras"]');
+      if (btnCompras) {
+        btnCompras.click();
+      }
+
+      // 2. Establecer filtro en el select de compras
+      setTimeout(() => {
+        const selectU = document.getElementById('compras-select-u');
+        if (selectU) {
+          const norm = (s) => (s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+          const target = norm(uniNombre);
+          let found = '';
+          for (const opt of selectU.options) {
+            if (opt.value === 'todas') continue;
+            const optNorm = norm(opt.value);
+            if (target.includes(optNorm) || optNorm.includes(target)) {
+              found = opt.value;
+              break;
+            }
+          }
+          if (found) {
+            selectU.value = found;
+            selectU.dispatchEvent(new Event('change'));
+          }
+        }
+
+        // 3. Desplazar suavemente a la sección de compras
+        const comprasSec = document.getElementById('compras');
+        if (comprasSec) {
+          const navOffset = comprasSec.getBoundingClientRect().top + window.pageYOffset;
+          window.scrollTo({ top: Math.max(0, navOffset - 25), behavior: 'smooth' });
+        }
+      }, 80);
+    };
+
+    // Delegación global para botones de compras
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('.btn-ver-compras-action, .btn-ver-compras-badge');
+      if (btn) {
+        const uni = btn.getAttribute('data-uni-compras');
+        if (uni && window.verComprasUniversidad) {
+          window.verComprasUniversidad(uni);
+        }
       }
     });
   </script>

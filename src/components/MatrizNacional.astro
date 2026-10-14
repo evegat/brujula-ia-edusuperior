@@ -332,7 +332,15 @@ function normalizeForSearch(str: string): string {
               <div>
                 {u.tipo_categoria === 'Estatales' ? (
                   dims.compras_ia ? (
-                    <span title={lang === 'en' ? 'AI Procurement Registered (Ley 19.886)' : lang === 'pt' ? 'Licitações de IA Registradas (Lei 19.886)' : 'Compras IA Registradas en ChileCompra (Ley 19.886)'} style="color:var(--accent-amber); font-weight:600;">💰 {lang === 'en' ? 'Procurement' : lang === 'pt' ? 'Compras' : 'Compras'} ({u.compras?.total || 1})</span>
+                    <button 
+                      type="button"
+                      class="btn-ver-compras-badge"
+                      data-uni-compras={u.nombre}
+                      title={lang === 'en' ? `Click to view ${u.compras?.total || 1} procurement contracts in Mercado Público` : lang === 'pt' ? `Clique para ver ${u.compras?.total || 1} licitações no Mercado Público` : `Clic para ver ${u.compras?.total || 1} compras públicas en Mercado Público`}
+                      style="background:rgba(245, 158, 11, 0.12); border:1px solid rgba(245, 158, 11, 0.45); border-radius:4px; padding:0.12rem 0.35rem; color:var(--accent-amber); font-weight:700; cursor:pointer; font-size:0.75rem; display:inline-flex; align-items:center; gap:0.2rem; transition:var(--transition);"
+                    >
+                      💰 {lang === 'en' ? 'Procurement' : lang === 'pt' ? 'Compras' : 'Compras'} ({u.compras?.total || 1}) ↗
+                    </button>
                   ) : (
                     <span title={lang === 'en' ? 'No AI Procurement Registered in Mercado Público' : lang === 'pt' ? 'Sem Compras de IA Registradas no Mercado Público' : 'Sin Compras de IA Registradas en Mercado Público'} style="color:var(--text-muted);">○ {lang === 'en' ? 'Procurement' : lang === 'pt' ? 'Compras' : 'Compras'}</span>
                   )
@@ -377,6 +385,20 @@ function normalizeForSearch(str: string): string {
             ) : (
               <div style="background:rgba(0,0,0,0.02); padding:0.75rem; border-radius:6px; font-size:0.78rem; color:var(--text-muted); margin-bottom:1rem; border:1px dashed var(--border-color); line-height:1.4;">
                 {t('matriz.card_no_doc_desc')}
+              </div>
+            )}
+
+            {/* Botón destacado para revisar compras públicas de esta universidad */}
+            {u.tipo_categoria === 'Estatales' && dims.compras_ia && (
+              <div style="margin-bottom:1rem;">
+                <button 
+                  type="button" 
+                  class="btn btn-outline btn-sm btn-ver-compras-action" 
+                  data-uni-compras={u.nombre}
+                  style="width:100%; justify-content:center; gap:0.4rem; font-weight:600; color:#b45309; border-color:rgba(217, 119, 6, 0.45); background:rgba(245, 158, 11, 0.08); font-size:0.78rem; padding:0.45rem 0.65rem; border-radius:6px; cursor:pointer;"
+                >
+                  💰 {lang === 'en' ? `View ${u.compras?.total || 1} AI contracts in Mercado Público →` : lang === 'pt' ? `Ver ${u.compras?.total || 1} contratos no Mercado Público →` : `Ver ${u.compras?.total || 1} compras públicas en Mercado Público →`}
+                </button>
               </div>
             )}
           </div>
