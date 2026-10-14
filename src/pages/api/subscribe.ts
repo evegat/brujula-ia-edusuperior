@@ -39,7 +39,7 @@ export const OPTIONS: APIRoute = async () => {
   });
 };
 
-export const POST: APIRoute = async ({ request }) => {
+export const POST: APIRoute = async ({ request, locals }) => {
   try {
     const clientIp = request.headers.get('cf-connecting-ip') || 
       request.headers.get('x-forwarded-for')?.split(',')[0].trim() || 
@@ -118,11 +118,42 @@ export const POST: APIRoute = async ({ request }) => {
 
     const cleanInst = institucion && typeof institucion === 'string' ? institucion.trim() : 'No informada';
     const cleanPerfil = perfil && typeof perfil === 'string' ? perfil.trim() : 'general';
+    const nowIso = new Date().toISOString();
 
-    // Despacho durable a FormSubmit hacia evegat@uchile.cl con CC eduardo@evegat.cl y auto-respuesta al suscriptor
+    const subRecord = {
+      email: cleanEmail,
+      institucion: cleanInst,
+      perfil: cleanPerfil,
+      origen: origen && typeof origen === 'string' ? origen.trim() : 'brujula-p154',
+      consentimiento_ley_21719: isConsent,
+      timestamp: nowIso,
+      ip: clientIp
+    };
+
+    // 1. Persistencia Inmutable en Base de Datos Cloudflare KV (BRUJULA_DB)
+    const db = (locals as any)?.runtime?.env?.BRUJULA_DB;
+    if (db) {
+      try {
+        await db.put(`sub:${cleanEmail}`, JSON.stringify(subRecord));
+
+        const rawIndex = await db.get('sub_index');
+        let indexList: string[] = [];
+        if (rawIndex) {
+          try { indexList = JSON.parse(rawIndex); } catch (_) {}
+        }
+        if (!indexList.includes(cleanEmail)) {
+          indexList.unshift(cleanEmail);
+          await db.put('sub_index', JSON.stringify(indexList));
+        }
+      } catch (dbErr) {
+        console.warn('[subscribe] Error persistiendo en Cloudflare KV:', dbErr);
+      }
+    }
+
+    // 2. Notificación complementaria a FormSubmit (asíncrona y no bloqueante)
     const autoresponseMessage = 
       '¡Hola! Gracias por registrarte en el Observatorio Brújula IA de la Educación Superior en Chile (https://brujulaiaedusuperior.evegat.cl).\n\n' +
-      'Hemos recibido y registrado tus datos correctamente. Te notificaremos a esta misma casilla cuando existan actualizaciones normativas en universidades chilenas, nuevas compras públicas de tecnología registradas o publiquemos herramientas y cláusulas de interés público.\n\n' +
+      'Hemos recibido y registrado tus datos correctamente en nuestra base de datos. Te notificaremos a esta misma casilla cuando existan actualizaciones normativas en universidades chilenas, nuevas compras públicas de tecnología registradas o publiquemos herramientas y cláusulas de interés público.\n\n' +
       'Atentamente,\n' +
       'Eduardo Vega Toledo\n' +
       'Universidad de Chile (evegat@uchile.cl / eduardo@evegat.cl)\n' +
@@ -142,33 +173,26 @@ export const POST: APIRoute = async ({ request }) => {
       formPayload.append('_template', 'table');
       formPayload.append('_captcha', 'false');
 
-      const submitRes = await fetch('https://formsubmit.co/ajax/evegat@uchile.cl', {
+      fetch('https://formsubmit.co/ajax/evegat@uchile.cl', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/x-www-form-urlencoded'
         },
         body: formPayload.toString()
-      });
-
-      if (!submitRes.ok) {
-        console.warn('[subscribe] FormSubmit returned status:', submitRes.status);
-      }
-    } catch (fsErr) {
-      console.warn('[subscribe] Error despachando a FormSubmit:', fsErr);
-      // No fallamos la petición del usuario si hay timeout de red externo, el registro local persiste
-    }
+      }).catch(e => console.warn('[subscribe] Async FormSubmit notify failed:', e));
+    } catch (_) {}
 
     return new Response(JSON.stringify({
       success: true,
-      message: `Suscripción registrada con éxito para ${cleanEmail}. Te hemos enviado un correo de confirmación.`,
+      message: `Suscripción registrada con éxito para ${cleanEmail} en la base de datos del observatorio.`,
       data: {
         email: cleanEmail,
         institucion: cleanInst,
         perfil: cleanPerfil,
         origen: origen && typeof origen === 'string' ? origen.trim() : 'brujula-p154',
         consentimiento_ley_21719: isConsent,
-        timestamp: new Date().toISOString()
+        timestamp: nowIso
       }
     }), {
       status: 200,

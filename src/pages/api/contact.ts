@@ -39,7 +39,7 @@ export const OPTIONS: APIRoute = async () => {
   });
 };
 
-export const POST: APIRoute = async ({ request }) => {
+export const POST: APIRoute = async ({ request, locals }) => {
   try {
     const clientIp = request.headers.get('cf-connecting-ip') || 
       request.headers.get('x-forwarded-for')?.split(',')[0].trim() || 
@@ -114,15 +114,44 @@ export const POST: APIRoute = async ({ request }) => {
     const cleanEmail = email.trim().toLowerCase();
     const cleanNombre = nombre && typeof nombre === 'string' ? nombre.trim() : 'Anónimo';
     const cleanAsunto = asunto && typeof asunto === 'string' ? asunto.trim() : 'Contacto Brújula IA';
+    const nowIso = new Date().toISOString();
+    const contactId = 'CONT-' + Date.now().toString(36).toUpperCase();
+
+    const contactRecord = {
+      id: contactId,
+      nombre: cleanNombre,
+      email: cleanEmail,
+      asunto: cleanAsunto,
+      mensaje: mensaje.trim(),
+      timestamp: nowIso,
+      ip: clientIp
+    };
+
+    const db = (locals as any)?.runtime?.env?.BRUJULA_DB;
+    if (db) {
+      try {
+        await db.put(`contact:${contactId}`, JSON.stringify(contactRecord));
+        const rawIndex = await db.get('contact_index');
+        let cIndex: string[] = [];
+        if (rawIndex) {
+          try { cIndex = JSON.parse(rawIndex); } catch (_) {}
+        }
+        cIndex.unshift(contactId);
+        await db.put('contact_index', JSON.stringify(cIndex));
+      } catch (dbErr) {
+        console.warn('[contact] Error guardando en Cloudflare KV:', dbErr);
+      }
+    }
 
     return new Response(JSON.stringify({
       success: true,
       message: 'Mensaje enviado correctamente. Eduardo se pondrá en contacto a la brevedad.',
       data: {
+        id: contactId,
         nombre: cleanNombre,
         email: cleanEmail,
         asunto: cleanAsunto,
-        timestamp: new Date().toISOString()
+        timestamp: nowIso
       }
     }), {
       status: 200,

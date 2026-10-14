@@ -8,6 +8,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "export-subs": "node scripts/export-registros.mjs",
     "test": "node --experimental-strip-types scripts/test-api.mjs && node scripts/verify-all.mjs && node --experimental-strip-types scripts/test-adversarial.mjs && node scripts/test-ux-ui.mjs"
   },
   "dependencies": {

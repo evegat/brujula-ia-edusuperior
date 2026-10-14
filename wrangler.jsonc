@@ -5,6 +5,12 @@
   "observability": {
     "enabled": true
   },
+  "kv_namespaces": [
+    {
+      "binding": "BRUJULA_DB",
+      "id": "9d2279fc17db442daf6f43589e4e76d0"
+    }
+  ],
   "assets": {
     "directory": "."
   },

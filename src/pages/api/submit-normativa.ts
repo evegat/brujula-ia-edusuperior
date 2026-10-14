@@ -39,7 +39,7 @@ export const OPTIONS: APIRoute = async () => {
   });
 };
 
-export const POST: APIRoute = async ({ request }) => {
+export const POST: APIRoute = async ({ request, locals }) => {
   try {
     const clientIp = request.headers.get('cf-connecting-ip') || 
       request.headers.get('x-forwarded-for')?.split(',')[0].trim() || 
@@ -140,19 +140,40 @@ export const POST: APIRoute = async ({ request }) => {
     }
 
     const ticket_id = 'NORM-' + Date.now().toString(36).toUpperCase();
+    const nowIso = new Date().toISOString();
+
+    const aporteRecord = {
+      ticket_id,
+      institucion: institucion.trim(),
+      url_normativa: hasUrl ? url_normativa.trim() : null,
+      resumen: hasResumen ? resumen.trim() : null,
+      remitente_email: remitente_email && typeof remitente_email === 'string' ? remitente_email.trim() : null,
+      remitente_nombre: remitente_nombre && typeof remitente_nombre === 'string' ? remitente_nombre.trim() : null,
+      timestamp: nowIso
+    };
+
+    const db = (locals as any)?.runtime?.env?.BRUJULA_DB;
+    if (db) {
+      try {
+        await db.put(`normativa:${ticket_id}`, JSON.stringify(aporteRecord));
+
+        const rawNormIndex = await db.get('normativa_index');
+        let normIndex: string[] = [];
+        if (rawNormIndex) {
+          try { normIndex = JSON.parse(rawNormIndex); } catch (_) {}
+        }
+        normIndex.unshift(ticket_id);
+        await db.put('normativa_index', JSON.stringify(normIndex));
+      } catch (dbErr) {
+        console.warn('[submit-normativa] Error guardando en Cloudflare KV:', dbErr);
+      }
+    }
 
     return new Response(JSON.stringify({
       success: true,
       message: `Aporte comunitario registrado para ${institucion.trim()}. ¡Muchas gracias por contribuir a la transparencia del catastro! Si deseas adjuntar el PDF o resolución escaneada, por favor envíala a eduardo@evegat.cl mencionando el ticket ${ticket_id}.`,
       ticket_id,
-      data: {
-        institucion: institucion.trim(),
-        url_normativa: hasUrl ? url_normativa.trim() : null,
-        resumen: hasResumen ? resumen.trim() : null,
-        remitente_email: remitente_email && typeof remitente_email === 'string' ? remitente_email.trim() : null,
-        remitente_nombre: remitente_nombre && typeof remitente_nombre === 'string' ? remitente_nombre.trim() : null,
-        timestamp: new Date().toISOString()
-      }
+      data: aporteRecord
     }), {
       status: 200,
       headers: CORS_HEADERS
