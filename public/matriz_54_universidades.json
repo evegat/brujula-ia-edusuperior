@@ -110,7 +110,7 @@
     "tipo_categoria": "Privadas no CRUCH",
     "en_brecha": false,
     "total_instrumentos": 1,
-    "imn": 90.0,
+    "imn": 90,
     "imn_categoria": "Madurez Avanzada",
     "dimensiones": {
       "protocolo_aula": true,
@@ -148,7 +148,7 @@
     "tipo_categoria": "Privadas no CRUCH",
     "en_brecha": false,
     "total_instrumentos": 2,
-    "imn": 96.0,
+    "imn": 96,
     "imn_categoria": "Madurez Avanzada",
     "dimensiones": {
       "protocolo_aula": true,
@@ -233,7 +233,7 @@
     "tipo_categoria": "Privadas no CRUCH",
     "en_brecha": false,
     "total_instrumentos": 1,
-    "imn": 88.0,
+    "imn": 88,
     "imn_categoria": "Madurez Avanzada",
     "dimensiones": {
       "protocolo_aula": true,
@@ -271,7 +271,7 @@
     "tipo_categoria": "Privadas CRUCH",
     "en_brecha": false,
     "total_instrumentos": 1,
-    "imn": 76.0,
+    "imn": 76,
     "imn_categoria": "Madurez Avanzada",
     "dimensiones": {
       "protocolo_aula": true,
@@ -578,7 +578,7 @@
     "tipo_categoria": "Estatales",
     "en_brecha": false,
     "total_instrumentos": 6,
-    "imn": 96.0,
+    "imn": 96,
     "imn_categoria": "Madurez Avanzada",
     "dimensiones": {
       "protocolo_aula": true,
@@ -621,7 +621,7 @@
         "id": 3,
         "documento": "Protocolo de Uso de Inteligencia Artificial Generativa (IAG) y Anexos",
         "unidad": "Escuela de Gobierno (FAGOB)",
-        "fecha": "2024",
+        "fecha": "2026",
         "url": "https://brujula-ia-fagob.evegat.cl/docs/Protocolo_USO_IAG_y_Anexos_Escuela_de_Gobierno_UChile.pdf",
         "enforcement": "Protocolo operativo con declaración jurada",
         "exige_declaracion": true
@@ -639,7 +639,7 @@
         "id": 5,
         "documento": "Política de Integración Crítica y Ética de la IAG para la Formación en Asuntos Públicos",
         "unidad": "Escuela de Gobierno (FAGOB)",
-        "fecha": "2024-2025",
+        "fecha": "2026",
         "url": null,
         "enforcement": "Política institucional",
         "exige_declaracion": true
@@ -842,7 +842,7 @@
     },
     "compras": {
       "total": 1,
-      "monto_total": 2963520.0,
+      "monto_total": 2963520,
       "capas": [
         "Infraestructura_Computo"
       ]
@@ -964,7 +964,7 @@
     },
     "compras": {
       "total": 1,
-      "monto_total": 0.0,
+      "monto_total": 0,
       "capas": [
         "Infraestructura_Computo"
       ]
@@ -1294,7 +1294,7 @@
     "tipo_categoria": "Privadas no CRUCH",
     "en_brecha": false,
     "total_instrumentos": 1,
-    "imn": 100.0,
+    "imn": 100,
     "imn_categoria": "Madurez Avanzada",
     "dimensiones": {
       "protocolo_aula": true,

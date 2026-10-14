@@ -1,0 +1,379 @@
+---
+// src/components/ModalComparacionIntrauniversitaria.astro
+// Comparador Intrauniversitario: Análisis de políticas de IA por facultades, escuelas y gobernanza interna
+import type { SupportedLang } from '../i18n/ui';
+import inventarioData from '../../inventario.json';
+
+interface Props {
+  lang?: SupportedLang;
+}
+
+const { lang = 'es' } = Astro.props;
+
+// Lista de universidades con múltiples instrumentos / facultades
+const multiSiglas = ['UChile', 'PUC', 'UDD', 'UDP', 'UV', 'UAI', 'UDLA', 'Duoc UC'];
+
+const uniProfiles = multiSiglas.map(sigla => {
+  const docs = inventarioData.filter(d => d.sigla === sigla);
+  const primerDoc = docs[0] || {};
+  return {
+    sigla,
+    nombre: primerDoc.universidad || sigla,
+    tipo: primerDoc.tipo_institucion || 'Universitaria',
+    total_docs: docs.length,
+    instrumentos: docs
+  };
+});
+
+// Diagnósticos situados de gobernanza interna por universidad
+const diagnosticosGobernanza: Record<string, { es: string; en: string; pt: string }> = {
+  'UChile': {
+    es: 'La Universidad de Chile evidencia una dinámica regulatoria multinivel altamente activa: combina un marco central vinculante para tesis y memorias (Instructivo VAA N° 17/2024) con regulaciones pioneras pero heterogéneas por facultad. Destaca la Escuela de Gobierno (FAGOB, 2026) con el estándar operativo más estricto del plantel (semáforo de aula, anexo declarativo obligatorio y cláusula explícita de Ley N° 21.719), frente a la Facultad de Medicina (FAMED, 2025) con un modelo orientador en salud, la FCFM/EPEC (2024-2025) con categorización A/B/C en postgrado, y la FAU (2024) en el ámbito editorial.',
+    en: 'Universidad de Chile exhibits a highly active multi-level regulatory dynamic: it combines a centralized binding framework for theses and dissertations (VAA Directive No. 17/2024) with pioneering yet heterogeneous faculty-level rules. The School of Government (FAGOB, 2026) stands out with the campus’s strictest operational standard (classroom traffic light, mandatory disclosure annex, and explicit Law No. 21,719 compliance), contrasted with Faculty of Medicine (FAMED, 2025) guidance in healthcare, FCFM/EPEC (2024-2025) A/B/C grading in graduate school, and FAU (2024) in publishing.',
+    pt: 'A Universidad de Chile demonstra uma dinâmica regulatória multinível muito ativa: combina uma diretriz central vinculante para teses e dissertações (Instrução VAA Nº 17/2024) com regulações pioneiras mas heterogêneas por faculdade. Destaca-se a Escola de Governo (FAGOB, 2026) com o protocolo operacional mais rigoroso (semáforo de sala de aula, anexo declaratório obrigatório e cláusula explícita da Lei Nº 21.719), contrastando com a Faculdade de Medicina (FAMED, 2025) com guia orientadora em saúde, a FCFM/EPEC (2024-2025) com categorias A/B/C na pós-graduação e a FAU (2024) no âmbito editorial.'
+  },
+  'PUC': {
+    es: 'En la Pontificia Universidad Católica convive un doble impulso: los lineamientos marco de Rectoría y la Vicerrectoría Académica (VRA / CDD, 2026) junto al portal de Integridad Académica (2024-2025), coexistiendo con normativas situadas previas emanadas con autonomía disciplinar, como la Política del Instituto de Sociología (ISUC, 2025) con previsión sancionatoria y la Guía Ética de la Facultad de Derecho (2024).',
+    en: 'At Pontificia Universidad Católica, a dual momentum coexists: framework guidelines from the Provost Office (VRA / CDD, 2026) and Academic Integrity portal (2024-2025), running alongside earlier disciplinary policies such as the Sociology Institute Policy (ISUC, 2025) with penalty provisions and the Law Faculty Ethical Guide (2024).',
+    pt: 'Na Pontifícia Universidade Católica coexiste um duplo impulso: as diretrizes centrais da Pró-Reitoria Acadêmica (VRA / CDD, 2026) e do portal de Integridade Acadêmica (2024-2025), convivendo com normativas disciplinares autônomas prévias, como a Política do Instituto de Sociologia (ISUC, 2025) com sanções e o Guia Ético da Faculdade de Direito (2024).'
+  },
+  'UDD': {
+    es: 'La Universidad del Desarrollo despliega una gobernanza institucional centralizada articulada por su Comité de IA: combina una Política General (2026), un Reglamento Operativo técnico liderado por el Encargado de Datos (2026) con estricto apego a privacidad, y recomendaciones prácticas de aula formuladas por el Centro de Innovación Docente (CID, 2024).',
+    en: 'Universidad del Desarrollo implements centralized institutional governance steered by its AI Committee: combining a General Policy (2026), an operational technical regulation led by the Data Officer (2026) strictly adhering to privacy, and practical teaching recommendations by the Teaching Innovation Center (CID, 2024).',
+    pt: 'A Universidad del Desarrollo apresenta uma governança institucional centralizada liderada pelo seu Comitê de IA: combinando uma Política Geral (2026), um Regulamento Operacional técnico conduzido pelo Encarregado de Dados (2026) com foco em privacidade, e recomendações práticas do Centro de Inovação Docente (CID, 2024).'
+  },
+  'UDP': {
+    es: 'En la Universidad Diego Portales se observa complementariedad entre las Orientaciones institucionales de la Dirección de Desarrollo Docente (v2, 2024) y el Protocolo de la Facultad de Educación (2025), adaptado a los dilemas formativos específicos de futuras pedagogas y profesores de aula.',
+    en: 'At Universidad Diego Portales, there is clear complementarity between the institutional Guidelines from the Teaching Development Directorate (v2, 2024) and the Faculty of Education Protocol (2025), tailored to pedagogical dilemmas in teacher training.',
+    pt: 'Na Universidad Diego Portales observa-se complementaridade entre as Orientações institucionais da Direção de Desenvolvimento Docente (v2, 2024) e o Protocolo da Faculdade de Educação (2025), adaptado à formação de futuros professores.'
+  },
+  'UV': {
+    es: 'La Universidad de Valparaíso combina la Guía central de orientaciones para docentes de la Vicerrectoría Académica (2023-2024) con iniciativas descentralizadas pioneras como la Guía de Integridad de la Escuela de Sociología (2023-2024).',
+    en: 'Universidad de Valparaíso pairs central teaching guidelines from the Academic Vice-Rectorate (2023-2024) with decentralized early initiatives such as the Sociology School Integrity Guide (2023-2024).',
+    pt: 'A Universidad de Valparaíso combina o Guia central para docentes da Pró-Reitoria Acadêmica (2023-2024) com iniciativas pioneiras descentralizadas, como o Guia de Integridade da Escola de Sociologia (2023-2024).'
+  },
+  'UAI': {
+    es: 'La Universidad Adolfo Ibáñez estructura su modelo en dos públicos destinatarios bajo directriz central de Rectoría: una Política General de IA (2025) y una Guía de IA específica para Estudiantes (2025-2026) orientada a la transparencia en evaluaciones.',
+    en: 'Universidad Adolfo Ibáñez structures its model targeting two audiences under central leadership: a General AI Policy (2025) and a student-focused AI Guide (2025-2026) promoting assessment transparency.',
+    pt: 'A Universidad Adolfo Ibáñez estrutura seu modelo em dois públicos sob liderança central: uma Política Geral de IA (2025) e um Guia de IA específico para Estudantes (2025-2026) voltado à transparência avaliativa.'
+  },
+  'UDLA': {
+    es: 'Universidad de Las Américas formalizó tempranamente un Marco regulatorio general vía Resolución de Rectoría N° 31032025-01 (2025), complementado con lineamientos operativos para asignaturas online asincrónicas (2024).',
+    en: 'Universidad de Las Américas formalized a general regulatory framework via Rectorate Resolution No. 31032025-01 (2025), complemented by operational guidelines for asynchronous online courses (2024).',
+    pt: 'A Universidad de Las Américas formalizou precocemente um marco regulatório geral via Resolução da Reitoria Nº 31032025-01 (2025), complementado por diretrizes operacionais para cursos online assíncronos (2024).'
+  },
+  'Duoc UC': {
+    es: 'Duoc UC implementa una gobernanza institucional mediante resoluciones vinculantes de Rectoría y Vicerrectoría: la Resolución N° 2/2025 (Lineamientos y Portal ia.duoc.cl) y la Resolución VRA N° 13/2025 sobre Competencias Digitales Docentes y Ética en IA.',
+    en: 'Duoc UC implements institutional governance through binding Rectorate and Vice-Rectorate resolutions: Resolution No. 2/2025 (Guidelines and ia.duoc.cl portal) and VRA Resolution No. 13/2025 on Faculty Digital Competencies and AI Ethics.',
+    pt: 'O Duoc UC implementa governança institucional por meio de resoluções vinculantes da Reitoria e Pró-Reitoria: a Resolução Nº 2/2025 (Diretrizes e Portal ia.duoc.cl) e a Resolução VRA Nº 13/2025 sobre Competências Digitais Docentes e Ética em IA.'
+  }
+};
+---
+
+<div id="modal-intrauni" class="intrauni-modal-backdrop" style="display:none;" role="dialog" aria-modal="true" aria-labelledby="modal-intrauni-title">
+  <div class="intrauni-modal-content card">
+    
+    <!-- Cabecera del Modal -->
+    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.25rem; border-bottom:1px solid var(--border-color); padding-bottom:1rem; gap:1rem; flex-wrap:wrap;">
+      <div>
+        <div style="display:flex; gap:0.4rem; align-items:center; margin-bottom:0.35rem;">
+          <span class="badge badge-purple">🏛️ {lang === 'en' ? 'Intra-University Comparison' : lang === 'pt' ? 'Comparação Intrauniversitária' : 'Comparación Intrauniversitaria'}</span>
+          <span class="badge badge-blue">{lang === 'en' ? 'Multi-Faculty Governance' : lang === 'pt' ? 'Governança Multifaculdade' : 'Gobernanza Multifacultad'}</span>
+        </div>
+        <h3 id="modal-intrauni-title" style="margin:0; font-size:1.35rem; line-height:1.25;">
+          {lang === 'en' ? 'Faculty & Internal Regulatory Comparison' : lang === 'pt' ? 'Comparação Regulatória por Faculdades e Unidades' : 'Comparador de Políticas por Facultades y Unidades'}
+        </h3>
+        <p style="font-size:0.86rem; color:var(--text-muted); margin:0.3rem 0 0 0; max-width:750px;">
+          {lang === 'en'
+            ? 'Compare internal decrees, faculties, and disciplinary units within the same institution to analyze asymmetries and decentralized policies.'
+            : lang === 'pt'
+            ? 'Compare decretos internos, faculdades e unidades disciplinares na mesma instituição para analisar assimetrias e políticas descentralizadas.'
+            : 'Compara decretos internos, facultades y escuelas dentro de una misma universidad para analizar asimetrías y regulaciones descentralizadas.'}
+        </p>
+      </div>
+
+      <button id="modal-intrauni-close-btn" type="button" class="btn btn-outline btn-sm" aria-label="Cerrar modal" style="padding:0.35rem 0.65rem; font-size:1.1rem; line-height:1;">✕</button>
+    </div>
+
+    <!-- Selector de Universidad -->
+    <div style="background:rgba(0,0,0,0.02); border:1px solid var(--border-color); border-radius:8px; padding:0.9rem 1.15rem; margin-bottom:1.25rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.75rem;">
+      <div style="display:flex; align-items:center; gap:0.6rem; flex-wrap:wrap;">
+        <label for="intrauni-select-uni" style="font-size:0.86rem; font-weight:600; color:var(--text-main);">
+          🏛️ {lang === 'en' ? 'Select university to inspect:' : lang === 'pt' ? 'Selecione a universidade para inspecionar:' : 'Selecciona el plantel a comparar:'}
+        </label>
+        <select 
+          id="intrauni-select-uni"
+          style="padding:0.45rem 0.85rem; border:1px solid var(--border-color); border-radius:6px; background:var(--card-bg); color:var(--text-main); font-size:0.88rem; font-weight:600;"
+        >
+          {uniProfiles.map(u => (
+            <option value={u.sigla}>
+              {u.sigla} — {u.nombre} ({u.total_docs} {lang === 'en' ? 'instruments' : lang === 'pt' ? 'instrumentos' : 'normas'})
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div id="intrauni-quick-stats" style="font-size:0.8rem; color:var(--text-muted);">
+        <!-- Actualizado dinámicamente vía JS -->
+      </div>
+    </div>
+
+    <!-- Diagnóstico de Gobernanza Situado -->
+    <div id="intrauni-diagnosis-box" style="background:var(--accent-blue-soft); border-left:4px solid var(--accent-blue); padding:0.85rem 1.1rem; border-radius:6px; margin-bottom:1.25rem;">
+      <div style="display:flex; align-items:center; gap:0.4rem; font-size:0.82rem; font-weight:700; color:var(--accent-blue); margin-bottom:0.25rem;">
+        <span>⚖️</span>
+        <span>{lang === 'en' ? 'Internal Governance Diagnosis:' : lang === 'pt' ? 'Diagnóstico de Governança Interna:' : 'Diagnóstico de Gobernanza y Asimetría Interna:'}</span>
+      </div>
+      <p id="intrauni-diagnosis-text" style="margin:0; font-size:0.86rem; line-height:1.45; color:var(--text-main);">
+        <!-- Texto dinámico -->
+      </p>
+    </div>
+
+    <!-- Contenedor de Tablas por Universidad -->
+    {uniProfiles.map(u => {
+      const diagObj = diagnosticosGobernanza[u.sigla] || { es: '', en: '', pt: '' };
+      const diagText = diagObj[lang] || diagObj['es'];
+
+      return (
+        <div 
+          class="intrauni-table-panel" 
+          id={`intrauni-panel-${u.sigla}`} 
+          data-sigla={u.sigla}
+          data-diagnosis={diagText}
+          data-total={u.total_docs}
+          data-nombre={u.nombre}
+          style={u.sigla === 'UChile' ? 'display:block;' : 'display:none;'}
+        >
+          <div style="overflow-x:auto;">
+            <table class="table" style="width:100%; border-collapse:collapse; font-size:0.83rem;">
+              <thead>
+                <tr style="border-bottom:2px solid var(--border-color); background:rgba(0,0,0,0.02); text-align:left;">
+                  <th style="padding:0.6rem 0.75rem;">{lang === 'en' ? 'Unit / Faculty' : lang === 'pt' ? 'Unidade / Faculdade' : 'Unidad / Facultad'}</th>
+                  <th style="padding:0.6rem 0.75rem;">{lang === 'en' ? 'Instrument & Year' : lang === 'pt' ? 'Instrumento e Ano' : 'Instrumento & Año'}</th>
+                  <th style="padding:0.6rem 0.75rem;">{lang === 'en' ? 'Scope & Governance' : lang === 'pt' ? 'Alcance e Governança' : 'Alcance & Gobernanza'}</th>
+                  <th style="padding:0.6rem 0.75rem;">{lang === 'en' ? 'Enforcement' : lang === 'pt' ? 'Caráter Normativo' : 'Exigibilidad / Enforcement'}</th>
+                  <th style="padding:0.6rem 0.75rem; text-align:center;">{lang === 'en' ? 'Key Dimensions' : lang === 'pt' ? 'Dimensões Chave' : 'Dimensiones Reguladas'}</th>
+                  <th style="padding:0.6rem 0.75rem; text-align:right;">{lang === 'en' ? 'Document' : lang === 'pt' ? 'Documento' : 'Documento'}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {u.instrumentos.map(inst => (
+                  <tr style="border-bottom:1px solid var(--border-color); vertical-align:top;">
+                    <td style="padding:0.65rem 0.75rem; font-weight:600; color:var(--text-main);">
+                      <div>{inst.unidad}</div>
+                      {inst.alcance_detalle && (
+                        <div style="font-size:0.72rem; color:var(--text-muted); font-weight:normal; margin-top:0.15rem;">
+                          {inst.alcance_detalle}
+                        </div>
+                      )}
+                    </td>
+                    <td style="padding:0.65rem 0.75rem;">
+                      <div style="font-weight:600; color:var(--text-main); line-height:1.3;">
+                        {inst.documento}
+                      </div>
+                      <div style="display:flex; gap:0.4rem; align-items:center; margin-top:0.25rem;">
+                        <span class="badge" style="font-size:0.68rem; background:rgba(0,0,0,0.05); padding:0.1rem 0.35rem; font-weight:700;">
+                          📅 {inst.fecha}
+                        </span>
+                        <span style="font-size:0.72rem; color:var(--text-muted);">
+                          {inst.formato || 'PDF / Web'}
+                        </span>
+                      </div>
+                    </td>
+                    <td style="padding:0.65rem 0.75rem;">
+                      <span class={`badge ${inst.alcance === 'Institucional' ? 'badge-blue' : 'badge-amber'}`} style="font-size:0.7rem; margin-bottom:0.2rem; display:inline-block;">
+                        {inst.alcance}
+                      </span>
+                      <div>
+                        <span style="font-size:0.72rem; color:var(--text-muted);">
+                          {inst.gobernanza === 'top-down' ? '🏛️ Top-Down (Central)' : '🌱 Bottom-Up (Facultad)'}
+                        </span>
+                      </div>
+                    </td>
+                    <td style="padding:0.65rem 0.75rem; font-size:0.78rem; color:var(--text-main);">
+                      {inst.enforcement}
+                    </td>
+                    <td style="padding:0.65rem 0.75rem; text-align:center;">
+                      <div style="display:flex; gap:0.25rem; justify-content:center; flex-wrap:wrap; max-width:180px; margin:0 auto;">
+                        <span class="badge" style={`font-size:0.68rem; padding:0.15rem 0.35rem; ${inst.exige_declaracion ? 'background:rgba(16,185,129,0.12); color:#047857;' : 'background:rgba(0,0,0,0.04); color:var(--text-muted);'}`} title="Declaración requerida">
+                          {inst.exige_declaracion ? '✓ Decl' : '○ Decl'}
+                        </span>
+                        <span class="badge" style={`font-size:0.68rem; padding:0.15rem 0.35rem; ${inst.ia_no_autora ? 'background:rgba(14,116,144,0.12); color:#0e7490;' : 'background:rgba(0,0,0,0.04); color:var(--text-muted);'}`} title="IA no autora">
+                          {inst.ia_no_autora ? '✓ Autor' : '○ Autor'}
+                        </span>
+                        <span class="badge" style={`font-size:0.68rem; padding:0.15rem 0.35rem; ${inst.menciona_datos_personales ? 'background:rgba(59,130,246,0.15); color:#1d4ed8; font-weight:700;' : 'background:rgba(0,0,0,0.04); color:var(--text-muted);'}`} title="Privacidad / Ley N° 21.719">
+                          {inst.menciona_datos_personales ? '🔒 Priv' : '○ Priv'}
+                        </span>
+                        <span class="badge" style={`font-size:0.68rem; padding:0.15rem 0.35rem; ${inst.modifica_evaluacion ? 'background:rgba(245,158,11,0.15); color:#b45309;' : 'background:rgba(0,0,0,0.04); color:var(--text-muted);'}`} title="Rediseño Evaluativo">
+                          {inst.modifica_evaluacion ? '✓ Eval' : '○ Eval'}
+                        </span>
+                      </div>
+                    </td>
+                    <td style="padding:0.65rem 0.75rem; text-align:right;">
+                      {inst.url ? (
+                        <a 
+                          href={inst.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          class="btn btn-outline btn-sm"
+                          style="font-size:0.75rem; padding:0.25rem 0.55rem; white-space:nowrap; text-decoration:none;"
+                        >
+                          {lang === 'en' ? 'Open &rarr;' : lang === 'pt' ? 'Acessar &rarr;' : 'Ver PDF &rarr;'}
+                        </a>
+                      ) : (
+                        <span style="font-size:0.72rem; color:var(--text-muted); font-style:italic;">
+                          {lang === 'en' ? 'Internal' : lang === 'pt' ? 'Interno' : 'Interno'}
+                        </span>
+                      )}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      );
+    })}
+
+    <!-- Pie del Modal -->
+    <div style="border-top:1px solid var(--border-color); padding-top:1rem; margin-top:1.25rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.75rem;">
+      <div style="font-size:0.78rem; color:var(--text-muted);">
+        {lang === 'en'
+          ? 'Data extracted from official public decrees and institutional regulations (Audit Cut: October 2026).'
+          : lang === 'pt'
+          ? 'Dados extraídos de decretos públicos oficiais e normativas institucionais (Corte: Outubro 2026).'
+          : 'Datos levantados desde decretos públicos oficiales y resoluciones institucionales (Corte: Octubre 2026).'}
+      </div>
+      <button id="modal-intrauni-footer-close-btn" type="button" class="btn btn-outline btn-sm">
+        {lang === 'en' ? 'Close Window' : lang === 'pt' ? 'Fechar Janela' : 'Cerrar Ventana'}
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<style>
+  .intrauni-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(4px);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+
+  .intrauni-modal-content {
+    background: var(--card-bg, #ffffff);
+    border-radius: 12px;
+    max-width: 980px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 1.5rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.25), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-color, #e2e8f0);
+    animation: intrauniFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  @keyframes intrauniFadeIn {
+    from { opacity: 0; transform: scale(0.97) translateY(8px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+  }
+
+  @media (max-width: 640px) {
+    .intrauni-modal-content {
+      padding: 1rem;
+      max-height: 95vh;
+    }
+  }
+</style>
+
+<script is:inline>
+  (function initModalIntrauni() {
+    const backdrop = document.getElementById('modal-intrauni');
+    const closeBtn = document.getElementById('modal-intrauni-close-btn');
+    const footerCloseBtn = document.getElementById('modal-intrauni-footer-close-btn');
+    const selectUni = document.getElementById('intrauni-select-uni');
+    const diagnosisText = document.getElementById('intrauni-diagnosis-text');
+    const quickStats = document.getElementById('intrauni-quick-stats');
+    const panels = Array.from(document.querySelectorAll('.intrauni-table-panel'));
+
+    function actualizarVista(sigla) {
+      panels.forEach(p => {
+        if (p.getAttribute('data-sigla') === sigla) {
+          p.style.display = 'block';
+          if (diagnosisText) {
+            diagnosisText.textContent = p.getAttribute('data-diagnosis') || '';
+          }
+          if (quickStats) {
+            const total = p.getAttribute('data-total') || '0';
+            const nombre = p.getAttribute('data-nombre') || sigla;
+            quickStats.innerHTML = `<strong>${total} instrumentos</strong> identificados en ${nombre}`;
+          }
+        } else {
+          p.style.display = 'none';
+        }
+      });
+    }
+
+    if (selectUni) {
+      selectUni.addEventListener('change', (e) => {
+        actualizarVista(e.target.value);
+      });
+      // Inicializar con la primera seleccionada
+      actualizarVista(selectUni.value);
+    }
+
+    function abrirModal(siglaDeseada) {
+      if (!backdrop) return;
+      if (siglaDeseada && selectUni) {
+        selectUni.value = siglaDeseada;
+        actualizarVista(siglaDeseada);
+      }
+      backdrop.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+      if (closeBtn) closeBtn.focus();
+    }
+
+    function cerrarModal() {
+      if (!backdrop) return;
+      backdrop.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    if (closeBtn) closeBtn.addEventListener('click', cerrarModal);
+    if (footerCloseBtn) footerCloseBtn.addEventListener('click', cerrarModal);
+
+    if (backdrop) {
+      backdrop.addEventListener('click', (e) => {
+        if (e.target === backdrop) cerrarModal();
+      });
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && backdrop && backdrop.style.display === 'flex') {
+        cerrarModal();
+      }
+    });
+
+    // Exponer globalmente para ser invocado desde tarjetas o botones
+    window.abrirModalIntrauniversitario = abrirModal;
+
+    // Delegación para botones con clase .btn-abrir-intrauni
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('.btn-abrir-intrauni');
+      if (btn) {
+        e.preventDefault();
+        const sigla = btn.getAttribute('data-uni') || 'UChile';
+        abrirModal(sigla);
+      }
+    });
+  })();
+</script>

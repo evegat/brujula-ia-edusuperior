@@ -34,6 +34,7 @@ const uesRegionales = matrizData.filter(u => u.territorio === 'Regional'); // 25
 const uesMetro = matrizData.filter(u => u.territorio !== 'Regional'); // 29
 const uesCentral = matrizData.filter(u => u.alcance_normativo?.includes('Institucional')); // 27
 const uesFacultad = matrizData.filter(u => u.alcance_normativo === 'Por Facultad'); // 5
+const uesMultifacultad = matrizData.filter(u => u.instrumentos && u.instrumentos.length > 1); // 8
 
 function normalizeForSearch(str: string): string {
   return (str || '')
@@ -97,6 +98,14 @@ function normalizeForSearch(str: string): string {
       </div>
     </div>
     <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center;">
+      <button 
+        type="button" 
+        class="btn btn-outline btn-sm btn-abrir-intrauni"
+        data-uni="UChile"
+        style="font-size: 0.8rem; padding: 0.4rem 0.8rem; font-weight:600; color:var(--accent-purple, #7c3aed); border-color:var(--accent-purple, #7c3aed); background:rgba(124, 58, 237, 0.05);"
+      >
+        🏛️ {lang === 'en' ? 'Faculty Comparison' : lang === 'pt' ? 'Comparador por Faculdades' : 'Comparador por Facultades'}
+      </button>
       <button 
         type="button" 
         class="btn btn-primary btn-sm"
@@ -183,6 +192,9 @@ function normalizeForSearch(str: string): string {
         <button type="button" class="btn btn-outline btn-sm btn-f-alcance" data-alcance="facultad" style="color:var(--accent-amber);">
           {t('matriz.filter_scope_faculty')} ({uesFacultad.length})
         </button>
+        <button type="button" class="btn btn-outline btn-sm btn-f-alcance" data-alcance="multifacultad" style="color:var(--accent-purple, #7c3aed); font-weight:600;">
+          {t('matriz.filter_scope_multifaculty')}
+        </button>
         <button type="button" class="btn btn-outline btn-sm btn-f-alcance" data-alcance="sin-instrumento" style="color:var(--text-muted);">
           {t('matriz.filter_scope_none')} ({sinInstrumento})
         </button>
@@ -242,6 +254,7 @@ function normalizeForSearch(str: string): string {
           data-tiene-doc={tieneDoc ? 'true' : 'false'}
           data-territorio={u.territorio || 'Metropolitana / Nacional'}
           data-alcance={tieneDoc ? (esCentral ? 'institucional' : 'facultad') : 'sin-instrumento'}
+          data-multifacultad={u.instrumentos && u.instrumentos.length > 1 ? 'true' : 'false'}
           data-search={searchBlob}
           style={`display:flex; flex-direction:column; justify-content:space-between; border-top: 3px solid ${tieneDoc ? 'var(--accent-green)' : 'var(--border-color)'};`}
         >
@@ -347,6 +360,19 @@ function normalizeForSearch(str: string): string {
                     </li>
                   ))}
                 </ul>
+
+                {u.instrumentos.length > 1 && (
+                  <div style="margin-top:0.75rem;">
+                    <button 
+                      type="button" 
+                      class="btn btn-outline btn-sm btn-abrir-intrauni" 
+                      data-uni={u.sigla} 
+                      style="width:100%; justify-content:center; gap:0.4rem; font-weight:600; color:#7c3aed; border-color:rgba(124, 58, 237, 0.35); background:rgba(124, 58, 237, 0.05); font-size:0.78rem; padding:0.4rem 0.6rem;"
+                    >
+                      🏛️ {t('matriz.card_btn_compare_faculties').replace('{count}', u.instrumentos.length.toString())} &rarr;
+                    </button>
+                  </div>
+                )}
               </div>
             ) : (
               <div style="background:rgba(0,0,0,0.02); padding:0.75rem; border-radius:6px; font-size:0.78rem; color:var(--text-muted); margin-bottom:1rem; border:1px dashed var(--border-color); line-height:1.4;">
@@ -458,7 +484,10 @@ function normalizeForSearch(str: string): string {
 
       // 4. Filtro por Nivel del Instrumento
       let matchAlcance = true;
-      if (filtroAlcanceActual !== 'todos' && alcance !== filtroAlcanceActual) {
+      if (filtroAlcanceActual === 'multifacultad') {
+        const esMulti = card.getAttribute('data-multifacultad') === 'true';
+        if (!esMulti) matchAlcance = false;
+      } else if (filtroAlcanceActual !== 'todos' && alcance !== filtroAlcanceActual) {
         matchAlcance = false;
       }
 
