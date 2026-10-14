@@ -4,4 +4,11 @@ import cloudflare from '@astrojs/cloudflare';
 export default defineConfig({
   output: 'server',
   adapter: cloudflare(),
+  i18n: {
+    defaultLocale: 'es',
+    locales: ['es', 'en', 'pt'],
+    routing: {
+      prefixDefaultLocale: false
+    }
+  }
 });

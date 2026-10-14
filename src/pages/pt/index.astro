@@ -1,0 +1,279 @@
+---
+export const prerender = true;
+
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro';
+import GuiaUso from '../../components/GuiaUso.astro';
+import MatrizNacional from '../../components/MatrizNacional.astro';
+import PlanillaChequeo from '../../components/PlanillaChequeo.astro';
+import KitAdopcionNacional from '../../components/KitAdopcionNacional.astro';
+import CitasTextuales from '../../components/CitasTextuales.astro';
+import CatalogoProtocolos from '../../components/CatalogoProtocolos.astro';
+import ComprasPublicas from '../../components/ComprasPublicas.astro';
+import MetodologiaYVersiones from '../../components/MetodologiaYVersiones.astro';
+import Ecosistema from '../../components/Ecosistema.astro';
+import ComunidadBuzon from '../../components/ComunidadBuzon.astro';
+import BancoBuenasPracticas from '../../components/BancoBuenasPracticas.astro';
+import SuscripcionComunidad from '../../components/SuscripcionComunidad.astro';
+import BarraCompartir from '../../components/BarraCompartir.astro';
+import Footer from '../../components/Footer.astro';
+import ModalCrowdsourcing from '../../components/ModalCrowdsourcing.astro';
+import ModalAvisoLegal from '../../components/ModalAvisoLegal.astro';
+import { useTranslations } from '../../i18n/ui';
+
+const t = useTranslations('pt');
+---
+
+<Layout lang="pt">
+  
+  <!-- Encabezado Editorial e Visão Geral -->
+  <Hero lang="pt" />
+
+  <!-- Guia Rápido de Orientação -->
+  <GuiaUso lang="pt" />
+
+  <!-- Barra de Navegação Superior em Linguagem Clara -->
+  <nav class="tabs-nav" aria-label="Seções do Observatório">
+    <div class="tabs-container">
+      <button class="tab-btn active" data-tab="tab-matriz">
+        {t('nav.universities')}
+      </button>
+      <button class="tab-btn" data-tab="tab-kit">
+        {t('nav.rules')}
+      </button>
+      <button class="tab-btn" data-tab="tab-ideas">
+        {t('nav.ideas')}
+      </button>
+      <button class="tab-btn" data-tab="tab-compras">
+        {t('nav.procurement')}
+      </button>
+      <button class="tab-btn" data-tab="tab-catalogo">
+        {t('nav.catalog')}
+      </button>
+      <button class="tab-btn" data-tab="tab-metodologia">
+        {t('nav.methodology')}
+      </button>
+    </div>
+  </nav>
+
+  <!-- Painéis de Conteúdo -->
+  <div class="tabs-content">
+    
+    <!-- Seção 1: As 54 Universidades e Planilha de Checagem -->
+    <div id="tab-matriz" class="tab-panel active">
+      <MatrizNacional />
+      <div style="margin-top: 4rem; padding-top: 2.5rem; border-top: 2px dashed var(--border-color);">
+        <PlanillaChequeo />
+      </div>
+    </div>
+
+    <!-- Seção 2: Modelos de Cláusulas e Privacidade -->
+    <div id="tab-kit" class="tab-panel">
+      <KitAdopcionNacional />
+    </div>
+
+    <!-- Seção 3: Ideias e Casos Práticos de Professores -->
+    <div id="tab-ideas" class="tab-panel">
+      <BancoBuenasPracticas />
+    </div>
+
+    <!-- Seção 4: Compras Públicas em Tecnologia -->
+    <div id="tab-compras" class="tab-panel">
+      <ComprasPublicas />
+    </div>
+
+    <!-- Seção 5: Catálogo de Diretrizes e Citações -->
+    <div id="tab-catalogo" class="tab-panel">
+      <CatalogoProtocolos />
+      <div style="margin-top: 3.5rem;">
+        <CitasTextuales />
+      </div>
+    </div>
+
+    <!-- Seção 6: Metodologia e Dados Abertos -->
+    <div id="tab-metodologia" class="tab-panel">
+      <MetodologiaYVersiones />
+      <div style="margin-top: 3.5rem;">
+        <ComunidadBuzon />
+      </div>
+      <div style="margin-top: 3.5rem;">
+        <Ecosistema />
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Comunidade e Rodapé -->
+  <SuscripcionComunidad />
+  <BarraCompartir />
+
+  <Footer />
+  <ModalCrowdsourcing />
+  <ModalAvisoLegal />
+
+</Layout>
+
+<style>
+  .tabs-nav {
+    position: sticky;
+    top: 0;
+    background: var(--canvas-bg);
+    z-index: 100;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    padding: 0.65rem 0;
+  }
+
+  .tabs-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .tab-btn {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 0.95rem;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-radius: 6px;
+    transition: var(--transition);
+  }
+
+  .tab-btn:hover {
+    color: var(--text-main);
+    border-color: var(--accent-blue);
+  }
+
+  .tab-btn.active {
+    color: #ffffff;
+    background: var(--accent-blue);
+    border-color: var(--accent-blue);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .tab-panel {
+    display: none;
+  }
+
+  .tab-panel.active {
+    display: block;
+    animation: fadeInTab 0.22s ease-out;
+  }
+
+  @keyframes fadeInTab {
+    from { opacity: 0; transform: translateY(3px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<script>
+  function setupTabs() {
+    const tabButtons = document.querySelectorAll<HTMLButtonElement>('.tab-btn');
+    const sidebarButtons = document.querySelectorAll<HTMLButtonElement>('.sidebar-tab-btn');
+    const tabPanels = document.querySelectorAll<HTMLElement>('.tab-panel');
+    const sidebar = document.getElementById('main-sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
+
+    function switchTab(tabId: string) {
+      tabButtons.forEach(btn => {
+        if (btn.dataset.tab === tabId) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      sidebarButtons.forEach(btn => {
+        if (btn.dataset.tab === tabId) {
+          btn.classList.add('active');
+          btn.style.color = '#34d399';
+          btn.style.fontWeight = '600';
+        } else {
+          btn.classList.remove('active');
+          btn.style.color = '#cbd5e1';
+          btn.style.fontWeight = '400';
+        }
+      });
+
+      tabPanels.forEach(panel => {
+        if (panel.id === tabId) {
+          panel.classList.add('active');
+        } else {
+          panel.classList.remove('active');
+        }
+      });
+
+      if (window.innerWidth <= 1024) {
+        sidebar?.classList.remove('open');
+        overlay?.classList.remove('active');
+      }
+
+      const tabsNav = document.querySelector('.tabs-nav') as HTMLElement;
+      if (tabsNav) {
+        const navOffsetTop = tabsNav.offsetTop;
+        if (window.scrollY > navOffsetTop + 30) {
+          window.scrollTo({
+            top: Math.max(0, navOffsetTop - 15),
+            behavior: 'smooth'
+          });
+        }
+      }
+
+      if ((window as any).umami) {
+        (window as any).umami.track('tab_switch', { tab: tabId, lang: 'pt' });
+      }
+    }
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.dataset.tab;
+        if (targetId) switchTab(targetId);
+      });
+    });
+
+    sidebarButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.dataset.tab;
+        if (targetId) switchTab(targetId);
+      });
+    });
+
+    function handleHashChange() {
+      const hash = window.location.hash;
+      const hashMapping: Record<string, string> = {
+        '#matriz-nacional': 'tab-matriz',
+        '#planilla': 'tab-matriz',
+        '#inicio': 'tab-matriz',
+        '#kit': 'tab-kit',
+        '#ley-21719': 'tab-kit',
+        '#ideas': 'tab-ideas',
+        '#buenas-practicas': 'tab-ideas',
+        '#compras': 'tab-compras',
+        '#catalogo': 'tab-catalogo',
+        '#clausulas': 'tab-catalogo',
+        '#metodologia': 'tab-metodologia',
+        '#datos': 'tab-metodologia',
+        '#comunidad': 'tab-metodologia'
+      };
+      if (hashMapping[hash]) {
+        switchTab(hashMapping[hash]);
+      }
+    }
+
+    window.addEventListener('hashchange', handleHashChange);
+    if (window.location.hash) {
+      handleHashChange();
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupTabs);
+  } else {
+    setupTabs();
+  }
+</script>

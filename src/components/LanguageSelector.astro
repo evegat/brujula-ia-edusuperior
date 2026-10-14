@@ -1,0 +1,71 @@
+---
+// src/components/LanguageSelector.astro
+// Selector de idiomas sobrio y accesible (ES | EN | PT)
+
+interface Props {
+  currentLang?: 'es' | 'en' | 'pt';
+}
+
+const { currentLang = 'es' } = Astro.props;
+
+const locales = [
+  { code: 'es', label: 'ES', title: 'Español (Chile)', path: '/' },
+  { code: 'en', label: 'EN', title: 'English', path: '/en/' },
+  { code: 'pt', label: 'PT', title: 'Português', path: '/pt/' }
+];
+---
+
+<div class="lang-selector" aria-label="Seleccionar idioma">
+  {locales.map((loc, idx) => (
+    <>
+      <a 
+        href={loc.path} 
+        class:list={['lang-btn', { active: currentLang === loc.code }]}
+        title={loc.title}
+        aria-current={currentLang === loc.code ? 'page' : undefined}
+      >
+        {loc.label}
+      </a>
+      {idx < locales.length - 1 && <span class="lang-divider">/</span>}
+    </>
+  ))}
+</div>
+
+<style>
+  .lang-selector {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 0.78rem;
+    font-weight: 600;
+  }
+
+  .lang-btn {
+    color: #94a3b8;
+    text-decoration: none;
+    padding: 0.15rem 0.35rem;
+    border-radius: 4px;
+    transition: all 0.15s ease;
+  }
+
+  .lang-btn:hover {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .lang-btn.active {
+    color: #ffffff;
+    background: rgba(59, 130, 246, 0.4);
+    font-weight: 700;
+  }
+
+  .lang-divider {
+    color: rgba(255, 255, 255, 0.25);
+    user-select: none;
+    font-size: 0.75rem;
+  }
+</style>

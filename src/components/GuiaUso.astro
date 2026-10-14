@@ -1,6 +1,13 @@
 ---
-// src/components/GuiaUso.astro
-// Guía de uso sobria y ejecutiva para orientar la navegación del observatorio
+import type { SupportedLang } from '../i18n/ui';
+import { useTranslations } from '../i18n/ui';
+
+interface Props {
+  lang?: SupportedLang;
+}
+
+const { lang = 'es' } = Astro.props;
+const t = useTranslations(lang);
 ---
 
 <section id="guia-uso" style="margin-bottom: 2.75rem; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 1.5rem 1.75rem; box-shadow: var(--shadow-sm);">
@@ -8,13 +15,21 @@
   <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem;">
     <div>
       <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--accent-blue); letter-spacing: 0.6px; margin-bottom: 0.25rem;">
-        🧭 Orientación Rápida
+        🧭 {lang === 'en' ? 'Quick Orientation' : lang === 'pt' ? 'Orientação Rápida' : 'Orientación Rápida'}
       </div>
       <h2 style="font-size: 1.35rem; margin: 0; font-family: var(--font-serif); color: var(--text-main);">
-        Cómo explorar y utilizar este Observatorio
+        {lang === 'en' 
+          ? 'How to explore and use this Observatory'
+          : lang === 'pt'
+          ? 'Como explorar e utilizar este Observatório'
+          : 'Cómo explorar y utilizar este Observatorio'}
       </h2>
       <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0.35rem 0 0 0; line-height: 1.45; max-width: 780px;">
-        Plataforma abierta diseñada para directivos universitarios, docentes, investigadores y estudiantes. Sigue estos 3 pasos para orientar tu consulta:
+        {lang === 'en'
+          ? 'Open platform designed for higher education leaders, faculty, researchers, and students. Follow these 3 steps:'
+          : lang === 'pt'
+          ? 'Plataforma aberta projetada para gestores universitários, docentes, pesquisadores e estudantes. Siga estes 3 passos:'
+          : 'Plataforma abierta diseñada para directivos universitarios, docentes, investigadores y estudiantes. Sigue estos 3 pasos para orientar tu consulta:'}
       </p>
     </div>
 
@@ -26,14 +41,14 @@
         onclick="window.abrirModalAporte && window.abrirModalAporte('')"
         style="font-size: 0.82rem; padding: 0.45rem 0.85rem;"
       >
-        🔗 Aportar Enlace de Normativa
+        🔗 {lang === 'en' ? 'Submit Policy Link' : lang === 'pt' ? 'Enviar Link de Diretriz' : 'Aportar Enlace de Normativa'}
       </button>
       <a 
         href="mailto:eduardo@evegat.cl?subject=Aporte%20Normativa%20IA%20-%20Educaci%C3%B3n%20Superior&body=Estimado%20Eduardo%2C%0A%0AAdjunto%20el%20documento%20PDF%20o%20decreto%20de%20la%20universidad%20para%20su%20incorporaci%C3%B3n%20al%20catastro%3A%0A%0A-%20Universidad%20o%20Plantel%3A%20%0A-%20Nombre%20o%20N%C2%B0%20de%20la%20Resoluci%C3%B3n%2FDecreto%3A%20%0A-%20A%C3%B1o%2FFecha%3A%20%0A-%20Enlace%20adicional%20(opcional)%3A%20%0A%0ASaludos%2C"
         class="btn btn-outline btn-sm"
         style="font-size: 0.82rem; padding: 0.45rem 0.85rem; color: var(--accent-blue); border-color: var(--accent-blue);"
       >
-        📎 Enviar PDF por Correo
+        📎 {lang === 'en' ? 'Send PDF via Email' : lang === 'pt' ? 'Enviar PDF por E-mail' : 'Enviar PDF por Correo'}
       </a>
     </div>
   </div>
@@ -45,10 +60,16 @@
     <div style="background: rgba(0, 0, 0, 0.02); border: 1px solid var(--border-color); border-radius: 8px; padding: 1rem 1.15rem;">
       <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem;">
         <span style="background: var(--accent-blue); color: #ffffff; font-weight: 700; font-size: 0.72rem; width: 22px; height: 22px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;">1</span>
-        <strong style="font-size: 0.92rem; color: var(--text-main);">Encuentra tu Universidad</strong>
+        <strong style="font-size: 0.92rem; color: var(--text-main);">
+          {lang === 'en' ? 'Find Your University' : lang === 'pt' ? 'Encontre sua Universidade' : 'Encuentra tu Universidad'}
+        </strong>
       </div>
       <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.45; margin: 0;">
-        Filtra en la <strong>Matriz Nacional</strong> por tipo (Estatales, CRUCH, Privadas) o busca por nombre/sigla. Revisa si tu plantel cuenta con directrices identificadas en aula, tesis, autoría o rediseño evaluativo.
+        {lang === 'en'
+          ? 'Filter the 54-University Matrix by type (State, CRUCH, Private) or search by name. Check identified rules in classroom use, thesis work, and grading.'
+          : lang === 'pt'
+          ? 'Filtre na Matriz de 54 Universidades por tipo (Estatais, CRUCH, Privadas) ou busque por nome. Verifique diretrizes em sala de aula, teses e avaliação.'
+          : 'Filtra en la Matriz Nacional por tipo (Estatales, CRUCH, Privadas) o busca por nombre/sigla. Revisa si tu plantel cuenta con directrices identificadas en aula, tesis, autoría o rediseño evaluativo.'}
       </p>
     </div>
 
@@ -56,10 +77,16 @@
     <div style="background: rgba(0, 0, 0, 0.02); border: 1px solid var(--border-color); border-radius: 8px; padding: 1rem 1.15rem;">
       <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem;">
         <span style="background: var(--accent-blue); color: #ffffff; font-weight: 700; font-size: 0.72rem; width: 22px; height: 22px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;">2</span>
-        <strong style="font-size: 0.92rem; color: var(--text-main);">Audita Compras y Privacidad</strong>
+        <strong style="font-size: 0.92rem; color: var(--text-main);">
+          {lang === 'en' ? 'Audit Procurement & Privacy' : lang === 'pt' ? 'Audite Compras e Privacidade' : 'Audita Compras y Privacidad'}
+        </strong>
       </div>
       <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.45; margin: 0;">
-        Consulta las <strong>85 licitaciones en Mercado Público</strong> (universidades estatales) y evalúa el cumplimiento frente a la nueva <strong>Ley N° 21.719 de Protección de Datos Personales</strong> con nuestro kit de adopción.
+        {lang === 'en'
+          ? 'Examine 85 public tech procurement tenders and assess compliance with Data Privacy Law No. 21,719 and ethical AI standards.'
+          : lang === 'pt'
+          ? 'Consulte 85 licitações em compras públicas e avalie a conformidade com a Lei Nº 21.719 de Proteção de Dados e governança de IA.'
+          : 'Consulta las 85 licitaciones en Mercado Público (universidades estatales) y evalúa el cumplimiento frente a la nueva Ley N° 21.719 de Protección de Datos Personales con nuestro kit de adopción.'}
       </p>
     </div>
 
@@ -67,10 +94,16 @@
     <div style="background: rgba(0, 0, 0, 0.02); border: 1px solid var(--border-color); border-radius: 8px; padding: 1rem 1.15rem;">
       <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem;">
         <span style="background: var(--accent-green); color: #ffffff; font-weight: 700; font-size: 0.72rem; width: 22px; height: 22px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;">3</span>
-        <strong style="font-size: 0.92rem; color: var(--text-main);">Aporta Normativas o Descarga</strong>
+        <strong style="font-size: 0.92rem; color: var(--text-main);">
+          {lang === 'en' ? 'Submit Policies or Download' : lang === 'pt' ? 'Envie Políticas ou Baixe Dados' : 'Aporta Normativas o Descarga'}
+        </strong>
       </div>
       <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.45; margin: 0;">
-        Si falta la política de tu universidad o salió un decreto nuevo, <strong>aporta el link o mándanos el PDF</strong>. También puedes descargar la planilla y datasets abiertos en JSON/CSV sin barreras.
+        {lang === 'en'
+          ? 'If your university policy is missing or newly enacted, submit the link or email the PDF. Download open datasets in JSON and CSV freely.'
+          : lang === 'pt'
+          ? 'Se a política da sua instituição estiver ausente ou desatualizada, envie o link ou PDF. Baixe datasets abertos em JSON e CSV sem barreiras.'
+          : 'Si falta la política de tu universidad o salió un decreto nuevo, aporta el link o mándanos el PDF. También puedes descargar la planilla y datasets abiertos en JSON/CSV sin barreras.'}
       </p>
     </div>
 

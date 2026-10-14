@@ -20,36 +20,39 @@ import BarraCompartir from '../components/BarraCompartir.astro';
 import Footer from '../components/Footer.astro';
 import ModalCrowdsourcing from '../components/ModalCrowdsourcing.astro';
 import ModalAvisoLegal from '../components/ModalAvisoLegal.astro';
+import { useTranslations } from '../i18n/ui';
+
+const t = useTranslations('es');
 ---
 
-<Layout title="Brújula IA Educación Superior — Observatorio Abierto de Normativas">
+<Layout lang="es">
   
   <!-- Encabezado Editorial y Propósito -->
-  <Hero />
+  <Hero lang="es" />
 
   <!-- Guía Rápida de Uso y Orientación -->
-  <GuiaUso />
+  <GuiaUso lang="es" />
 
   <!-- Barra de Navegación Sobria y en Lenguaje Claro -->
   <nav class="tabs-nav" aria-label="Secciones del Observatorio">
     <div class="tabs-container">
       <button class="tab-btn active" data-tab="tab-matriz">
-        🏛️ Las 54 Universidades
+        {t('nav.universities')}
       </button>
       <button class="tab-btn" data-tab="tab-kit">
-        📋 Reglas para Copiar
+        {t('nav.rules')}
       </button>
       <button class="tab-btn" data-tab="tab-ideas">
-        💡 Ideas de Profes
+        {t('nav.ideas')}
       </button>
       <button class="tab-btn" data-tab="tab-compras">
-        💰 Compras en Tecnología
+        {t('nav.procurement')}
       </button>
       <button class="tab-btn" data-tab="tab-catalogo">
-        📚 Catálogo & Citas
+        {t('nav.catalog')}
       </button>
       <button class="tab-btn" data-tab="tab-metodologia">
-        📖 Datos & Metodología
+        {t('nav.methodology')}
       </button>
     </div>
   </nav>

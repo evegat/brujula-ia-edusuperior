@@ -1,6 +1,15 @@
 ---
+import type { SupportedLang } from '../i18n/ui';
+import { useTranslations } from '../i18n/ui';
 import matrizData from '../../data/matriz_54_universidades.json';
 import inventarioData from '../../inventario.json';
+
+interface Props {
+  lang?: SupportedLang;
+}
+
+const { lang = 'es' } = Astro.props;
+const t = useTranslations(lang);
 
 const totalUes = matrizData.length; // 54
 const conInst = matrizData.filter(u => !u.en_brecha).length; // 32
@@ -14,16 +23,21 @@ const docsIP = totalDocs - docsUes; // 6
   
   <!-- Encabezado Editorial Sobrio -->
   <div style="margin-bottom: 1.5rem;">
-    <div style="font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; color: var(--accent-blue); margin-bottom: 0.5rem;">
-      Observatorio Abierto
+    <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.6rem; flex-wrap: wrap;">
+      <span class="badge badge-blue">{t('hero.badge_unesco')}</span>
+      <span class="badge badge-green">{t('hero.badge_free')}</span>
     </div>
 
     <h1 style="font-size: clamp(1.85rem, 3.5vw, 2.65rem); line-height: 1.2; font-family: var(--font-serif); font-weight: 700; color: var(--text-main); margin-bottom: 0.85rem; max-width: 950px;">
-      Brújula IA: Normativas de Inteligencia Artificial en Universidades Chilenas
+      {lang === 'en' 
+        ? 'AI Higher Education Compass: AI Regulations in Chilean Universities'
+        : lang === 'pt'
+        ? 'Bússola de IA no Ensino Superior: Diretrizes de IA nas Universidades Chilenas'
+        : 'Brújula IA: Normativas de Inteligencia Artificial en Universidades Chilenas'}
     </h1>
 
     <p style="font-size: 1.05rem; color: var(--text-muted); max-width: 860px; line-height: 1.55; margin-bottom: 0.85rem;">
-      Artefacto activo de información de interés público sobre el uso, regulación y compras de Inteligencia Artificial en las <strong>54 universidades oficiales</strong> reconocidas por el Estado de Chile (planteles estatales y privados). Catastro independiente desarrollado con fines de transparencia, docencia e investigación.
+      {t('brand.artifact')}
     </p>
 
     <div style="font-size: 0.85rem; color: var(--text-muted); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.85rem;">

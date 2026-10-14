@@ -1,24 +1,34 @@
 ---
+import LanguageSelector from '../components/LanguageSelector.astro';
+import type { SupportedLang } from '../i18n/ui';
+import { useTranslations } from '../i18n/ui';
+
 interface Props {
-  title: string;
+  title?: string;
   description?: string;
   umamiId?: string;
+  lang?: SupportedLang;
 }
 
 const { 
-  title = "Brújula IA Educación Superior — Observatorio Abierto de Protocolos en Chile",
-  description = "Observatorio abierto, catastro granular de 54 universidades y comparador de protocolos y normativas de Inteligencia Artificial en la educación superior chilena.",
+  lang = 'es',
+  title,
+  description,
   umamiId = import.meta.env.PUBLIC_UMAMI_WEBSITE_ID || "96982ca8-66da-4b58-976c-f98e06f05a6d"
 } = Astro.props;
+
+const t = useTranslations(lang);
+const pageTitle = title || t('meta.title');
+const pageDesc = description || t('meta.description');
 ---
 
 <!DOCTYPE html>
-<html lang="es" data-theme="light">
+<html lang={lang} data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-  <title>{title}</title>
-  <meta name="description" content={description} />
+  <title>{pageTitle}</title>
+  <meta name="description" content={pageDesc} />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧭</text></svg>" />
   <meta name="theme-color" content="#06182c" />
   
@@ -354,8 +364,9 @@ const {
 
   <!-- Mobile Header Bar -->
   <header class="mobile-header">
-    <a href="#inicio" class="mobile-logo">🧭 Brújula IA EduSup</a>
+    <a href="#inicio" class="mobile-logo">🧭 {t('brand.name')}</a>
     <div style="display:flex; gap:0.5rem; align-items:center;">
+      <LanguageSelector currentLang={lang} />
       <button id="theme-btn-mobile" class="mobile-toggle-btn" aria-label="Alternar modo visual claro u oscuro">🌓</button>
       <button id="menu-toggle-btn" class="mobile-toggle-btn" aria-label="Abrir menú de navegación">☰</button>
     </div>
@@ -368,39 +379,43 @@ const {
     <!-- Sidebar -->
     <aside id="main-sidebar" class="sidebar">
       <div>
-        <a href="#inicio" style="display:block; text-decoration:none; margin-bottom:2rem;">
-          <div style="font-family:var(--font-serif); font-size:1.6rem; font-weight:700; color:#ffffff; line-height:1.15;">
-            Brújula IA
-          </div>
-          <div style="font-size:0.82rem; color:#94a3b8; margin-top:0.35rem; font-weight:500;">
-            Educación Superior Chile
-          </div>
-          <div style="margin-top:0.5rem;">
-            <span class="badge badge-blue">Matriz 54 Universidades</span>
-          </div>
-        </a>
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.5rem;">
+          <a href="#inicio" style="display:block; text-decoration:none;">
+            <div style="font-family:var(--font-serif); font-size:1.55rem; font-weight:700; color:#ffffff; line-height:1.15;">
+              {t('brand.name')}
+            </div>
+            <div style="font-size:0.8rem; color:#94a3b8; margin-top:0.35rem; font-weight:500;">
+              {t('brand.subtitle')}
+            </div>
+          </a>
+          <LanguageSelector currentLang={lang} />
+        </div>
+
+        <div style="margin-bottom:1.75rem;">
+          <span class="badge badge-blue">{t('brand.badge')}</span>
+        </div>
 
         <nav aria-label="Navegación principal">
           <ul style="list-style:none; display:flex; flex-direction:column; gap:0.45rem;">
-            <li><button type="button" class="nav-link sidebar-tab-btn active" data-tab="tab-matriz" style="background:none; border:none; width:100%; text-align:left; cursor:pointer; font-family:inherit; font-size:0.9rem;">🏛️ Las 54 Universidades</button></li>
-            <li><button type="button" class="nav-link sidebar-tab-btn" data-tab="tab-kit" style="background:none; border:none; width:100%; text-align:left; cursor:pointer; font-family:inherit; font-size:0.9rem;">📋 Reglas para Copiar</button></li>
-            <li><button type="button" class="nav-link sidebar-tab-btn" data-tab="tab-ideas" style="background:none; border:none; width:100%; text-align:left; cursor:pointer; font-family:inherit; font-size:0.9rem;">💡 Ideas de Profes</button></li>
-            <li><button type="button" class="nav-link sidebar-tab-btn" data-tab="tab-compras" style="background:none; border:none; width:100%; text-align:left; cursor:pointer; font-family:inherit; font-size:0.9rem;">💰 Compras en Tecnología</button></li>
-            <li><button type="button" class="nav-link sidebar-tab-btn" data-tab="tab-catalogo" style="background:none; border:none; width:100%; text-align:left; cursor:pointer; font-family:inherit; font-size:0.9rem;">📚 Catálogo & Citas</button></li>
-            <li><button type="button" class="nav-link sidebar-tab-btn" data-tab="tab-metodologia" style="background:none; border:none; width:100%; text-align:left; cursor:pointer; font-family:inherit; font-size:0.9rem;">📖 Datos & Metodología</button></li>
+            <li><button type="button" class="nav-link sidebar-tab-btn active" data-tab="tab-matriz" style="background:none; border:none; width:100%; text-align:left; cursor:pointer; font-family:inherit; font-size:0.9rem;">{t('nav.universities')}</button></li>
+            <li><button type="button" class="nav-link sidebar-tab-btn" data-tab="tab-kit" style="background:none; border:none; width:100%; text-align:left; cursor:pointer; font-family:inherit; font-size:0.9rem;">{t('nav.rules')}</button></li>
+            <li><button type="button" class="nav-link sidebar-tab-btn" data-tab="tab-ideas" style="background:none; border:none; width:100%; text-align:left; cursor:pointer; font-family:inherit; font-size:0.9rem;">{t('nav.ideas')}</button></li>
+            <li><button type="button" class="nav-link sidebar-tab-btn" data-tab="tab-compras" style="background:none; border:none; width:100%; text-align:left; cursor:pointer; font-family:inherit; font-size:0.9rem;">{t('nav.procurement')}</button></li>
+            <li><button type="button" class="nav-link sidebar-tab-btn" data-tab="tab-catalogo" style="background:none; border:none; width:100%; text-align:left; cursor:pointer; font-family:inherit; font-size:0.9rem;">{t('nav.catalog')}</button></li>
+            <li><button type="button" class="nav-link sidebar-tab-btn" data-tab="tab-metodologia" style="background:none; border:none; width:100%; text-align:left; cursor:pointer; font-family:inherit; font-size:0.9rem;">{t('nav.methodology')}</button></li>
           </ul>
         </nav>
       </div>
 
       <div style="margin-top:2.5rem; border-top:1px solid rgba(255,255,255,0.1); padding-top:1.5rem;">
         <button id="theme-btn-desktop" class="btn btn-outline" aria-label="Alternar modo visual claro u oscuro" style="width:100%; color:#ffffff; border-color:rgba(255,255,255,0.2); font-size:0.84rem; margin-bottom:1.25rem;">
-          🌓 Alternar Modo Oscuro
+          {t('theme.toggle')}
         </button>
 
         <div style="font-size:0.75rem; color:#94a3b8; line-height:1.55;">
-          Investigación y desarrollo por<br />
-          <a href="https://www.linkedin.com/in/evegat1989/" target="_blank" rel="noopener noreferrer" style="color:#60a5fa; font-weight:600; text-decoration:none;">Eduardo Vega Toledo</a><br />
-          Universidad de Chile • <a href="mailto:evegat@uchile.cl" style="color:#38bdf8; text-decoration:none;">evegat@uchile.cl</a><br />
+          {t('footer.author_title')}<br />
+          <a href="https://www.linkedin.com/in/evegat1989/" target="_blank" rel="noopener noreferrer" style="color:#60a5fa; font-weight:600; text-decoration:none;">{t('footer.author_name')}</a><br />
+          {t('footer.affiliation')} • <a href="mailto:evegat@uchile.cl" style="color:#38bdf8; text-decoration:none;">evegat@uchile.cl</a><br />
           <a href="mailto:eduardo@evegat.cl" style="color:#94a3b8; text-decoration:none;">eduardo@evegat.cl</a> • Octubre 2026
         </div>
       </div>
