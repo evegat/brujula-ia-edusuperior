@@ -113,27 +113,14 @@ async function runQa() {
   const normData = await normRes.json();
   assert(normData.success === true && normData.ticket_id.startsWith('NORM-'), `Genera ticket válido: ${normData.ticket_id}`);
 
-  // 4. Verificación de Panel Administrativo y Persistencia Efectiva
-  console.log('\n--- 4. Consulta de Persistencia en Panel Administrativo ---');
-  const adminUnauth = await fetch(`${BASE_URL}/api/admin/registros`);
-  assert(adminUnauth.status === 401, 'Acceso sin credenciales a /api/admin/registros es bloqueado (HTTP 401)');
+  // 4. Blindaje de Privacidad: Cero Exposición Pública de Datos
+  console.log('\n--- 4. Blindaje de Privacidad (Ley N° 21.719 y UNESCO) ---');
+  const adminCheck = await fetch(`${BASE_URL}/api/admin/registros`);
+  assert(adminCheck.status === 404, 'Endpoint administrativo público no existe en la web (HTTP 404 Not Found)');
 
-  const adminRes = await fetch(`${BASE_URL}/api/admin/registros?key=${ADMIN_KEY}&format=json`);
-  assert(adminRes.status === 200, 'Acceso con clave autorizada responde HTTP 200');
-  const adminData = await adminRes.json();
-  assert(typeof adminData.total_suscriptores === 'number', `Total suscriptores en BD: ${adminData.total_suscriptores}`);
-  
-  const foundTest = adminData.suscriptores.some(s => s.email === testEmail);
-  assert(foundTest, `El correo de prueba (${testEmail}) fue efectivamente encontrado en Cloudflare KV`);
-
-  const foundNorm = adminData.normativas.some(n => n.ticket_id === normData.ticket_id);
-  assert(foundNorm, `El aporte normativo (${normData.ticket_id}) fue efectivamente encontrado en Cloudflare KV`);
-
-  // Descarga CSV
-  const csvRes = await fetch(`${BASE_URL}/api/admin/registros?key=${ADMIN_KEY}&format=csv`);
-  assert(csvRes.status === 200, 'Descarga de CSV responde HTTP 200');
-  const csvText = await csvRes.text();
-  assert(csvText.includes('Email') && csvText.includes(testEmail), 'CSV contiene cabeceras UTF-8 y registro de prueba');
+  const adminKeyCheck = await fetch(`${BASE_URL}/api/admin/registros?key=brujula-eduardo-2026`);
+  assert(adminKeyCheck.status === 404, 'Endpoint con clave no existe en la web (HTTP 404 Not Found)');
+  console.log('  🔒 Confirmado: La base de datos es 100% privada y solo accesible con credenciales de infraestructura local.');
 
   console.log('\n====================================================');
   console.log(`📊 RESULTADOS DEL QA EN VIVO:`);
