@@ -1,4 +1,5 @@
 import type { APIRoute } from 'astro';
+import { getDb } from '../../lib/kv.ts';
 
 export const prerender = false;
 
@@ -127,7 +128,7 @@ export const POST: APIRoute = async ({ request, locals }) => {
       ip: clientIp
     };
 
-    const db = (locals as any)?.runtime?.env?.BRUJULA_DB;
+    const db = await getDb();
     if (db) {
       try {
         await db.put(`contact:${contactId}`, JSON.stringify(contactRecord));

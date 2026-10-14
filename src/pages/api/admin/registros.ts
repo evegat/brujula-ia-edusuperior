@@ -1,4 +1,5 @@
 import type { APIRoute } from 'astro';
+import { getDb } from '../../../lib/kv.ts';
 
 export const prerender = false;
 
@@ -18,7 +19,7 @@ export const OPTIONS: APIRoute = async () => {
   });
 };
 
-export const GET: APIRoute = async ({ request, locals }) => {
+export const GET: APIRoute = async ({ request }) => {
   const url = new URL(request.url);
   const keyParam = url.searchParams.get('key');
   const authHeader = request.headers.get('authorization')?.replace('Bearer ', '').trim();
@@ -33,7 +34,7 @@ export const GET: APIRoute = async ({ request, locals }) => {
     });
   }
 
-  const db = (locals as any)?.runtime?.env?.BRUJULA_DB;
+  const db = await getDb();
   const format = url.searchParams.get('format') || 'html';
 
   let subList: any[] = [];
