@@ -1,0 +1,42 @@
+# robots.txt - Brújula IA Educación Superior
+# https://brujulaiaedusuperior.evegat.cl
+
+User-agent: *
+Allow: /
+Allow: /llms.txt
+Allow: /matriz_54_universidades.csv
+Allow: /matriz_54_universidades.json
+
+# Rastreadores IA y agentes
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Sitemap
+Sitemap: https://brujulaiaedusuperior.evegat.cl/sitemap.xml
