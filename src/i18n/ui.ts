@@ -34,6 +34,14 @@ export const ui = {
     'nav.procurement': 'Compras en Tecnología',
     'nav.catalog': 'Catálogo & Citas',
     'nav.methodology': 'Metodología & Datos',
+
+    // Ecosystem Bar
+    'eco.aria_label': 'Barra superior del ecosistema evegat.cl',
+    'eco.home_title': 'Volver al portal principal evegat.cl',
+    'eco.public_intel': 'Inteligencia Pública',
+    'eco.author': 'Investigación y desarrollo independiente por Eduardo Vega Toledo',
+    'eco.ti_title': 'Observatorio de Capacidades Tecnológicas Municipales de Chile',
+    'eco.linkedin_title': 'Perfil de LinkedIn de Eduardo Vega Toledo',
     
     // Hero & Summary
     'hero.badge_unesco': 'Bien Público Digital • UNESCO 2021/2023',
@@ -217,7 +225,7 @@ export const ui = {
     // Attribution & Footer
     'footer.author_title': 'Investigación y desarrollo por',
     'footer.author_name': 'Eduardo Vega Toledo',
-    'footer.affiliation': 'Universidad de Chile',
+    'footer.affiliation': 'Investigación independiente',
     'footer.law_compliance': 'Cumplimiento estricto de la Ley N° 21.719 de Protección de Datos Personales.',
     'footer.rights': 'Datos abiertos para la investigación, la docencia y la política pública.'
   },
@@ -243,6 +251,14 @@ export const ui = {
     'nav.procurement': 'Tech Procurement',
     'nav.catalog': 'Catalog & Citations',
     'nav.methodology': 'Data & Methodology',
+
+    // Ecosystem Bar
+    'eco.aria_label': 'evegat.cl ecosystem top bar',
+    'eco.home_title': 'Back to main evegat.cl portal',
+    'eco.public_intel': 'Public Intelligence',
+    'eco.author': 'Independent research & development by Eduardo Vega Toledo',
+    'eco.ti_title': 'Municipal Tech Capabilities Observatory (Chile)',
+    'eco.linkedin_title': "Eduardo Vega Toledo's LinkedIn profile",
     
     // Hero & Summary
     'hero.badge_unesco': 'Digital Public Good • UNESCO 2021/2023',
@@ -426,7 +442,7 @@ export const ui = {
     // Attribution & Footer
     'footer.author_title': 'Research and technical design by',
     'footer.author_name': 'Eduardo Vega Toledo',
-    'footer.affiliation': 'University of Chile',
+    'footer.affiliation': 'Independent research',
     'footer.law_compliance': 'Strict compliance with Data Privacy Law No. 21,719 and UNESCO ethical standards.',
     'footer.rights': 'Open data for higher education research, teaching, and evidence-based public policy.'
   },
@@ -452,6 +468,14 @@ export const ui = {
     'nav.procurement': 'Compras em Tecnologia',
     'nav.catalog': 'Catálogo e Citações',
     'nav.methodology': 'Dados e Metodologia',
+
+    // Ecosystem Bar
+    'eco.aria_label': 'Barra superior do ecossistema evegat.cl',
+    'eco.home_title': 'Voltar ao portal principal evegat.cl',
+    'eco.public_intel': 'Inteligência Pública',
+    'eco.author': 'Pesquisa e desenvolvimento independente por Eduardo Vega Toledo',
+    'eco.ti_title': 'Observatório de Capacidades Tecnológicas Municipais do Chile',
+    'eco.linkedin_title': 'Perfil de LinkedIn de Eduardo Vega Toledo',
     
     // Hero & Summary
     'hero.badge_unesco': 'Bem Público Digital • UNESCO 2021/2023',
@@ -635,7 +659,7 @@ export const ui = {
     // Attribution & Footer
     'footer.author_title': 'Pesquisa e arquitetura técnica por',
     'footer.author_name': 'Eduardo Vega Toledo',
-    'footer.affiliation': 'Universidade do Chile',
+    'footer.affiliation': 'Pesquisa independente',
     'footer.law_compliance': 'Conformidade estrita com a Lei Nº 21.719 e recomendações éticas da UNESCO.',
     'footer.rights': 'Dados abertos para pesquisa acadêmica, docência e formulação de políticas públicas.'
   }

@@ -157,7 +157,7 @@ export const POST: APIRoute = async ({ request, locals }) => {
       'Hemos recibido y registrado tus datos correctamente en nuestra base de datos. Te notificaremos a esta misma casilla cuando existan actualizaciones normativas en universidades chilenas, nuevas compras públicas de tecnología registradas o publiquemos herramientas y cláusulas de interés público.\n\n' +
       'Atentamente,\n' +
       'Eduardo Vega Toledo\n' +
-      'Universidad de Chile (evegat@uchile.cl / eduardo@evegat.cl)\n' +
+      'Investigación independiente (eduardo@evegat.cl)\n' +
       'Brújula IA Educación Superior';
 
     try {
@@ -169,12 +169,11 @@ export const POST: APIRoute = async ({ request, locals }) => {
       formPayload.append('consentimiento_ley_21719', 'Aceptado (Ley N° 21.719)');
       formPayload.append('_subject', `[Brújula IA] Nueva suscripción / alerta observatorio: ${cleanEmail}`);
       formPayload.append('_autoresponse', autoresponseMessage);
-      formPayload.append('_cc', 'eduardo@evegat.cl');
       formPayload.append('_replyto', cleanEmail);
       formPayload.append('_template', 'table');
       formPayload.append('_captcha', 'false');
 
-      fetch('https://formsubmit.co/ajax/evegat@uchile.cl', {
+      fetch('https://formsubmit.co/ajax/eduardo@evegat.cl', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
