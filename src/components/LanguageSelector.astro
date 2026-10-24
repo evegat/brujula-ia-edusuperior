@@ -15,7 +15,7 @@ const locales = [
 ];
 ---
 
-<div class="lang-selector" aria-label="Seleccionar idioma">
+<nav class="lang-selector" aria-label={currentLang === 'en' ? 'Select language' : currentLang === 'pt' ? 'Selecionar idioma' : 'Seleccionar idioma'}>
   {locales.map((loc, idx) => (
     <>
       <a 
@@ -26,46 +26,48 @@ const locales = [
       >
         {loc.label}
       </a>
-      {idx < locales.length - 1 && <span class="lang-divider">/</span>}
+      {idx < locales.length - 1 && <span class="lang-divider" aria-hidden="true">/</span>}
     </>
   ))}
-</div>
+</nav>
 
 <style>
   .lang-selector {
     display: inline-flex;
     align-items: center;
-    gap: 0.35rem;
-    background: rgba(255, 255, 255, 0.08);
-    padding: 0.25rem 0.6rem;
+    gap: 0.25rem;
+    background: var(--card-alt, #f1f5f9);
+    padding: 0.2rem 0.45rem;
     border-radius: 6px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    font-size: 0.78rem;
+    border: 1px solid var(--border-color, #e2e8f0);
+    font-size: 0.74rem;
     font-weight: 600;
+    line-height: 1;
   }
 
   .lang-btn {
-    color: #94a3b8;
+    color: var(--text-muted, #64748b);
     text-decoration: none;
-    padding: 0.15rem 0.35rem;
+    padding: 0.25rem 0.4rem;
     border-radius: 4px;
     transition: all 0.15s ease;
+    display: inline-block;
   }
 
   .lang-btn:hover {
-    color: #ffffff;
+    color: var(--text-main, #0f172a);
     text-decoration: none;
   }
 
   .lang-btn.active {
-    color: #ffffff;
-    background: rgba(59, 130, 246, 0.4);
+    color: var(--accent-contrast, #ffffff);
+    background: var(--accent-blue, #0369a1);
     font-weight: 700;
   }
 
   .lang-divider {
-    color: rgba(255, 255, 255, 0.25);
+    color: var(--border-color, #cbd5e1);
     user-select: none;
-    font-size: 0.75rem;
+    font-size: 0.72rem;
   }
 </style>

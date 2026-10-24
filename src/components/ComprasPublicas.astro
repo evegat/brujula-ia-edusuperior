@@ -87,7 +87,8 @@ function obtenerBadgeCapa(capa: string, langKey: SupportedLang): { label: string
         class="btn btn-outline btn-sm" 
         style="font-size:0.82rem; color:var(--accent-amber); border-color:var(--accent-amber); text-decoration:none; display:inline-flex; align-items:center; gap:0.35rem;"
       >
-        📊 {lang === 'en' ? 'Download Procurement (.csv)' : lang === 'pt' ? 'Baixar Licitações (.csv)' : 'Descargar Compras (.csv)'}
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        {lang === 'en' ? 'Download Procurement (.csv)' : lang === 'pt' ? 'Baixar Licitações (.csv)' : 'Descargar Compras (.csv)'}
       </a>
     </div>
   </div>
@@ -129,16 +130,16 @@ function obtenerBadgeCapa(capa: string, langKey: SupportedLang): { label: string
           {lang === 'en' ? 'All' : lang === 'pt' ? 'Todas' : 'Todas'} ({totalCompras})
         </button>
         <button type="button" class="btn btn-outline btn-sm btn-capa" data-capa="Infraestructura_Computo">
-          🖥️ {lang === 'en' ? 'Computing (14)' : lang === 'pt' ? 'Computação (14)' : 'Cómputo (14)'}
+          {lang === 'en' ? 'Computing (14)' : lang === 'pt' ? 'Computação (14)' : 'Cómputo (14)'}
         </button>
         <button type="button" class="btn btn-outline btn-sm btn-capa" data-capa="Gestion_Backoffice">
-          ⚙️ Back-office (27)
+          Back-office (27)
         </button>
         <button type="button" class="btn btn-outline btn-sm btn-capa" data-capa="Atencion_Frontoffice">
-          🤖 Chatbots (33)
+          Chatbots (33)
         </button>
         <button type="button" class="btn btn-outline btn-sm btn-capa" data-capa="Docencia_Aula">
-          📚 {lang === 'en' ? 'Instruction (11)' : lang === 'pt' ? 'Docência (11)' : 'Docencia (11)'}
+          {lang === 'en' ? 'Instruction (11)' : lang === 'pt' ? 'Docência (11)' : 'Docencia (11)'}
         </button>
       </div>
 
@@ -153,7 +154,7 @@ function obtenerBadgeCapa(capa: string, langKey: SupportedLang): { label: string
         <input 
           type="text" 
           id="compras-search-input" 
-          placeholder={lang === 'en' ? '🔍 Search supplier, software...' : lang === 'pt' ? '🔍 Buscar fornecedor, software...' : '🔍 Buscar proveedor, software...'} 
+          placeholder={lang === 'en' ? 'Search supplier, software...' : lang === 'pt' ? 'Buscar fornecedor, software...' : 'Buscar proveedor, software...'} 
           style="padding:0.45rem 0.75rem; border:1px solid var(--border-color); border-radius:6px; background:var(--canvas-bg); color:var(--text-main); font-size:0.84rem; flex:1; min-width:140px;"
         />
       </div>
@@ -217,9 +218,9 @@ function obtenerBadgeCapa(capa: string, langKey: SupportedLang): { label: string
                 <!-- Instrumento y Código Mercado Público -->
                 <div style="display:flex; gap:0.35rem; align-items:center; flex-wrap:wrap; margin-bottom:0.35rem;">
                   {esLicitacion ? (
-                    <span class="badge badge-blue" style="font-size:0.68rem; font-weight:700;">⚖️ {lang === 'en' ? 'Public Tender' : lang === 'pt' ? 'Licitação Pública' : 'Licitación Pública'}</span>
+                    <span class="badge badge-blue" style="font-size:0.68rem; font-weight:700;">{lang === 'en' ? 'Public Tender' : lang === 'pt' ? 'Licitação Pública' : 'Licitación Pública'}</span>
                   ) : (
-                    <span class="badge badge-purple" style="font-size:0.68rem; font-weight:700;">📄 {lang === 'en' ? 'Purchase Order' : lang === 'pt' ? 'Ordem de Compra' : 'Orden de Compra'}</span>
+                    <span class="badge badge-purple" style="font-size:0.68rem; font-weight:700;">{lang === 'en' ? 'Purchase Order' : lang === 'pt' ? 'Ordem de Compra' : 'Orden de Compra'}</span>
                   )}
                   {c.codigo_mercado_publico && (
                     <code style="font-size:0.68rem; background:rgba(0,0,0,0.05); padding:0.12rem 0.35rem; border-radius:4px; font-family:var(--font-mono); color:var(--text-main);">
@@ -287,8 +288,8 @@ function obtenerBadgeCapa(capa: string, langKey: SupportedLang): { label: string
                 {c.link ? (
                   <a href={c.link} target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="font-size:0.74rem; padding:0.3rem 0.55rem; color:var(--accent-blue); display:inline-flex; align-items:center; gap:0.25rem; white-space:nowrap;">
                     {esLicitacion 
-                      ? (lang === 'en' ? '⚖️ View Tender →' : lang === 'pt' ? '⚖️ Ver Licitação →' : '⚖️ Ver Licitación →')
-                      : (lang === 'en' ? '📄 View PO →' : lang === 'pt' ? '📄 Ver OC →' : '📄 Ver Orden de Compra →')}
+                      ? (lang === 'en' ? 'View Tender →' : lang === 'pt' ? 'Ver Licitação →' : 'Ver Licitación →')
+                      : (lang === 'en' ? 'View PO →' : lang === 'pt' ? 'Ver OC →' : 'Ver Orden de Compra →')}
                   </a>
                 ) : (
                   <span style="color:var(--text-muted); font-size:0.75rem;">
@@ -305,7 +306,9 @@ function obtenerBadgeCapa(capa: string, langKey: SupportedLang): { label: string
 
   <!-- Estado Vacío -->
   <div id="compras-empty-state" style="display:none; text-align:center; padding:3rem 1.5rem; background:var(--card-bg); border:1px solid var(--border-color); border-radius:12px; margin-top:1rem;">
-    <div style="font-size:2rem; margin-bottom:0.5rem;">🔍</div>
+    <div style="margin-bottom:0.75rem; color:var(--text-muted); display:flex; justify-content:center;">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+    </div>
     <div style="font-weight:600; margin-bottom:0.25rem;">
       {lang === 'en' ? 'No contracts found for these filters' : lang === 'pt' ? 'Nenhuma licitação encontrada com esses filtros' : 'No se encontraron contratos con esos filtros'}
     </div>

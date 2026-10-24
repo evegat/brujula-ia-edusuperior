@@ -83,7 +83,7 @@ const htmlContent = fs.readFileSync(distHtml, 'utf-8');
 assert.ok(htmlContent.includes('Matriz Nacional') || htmlContent.includes('Matriz 54'), 'Debe contener la Matriz Nacional de 54 Universidades');
 assert.ok(htmlContent.includes('Checklist') || htmlContent.includes('Benchmarking'), 'Debe contener el Checklist de Benchmarking');
 assert.ok(htmlContent.includes('data-theme'), 'Debe soportar selector de tema');
-assert.ok(htmlContent.includes('mobile-header'), 'Debe incluir header móvil hamburguesa');
+assert.ok(htmlContent.includes('mobile-header') || htmlContent.includes('mobile-menu-btn'), 'Debe incluir header móvil hamburguesa');
 assert.ok(htmlContent.includes('evegat.cl') || htmlContent.includes('Eduardo Vega Toledo'), 'Debe incluir créditos formales a Eduardo Vega Toledo');
 
 const entryMjs = path.join(ROOT, 'dist/server/entry.mjs');

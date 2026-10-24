@@ -102,9 +102,10 @@ function normalizeForSearch(str: string): string {
         type="button" 
         class="btn btn-outline btn-sm btn-abrir-intrauni"
         data-uni="UChile"
-        style="font-size: 0.8rem; padding: 0.4rem 0.8rem; font-weight:600; color:var(--accent-purple, #7c3aed); border-color:var(--accent-purple, #7c3aed); background:rgba(124, 58, 237, 0.05);"
+        style="font-size: 0.8rem; padding: 0.4rem 0.8rem; font-weight:600; color:var(--accent-purple, #7c3aed); border-color:var(--accent-purple, #7c3aed); background:rgba(124, 58, 237, 0.05); display: inline-flex; align-items: center; gap: 0.35rem;"
       >
-        🏛️ {lang === 'en' ? 'Faculty Comparison' : lang === 'pt' ? 'Comparador por Faculdades' : 'Comparador por Facultades'}
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+        {lang === 'en' ? 'Faculty Comparison' : lang === 'pt' ? 'Comparador por Faculdades' : 'Comparador por Facultades'}
       </button>
       <button 
         type="button" 
@@ -264,8 +265,9 @@ function normalizeForSearch(str: string): string {
                 <span class={`badge ${tieneDoc ? 'badge-green' : 'badge-outline'}`} style={!tieneDoc ? 'border:1px solid var(--border-color); color:var(--text-muted); font-size:0.7rem;' : 'font-size:0.7rem;'}>
                   {tieneDoc ? t('matriz.card_with_doc') : t('matriz.card_without_doc')}
                 </span>
-                <span class="badge" style={`font-size:0.68rem; padding:0.15rem 0.4rem; background:rgba(0,0,0,0.04); color:var(--text-main); border:1px solid var(--border-color);`}>
-                  {esRegional ? `📍 ${u.sede_central}` : '🏛️ Santiago'}
+                <span class="badge" style={`font-size:0.68rem; padding:0.15rem 0.45rem; background:rgba(0,0,0,0.04); color:var(--text-main); border:1px solid var(--border-color); display:inline-flex; align-items:center; gap:0.25rem;`}>
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  {esRegional ? u.sede_central : 'Santiago'}
                 </span>
                 {tieneDoc && (
                   <span class={`badge ${esCentral ? 'badge-blue' : 'badge-outline'}`} style={!esCentral ? 'font-size:0.68rem; padding:0.15rem 0.4rem; color:var(--accent-amber); border-color:var(--accent-amber);' : 'font-size:0.68rem; padding:0.15rem 0.4rem;'}>
@@ -337,9 +339,10 @@ function normalizeForSearch(str: string): string {
                       class="btn-ver-compras-badge"
                       data-uni-compras={u.nombre}
                       title={lang === 'en' ? `Click to view ${u.compras?.total || 1} procurement contracts in Mercado Público` : lang === 'pt' ? `Clique para ver ${u.compras?.total || 1} licitações no Mercado Público` : `Clic para ver ${u.compras?.total || 1} compras públicas en Mercado Público`}
-                      style="background:rgba(245, 158, 11, 0.12); border:1px solid rgba(245, 158, 11, 0.45); border-radius:4px; padding:0.12rem 0.35rem; color:var(--accent-amber); font-weight:700; cursor:pointer; font-size:0.75rem; display:inline-flex; align-items:center; gap:0.2rem; transition:var(--transition);"
+                      style="background:rgba(245, 158, 11, 0.12); border:1px solid rgba(245, 158, 11, 0.45); border-radius:4px; padding:0.12rem 0.35rem; color:var(--accent-amber); font-weight:700; cursor:pointer; font-size:0.75rem; display:inline-flex; align-items:center; gap:0.25rem; transition:var(--transition);"
                     >
-                      💰 {lang === 'en' ? 'Procurement' : lang === 'pt' ? 'Compras' : 'Compras'} ({u.compras?.total || 1}) ↗
+                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                      {lang === 'en' ? 'Procurement' : lang === 'pt' ? 'Compras' : 'Compras'} ({u.compras?.total || 1}) ↗
                     </button>
                   ) : (
                     <span title={lang === 'en' ? 'No AI Procurement Registered in Mercado Público' : lang === 'pt' ? 'Sem Compras de IA Registradas no Mercado Público' : 'Sin Compras de IA Registradas en Mercado Público'} style="color:var(--text-muted);">○ {lang === 'en' ? 'Procurement' : lang === 'pt' ? 'Compras' : 'Compras'}</span>
@@ -375,9 +378,10 @@ function normalizeForSearch(str: string): string {
                       type="button" 
                       class="btn btn-outline btn-sm btn-abrir-intrauni" 
                       data-uni={u.sigla} 
-                      style="width:100%; justify-content:center; gap:0.4rem; font-weight:600; color:#7c3aed; border-color:rgba(124, 58, 237, 0.35); background:rgba(124, 58, 237, 0.05); font-size:0.78rem; padding:0.4rem 0.6rem;"
+                      style="width:100%; justify-content:center; gap:0.4rem; font-weight:600; color:#7c3aed; border-color:rgba(124, 58, 237, 0.35); background:rgba(124, 58, 237, 0.05); font-size:0.78rem; padding:0.4rem 0.6rem; display:inline-flex; align-items:center;"
                     >
-                      🏛️ {t('matriz.card_btn_compare_faculties').replace('{count}', u.instrumentos.length.toString())} &rarr;
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                      {t('matriz.card_btn_compare_faculties').replace('{count}', u.instrumentos.length.toString())} &rarr;
                     </button>
                   </div>
                 )}
@@ -395,9 +399,10 @@ function normalizeForSearch(str: string): string {
                   type="button" 
                   class="btn btn-outline btn-sm btn-ver-compras-action" 
                   data-uni-compras={u.nombre}
-                  style="width:100%; justify-content:center; gap:0.4rem; font-weight:600; color:#b45309; border-color:rgba(217, 119, 6, 0.45); background:rgba(245, 158, 11, 0.08); font-size:0.78rem; padding:0.45rem 0.65rem; border-radius:6px; cursor:pointer;"
+                  style="width:100%; justify-content:center; gap:0.4rem; font-weight:600; color:#b45309; border-color:rgba(217, 119, 6, 0.45); background:rgba(245, 158, 11, 0.08); font-size:0.78rem; padding:0.45rem 0.65rem; border-radius:6px; cursor:pointer; display:inline-flex; align-items:center;"
                 >
-                  💰 {lang === 'en' ? `View ${u.compras?.total || 1} AI contracts in Mercado Público →` : lang === 'pt' ? `Ver ${u.compras?.total || 1} contratos no Mercado Público →` : `Ver ${u.compras?.total || 1} compras públicas en Mercado Público →`}
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                  {lang === 'en' ? `View ${u.compras?.total || 1} AI contracts in Mercado Público →` : lang === 'pt' ? `Ver ${u.compras?.total || 1} contratos no Mercado Público →` : `Ver ${u.compras?.total || 1} compras públicas en Mercado Público →`}
                 </button>
               </div>
             )}
@@ -440,7 +445,9 @@ function normalizeForSearch(str: string): string {
 
   <!-- Estado Vacío -->
   <div id="matriz-empty-state" style="display:none; text-align:center; padding:3rem 1.5rem; background:var(--card-bg); border:1px solid var(--border-color); border-radius:12px; margin-top:1.5rem;">
-    <div style="font-size:2rem; margin-bottom:0.5rem;">🔍</div>
+    <div style="margin-bottom:0.75rem; color:var(--text-muted); display:flex; justify-content:center;">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+    </div>
     <div style="font-weight:600; margin-bottom:0.25rem;">No se encontraron planteles con los filtros seleccionados</div>
     <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">Intenta seleccionar otro segmento institucional o limpiar la búsqueda.</div>
     <button type="button" id="matriz-reset-btn" class="btn btn-primary btn-sm">Restablecer Todos los Filtros</button>

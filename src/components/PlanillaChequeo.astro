@@ -128,7 +128,7 @@ const planillaFilas = matrizData.map((u, idx) => {
       <div style="display:flex; gap:0.85rem; align-items:center; flex-wrap:wrap;">
         <span><strong style="color:var(--accent-green);">✓</strong> = {lang === 'en' ? 'Evidence verified in public policy' : lang === 'pt' ? 'Evidência verificada em política pública' : 'Evidencia verificada en documento público'}</span>
         <span><strong style="color:var(--text-muted);">○</strong> = {lang === 'en' ? 'No identified evidence' : lang === 'pt' ? 'Sem evidência identificada' : 'Sin evidencia identificada'}</span>
-        <span><strong style="color:var(--accent-amber);">💰</strong> = {lang === 'en' ? 'Tech/AI contract in public procurement' : lang === 'pt' ? 'Contrato de software/IA em compras públicas' : 'Contrato de software/IA registrado en Mercado Público'}</span>
+        <span><strong style="color:var(--accent-amber); font-weight:700;">$</strong> = {lang === 'en' ? 'Tech/AI contract in public procurement' : lang === 'pt' ? 'Contrato de software/IA em compras públicas' : 'Contrato de software/IA registrado en Mercado Público'}</span>
       </div>
     </div>
   </div>
@@ -239,10 +239,11 @@ const planillaFilas = matrizData.map((u, idx) => {
                       type="button"
                       class="btn-ver-compras-action"
                       data-uni-compras={fila.nombre}
-                      style="background:none; border:none; color:var(--accent-amber); font-weight:700; cursor:pointer; font-size:0.85rem; padding:0; text-decoration:underline;"
+                      style="background:none; border:none; color:var(--accent-amber); font-weight:700; cursor:pointer; font-size:0.82rem; padding:0; text-decoration:underline; display:inline-flex; align-items:center; gap:0.2rem;"
                       title={lang === 'en' ? `Click to view public procurement contracts for ${fila.nombre}` : lang === 'pt' ? `Clique para ver licitações de ${fila.nombre}` : `Clic para ver compras públicas de ${fila.nombre} en Mercado Público`}
                     >
-                      💰 SI
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                      SI
                     </button>
                   ) : (
                     <span style="color:var(--text-muted);" title={lang === 'en' ? 'No procurement registered in Mercado Público' : lang === 'pt' ? 'Sem compras registradas no Mercado Público' : 'Sin compras registradas en Mercado Público'}>○</span>
@@ -269,7 +270,7 @@ const planillaFilas = matrizData.map((u, idx) => {
                     style="color:var(--accent-blue); text-decoration:none; font-weight:500; display:inline-block; max-width:210px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;"
                     title={fila.primerDoc.documento}
                   >
-                    📄 {fila.primerDoc.documento} &rarr;
+                    {fila.primerDoc.documento} &rarr;
                   </a>
                 ) : (
                   <button 
@@ -292,7 +293,9 @@ const planillaFilas = matrizData.map((u, idx) => {
 
   <!-- Estado Vacío -->
   <div id="planilla-empty-state" style="display:none; text-align:center; padding:3rem 1.5rem; background:var(--card-bg); border:1px solid var(--border-color); border-radius:12px; margin-top:1rem;">
-    <div style="font-size:2rem; margin-bottom:0.5rem;">🔍</div>
+    <div style="margin-bottom:0.75rem; color:var(--text-muted); display:flex; justify-content:center;">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+    </div>
     <div style="font-weight:600; margin-bottom:0.25rem;">{t('planilla.empty_title')}</div>
     <div style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">{t('planilla.empty_desc')}</div>
     <button type="button" id="planilla-reset-btn" class="btn btn-primary btn-sm">{t('planilla.reset_btn')}</button>

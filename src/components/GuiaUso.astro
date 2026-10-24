@@ -14,8 +14,8 @@ const t = useTranslations(lang);
   
   <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem;">
     <div>
-      <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--accent-blue); letter-spacing: 0.6px; margin-bottom: 0.25rem;">
-        🧭 {lang === 'en' ? 'Quick Orientation' : lang === 'pt' ? 'Orientação Rápida' : 'Orientación Rápida'}
+      <div style="font-size: 0.74rem; font-weight: 700; text-transform: uppercase; color: var(--accent-blue); letter-spacing: 0.6px; margin-bottom: 0.25rem;">
+        {lang === 'en' ? 'Quick Orientation' : lang === 'pt' ? 'Orientação Rápida' : 'Orientación Rápida'}
       </div>
       <h2 style="font-size: 1.35rem; margin: 0; font-family: var(--font-serif); color: var(--text-main);">
         {lang === 'en' 
@@ -39,9 +39,10 @@ const t = useTranslations(lang);
         type="button" 
         class="btn btn-primary btn-sm"
         onclick="window.abrirModalAporte && window.abrirModalAporte('')"
-        style="font-size: 0.82rem; padding: 0.45rem 0.85rem;"
+        style="font-size: 0.82rem; padding: 0.45rem 0.85rem; display: inline-flex; align-items: center; gap: 0.4rem;"
       >
-        📥 {lang === 'en' ? 'Submit Policy or Decree' : lang === 'pt' ? 'Enviar Diretriz ou Decreto' : 'Aportar Normativa o Decreto'}
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+        {lang === 'en' ? 'Submit Policy or Decree' : lang === 'pt' ? 'Enviar Diretriz ou Decreto' : 'Aportar Normativa o Decreto'}
       </button>
     </div>
   </div>

@@ -116,13 +116,12 @@ const t = useTranslations('en');
 
 <style>
   .tabs-nav {
-    position: sticky;
-    top: 0;
+    position: relative;
     background: var(--canvas-bg);
-    z-index: 100;
     border-bottom: 1px solid var(--border-color);
     margin-bottom: 2rem;
     padding: 0.65rem 0;
+    scroll-margin-top: 5rem;
   }
 
   .tabs-container {
@@ -151,10 +150,11 @@ const t = useTranslations('en');
   }
 
   .tab-btn.active {
-    color: #ffffff;
+    color: var(--accent-contrast, #ffffff);
     background: var(--accent-blue);
     border-color: var(--accent-blue);
     box-shadow: var(--shadow-sm);
+    font-weight: 600;
   }
 
   .tab-panel {
@@ -176,13 +176,12 @@ const t = useTranslations('en');
   (function initTabs() {
     function setupTabs() {
       const tabButtons = Array.from(document.querySelectorAll('.tab-btn'));
-      const sidebarButtons = Array.from(document.querySelectorAll('.sidebar-tab-btn'));
+      const headerTabButtons = Array.from(document.querySelectorAll('.nav-tab-link, .mobile-nav-link'));
       const tabPanels = Array.from(document.querySelectorAll('.tab-panel'));
-      const sidebar = document.getElementById('main-sidebar');
-      const overlay = document.getElementById('sidebar-overlay');
       const tabsNav = document.querySelector('.tabs-nav');
 
       function switchTab(tabId, shouldScroll = true) {
+        // 1. Botones de tabs en la página
         tabButtons.forEach(btn => {
           if (btn.getAttribute('data-tab') === tabId) {
             btn.classList.add('active');
@@ -191,7 +190,8 @@ const t = useTranslations('en');
           }
         });
 
-        sidebarButtons.forEach(btn => {
+        // 2. Botones del header superior (desktop y mobile)
+        headerTabButtons.forEach(btn => {
           if (btn.getAttribute('data-tab') === tabId) {
             btn.classList.add('active');
           } else {
@@ -199,6 +199,7 @@ const t = useTranslations('en');
           }
         });
 
+        // 3. Paneles de contenido
         tabPanels.forEach(panel => {
           if (panel.id === tabId) {
             panel.classList.add('active');
@@ -207,16 +208,12 @@ const t = useTranslations('en');
           }
         });
 
-        if (window.innerWidth <= 1024) {
-          if (sidebar) sidebar.classList.remove('open');
-          if (overlay) overlay.classList.remove('active');
-        }
-
         if (shouldScroll && tabsNav) {
           const navRect = tabsNav.getBoundingClientRect();
+          const headerHeight = document.querySelector('.top-header')?.offsetHeight || 60;
           const targetY = window.pageYOffset + navRect.top;
           window.scrollTo({
-            top: Math.max(0, targetY - 15),
+            top: Math.max(0, targetY - headerHeight - 12),
             behavior: 'smooth'
           });
         }
@@ -226,6 +223,7 @@ const t = useTranslations('en');
         }
       }
 
+      // Listeners para botones de tabs en la página
       tabButtons.forEach(btn => {
         btn.addEventListener('click', (e) => {
           e.preventDefault();
@@ -234,7 +232,8 @@ const t = useTranslations('en');
         });
       });
 
-      sidebarButtons.forEach(btn => {
+      // Listeners para botones del header superior
+      headerTabButtons.forEach(btn => {
         btn.addEventListener('click', (e) => {
           e.preventDefault();
           const targetId = btn.getAttribute('data-tab');

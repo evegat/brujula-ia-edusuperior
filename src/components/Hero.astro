@@ -1,6 +1,6 @@
 ---
 // src/components/Hero.astro
-// Hero Editorial de Alto Impacto con llamado a Comunidad (LinkedIn + Suscripción Directa)
+// Hero Editorial de Alto Impacto — Observatorio Brújula IA
 import type { SupportedLang } from '../i18n/ui';
 import { useTranslations } from '../i18n/ui';
 import matrizData from '../../data/matriz_54_universidades.json';
@@ -23,22 +23,26 @@ const docsIP = totalDocs - docsUes; // 6
 
 <section id="inicio" style="margin-bottom: 2.75rem; scroll-margin-top: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 2.5rem;">
   
-  <!-- Badges de Legitimidad y Bien Público -->
-  <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1rem; flex-wrap: wrap;">
-    <span class="badge badge-purple" style="font-weight: 700; font-size: 0.78rem;">🏛️ {lang === 'en' ? 'Official Census: 54 Universities' : lang === 'pt' ? 'Censo Oficial: 54 Universidades' : 'Censo Oficial: 54 Universidades (SIES)'}</span>
+  <!-- Badges Institucionales y de Bien Público (Sin Emojis) -->
+  <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 1.15rem; flex-wrap: wrap;">
+    <span class="badge badge-purple" style="font-weight: 700; font-size: 0.76rem;">
+      {lang === 'en' ? 'Official Census: 54 Universities (SIES)' : lang === 'pt' ? 'Censo Oficial: 54 Universidades (SIES)' : 'Censo Oficial: 54 Universidades (SIES)'}
+    </span>
     <span class="badge badge-blue">{t('hero.badge_unesco')}</span>
     <span class="badge badge-green">{t('hero.badge_free')}</span>
-    <span class="badge" style="background: rgba(0,0,0,0.05); color: var(--text-muted); font-size: 0.76rem;">📅 {lang === 'en' ? 'Audit: October 2026' : lang === 'pt' ? 'Auditoria: Outubro 2026' : 'Auditoría: Octubre 2026'}</span>
+    <span class="badge badge-subtle" style="font-size: 0.74rem;">
+      {lang === 'en' ? 'Audit: October 2026' : lang === 'pt' ? 'Auditoria: Outubro 2026' : 'Auditoría: Octubre 2026'}
+    </span>
   </div>
 
-  <!-- Título Imponente con Tipografía Grande -->
-  <h1 style="font-size: clamp(2.35rem, 4.8vw, 3.8rem); line-height: 1.08; font-family: var(--font-serif); font-weight: 800; color: var(--text-main); margin: 0 0 1.15rem 0; letter-spacing: -0.8px; max-width: 1040px;">
+  <!-- Título Editorial con Tipografía Serif Clásica -->
+  <h1 style="font-size: clamp(2.2rem, 4.4vw, 3.6rem); line-height: 1.08; font-family: var(--font-serif); font-weight: 800; color: var(--text-main); margin: 0 0 1rem 0; letter-spacing: -0.02em; max-width: 1040px;">
     {lang === 'en' 
       ? 'AI Higher Education Compass' 
       : lang === 'pt'
       ? 'Bússola de IA no Ensino Superior'
       : 'Brújula IA Educación Superior'}
-    <span style="display: block; font-size: clamp(1.35rem, 2.6vw, 2rem); font-weight: 600; color: var(--accent-blue); margin-top: 0.45rem; line-height: 1.25;">
+    <span style="display: block; font-size: clamp(1.25rem, 2.3vw, 1.85rem); font-weight: 600; color: var(--accent-blue); margin-top: 0.45rem; line-height: 1.25; letter-spacing: -0.01em;">
       {lang === 'en'
         ? 'First empirical observatory on institutional policies, public procurement, and AI governance across all 54 universities in Chile.'
         : lang === 'pt'
@@ -47,7 +51,7 @@ const docsIP = totalDocs - docsUes; // 6
     </span>
   </h1>
 
-  <p style="font-size: 1.1rem; color: var(--text-muted); max-width: 920px; line-height: 1.6; margin-bottom: 1.75rem;">
+  <p style="font-size: 1.05rem; color: var(--text-muted); max-width: 920px; line-height: 1.6; margin-bottom: 1.75rem;">
     {lang === 'en'
       ? 'Auditable public knowledge artifact mapping classroom policies, graduate thesis guidelines, authorship rules, privacy safeguards (Law No. 21,719), and public procurement contracts across Chile’s official university system.'
       : lang === 'pt'
@@ -55,19 +59,22 @@ const docsIP = totalDocs - docsUes; // 6
       : 'Artefacto de interés público que transforma un debate pedagógico difuso en una matriz empírica auditable: cataloga directrices de aula, tesis de postgrado, autoría, resguardo de privacidad (Ley N° 21.719) y contratos de compras públicas en todo el sistema universitario oficial chileno.'}
   </p>
 
-  <!-- BARRA DESTACADA: COMUNIDAD, LINKEDIN Y LISTA DE SUSCRIPCIÓN -->
-  <div style="background: linear-gradient(135deg, rgba(14, 116, 144, 0.08) 0%, rgba(59, 130, 246, 0.08) 50%, rgba(16, 185, 129, 0.08) 100%); border: 1px solid var(--border-color); border-left: 5px solid var(--accent-blue); border-radius: 12px; padding: 1.35rem 1.6rem; margin-bottom: 2rem; box-shadow: var(--shadow-sm);">
+  <!-- PANEL EDITORIAL INSTITUCIONAL: COMUNIDAD, LINKEDIN Y SUSCRIPCIÓN -->
+  <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-left: 4px solid var(--accent-blue); border-radius: 8px; padding: 1.35rem 1.6rem; margin-bottom: 2rem; box-shadow: var(--shadow-sm);">
     
-    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1.25rem;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1.5rem;">
       <div style="flex: 1; min-width: min(100%, 320px);">
-        <div style="display: flex; align-items: center; gap: 0.45rem; margin-bottom: 0.35rem;">
-          <span style="font-size: 1.2rem;">📬</span>
-          <strong style="font-size: 1.05rem; color: var(--text-main); font-family: var(--font-serif);">
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.35rem;">
+          <svg style="width: 18px; height: 18px; color: var(--accent-blue); flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+          <strong style="font-size: 1.02rem; color: var(--text-main); font-family: var(--font-serif);">
             {lang === 'en' 
               ? 'Stay updated on AI policy and university governance in Chile' 
               : lang === 'pt'
               ? 'Receba atualizações sobre políticas de IA e governança universitária'
-              : '¿Quieres recibir nuevos análisis, novedades de políticas de IA y gobernanza universitaria?'}
+              : 'Novedades de políticas de IA y gobernanza universitaria'}
           </strong>
         </div>
         <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0 0 0.85rem 0; line-height: 1.45;">
@@ -78,49 +85,53 @@ const docsIP = totalDocs - docsUes; // 6
             : 'Conectemos en LinkedIn con Eduardo Vega Toledo (Universidad de Chile), súmate a la lista de difusión o escríbeme directamente para colaboraciones académicas e institucionales:'}
         </p>
 
-        <!-- Botones y Contacto Directo -->
-        <div style="display: flex; gap: 0.65rem; align-items: center; flex-wrap: wrap;">
+        <!-- Botones y Contacto Directo con Micro-Íconos SVG -->
+        <div style="display: flex; gap: 0.55rem; align-items: center; flex-wrap: wrap;">
           <a 
             href="https://www.linkedin.com/in/evegat1989/" 
             target="_blank" 
             rel="noopener noreferrer" 
             class="btn"
-            style="background: #0a66c2; color: #ffffff; font-weight: 600; font-size: 0.85rem; padding: 0.55rem 1rem; border-radius: 6px; text-decoration: none; display: inline-flex; align-items: center; gap: 0.45rem; box-shadow: var(--shadow-sm);"
+            style="background: #0a66c2; color: #ffffff; font-weight: 600; font-size: 0.82rem; padding: 0.45rem 0.9rem; border-radius: 4px; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; box-shadow: var(--shadow-sm);"
           >
-            <svg style="width: 14px; height: 14px; fill: currentColor;" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.67 1.67 0 0 0 0-3.34 1.67 1.67 0 0 0 0 3.34m1.4 9.74v-8.37H5.06v8.37h2.8z"/></svg>
-            {lang === 'en' ? 'Follow on LinkedIn →' : lang === 'pt' ? 'Seguir no LinkedIn →' : 'Seguir en LinkedIn →'}
+            <svg style="width: 14px; height: 14px; fill: currentColor;" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.67 1.67 0 0 0 0-3.34 1.67 1.67 0 0 0 0 3.34m1.4 9.74v-8.37H5.06v8.37h2.8z"/></svg>
+            {lang === 'en' ? 'Follow on LinkedIn' : lang === 'pt' ? 'Seguir no LinkedIn' : 'Seguir en LinkedIn'}
           </a>
 
           <a 
             href="mailto:evegat@uchile.cl?subject=Contacto%20Br%C3%BAjula%20IA%20Educaci%C3%B3n%20Superior" 
             class="btn btn-outline btn-sm"
-            style="font-size: 0.82rem; padding: 0.5rem 0.85rem; text-decoration: none;"
+            style="font-size: 0.8rem; padding: 0.45rem 0.8rem; text-decoration: none; display: inline-flex; align-items: center; gap: 0.35rem;"
           >
-            ✉️ {lang === 'en' ? 'Email Eduardo' : lang === 'pt' ? 'Escrever por e-mail' : 'Escribir a Eduardo'}
+            <svg style="width: 13px; height: 13px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            {lang === 'en' ? 'Email Eduardo' : lang === 'pt' ? 'Escrever por e-mail' : 'Escribir a Eduardo'}
           </a>
         </div>
       </div>
 
       <!-- Formulario Compacto de Suscripción -->
-      <div style="min-width: min(100%, 300px); background: var(--card-bg); padding: 1rem 1.15rem; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
-        <div style="font-size: 0.82rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.4rem;">
-          📥 {lang === 'en' ? 'Join the Dispatch List:' : lang === 'pt' ? 'Inscreva-se na lista:' : 'Anotarme en la lista de novedades:'}
-        </div>
+      <div style="min-width: min(100%, 300px); background: var(--card-alt); padding: 1rem 1.15rem; border-radius: 6px; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+        <label for="hero-quick-email" style="display: block; font-size: 0.8rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.4rem;">
+          {lang === 'en' ? 'Join the Dispatch List:' : lang === 'pt' ? 'Inscreva-se na lista:' : 'Lista de novedades y alertas:'}
+        </label>
         <form id="hero-quick-sub-form" style="display: flex; flex-direction: column; gap: 0.45rem;">
           <input 
             type="email" 
             id="hero-quick-email"
             required 
             placeholder={lang === 'en' ? 'name@university.edu' : lang === 'pt' ? 'nome@universidade.edu' : 'tu.correo@institucion.cl'}
-            style="width: 100%; padding: 0.5rem 0.75rem; border: 1px solid var(--border-color); border-radius: 6px; font-size: 0.84rem; background: var(--canvas-bg); color: var(--text-main);"
+            style="width: 100%; padding: 0.48rem 0.75rem; border: 1px solid var(--border-color); border-radius: 4px; font-size: 0.84rem; background: var(--card-bg); color: var(--text-main);"
           />
           <button 
             type="submit" 
             id="hero-quick-btn"
             class="btn btn-primary btn-sm" 
-            style="width: 100%; justify-content: center; font-size: 0.82rem; padding: 0.5rem 0.75rem;"
+            style="width: 100%; justify-content: center; font-size: 0.82rem; padding: 0.48rem 0.75rem;"
           >
-            {lang === 'en' ? 'Subscribe to Updates →' : lang === 'pt' ? 'Inscrever-se →' : 'Anotarme en la lista →'}
+            {lang === 'en' ? 'Subscribe to Updates' : lang === 'pt' ? 'Inscrever-se' : 'Anotarme en la lista'}
           </button>
           <div id="hero-quick-msg" style="font-size: 0.74rem; margin-top: 0.2rem; display: none;"></div>
         </form>
@@ -130,68 +141,82 @@ const docsIP = totalDocs - docsUes; // 6
 
   </div>
 
-  <!-- Autoría y Botones de Datos Abiertos -->
+  <!-- Autoría y Botones de Datos Abiertos (Sin Emojis) -->
   <div style="font-size: 0.85rem; color: var(--text-muted); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.85rem; margin-bottom: 1.75rem;">
     <div>
-      Iniciativa de investigación por <a href="https://www.linkedin.com/in/evegat1989/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-blue); font-weight: 600; text-decoration: none;">Eduardo Vega Toledo</a> (U. de Chile, <a href="mailto:evegat@uchile.cl" style="color: var(--accent-blue); text-decoration: underline;">evegat@uchile.cl</a> / <a href="mailto:eduardo@evegat.cl" style="color: var(--text-muted); text-decoration: underline;">eduardo@evegat.cl</a>) • CC BY 4.0
+      Iniciativa de investigación por <a href="https://www.linkedin.com/in/evegat1989/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-blue); font-weight: 600; text-decoration: none;">Eduardo Vega Toledo</a> (Universidad de Chile, <a href="mailto:evegat@uchile.cl" style="color: var(--accent-blue); text-decoration: underline;">evegat@uchile.cl</a> / <a href="mailto:eduardo@evegat.cl" style="color: var(--text-muted); text-decoration: underline;">eduardo@evegat.cl</a>) • CC BY 4.0
     </div>
 
-    <!-- Acceso a Descargas Abiertas con Compuerta -->
+    <!-- Acceso a Descargas Abiertas con Micro-Íconos SVG -->
     <div style="display: flex; gap: 0.45rem; align-items: center; flex-wrap: wrap;">
       <a 
         href="https://github.com/evegat/brujula-ia-edusuperior" 
         target="_blank" 
         rel="noopener noreferrer"
         class="btn btn-sm"
-        style="background: #24292f; color: #ffffff; font-size: 0.78rem; padding: 0.35rem 0.7rem; display: inline-flex; align-items: center; gap: 0.35rem; text-decoration: none;"
+        style="background: #24292f; color: #ffffff; font-size: 0.78rem; padding: 0.35rem 0.7rem; display: inline-flex; align-items: center; gap: 0.35rem; text-decoration: none; border-radius: 4px;"
       >
-        <svg style="width: 12px; height: 12px; fill: #e3b341;" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-        ⭐ GitHub
+        <svg style="width: 13px; height: 13px; fill: currentColor;" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        GitHub
       </a>
       <a 
         href="/matriz_54_universidades.csv" 
         data-download-gate="true"
         data-file-label="Matriz de 54 Universidades (.csv)"
         class="btn btn-outline btn-sm"
-        style="font-size: 0.78rem; padding: 0.35rem 0.65rem; text-decoration: none; color: var(--accent-green); border-color: var(--accent-green); font-weight: 600;"
-        title="Registro y descarga directa para Excel / SECPLA / VRA"
+        style="font-size: 0.78rem; padding: 0.35rem 0.65rem; text-decoration: none; color: var(--accent-green); border-color: rgba(5, 150, 105, 0.4); font-weight: 600; display: inline-flex; align-items: center; gap: 0.35rem; border-radius: 4px;"
+        title="Descarga directa para análisis estadístico y gestión institucional"
       >
-        📊 Matriz (.csv)
+        <svg style="width: 12px; height: 12px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+          <polyline points="14 2 14 8 20 8" />
+          <line x1="8" y1="13" x2="16" y2="13" />
+          <line x1="8" y1="17" x2="16" y2="17" />
+        </svg>
+        Matriz (.csv)
       </a>
       <a 
         href="/matriz_54_universidades.json" 
         data-download-gate="true"
         data-file-label="Matriz de 54 Universidades (.json)"
         class="btn btn-outline btn-sm"
-        style="font-size: 0.78rem; padding: 0.35rem 0.65rem; text-decoration: none;"
+        style="font-size: 0.78rem; padding: 0.35rem 0.65rem; text-decoration: none; display: inline-flex; align-items: center; gap: 0.35rem; border-radius: 4px;"
       >
-        📂 Datos (.json)
+        <svg style="width: 12px; height: 12px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20 7h-7L10 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2z" />
+        </svg>
+        Datos (.json)
       </a>
       <a 
         href="/llms.txt" 
         target="_blank" 
         class="btn btn-outline btn-sm"
-        style="font-size: 0.78rem; padding: 0.35rem 0.65rem; color: var(--accent-blue); border-color: var(--accent-blue); text-decoration: none;"
+        style="font-size: 0.78rem; padding: 0.35rem 0.65rem; color: var(--accent-blue); border-color: rgba(3, 105, 161, 0.4); text-decoration: none; display: inline-flex; align-items: center; gap: 0.35rem; border-radius: 4px;"
         title="Especificación abierta para Agentes y LLMs"
       >
-        🤖 llms.txt
+        <svg style="width: 12px; height: 12px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" />
+          <line x1="12" y1="16" x2="12" y2="12" />
+          <line x1="12" y1="8" x2="12.01" y2="8" />
+        </svg>
+        llms.txt
       </a>
     </div>
   </div>
 
-  <!-- Fila de Métricas / Features Clave de Alto Retorno -->
+  <!-- Fila de Métricas / KPIs Clave (Sin Emojis, con Tabular Nums) -->
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem;">
     
     <!-- Métrica 1: Cobertura Nacional -->
-    <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.15rem 1.25rem; border-top: 3px solid var(--accent-green);">
-      <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.35rem; letter-spacing: 0.5px;">
-        🏛️ {lang === 'en' ? 'National Overview (54 Universities)' : lang === 'pt' ? 'Panorama Nacional (54 Universidades)' : 'Radiografía Nacional (54 Universidades)'}
+    <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; padding: 1.15rem 1.25rem; border-top: 3px solid var(--accent-green);">
+      <div style="font-size: 0.74rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.35rem; letter-spacing: 0.05em;">
+        {lang === 'en' ? 'National Overview (54 Universities)' : lang === 'pt' ? 'Panorama Nacional (54 Universidades)' : 'Radiografía Nacional (54 Universidades)'}
       </div>
       <div style="display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.25rem;">
-        <span style="font-size: 1.85rem; font-weight: 700; font-family: var(--font-serif); color: var(--text-main); line-height: 1;">
+        <span style="font-size: 1.85rem; font-weight: 700; font-family: var(--font-serif); color: var(--text-main); line-height: 1; font-variant-numeric: tabular-nums;">
           {conInst} {lang === 'en' ? 'of' : lang === 'pt' ? 'de' : 'de'} {totalUes}
         </span>
-        <span style="font-size: 0.85rem; font-weight: 600; color: var(--accent-green);">
+        <span style="font-size: 0.85rem; font-weight: 600; color: var(--accent-green); font-variant-numeric: tabular-nums;">
           (59.3% {lang === 'en' ? 'with policy' : lang === 'pt' ? 'com política' : 'con política'})
         </span>
       </div>
@@ -201,12 +226,12 @@ const docsIP = totalDocs - docsUes; // 6
     </div>
 
     <!-- Métrica 2: Acervo Institucional -->
-    <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.15rem 1.25rem; border-top: 3px solid var(--accent-blue);">
-      <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.35rem; letter-spacing: 0.5px;">
-        📄 {lang === 'en' ? 'Analyzed Policy Documents' : lang === 'pt' ? 'Políticas e Diretrizes Analisadas' : 'Políticas & Directrices Institucionales'}
+    <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; padding: 1.15rem 1.25rem; border-top: 3px solid var(--accent-blue);">
+      <div style="font-size: 0.74rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.35rem; letter-spacing: 0.05em;">
+        {lang === 'en' ? 'Analyzed Policy Documents' : lang === 'pt' ? 'Políticas e Diretrizes Analisadas' : 'Políticas & Directrices Institucionales'}
       </div>
       <div style="display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.25rem;">
-        <span style="font-size: 1.85rem; font-weight: 700; font-family: var(--font-serif); color: var(--text-main); line-height: 1;">
+        <span style="font-size: 1.85rem; font-weight: 700; font-family: var(--font-serif); color: var(--text-main); line-height: 1; font-variant-numeric: tabular-nums;">
           {totalDocs}
         </span>
         <span style="font-size: 0.85rem; color: var(--text-muted);">
@@ -219,15 +244,15 @@ const docsIP = totalDocs - docsUes; // 6
     </div>
 
     <!-- Métrica 3: Trazabilidad Contractual Mercado Público -->
-    <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.15rem 1.25rem; border-top: 3px solid var(--accent-amber);">
-      <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.35rem; letter-spacing: 0.5px;">
-        💰 {lang === 'en' ? 'Public Procurement (State Ues Only)' : lang === 'pt' ? 'Compras Públicas (Só Estatais)' : 'Compras Públicas (Sólo Estatales)'}
+    <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; padding: 1.15rem 1.25rem; border-top: 3px solid var(--accent-amber);">
+      <div style="font-size: 0.74rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.35rem; letter-spacing: 0.05em;">
+        {lang === 'en' ? 'Public Procurement (State Ues Only)' : lang === 'pt' ? 'Compras Públicas (Só Estatais)' : 'Compras Públicas (Sólo Estatales)'}
       </div>
       <div style="display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.25rem;">
-        <span style="font-size: 1.85rem; font-weight: 700; font-family: var(--font-serif); color: var(--text-main); line-height: 1;">
+        <span style="font-size: 1.85rem; font-weight: 700; font-family: var(--font-serif); color: var(--text-main); line-height: 1; font-variant-numeric: tabular-nums;">
           85
         </span>
-        <span style="font-size: 0.85rem; color: var(--text-muted);">
+        <span style="font-size: 0.85rem; color: var(--text-muted); font-variant-numeric: tabular-nums;">
           registros (67 procesos en Mercado Público)
         </span>
       </div>
@@ -272,20 +297,20 @@ const docsIP = totalDocs - docsUes; // 6
         const data = await res.json();
         if (res.ok && data.success) {
           msg.style.display = 'block';
-          msg.style.color = '#10b981';
-          msg.textContent = '✓ ¡Anotado con éxito! Recibirás los próximos boletines.';
+          msg.style.color = '#059669';
+          msg.textContent = 'Registrado con éxito para recibir los próximos boletines.';
           input.value = '';
-          btn.textContent = '✓ Registrado';
+          btn.textContent = 'Registrado';
         } else {
           msg.style.display = 'block';
-          msg.style.color = '#ef4444';
+          msg.style.color = '#dc2626';
           msg.textContent = data.error || 'No pudimos registrar el correo. Intenta de nuevo.';
           btn.disabled = false;
           btn.textContent = originalText;
         }
       } catch (err) {
         msg.style.display = 'block';
-        msg.style.color = '#ef4444';
+        msg.style.color = '#dc2626';
         msg.textContent = 'Error de conexión. Intenta nuevamente.';
         btn.disabled = false;
         btn.textContent = originalText;

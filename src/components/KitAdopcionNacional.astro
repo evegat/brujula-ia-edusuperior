@@ -1,5 +1,6 @@
 ---
 // src/components/KitAdopcionNacional.astro
+// Kit de Adopción Normativa para Docentes y Rectorías — Sin AI-Slop ni letra de terminal
 import type { SupportedLang } from '../i18n/ui';
 import { useTranslations } from '../i18n/ui';
 import matrizData from '../../data/matriz_54_universidades.json';
@@ -19,9 +20,6 @@ const sinDoc = matrizData.filter(u => u.en_brecha).length; // 22
 const pctPrivacidad = ((conPrivacidad / totalUes) * 100).toFixed(1); // 24.1%
 const pctSinPriv = ((conDocSinPriv / totalUes) * 100).toFixed(1); // 35.2%
 const pctSinDoc = ((sinDoc / totalUes) * 100).toFixed(1); // 40.7%
-
-// Lista de universidades con cláusula de privacidad identificada en datos
-const uesConPrivacidad = matrizData.filter(u => u.dimensiones.privacidad_ley_21719).map(u => u.sigla || u.nombre);
 ---
 
 <section id="kit-adopcion" style="margin-bottom: 4.5rem; scroll-margin-top: 2rem;">
@@ -40,23 +38,35 @@ const uesConPrivacidad = matrizData.filter(u => u.dimensiones.privacidad_ley_217
       </p>
     </div>
 
-    <!-- Enlaces de Descarga Rápida -->
+    <!-- Enlaces de Descarga Rápida con Iconos SVG -->
     <div style="display:flex; gap:0.5rem; align-items:center; flex-wrap: wrap;">
       <a href="/kit_clausulas_docentes.md" download="kit_clausulas_ia_docentes.md" class="btn btn-primary btn-sm" style="font-size:0.82rem;">
+        <svg style="width:13px; height:13px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+          <polyline points="7 10 12 15 17 10" />
+          <line x1="12" y1="15" x2="12" y2="3" />
+        </svg>
         {t('kit.btn_download_clauses')}
       </a>
       <a href="/modelo_marco_orientaciones_ia_universidades.md" download="modelo_marco_ia_universidades_chile.md" class="btn btn-outline btn-sm" style="font-size:0.82rem;">
+        <svg style="width:13px; height:13px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+          <polyline points="14 2 14 8 20 8" />
+        </svg>
         {t('kit.btn_download_model')}
       </a>
     </div>
   </div>
 
   <!-- RADAR LEY N° 21.719: VIGENCIA OBLIGATORIA 1 DE DICIEMBRE DE 2026 -->
-  <div style="background:var(--card-bg); border:1px solid var(--border-color); border-radius:12px; padding:1.5rem; margin-bottom:2rem; box-shadow:var(--shadow-sm); border-top:4px solid var(--accent-amber);">
+  <div style="background:var(--card-bg); border:1px solid var(--border-color); border-radius:8px; padding:1.5rem; margin-bottom:2.25rem; box-shadow:var(--shadow-sm); border-top:3px solid var(--accent-amber);">
     
     <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1.25rem; margin-bottom:1.25rem;">
       <div>
-        <div style="font-size:0.78rem; font-weight:700; text-transform:uppercase; color:var(--accent-amber); margin-bottom:0.35rem; letter-spacing:0.5px;">
+        <div style="font-size:0.74rem; font-weight:700; text-transform:uppercase; color:var(--accent-amber); margin-bottom:0.35rem; letter-spacing:0.05em; display:flex; align-items:center; gap:0.4rem;">
+          <svg style="width:14px; height:14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+          </svg>
           {t('kit.radar_badge')}
         </div>
         <h3 style="font-size:1.25rem; margin-bottom:0.35rem;">
@@ -68,11 +78,11 @@ const uesConPrivacidad = matrizData.filter(u => u.dimensiones.privacidad_ley_217
       </div>
 
       <!-- Contador / Hito Temporal -->
-      <div style="background:rgba(217, 119, 6, 0.08); border:1px solid rgba(217, 119, 6, 0.25); padding:0.85rem 1.25rem; border-radius:8px; text-align:center;">
-        <div style="font-size:0.75rem; font-weight:700; text-transform:uppercase; color:var(--accent-amber); letter-spacing:0.5px;">
+      <div style="background:var(--card-alt); border:1px solid var(--border-color); padding:0.85rem 1.25rem; border-radius:6px; text-align:center;">
+        <div style="font-size:0.72rem; font-weight:700; text-transform:uppercase; color:var(--accent-amber); letter-spacing:0.05em;">
           {t('kit.radar_vigencia_title')}
         </div>
-        <div style="font-size:1.45rem; font-weight:700; font-family:var(--font-serif); color:var(--text-main);">
+        <div style="font-size:1.45rem; font-weight:700; font-family:var(--font-serif); color:var(--text-main); font-variant-numeric: tabular-nums;">
           {t('kit.radar_vigencia_date')}
         </div>
         <div style="font-size:0.74rem; color:var(--text-muted);">
@@ -84,9 +94,9 @@ const uesConPrivacidad = matrizData.filter(u => u.dimensiones.privacidad_ley_217
     <!-- Termómetro de Preparación Universitaria -->
     <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap:1rem; margin-bottom:1.25rem;">
       
-      <div style="background:rgba(5, 150, 105, 0.05); border:1px solid rgba(5, 150, 105, 0.2); padding:1rem; border-radius:8px;">
-        <div style="font-size:1.6rem; font-weight:700; color:var(--accent-green); font-family:var(--font-serif);">
-          {conPrivacidad} {lang === 'en' ? 'of' : lang === 'pt' ? 'de' : 'de'} {totalUes} <span style="font-size:0.85rem; font-weight:600;">({pctPrivacidad}%)</span>
+      <div style="background:var(--card-alt); border:1px solid var(--border-color); border-left:3px solid var(--accent-green); padding:1rem; border-radius:6px;">
+        <div style="font-size:1.5rem; font-weight:700; color:var(--accent-green); font-family:var(--font-serif); font-variant-numeric: tabular-nums;">
+          {conPrivacidad} {lang === 'en' ? 'of' : 'de'} {totalUes} <span style="font-size:0.82rem; font-weight:600;">({pctPrivacidad}%)</span>
         </div>
         <div style="font-weight:600; font-size:0.82rem; color:var(--text-main); margin-top:0.25rem;">
           {t('kit.card1_title')}
@@ -96,9 +106,9 @@ const uesConPrivacidad = matrizData.filter(u => u.dimensiones.privacidad_ley_217
         </div>
       </div>
 
-      <div style="background:rgba(217, 119, 6, 0.05); border:1px solid rgba(217, 119, 6, 0.2); padding:1rem; border-radius:8px;">
-        <div style="font-size:1.6rem; font-weight:700; color:var(--accent-amber); font-family:var(--font-serif);">
-          {conDocSinPriv} {lang === 'en' ? 'of' : lang === 'pt' ? 'de' : 'de'} {totalUes} <span style="font-size:0.85rem; font-weight:600;">({pctSinPriv}%)</span>
+      <div style="background:var(--card-alt); border:1px solid var(--border-color); border-left:3px solid var(--accent-amber); padding:1rem; border-radius:6px;">
+        <div style="font-size:1.5rem; font-weight:700; color:var(--accent-amber); font-family:var(--font-serif); font-variant-numeric: tabular-nums;">
+          {conDocSinPriv} {lang === 'en' ? 'of' : 'de'} {totalUes} <span style="font-size:0.82rem; font-weight:600;">({pctSinPriv}%)</span>
         </div>
         <div style="font-weight:600; font-size:0.82rem; color:var(--text-main); margin-top:0.25rem;">
           {t('kit.card2_title')}
@@ -108,9 +118,9 @@ const uesConPrivacidad = matrizData.filter(u => u.dimensiones.privacidad_ley_217
         </div>
       </div>
 
-      <div style="background:rgba(0, 0, 0, 0.03); border:1px solid var(--border-color); padding:1rem; border-radius:8px;">
-        <div style="font-size:1.6rem; font-weight:700; color:var(--text-muted); font-family:var(--font-serif);">
-          {sinDoc} {lang === 'en' ? 'of' : lang === 'pt' ? 'de' : 'de'} {totalUes} <span style="font-size:0.85rem; font-weight:600;">({pctSinDoc}%)</span>
+      <div style="background:var(--card-alt); border:1px solid var(--border-color); border-left:3px solid var(--text-muted); padding:1rem; border-radius:6px;">
+        <div style="font-size:1.5rem; font-weight:700; color:var(--text-muted); font-family:var(--font-serif); font-variant-numeric: tabular-nums;">
+          {sinDoc} {lang === 'en' ? 'of' : 'de'} {totalUes} <span style="font-size:0.82rem; font-weight:600;">({pctSinDoc}%)</span>
         </div>
         <div style="font-weight:600; font-size:0.82rem; color:var(--text-main); margin-top:0.25rem;">
           {t('kit.card3_title')}
@@ -122,274 +132,453 @@ const uesConPrivacidad = matrizData.filter(u => u.dimensiones.privacidad_ley_217
 
     </div>
 
-    <!-- Alerta Metodológica para Vicerrectorías Jurídicas -->
-    <div style="background:rgba(0,0,0,0.02); border-left:3px solid var(--accent-blue); padding:0.85rem 1rem; border-radius:0 6px 6px 0; font-size:0.82rem; color:var(--text-main); line-height:1.5;">
-      <strong>{lang === 'en' ? 'Preventive Guidance:' : lang === 'pt' ? 'Orientação Preventiva:' : 'Orientación Preventiva:'}</strong> {t('kit.preventive_alert')}
+    <!-- Alerta Preventiva de Aplicación Práctica -->
+    <div style="background:var(--card-alt); border-left:3px solid var(--accent-blue); padding:0.85rem 1.1rem; border-radius:4px; font-size:0.82rem; color:var(--text-main); line-height:1.5;">
+      <strong>{lang === 'en' ? 'Preventive warning:' : lang === 'pt' ? 'Aviso preventivo:' : 'Advertencia preventiva:'}</strong> {t('kit.preventive_alert')}
     </div>
 
   </div>
 
-  <!-- 4 REGLAS LISTAS PARA COPIAR EN TUS CLASES (UN CLIC) -->
-  <div style="margin-bottom: 2.5rem;">
-    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem;">
-      <div>
-        <h3 style="font-size: 1.35rem; margin: 0 0 0.25rem 0; font-family: var(--font-serif); color: var(--text-main);">
-          {t('kit.rules_section_title')}
-        </h3>
-        <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">
-          {t('kit.rules_section_desc')}
-        </p>
-      </div>
-      <span class="badge badge-green">Licencia Abierta CC BY 4.0</span>
+  <!-- SECCIÓN: CUATRO REGLAS DE APLICACIÓN DIRECTA EN SÍLABOS (FORMATO EDITORIAL) -->
+  <div style="margin-bottom:2.5rem;">
+    <div style="margin-bottom:1.25rem;">
+      <h3 style="font-size:1.35rem; margin-bottom:0.25rem; font-family:var(--font-serif);">
+        {t('kit.rules_section_title')}
+      </h3>
+      <p style="font-size:0.88rem; color:var(--text-muted); margin:0;">
+        {t('kit.rules_section_desc')}
+      </p>
     </div>
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr)); gap: 1.25rem;">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap:1.25rem;">
       
-      <!-- Bloque 1: Sílabo -->
-      <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-sm);">
+      <!-- Regla 1: Sílabo -->
+      <div class="card" style="display:flex; flex-direction:column; justify-content:space-between; padding:1.25rem;">
         <div>
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
             <span class="badge badge-blue">{lang === 'en' ? 'For Your Classes' : lang === 'pt' ? 'Para Suas Aulas' : 'Para tus Clases'}</span>
-            <span style="font-size: 0.74rem; color: var(--text-muted);">{lang === 'en' ? 'Course Syllabus' : lang === 'pt' ? 'Plano de Ensino' : 'Programa de Curso'}</span>
+            <span style="font-size:0.72rem; color:var(--text-muted); font-weight:600;">{lang === 'en' ? 'Course Syllabus' : lang === 'pt' ? 'Plano de Ensino' : 'Programa de Asignatura'}</span>
           </div>
-          <h4 style="font-size: 1.05rem; margin: 0 0 0.4rem 0; color: var(--text-main);">
+          <h4 style="font-size:1.02rem; margin:0 0 0.35rem 0; color:var(--text-main);">
             {lang === 'en' ? '1. Course Syllabus Policy' : lang === 'pt' ? '1. Cláusula para o Plano de Ensino' : '1. Regla para el Sílabo del Curso'}
           </h4>
-          <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0 0 0.75rem 0;">
-            {lang === 'en' ? 'Clearly defines permitted uses, mandatory prompt disclosure, and prohibits required paid tools.' : lang === 'pt' ? 'Define usos permitidos, dever de citar prompts e proíbe exigir ferramentas pagas.' : 'Define claramente qué se puede usar, la obligación de citar los prompts y prohíbe exigir herramientas de pago.'}
+          <p style="font-size:0.8rem; color:var(--text-muted); margin:0 0 0.75rem 0; line-height:1.4;">
+            {lang === 'en' ? 'Clearly defines permitted uses, mandatory prompt disclosure, and prohibits required paid tools.' : lang === 'pt' ? 'Define usos permitidos, dever de citar prompts e proíbe exigir ferramentas pagas.' : 'Define con claridad qué herramientas se autorizan, exige declarar prompts y prohíbe exigir plataformas de pago.'}
           </p>
-          <textarea id="texto-clausula-silabo" readonly rows="6" style="width: 100%; font-family: monospace; font-size: 0.75rem; padding: 0.6rem; border: 1px solid var(--border-color); border-radius: 4px; background: var(--canvas-bg); color: var(--text-main); resize: vertical; box-sizing: border-box;">### Política sobre Uso de IA en la Asignatura
-En este curso la IA generativa es un apoyo al aprendizaje que nunca sustituye el juicio crítico del estudiante.
-1. Usos permitidos: Lluvia de ideas, corrección de redacción y depuración de código (salvo cuando la evaluación mida esa habilidad básica).
-2. Declaración obligatoria: Todo trabajo debe incluir al pie: herramienta usada, prompts utilizados y cómo se validó el resultado.
-3. Integridad: Entregar texto o código generado íntegramente por IA como propio constituye falta grave.
-4. Equidad: Ninguna evaluación obligatoria exigirá herramientas de pago.</textarea>
+
+          <!-- Texto de la regla en formato pliego (Tipografía Sans limpia, no terminal) -->
+          <div id="texto-clausula-silabo" style="background:var(--card-alt); border:1px solid var(--border-color); border-radius:6px; padding:0.9rem; font-size:0.82rem; line-height:1.55; color:var(--text-main); white-space:pre-line;" set:html={lang === 'en' ? (
+`<strong>Course Policy on AI Usage</strong>
+In this course, generative AI is a learning support tool that never replaces critical student judgment.
+
+1. <strong>Permitted uses:</strong> Brainstorming, drafting improvements, and debugging code (except in assessments specifically measuring that baseline skill).
+2. <strong>Mandatory disclosure:</strong> All submitted work must include a brief declaration: tool used, main prompts, and human verification performed.
+3. <strong>Academic integrity:</strong> Submitting text or code entirely generated by AI as one's own work constitutes an academic integrity violation.
+4. <strong>Equity:</strong> No mandatory assessment will require paid-tier AI tools.`
+          ) : lang === 'pt' ? (
+`<strong>Política sobre Uso de IA na Disciplina</strong>
+Neste curso, a inteligência artificial generativa é um recurso de apoio à aprendizagem que nunca substitui o julgamento crítico do estudante.
+
+1. <strong>Usos permitidos:</strong> Exploração temática, aprimoramento de redação e depuração de código (salvo em avaliações que meçam expressamente essa competência básica).
+2. <strong>Declaração obrigatória:</strong> Todo trabalho deve declarar em nota de rodapé: ferramenta empregada, prompts principais e verificação humana realizada.
+3. <strong>Integridade acadêmica:</strong> Submeter texto ou código gerado integralmente por IA como de autoria própria constitui falta ética.
+4. <strong>Equidade formativa:</strong> Nenhuma avaliação obrigatória exigirá ferramentas de IA sob modelo de assinatura paga.`
+          ) : (
+`<strong>Política sobre Uso de IA en la Asignatura</strong>
+En este curso la inteligencia artificial generativa es una herramienta de apoyo al aprendizaje que nunca sustituye el juicio crítico del estudiante.
+
+1. <strong>Usos permitidos:</strong> Exploración temática, corrección de redacción y depuración de código (salvo en evaluaciones que midan expresamente esa competencia básica).
+2. <strong>Declaración obligatoria:</strong> Todo trabajo debe consignar al pie: herramienta empleada, prompts principales y verificación realizada sobre el resultado.
+3. <strong>Integridad académica:</strong> Presentar texto o código generado íntegramente por IA como elaboración propia constituye falta a la ética formativa.
+4. <strong>Equidad formativa:</strong> Ninguna evaluación obligatoria exigirá herramientas de IA bajo modelo de suscripción de pago.`
+          )}></div>
         </div>
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.75rem;">
-          <button type="button" class="btn btn-outline btn-sm btn-copiar-rapido" data-target="texto-clausula-silabo" style="font-size: 0.78rem;">
-            {t('kit.btn_copy')}
+
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.85rem; padding-top:0.65rem; border-top:1px solid var(--border-color);">
+          <button type="button" class="btn btn-outline btn-sm btn-copiar-clausula" data-target="texto-clausula-silabo" style="font-size:0.76rem;">
+            <svg style="width:13px; height:13px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+            </svg>
+            <span>{t('kit.btn_copy')}</span>
           </button>
-          <span class="copy-feedback-badge" style="font-size: 0.74rem; color: var(--accent-green); font-weight: 600; display: none;">{t('kit.copied')}</span>
+          <span class="copy-feedback-badge" data-msg-copied={t('kit.copied')} data-msg-error={lang === 'en' ? 'Select text' : lang === 'pt' ? 'Selecionar texto' : 'Seleccionar texto'} style="font-size:0.74rem; color:var(--accent-green); font-weight:600; display:none;">
+            ✓ {t('kit.copied')}
+          </span>
         </div>
       </div>
 
-      <!-- Bloque 2: Tesis -->
-      <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-sm);">
+      <!-- Regla 2: Tesis -->
+      <div class="card" style="display:flex; flex-direction:column; justify-content:space-between; padding:1.25rem;">
         <div>
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-            <span class="badge badge-amber">{lang === 'en' ? 'Graduation' : lang === 'pt' ? 'Titulação' : 'Titulación'}</span>
-            <span style="font-size: 0.74rem; color: var(--text-muted);">{lang === 'en' ? 'Theses & Dissertations' : lang === 'pt' ? 'Teses e Dissertações' : 'Tesis y Memorias'}</span>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span class="badge badge-amber">{lang === 'en' ? 'Graduation & Postgrad' : lang === 'pt' ? 'Titulação & Pós-graduação' : 'Titulación & Postgrado'}</span>
+            <span style="font-size:0.72rem; color:var(--text-muted); font-weight:600;">{lang === 'en' ? 'Theses & Dissertations' : lang === 'pt' ? 'Teses e Dissertações' : 'Tesis y Memorias'}</span>
           </div>
-          <h4 style="font-size: 1.05rem; margin: 0 0 0.4rem 0; color: var(--text-main);">
-            {lang === 'en' ? '2. Thesis & Degree Work Rule' : lang === 'pt' ? '2. Diretriz para Teses e Monografias' : '2. Regla para Tesis y Memorias de Título'}
+          <h4 style="font-size:1.02rem; margin:0 0 0.35rem 0; color:var(--text-main);">
+            {lang === 'en' ? '2. Theses & Degree Work Rule' : lang === 'pt' ? '2. Diretriz para Teses e Monografias' : '2. Regla para Tesis y Memorias de Título'}
           </h4>
-          <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0 0 0.75rem 0;">
-            {lang === 'en' ? 'Clarifies AI is not an author, prohibits delegating analysis, and empowers oral defense interrogation.' : lang === 'pt' ? 'Esclarece que a IA não é autora, veda delegar análises e faculta arguição oral pela banca.' : 'Aclara que la IA no es autor, prohíbe delegar el análisis y faculta a la comisión a interrogar oralmente.'}
+          <p style="font-size:0.8rem; color:var(--text-muted); margin:0 0 0.75rem 0; line-height:1.4;">
+            {lang === 'en' ? 'States that authorship is strictly human, prohibits delegating analysis, and empowers oral defense interrogation.' : lang === 'pt' ? 'Esclarece que a autoria é exclusivamente humana, veda delegar análises e faculta arguição oral pela banca.' : 'Establece que la autoría es exclusivamente humana, veda delegar análisis interpretativos y faculta a la comisión a interrogar oralmente.'}
           </p>
-          <textarea id="texto-clausula-tesis" readonly rows="6" style="width: 100%; font-family: monospace; font-size: 0.75rem; padding: 0.6rem; border: 1px solid var(--border-color); border-radius: 4px; background: var(--canvas-bg); color: var(--text-main); resize: vertical; box-sizing: border-box;">### Uso de IA en Trabajos de Grado y Titulación
-Según la Ley N° 17.336, la autoría es exclusivamente humana. La IA nunca podrá figurar como autora ni coautora.
-1. Transparencia: El uso de IA debe documentarse en la metodología en una "Declaración de Uso de IA".
-2. No delegación: Prohibido delegar en IA hipótesis, datos simulados o el análisis interpretativo central.
-3. Defensa oral: La comisión evaluadora está facultada para interrogar sobre cualquier fórmula, código o fuente del documento, debiendo el estudiante demostrar dominio directo.</textarea>
+
+          <div id="texto-clausula-tesis" style="background:var(--card-alt); border:1px solid var(--border-color); border-radius:6px; padding:0.9rem; font-size:0.82rem; line-height:1.55; color:var(--text-main); white-space:pre-line;" set:html={lang === 'en' ? (
+`<strong>AI Usage in Degree Theses and Dissertations</strong>
+In accordance with intellectual property regulations, authorship is strictly human. AI systems cannot be listed as authors or co-authors.
+
+1. <strong>Methodological transparency:</strong> AI usage must be explicitly documented in the methodology chapter through an AI Usage Declaration.
+2. <strong>No substantive delegation:</strong> Delegating hypothesis formulation, simulated empirical data, or primary findings interpretation to autonomous systems is strictly prohibited.
+3. <strong>Oral defense and traceability:</strong> The evaluation committee is fully empowered to examine any formula, code, or argument presented, requiring candidates to demonstrate direct individual mastery.`
+          ) : lang === 'pt' ? (
+`<strong>Uso de IA em Trabalhos de Conclusão e Teses</strong>
+Em conformidade com a legislação de propriedade intelectual, a autoria é estritamente humana. Sistemas de IA não podem figurar como autores ou coautores.
+
+1. <strong>Transparência metodológica:</strong> O uso de IA deve ser explicitamente documentado no capítulo metodológico mediante Declaração de Uso de IA.
+2. <strong>Não delegação substantiva:</strong> É proibido delegar em sistemas autônomos a formulação de hipóteses, dados empíricos simulados ou a interpretação central de resultados.
+3. <strong>Arguição oral e rastreabilidade:</strong> A comissão examinadora tem plena autoridade para examinar qualquer fórmula, código ou argumento apresentado, devendo o pós-graduando demonstrar domínio direto e individual.`
+          ) : (
+`<strong>Uso de IA en Trabajos de Grado y Titulación</strong>
+De conformidad con la Ley N° 17.336 sobre Propiedad Intelectual, la autoría es exclusivamente humana. La IA no puede figurar como autora ni coautora.
+
+1. <strong>Transparencia metodológica:</strong> El uso de IA debe documentarse explícitamente en el capítulo metodológico mediante una Declaración de Uso de IA.
+2. <strong>No delegación sustantiva:</strong> Queda prohibido delegar en sistemas autónomos la formulación de hipótesis, datos empíricos simulados o la interpretación central de resultados.
+3. <strong>Defensa oral y trazabilidad:</strong> La comisión evaluadora está plenamente facultada para examinar cualquier fórmula, código o argumento presentado, debiendo el postulante acreditar dominio directo e individual.`
+          )}></div>
         </div>
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.75rem;">
-          <button type="button" class="btn btn-outline btn-sm btn-copiar-rapido" data-target="texto-clausula-tesis" style="font-size: 0.78rem;">
-            {t('kit.btn_copy')}
+
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.85rem; padding-top:0.65rem; border-top:1px solid var(--border-color);">
+          <button type="button" class="btn btn-outline btn-sm btn-copiar-clausula" data-target="texto-clausula-tesis" style="font-size:0.76rem;">
+            <svg style="width:13px; height:13px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+            </svg>
+            <span>{t('kit.btn_copy')}</span>
           </button>
-          <span class="copy-feedback-badge" style="font-size: 0.74rem; color: var(--accent-green); font-weight: 600; display: none;">{t('kit.copied')}</span>
+          <span class="copy-feedback-badge" data-msg-copied={t('kit.copied')} data-msg-error={lang === 'en' ? 'Select text' : lang === 'pt' ? 'Selecionar texto' : 'Seleccionar texto'} style="font-size:0.74rem; color:var(--accent-green); font-weight:600; display:none;">
+            ✓ {t('kit.copied')}
+          </span>
         </div>
       </div>
 
-      <!-- Bloque 3: Privacidad Alumnos -->
-      <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-sm);">
+      <!-- Regla 3: Privacidad Alumnos -->
+      <div class="card" style="display:flex; flex-direction:column; justify-content:space-between; padding:1.25rem;">
         <div>
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-            <span class="badge badge-green">{lang === 'en' ? 'Legal & Privacy' : lang === 'pt' ? 'Legal e Privacidade' : 'Legal & Privacidad'}</span>
-            <span style="font-size: 0.74rem; color: var(--text-muted);">Ley N° 21.719</span>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span class="badge badge-green">{lang === 'en' ? 'Data Protection' : lang === 'pt' ? 'Proteção de Dados' : 'Protección de Datos'}</span>
+            <span style="font-size:0.72rem; color:var(--text-muted); font-weight:600;">{lang === 'en' ? 'Privacy Law (Chile)' : lang === 'pt' ? 'Lei de Proteção de Dados' : 'Ley N° 21.719'}</span>
           </div>
-          <h4 style="font-size: 1.05rem; margin: 0 0 0.4rem 0; color: var(--text-main);">
-            {lang === 'en' ? '3. Student Data Protection (Law 21,719)' : lang === 'pt' ? '3. Proteção de Dados de Estudantes (Lei 21.719)' : '3. Cuidado de Datos de Alumnos (Ley 21.719)'}
+          <h4 style="font-size:1.02rem; margin:0 0 0.35rem 0; color:var(--text-main);">
+            {lang === 'en' ? '3. Safeguarding Student Data' : lang === 'pt' ? '3. Proteção de Dados de Alunos' : '3. Resguardo de Datos de Alumnos (Ley 21.719)'}
           </h4>
-          <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0 0 0.75rem 0;">
-            {lang === 'en' ? 'Prohibits uploading names, student IDs, or grades to commercial AI platforms without enterprise agreements.' : lang === 'pt' ? 'Veda upload de nomes, IDs ou notas para plataformas comerciais de IA sem convênio corporativo.' : 'Prohíbe subir nombres, RUT o notas a ChatGPT u otras IA comerciales sin convenio corporativo de privacidad.'}
+          <p style="font-size:0.8rem; color:var(--text-muted); margin:0 0 0.75rem 0; line-height:1.4;">
+            {lang === 'en' ? 'Prohibits uploading names, student IDs, or grades to commercial AI platforms without enterprise privacy agreements.' : lang === 'pt' ? 'Veda upload de nomes, matrículas ou notas para plataformas de IA sem convênio corporativo.' : 'Prohíbe subir nombres, RUT o notas a servicios comerciales de IA sin convenio corporativo institucional con garantías de privacidad.'}
           </p>
-          <textarea id="texto-clausula-privacidad" readonly rows="6" style="width: 100%; font-family: monospace; font-size: 0.75rem; padding: 0.6rem; border: 1px solid var(--border-color); border-radius: 4px; background: var(--canvas-bg); color: var(--text-main); resize: vertical; box-sizing: border-box;">### Resguardo de Datos Personales de Estudiantes (Ley N° 21.719)
-1. Prohibición estricta: Docentes y ayudantes no podrán subir nóminas, nombres, RUT, notas o datos personales a plataformas de IA comerciales o abiertas sin convenio corporativo institucional.
-2. Anonimización: Cualquier respuesta o caso utilizado para generar rúbricas debe anonimizarse irreversiblemente de forma previa.
-3. Exigibilidad: Esta obligación rige con fuerza de ley obligatoria a contar del 1 de diciembre de 2026.</textarea>
+
+          <div id="texto-clausula-privacidad" style="background:var(--card-alt); border:1px solid var(--border-color); border-radius:6px; padding:0.9rem; font-size:0.82rem; line-height:1.55; color:var(--text-main); white-space:pre-line;" set:html={lang === 'en' ? (
+`<strong>Safeguarding Student Personal Data (Law No. 21,719)</strong>
+1. <strong>Prohibition of unregulated transfer:</strong> Faculty and teaching assistants may not upload student rosters, names, IDs, grades, or personal records to open commercial AI platforms without institutional confidentiality and closed processing agreements.
+2. <strong>Prior anonymization:</strong> Any student work sample or response utilized to draft rubrics or feedback must be subject to irreversible prior anonymization.
+3. <strong>Legal enforceability:</strong> This requirement aligns with the mandatory enforcement of Chilean Personal Data Protection Law No. 21,719, effective December 1, 2026.`
+          ) : lang === 'pt' ? (
+`<strong>Salvaguarda de Dados Pessoais de Estudantes (Lei Nº 21.719)</strong>
+1. <strong>Proibição de transferência não regulada:</strong> Professores e monitores não poderão carregar listas de chamada, nomes, números de documento, notas ou registros a plataformas comerciais de IA sem convênio institucional de confidencialidade.
+2. <strong>Anonimização prévia:</strong> Qualquer amostra de trabalho ou resposta utilizada para elaborar rubricas ou feedbacks deve ser irreversivelmente anonimizada.
+3. <strong>Exigibilidade legal:</strong> Essa salvaguarda alinha-se com a vigência obrigatória da Lei Nº 21.719 a contar de 1 de dezembro de 2026.`
+          ) : (
+`<strong>Resguardo de Datos Personales de Estudiantes (Ley N° 21.719)</strong>
+1. <strong>Prohibición de transferencia no regulada:</strong> El cuerpo docente y de ayudantía no podrá cargar nóminas, nombres, RUT, calificaciones ni antecedentes a plataformas de IA abiertas o comerciales que no cuenten con convenio institucional de confidencialidad y procesamiento cerrado.
+2. <strong>Anonimización previa:</strong> Cualquier muestra de trabajo o respuesta utilizada para elaborar rúbricas o retroalimentaciones debe ser sometida a anonimización irreversible.
+3. <strong>Exigibilidad legal:</strong> Este resguardo se alinea con las exigencias vinculantes de la Ley N° 21.719, cuya vigencia obligatoria rige a contar del 1 de diciembre de 2026.`
+          )}></div>
         </div>
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.75rem;">
-          <button type="button" class="btn btn-outline btn-sm btn-copiar-rapido" data-target="texto-clausula-privacidad" style="font-size: 0.78rem;">
-            {t('kit.btn_copy')}
+
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.85rem; padding-top:0.65rem; border-top:1px solid var(--border-color);">
+          <button type="button" class="btn btn-outline btn-sm btn-copiar-clausula" data-target="texto-clausula-privacidad" style="font-size:0.76rem;">
+            <svg style="width:13px; height:13px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+            </svg>
+            <span>{t('kit.btn_copy')}</span>
           </button>
-          <span class="copy-feedback-badge" style="font-size: 0.74rem; color: var(--accent-green); font-weight: 600; display: none;">{t('kit.copied')}</span>
+          <span class="copy-feedback-badge" data-msg-copied={t('kit.copied')} data-msg-error={lang === 'en' ? 'Select text' : lang === 'pt' ? 'Selecionar texto' : 'Seleccionar texto'} style="font-size:0.74rem; color:var(--accent-green); font-weight:600; display:none;">
+            ✓ {t('kit.copied')}
+          </span>
         </div>
       </div>
 
-      <!-- Bloque 4: Criterios Evaluativos -->
-      <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-sm);">
+      <!-- Regla 4: Criterios Evaluativos -->
+      <div class="card" style="display:flex; flex-direction:column; justify-content:space-between; padding:1.25rem;">
         <div>
-          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-            <span class="badge" style="background: rgba(139, 92, 246, 0.1); color: #8b5cf6; border: 1px solid rgba(139, 92, 246, 0.25);">{lang === 'en' ? 'Pedagogy' : lang === 'pt' ? 'Pedagogia' : 'Pedagogía'}</span>
-            <span style="font-size: 0.74rem; color: var(--text-muted);">{lang === 'en' ? 'Assessment Design' : lang === 'pt' ? 'Design de Avaliações' : 'Diseño de Pruebas'}</span>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <span class="badge badge-purple">{lang === 'en' ? 'Learning Assessment' : lang === 'pt' ? 'Avaliação de Aprendizagem' : 'Evaluación de Aprendizajes'}</span>
+            <span style="font-size:0.72rem; color:var(--text-muted); font-weight:600;">{lang === 'en' ? 'Assessment Design' : lang === 'pt' ? 'Design de Avaliações' : 'Diseño Evaluativo'}</span>
           </div>
-          <h4 style="font-size: 1.05rem; margin: 0 0 0.4rem 0; color: var(--text-main);">
+          <h4 style="font-size:1.02rem; margin:0 0 0.35rem 0; color:var(--text-main);">
             {lang === 'en' ? '4. Assessment Redesign Criteria' : lang === 'pt' ? '4. Critérios para Desenho Avaliativo' : '4. Criterios para Diseñar Evaluaciones'}
           </h4>
-          <p style="font-size: 0.8rem; color: var(--text-muted); margin: 0 0 0.75rem 0;">
-            {lang === 'en' ? 'Focuses on formative process and oral defense, strictly prohibiting sanctions based solely on AI detectors.' : lang === 'pt' ? 'Enfatiza o processo e defesas orais, vedando punir estudantes exclusivamente por detectores automáticos.' : 'Enseña a evaluar el proceso y la defensa oral, prohibiendo castigar alumnos usando detectores automáticos.'}
+          <p style="font-size:0.8rem; color:var(--text-muted); margin:0 0 0.75rem 0; line-height:1.4;">
+            {lang === 'en' ? 'Prioritizes formative processes and oral defense, strictly prohibiting sanctions based solely on automated AI detectors.' : lang === 'pt' ? 'Prioriza o processo formativo e a arguição oral, proibindo punições baseadas unicamente em detectores automáticos de IA.' : 'Prioriza el proceso formativo y la defensa oral, prohibiendo sancionar estudiantes con base exclusiva en detectores automáticos de IA.'}
           </p>
-          <textarea id="texto-clausula-evaluacion" readonly rows="6" style="width: 100%; font-family: monospace; font-size: 0.75rem; padding: 0.6rem; border: 1px solid var(--border-color); border-radius: 4px; background: var(--canvas-bg); color: var(--text-main); resize: vertical; box-sizing: border-box;">### Criterios Docentes para Evaluar con IA
-1. Evaluar el proceso: Privilegiar bitácoras de trabajo, borradores intermedios y defensas orales cortas por sobre informes estáticos.
-2. Prohibición de detectores automáticos de IA: Dada su alta tasa comprobada de falsos positivos, ninguna sanción podrá basarse únicamente en detectores automáticos.
-3. Buena fe formativa: Ante sospechas de copia indebida, la primera instancia será siempre una entrevista pedagógica personal.</textarea>
+
+          <div id="texto-clausula-evaluacion" style="background:var(--card-alt); border:1px solid var(--border-color); border-radius:6px; padding:0.9rem; font-size:0.82rem; line-height:1.55; color:var(--text-main); white-space:pre-line;" set:html={lang === 'en' ? (
+`<strong>Faculty Guidelines for Assessment in the Age of AI</strong>
+1. <strong>Assess the learning journey:</strong> Emphasize work logs, progressive drafts, methodological rationale, and brief oral defenses over static takeaway reports.
+2. <strong>Prohibition of automated detectors:</strong> Given documented high rates of false positives and linguistic bias, no disciplinary sanction or failing grade may be based solely on automated AI detectors.
+3. <strong>Formative good faith:</strong> In the event of suspected undisclosed AI usage, the first formal recourse must always be a direct, formative pedagogical conversation between instructor and student.`
+          ) : lang === 'pt' ? (
+`<strong>Critérios Docentes para Avaliar no Contexto da IA</strong>
+1. <strong>Avaliar o processo de aprendizagem:</strong> Valorizar diários de bordo, rascunhos sequenciais, justificativas metodológicas e breves defesas orais em vez de relatórios estáticos.
+2. <strong>Proibição de detectores automáticos:</strong> Dada a alta taxa comprovada de falsos positivos e vieses linguísticos, nenhuma sanção ou reprovação poderá fundamentar-se exclusivamente em detectores automáticos de IA.
+3. <strong>Princípio da boa-fé formativa:</strong> Diante de indícios de uso não declarado, a primeira medida formal será sempre uma entrevista pedagógica direta entre o professor e o estudante.`
+          ) : (
+`<strong>Criterios Docentes para Evaluar en Contexto de IA</strong>
+1. <strong>Evaluar el proceso de construcción:</strong> Privilegiar bitácoras de trabajo, borradores secuenciales, justificaciones metodológicas y defensas orales breves por sobre informes estáticos domiciliarios.
+2. <strong>Prohibición de detectores automáticos:</strong> Dada su documentada tasa de falsos positivos y sesgos lingüísticos, ninguna sanción ni calificación reprobatoria podrá fundamentarse únicamente en detectores automáticos de IA.
+3. <strong>Principio de buena fe formativa:</strong> Ante inconsistencias o sospecha fundada de uso no declarado, la primera instancia formal será siempre una entrevista formativa y pedagógica directa entre el docente y el estudiante.`
+          )}></div>
         </div>
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.75rem;">
-          <button type="button" class="btn btn-outline btn-sm btn-copiar-rapido" data-target="texto-clausula-evaluacion" style="font-size: 0.78rem;">
-            {t('kit.btn_copy')}
+
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.85rem; padding-top:0.65rem; border-top:1px solid var(--border-color);">
+          <button type="button" class="btn btn-outline btn-sm btn-copiar-clausula" data-target="texto-clausula-evaluacion" style="font-size:0.76rem;">
+            <svg style="width:13px; height:13px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+            </svg>
+            <span>{t('kit.btn_copy')}</span>
           </button>
-          <span class="copy-feedback-badge" style="font-size: 0.74rem; color: var(--accent-green); font-weight: 600; display: none;">{t('kit.copied')}</span>
+          <span class="copy-feedback-badge" data-msg-copied={t('kit.copied')} data-msg-error={lang === 'en' ? 'Select text' : lang === 'pt' ? 'Selecionar texto' : 'Seleccionar texto'} style="font-size:0.74rem; color:var(--accent-green); font-weight:600; display:none;">
+            ✓ {t('kit.copied')}
+          </span>
         </div>
       </div>
 
     </div>
   </div>
 
-  <!-- PLANTILLA MARCO ABIERTA (DESCARGABLE Y COPIABLE) -->
-  <div style="background:var(--card-bg); border:1px solid var(--border-color); border-radius:12px; padding:1.5rem; box-shadow:var(--shadow-sm); border-top:4px solid var(--accent-green);">
+  <!-- PLANTILLA MARCO INSTITUCIONAL: PLIEGO REDACTADO (SIN TEXTAREA MONOSPACE) -->
+  <div style="background:var(--card-bg); border:1px solid var(--border-color); border-radius:8px; padding:1.5rem; box-shadow:var(--shadow-sm); border-top:3px solid var(--accent-green);">
     
-    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1.25rem;">
+    <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1rem; margin-bottom:1.25rem;">
       <div>
-        <div style="font-size:0.78rem; font-weight:700; text-transform:uppercase; color:var(--accent-green); margin-bottom:0.25rem; letter-spacing:0.5px;">
-          📄 Modelo Marco Institucional
+        <div style="font-size:0.74rem; font-weight:700; text-transform:uppercase; color:var(--accent-green); margin-bottom:0.25rem; letter-spacing:0.05em;">
+          {lang === 'en' ? 'Institutional Framework Model' : lang === 'pt' ? 'Modelo de Marco Institucional' : 'Modelo Marco Institucional'}
         </div>
         <h3 style="font-size:1.25rem; margin-bottom:0.25rem;">
-          Lineamientos de IA para la Docencia Universitaria
+          {lang === 'en' ? 'AI Guidelines for University Teaching' : lang === 'pt' ? 'Diretrizes de IA para o Ensino Superior' : 'Lineamientos de IA para la Docencia Universitaria'}
         </h3>
         <p style="font-size:0.86rem; color:var(--text-muted); margin:0;">
-          Redacción jurídica estándar en formato de Resolución de Rectoría / Vicerrectoría, construida sobre el consenso de las 32 normativas chilenas vigentes.
+          {lang === 'en' ? 'Reference regulatory structure for Rectorate or Academic Vice-Rectorate resolutions, based on empirical consensus from 32 instruments in Chile.' : lang === 'pt' ? 'Estrutura regulatória de referência para Resoluções de Reitoria ou Pró-Reitoria Acadêmica, baseada no consenso empírico dos 32 instrumentos vigentes no Chile.' : 'Estructura normativa de referencia para Resoluciones de Rectoría o Vicerrectoría Académica, basada en el consenso empírico de los 32 instrumentos vigentes en el país.'}
         </p>
       </div>
 
-      <div style="display:flex; gap:0.5rem;">
-        <span class="badge badge-green">Licencia Abierta CC BY 4.0</span>
-        <span class="badge badge-blue">Formato Markdown & Texto</span>
+      <div style="display:flex; gap:0.5rem; align-items:center;">
+        <span class="badge badge-green">{lang === 'en' ? 'Open License CC BY 4.0' : lang === 'pt' ? 'Licença Aberta CC BY 4.0' : 'Licencia Abierta CC BY 4.0'}</span>
+        <a href="/modelo_marco_orientaciones_ia_universidades.md" download="modelo_marco_ia_universidades_chile.md" class="btn btn-outline btn-sm" style="font-size:0.78rem;">
+          <svg style="width:12px; height:12px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          {lang === 'en' ? 'Download Markdown (.md)' : lang === 'pt' ? 'Baixar Markdown (.md)' : 'Descargar Markdown (.md)'}
+        </a>
       </div>
     </div>
 
-    <!-- Previsualización de los 6 Títulos Clave en Acordeón Ligero -->
-    <div style="display:flex; flex-direction:column; gap:0.75rem; margin-bottom:1.5rem;">
-      
-      <details style="background:var(--canvas-bg); border:1px solid var(--border-color); border-radius:6px; padding:0.75rem 1rem;" open>
-        <summary style="font-weight:600; font-size:0.9rem; cursor:pointer; color:var(--text-main);">
-          Título I: Principios Orientadores (Intencionalidad Pedagógica, Transparencia y Equidad)
-        </summary>
-        <p style="font-size:0.82rem; color:var(--text-muted); margin-top:0.5rem; line-height:1.5;">
-          La IA se define como un recurso de apoyo que complementa y nunca sustituye el juicio crítico humano. Prohíbe exigir para aprobar herramientas de IA con suscripción de pago (garantía de gratuidad y equidad).
-        </p>
-      </details>
-
-      <details style="background:var(--canvas-bg); border:1px solid var(--border-color); border-radius:6px; padding:0.75rem 1rem;">
-        <summary style="font-weight:600; font-size:0.9rem; cursor:pointer; color:var(--text-main);">
-          Título II: Integridad Académica y Regla Canónica de Autoría
-        </summary>
-        <p style="font-size:0.82rem; color:var(--text-muted); margin-top:0.5rem; line-height:1.5;">
-          De conformidad con la Ley N° 17.336 de Propiedad Intelectual, la IA carece de personalidad jurídica y moral, por lo que nunca puede figurar como autor ni coautor. Se establece la obligatoriedad de adjuntar una <em>Declaración de Uso de IA y Prompts</em> en evaluaciones.
-        </p>
-      </details>
-
-      <details style="background:var(--canvas-bg); border:1px solid var(--border-color); border-radius:6px; padding:0.75rem 1rem;">
-        <summary style="font-weight:600; font-size:0.9rem; cursor:pointer; color:var(--text-main);">
-          Título III: Criterios para el Diseño de Evaluaciones
-        </summary>
-        <p style="font-size:0.82rem; color:var(--text-muted); margin-top:0.5rem; line-height:1.5;">
-          Instruye a privilegiar evaluaciones procesuales, defensas orales y análisis situados por sobre exámenes memorísticos. <strong>Prohíbe usar detectores automáticos de IA como prueba única o determinante de plagio</strong>, dada su tasa de falsos positivos demostrada.
-        </p>
-      </details>
-
-      <details style="background:var(--canvas-bg); border:1px solid var(--border-color); border-radius:6px; padding:0.75rem 1rem;">
-        <summary style="font-weight:600; font-size:0.9rem; cursor:pointer; color:var(--text-main);">
-          Título IV: Protección de Datos y Privacidad (Ley N° 21.719)
-        </summary>
-        <p style="font-size:0.82rem; color:var(--text-muted); margin-top:0.5rem; line-height:1.5;">
-          Prohibición taxativa de alimentar plataformas de IA con datos personales de estudiantes o funcionarios (nombres, RUT, calificaciones, antecedentes de salud). Exigencia de anonimización irreversible en proyectos de investigación.
-        </p>
-      </details>
-
-      <details style="background:var(--canvas-bg); border:1px solid var(--border-color); border-radius:6px; padding:0.75rem 1rem;">
-        <summary style="font-weight:600; font-size:0.9rem; cursor:pointer; color:var(--text-main);">
-          Título V: Trabajos de Titulación, Tesis de Grado y Memorias
-        </summary>
-        <p style="font-size:0.82rem; color:var(--text-muted); margin-top:0.5rem; line-height:1.5;">
-          Autoriza el uso de IA como apoyo exploratorio o estilístico con declaración detallada en la metodología de la tesis. Prohíbe delegar hipótesis, datos simulados o interpretación de resultados. Faculta a la comisión a interrogar oralmente sobre la trazabilidad.
-        </p>
-      </details>
-
-      <details style="background:var(--canvas-bg); border:1px solid var(--border-color); border-radius:6px; padding:0.75rem 1rem;">
-        <summary style="font-weight:600; font-size:0.9rem; cursor:pointer; color:var(--text-main);">
-          Título VI: Régimen Disciplinario Proporcional y Buena Fe Formativa
-        </summary>
-        <p style="font-size:0.82rem; color:var(--text-muted); margin-top:0.5rem; line-height:1.5;">
-          Tipifica el fraude por IA no declarada. Establece la presunción de buena fe formativa: la primera instancia frente a sospechas es una entrevista pedagógica con el docente, reservando sumarios disciplinarios para fraude reiterado.
-        </p>
-      </details>
-
-    </div>
-
-    <!-- Caja de Código / Texto Completo Copiable -->
-    <div style="position:relative;">
-      <div style="display:flex; justify-content:space-between; align-items:center; background:var(--card-alt); padding:0.6rem 1rem; border-radius:6px 6px 0 0; border:1px solid var(--border-color); border-bottom:none;">
-        <span style="font-size:0.76rem; font-weight:700; color:var(--text-muted); text-transform:uppercase;">
-          Texto Completo del Modelo (Listo para copiar y adaptar)
+    <!-- Visor de Pliego Normativo con Tipografía Proporcional Limpia -->
+    <div style="border:1px solid var(--border-color); border-radius:6px; background:var(--card-alt); overflow:hidden;">
+      <div style="display:flex; justify-content:space-between; align-items:center; padding:0.6rem 1rem; border-bottom:1px solid var(--border-color); background:rgba(0,0,0,0.02);">
+        <span style="font-size:0.74rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.04em;">
+          {lang === 'en' ? 'Framework Resolution Structure' : lang === 'pt' ? 'Estrutura da Resolução Marco' : 'Estructura de la Resolución Marco'}
         </span>
-        <span id="copy-status" style="font-size:0.76rem; color:var(--accent-green); font-weight:600; display:none;">
-          ✓ ¡Copiado al portapapeles!
-        </span>
+        <button type="button" id="btn-copiar-modelo" 
+          data-msg-copied={lang === 'en' ? '✓ Copied!' : lang === 'pt' ? '✓ Copiado!' : '✓ ¡Copiado!'}
+          data-msg-error={lang === 'en' ? 'Error copying' : lang === 'pt' ? 'Erro ao copiar' : 'Error al copiar'}
+          class="btn btn-outline btn-sm" style="font-size:0.76rem; padding:0.25rem 0.6rem;">
+          <svg style="width:12px; height:12px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+          </svg>
+          <span id="copy-modelo-text">{lang === 'en' ? 'Copy Full Resolution' : lang === 'pt' ? 'Copiar Resolução Completa' : 'Copiar Resolución Completa'}</span>
+        </button>
       </div>
-      <textarea 
-        id="textarea-modelo-marco" 
-        readonly 
-        rows="12" 
-        style="width:100%; padding:1rem; font-family:monospace; font-size:0.78rem; line-height:1.5; background:var(--canvas-bg); color:var(--text-main); border:1px solid var(--border-color); border-radius:0 0 6px 6px; resize:vertical; box-sizing:border-box;"
-      ># MODELO MARCO DE LINEAMIENTOS INSTITUCIONALES PARA EL USO ÉTICO Y FORMATIVO DE LA INTELIGENCIA ARTIFICIAL EN LA DOCENCIA UNIVERSITARIA
 
-RESOLUCIÓN / DECRETO N° [XXX]
+      <div id="contenedor-texto-modelo" style="padding:1.25rem; max-height:420px; overflow-y:auto; font-size:0.84rem; line-height:1.65; color:var(--text-main); font-family:var(--font-sans);">
+        {lang === 'en' ? (
+          <div>
+            <div style="font-weight:700; margin-bottom:0.75rem; color:var(--accent-blue);">
+              RECTORATE / ACADEMIC VICE-RECTORATE RESOLUTION NO. [XXX]
+            </div>
+            <p style="color:var(--text-muted); margin-bottom:0.75rem;">
+              <strong>HAVING REGARD TO:</strong> The powers conferred by the Institutional Statute; Higher Education Law No. 21,091; Intellectual Property Law No. 17,336; and Personal Data Protection Law No. 21,719 (mandatory enforcement starting December 1, 2026).
+            </p>
+            <p style="color:var(--text-muted); margin-bottom:1rem;">
+              <strong>CONSIDERING:</strong> That generative artificial intelligence transforms learning, research, and creative processes; and that it is the institution's duty to safeguard critical thinking, human authorship, and student privacy.
+            </p>
 
-VISTOS:
-1. Las facultades conferidas por el Estatuto de la Universidad [Nombre].
-2. La Ley N° 21.091 sobre Educación Superior.
-3. La Ley N° 17.336 sobre Propiedad Intelectual.
-4. La Ley N° 21.719 sobre Protección de Datos Personales (vigente a contar del 1 de diciembre de 2026).
+            <div style="font-weight:700; margin:1rem 0 0.5rem 0; border-top:1px solid var(--border-color); padding-top:0.75rem;">
+              I HEREBY RESOLVE:
+            </div>
 
-CONSIDERANDO:
-1. Que la inteligencia artificial generativa representa una transformación en los procesos de creación y aprendizaje.
-2. Que la misión formativa exige cautelar el pensamiento crítico, la autoría humana y la responsabilidad ética.
+            <div style="margin-bottom:0.75rem;">
+              <strong>Title I: Guiding Principles</strong><br />
+              <em>Article 1. Purpose:</em> Governs the use of generative AI systems in undergraduate, postgraduate, and degree certification teaching.<br />
+              <em>Article 2. Core principles:</em> Pedagogical intentionality, active transparency, formative equity (strict ban on requiring paid-tier AI subscriptions), and strict student data privacy.
+            </div>
 
-RESUELVO:
+            <div style="margin-bottom:0.75rem;">
+              <strong>Title II: Academic Integrity and Authorship</strong><br />
+              <em>Article 3. Exclusively human authorship:</em> AI lacks legal or moral personhood and under no circumstances may be listed as an author or co-author.<br />
+              <em>Article 4. Disclosure requirement:</em> Requires incorporating an AI Usage Declaration in coursework stating tools used, primary prompts, and human verification performed.
+            </div>
 
-TÍTULO I: DISPOSICIONES GENERALES Y PRINCIPIOS
-Artículo 1. Objeto: Rige el uso de sistemas de IA en pregrado, postgrado y titulación.
-Artículo 2. Principios: Intencionalidad Pedagógica, Transparencia, Equidad (no exigir herramientas de pago) y Resguardo estricto de Privacidad.
+            <div style="margin-bottom:0.75rem;">
+              <strong>Title III: Assessment Design Criteria</strong><br />
+              <em>Article 5. Formative process assessment:</em> Faculty shall prioritize ongoing progress logs, viva voce examinations, and practical demonstrations. Disciplinary sanctions based solely on automated AI detectors are strictly prohibited.
+            </div>
 
-TÍTULO II: INTEGRIDAD ACADÉMICA Y AUTORÍA
-Artículo 3. Autoría: La IA carece de personalidad jurídica. En ningún caso puede figurar como autora ni coautora.
-Artículo 4. Declaración de Uso: Los estudiantes deberán adjuntar breve declaración de herramientas, prompts y finalidad de uso.
+            <div style="margin-bottom:0.75rem;">
+              <strong>Title IV: Data Protection and Privacy (Law No. 21,719)</strong><br />
+              <em>Article 6. Duty of confidentiality:</em> Uploading student rosters, IDs, academic transcripts, or personal data to commercial AI platforms without institutional enterprise data-protection agreements is strictly prohibited.
+            </div>
 
-TÍTULO III: DISEÑO DE EVALUACIONES
-Artículo 5. Criterios Docentes: Privilegiar evaluaciones de proceso y orales. Prohibición de usar detectores automáticos de IA como prueba única de plagio.
+            <div style="margin-bottom:0.75rem;">
+              <strong>Title V: Theses and Dissertations</strong><br />
+              <em>Article 7. Degree theses:</em> AI is permitted solely for exploratory research and drafting assistance, with mandatory methodology disclosure. Delegating hypothesis formulation, simulated data, or primary findings interpretation is prohibited.
+            </div>
 
-TÍTULO IV: PROTECCIÓN DE DATOS (LEY N° 21.719)
-Artículo 6. Deber de Confidencialidad: Prohibido ingresar nombres, RUT, notas o datos sensibles a modelos de IA comerciales o abiertos.
+            <div style="margin-bottom:0.75rem;">
+              <strong>Title VI: Disciplinary Framework and Academic Misconduct</strong><br />
+              <em>Article 8. Infractions:</em> Academic misconduct includes: 1) Submitting AI-generated work as original without disclosure; 2) Fabricating empirical data or citations via AI hallucinations; 3) Breaching institutional data privacy on external platforms.<br />
+              <em>Article 9. Good-faith pedagogy:</em> Initial response to suspected undisclosed AI use must always be a formative instructor-student conversation. Formal disciplinary hearings are reserved for willful fraud or repeated violations.
+            </div>
 
-TÍTULO V: TESIS Y MEMORIAS
-Artículo 7. Trabajos de Grado: Permitido para apoyo estilístico/búsqueda con declaración en metodología. Prohibido delegar hipótesis o interpretación. Comisión facultada a interrogar oralmente.
+            <div style="margin-bottom:0.75rem; border-top:1px dashed var(--border-color); padding-top:0.65rem;">
+              <strong>Transitional Provision</strong><br />
+              <em>Transitional Article:</em> The Academic Directorate shall establish a Standing AI Committee to review these guidelines annually and issue updated teaching advisories.
+            </div>
 
-TÍTULO VI: RÉGIMEN DISCIPLINARIO
-Artículo 8. Tipificación: Presentar producción no declarada constituye falta.
-Artículo 9. Buena Fe Formativa: La primera instancia es una entrevista formativa; procesos disciplinarios para fraude reiterado.
+            <div style="font-style:italic; font-size:0.8rem; color:var(--text-muted); margin-top:0.75rem;">
+              Be it communicated, published, and filed.
+            </div>
+          </div>
+        ) : lang === 'pt' ? (
+          <div>
+            <div style="font-weight:700; margin-bottom:0.75rem; color:var(--accent-blue);">
+              RESOLUÇÃO DE REITORIA / PRÓ-REITORIA ACADÊMICA Nº [XXX]
+            </div>
+            <p style="color:var(--text-muted); margin-bottom:0.75rem;">
+              <strong>VISTOS:</strong> As atribuições conferidas pelo Estatuto Institucional; a Lei Nº 21.091 de Ensino Superior; a Lei Nº 17.336 de Propriedade Intelectual; e a Lei Nº 21.719 de Proteção de Dados Pessoais (vigência obrigatória a contar de 1 de dezembro de 2026).
+            </p>
+            <p style="color:var(--text-muted); margin-bottom:1rem;">
+              <strong>CONSIDERANDO:</strong> Que a inteligência artificial generativa transforma a criação, a docência e a pesquisa; e que é dever institucional resguardar o pensamento crítico, a autoria humana e a privacidade dos estudantes.
+            </p>
 
-Artículo Transitorio: Constitución de Mesa Técnica Permanente de IA.
-Comuníquese, publíquese y archívese.</textarea>
+            <div style="font-weight:700; margin:1rem 0 0.5rem 0; border-top:1px solid var(--border-color); padding-top:0.75rem;">
+              RESOLVO:
+            </div>
+
+            <div style="margin-bottom:0.75rem;">
+              <strong>Título I: Princípios Orientadores</strong><br />
+              <em>Artigo 1º. Objeto:</em> Disciplina o uso de sistemas de IA generativa no ensino de graduação, pós-graduação e processos de titulação.<br />
+              <em>Artigo 2º. Princípios fundamentais:</em> Intencionalidade pedagógica, transparência ativa, equidade formativa (proibição expressa de exigir ferramentas pagas) e proteção rigorosa de dados pessoais.
+            </div>
+
+            <div style="margin-bottom:0.75rem;">
+              <strong>Título II: Integridade Acadêmica e Autoria</strong><br />
+              <em>Artigo 3º. Autoria exclusivamente humana:</em> A IA não possui personalidade jurídica ou moral e em hipótese alguma poderá figurar como autora ou coautora.<br />
+              <em>Artigo 4º. Declaração de Uso:</em> Exige inclusão em avaliações de Declaração de Uso de IA especificando ferramentas, prompts principais e verificação humana realizada.
+            </div>
+
+            <div style="margin-bottom:0.75rem;">
+              <strong>Título III: Critérios para o Desenho de Avaliações</strong><br />
+              <em>Artigo 5º. Avaliação processual:</em> Priorizam-se diários de bordo, defesas orais e demonstrações práticas. Veda-se a aplicação de penalidades baseadas exclusivamente em detectores automáticos de IA.
+            </div>
+
+            <div style="margin-bottom:0.75rem;">
+              <strong>Título IV: Proteção de Dados e Privacidade (Lei Nº 21.719)</strong><br />
+              <em>Artigo 6º. Dever de Confidencialidade:</em> Proíbe-se o envio de listas com nomes, números de matrícula, notas ou dados de alunos a plataformas comerciais sem convênio institucional corporativo de privacidade.
+            </div>
+
+            <div style="margin-bottom:0.75rem;">
+              <strong>Título V: Teses e Monografias de Conclusão</strong><br />
+              <em>Artigo 7º. Teses de graduação e pós:</em> Permite-se o uso de IA como apoio exploratório e de redação, devendo constar na metodologia. É vedado delegar formulação de hipóteses, dados simulados ou interpretação de resultados.
+            </div>
+
+            <div style="margin-bottom:0.75rem;">
+              <strong>Título VI: Regime Disciplinar e Faltas</strong><br />
+              <em>Artigo 8º. Tipificação de infrações:</em> Constitui falta ética: 1) Apresentar produções de IA como autorais sem declaração; 2) Forjar dados empíricos ou bibliografia por alucinações de IA; 3) Violar a privacidade institucional em plataformas públicas.<br />
+              <em>Artigo 9º. Boa-fé formativa:</em> Diante de suspeita de uso indevido, a primeira instância será sempre uma conversa pedagógica direta com o estudante. Procedimentos formais reservam-se para fraude intencional ou reincidência.
+            </div>
+
+            <div style="margin-bottom:0.75rem; border-top:1px dashed var(--border-color); padding-top:0.65rem;">
+              <strong>Disposição Transitória</strong><br />
+              <em>Artigo Transitório:</em> A Pró-Reitoria de Graduação constituirá Comissão Permanente de IA para revisar anualmente estas diretrizes e emitir orientações pedagógicas complementares.
+            </div>
+
+            <div style="font-style:italic; font-size:0.8rem; color:var(--text-muted); margin-top:0.75rem;">
+              Comunique-se, publique-se e arquive-se.
+            </div>
+          </div>
+        ) : (
+          <div>
+            <div style="font-weight:700; margin-bottom:0.75rem; color:var(--accent-blue);">
+              RESOLUCIÓN DE RECTORÍA / VICERRECTORÍA ACADÉMICA N° [XXX]
+            </div>
+            <p style="color:var(--text-muted); margin-bottom:0.75rem;">
+              <strong>VISTOS:</strong> Las facultades conferidas por el Estatuto Institucional; la Ley N° 21.091 sobre Educación Superior; la Ley N° 17.336 sobre Propiedad Intelectual; y la Ley N° 21.719 sobre Protección de Datos Personales (vigencia obligatoria a contar del 1 de diciembre de 2026).
+            </p>
+            <p style="color:var(--text-muted); margin-bottom:1rem;">
+              <strong>CONSIDERANDO:</strong> Que la inteligencia artificial generativa constituye un recurso que transforma los procesos de formación y estudio; y que es deber institucional resguardar el pensamiento crítico, la autoría humana y el debido cuidado de la privacidad estudiantil.
+            </p>
+
+            <div style="font-weight:700; margin:1rem 0 0.5rem 0; border-top:1px solid var(--border-color); padding-top:0.75rem;">
+              RESUELVO:
+            </div>
+
+            <div style="margin-bottom:0.75rem;">
+              <strong>Título I: Principios Orientadores</strong><br />
+              <em>Artículo 1.</em> Objeto: Rige la utilización de sistemas de IA generativa en la docencia de pregrado, postgrado y procesos de titulación.<br />
+              <em>Artículo 2.</em> Principios rectores: Intencionalidad pedagógica orientada, transparencia activa, equidad formativa (prohibición taxativa de exigir herramientas pagas para aprobar) y resguardo de datos personales.
+            </div>
+
+            <div style="margin-bottom:0.75rem;">
+              <strong>Título II: Integridad Académica y Autoría</strong><br />
+              <em>Artículo 3.</em> Autoría exclusivamente humana: La IA carece de personalidad jurídica o moral y en ningún caso podrá figurar como autora o coautora.<br />
+              <em>Artículo 4.</em> Declaración de Uso: Se establece la obligación de incorporar en evaluaciones una Declaración de Uso de IA que consigne herramientas, prompts y criterios de validación.
+            </div>
+
+            <div style="margin-bottom:0.75rem;">
+              <strong>Título III: Criterios para el Diseño de Evaluaciones</strong><br />
+              <em>Artículo 5.</em> Evaluación del proceso: El cuerpo docente priorizará evaluaciones continuas, bitácoras y defensas orales. Queda prohibido basar sanciones o reprobaciones exclusivamente en detectores automáticos de IA.
+            </div>
+
+            <div style="margin-bottom:0.75rem;">
+              <strong>Título IV: Protección de Datos y Privacidad (Ley N° 21.719)</strong><br />
+              <em>Artículo 6.</em> Deber de Confidencialidad: Se prohíbe ingresar nombres, RUT, antecedentes académicos o datos personales a modelos de IA que no cuenten con convenio institucional corporativo de privacidad garantizada.
+            </div>
+
+            <div style="margin-bottom:0.75rem;">
+              <strong>Título V: Tesis y Trabajos de Titulación</strong><br />
+              <em>Artículo 7.</em> Tesis de grado: El uso de IA se autoriza como apoyo exploratorio y de redacción, debiendo detallarse en la metodología. Prohibido delegar hipótesis, datos empíricos simulados o análisis sustantivos.
+            </div>
+
+            <div style="margin-bottom:0.75rem;">
+              <strong>Título VI: Régimen Disciplinario y Faltas</strong><br />
+              <em>Artículo 8. Tipificación de Infracciones.</em> Constituyen faltas a la integridad académica: 1) Presentar obras generadas por IA como propias sin declaración o mediando prohibición; 2) Falsificar datos empíricos, encuestas o bibliografía mediante alucinaciones de IA; 3) Vulnerar la privacidad institucional ingresando antecedentes confidenciales a servidores no corporativos.<br />
+              <em>Artículo 9. Presunción de Buena Fe Formativa y Gradualidad.</em> Ante la sospecha fundada de uso indebido de IA, la primera instancia será siempre una entrevista formativa y pedagógica entre el docente y el estudiante. Los procedimientos disciplinarios formales se reservan para conductas de fraude intencional reiterado o falsificación grave.
+            </div>
+
+            <div style="margin-bottom:0.75rem; border-top:1px dashed var(--border-color); padding-top:0.65rem;">
+              <strong>Disposición Transitoria</strong><br />
+              <em>Artículo Transitorio.</em> La Dirección de Docencia o Vicerrectoría Académica constituirá una Mesa Técnica Permanente de IA que revisará anualmente estos lineamientos y emitirá guías pedagógicas complementarias.
+            </div>
+
+            <div style="font-style:italic; font-size:0.8rem; color:var(--text-muted); margin-top:0.75rem;">
+              Comuníquese, publíquese y archívese.
+            </div>
+          </div>
+        )}
+      </div>
     </div>
 
   </div>
@@ -397,55 +586,107 @@ Comuníquese, publíquese y archívese.</textarea>
 </section>
 
 <script is:inline>
-  // Copiar modelo institucional completo
-  const copyBtn = document.getElementById('btn-copiar-modelo');
-  const copyStatus = document.getElementById('copy-status');
-  const textarea = document.getElementById('textarea-modelo-marco');
-
-  copyBtn?.addEventListener('click', async () => {
-    if (!textarea) return;
-    try {
-      await navigator.clipboard.writeText(textarea.value);
-      if (copyStatus) {
-        copyStatus.style.display = 'inline';
-        setTimeout(() => { copyStatus.style.display = 'none'; }, 3000);
-      }
-    } catch (e) {
-      textarea.select();
-      document.execCommand('copy');
-      if (copyStatus) {
-        copyStatus.style.display = 'inline';
-        setTimeout(() => { copyStatus.style.display = 'none'; }, 3000);
-      }
-    }
-  });
-
-  // Copiar micro-bloques individuales de 1 clic
-  const rapidButtons = document.querySelectorAll('.btn-copiar-rapido');
-  rapidButtons.forEach(btn => {
+  // Copiar micro-bloques individuales de reglas
+  document.querySelectorAll('.btn-copiar-clausula').forEach(btn => {
     btn.addEventListener('click', async () => {
       const targetId = btn.getAttribute('data-target');
       const targetEl = document.getElementById(targetId);
       const parent = btn.parentElement;
-      const feedback = parent?.querySelector('.copy-feedback-badge');
+      const feedback = parent ? parent.querySelector('.copy-feedback-badge') : null;
 
       if (!targetEl) return;
-      const textToCopy = targetEl.value || targetEl.textContent;
+      const textToCopy = targetEl.innerText || targetEl.textContent || '';
 
+      let success = false;
       try {
-        await navigator.clipboard.writeText(textToCopy);
-        if (feedback) {
-          feedback.style.display = 'inline';
-          setTimeout(() => { feedback.style.display = 'none'; }, 3000);
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(textToCopy.trim());
+          success = true;
+        } else {
+          throw new Error('Clipboard API no disponible');
         }
       } catch (err) {
-        targetEl.select();
-        document.execCommand('copy');
-        if (feedback) {
+        // Fallback mediante selección y execCommand
+        try {
+          const ta = document.createElement('textarea');
+          ta.value = textToCopy.trim();
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          ta.style.left = '-9999px';
+          document.body.appendChild(ta);
+          ta.focus();
+          ta.select();
+          success = document.execCommand('copy');
+          document.body.removeChild(ta);
+        } catch (_) {
+          success = false;
+        }
+      }
+
+      if (feedback) {
+        const msgCopied = feedback.getAttribute('data-msg-copied') || '✓ Copiado';
+        const msgError = feedback.getAttribute('data-msg-error') || 'Seleccionar texto';
+        if (success) {
           feedback.style.display = 'inline';
+          feedback.textContent = msgCopied.startsWith('✓') ? msgCopied : `✓ ${msgCopied}`;
+          feedback.style.color = 'var(--accent-green)';
+          setTimeout(() => { feedback.style.display = 'none'; }, 3000);
+        } else {
+          feedback.style.display = 'inline';
+          feedback.textContent = msgError;
+          feedback.style.color = 'var(--accent-amber)';
           setTimeout(() => { feedback.style.display = 'none'; }, 3000);
         }
       }
     });
+  });
+
+  // Copiar modelo marco institucional completo con fallback robusto
+  const copyModeloBtn = document.getElementById('btn-copiar-modelo');
+  const copyModeloText = document.getElementById('copy-modelo-text');
+  const modeloContent = document.getElementById('contenedor-texto-modelo');
+
+  copyModeloBtn?.addEventListener('click', async () => {
+    if (!modeloContent) return;
+    const text = modeloContent.innerText || modeloContent.textContent || '';
+    const originalText = copyModeloText ? copyModeloText.textContent : '';
+    let success = false;
+
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(text.trim());
+        success = true;
+      } else {
+        throw new Error('Clipboard API no disponible');
+      }
+    } catch (e) {
+      // Fallback seguro mediante textarea temporal
+      try {
+        const ta = document.createElement('textarea');
+        ta.value = text.trim();
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        ta.style.left = '-9999px';
+        document.body.appendChild(ta);
+        ta.focus();
+        ta.select();
+        success = document.execCommand('copy');
+        document.body.removeChild(ta);
+      } catch (errFallback) {
+        success = false;
+      }
+    }
+
+    if (copyModeloText) {
+      const msgCopied = copyModeloBtn?.getAttribute('data-msg-copied') || '✓ ¡Copiado!';
+      const msgError = copyModeloBtn?.getAttribute('data-msg-error') || 'Error al copiar';
+      if (success) {
+        copyModeloText.textContent = msgCopied;
+        setTimeout(() => { copyModeloText.textContent = originalText; }, 3000);
+      } else {
+        copyModeloText.textContent = msgError;
+        setTimeout(() => { copyModeloText.textContent = originalText; }, 3000);
+      }
+    }
   });
 </script>

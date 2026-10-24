@@ -31,8 +31,10 @@ const pageDesc = description || t('meta.description');
   <meta name="description" content={pageDesc} />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href={`https://brujulaiaedusuperior.evegat.cl${Astro.url.pathname}`} />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧭</text></svg>" />
-  <meta name="theme-color" content="#06182c" />
+  
+  <!-- Favicon sobrio en SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none' stroke='%230369a1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='16' cy='16' r='14'/><polygon points='16 8 20 16 16 24 12 16' fill='%230369a1'/></svg>" />
+  <meta name="theme-color" content="#082a46" />
 
   <!-- Open Graph / Redes / Buscadores -->
   <meta property="og:type" content="website" />
@@ -112,54 +114,72 @@ const pageDesc = description || t('meta.description');
 
   <style is:global>
     :root {
-      --sidebar-bg: #06182c;
-      --sidebar-text: #ffffff;
-      --canvas-bg: #faf8f5;
+      /* Tokens UDS v1.0 — Modo Claro */
+      --header-bg: #ffffff;
+      --canvas-bg: #f8fafc;
       --card-bg: #ffffff;
-      --card-alt: #f8fafc;
-      --text-main: #1e293b;
-      --text-muted: #64748b;
+      --card-alt: #f1f5f9;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-subtle: #64748b;
       --border-color: #e2e8f0;
+      --border-subtle: #f1f5f9;
       
-      --accent-blue: #1d4ed8;
-      --accent-blue-soft: rgba(29, 78, 216, 0.1);
+      --accent-blue: #0369a1;
+      --accent-blue-soft: rgba(3, 105, 161, 0.08);
+      --accent-blue-hover: #0284c7;
+      --accent-contrast: #ffffff;
+      
       --accent-green: #059669;
-      --accent-green-soft: rgba(5, 150, 105, 0.1);
+      --accent-green-soft: rgba(5, 150, 105, 0.08);
+      
       --accent-amber: #d97706;
-      --accent-amber-soft: rgba(217, 119, 6, 0.1);
+      --accent-amber-soft: rgba(217, 119, 6, 0.08);
+      
       --accent-red: #dc2626;
-      --accent-red-soft: rgba(220, 38, 38, 0.1);
-      --accent-purple: #7c3aed;
-      --accent-purple-soft: rgba(124, 58, 237, 0.1);
+      --accent-red-soft: rgba(220, 38, 38, 0.08);
+      
+      --accent-purple: #6d28d9;
+      --accent-purple-soft: rgba(109, 40, 217, 0.08);
 
       --font-serif: 'Newsreader', Georgia, serif;
       --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
-      --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      --font-mono: ui-monospace, 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+      --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.06), 0 4px 6px -4px rgba(0, 0, 0, 0.03);
+      --transition: all 0.15s ease-in-out;
     }
 
     [data-theme="dark"] {
-      --sidebar-bg: #030a12;
-      --sidebar-text: #e2e8f0;
-      --canvas-bg: #0b1120;
-      --card-bg: #131c31;
-      --card-alt: #1a2540;
-      --text-main: #f1f5f9;
+      /* Tokens UDS v1.0 — Modo Oscuro Institucional */
+      --header-bg: #070d18;
+      --canvas-bg: #050a12;
+      --card-bg: #0b1424;
+      --card-alt: #0f1c32;
+      --text-main: #f8fafc;
       --text-muted: #94a3b8;
-      --border-color: #24324d;
+      --text-subtle: #64748b;
+      --border-color: #1e293b;
+      --border-subtle: #131e30;
 
-      --accent-blue: #3b82f6;
-      --accent-blue-soft: rgba(59, 130, 246, 0.15);
-      --accent-green: #10b981;
-      --accent-green-soft: rgba(16, 185, 129, 0.15);
-      --accent-amber: #f59e0b;
-      --accent-amber-soft: rgba(245, 158, 11, 0.15);
-      --accent-red: #ef4444;
-      --accent-red-soft: rgba(239, 68, 68, 0.15);
-      --accent-purple: #a855f7;
-      --accent-purple-soft: rgba(168, 85, 247, 0.15);
+      --accent-blue: #38bdf8;
+      --accent-blue-soft: rgba(56, 189, 248, 0.12);
+      --accent-blue-hover: #7dd3fc;
+      --accent-contrast: #070d18;
+
+      --accent-green: #34d399;
+      --accent-green-soft: rgba(52, 211, 153, 0.12);
+
+      --accent-amber: #fbbf24;
+      --accent-amber-soft: rgba(251, 191, 36, 0.12);
+
+      --accent-red: #f87171;
+      --accent-red-soft: rgba(248, 113, 113, 0.12);
+
+      --accent-purple: #c084fc;
+      --accent-purple-soft: rgba(192, 132, 252, 0.12);
     }
 
     *, *::before, *::after {
@@ -170,26 +190,6 @@ const pageDesc = description || t('meta.description');
 
     html {
       scroll-behavior: smooth;
-    }
-
-    .skip-link {
-      position: absolute;
-      top: -100px;
-      left: 1rem;
-      background: var(--accent-blue);
-      color: #ffffff;
-      padding: 0.65rem 1.25rem;
-      z-index: 9999;
-      border-radius: 6px;
-      font-weight: 600;
-      text-decoration: none;
-      box-shadow: var(--shadow-md);
-      transition: top 0.2s ease;
-    }
-    .skip-link:focus {
-      top: 1rem;
-      color: #ffffff;
-      outline: 2px solid #ffffff;
     }
 
     body {
@@ -203,16 +203,44 @@ const pageDesc = description || t('meta.description');
       flex-direction: column;
     }
 
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 1rem;
+      background: var(--accent-blue);
+      color: var(--accent-contrast, #ffffff);
+      padding: 0.6rem 1.2rem;
+      z-index: 9999;
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: var(--shadow-md);
+      transition: top 0.2s ease;
+    }
+    .skip-link:focus {
+      top: 1rem;
+      outline: 2px solid #ffffff;
+    }
+
+    [data-theme="dark"] .skip-link,
+    [data-theme="dark"] .btn-accent,
+    [data-theme="dark"] .tab-btn.active,
+    [data-theme="dark"] .lang-btn.active {
+      color: #050a12 !important;
+      font-weight: 700 !important;
+    }
+
     h1, h2, h3, h4 {
       font-family: var(--font-serif);
       font-weight: 600;
       color: var(--text-main);
       line-height: 1.25;
+      letter-spacing: -0.015em;
     }
 
-    h1 { font-size: clamp(2rem, 4vw, 2.85rem); }
-    h2 { font-size: clamp(1.6rem, 3vw, 2.15rem); margin-bottom: 0.5rem; }
-    h3 { font-size: clamp(1.25rem, 2.5vw, 1.55rem); margin-bottom: 0.4rem; }
+    h1 { font-size: clamp(2.1rem, 4vw, 3rem); }
+    h2 { font-size: clamp(1.5rem, 2.8vw, 2.1rem); margin-bottom: 0.5rem; }
+    h3 { font-size: clamp(1.2rem, 2.2vw, 1.45rem); margin-bottom: 0.4rem; }
 
     a {
       color: var(--accent-blue);
@@ -223,57 +251,58 @@ const pageDesc = description || t('meta.description');
       text-decoration: underline;
     }
 
-    /* Utilitarios */
+    /* Utilidades UDS */
     .badge {
       display: inline-flex;
       align-items: center;
       gap: 0.35rem;
-      font-size: 0.76rem;
+      font-size: 0.74rem;
       font-weight: 600;
-      padding: 0.22rem 0.6rem;
-      border-radius: 9999px;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
       line-height: 1.3;
       white-space: nowrap;
+      border: 1px solid transparent;
     }
-    .badge-blue { background: var(--accent-blue-soft); color: var(--accent-blue); }
-    .badge-green { background: var(--accent-green-soft); color: var(--accent-green); }
-    .badge-amber { background: var(--accent-amber-soft); color: var(--accent-amber); }
-    .badge-red { background: var(--accent-red-soft); color: var(--accent-red); }
-    .badge-purple { background: var(--accent-purple-soft); color: var(--accent-purple); }
+    .badge-blue { background: var(--accent-blue-soft); color: var(--accent-blue); border-color: rgba(3, 105, 161, 0.2); }
+    .badge-green { background: var(--accent-green-soft); color: var(--accent-green); border-color: rgba(5, 150, 105, 0.2); }
+    .badge-amber { background: var(--accent-amber-soft); color: var(--accent-amber); border-color: rgba(217, 119, 6, 0.2); }
+    .badge-red { background: var(--accent-red-soft); color: var(--accent-red); border-color: rgba(220, 38, 38, 0.2); }
+    .badge-purple { background: var(--accent-purple-soft); color: var(--accent-purple); border-color: rgba(109, 40, 217, 0.2); }
+    .badge-subtle { background: var(--card-alt); color: var(--text-muted); border-color: var(--border-color); }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 0.5rem;
-      padding: 0.65rem 1.25rem;
-      border-radius: 8px;
+      gap: 0.45rem;
+      padding: 0.55rem 1.1rem;
+      border-radius: 6px;
       font-family: var(--font-sans);
-      font-size: 0.88rem;
+      font-size: 0.85rem;
       font-weight: 600;
       cursor: pointer;
       border: 1px solid transparent;
       transition: var(--transition);
       text-decoration: none;
       white-space: nowrap;
+      line-height: 1.4;
     }
     .btn:hover {
       text-decoration: none;
       transform: translateY(-1px);
     }
-    .btn-primary {
-      background: #06182c;
-      color: #ffffff;
-      border-color: #06182c;
+    .btn:active {
+      transform: translateY(0);
     }
-    [data-theme="dark"] .btn-primary {
-      background: #1e3a5f;
-      border-color: #2b4c7e;
-      color: #ffffff;
+    .btn-primary {
+      background: var(--text-main);
+      color: var(--canvas-bg);
+      border-color: var(--text-main);
     }
     .btn-primary:hover {
-      background: #102a43;
-      box-shadow: var(--shadow-md);
+      opacity: 0.92;
+      box-shadow: var(--shadow-sm);
     }
     .btn-outline {
       background: transparent;
@@ -285,240 +314,377 @@ const pageDesc = description || t('meta.description');
       border-color: var(--text-muted);
     }
     .btn-accent {
-      background: var(--accent-green);
-      color: #ffffff;
+      background: var(--accent-blue);
+      color: var(--accent-contrast, #ffffff);
+      border-color: var(--accent-blue);
     }
     .btn-accent:hover {
-      background: #047857;
-      box-shadow: var(--shadow-md);
+      background: var(--accent-blue-hover);
+      box-shadow: var(--shadow-sm);
     }
     .btn-sm {
-      padding: 0.4rem 0.75rem;
-      font-size: 0.8rem;
-      border-radius: 6px;
+      padding: 0.35rem 0.7rem;
+      font-size: 0.78rem;
+      border-radius: 4px;
     }
 
     .card {
       background: var(--card-bg);
       border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 1.5rem;
+      border-radius: 8px;
+      padding: 1.35rem;
       box-shadow: var(--shadow-sm);
       transition: var(--transition);
     }
     .card:hover {
-      border-color: rgba(59, 130, 246, 0.3);
+      border-color: rgba(3, 105, 161, 0.35);
       box-shadow: var(--shadow-md);
     }
 
-    /* Layout Principal con Sidebar Fijo en Desktop y Colapsable en Móvil */
-    .app-layout {
-      display: flex;
-      min-height: 100vh;
-      width: 100%;
-    }
-
-    .sidebar {
-      width: 290px;
-      background-color: var(--sidebar-bg);
-      color: var(--sidebar-text);
-      padding: 2.25rem 1.5rem;
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      height: 100vh;
-      overflow-y: auto;
-      z-index: 1000;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform 0.3s ease;
-    }
-
-    .sidebar-tab-btn {
-      color: #94a3b8;
-      padding: 0.55rem 0.75rem;
-      border-radius: 6px;
-      transition: all 0.2s ease;
-      display: block;
-      width: 100%;
-      text-align: left;
-      font-size: 0.9rem;
-      border: none;
-      background: none;
-      cursor: pointer;
-    }
-    .sidebar-tab-btn:hover {
-      color: #ffffff;
-      background: rgba(255, 255, 255, 0.08);
-    }
-    .sidebar-tab-btn.active {
-      color: #34d399 !important;
-      background: rgba(52, 211, 153, 0.12) !important;
-      font-weight: 600 !important;
-      border-left: 3px solid #34d399 !important;
-    }
-
-    .content-area {
-      margin-left: 290px;
-      flex: 1;
-      padding: 2.5rem 3.5rem;
-      max-width: 1380px;
-      width: calc(100% - 290px);
-      min-height: 100vh;
-      box-sizing: border-box;
-    }
-
-    /* Barra Superior para Móviles */
-    .mobile-header {
-      display: none;
-      align-items: center;
-      justify-content: space-between;
-      background: var(--sidebar-bg);
-      color: #ffffff;
-      padding: 0.9rem 1.25rem;
+    /* TOP NAVBAR INSTITUCIONAL */
+    .top-header {
       position: sticky;
       top: 0;
-      z-index: 1100;
-      box-shadow: var(--shadow-md);
-      width: 100%;
+      z-index: 1000;
+      background: var(--header-bg);
+      border-bottom: 1px solid var(--border-color);
+      box-shadow: var(--shadow-sm);
     }
-    .mobile-logo {
-      font-family: var(--font-serif);
-      font-weight: 700;
-      font-size: 1.2rem;
-      color: #ffffff;
+    .top-header-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: inherit;
+    }
+    .brand-group:hover {
       text-decoration: none;
     }
-    .mobile-toggle-btn {
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      color: #ffffff;
+    .brand-logo-icon {
+      width: 28px;
+      height: 28px;
+      color: var(--accent-blue);
+      flex-shrink: 0;
+    }
+    .brand-title {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+    }
+    .brand-subtitle {
+      font-size: 0.72rem;
+      color: var(--text-subtle);
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .nav-links-desktop {
+      display: flex;
+      align-items: center;
+    }
+    .nav-links-list {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-tab-link {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      font-weight: 500;
       padding: 0.45rem 0.75rem;
       border-radius: 6px;
-      font-size: 1.1rem;
       cursor: pointer;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+    .nav-tab-link:hover {
+      color: var(--text-main);
+      background: var(--card-alt);
+    }
+    .nav-tab-link.active {
+      color: var(--accent-blue);
+      background: var(--accent-blue-soft);
+      font-weight: 600;
     }
 
-    .sidebar-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 999;
-      backdrop-filter: blur(2px);
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
     }
-    .sidebar-overlay.active {
+    .theme-toggle-btn {
+      background: var(--card-alt);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition);
+      padding: 0;
+    }
+    .theme-toggle-btn:hover {
+      color: var(--text-main);
+      border-color: var(--text-muted);
+    }
+    .theme-icon {
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: var(--card-alt);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      width: 34px;
+      height: 34px;
+      border-radius: 6px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .mobile-drawer {
+      display: none;
+      border-top: 1px solid var(--border-color);
+      background: var(--header-bg);
+      padding: 1rem 1.25rem;
+    }
+    .mobile-drawer.open {
       display: block;
     }
+    .mobile-nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+    .mobile-nav-link {
+      width: 100%;
+      text-align: left;
+      padding: 0.55rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.88rem;
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .mobile-nav-link:hover, .mobile-nav-link.active {
+      background: var(--card-alt);
+      color: var(--text-main);
+      font-weight: 600;
+    }
 
-    @media (max-width: 1024px) {
-      .app-layout {
-        flex-direction: column;
+    /* CONTENEDOR PRINCIPAL FLUIDO Y CENTRADO */
+    .page-container {
+      max-width: 1240px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 2.25rem 1.5rem 4rem 1.5rem;
+      box-sizing: border-box;
+      flex: 1;
+    }
+
+    @media (min-width: 1181px) {
+      .mobile-drawer {
+        display: none !important;
       }
-      .mobile-header {
-        display: flex;
+    }
+
+    @media (max-width: 1180px) {
+      .nav-links-desktop {
+        display: none;
       }
-      .sidebar {
-        transform: translateX(-100%);
-        width: 280px;
-        box-shadow: 4px 0 24px rgba(0, 0, 0, 0.25);
+      .mobile-menu-btn {
+        display: inline-flex;
       }
-      .sidebar.open {
-        transform: translateX(0);
+      .top-header-inner {
+        padding: 0.65rem 1.25rem;
       }
-      .content-area {
-        margin-left: 0;
-        width: 100%;
-        max-width: 100%;
-        padding: 1.75rem 1.25rem;
-        box-sizing: border-box;
+      .page-container {
+        padding: 1.5rem 1.15rem 3rem 1.15rem;
       }
     }
 
     @media (max-width: 480px) {
-      .content-area {
-        padding: 1.25rem 0.9rem;
+      .top-header-inner {
+        padding: 0.5rem 0.75rem;
+        gap: 0.5rem;
+      }
+      .brand-group {
+        gap: 0.45rem;
+      }
+      .brand-title {
+        font-size: 1.05rem;
+      }
+      .brand-subtitle {
+        display: none;
+      }
+      .header-actions {
+        gap: 0.35rem;
+      }
+      .page-container {
+        padding: 1.25rem 0.85rem 2.5rem 0.85rem;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .top-header-inner {
+        padding: 0.4rem 0.45rem;
+        gap: 0.3rem;
+      }
+      .brand-group {
+        gap: 0.3rem;
+      }
+      .brand-logo-icon {
+        width: 22px;
+        height: 22px;
+      }
+      .brand-title {
+        font-size: 0.92rem;
+      }
+      .theme-toggle-btn {
+        width: 28px;
+        height: 28px;
+      }
+      .mobile-menu-btn {
+        width: 30px;
+        height: 30px;
+      }
+      .page-container {
+        padding: 1rem 0.5rem 2rem 0.5rem;
       }
     }
   </style>
 </head>
 <body>
   
-  <!-- Enlace accesible de salto para lectores de pantalla y teclado -->
-  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+  <a href="#main-content" class="skip-link">{t('skip_link')}</a>
 
-  <!-- Mobile Header Bar -->
-  <header class="mobile-header">
-    <a href="#inicio" class="mobile-logo">🧭 {t('brand.name')}</a>
-    <div style="display:flex; gap:0.5rem; align-items:center;">
-      <LanguageSelector currentLang={lang} />
-      <button id="theme-btn-mobile" class="mobile-toggle-btn" aria-label="Alternar modo visual claro u oscuro">🌓</button>
-      <button id="menu-toggle-btn" class="mobile-toggle-btn" aria-label="Abrir menú de navegación">☰</button>
+  <!-- Header Superior Institucional -->
+  <header class="top-header mobile-header">
+    <div class="top-header-inner">
+      
+      <!-- Brand & Isotipo SVG -->
+      <a href="#inicio" class="brand-group">
+        <svg class="brand-logo-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="16" cy="16" r="13" />
+          <polygon points="16 7 19.5 16 16 25 12.5 16" fill="currentColor" fill-opacity="0.85" />
+          <line x1="16" y1="3" x2="16" y2="5" />
+          <line x1="16" y1="27" x2="16" y2="29" />
+          <line x1="3" y1="16" x2="5" y2="16" />
+          <line x1="27" y1="16" x2="29" y2="16" />
+        </svg>
+        <div>
+          <div class="brand-title">{t('brand.name')}</div>
+          <div class="brand-subtitle">{t('brand.subtitle')} · {t('brand.observatory')}</div>
+        </div>
+      </a>
+
+      <!-- Navegación por Tabs en Desktop -->
+      <nav aria-label={t('nav.aria_sections')} class="nav-links-desktop">
+        <ul class="nav-links-list">
+          <li><button type="button" class="nav-tab-link active" data-tab="tab-matriz">{t('nav.universities')}</button></li>
+          <li><button type="button" class="nav-tab-link" data-tab="tab-kit">{t('nav.rules')}</button></li>
+          <li><button type="button" class="nav-tab-link" data-tab="tab-compras">{t('nav.procurement')}</button></li>
+          <li><button type="button" class="nav-tab-link" data-tab="tab-catalogo">{t('nav.catalog')}</button></li>
+          <li><button type="button" class="nav-tab-link" data-tab="tab-metodologia">{t('nav.methodology')}</button></li>
+        </ul>
+      </nav>
+
+      <!-- Acciones: Idioma, Modo Oscuro, Menú Móvil -->
+      <div class="header-actions">
+        <LanguageSelector currentLang={lang} />
+        
+        <!-- Toggle Modo Oscuro con SVG -->
+        <button id="theme-btn" class="theme-toggle-btn" aria-label={t('theme.toggle_title')} title={t('theme.toggle')}>
+          <!-- Luna (modo claro) -->
+          <svg id="icon-moon" class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+          <!-- Sol (modo oscuro) -->
+          <svg id="icon-sun" class="theme-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:none;">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+        </button>
+
+        <!-- Botón Menú Móvil -->
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label={t('nav.menu_open')} aria-expanded="false">
+          <svg style="width:18px; height:18px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <line x1="3" y1="18" x2="21" y2="18" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Cajón Desplegable Móvil -->
+    <div id="mobile-drawer" class="mobile-drawer">
+      <ul class="mobile-nav-list">
+        <li><button type="button" class="mobile-nav-link active" data-tab="tab-matriz">{t('nav.universities')}</button></li>
+        <li><button type="button" class="mobile-nav-link" data-tab="tab-kit">{t('nav.rules')}</button></li>
+        <li><button type="button" class="mobile-nav-link" data-tab="tab-compras">{t('nav.procurement')}</button></li>
+        <li><button type="button" class="mobile-nav-link" data-tab="tab-catalogo">{t('nav.catalog')}</button></li>
+        <li><button type="button" class="mobile-nav-link" data-tab="tab-metodologia">{t('nav.methodology')}</button></li>
+      </ul>
     </div>
   </header>
 
-  <div id="sidebar-overlay" class="sidebar-overlay"></div>
-
-  <div class="app-layout">
-    
-    <!-- Sidebar -->
-    <aside id="main-sidebar" class="sidebar">
-      <div>
-        <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.5rem;">
-          <a href="#inicio" style="display:block; text-decoration:none;">
-            <div style="font-family:var(--font-serif); font-size:1.55rem; font-weight:700; color:#ffffff; line-height:1.15;">
-              {t('brand.name')}
-            </div>
-            <div style="font-size:0.8rem; color:#94a3b8; margin-top:0.35rem; font-weight:500;">
-              {t('brand.subtitle')}
-            </div>
-          </a>
-          <LanguageSelector currentLang={lang} />
-        </div>
-
-        <div style="margin-bottom:1.75rem;">
-          <span class="badge badge-blue">{t('brand.badge')}</span>
-        </div>
-
-        <nav aria-label="Navegación principal">
-          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.45rem;">
-            <li><button type="button" class="nav-link sidebar-tab-btn active" data-tab="tab-matriz" style="background:none; border:none; width:100%; text-align:left; cursor:pointer; font-family:inherit; font-size:0.9rem;">{t('nav.universities')}</button></li>
-            <li><button type="button" class="nav-link sidebar-tab-btn" data-tab="tab-kit" style="background:none; border:none; width:100%; text-align:left; cursor:pointer; font-family:inherit; font-size:0.9rem;">{t('nav.rules')}</button></li>
-            <li><button type="button" class="nav-link sidebar-tab-btn" data-tab="tab-compras" style="background:none; border:none; width:100%; text-align:left; cursor:pointer; font-family:inherit; font-size:0.9rem;">{t('nav.procurement')}</button></li>
-            <li><button type="button" class="nav-link sidebar-tab-btn" data-tab="tab-catalogo" style="background:none; border:none; width:100%; text-align:left; cursor:pointer; font-family:inherit; font-size:0.9rem;">{t('nav.catalog')}</button></li>
-            <li><button type="button" class="nav-link sidebar-tab-btn" data-tab="tab-metodologia" style="background:none; border:none; width:100%; text-align:left; cursor:pointer; font-family:inherit; font-size:0.9rem;">{t('nav.methodology')}</button></li>
-          </ul>
-        </nav>
-      </div>
-
-      <div style="margin-top:2.5rem; border-top:1px solid rgba(255,255,255,0.1); padding-top:1.5rem;">
-        <button id="theme-btn-desktop" class="btn btn-outline" aria-label="Alternar modo visual claro u oscuro" style="width:100%; color:#ffffff; border-color:rgba(255,255,255,0.2); font-size:0.84rem; margin-bottom:1.25rem;">
-          {t('theme.toggle')}
-        </button>
-
-        <div style="font-size:0.75rem; color:#94a3b8; line-height:1.55;">
-          {t('footer.author_title')}<br />
-          <a href="https://www.linkedin.com/in/evegat1989/" target="_blank" rel="noopener noreferrer" style="color:#60a5fa; font-weight:600; text-decoration:none;">{t('footer.author_name')}</a><br />
-          {t('footer.affiliation')} • <a href="mailto:evegat@uchile.cl" style="color:#38bdf8; text-decoration:none;">evegat@uchile.cl</a><br />
-          <a href="mailto:eduardo@evegat.cl" style="color:#94a3b8; text-decoration:none;">eduardo@evegat.cl</a> • Octubre 2026
-        </div>
-      </div>
-    </aside>
-
-    <!-- Main Content Area -->
-    <main id="main-content" class="content-area">
-      <slot />
-    </main>
-
-  </div>
+  <!-- Contenedor Principal Centrado -->
+  <main id="main-content" class="page-container">
+    <slot />
+  </main>
 
   <script is:inline>
     // Inicialización y persistencia de Tema (Light / Dark)
     function applyTheme(theme) {
       document.documentElement.setAttribute('data-theme', theme);
       localStorage.setItem('theme', theme);
+      const moon = document.getElementById('icon-moon');
+      const sun = document.getElementById('icon-sun');
+      if (theme === 'dark') {
+        if (moon) moon.style.display = 'none';
+        if (sun) sun.style.display = 'block';
+      } else {
+        if (moon) moon.style.display = 'block';
+        if (sun) sun.style.display = 'none';
+      }
     }
 
     const savedTheme = localStorage.getItem('theme') || 
@@ -531,60 +697,61 @@ const pageDesc = description || t('meta.description');
       applyTheme(next);
     }
 
-    document.getElementById('theme-btn-desktop')?.addEventListener('click', toggleTheme);
-    document.getElementById('theme-btn-mobile')?.addEventListener('click', toggleTheme);
+    document.getElementById('theme-btn')?.addEventListener('click', toggleTheme);
 
-    // Menú móvil hamburguesa
-    const sidebar = document.getElementById('main-sidebar');
-    const overlay = document.getElementById('sidebar-overlay');
-    const menuBtn = document.getElementById('menu-toggle-btn');
+    // Menú móvil
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const drawer = document.getElementById('mobile-drawer');
 
-    function toggleMenu() {
-      const isOpen = sidebar?.classList.contains('open');
+    mobileBtn?.addEventListener('click', () => {
+      const isOpen = drawer?.classList.contains('open');
       if (isOpen) {
-        sidebar?.classList.remove('open');
-        overlay?.classList.remove('active');
+        drawer?.classList.remove('open');
+        mobileBtn.setAttribute('aria-expanded', 'false');
       } else {
-        sidebar?.classList.add('open');
-        overlay?.classList.add('active');
+        drawer?.classList.add('open');
+        mobileBtn.setAttribute('aria-expanded', 'true');
       }
-    }
+    });
 
-    menuBtn?.addEventListener('click', toggleMenu);
-    overlay?.addEventListener('click', toggleMenu);
-
-    // Cerrar sidebar al hacer clic en enlaces en móvil
-    document.querySelectorAll('.nav-link').forEach(link => {
+    // Cerrar drawer al hacer clic en un link móvil
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
       link.addEventListener('click', () => {
-        if (window.innerWidth <= 1024) {
-          sidebar?.classList.remove('open');
-          overlay?.classList.remove('active');
-        }
+        drawer?.classList.remove('open');
+        mobileBtn?.setAttribute('aria-expanded', 'false');
       });
     });
 
-    // Telemetría diagnóstica y monitoreo de excepciones no capturadas (Item 3)
+    // Resetear drawer móvil si se amplía a pantalla de escritorio
+    if (window.matchMedia) {
+      window.matchMedia('(min-width: 1181px)').addEventListener('change', (e) => {
+        if (e.matches && drawer) {
+          drawer.classList.remove('open');
+          mobileBtn?.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+
+    // Telemetría de diagnóstico (errores no capturados y promesas)
     window.addEventListener('error', (event) => {
-      const errorPayload = {
-        type: 'uncaught_error',
-        message: event.message,
-        filename: event.filename,
-        lineno: event.lineno,
-        timestamp: new Date().toISOString()
-      };
       if (typeof console !== 'undefined' && console.warn) {
-        console.warn('[Brújula IA Telemetría] Excepción no capturada observada:', errorPayload);
+        console.warn('[Brújula IA Telemetría] Excepción no capturada observada:', {
+          type: 'uncaught_error',
+          message: event.message,
+          filename: event.filename,
+          lineno: event.lineno,
+          timestamp: new Date().toISOString()
+        });
       }
     });
 
     window.addEventListener('unhandledrejection', (event) => {
-      const rejectPayload = {
-        type: 'unhandled_rejection',
-        reason: event.reason ? (event.reason.message || String(event.reason)) : 'Desconocido',
-        timestamp: new Date().toISOString()
-      };
       if (typeof console !== 'undefined' && console.warn) {
-        console.warn('[Brújula IA Telemetría] Promesa rechazada sin capturar:', rejectPayload);
+        console.warn('[Brújula IA Telemetría] Promesa rechazada sin capturar:', {
+          type: 'unhandled_rejection',
+          reason: event.reason ? (event.reason.message || String(event.reason)) : 'Desconocido',
+          timestamp: new Date().toISOString()
+        });
       }
     });
 
@@ -592,8 +759,8 @@ const pageDesc = description || t('meta.description');
     window.verComprasUniversidad = function(uniNombre) {
       if (!uniNombre) return;
 
-      // 1. Activar pestaña de compras (en navbar principal o sidebar)
-      const btnCompras = document.querySelector('.tab-btn[data-tab="tab-compras"]') || document.querySelector('.sidebar-tab-btn[data-tab="tab-compras"]');
+      // 1. Activar pestaña de compras (en navbar principal o header tabs)
+      const btnCompras = document.querySelector('.tab-btn[data-tab="tab-compras"]') || document.querySelector('.nav-tab-link[data-tab="tab-compras"]');
       if (btnCompras) {
         btnCompras.click();
       }
@@ -620,7 +787,7 @@ const pageDesc = description || t('meta.description');
         }
 
         // 3. Desplazar suavemente a la sección de compras
-        const comprasSec = document.getElementById('compras');
+        const comprasSec = document.getElementById('compras') || document.getElementById('tab-compras');
         if (comprasSec) {
           const navOffset = comprasSec.getBoundingClientRect().top + window.pageYOffset;
           window.scrollTo({ top: Math.max(0, navOffset - 25), behavior: 'smooth' });
@@ -639,25 +806,5 @@ const pageDesc = description || t('meta.description');
       }
     });
   </script>
-
-  <style>
-    .nav-link {
-      color: #cbd5e1;
-      text-decoration: none;
-      font-size: 0.9rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.45rem 0.65rem;
-      border-radius: 6px;
-      transition: var(--transition);
-    }
-    .nav-link:hover {
-      color: #ffffff;
-      background: rgba(255, 255, 255, 0.08);
-      text-decoration: none;
-    }
-  </style>
-
 </body>
 </html>

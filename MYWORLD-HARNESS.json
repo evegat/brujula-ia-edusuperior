@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "product_id": "P154",
+  "name": "brujulaiaedusuperior.evegat.cl",
+  "owner": "Eduardo Vega",
+  "myworld_project": "P154",
+  "kind": "static_site",
+  "lifecycle_stage": "production",
+  "risk": "low",
+  "data_classification": [
+    "public"
+  ],
+  "deployment": {
+    "state": "public",
+    "production_urls": [
+      "https://brujulaiaedusuperior.evegat.cl"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "default_branch": "master",
+    "remote_policy": "existing"
+  },
+  "commands": {
+    "quality": [
+      "npm test"
+    ],
+    "build": [
+      "npm run build"
+    ],
+    "test": [
+      "npm test"
+    ]
+  },
+  "critical_paths": [
+    "src",
+    "public",
+    "package.json"
+  ],
+  "forbidden_paths": [
+    ".env",
+    "credentials"
+  ],
+  "multi_agent": {
+    "isolation": "worktree",
+    "integration_owner": "Eduardo Vega"
+  },
+  "observability": {
+    "level": 1,
+    "domains": [
+      "technical",
+      "product"
+    ],
+    "monitors": [
+      {
+        "name": "P154 Brujula IA",
+        "type": "http",
+        "target": "https://brujulaiaedusuperior.evegat.cl",
+        "interval_seconds": 300,
+        "failure_threshold": 3
+      }
+    ]
+  },
+  "release": {
+    "backup_required": false,
+    "restore_test_required": false,
+    "rollback_required": true,
+    "rpo_hours": null,
+    "rto_hours": null
+  },
+  "evidence": {
+    "last_audit": null,
+    "pending_register": "MyWorld:harness/state/pending.ndjson"
+  }
+}

@@ -19,7 +19,7 @@
 
     <!-- Indicador del archivo a descargar -->
     <div id="dl-file-preview" style="background:var(--accent-blue-soft); border-left:3px solid var(--accent-blue); padding:0.6rem 0.85rem; border-radius:4px; font-size:0.82rem; color:var(--text-main); margin-bottom:1.1rem; display:flex; align-items:center; gap:0.45rem;">
-      <span>📥</span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
       <span>Archivo solicitado: <strong id="dl-file-name">matriz_54_universidades.csv</strong></span>
     </div>
 
@@ -129,7 +129,8 @@
       <div style="display:flex; justify-content:flex-end; gap:0.65rem; margin-top:0.35rem;">
         <button type="button" id="modal-dl-cancel-btn" class="btn btn-outline btn-sm">Cancelar</button>
         <button type="submit" id="modal-dl-submit-btn" class="btn btn-primary btn-sm" style="display:inline-flex; align-items:center; gap:0.35rem;">
-          📥 Confirmar y Descargar Archivo
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          Confirmar y Descargar Archivo
         </button>
       </div>
     </form>
@@ -284,7 +285,7 @@
 
         setTimeout(() => {
           dlSubmitBtn.disabled = false;
-          dlSubmitBtn.textContent = '📥 Confirmar y Descargar Archivo';
+          dlSubmitBtn.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Confirmar y Descargar Archivo';
           closeDownloadModal();
         }, 2200);
 
@@ -295,7 +296,7 @@
         dlFeedback.style.border = '1px solid var(--accent-red)';
         dlFeedback.textContent = data.error || 'Error al procesar el registro.';
         dlSubmitBtn.disabled = false;
-        dlSubmitBtn.textContent = '📥 Confirmar y Descargar Archivo';
+        dlSubmitBtn.innerHTML = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg> Confirmar y Descargar Archivo';
       }
     } catch (err) {
       dlFeedback.style.display = 'block';
