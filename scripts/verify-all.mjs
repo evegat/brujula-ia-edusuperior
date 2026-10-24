@@ -45,10 +45,10 @@ assert.strictEqual(duocEntries.length, 1, 'Duoc UC debe figurar en una ÚNICA po
 assert.strictEqual(duocEntries[0].total_docs, 2, 'Duoc UC debe consolidar 2 documentos normativos');
 console.log(`✓ Duoc UC unificado: posición única con 2 documentos (IMN: ${duocEntries[0].imn}/100)`);
 
-// 4. Verificar Compras Públicas (85 Licitaciones con URLs hacia Mercado Público)
-console.log('\n--- 4. Trazabilidad de Compras Públicas (85 Licitaciones) ---');
+// 4. Verificar Compras Públicas (81 Licitaciones y OCs con URLs hacia Mercado Público)
+console.log('\n--- 4. Trazabilidad de Compras Públicas (81 Compras) ---');
 const compras = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/compras_clasificadas.json'), 'utf-8'));
-assert.strictEqual(compras.length, 85, 'Debe haber exactamente 85 compras públicas clasificadas');
+assert.strictEqual(compras.length, 81, 'Debe haber exactamente 81 compras públicas clasificadas');
 const capas = new Set(compras.map(c => c.capa_funcional));
 assert.ok(capas.has('Infraestructura_Computo'), 'Debe existir capa Infraestructura_Computo');
 assert.ok(capas.has('Gestion_Backoffice'), 'Debe existir capa Gestion_Backoffice');
@@ -59,7 +59,7 @@ compras.forEach((c, idx) => {
   assert.ok(c.link && c.link.startsWith('http'), `Compra ${idx} (${c.nombre}) no tiene link funcional válido: ${c.link}`);
   assert.ok(c.link.includes('mercadopublico.cl'), `Compra ${idx} no apunta a mercadopublico.cl: ${c.link}`);
 });
-console.log(`✓ Compras Públicas verificadas: 85 contratos con links funcionales a mercadopublico.cl clasificados en 4 capas`);
+console.log(`✓ Compras Públicas verificadas: 81 contratos con links funcionales a mercadopublico.cl clasificados en 4 capas`);
 
 // 5. Verificar Citas Textuales con Número de Página, Acceso Dual y Hash SHA-256
 console.log('\n--- 5. Trazabilidad de Citas Textuales (Co-ocurrencia Estricta) ---');

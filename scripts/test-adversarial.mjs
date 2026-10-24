@@ -303,7 +303,7 @@ async function testAdversarial() {
   assert.ok(distHtml.includes('compra-row'), 'Filas de compras deben estar prerenderizadas en el HTML');
   assert.ok(distHtml.includes('id="compras-table-container"'), 'Contenedor con id para toggle debe existir');
   assert.ok(!distHtml.includes('id="compras-tbody"><!-- Inyectado por JS --></tbody>'), 'No debe haber tbody vacío');
-  console.log(`✓ 85 licitaciones de compras públicas prerenderizadas en index.html`);
+  console.log(`✓ 81 transacciones de compras públicas prerenderizadas en index.html`);
 
   // 6.3 Verificar que el catálogo e inventario están presentes
   assert.ok(distHtml.includes('catalogo-card'), 'Tarjetas del catálogo deben estar prerenderizadas en el HTML');

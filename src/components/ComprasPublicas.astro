@@ -12,12 +12,12 @@ const { lang = 'es' } = Astro.props;
 const t = useTranslations(lang);
 
 const totalCompras = comprasData.length; // 85
-const totalLicitaciones = comprasData.filter(c => c.tipo_instrumento === 'Licitación Pública').length; // 17
-const totalOCs = comprasData.filter(c => c.tipo_instrumento === 'Orden de Compra').length; // 68
+const totalLicitaciones = comprasData.filter(c => c.tipo_instrumento === 'Licitación Pública').length; // 15
+const totalOCs = comprasData.filter(c => c.tipo_instrumento === 'Orden de Compra').length; // 66
 const uesUnicas = Array.from(new Set(comprasData.map(c => c.universidad))).sort();
 const montoNetoTotal = comprasData
   .filter(c => c.computa_monto_neto !== false)
-  .reduce((acc, c) => acc + (c.monto || 0), 0); // ~$539.7M
+  .reduce((acc, c) => acc + (c.monto || 0), 0); // ~$489.4M
 
 function normalizeForSearch(str: string): string {
   return (str || '')
@@ -96,9 +96,9 @@ function obtenerBadgeCapa(capa: string, langKey: SupportedLang): { label: string
   <!-- Estadísticas Principales de Compras -->
   <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap:1.25rem; margin-bottom:2rem;">
     <div class="card" style="border-left:4px solid var(--accent-blue); padding:1.25rem;">
-      <div style="font-size:1.8rem; font-weight:700; color:var(--accent-blue); font-family:var(--font-serif);">{totalCompras} <span style="font-size:0.9rem; font-weight:600; color:var(--text-muted);">(67 {lang === 'en' ? 'processes' : lang === 'pt' ? 'processos' : 'procesos'})</span></div>
+      <div style="font-size:1.8rem; font-weight:700; color:var(--accent-blue); font-family:var(--font-serif);">{totalCompras} <span style="font-size:0.9rem; font-weight:600; color:var(--text-muted);">(63 {lang === 'en' ? 'processes' : lang === 'pt' ? 'processos' : 'procesos'})</span></div>
       <div style="font-size:0.8rem; color:var(--text-muted); line-height:1.35; margin-top:0.2rem;">
-        {lang === 'en' ? '85 records: 17 public tenders & 68 purchase orders' : lang === 'pt' ? '85 registros: 17 licitações públicas e 68 ordens de compra' : '85 registros: 17 licitaciones públicas y 68 órdenes de compra'}
+        {lang === 'en' ? '81 records: 15 public tenders & 66 purchase orders' : lang === 'pt' ? '81 registros: 15 licitações públicas e 66 ordens de compra' : '81 registros: 15 licitaciones públicas y 66 órdenes de compra'}
       </div>
     </div>
     <div class="card" style="border-left:4px solid var(--accent-green); padding:1.25rem;">
@@ -110,7 +110,7 @@ function obtenerBadgeCapa(capa: string, langKey: SupportedLang): { label: string
       <div style="font-size:0.8rem; color:var(--text-muted); margin-top:0.2rem;">{t('compras.kpi_without_policy')}</div>
     </div>
     <div class="card" style="border-left:4px solid var(--accent-purple); padding:1.25rem;">
-      <div style="font-size:1.8rem; font-weight:700; color:var(--accent-purple); font-family:var(--font-serif);">$539.7M <span style="font-size:0.82rem; font-weight:600; color:var(--text-muted);">CLP</span></div>
+      <div style="font-size:1.8rem; font-weight:700; color:var(--accent-purple); font-family:var(--font-serif);">$489.4M <span style="font-size:0.82rem; font-weight:600; color:var(--text-muted);">CLP</span></div>
       <div style="font-size:0.8rem; color:var(--text-muted); line-height:1.35; margin-top:0.2rem;">
         {lang === 'en' ? 'Net audited spend (deduplicating $70.6M from tenders with issued POs)' : lang === 'pt' ? 'Gasto líquido auditado (deduplicando $70.6M de licitações com OCs emitidas)' : 'Gasto neto auditado (deduplica $70.6M de licitaciones con OCs emitidas)'}
       </div>
@@ -165,10 +165,10 @@ function obtenerBadgeCapa(capa: string, langKey: SupportedLang): { label: string
     <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.82rem; color:var(--text-muted); border-top:1px solid var(--border-color); padding-top:0.75rem;">
       <span id="compras-count-display">
         {lang === 'en' 
-          ? `Showing 85 of 85 procurement records (17 tenders, 68 purchase orders)`
+          ? `Showing ${totalCompras} of ${totalCompras} procurement records (${totalLicitaciones} tenders, ${totalOCs} purchase orders)`
           : lang === 'pt'
-          ? `Exibindo 85 de 85 registros de compras (17 licitações, 68 ordens de compra)`
-          : `Mostrando 85 de 85 registros (17 licitaciones públicas y 68 órdenes de compra auditadas)`}
+          ? `Exibindo ${totalCompras} de ${totalCompras} registros de compras (${totalLicitaciones} licitações, ${totalOCs} ordens de compra)`
+          : `Mostrando ${totalCompras} de ${totalCompras} registros (${totalLicitaciones} licitaciones públicas y ${totalOCs} órdenes de compra auditadas)`}
       </span>
       <span>{lang === 'en' ? 'Official source: ChileCompra / Mercado Público' : lang === 'pt' ? 'Fonte oficial: ChileCompra / Mercado Público' : 'Fuente oficial: ChileCompra / Mercado Público'}</span>
     </div>
@@ -373,11 +373,11 @@ function obtenerBadgeCapa(capa: string, langKey: SupportedLang): { label: string
     if (countDisp) {
       const pageLang = document.documentElement.lang || 'es';
       if (pageLang === 'en') {
-        countDisp.textContent = `Showing ${visibles} of ${rows.length} procurement records (17 tenders, 68 purchase orders)`;
+        countDisp.textContent = `Showing ${visibles} of ${rows.length} procurement records (15 tenders, 66 purchase orders)`;
       } else if (pageLang === 'pt') {
-        countDisp.textContent = `Exibindo ${visibles} de ${rows.length} registros de compras (17 licitações, 68 ordens de compra)`;
+        countDisp.textContent = `Exibindo ${visibles} de ${rows.length} registros de compras (15 licitações, 66 ordens de compra)`;
       } else {
-        countDisp.textContent = `Mostrando ${visibles} de ${rows.length} registros (17 licitaciones públicas y 68 órdenes de compra auditadas)`;
+        countDisp.textContent = `Mostrando ${visibles} de ${rows.length} registros (15 licitaciones públicas y 66 órdenes de compra auditadas)`;
       }
     }
 

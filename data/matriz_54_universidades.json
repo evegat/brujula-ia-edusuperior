@@ -19,7 +19,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [
@@ -84,7 +88,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [
@@ -122,7 +130,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [
@@ -160,7 +172,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [
@@ -207,7 +223,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [
@@ -245,7 +265,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [
@@ -283,7 +307,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [
@@ -321,7 +349,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [
@@ -359,7 +391,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [
@@ -397,7 +433,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [
@@ -435,7 +475,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [
@@ -473,7 +517,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [
@@ -511,7 +559,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [
@@ -548,14 +600,13 @@
       "compras_ia": true
     },
     "compras": {
-      "total": 5,
-      "licitaciones": 3,
+      "total": 4,
+      "licitaciones": 2,
       "ordenes_compra": 2,
-      "procesos_unicos": 4,
-      "monto_total": 89050775.94999999,
-      "monto_bruto": 89050775.94999999,
+      "procesos_unicos": 3,
+      "monto_total": 45516275.95,
+      "monto_bruto": 45516275.95,
       "capas": [
-        "Gestion_Backoffice",
         "Infraestructura_Computo"
       ]
     },
@@ -593,12 +644,12 @@
       "compras_ia": true
     },
     "compras": {
-      "total": 52,
-      "licitaciones": 2,
-      "ordenes_compra": 50,
-      "procesos_unicos": 38,
-      "monto_total": 37645223.10982814,
-      "monto_bruto": 37646603.10982814,
+      "total": 49,
+      "licitaciones": 1,
+      "ordenes_compra": 48,
+      "procesos_unicos": 35,
+      "monto_total": 30861231.11,
+      "monto_bruto": 30862611.11,
       "capas": [
         "Atencion_Frontoffice",
         "Docencia_Aula",
@@ -686,7 +737,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [
@@ -727,8 +782,8 @@
       "licitaciones": 1,
       "ordenes_compra": 2,
       "procesos_unicos": 2,
-      "monto_total": 195311658.74306,
-      "monto_bruto": 232264338.74306,
+      "monto_total": 195311658.74,
+      "monto_bruto": 232264338.74,
       "capas": [
         "Gestion_Backoffice",
         "Infraestructura_Computo"
@@ -769,7 +824,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [
@@ -816,7 +875,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [
@@ -857,8 +920,8 @@
       "licitaciones": 1,
       "ordenes_compra": 0,
       "procesos_unicos": 1,
-      "monto_total": 2963520,
-      "monto_bruto": 2963520,
+      "monto_total": 2963520.0,
+      "monto_bruto": 2963520.0,
       "capas": [
         "Infraestructura_Computo"
       ]
@@ -901,8 +964,8 @@
       "licitaciones": 1,
       "ordenes_compra": 5,
       "procesos_unicos": 6,
-      "monto_total": 49958096.525008,
-      "monto_bruto": 49958096.525008,
+      "monto_total": 49958096.53,
+      "monto_bruto": 49958096.53,
       "capas": [
         "Atencion_Frontoffice",
         "Gestion_Backoffice",
@@ -947,8 +1010,8 @@
       "licitaciones": 2,
       "ordenes_compra": 3,
       "procesos_unicos": 4,
-      "monto_total": 77742885.00198731,
-      "monto_bruto": 82931885.00198731,
+      "monto_total": 77742885.0,
+      "monto_bruto": 82931885.0,
       "capas": [
         "Gestion_Backoffice"
       ]
@@ -991,8 +1054,8 @@
       "licitaciones": 1,
       "ordenes_compra": 0,
       "procesos_unicos": 1,
-      "monto_total": 0,
-      "monto_bruto": 0,
+      "monto_total": 0.0,
+      "monto_bruto": 0.0,
       "capas": [
         "Infraestructura_Computo"
       ]
@@ -1041,7 +1104,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [
@@ -1079,7 +1146,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [
@@ -1135,7 +1206,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [
@@ -1182,7 +1257,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [
@@ -1220,7 +1299,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [
@@ -1258,7 +1341,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [
@@ -1296,7 +1383,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [
@@ -1334,7 +1425,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [
@@ -1372,7 +1467,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [
@@ -1410,7 +1509,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [],
@@ -1438,7 +1541,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [],
@@ -1466,7 +1573,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [],
@@ -1494,7 +1605,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [],
@@ -1522,7 +1637,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [],
@@ -1550,7 +1669,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [],
@@ -1578,7 +1701,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [],
@@ -1606,7 +1733,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [],
@@ -1634,7 +1765,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [],
@@ -1698,7 +1833,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [],
@@ -1726,7 +1865,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [],
@@ -1754,7 +1897,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [],
@@ -1782,7 +1929,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [],
@@ -1810,7 +1961,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [],
@@ -1837,12 +1992,12 @@
       "compras_ia": true
     },
     "compras": {
-      "total": 0,
-      "licitaciones": 0,
-      "ordenes_compra": 0,
-      "procesos_unicos": 0,
-      "monto_total": 0,
-      "monto_bruto": 0,
+      "total": 2,
+      "licitaciones": 1,
+      "ordenes_compra": 1,
+      "procesos_unicos": 2,
+      "monto_total": 10098394.41,
+      "monto_bruto": 10098394.41,
       "capas": [
         "Docencia_Aula",
         "Gestion_Backoffice"
@@ -1873,7 +2028,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [],
@@ -1901,7 +2060,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [],
@@ -1929,7 +2092,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [],
@@ -1957,7 +2124,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [],
@@ -1985,7 +2156,11 @@
     },
     "compras": {
       "total": 0,
+      "licitaciones": 0,
+      "ordenes_compra": 0,
+      "procesos_unicos": 0,
       "monto_total": 0,
+      "monto_bruto": 0,
       "capas": []
     },
     "instrumentos": [],

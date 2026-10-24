@@ -54,8 +54,8 @@ export const ui = {
     'hero.stat_with_rules_desc': 'Políticas, lineamientos o decretos vigentes',
     'hero.stat_gap': '22 en Brecha (40.7%)',
     'hero.stat_gap_desc': 'Sin política pública identificada',
-    'hero.stat_procurement': '85 Compras de IA',
-    'hero.stat_procurement_desc': '17 licitaciones y 68 órdenes de compra en MP',
+    'hero.stat_procurement': '81 Compras de IA',
+    'hero.stat_procurement_desc': '15 licitaciones y 66 órdenes de compra en MP',
 
     // Quick Guide
     'guide.title': '¿Qué necesitas hacer hoy?',
@@ -207,8 +207,8 @@ export const ui = {
     'compras.badge_state_only': 'Exclusivo Universidades Estatales',
     'compras.badge_chilecompra': 'Mercado Público / ChileCompra',
     'compras.title': 'Compras Públicas de IA en Universidades del Estado (2020–2026)',
-    'compras.desc': 'Auditoría empírica sobre 85 transacciones contractuales (17 licitaciones públicas y 68 órdenes de compra, correspondientes a 67 procesos independientes) en 10 universidades del Estado sujetas a la Ley N° 19.886.',
-    'compras.scope_note': 'Esta sección audita el gasto en tecnología e IA de las universidades del Estado a través del portal oficial ChileCompra. Diferencia con rigor técnico entre Licitaciones Públicas (procesos de bases y licitación) y Órdenes de Compra (OCs, instrumentos de ejecución contractual efectiva). Para evitar doble contabilización, el monto total deduplica las licitaciones cuyas órdenes de compra ya están computadas ($539.7M neto real vs. $610.3M nominal). Hallazgo estructural: 3 de los 10 planteles compradores (UTEM, ULS, UBB) adquieren IA y chatbots sin contar con una política o lineamiento de aula registrado.',
+    'compras.desc': 'Auditoría empírica sobre 81 transacciones contractuales (15 licitaciones públicas y 66 órdenes de compra, correspondientes a 63 procesos independientes) en 10 universidades del Estado sujetas a la Ley N° 19.886.',
+    'compras.scope_note': 'Esta sección audita el gasto en tecnología e IA de las universidades del Estado a través del portal oficial ChileCompra. Diferencia con rigor técnico entre Licitaciones Públicas (procesos de bases y licitación) y Órdenes de Compra (OCs, instrumentos de ejecución contractual efectiva). Para evitar doble contabilización, el monto total deduplica las licitaciones cuyas órdenes de compra ya están computadas ($489.4M neto real vs. $560.0M nominal). Hallazgo estructural: 3 de los 10 planteles compradores (UTEM, ULS, UBB) adquieren IA y chatbots sin contar con una política o lineamiento de aula registrado.',
     'compras.kpi_total_orders': 'Registros en Mercado Público',
     'compras.kpi_state_buyers': 'Ues Estatales Compradoras',
     'compras.kpi_without_policy': 'Compran IA sin Política de Aula (30%)',
@@ -271,8 +271,8 @@ export const ui = {
     'hero.stat_with_rules_desc': 'Active policy frameworks',
     'hero.stat_gap': '22 Regulatory Gap (40.7%)',
     'hero.stat_gap_desc': 'No identified public policy',
-    'hero.stat_procurement': '85 AI Procurement Contracts',
-    'hero.stat_procurement_desc': 'Public procurement tenders',
+    'hero.stat_procurement': '81 AI Procurement Contracts',
+    'hero.stat_procurement_desc': '15 public tenders and 66 purchase orders on MP',
 
     // Quick Guide
     'guide.title': 'What do you need to do today?',
@@ -424,7 +424,7 @@ export const ui = {
     'compras.badge_state_only': 'State Universities Only',
     'compras.badge_chilecompra': 'Mercado Público / ChileCompra',
     'compras.title': 'Public AI Procurement in State Universities (2020–2026)',
-    'compras.desc': 'Empirical audit of 85 procurement contracts and purchase orders for software, chatbots, and supercomputing across 10 public universities subject to Law No. 19,886.',
+    'compras.desc': 'Empirical audit of 81 procurement contracts and purchase orders (15 public tenders and 66 purchase orders across 63 processes) across 10 public universities subject to Law No. 19,886.',
     'compras.scope_note': 'This section monitors spending by state universities via the official ChileCompra platform. Private universities do not report tenders on this portal. Key finding: 3 out of 10 state buyers (UTEM, ULS, UBB) procure AI and chatbots without having an identified classroom instructional policy.',
     'compras.kpi_total_orders': 'Tenders & Purchase Orders',
     'compras.kpi_state_buyers': 'Procuring State Universities',
@@ -488,8 +488,8 @@ export const ui = {
     'hero.stat_with_rules_desc': 'Protocolos e diretrizes vigentes',
     'hero.stat_gap': '22 em Lacuna Regulatória (40.7%)',
     'hero.stat_gap_desc': 'Sem política pública identificada',
-    'hero.stat_procurement': '85 Contratos de Compras',
-    'hero.stat_procurement_desc': 'Licitações em compras públicas',
+    'hero.stat_procurement': '81 Contratos de Compras',
+    'hero.stat_procurement_desc': '15 licitações e 66 ordens de compra em MP',
 
     // Quick Guide
     'guide.title': 'O que você precisa consultar hoje?',
@@ -641,7 +641,7 @@ export const ui = {
     'compras.badge_state_only': 'Exclusivo Universidades Estatais',
     'compras.badge_chilecompra': 'Mercado Público / ChileCompra',
     'compras.title': 'Compras Públicas de IA em Universidades Estatais (2020–2026)',
-    'compras.desc': 'Auditoria empírica sobre 85 licitações e contratos de software, chatbots e supercomputação em 10 universidades públicas regidas pela Lei de Compras Públicas (Lei Nº 19.886).',
+    'compras.desc': 'Auditoria empírica sobre 81 transações e contratos (15 licitações públicas e 66 ordens de compra em 63 processos) em 10 universidades públicas regidas pela Lei de Compras Públicas (Lei Nº 19.886).',
     'compras.scope_note': 'Esta seção monitora exclusivamente o gasto das universidades estatais através da plataforma oficial ChileCompra. Universidades privadas não informam compras nesse portal. Constatação principal: 3 das 10 compradoras estatais (UTEM, ULS, UBB) adquirem IA e chatbots sem contar com diretriz de aula registrada.',
     'compras.kpi_total_orders': 'Licitações e Ordens de Compra',
     'compras.kpi_state_buyers': 'Ues Estatais Compradoras',

@@ -11,11 +11,11 @@
 - **Estado de regulación:** 32 universidades (59.3%) cuentan con directrices o protocolos públicos de IA identificados. 22 universidades (40.7%) permanecen sin instrumento público localizado al corte.
 - **Nivel regulatorio:** 27 planteles tienen directriz central de Rectoría o Vicerrectoría; 5 planteles cuentan únicamente con reglas a nivel de Facultad o Escuela.
 - **Radar Ley N° 21.719 (Protección de Datos Personales):** 13 de las 54 universidades (24.1%) incorporan cláusulas preventivas que resguardan la privacidad o prohíben ingresar datos personales de estudiantes a modelos de IA comerciales sin convenio. La vigencia obligatoria legal rige a contar del 1 de diciembre de 2026.
-- **Compras públicas tecnológicas:** 85 registros de adquisición indexados en Mercado Público (68 órdenes de compra y 17 licitaciones) en 10 universidades del Estado compradoras, categorizados en 4 capas: IA Generativa, IA Tradicional, Infraestructura Computacional/GPUs y Analítica General.
+- **Compras públicas tecnológicas:** 81 registros de adquisición indexados en Mercado Público (66 órdenes de compra y 15 licitaciones en 63 procesos independientes) en 10 universidades del Estado compradoras, categorizados en 4 capas funcionales ($489,4M netos auditados): IA Generativa, Machine Learning Tradicional, Infraestructura Computacional/GPUs y Analítica General.
 
 ## Archivos de Datos Abiertos (Estructurados)
 - [Matriz de las 54 Universidades (JSON)](/matriz_54_universidades.json): Catálogo completo con estados, dimensiones, enlaces a documentos oficiales y fechas de corte.
-- [Catálogo de 85 Registros de Compras (JSON)](/compras_clasificadas.json): Compras en Mercado Público con ID de orden/licitación, organismo, monto y URL directa.
+- [Catálogo de 81 Registros de Compras (JSON)](/compras_clasificadas.json): Compras en Mercado Público con ID de orden/licitación, organismo, monto y URL directa.
 - [Inventario de Normativas (JSON)](/inventario.json): Detalle de 52 decretos, resoluciones y fechas de publicación institucional.
 - [Citas Textuales Indexadas (JSON)](/citas_enriquecidas.json): 61 citas normativas clasificadas por dimensión con indicación de página fuente verificada.
 - [Kit de Cláusulas Docentes (Markdown)](/kit_clausulas_docentes.md): Modelos normativos para sílabos, tesis, privacidad y evaluación formativa.

@@ -104,14 +104,14 @@ Planteles sin Instrumento Público Localizado al Corte (22 en brecha):
 --------------------------------------------------------------------
 3. COMPRAS PÚBLICAS EN TECNOLOGÍA E IA (MERCADO PÚBLICO)
 --------------------------------------------------------------------
-- 85 registros indexados en Mercado Público entre 2009 y 2026 correspondientes a 10 universidades del Estado compradoras:
-  * 68 órdenes de compra verificadas
-  * 17 licitaciones públicas
+- 81 registros indexados en Mercado Público entre 2017 y 2026 correspondientes a 10 universidades del Estado compradoras (63 procesos independientes, $489,4M netos auditados):
+  * 66 órdenes de compra verificadas
+  * 15 licitaciones públicas
 - 4 Capas Tecnológicas:
-  1. IA Generativa y Modelos de Lenguaje (48 contratos)
-  2. IA Tradicional y Machine Learning (21 contratos)
-  3. Infraestructura Computacional y GPUs (14 contratos)
-  4. Software Analítico y Estadístico General (2 contratos)
+  1. IA Generativa & Chatbots (48 contratos)
+  2. Machine Learning Tradicional (19 contratos)
+  3. Infraestructura & GPU (13 contratos)
+  4. Analítica General & Bioestadística (1 contrato)
 - Nota metodológica: La adquisición de software o infraestructura en Mercado Público describe el gasto tecnológico ejecutado; no acredita por sí misma la adopción docente efectiva en aula ni la existencia de protocolos de integridad pedagógica.
 
 --------------------------------------------------------------------

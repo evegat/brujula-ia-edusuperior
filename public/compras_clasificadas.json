@@ -2,33 +2,6 @@
   {
     "id_compra": 1,
     "universidad": "UNIVERSIDAD DE CHILE",
-    "nombre": "Software",
-    "descripcion": "Adquisición de Software SPSS version 17 Módulo básico, Módulo Redes Neuronales y Monosaurio, para Deptos. Educación y Sociología",
-    "monto": 718800,
-    "proveedor": "AMSS SOLUCIONES ANALITICAS LIMITADA",
-    "fecha": "2009-06-02",
-    "link": "https://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=5627-90-L109",
-    "subcategoria": "IA_MachineLearning",
-    "capa_funcional": "Gestion_Backoffice",
-    "tipo_uso": "Gestión Institucional General",
-    "categoria_tecnologica": "Software Estadístico y Analítico General",
-    "categoria_corta": "Analítica General & Bioestadística",
-    "confianza_clasificacion": "Alta",
-    "regla_inclusion": "Paquete de software analítico, econométrico o bioestadístico tradicional utilizado para investigación o docencia.",
-    "advertencia_metodologica": "La contratación tecnológica en Mercado Público evidencia inversión presupuestaria en planteles estatales, pero no certifica adopción docente efectiva ni protocolos de aula activos.",
-    "tipo_instrumento": "Licitación Pública",
-    "codigo_mercado_publico": "5627-90-L109",
-    "es_licitacion": true,
-    "es_orden_compra": false,
-    "es_derivada": false,
-    "licitacion_origen": null,
-    "tiene_ocs_asociadas": false,
-    "computa_monto_neto": true,
-    "nota_metodologica_compra": ""
-  },
-  {
-    "id_compra": 2,
-    "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "Servicios de Ejecutivo en Línea y ChatBot",
     "descripcion": "El objeto de esta licitación pública es la contratación de los Servicios de Ejecutivo en Línea y ChatBot para la Facultad de Economía y Negocios, cuyas características se detallan en las bases técnicas.",
     "monto": 1380,
@@ -54,7 +27,7 @@
     "nota_metodologica_compra": "Monto base licitado. El gasto real se computa a través de las órdenes de compra derivadas en este mismo dataset para evitar doble contabilización."
   },
   {
-    "id_compra": 3,
+    "id_compra": 2,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "Servicio de Chatbot RE.483.20, SSEE",
     "descripcion": "Servicio de ChatBot y Ejecutivo en Línea aprobados a través de Resolución 483.20",
@@ -81,7 +54,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 4,
+    "id_compra": 3,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "Servicio de Chatbot RE.483.20, SSEE",
     "descripcion": "Servicio de ChatBot y Ejecutivo en Línea aprobados a través de Resolución 483.20MENSUALIDAD ENERO",
@@ -108,7 +81,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 5,
+    "id_compra": 4,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "Servicio de Chatbot RE.483.20, SSEE",
     "descripcion": "Servicio de ChatBot y Ejecutivo en Línea aprobados a través de Resolución 483.20Mensualidad Febrero",
@@ -135,7 +108,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 6,
+    "id_compra": 5,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "Servicio de Chatbot RE.483.20, SSEE",
     "descripcion": "Servicio de ChatBot y Ejecutivo en Línea aprobados a través de Resolución 483.20Mensualidad Marzo",
@@ -162,7 +135,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 7,
+    "id_compra": 6,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "Servicio de Chatbot RE.483.20, SSEE",
     "descripcion": "Servicio de ChatBot y Ejecutivo en Línea aprobados a través de Resolución 483.20Mensualidad Abril",
@@ -189,7 +162,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 8,
+    "id_compra": 7,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "Servicio de Chatbot RE.483.20, SSEE",
     "descripcion": "Servicio de ChatBot y Ejecutivo en Línea aprobados a través de Resolución 483.20Mensualidad MAYO",
@@ -216,7 +189,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 9,
+    "id_compra": 8,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "Servicio de Chatbot RE.483.20, SSEE",
     "descripcion": "Servicio de ChatBot y Ejecutivo en Línea aprobados a través de Resolución 483.20Mensualidad JUNIO",
@@ -243,7 +216,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 10,
+    "id_compra": 9,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "Servicio de Chatbot RE.483.20, SSEE",
     "descripcion": "Servicio de ChatBot y Ejecutivo en Línea aprobados a través de Resolución 483.20Mensualidad JULIO",
@@ -270,7 +243,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 11,
+    "id_compra": 10,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "Servicio de Chatbot RE.483.20, SSEE",
     "descripcion": "Servicio de ChatBot y Ejecutivo en Línea aprobados a través de Resolución 483.20Mensualidad AGOSTO",
@@ -297,7 +270,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 12,
+    "id_compra": 11,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "Servicio de Chatbot RE.483.20, SSEE",
     "descripcion": "Servicio de ChatBot y Ejecutivo en Línea aprobados a través de Resolución 483.20Mensualidad septiembre",
@@ -324,7 +297,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 13,
+    "id_compra": 12,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "Servicio de Chatbot RE.418.21, SSEE",
     "descripcion": "Servicio de ChatBot y Ejecutivo en Línea aprobados a través de Resolución 418.21Mensualidad Octubre",
@@ -351,7 +324,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 14,
+    "id_compra": 13,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "Servicio de Chatbot RE.418.21, SSEE",
     "descripcion": "Servicio de ChatBot y Ejecutivo en Línea aprobados a través de Resolución 418.21Mensualidad Noviembre",
@@ -378,7 +351,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 15,
+    "id_compra": 14,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "Servicio de Chatbot RE.418.21, SSEE",
     "descripcion": "Servicio de ChatBot y Ejecutivo en Línea aprobados a través de Resolución 418.21Mensualidad diciembre",
@@ -405,7 +378,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 16,
+    "id_compra": 15,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "Servicio de Chatbot RE.418.21, SSEE",
     "descripcion": "Servicio de ChatBot y Ejecutivo en Línea aprobados a través de Resolución 418.21Mensualidad enero",
@@ -432,7 +405,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 17,
+    "id_compra": 16,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "Servicio de Chatbot RE.418.21, SSEE",
     "descripcion": "Servicio de ChatBot y Ejecutivo en Línea aprobados a través de Resolución 418.21Mensualidad febrero",
@@ -459,7 +432,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 18,
+    "id_compra": 17,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "Servicio de Chatbot RE.418.21, SSEE",
     "descripcion": "Servicio de ChatBot y Ejecutivo en Línea aprobados a través de Resolución 418.21Mensualidad marzo",
@@ -486,7 +459,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 19,
+    "id_compra": 18,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "Servicio de Chatbot RE.418.21, SSEE",
     "descripcion": "Servicio de ChatBot y Ejecutivo en Línea aprobados a través de Resolución 418.21Mensualidad abril",
@@ -513,7 +486,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 20,
+    "id_compra": 19,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "SERVICIO DE CHATBOT DESDE 5707-1-LE22",
     "descripcion": "SERVICIO DE CHATBOT",
@@ -540,7 +513,7 @@
     "nota_metodologica_compra": "Orden de compra ejecutada a partir de la Licitación Pública 5707-1-LE22."
   },
   {
-    "id_compra": 21,
+    "id_compra": 20,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "SERVICIO DE CHATBOT DESDE 5707-1-LE22",
     "descripcion": "SERVICIO DE CHATBOT",
@@ -567,7 +540,7 @@
     "nota_metodologica_compra": "Orden de compra ejecutada a partir de la Licitación Pública 5707-1-LE22."
   },
   {
-    "id_compra": 22,
+    "id_compra": 21,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "SERVICIO DE CHATBOT DESDE 5707-1-LE22",
     "descripcion": "SERVICIO DE CHATBOT",
@@ -594,34 +567,7 @@
     "nota_metodologica_compra": "Orden de compra ejecutada a partir de la Licitación Pública 5707-1-LE22."
   },
   {
-    "id_compra": 23,
-    "universidad": "UNIVERSIDAD DE CHILE",
-    "nombre": "8 discos duros Seagate 16TB, FONDEF D21I10305",
-    "descripcion": "Compra de 8 discos duros Seagate 16TB debido a que permitirán procesar gran cantidad de imágenes satelitales y la implementación de algoritmos de inteligencia artificial para la identificación de los mencionados glaciares rocosos con la resolución que las",
-    "monto": 4756192,
-    "proveedor": "CCIEXPRESS S.P.A",
-    "fecha": "2022-08-01",
-    "link": "https://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5526-36-SE22",
-    "subcategoria": "IA_MachineLearning",
-    "capa_funcional": "Infraestructura_Computo",
-    "tipo_uso": "Investigación y Cómputo On-premise",
-    "categoria_tecnologica": "Infraestructura Computacional Habilitante",
-    "categoria_corta": "Infraestructura & GPU",
-    "confianza_clasificacion": "Alta",
-    "regla_inclusion": "Hardware de cómputo de alto rendimiento o servidores dedicados a procesamiento de datos y modelos computacionales.",
-    "advertencia_metodologica": "La contratación tecnológica en Mercado Público evidencia inversión presupuestaria en planteles estatales, pero no certifica adopción docente efectiva ni protocolos de aula activos.",
-    "tipo_instrumento": "Orden de Compra",
-    "codigo_mercado_publico": "5526-36-SE22",
-    "es_licitacion": false,
-    "es_orden_compra": true,
-    "es_derivada": false,
-    "licitacion_origen": null,
-    "tiene_ocs_asociadas": false,
-    "computa_monto_neto": true,
-    "nota_metodologica_compra": ""
-  },
-  {
-    "id_compra": 24,
+    "id_compra": 22,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "SERVICIO DE CHATBOT DESDE 5707-1-LE22",
     "descripcion": "SERVICIO DE CHATBOT",
@@ -648,7 +594,7 @@
     "nota_metodologica_compra": "Orden de compra ejecutada a partir de la Licitación Pública 5707-1-LE22."
   },
   {
-    "id_compra": 25,
+    "id_compra": 23,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "SERVICIO DE CHATBOT DESDE 5707-1-LE22",
     "descripcion": "SERVICIO DE CHATBOT",
@@ -675,7 +621,7 @@
     "nota_metodologica_compra": "Orden de compra ejecutada a partir de la Licitación Pública 5707-1-LE22."
   },
   {
-    "id_compra": 26,
+    "id_compra": 24,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "SERVICIO DE CHATBOT DESDE 5707-1-LE22",
     "descripcion": "SERVICIO DE CHATBOT",
@@ -702,7 +648,7 @@
     "nota_metodologica_compra": "Orden de compra ejecutada a partir de la Licitación Pública 5707-1-LE22."
   },
   {
-    "id_compra": 27,
+    "id_compra": 25,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "SERVICIO DE CHATBOT DESDE 5707-1-LE22",
     "descripcion": "SERVICIO DE CHATBOT",
@@ -729,7 +675,7 @@
     "nota_metodologica_compra": "Orden de compra ejecutada a partir de la Licitación Pública 5707-1-LE22."
   },
   {
-    "id_compra": 28,
+    "id_compra": 26,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "SERVICIO DE CHATBOT DESDE 5707-1-LE22",
     "descripcion": "SERVICIO DE CHATBOT",
@@ -756,7 +702,7 @@
     "nota_metodologica_compra": "Orden de compra ejecutada a partir de la Licitación Pública 5707-1-LE22."
   },
   {
-    "id_compra": 29,
+    "id_compra": 27,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "SERVICIO DE CHATBOT DESDE 5707-1-LE22",
     "descripcion": "SERVICIO DE CHATBOT",
@@ -783,7 +729,7 @@
     "nota_metodologica_compra": "Orden de compra ejecutada a partir de la Licitación Pública 5707-1-LE22."
   },
   {
-    "id_compra": 30,
+    "id_compra": 28,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "SERVICIO DE CHATBOT DESDE 5707-1-LE22",
     "descripcion": "SERVICIO DE CHATBOT",
@@ -810,7 +756,7 @@
     "nota_metodologica_compra": "Orden de compra ejecutada a partir de la Licitación Pública 5707-1-LE22."
   },
   {
-    "id_compra": 31,
+    "id_compra": 29,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "SERVICIO DE CHATBOT DESDE 5707-1-LE22",
     "descripcion": "SERVICIO DE CHATBOT",
@@ -837,7 +783,7 @@
     "nota_metodologica_compra": "Orden de compra ejecutada a partir de la Licitación Pública 5707-1-LE22."
   },
   {
-    "id_compra": 32,
+    "id_compra": 30,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "SERVICIO DE CHATBOT DESDE 5707-1-LE22",
     "descripcion": "SERVICIO DE CHATBOT",
@@ -864,7 +810,7 @@
     "nota_metodologica_compra": "Orden de compra ejecutada a partir de la Licitación Pública 5707-1-LE22."
   },
   {
-    "id_compra": 33,
+    "id_compra": 31,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "SERVICIO DE CHATBOT DESDE 5707-1-LE22",
     "descripcion": "SERVICIO DE CHATBOT",
@@ -891,7 +837,7 @@
     "nota_metodologica_compra": "Orden de compra ejecutada a partir de la Licitación Pública 5707-1-LE22."
   },
   {
-    "id_compra": 34,
+    "id_compra": 32,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "SERVICIO DE CHATBOT DESDE 5707-1-LE22",
     "descripcion": "SERVICIO DE CHATBOT",
@@ -918,7 +864,7 @@
     "nota_metodologica_compra": "Orden de compra ejecutada a partir de la Licitación Pública 5707-1-LE22."
   },
   {
-    "id_compra": 35,
+    "id_compra": 33,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "Servicio de ChatBot Febrero 2024",
     "descripcion": "Rolando Valencia G. Coordinador AdministrativoSecretaría de Estudiosrvalenci@fen.uchile.clTeléfono 229772120",
@@ -945,7 +891,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 36,
+    "id_compra": 34,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "Servicio de ChatBot Marzo 2024",
     "descripcion": "Rolando Valencia G. Coordinador AdministrativoSecretaría de Estudiosrvalenci@fen.uchile.clTeléfono 229772120",
@@ -972,7 +918,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 37,
+    "id_compra": 35,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "Servicio de ChatBot Abril 2024",
     "descripcion": "Rolando Valencia G. Coordinador AdministrativoSecretaría de Estudiosrvalenci@fen.uchile.clTeléfono 229772120",
@@ -999,7 +945,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 38,
+    "id_compra": 36,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "RES N°177.24 Servicio de Chatbot SSEE",
     "descripcion": "Rolando Valencia",
@@ -1026,7 +972,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 39,
+    "id_compra": 37,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "RES N°177.24 Servicio de Chatbot SSEE",
     "descripcion": "Rolando Valencia",
@@ -1053,7 +999,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 40,
+    "id_compra": 38,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "Software inteligencia Artificial  - EX AFI - UCH2455",
     "descripcion": "CR 121701019201123 Por la compra de Software Vimeo Solicitado por Boris Jeria .SE SOLICITA AL PROVEEDOR INGRESAR EL NUMERO DE OC EN LA FACTURA Y ENVIAR LOS DATOS BANCARIOS.La entrada al Campus Juan Gómez Millas es por Las Palmeras #3425, Ñuñoa. Preguntar por ICEI en la caseta de los guardias.IMPORTANTE:La factura debe ser enviada a los siguientes correos:contabilidad.fcei@uchile.cldte.cl@einvoincing.signature-cloud.com",
@@ -1080,7 +1026,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 41,
+    "id_compra": 39,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "RE.171.24 Servicio de Chatbot SSEE",
     "descripcion": "Rolando Valencia",
@@ -1107,7 +1053,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 42,
+    "id_compra": 40,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "RE.171.24 Servicio de Chatbot SSEE",
     "descripcion": "Rolando Valencia",
@@ -1134,7 +1080,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 43,
+    "id_compra": 41,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "SOFTWERE INTELIGENCIA ARTIFICIAL - EX AFI - UCH2455",
     "descripcion": "CR 121701019201123 Por la compra de Software Vimeo Solicitado por Boris Jeria .SE SOLICITA AL PROVEEDOR INGRESAR EL NUMERO DE OC EN LA FACTURA Y ENVIAR LOS DATOS BANCARIOS.La entrada al Campus Juan Gómez Millas es por Las Palmeras #3425, Ñuñoa. Preguntar por FCEI en la caseta de los guardias.IMPORTANTE:La factura debe ser enviada a los siguientes correos:contabilidad.fcei@uchile.cldte.cl@einvoincing.signature-cloud.com",
@@ -1161,7 +1107,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 44,
+    "id_compra": 42,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "RE.171.24 Servicio de Chatbot SSEE",
     "descripcion": "Rolando Valencia",
@@ -1188,7 +1134,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 45,
+    "id_compra": 43,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "RE.177.24 Servicio de Chatbot SSEE",
     "descripcion": "Rolando Valencia",
@@ -1215,7 +1161,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 46,
+    "id_compra": 44,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "RE.177.24 Servicio de Chatbot SSEE",
     "descripcion": "Rolando Valencia",
@@ -1242,7 +1188,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 47,
+    "id_compra": 45,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "Orden de Compra generada por Trato Directo ID 5939-2-FTD25",
     "descripcion": "Servicios de chatbot para Secretaria de Estudios de FEN",
@@ -1269,7 +1215,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 48,
+    "id_compra": 46,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "Computador  -  Proyecto Electromovilidad",
     "descripcion": "El proveedor debe aceptar esta OC en portal de Mercado Publico.En la factura debe mencionar el numero de esta OC.Debe enviar copia del pdf de la factura a administracion@amtc.clProyecto que financia CC3219 WP3Justificación selección de cotización menos económica: presenta la mejor relación precio-rendimiento para las necesidades del proyecto, incorporando un procesador de alto desempeño, amplia memoria RAM y tarjeta gráfica dedicada, lo que permite ejecutar simulaciones, algoritmos de optimización y entrenar modelos de machine learning de manera eficiente.",
@@ -1296,7 +1242,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 49,
+    "id_compra": 47,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "LICENCIAS ANUALES CHATGPT TEAMS - UCH21991",
     "descripcion": "Orden de Compra codigo: 793-18-AG25 dirigida a CONEXA LATAM INTELIGENCIA ARTIFICIAL SPA-Coordinar entrega de bienes y/o servicios con: José Ignacio Del Valle - jose.delvalle@uchile.cl - 981522981-Se solicita a proveedores: Enviar factura a jose.delvalle@uchile.cl para realizar recepción conforme. Indicar datos de transferencia electrónica empresa. En caso de facturas cedidas a un tercero, adjuntar certificado de cesión emitido por SII, datos de transferencia y contacto del cesionario.",
@@ -1323,34 +1269,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 50,
-    "universidad": "UNIVERSIDAD DE CHILE",
-    "nombre": "Suscripción anual licencia Teamviewer Corporate - Orden de Compra generada por invitación a compra ágil: 5523-52-COT25",
-    "descripcion": "Suscripción anual licencia teamviewer Corporate, según Orden de Compra código: 5523-63-AG25, dirigida al proveedor CONEXA LATAM INTELIGENCIA ARTIFICIAL SPA, RUT: 78.108.703-3, proceso 5523-52-COT25. Justificación selección de cotización menos económica: Los productos o servicios cotizados cumplen de mejor manera con los requisitos técnicos solicitados.",
-    "monto": 1309000,
-    "proveedor": "CONEXA LATAM INTELIGENCIA ARTIFICIAL SPA",
-    "fecha": "2025-08-08",
-    "link": "https://www.mercadopublico.cl/PurchaseOrder/Modules/PO/DetailsPurchaseOrder.aspx?codigoOC=5523-63-AG25",
-    "subcategoria": "IA_MachineLearning",
-    "capa_funcional": "Gestion_Backoffice",
-    "tipo_uso": "Administración y Finanzas",
-    "categoria_tecnologica": "IA Tradicional y Machine Learning",
-    "categoria_corta": "Machine Learning Tradicional",
-    "confianza_clasificacion": "Alta",
-    "regla_inclusion": "Solución algorítmica de aprendizaje automático, clasificación predictiva o visión computacional aplicada.",
-    "advertencia_metodologica": "La contratación tecnológica en Mercado Público evidencia inversión presupuestaria en planteles estatales, pero no certifica adopción docente efectiva ni protocolos de aula activos.",
-    "tipo_instrumento": "Orden de Compra",
-    "codigo_mercado_publico": "5523-63-AG25",
-    "es_licitacion": false,
-    "es_orden_compra": true,
-    "es_derivada": false,
-    "licitacion_origen": null,
-    "tiene_ocs_asociadas": false,
-    "computa_monto_neto": true,
-    "nota_metodologica_compra": ""
-  },
-  {
-    "id_compra": 51,
+    "id_compra": 48,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "SOFTWARE INTELIGENCIA ARTIFICIAL - PEEI INTEGRADO 2° año",
     "descripcion": "Cr 121701019201119 Por la suscripción software inteligencia artificial solicitado por  el profesor Carlos Ossa. SE SOLICITA AL PROVEEDOR INGRESAR EL NUMERO DE OC EN LA FACTURA Y ENVIAR LOS DATOS BANCARIOS. La entrada al Campus Juan Gómez Millas es por Las Palmeras #3425, Ñuñoa. Preguntar por FCEI en la caseta de los guardias. La factura debe ser enviada a los siguientes correos: contabilidad.fcei@uchile.cl dte.cl@einvoicing.signature-cloud.com",
@@ -1377,7 +1296,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 52,
+    "id_compra": 49,
     "universidad": "UNIVERSIDAD DE CHILE",
     "nombre": "Orden de Compra generada por invitación a compra ágil: 539819-35-COT26  2 RELOJ DE ASISTENCIA VM20",
     "descripcion": "Orden de Compra codigo: 539819-30-AG26 dirigida a FACEPASS SPASE REQUIERE CONTRATAR LA COMPRA DE UN SISTEMA TECNOLÓGICO DE REGISTRO Y CONTROL DE ASISTENCIA CON RECONOCIMIENTO FACIAL. DEBE INCLUIR DOS RELOJES DE ASISTENCIA Y UN PLAN DE LICENCIAMIENTO MÍNIMO DE 12 MESES (MARZO 2026 A MARZO 2027). SE ADJUNTAN ESPECIFICACIONES TÉCNICAS OBLIGATORIAS.",
@@ -1404,7 +1323,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 53,
+    "id_compra": 50,
     "universidad": "UNIVERSIDAD DE SANTIAGO DE CHILE",
     "nombre": "Solicitud N 77438 - Servidor - CC 112  PS 1785",
     "descripcion": "Solicitud Licitación Pública:SERVIDOR DEDICADO DE ALTO DESEMPEÑO PARAENTRENAMIENTO DE MODELOS DE DEEP LEARNING SOBREIMÁGENESCC: 112PS: 1785Solicitante: Cristóbal Acosta JuradoTeléfono: +56 227180936Correo: cristobal.acosta@usach.clDespacho: Av. Víctor Jara 3659 Estación Central Santiago, RM Universidad de Santiago de Chile Departamento de Ingeniería Informática Sala de Servidores DIINF.",
@@ -1431,7 +1350,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 54,
+    "id_compra": 51,
     "universidad": "UNIVERSIDAD DE SANTIAGO DE CHILE",
     "nombre": "Licencia Varias/Solicitud N° 26550 de C.C 117",
     "descripcion": "Adquisición de Licencia VariasCoordinar servicio con: Nicole.barrientos@usach.cl // Fono: 227180156Debe indicar Nº de Orden de Compra en Factura.Factura Electronica a: miguel.caceres.m@usach.clPago Factura: Jaime Quintanilla // Correo: Jaime.Quint",
@@ -1458,7 +1377,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 55,
+    "id_compra": 52,
     "universidad": "UNIVERSIDAD DE SANTIAGO DE CHILE",
     "nombre": "Licencias + Pc Workstation/Solicitud N° 26884 de C.C 102",
     "descripcion": "Adquisición de Licencias + Pc WorkstationDespacho de mercaderia  y factura en Avda.El Belloto 3580, Almacén General,  Est. Central.Debe indicar Nº de Orden de Compra en Factura.Factura Electronica a: miguel.caceres.m@usach.cl // C.C: Yasna.marabol",
@@ -1485,7 +1404,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 56,
+    "id_compra": 53,
     "universidad": "UNIVERSIDAD DE SANTIAGO DE CHILE",
     "nombre": "O C generada por invitación a compra ágil: 5067-3018-COT25. Sol 84399, cc 108",
     "descripcion": "Mantención de ChatbotContacto Daniela Leiva NúñezDepartamento de Educación ContinuaVicerrectoría de Vinculación con el MedioUniversidad de Santiago de ChileAv. Las Sophoras #175 - Estación CentralCorreo: daniela.leiva@usach.clTeléfono: +56 2 2 7183709* La factura debe ser emitida contra entrega de bien y/o servicio y enviada al correo usach_dte@paperless.cl  * El valor de la factura debe corresponder exactamente a los valores indicados en la orden de compra* Toda factura debe indicar el número de orden de compra [campo 801]* Toda factura debe indicar giro Enseñanza Superior en Universidades Públicas [código 853110]Contacto: Pago factura: Ximena Acevedo  Fono: 227180437",
@@ -1512,7 +1431,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 57,
+    "id_compra": 54,
     "universidad": "UNIVERSIDAD DE SANTIAGO DE CHILE",
     "nombre": "Adquisición de API para Chatbot institucional - 1460278-252-COT25",
     "descripcion": "Dirección Estratégica InformáticaContacto de coordinación: Melanny Rojas, compras.dei@usach.cl. Sissy Alvarez sissy.alvarez@usach.cl fono: 227184724Incorporar en glosa de la factura el Código: USA22991- O2:A2:R2. La factura debe ser emitida contra entrega del bien y/o servicio y enviada al correo usach_dte@paperless.cl / pagos.prorrectoria@usach.cl/ compras.dei@usach.cl / sissy.alvarez@usach.cl El valor de la factura debe corresponder exactamente a los valores indicados en la Orden de Compra. Toda factura debe indicar el número de Orden de Compra (campo 801). Toda factura debe indicar giro Enseñanza Superior en Universidades Públicas (código 853110). Contacto Pago factura: Ximena Acevedo  Correo ximena.acevedo@usach.cl / - Fono: 227180437",
@@ -1539,7 +1458,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 58,
+    "id_compra": 55,
     "universidad": "UNIVERSIDAD DE SANTIAGO DE CHILE",
     "nombre": "112 - 90641 - Servicio de suscripción multiusuario a plataforma Modelo de Lenguaje de Gran Escala (LLM)",
     "descripcion": "CC:112PS:1930Proyecto CTI250005Detalle:Servicio de suscripción multiusuario a plataforma Modelo de Lenguaje de Gran Escala (LLM)Contacto:Iván Toroivan.toro.u@usach.clDirección:USACH, USACH, a coordinar con unidad requirenteEnviar factura a: usach_dte@paperless.cl y a nicole.arce.r@usach.cl; contra entrega del bien y/o servicio. Indicar ID de OC [campo 801], código del proyecto debe venir detallado en glosa de la factura, Giro Enseñanza Superior en Universidades Públicas [código 853110] y OC debe estar en estado Aceptada en Portal Mercado Público o de lo contrario la factura será reclamada inmediatamente ante el SII",
@@ -1566,7 +1485,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 59,
+    "id_compra": 56,
     "universidad": "UNIVERSIDAD DE TALCA",
     "nombre": "CURSO DE CAPACITACION SOBRE APRENDIZAJE PROFUNDO Y DESARROLLO DE HABILIDADES INTRAPERSONALES PARA EL TRABAJO CON ESTUDIANTES - PROGRAMA PACE, UNIVERSIDAD DE TALCA",
     "descripcion": "Se solicita la contratación de capacitación teórica práctica en temática de desarrollo de habilidades del siglo XXI, bajo el enfoque del aprendizaje profundo, en el que se focalice las habilidades intrapersonales, la Metacognición y el trabajo colaborativo.  Con esta capacitación se espera la adquisición de herramientas metodológicas de aprendizaje activo que permitan fomentar el trabajo en el aula tanto de los profesionales que asisten a los establecimientos en convenio como aquellos que atiend",
@@ -1593,7 +1512,7 @@
     "nota_metodologica_compra": "Monto base licitado. El gasto real se computa a través de las órdenes de compra derivadas en este mismo dataset para evitar doble contabilización."
   },
   {
-    "id_compra": 60,
+    "id_compra": 57,
     "universidad": "UNIVERSIDAD DE TALCA",
     "nombre": "Software para escritura científica para estudiantes de doctorado de la Universidad de Talca",
     "descripcion": "Adquirir servicios de asistencia a la escritura científica para estudiantes de doctorado, dicha asistencia idealmente deberá estar mediada por inteligencia artificial, para ofrecer control de plagio, parafraseo y control de extensión de texto. El software o licencia para contratar requiere el acceso al menos a 36 usuarios.",
@@ -1620,7 +1539,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 61,
+    "id_compra": 58,
     "universidad": "UNIVERSIDAD DE TALCA",
     "nombre": "2-25908 CURSO DE CAPACITACIÓN; 1469-497-L123",
     "descripcion": "CURSO DE CAPACITACIÓN SOBRE APRENDIZAJE PROFUNDO Y DESARROLLO DE HABILIDADES INTRAPERSONALES PARA EL TRABAJO CON ESTUDIANTES-PROGRAMA PACE, UNIVERSIDAD DE TALCA.CONTACTO THAIS TRONCO 975172834INCLUIR EN FACTURA NUMERO DE OC Y PROGRAMA TAL2277",
@@ -1647,7 +1566,7 @@
     "nota_metodologica_compra": "Orden de compra ejecutada a partir de la Licitación Pública 1469-497-L123."
   },
   {
-    "id_compra": 62,
+    "id_compra": 59,
     "universidad": "UNIVERSIDAD DE TALCA",
     "nombre": "Trato Directo Autoriza R.U. 338 de 2024",
     "descripcion": "Autorizar compra vía trato directo con la empresa RINDEGASTOS SPA, RUT N° 76.271.948-7 para la contratación del servicio software de rendición con respaldo Icloud que trabaja con elementos de inteligencia artificial permitiendo digitalizar por completo el proceso de rendición de gastos, desde el rendidor hasta la revisión y contabilización de todos los gastos, usando herramientas de lectura OCR (Reconocimiento óptico de caracteres) que entregan eficiencia al proceso al evitar la digitación manual y al detectar eventuales documentos duplicados., por el periodo comprendido entre el 15 de Junio de 2024 y el 14 de Junio de 2027.Los documentos adjuntos, los requerimientos técnicos y sus anexos forman un todo integrado y se complementan recíprocamente, en forma tal que se consideran parte de la orden de compra y se entienden aceptados por el proveedor.Se requiere la aceptación de proveedor para proceder con el pagoSolped 2000028192",
@@ -1674,7 +1593,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 63,
+    "id_compra": 60,
     "universidad": "UNIVERSIDAD DE TALCA",
     "nombre": "20-39451 Acceso y uso de la Plataforma OpenAI para la provisión de capacidades avanzadas de Inteligencia Artificial (IA): 1469-4172-COT25",
     "descripcion": "Orden de Compra codigo: 1469-3825-AG25 dirigida a FLEX SSS SPAJustificación selección de cotización menos económica: Los productos o servicios cotizados cumplen de mejor manera con los requisitos técnicos solicitados.Como bien se mencionó en las especificaciones técnicas incorporadas en la solicitud de esta compra, el proveedor debe entregar una cuenta de uso estrictamente institucional. Teniendo esto en cuenta, la opción más conveniente es la de Flex SSS Spa., ya que el Comercial Iphonextreme Spa, a pesar de que ofrece esencialmente el mismo servicio, ofrece una cantidad menor de créditos para la API, señalando además que incluirá documentación que es de acceso público, lo que no es beneficioso para los intereses de la Universidad. SE REQUIERE PARA PAGOS QUE ORDEN DE COMPRA SE ENCUENTRE ACEPTADA.CONTACTO MAXIMO OSORIO712200103",
@@ -1701,7 +1620,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 64,
+    "id_compra": 61,
     "universidad": "UNIVERSIDAD TECNOLOGICA METROPOLITANA",
     "nombre": "Adquisicion de computador de alta gamma",
     "descripcion": "Compra de  equipo computacional de alta gamma para la simulación, entrenamiento y evaluación de diferentes modelos deep learning usando datos astronómicos, para cumplir con los objetivos comprometidos en el proyecto interno adjudicado LPR19-22.",
@@ -1728,7 +1647,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 65,
+    "id_compra": 62,
     "universidad": "UNIVERSIDAD TECNOLOGICA METROPOLITANA",
     "nombre": "Estación Meteorológica con comunicación de datos a PC",
     "descripcion": "Se requiere la adquisición de una Estación Meteorológica con comunicación de datos a PC dicha estación permitirán desarrollar de forma más completa y currelada con los datos de cosecha Fotovoltaica (KWatts/hora) para incluirlos en la plataforma en la nube con inteligencia artificial y para su aplicación como herramienta de gestión eficiente de energía eléctrica y a distintas escalas. Industria 4.0: Internet de las cosas (IoT), Inteligencia Artificial, Smart-City: Gestión Energética.",
@@ -1755,7 +1674,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 66,
+    "id_compra": 63,
     "universidad": "UNIVERSIDAD TECNOLOGICA METROPOLITANA",
     "nombre": "Curso de Diseño Instruccional desde 5251-1326-COT23",
     "descripcion": "El Modelo Educativo institucional plantea como objetivo estratégico lanecesidad de generar procesos formativos que se desarrollen enambientes emergentes de aprendizaje, a través de diversasexperiencias formativas, mediadas por tecnologías (Plataformas,Inteligencia Artificial, Robótica, entre otras de similares caracter(sticas.),de manera tal de responder a los desafíos de la sociedad delconocimiento, tanto en el Pregrado, Postgrado como EducaciónContinua.",
@@ -1782,7 +1701,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 67,
+    "id_compra": 64,
     "universidad": "UNIVERSIDAD TECNOLOGICA METROPOLITANA",
     "nombre": "SERVIDOR TUPUNGATITO DESDE LICITACIÓN PÚBLICA 5251-150-LE25",
     "descripcion": "ADQUISICIÓN DE UN EQUIPO DE CÓMPUTO ESCALABLE PARA EL FORTALECIMIENTO DEL NÚCLEO DE INVESTIGACIÓN EN CIENCIA DE DATOS E INTELIGENCIA ARTIFICIAL DESDE LICITACIÓN PÚBLICA  5251-150-LE25 / SC 5472REMITIR FACTURA CON DATOS BANCARIOS A: FACTURAS@UTEM.CL, FONO: 227877749CONSULTAS POR PAGO A: PROVEEDORES@UTEM.CL, FONO: 227877740 ENTREGA EN: Ignacio Valdivieso #2409, San JoaquínCONTACTO: SR. Jorge Vergara Quezada TELÉFONO 227877057PLAZO DE ENTREGA: 45 DÍAS HÁBILES",
@@ -1809,7 +1728,7 @@
     "nota_metodologica_compra": "Orden de compra ejecutada a partir de la Licitación Pública 5251-150-LE25."
   },
   {
-    "id_compra": 68,
+    "id_compra": 65,
     "universidad": "UNIVERSIDAD TECNOLOGICA METROPOLITANA",
     "nombre": "Adquisición de un Equipo de Cómputo Escalable para",
     "descripcion": "La Universidad Tecnológica Metropolitana requiere la compra del equipo de investigación detallado a continuación, para cumplir con los objetivos comprometidos en el proyecto LE24-03. La adquisición de un servidor permitirá llevar a cabo el objetivo principal de este proyecto: Fortalecer el Núcleo de Investigación en Ciencia de Datos e Inteligencia Artificial de la UTEM mediante la adquisición de un equipo de super cómputo escalable, que facilite la transición desde equipos domésticos hacia plataformas HPC de gran escala, promoviendo el desarrollo de investigaciones de alto impacto.",
@@ -1836,7 +1755,7 @@
     "nota_metodologica_compra": "Monto base licitado. El gasto real se computa a través de las órdenes de compra derivadas en este mismo dataset para evitar doble contabilización."
   },
   {
-    "id_compra": 69,
+    "id_compra": 66,
     "universidad": "UNIVERSIDAD TECNOLOGICA METROPOLITANA",
     "nombre": "EQUIPAMIENTO COMPUTACIONAL LAPTOPS CIENCIA DE DATOS",
     "descripcion": "La presente adquisición tiene como finalidad fortalecer y estandarizar el parque computacional de la carrera de Ingeniería Civil en Ciencia de Datos de la Universidad Tecnológica Metropolitana (UTEM), mediante la incorporación de equipos portátiles de alto rendimiento. Esta medida busca apoyar el desarrollo académico y práctico de los estudiantes, facilitando el trabajo con herramientas avanzadas de análisis de datos, inteligencia artificial y modelamiento estadístico, esenciales para su formación profesional.Los equipos requeridos deberán cumplir con las especificaciones técnicas detalladas en los documentos adjuntos, asegurando compatibilidad, capacidad de procesamiento y adecuación a los requerimientos tecnológicos propios de la disciplina.",
@@ -1863,7 +1782,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 70,
+    "id_compra": 67,
     "universidad": "UNIVERSIDAD DE LA FRONTERA",
     "nombre": "PROVISIÓN DE  SERVIDORES Y STORAGE PARA MACHINE LEARNING Y VIRTUALIZACION EN  PROXMOX",
     "descripcion": "PROVISIÓN DE SERVIDORES Y STORAGE PARA MACHINE LEARNING Y VIRTUALIZACION EN PROXMOX SEGÚN ESPECIFICACIONES TÉCNICAS DETALLADAS EN LAS BASES DE LICITACIÓN",
@@ -1890,7 +1809,7 @@
     "nota_metodologica_compra": "Monto base licitado. El gasto real se computa a través de las órdenes de compra derivadas en este mismo dataset para evitar doble contabilización."
   },
   {
-    "id_compra": 71,
+    "id_compra": 68,
     "universidad": "UNIVERSIDAD DE LA FRONTERA",
     "nombre": "Orden de Compra generada por la Gran Compra: 57462",
     "descripcion": "Promover el Aprendizaje profundo en estudiantes de establecimientos rurales del Servicio Local Costa Araucanía por medio del desarrollo de competencias docentes y la implementación de tecnología en el contexto de clases remotas por la pandemia Covid 19.",
@@ -1917,7 +1836,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 72,
+    "id_compra": 69,
     "universidad": "UNIVERSIDAD DE LA FRONTERA",
     "nombre": "F/T PROVISIÓN DE  SERVIDORES Y STORAGE PARA MACHINE LEARNING Y VIRTUALIZACION EN  PROXMOX DESDE 5586-423-LE24",
     "descripcion": "Contacto: Blanca VillalobosSEC: 4630Correo: blanca.villalobos@ufrontera.clResolución Interna:1427",
@@ -1944,34 +1863,7 @@
     "nota_metodologica_compra": "Orden de compra ejecutada a partir de la Licitación Pública 5586-423-LE24."
   },
   {
-    "id_compra": 73,
-    "universidad": "UNIVERSIDAD DE ATACAMA",
-    "nombre": "ESTACIONES METEOROLÓGICAS FIC 1602",
-    "descripcion": "ADQUISICIÓN E INSTALACIÓN DE 2 ESTACIONES METEOROLÓGICAS EN EL MARCO DEL PROYECTO FIC 1602 DENOMINADO LABORATORIO PARA EL ESTUDIO HÍDRICO DE LA CUENCA, USO EFICIENTE, MONITOREO Y PREDICCIÓN DE CAUDALES APLICANDO MODELO DE REDES NEURONALES ARTIFICIALES Y",
-    "monto": 43534500,
-    "proveedor": "I&P",
-    "fecha": "2018-06-19",
-    "link": "https://www.mercadopublico.cl/fichaLicitacion.html?idLicitacion=2859-55-LP18",
-    "subcategoria": "IA_MachineLearning",
-    "capa_funcional": "Gestion_Backoffice",
-    "tipo_uso": "Gestión Institucional General",
-    "categoria_tecnologica": "IA Tradicional y Machine Learning",
-    "categoria_corta": "Machine Learning Tradicional",
-    "confianza_clasificacion": "Alta",
-    "regla_inclusion": "Solución algorítmica de aprendizaje automático, clasificación predictiva o visión computacional aplicada.",
-    "advertencia_metodologica": "La contratación tecnológica en Mercado Público evidencia inversión presupuestaria en planteles estatales, pero no certifica adopción docente efectiva ni protocolos de aula activos.",
-    "tipo_instrumento": "Licitación Pública",
-    "codigo_mercado_publico": "2859-55-LP18",
-    "es_licitacion": true,
-    "es_orden_compra": false,
-    "es_derivada": false,
-    "licitacion_origen": null,
-    "tiene_ocs_asociadas": false,
-    "computa_monto_neto": true,
-    "nota_metodologica_compra": ""
-  },
-  {
-    "id_compra": 74,
+    "id_compra": 70,
     "universidad": "UNIVERSIDAD DE ATACAMA",
     "nombre": "ADQUISICIÓN DE BRAZO ROBÓTICO Y PINZA ROBÓTICA",
     "descripcion": "ADQUISICIÓN DE BRAZO ROBÓTICO Y PINZA ROBÓTICA EN EL MARCO DEL PROYECTO INSPECCIÓN AUTOMÁTICA DE FRUTAS EN CENTROS DE EMPAQUETADO, USANDO ALGORITMOS DE MACHINE LEARNING Y MACHINE VISIÓN.",
@@ -1998,7 +1890,7 @@
     "nota_metodologica_compra": "Monto base licitado. El gasto real se computa a través de las órdenes de compra derivadas en este mismo dataset para evitar doble contabilización."
   },
   {
-    "id_compra": 75,
+    "id_compra": 71,
     "universidad": "UNIVERSIDAD DE ATACAMA",
     "nombre": "ADQUISICION DE CAMARA STEREO",
     "descripcion": "ADQUISICION DE CAMARA STEREO EN EL MARCO DEL PROYECTO FONDEF IDEA I+D DENOMINADO INSPECCIÓN AUTOMÁTICA DE FRUTAS EN CENTROS DE EMPAQUETADO, USANDO ALGORITMOS DE MACHINE LEARNING Y MACHINE VISION.",
@@ -2025,7 +1917,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 76,
+    "id_compra": 72,
     "universidad": "UNIVERSIDAD DE ATACAMA",
     "nombre": "ADQUISICIÓN DE BRAZO ROBÓTICO Y PINZA ROBÓTICA",
     "descripcion": "AUTORIZA CONTRATACIÓN DIRECTA POR LICITACION PÚBLICA 2859-4-LE24 DECLARADA DESIERTA PARA LA ADQUISICIÓN DE BRAZO ROBÓTICO Y PINZA ROBÓTICA EN EL MARCO DEL PROYECTO INSPECCIÓN AUTOMÁTICA DE FRUTAS EN CENTROS DE EMPAQUETADO, USANDO ALGORITMOS DE MACHINE LEARNING Y MACHINE VISIÓN. - OC interna N°202400160 de fecha 15-03-2024 (campo 802)- Se adjunta carta sobre datos que se exigirán para facturación a partir del 01-01-2024.",
@@ -2052,7 +1944,7 @@
     "nota_metodologica_compra": "Orden de compra ejecutada a partir de la Licitación Pública 2859-4-LE24."
   },
   {
-    "id_compra": 77,
+    "id_compra": 73,
     "universidad": "UNIVERSIDAD DE ATACAMA",
     "nombre": "Adquisición Camara Basler Ace",
     "descripcion": "ADQUISICION DE CAMARA BASLER ACE, EN EL MARCO DEL PROYECTO FONDEF ID22I10119 DENOMINADO INSPECCION AUTOMATICA DE FRUTAS EN CENTROS DE EMPAQUETADOS USANDO ALGORITMOS DE MACHINE LEARNING Y MACHINE VISION, DE LA UNIVERSIDAD DE ATACAMA.- Plazo de entrega, ocho semanas- Nota pedido N°202400417- Carta facturación proveedores",
@@ -2079,7 +1971,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 78,
+    "id_compra": 74,
     "universidad": "UNIVERSIDAD DE LA SERENA",
     "nombre": "Adquisición tarjeta de video para Dirección de Investigación y Desarrollo",
     "descripcion": "Adquisición de tarjeta gráfica de video NVIDIA RTX3090 24 GB Aorus Gaming Box Thunderbolt 3 (tarjeta externa para Deep Learning) o su equivalente técnico",
@@ -2106,7 +1998,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 79,
+    "id_compra": 75,
     "universidad": "UNIVERSIDAD DE LA SERENA",
     "nombre": "servicio de Desarrollo de Módulo",
     "descripcion": "servicio de Desarrollo de Módulo de Inteligencia  Artificial para la Toma de Decisiones del Sector Turismo de la Región de Coquimbo.SC.43330  Decanatura  Facultad de Ingeniería de la Universidad de La Serena",
@@ -2133,7 +2025,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 80,
+    "id_compra": 76,
     "universidad": "UNIVERSIDAD DE LA SERENA",
     "nombre": "Adquisición de Licencias Anuales de Inteligencia Artificial Avanzada para Uso Profesional (50131) a compra ágil: 1491370-32-COT26",
     "descripcion": "Adquisición de Licencias Anuales de Inteligencia Artificial Avanzada para Uso Profesional (50131) Orden de Compra codigo: 1491370-34-AG26 dirigida a FLEX SSS SPA",
@@ -2160,7 +2052,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 81,
+    "id_compra": 77,
     "universidad": "UNIVERSIDAD DE LA SERENA",
     "nombre": "Adquisición de Licencias Anuales de Inteligencia Artificial Avanzada para Uso Profesional (50757) a compra ágil: 1491370-55-COT26",
     "descripcion": "Adquisición de Licencias Anuales de Inteligencia Artificial Avanzada para Uso Profesional (50757) Orden de Compra codigo: 1491370-56-AG26 dirigida a SOCIEDAD COMERCIAL FLORENCIA SPA",
@@ -2187,7 +2079,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 82,
+    "id_compra": 78,
     "universidad": "UNIVERSIDAD DEL BIO BIO",
     "nombre": "ADQUISICIÓN DE HARDWARE PARA PLATAFORMA",
     "descripcion": "ADQUISICIÓN DE HARDWARE PARA PLATAFORMA DE INTELIGENCIA ARTIFICIAL, DE LA UNIVERSIDAD DEL BÍO-BÍO, SEDE CHILLÁN",
@@ -2214,7 +2106,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 83,
+    "id_compra": 79,
     "universidad": "UNIVERSIDAD DEL BIO BIO",
     "nombre": "sc 3836 Orden de Compra generada por invitación a compra ágil: 2704-1107-COT26",
     "descripcion": "Orden de Compra codigo: 2704-1307-AG26 dirigida a BIXEL SPA7 Chat GPT Business Acceso a modelos avanzados de inteligencia artificial de última generación Capacidades multimodales (texto, imágenes, archivos y datos)",
@@ -2241,7 +2133,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 84,
+    "id_compra": 80,
     "universidad": "UNIVERSIDAD DE LOS LAGOS",
     "nombre": "ADQUISICIÓN DE   TARJETAS GRÁFICAS DE NIVEL INDUSTRIAL ORIENTADAS AL DESARROLLO, ENTRENAMIENTO E IMPLEMENTACIÓN DE MODELOS DE INTELIGENCIA ARTIFICIAL ,DE LA UNIVERSIDAD DE LOS LAGOS CAMPUS PUERTO MONT",
     "descripcion": "ADQUISICIÓN DE   TARJETAS GRÁFICAS DE NIVEL INDUSTRIAL ORIENTADAS AL DESARROLLO, ENTRENAMIENTO E IMPLEMENTACIÓN DE MODELOS DE INTELIGENCIA ARTIFICIAL ,DE LA UNIVERSIDAD DE LOS LAGOS CAMPUS PUERTO MONT",
@@ -2268,7 +2160,7 @@
     "nota_metodologica_compra": ""
   },
   {
-    "id_compra": 85,
+    "id_compra": 81,
     "universidad": "UNIVERSIDAD DE VALPARAISO",
     "nombre": "Equipo servidor Proyecto Código FONDEF ID25I10329",
     "descripcion": "La necesidad de contar con Equipo Servidor asociados al Proyecto Código FONDEF ID25I10329 titulado Inteligencia Artificial para el pronóstico nacional de caudales estacionales de la Universidad de Valparaíso.",
